@@ -68,26 +68,42 @@ dir $HOME\.claude\skills
 
 Cuando hagas `git pull` en el futuro, los junctions se actualizan automáticamente (apuntan a las carpetas, no a snapshots).
 
-## 5. Credenciales (Gibran te las pasa por Signal/WhatsApp)
+## 5. Credenciales — descifrar el archivo cifrado del repo
 
-Gibran te va a pasar los valores reales por canal encriptado. Los pones en `~\.env.spekgen` (o `$HOME\.env.spekgen` en PowerShell).
+Todas las credenciales SPEKGEN viven cifradas en `secrets/credentials.env.enc` (AES-256). Gibran te pasa **un solo password** por Signal/WhatsApp encriptado — ese password descifra TODO.
 
-**Credenciales que SÍ necesitas para outreach GDL:**
+```powershell
+# Asegúrate de tener openssl. Si no:
+#   Opción 1: Instala Git for Windows (lo incluye en C:\Program Files\Git\usr\bin\)
+#   Opción 2: winget install ShiningLight.OpenSSL
+#   Verifica: openssl version
 
-| Variable | Para qué | Quién la usa |
-|---|---|---|
-| `SPEKGEN_SHOPIFY_STORE` + `SPEKGEN_SHOPIFY_TOKEN` | Publicar mockups+propuestas a spekgen.com | `/publish-prospect`, `/kill-prospect`, `/website-proposal` |
-| `APIFY_TOKEN` | Scrapear leads desde Google Maps / Instagram | `hc-lead-scraper` y futuro outreach GDL |
-| `GMAIL_USER=outreach@spekgen.com` + `GMAIL_APP_PASSWORD` | Enviar cold emails | `hc-cold-outreach`, futuros |
-| `OPENAI_API_KEY` o `ANTHROPIC_API_KEY` | Si usas API directa (raro) | Scripts ocasionales |
-| `META_TOKEN` (SPEKGEN Agency unified) | Si Pedro toca ads de algún cliente | `spekgen-meta-ads-upload` |
+# Descifrar
+.\scripts\decrypt-secrets.ps1
+# Te pide el password (te lo pasa Gibran). Genera $HOME\.env.spekgen.
+```
 
-**NO necesitas (de momento):**
-- HC, LF, GR, MG, F24 Shopify tokens — son de clientes específicos, los uso yo (Gibran)
-- GHL API keys — yo manejo CRM
-- Meta ad-account-specific tokens — yo manejo media buying
+Scripts del repo cargan `~\.env.spekgen` automáticamente con `python-dotenv`.
 
-Gibran te confirma cuando una credencial nueva la necesites.
+**Variables incluidas (entre las 150+):**
+
+| Variable | Para qué |
+|---|---|
+| `SPEKGEN_SHOPIFY_STORE` + `SPEKGEN_SHOPIFY_TOKEN` | spekgen.com → outreach prospects |
+| `APIFY_TOKEN` | Scrapear leads |
+| `GMAIL_USER=outreach@spekgen.com` + `GMAIL_APP_PASSWORD` | Cold emails |
+| `META_TOKEN` | SPEKGEN Agency token unificado (todos los clientes) |
+| `{HC,LF,GR,MG,F24}_SHOPIFY_TOKEN` | Por cliente — los tienes pero úsalos solo si Gibran te asigna trabajo de ese cliente |
+| `GHL_API_KEY_*` | GHL CRM por cliente |
+| `OPENAI_API_KEY`, `ANTHROPIC_API_KEY` | APIs directas (raro) |
+
+**Si una credencial rota** (Gibran te avisa por chat):
+```powershell
+git pull origin main         # baja el .enc actualizado
+.\scripts\decrypt-secrets.ps1  # re-descifra sobre tu .env.spekgen
+```
+
+**NO commitees** `~\.env.spekgen` ni ninguna versión descifrada. El `.gitignore` ya las excluye, pero ojo.
 
 ## 6. Tu primera semana
 

@@ -1,12 +1,20 @@
 # SPEKGEN OS — .gitignore
 
-# === SECRETOS (NUNCA commitear) ===
+# === SECRETOS (NUNCA commitear plaintext) ===
 .env
 .env.local
 .env.*.local
+.env.spekgen
+.env.spekgen.bak.*
 *.env.backup
 **/.env
 !.env.example
+!secrets/credentials.env.enc   # cifrado AES-256 — ese SÍ se commitea
+
+# Cualquier intento de descifrado escrito a disco
+/tmp/edit_secrets*
+**/decrypted.env
+**/secrets_plain*
 
 # === SO / IDE ===
 .DS_Store
