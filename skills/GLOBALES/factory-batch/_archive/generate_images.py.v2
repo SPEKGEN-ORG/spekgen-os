@@ -1,0 +1,307 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Genera imágenes via Gemini API para un batch de factory-batch v2.
+
+Lee batch.json, por cada slide corre Gemini 3 Pro Image Preview, genera 2 variantes
+(v1 + v2), guarda en FINAL/, y registra cada generación en SPEKGEN_GEMINI_COST_TRACKER.xlsx.
+
+Uso:
+  python3 generate_images.py /path/to/batch_dir
+  python3 generate_images.py /path/to/batch_dir --slide 2  # solo S2
+  python3 generate_images.py /path/to/batch_dir --variants 1  # 1 variante en lugar de 2
+
+Dependencias: google-genai, Pillow, openpyxl
+API key: lee de {CLIENT}/.env como GEMINI_API_KEY
+"""
+from __future__ import annotations
+import os, sys, json, argparse, time, re
+from pathlib import Path
+from datetime import datetime
+from typing import Optional, List
+
+# ── Config ────────────────────────────────────────────────────────────────────
+DEFAULT_MODEL = "gemini-3-pro-image-preview"
+COST_PER_IMAGE_USD = 0.04   # output pricing Gemini 3 Pro Image
+USD_TO_MXN = 20.0           # aprox; tracker actualiza con FX real si quieres
+
+CLIENT_ENV_PATHS = {
+    "HC": "HC - HEALTHY CHUCHOS/.env",
+    "LF": "LF - LO FITNESS/.env",
+    "GR": "GR - GREENRAY/.env",
+    "MG": "MG - METAGREEN/.env",
+}
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+def find_clients_root() -> Path:
+    """Sube hasta la carpeta `01. CLIENTS OFFICIAL`."""
+    p = Path(__file__).resolve()
+    while p.name and "01. CLIENTS OFFICIAL" not in str(p):
+        p = p.parent
+        if p == p.parent:  # raíz
+            raise RuntimeError("No encontré 01. CLIENTS OFFICIAL en parents")
+    while p.name != "01. CLIENTS OFFICIAL":
+        p = p.parent
+    return p
+
+def load_env_for_client(client: str) -> str:
+    """Lee GEMINI_API_KEY del .env del cliente."""
+    root = find_clients_root()
+    rel = CLIENT_ENV_PATHS.get(client)
+    if not rel:
+        raise RuntimeError(f"Cliente no soportado: {client}")
+    env_path = root / rel
+    if not env_path.exists():
+        raise RuntimeError(f".env no encontrado: {env_path}")
+    for line in env_path.read_text().splitlines():
+        if line.startswith("GEMINI_API_KEY="):
+            return line.split("=", 1)[1].strip()
+    raise RuntimeError(f"GEMINI_API_KEY no en {env_path}")
+
+def get_cost_tracker_path() -> Path:
+    root = find_clients_root()
+    return root / "SPK - SPEKGEN AGENCY" / "SPK - 00. COMMAND CENTER" / "01. LOGS OPERATIVOS" / "SPEKGEN_GEMINI_COST_TRACKER.xlsx"
+
+def log_to_cost_tracker(client: str, post_id: str, slide_num: int, slide_role: str,
+                        variant: str, model: str, image_path: Path, status: str = "OK"):
+    """Append una fila al SPEKGEN_GEMINI_COST_TRACKER.xlsx."""
+    try:
+        from openpyxl import Workbook, load_workbook
+    except ImportError:
+        print("  [WARN] openpyxl no instalado — saltando cost tracker")
+        return
+
+    tracker = get_cost_tracker_path()
+    tracker.parent.mkdir(parents=True, exist_ok=True)
+
+    if tracker.exists():
+        wb = load_workbook(tracker)
+        ws = wb.active
+    else:
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "GEMINI_GENERATIONS"
+        ws.append([
+            "timestamp", "client", "post_id", "slide_num", "slide_role",
+            "variant", "model", "image_path", "cost_usd", "cost_mxn", "status"
+        ])
+
+    cost_usd = COST_PER_IMAGE_USD if status == "OK" else 0
+    cost_mxn = cost_usd * USD_TO_MXN
+    ws.append([
+        datetime.now().isoformat(timespec="seconds"),
+        client, post_id, slide_num, slide_role, variant, model,
+        str(image_path) if image_path else "",
+        round(cost_usd, 4), round(cost_mxn, 2), status
+    ])
+    wb.save(tracker)
+
+# ── Gemini API ────────────────────────────────────────────────────────────────
+def init_client(api_key: str):
+    from google import genai
+    return genai.Client(api_key=api_key)
+
+def generate_one(client_obj, model: str, prompt: str, attachments: List[Path]) -> bytes:
+    """Llama Gemini API y retorna bytes JPEG de la imagen."""
+    from google.genai import types
+
+    parts = [types.Part(text=prompt)]
+    for att in attachments:
+        if not att.exists():
+            print(f"    [WARN] attachment missing: {att}")
+            continue
+        mime = "image/jpeg" if att.suffix.lower() in (".jpg", ".jpeg") else "image/png"
+        parts.append(types.Part.from_bytes(data=att.read_bytes(), mime_type=mime))
+
+    response = client_obj.models.generate_content(
+        model=model,
+        contents=[types.Content(role="user", parts=parts)],
+        config=types.GenerateContentConfig(response_modalities=["IMAGE"]),
+    )
+
+    # Extraer imagen del response
+    for cand in response.candidates or []:
+        for part in cand.content.parts or []:
+            if hasattr(part, "inline_data") and part.inline_data and part.inline_data.data:
+                return part.inline_data.data
+    raise RuntimeError("Response no contiene imagen")
+
+def resolve_attachment(att_name: str, search_dirs: list) -> Optional[Path]:
+    """Busca attachment en orden de directorios. Retorna Path o None."""
+    for d in search_dirs:
+        cand = d / att_name
+        if cand.exists():
+            return cand
+    return None
+
+# ── Content batch (slides[]) ──────────────────────────────────────────────────
+def process_content_batch(batch_dir: Path, data: dict, gem, model: str,
+                          only_slide: Optional[int], variants: int,
+                          final_dir: Path, attach_dir: Path):
+    post_id = data["post_id"]
+    client = data["client"]
+    print(f"\n{'='*60}")
+    print(f"CONTENT BATCH: {post_id} ({client})  ·  modelo: {model}")
+    print(f"{'='*60}\n")
+
+    for slide in data["slides"]:
+        slide_num = slide["num"]
+        slide_role = slide["role"]
+
+        if only_slide is not None and slide_num != only_slide:
+            continue
+
+        prompt = slide.get("prompt")
+        if not prompt:
+            print(f"  S{slide_num}: sin prompt, skip")
+            continue
+
+        # Resolver attachments — orden: ATTACHMENTS/ → FINAL/ → batch_dir/
+        attachments = []
+        for att_name in slide.get("extra_attachments", []):
+            found = resolve_attachment(att_name, [attach_dir, final_dir, batch_dir])
+            if found:
+                attachments.append(found)
+            else:
+                print(f"  [WARN] attachment no encontrado: {att_name}")
+
+        for v in range(1, variants + 1):
+            variant = f"v{v}"
+            out_path = final_dir / f"{post_id}_S{slide_num}_{variant}.jpg"
+
+            if out_path.exists():
+                print(f"  S{slide_num} {variant}: ya existe, skip ({out_path.name})")
+                log_to_cost_tracker(client, post_id, slide_num, slide_role,
+                                    variant, model, out_path, status="SKIP_EXISTS")
+                continue
+
+            print(f"  S{slide_num} {variant} ({slide_role}) generando...")
+            try:
+                img_bytes = generate_one(gem, model, prompt, attachments)
+                out_path.write_bytes(img_bytes)
+                print(f"    → {out_path.name}  ({len(img_bytes)//1024} KB)")
+                log_to_cost_tracker(client, post_id, slide_num, slide_role,
+                                    variant, model, out_path, status="OK")
+                time.sleep(2)
+            except Exception as e:
+                print(f"    ERROR: {e}")
+                log_to_cost_tracker(client, post_id, slide_num, slide_role,
+                                    variant, model, None, status=f"ERROR: {str(e)[:80]}")
+
+# ── Ads batch (entries[]) ─────────────────────────────────────────────────────
+def process_ads_batch(batch_dir: Path, data: dict, gem, default_model: str,
+                      only_ad: Optional[str], variants: int,
+                      final_dir: Path, attach_dir: Path):
+    batch_id = data.get("batch_id", batch_dir.name)
+    batch_client = data.get("client", "CROSS")
+    print(f"\n{'='*60}")
+    print(f"ADS BATCH: {batch_id} ({batch_client})  ·  modelo default: {default_model}")
+    print(f"{'='*60}\n")
+
+    for entry in data["entries"]:
+        ad_code = entry["ad_code"]
+        if only_ad and ad_code != only_ad:
+            continue
+
+        ad_client = entry.get("client", batch_client)
+        ad_format = entry.get("format", "?")
+        prompt = entry.get("gemini_prompt") or entry.get("prompt")
+        model = entry.get("model_used", default_model)
+
+        if not prompt:
+            print(f"  {ad_code}: sin gemini_prompt, skip")
+            continue
+
+        # Resolver attachments — orden: ATTACHMENTS/{ad_code}/ → ATTACHMENTS/ → FINAL/ → batch_dir/
+        ad_attach_dir = attach_dir / ad_code
+        attachments = []
+        for att_name in entry.get("extra_attachments") or entry.get("attachments") or []:
+            # Si el path ya viene relativo (ej. "RESOURCES/X/file.png"), strip prefix
+            clean = att_name.split("/")[-1] if "/" in att_name else att_name
+            found = resolve_attachment(clean, [ad_attach_dir, attach_dir, final_dir, batch_dir])
+            if found:
+                attachments.append(found)
+            else:
+                print(f"  [WARN] {ad_code}: attachment no encontrado: {att_name}")
+
+        for v in range(1, variants + 1):
+            variant = f"v{v}"
+            out_path = final_dir / f"{ad_code}_{variant}.jpg"
+
+            if out_path.exists():
+                print(f"  {ad_code} {variant}: ya existe, skip")
+                log_to_cost_tracker(ad_client, ad_code, 0, ad_format,
+                                    variant, model, out_path, status="SKIP_EXISTS")
+                continue
+
+            print(f"  {ad_code} {variant} ({ad_format}) generando...")
+            try:
+                img_bytes = generate_one(gem, model, prompt, attachments)
+                out_path.write_bytes(img_bytes)
+                print(f"    → {out_path.name}  ({len(img_bytes)//1024} KB)")
+                log_to_cost_tracker(ad_client, ad_code, 0, ad_format,
+                                    variant, model, out_path, status="OK")
+                time.sleep(2)
+            except Exception as e:
+                print(f"    ERROR: {e}")
+                log_to_cost_tracker(ad_client, ad_code, 0, ad_format,
+                                    variant, model, None, status=f"ERROR: {str(e)[:80]}")
+
+# ── Dispatch ──────────────────────────────────────────────────────────────────
+def process_batch(batch_dir: Path, only_target: Optional[str], variants: int):
+    batch_json = batch_dir / "batch.json"
+    if not batch_json.exists():
+        print(f"FATAL: no existe {batch_json}")
+        sys.exit(1)
+
+    data = json.loads(batch_json.read_text())
+    final_dir = batch_dir / "FINAL"
+    attach_dir = batch_dir / "ATTACHMENTS"
+    final_dir.mkdir(exist_ok=True)
+
+    # Detectar schema: content (slides[]) vs ads (entries[])
+    is_ads = data.get("type") == "ads" or "entries" in data
+    is_content = "slides" in data or data.get("type") == "content"
+
+    if is_ads:
+        # Para ads: only_target es un ad_code (string)
+        only_ad = only_target if isinstance(only_target, str) else None
+        # Si caller pasó un int (legacy slide), ignoramos
+        if isinstance(only_target, int):
+            only_ad = None
+        # Necesitamos API key — ads pueden ser cross-client
+        # Usamos el client del primer entry o batch.client
+        client_for_key = (data.get("client") if data.get("client") not in (None, "CROSS")
+                          else (data["entries"][0]["client"] if data.get("entries") else "HC"))
+        api_key = load_env_for_client(client_for_key)
+        gem = init_client(api_key)
+        model = data.get("model_used", DEFAULT_MODEL)
+        process_ads_batch(batch_dir, data, gem, model, only_ad, variants, final_dir, attach_dir)
+    elif is_content:
+        only_slide = int(only_target) if (only_target and str(only_target).isdigit()) else None
+        client = data["client"]
+        api_key = load_env_for_client(client)
+        gem = init_client(api_key)
+        model = data.get("model_used", DEFAULT_MODEL)
+        process_content_batch(batch_dir, data, gem, model, only_slide, variants, final_dir, attach_dir)
+    else:
+        print(f"FATAL: schema no reconocido en {batch_json}. Necesita 'slides' (content) o 'entries' (ads).")
+        sys.exit(1)
+
+    print(f"\n{'='*60}")
+    print(f"DONE. Imágenes en: {final_dir}")
+    print(f"Cost tracker: {get_cost_tracker_path()}")
+    print(f"{'='*60}\n")
+
+# ── CLI ───────────────────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser(description="Genera imágenes via Gemini API. Detecta automáticamente content (slides) vs ads (entries).")
+    ap.add_argument("batch_dir", help="Path al folder del batch (debe contener batch.json)")
+    ap.add_argument("--slide", type=int, default=None, help="(content) solo regenerar este slide número")
+    ap.add_argument("--ad", type=str, default=None, help="(ads) solo regenerar este ad_code")
+    ap.add_argument("--variants", type=int, default=2, help="Variantes por slide/ad (default 2)")
+    args = ap.parse_args()
+
+    bd = Path(args.batch_dir).resolve()
+    only_target = args.ad if args.ad else args.slide
+    process_batch(bd, only_target, args.variants)

@@ -1,0 +1,61 @@
+{# Template de REFERENCIA estructural — Claude llena el contenido leyendo el transcript, NO se renderiza con Jinja #}
+# {{ TITULO_DEL_VIDEO }}
+
+**Canal:** {{ CANAL }}
+**URL:** {{ URL }}
+**Duración:** {{ MM:SS }} | **Subido:** {{ YYYY-MM-DD }} | **Vistas:** {{ N }}
+**Procesado:** {{ FECHA }}
+**Tema central:** {{ una frase corta describiendo el tema }}
+
+---
+
+## TL;DR
+
+- {{ bullet 1 — el insight más importante en una línea }}
+- {{ bullet 2 }}
+- {{ bullet 3 }}
+- {{ bullet 4 (opcional) }}
+- {{ bullet 5 (opcional) }}
+
+---
+
+## {{ Lista principal — adaptar al contenido. Si son tricks/tips, listarlos numerados con tabla. Si es tema único, secciones jerárquicas }}
+
+> Si numeración del speaker es inconsistente, renumerar limpio aquí y avisar.
+
+| # | Trick/Insight | Detalle | Timestamp |
+|---|---|---|---|
+| 1 | ... | ... | MM:SS |
+
+---
+
+## Action items para SPEKGEN
+
+Mapeo a infraestructura existente.
+
+### Ya lo aplicamos (validado)
+- ✅ {{ qué ya tenemos del insight }}
+
+### Implementar ya (gap real, valor inmediato)
+- 🔴 {{ gap específico + acción concreta }}
+
+### Considerar
+- ⚪ {{ ideas que pueden esperar }}
+
+---
+
+## Aprendizajes clave (principios, no hacks específicos)
+
+1. {{ principio 1 }}
+2. {{ principio 2 }}
+
+---
+
+## Quotes citables (con timestamp)
+
+> "{{ quote literal del transcript }}" — {{ contexto }} [MM:SS]
+
+---
+
+## Backlinks Obsidian
+[[CLIENTE/TEMA]] · [[OTRO]] · [[OTRO]]

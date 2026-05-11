@@ -1,0 +1,38 @@
+---
+type: yt-insight
+source: youtube
+url: {{ url }}
+channel: {{ channel }}
+duration_min: {{ duration_min }}
+upload_date: {{ upload_date }}
+extracted_at: {{ extracted_at }}
+tags:
+  - yt-insight
+  - aprendizaje
+{% for bl in backlinks %}  - {{ bl | replace(' ', '-') | replace('@', '') | lower }}
+{% endfor %}---
+
+# {{ title }}
+
+🎥 [Ver en YouTube]({{ url }}) · {{ channel }} · {{ duration_min }} min
+
+📂 Carpeta: `{{ folder_path }}`
+
+## Archivos
+
+- 📄 [_RECAP.pdf]({{ recap_path }}) ← abrir primero (1 hoja)
+- 📚 [insights.pdf]({{ insights_path }})
+- 🎯 [content_briefs.pdf]({{ briefs_path }})
+
+## TL;DR
+
+{{ tldr }}
+
+## Action items para SPEKGEN
+
+{{ actions }}
+
+## Backlinks
+
+{% for bl in backlinks %}- [[{{ bl }}]]
+{% endfor %}

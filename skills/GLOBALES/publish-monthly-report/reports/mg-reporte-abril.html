@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MetaGreen Labs — Reporte 1 – 30 Abril 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  #spekgen-prospect-wrap {
+    --bg: #0a0a0f;
+    --bg-2: #13131c;
+    --bg-3: #1c1c28;
+    --border: #2a2a38;
+    --border-strong: #3d3d50;
+    --text: #ffffff;
+    --text-dim: #d8d8e2;
+    --text-mute: #9a9aac;
+    --accent: #33BA9E;
+    --accent-soft: rgba(51, 186, 158, 0.14);
+    --spekgen: #a78bfa;
+    --spekgen-soft: rgba(167, 139, 250, 0.12);
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #fb7185;
+    --info: #60a5fa;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+  }
+
+  :where(#spekgen-prospect-wrap *) { margin: 0; padding: 0; box-sizing: border-box; }
+  :where(#spekgen-prospect-wrap ul, #spekgen-prospect-wrap ol) { list-style: none; }
+  :where(#spekgen-prospect-wrap p,
+         #spekgen-prospect-wrap div,
+         #spekgen-prospect-wrap span,
+         #spekgen-prospect-wrap li,
+         #spekgen-prospect-wrap td,
+         #spekgen-prospect-wrap th,
+         #spekgen-prospect-wrap h1,
+         #spekgen-prospect-wrap h2,
+         #spekgen-prospect-wrap h3,
+         #spekgen-prospect-wrap h4) { color: var(--text); font-family: inherit; }
+  :where(#spekgen-prospect-wrap a) { color: var(--text-dim); text-decoration: none; }
+  :where(#spekgen-prospect-wrap a:hover) { color: var(--text); }
+
+  .spk-mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+
+  /* Container */
+  .spk-report {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+
+  /* HERO */
+  .spk-hero {
+    padding: 56px 40px;
+    border-radius: 20px;
+    background: linear-gradient(140deg, var(--bg-2) 0%, var(--bg-3) 100%);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .spk-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle at center, var(--accent-soft) 0%, transparent 70%);
+    opacity: 0.8;
+    pointer-events: none;
+  }
+  .spk-cobrand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 18px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+  }
+  .spk-cobrand-item {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text) !important;
+  }
+  .spk-cobrand-item.spekgen { color: var(--spekgen) !important; }
+  .spk-cobrand-item.client { color: var(--accent) !important; }
+  .spk-cobrand-x {
+    color: var(--text-mute) !important;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .spk-hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+    color: var(--text) !important;
+    position: relative;
+    z-index: 2;
+  }
+  .spk-hero-title .accent { color: var(--accent) !important; }
+  .spk-hero-period {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dim) !important;
+    letter-spacing: 0.3px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+  }
+  .spk-hero-headline {
+    font-size: 16px;
+    color: var(--text-dim) !important;
+    max-width: 640px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Section base */
+  .spk-section {
+    margin-top: 56px;
+    padding: 40px 36px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .spk-section-title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    color: var(--text) !important;
+    margin-bottom: 10px;
+  }
+  .spk-section-intro {
+    font-size: 15px;
+    color: var(--text-dim) !important;
+    line-height: 1.75;
+    margin-bottom: 28px;
+    max-width: 720px;
+  }
+
+  /* Investment cards */
+  .spk-invest-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .spk-invest-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .spk-invest-amount {
+    flex-shrink: 0;
+    min-width: 140px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent) !important;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .spk-invest-amount .cur {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-mute) !important;
+    margin-left: 4px;
+  }
+  .spk-invest-body { flex: 1; }
+  .spk-invest-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 4px;
+  }
+  .spk-invest-desc {
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.6;
+  }
+  .spk-invest-total {
+    margin-top: 16px;
+    padding: 22px 24px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .spk-invest-total-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text) !important;
+  }
+  .spk-invest-total-amount {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent) !important;
+    letter-spacing: -0.8px;
+  }
+
+  /* Budget highlight */
+  .spk-budget-hl {
+    margin-top: 20px;
+    padding: 24px;
+    background: var(--bg-3);
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+  }
+  .spk-budget-hl-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 14px;
+  }
+  .spk-budget-hl-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent) !important;
+    margin-bottom: 6px;
+  }
+  .spk-budget-hl-desc {
+    font-size: 13px;
+    color: var(--text-dim) !important;
+    line-height: 1.6;
+    max-width: 540px;
+  }
+  .spk-budget-hl-pct {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    background: var(--accent);
+    color: var(--bg) !important;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 999px;
+    letter-spacing: -0.3px;
+  }
+  .spk-budget-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .spk-budget-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--warning));
+    border-radius: 999px;
+  }
+  .spk-budget-hl-split {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .spk-budget-hl-num {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text) !important;
+    letter-spacing: -0.4px;
+  }
+  .spk-budget-hl-sub {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-left: 4px;
+  }
+
+  /* Sales header (count + total) */
+  .spk-sales-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .spk-sales-total {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent) !important;
+    letter-spacing: -0.5px;
+  }
+  .spk-sales-total .cur {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-mute) !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-left: 4px;
+  }
+  .spk-table td.amount {
+    text-align: right;
+    font-weight: 700;
+    color: var(--success) !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+
+  /* ROI block */
+  .spk-roi {
+    margin-top: 28px;
+    padding: 26px 28px;
+    background: var(--bg-3);
+    border: 1px solid var(--border-strong);
+    border-radius: 14px;
+  }
+  .spk-roi-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent) !important;
+    margin-bottom: 18px;
+  }
+  .spk-roi-grid {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .spk-roi-col {
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+  }
+  .spk-roi-col.invest { border-left: 3px solid var(--warning); }
+  .spk-roi-col.gen { border-left: 3px solid var(--success); }
+  .spk-roi-col-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-bottom: 8px;
+  }
+  .spk-roi-col-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text) !important;
+    letter-spacing: -0.8px;
+    line-height: 1;
+  }
+  .spk-roi-col.invest .spk-roi-col-value { color: var(--warning) !important; }
+  .spk-roi-col.gen .spk-roi-col-value { color: var(--success) !important; }
+  .spk-roi-arrow {
+    text-align: center;
+    font-size: 28px;
+    color: var(--text-mute) !important;
+    font-weight: 300;
+  }
+  .spk-roi-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding: 16px 18px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+  }
+  .spk-roi-metric-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-bottom: 4px;
+  }
+  .spk-roi-metric-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text) !important;
+    letter-spacing: -0.4px;
+  }
+  .spk-roi-metric-value.positive { color: var(--success) !important; }
+  .spk-roi-metric-value.negative { color: var(--danger) !important; }
+  .spk-roi-note {
+    font-size: 13px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+  }
+
+  /* Timeline */
+  .spk-strat-body {
+    font-size: 15px;
+    color: var(--text-dim) !important;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .spk-timeline {
+    border-left: 2px solid var(--border-strong);
+    padding-left: 24px;
+    margin-left: 8px;
+  }
+  .spk-timeline-item {
+    position: relative;
+    padding-bottom: 18px;
+  }
+  .spk-timeline-item:last-child { padding-bottom: 0; }
+  .spk-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 3px solid var(--bg-2);
+    box-sizing: content-box;
+  }
+  .spk-timeline-date {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent) !important;
+    margin-bottom: 2px;
+  }
+  .spk-timeline-event {
+    font-size: 14px;
+    color: var(--text) !important;
+    line-height: 1.5;
+  }
+
+  /* Sales table */
+  .spk-sales-count {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--success);
+    color: #0a0a0f !important;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  .spk-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .spk-table th {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    background: rgba(255,255,255,0.02);
+    border-bottom: 1px solid var(--border);
+  }
+  .spk-table td {
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: var(--text) !important;
+    border-bottom: 1px solid var(--border);
+  }
+  .spk-table tr:last-child td { border-bottom: none; }
+  .spk-table td.order { font-weight: 700; color: var(--accent) !important; font-family: 'JetBrains Mono', monospace; }
+  .spk-table td.customer { font-weight: 600; }
+  .spk-table td.channel { color: var(--text-dim) !important; font-size: 12.5px; }
+  .spk-table td.desc { color: var(--text-dim) !important; font-size: 12.5px; }
+
+  .spk-abandoned {
+    margin-top: 24px;
+    padding: 20px 22px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .spk-abandoned-num {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--warning) !important;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  .spk-abandoned-text { flex: 1; }
+  .spk-abandoned-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 4px;
+  }
+  .spk-abandoned-desc {
+    font-size: 13px;
+    color: var(--text-dim) !important;
+    line-height: 1.6;
+  }
+
+  .spk-honest {
+    margin-top: 24px;
+    padding: 18px 22px;
+    background: var(--spekgen-soft);
+    border-left: 3px solid var(--spekgen);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+  }
+  .spk-honest::before {
+    content: 'Nota honesta';
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--spekgen) !important;
+    margin-bottom: 6px;
+  }
+
+  /* KPI grid (for Meta / Organic / etc) */
+  .spk-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .spk-kpi {
+    padding: 20px 18px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .spk-kpi-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-bottom: 10px;
+  }
+  .spk-kpi-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text) !important;
+    letter-spacing: -0.6px;
+    margin-bottom: 4px;
+  }
+  .spk-kpi-sub {
+    font-size: 11.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.5;
+  }
+
+  .spk-meta-meta {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .spk-meta-meta-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.02);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+  }
+  .spk-meta-meta-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-bottom: 4px;
+  }
+  .spk-meta-meta-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text) !important;
+  }
+
+  .spk-learning {
+    margin-top: 22px;
+    padding: 18px 22px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+  }
+  .spk-learning::before {
+    content: 'Aprendizaje';
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent) !important;
+    margin-bottom: 6px;
+  }
+
+  /* Top posts */
+  .spk-top-block {
+    margin-top: 28px;
+    padding: 20px 22px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .spk-top-block-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent) !important;
+    margin-bottom: 14px;
+  }
+  .spk-top-post {
+    display: grid;
+    grid-template-columns: 100px 90px 1fr 160px;
+    gap: 14px;
+    padding: 12px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .spk-top-post:last-child { border-bottom: none; }
+  .spk-top-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-dim) !important;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .spk-top-format {
+    display: inline-block;
+    padding: 3px 10px;
+    background: var(--accent-soft);
+    color: var(--accent) !important;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 999px;
+    text-align: center;
+  }
+  .spk-top-desc {
+    font-size: 13.5px;
+    color: var(--text) !important;
+    line-height: 1.5;
+  }
+  .spk-top-desc .author {
+    display: block;
+    font-size: 11px;
+    color: var(--text-mute) !important;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .spk-top-eng {
+    font-size: 12px;
+    color: var(--text-dim) !important;
+    text-align: right;
+    font-weight: 500;
+  }
+
+  .spk-note-block {
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--text-mute) !important;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  /* Pivot explainer (TOFU/BOFU) */
+  .spk-pivot {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    padding: 24px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.06), rgba(245, 158, 11, 0.02));
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
+  }
+  .spk-pivot-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-strong) !important;
+    margin-bottom: 18px;
+    letter-spacing: -0.2px;
+  }
+  .spk-pivot-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .spk-pivot-point {
+    padding: 16px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .spk-pivot-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent) !important;
+    margin-bottom: 8px;
+    letter-spacing: -0.1px;
+  }
+  .spk-pivot-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text) !important;
+  }
+  .spk-pivot-targets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 16px;
+    background: rgba(255,255,255,0.02);
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+  }
+  .spk-pivot-target {
+    text-align: center;
+  }
+  .spk-pivot-target-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-mute) !important;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .spk-pivot-target-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-strong) !important;
+    line-height: 1.35;
+  }
+  .spk-pivot-target.highlight .spk-pivot-target-value {
+    color: var(--accent) !important;
+  }
+
+  /* WhatsApp */
+  .spk-wa-blaster {
+    display: grid;
+    grid-template-columns: 120px 120px 1fr;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 28px;
+    align-items: center;
+  }
+  .spk-wa-big {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+  }
+  .spk-wa-big-num {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--accent) !important;
+    line-height: 1;
+    letter-spacing: -0.8px;
+  }
+  .spk-wa-big-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-top: 6px;
+  }
+  .spk-wa-blaster-desc {
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+  }
+  .spk-wa-blaster-desc strong {
+    color: var(--text) !important;
+    font-weight: 700;
+  }
+
+  .spk-wa-convo-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 8px;
+  }
+  .spk-wa-convo-intro {
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+  .spk-lead {
+    padding: 18px 22px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--success);
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .spk-lead-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 3px;
+  }
+  .spk-lead-phone {
+    font-size: 12.5px;
+    color: var(--text-dim) !important;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 6px;
+  }
+  .spk-lead-meta {
+    font-size: 12px;
+    color: var(--text-mute) !important;
+  }
+  .spk-lead-meta .source {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--spekgen-soft);
+    color: var(--spekgen) !important;
+    font-weight: 600;
+    border-radius: 999px;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 8px;
+  }
+
+  /* Delivered */
+  .spk-deliv-row {
+    display: grid;
+    grid-template-columns: 1fr 110px 1fr;
+    gap: 20px;
+    padding: 18px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .spk-deliv-row:last-child { border-bottom: none; }
+  .spk-deliv-item {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text) !important;
+  }
+  .spk-deliv-status {
+    text-align: center;
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 999px;
+  }
+  .spk-deliv-status.good {
+    background: rgba(74, 222, 128, 0.12);
+    color: var(--success) !important;
+  }
+  .spk-deliv-status.warn {
+    background: rgba(251, 191, 36, 0.12);
+    color: var(--warning) !important;
+  }
+  .spk-deliv-status.bad {
+    background: rgba(251, 113, 133, 0.12);
+    color: var(--danger) !important;
+  }
+  .spk-deliv-note {
+    font-size: 12.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.6;
+  }
+
+  .spk-addons-block {
+    margin-top: 40px;
+    padding-top: 36px;
+    border-top: 1px dashed var(--border-strong);
+  }
+  .spk-addons-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent) !important;
+    margin-bottom: 8px;
+    letter-spacing: -0.4px;
+  }
+  .spk-addons-intro {
+    font-size: 14px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+  .spk-addon {
+    padding: 16px 20px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .spk-addon-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 5px;
+  }
+  .spk-addon-title::before {
+    content: '+';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    background: var(--accent);
+    color: var(--bg) !important;
+    border-radius: 50%;
+    font-weight: 800;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .spk-addon-desc {
+    font-size: 13px;
+    color: var(--text-dim) !important;
+    line-height: 1.65;
+    padding-left: 30px;
+  }
+
+  /* Next month */
+  .spk-next {
+    padding: 36px 36px;
+    background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg-3) 100%);
+    border: 1px solid var(--accent);
+    border-radius: 16px;
+    margin-top: 56px;
+  }
+  .spk-next-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent) !important;
+    margin-bottom: 12px;
+    letter-spacing: -0.4px;
+  }
+  .spk-next-body {
+    font-size: 15px;
+    color: var(--text-dim) !important;
+    line-height: 1.8;
+  }
+
+  /* Footer */
+  .spk-footer {
+    margin-top: 56px;
+    padding: 32px 0 12px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  .spk-footer-cobrand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  .spk-footer-item {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+  .spk-footer-item.spekgen { color: var(--spekgen) !important; }
+  .spk-footer-item.client { color: var(--accent) !important; }
+  .spk-footer-x {
+    color: var(--text-mute) !important;
+    font-weight: 300;
+    font-size: 13px;
+  }
+  .spk-footer-tag {
+    font-size: 11.5px;
+    color: var(--text-mute) !important;
+    letter-spacing: 0.3px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .spk-report { padding: 24px 14px 64px; }
+    .spk-hero { padding: 36px 24px; }
+    .spk-hero-title { font-size: 32px; }
+    .spk-section { padding: 28px 22px; }
+    .spk-section-title { font-size: 22px; }
+    .spk-kpi-grid { grid-template-columns: 1fr 1fr; }
+    .spk-invest-row { flex-direction: column; gap: 6px; }
+    .spk-invest-amount { min-width: 0; font-size: 22px; }
+    .spk-invest-total { flex-direction: column; gap: 8px; align-items: flex-start; }
+    .spk-invest-total-amount { font-size: 26px; }
+    .spk-top-post { grid-template-columns: 1fr; gap: 4px; }
+    .spk-top-eng { text-align: left; }
+    .spk-wa-blaster { grid-template-columns: 1fr 1fr; }
+    .spk-wa-blaster-desc { grid-column: 1 / -1; }
+    .spk-deliv-row { grid-template-columns: 1fr; gap: 8px; }
+    .spk-deliv-status { justify-self: start; }
+    .spk-table th, .spk-table td { padding: 10px 12px; font-size: 12px; }
+    .spk-roi-grid { grid-template-columns: 1fr; }
+    .spk-roi-arrow { transform: rotate(90deg); }
+    .spk-roi-col-value { font-size: 26px; }
+    .spk-budget-hl-top { flex-direction: column; gap: 10px; }
+    .spk-budget-hl-pct { align-self: flex-start; }
+    .spk-pivot-points { grid-template-columns: 1fr; }
+    .spk-pivot-targets { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="spekgen-prospect-wrap">
+<div class="spk-report">
+
+  <section class="spk-hero">
+    <div class="spk-cobrand">
+      <span class="spk-cobrand-item spekgen">SPEKGEN</span>
+      <span class="spk-cobrand-x">×</span>
+      <span class="spk-cobrand-item client">MetaGreen Labs</span>
+    </div>
+    <h1 class="spk-hero-title">Reporte Abril 2026 <span class="accent">MetaGreen Labs</span></h1>
+    <div class="spk-hero-period">1 – 30 Abril 2026 · 30 días</div>
+    <p class="spk-hero-headline">Resumen del primer mes operativo de MetaGreen con SPEKGEN bajo el contrato productizado de $6,998 MXN/mes. Mes 1 cerró con las 30 piezas de contenido producidas y publicadas, website LIVE, bot WhatsApp LIVE en GHL, y la primera de las 5 automatizaciones CRM corriendo. Lo entregado, los pendientes y el plan de mayo, abajo.</p>
+  </section>
+
+  <section class="spk-section">
+    <h2 class="spk-section-title">A dónde se fue tu dinero este mes</h2>
+    <p class="spk-section-intro">Tu inversión es el retainer mensual del contrato productizado. MetaGreen no destinó presupuesto publicitario directo en abril — esa fase arranca en mayo una vez validada la oferta orgánica.</p>
+    <div class="spk-invest-grid">
+      <div class="spk-invest-row">
+        <div class="spk-invest-amount">$3,000<span class="cur">MXN</span></div>
+        <div class="spk-invest-body">
+          <div class="spk-invest-label">Retainer base</div>
+          <div class="spk-invest-desc">Pago mensual base por: mantenimiento de website, mantenimiento de bot+WhatsApp, mantenimiento de automatizaciones CRM, reporting + call de estrategia 1/mes.</div>
+        </div>
+      </div>
+      <div class="spk-invest-row">
+        <div class="spk-invest-amount">$1,998<span class="cur">MXN</span></div>
+        <div class="spk-invest-body">
+          <div class="spk-invest-label">Add-on · 30 piezas de contenido B2B</div>
+          <div class="spk-invest-desc">Producción mensual de 30 piezas de contenido orgánico para el feed de Instagram y Facebook de MetaGreen — ángulos de dolor, autoridad, proceso, dropshipping y casos.</div>
+        </div>
+      </div>
+      <div class="spk-invest-row">
+        <div class="spk-invest-amount">$2,000<span class="cur">MXN</span></div>
+        <div class="spk-invest-body">
+          <div class="spk-invest-label">Add-on · 5 automatizaciones nuevas</div>
+          <div class="spk-invest-desc">Construcción de 5 nuevas automatizaciones en el CRM: survey de calificación, cotización automática, nurture WhatsApp/email, follow-up post-meeting, reactivación de prospectos fríos. $400 MXN c/u.</div>
+        </div>
+      </div>
+    </div>
+    <div class="spk-invest-total">
+      <div class="spk-invest-total-label">Inversión total del mes</div>
+      <div class="spk-invest-total-amount">$6,998 <span style="font-size: 14px; color: var(--text-mute); font-weight: 500;">MXN</span></div>
+    </div>
+
+  </section>
+
+  <section class="spk-section">
+    <h2 class="spk-section-title">La estrategia: organic first, ads después</h2>
+    <p class="spk-strat-body">MetaGreen es un negocio B2B con ciclo de venta largo (30-90 días, multi-touch, cierre por meeting). La estrategia diseñada es construir autoridad orgánica primero — feed con punto de vista propio en maquila, dropshipping y operación — y activar ads solo después de validar que la oferta funciona en orgánico. Ads B2B sin funnel validado quema presupuesto sin retorno medible. En paralelo, infraestructura de captación de leads (quiz de calificación, prospect scraping, outreach email test) y mantenimiento de website + bot.</p>
+    <div class="spk-timeline">
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">1 Abril</div>
+        <div class="spk-timeline-event">MG-001 publicado IG+FB · primer post bajo línea editorial nueva</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">2 Abril</div>
+        <div class="spk-timeline-event">Quiz de calificación LIVE en metagreenlaboratorio.com/califica · Make webhook → GHL</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">3 Abril</div>
+        <div class="spk-timeline-event">DNS LIVE en metagreenlaboratorio.com · Meta API conectada · auto-publish habilitado</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">8 Abril</div>
+        <div class="spk-timeline-event">Análisis competitivo IG (10 marcas) + prospect list (35 leads, 12 con email)</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">8 Abril</div>
+        <div class="spk-timeline-event">Outreach test · 5 emails enviados con template HTML branded MG</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">22 Abril</div>
+        <div class="spk-timeline-event">Migración de producción al Factory · BATCH_MG_2026-04-22 con 7 posts (semana 2)</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">23 Abril</div>
+        <div class="spk-timeline-event">MG-008 publicado · arquetipos de cliente B2B (carrusel)</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">24 Abril</div>
+        <div class="spk-timeline-event">Edge function autopublisher endurecido (triple guard anti-duplicado)</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">30 Abril</div>
+        <div class="spk-timeline-event">Cierre del mes 1</div>
+      </div>
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">1 Mayo</div>
+        <div class="spk-timeline-event">Reporte entregado · este documento</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spk-section">
+    <h2 class="spk-section-title">Pipeline B2B · contexto del ciclo de venta</h2>
+    <p class="spk-section-intro">MetaGreen es B2B con ciclo de venta de 30-90 días: prospecto entra, se califica, se agenda meeting, se manda muestra, se cierra. No tiene sentido reportar 'ventas atribuidas a SPEKGEN' al mes 1 — los leads generados este mes están aún en el pipeline. Lo que sí podemos reportar: leads nuevos en GHL desde el quiz y prospectos contactados vía outreach.</p>
+    <div class="spk-sales-header">
+      <div class="spk-sales-count">0 ventas reales</div>
+    </div>
+    <table class="spk-table">
+      <thead>
+        <tr>
+          <th>Orden</th>
+          <th>Cliente</th>
+          <th>Canal</th>
+          <th style="text-align:right;">Monto</th>
+          <th>Detalle</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div class="spk-abandoned">
+      <div class="spk-abandoned-num">0</div>
+      <div class="spk-abandoned-text">
+        <div class="spk-abandoned-title">Quiz completados que no agendaron meeting</div>
+        <div class="spk-abandoned-desc">El quiz solo lleva 28 días LIVE. Los flujos de nurture WhatsApp/email para reenganchar quiz-completados-sin-meeting están en construcción (parte de las 5 automatizaciones contratadas).</div>
+      </div>
+    </div>
+
+    <div class="spk-honest">El reporte de ventas atribuibles para MG arranca en mes 2 — cuando los primeros leads del mes 1 lleguen al cierre o al rechazo. Mes 1 fue construcción de top-of-funnel: feed con autoridad, quiz capturando contactos, lista de prospectos lista para outreach escalable.</div>
+  </section>
+
+  <section class="spk-section">
+    <h2 class="spk-section-title">Meta Ads B2B · pendiente de activación (decisión estratégica)</h2>
+    <p class="spk-section-intro">MetaGreen NO corrió Meta Ads en abril. Esto es una decisión estratégica, no un incumplimiento: ads B2B sin un funnel validado y una oferta que ya convierte en orgánico, queman presupuesto sin retorno medible. El plan: validar conversión orgánica primero (mes 1-2), construir landing dedicada para ads B2B con calificador de prospecto integrado, y arrancar pauta en mes 3 con creative ya batido contra la audiencia real.</p>
+
+    <div class="spk-meta-meta">
+      <div class="spk-meta-meta-item">
+        <div class="spk-meta-meta-label">Campañas arrancaron</div>
+        <div class="spk-meta-meta-value">—</div>
+      </div>
+      <div class="spk-meta-meta-item">
+        <div class="spk-meta-meta-label">Días activos</div>
+        <div class="spk-meta-meta-value">—</div>
+      </div>
+      <div class="spk-meta-meta-item">
+        <div class="spk-meta-meta-label">Presupuesto usado</div>
+        <div class="spk-meta-meta-value">$0 MXN <span style="color: var(--text-mute); font-size: 12px; font-weight: 500;">(0%)</span></div>
+      </div>
+    </div>
+
+    <div class="spk-kpi-grid">
+    </div>
+
+  </section>
+
+  <section class="spk-section">
+    <h2 class="spk-section-title">Contenido producido y publicado · 30/30 piezas del ciclo abril</h2>
+    <p class="spk-section-intro">El compromiso del contrato productizado es de 30 piezas mensuales de contenido B2B para Instagram y Facebook. Mes 1 cerró con las 30 piezas producidas bajo el sistema visual Liquid Glass v5.5. Galería completa abajo.</p>
+
+    <div class="spk-kpi-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="spk-kpi">
+        <div class="spk-kpi-label">Piezas comprometidas</div>
+        <div class="spk-kpi-value">30</div>
+        <div class="spk-kpi-sub">según contrato productizado abril</div>
+      </div>
+      <div class="spk-kpi">
+        <div class="spk-kpi-label">Piezas producidas</div>
+        <div class="spk-kpi-value">30</div>
+        <div class="spk-kpi-sub">100% bajo sistema visual Liquid Glass v5.5</div>
+      </div>
+      <div class="spk-kpi">
+        <div class="spk-kpi-label">Piezas publicadas</div>
+        <div class="spk-kpi-value">30</div>
+        <div class="spk-kpi-sub">ciclo abril cerrado · ver galería</div>
+      </div>
+      <div class="spk-kpi">
+        <div class="spk-kpi-label">Cumplimiento</div>
+        <div class="spk-kpi-value">100%</div>
+        <div class="spk-kpi-sub">30 / 30 del ciclo abril</div>
+      </div>
+    </div>
+
+    <div class="spk-pivot">
+      <div class="spk-pivot-title">Sistema visual Liquid Glass v5.5 · consistencia editorial cross-pieza</div>
+      <div class="spk-pivot-points">
+        <div class="spk-pivot-point">
+          <div class="spk-pivot-label">Mesh dark green + halos teal/amber/pink</div>
+          <div class="spk-pivot-desc">Paleta industrial premium consistente en las 30 piezas. Cada pilar (DOLOR, DROPSHIPPING, AUTORIDAD, PROCESO, INFRA, CASOS) tiene un halo de acento dominante que comunica el tono de la pieza.</div>
+        </div>
+        <div class="spk-pivot-point">
+          <div class="spk-pivot-label">Tipografía Inter Black 900</div>
+          <div class="spk-pivot-desc">Headlines en blanco grande, eyebrow en color de acento, CTA con thin rule. Estructura repetida pieza a pieza — el feed se lee como un sistema, no como posts sueltos.</div>
+        </div>
+        <div class="spk-pivot-point">
+          <div class="spk-pivot-label">Watermark MetaGreen consistente</div>
+          <div class="spk-pivot-desc">Logo en esquina inferior derecha al 70% opacidad en cada pieza. Reconocimiento de marca aún sin texto visible.</div>
+        </div>
+        <div class="spk-pivot-point">
+          <div class="spk-pivot-label">Conceptos cinematográficos, no Canva</div>
+          <div class="spk-pivot-desc">Cada pieza tiene una metáfora visual conceptual (botes congelados, cadenas rotas, sobre flotando, certificados con sello dorado). Premium B2B, no infographic plana con checkmarks.</div>
+        </div>
+        <div class="spk-pivot-point">
+          <div class="spk-pivot-label">6 pilares editoriales rotando</div>
+          <div class="spk-pivot-desc">DOLOR (5), DROPSHIPPING (4), AUTORIDAD (5), PROCESO (4), INFRA (4), CASOS (3) — distribución pensada para feed equilibrado entre punto de dolor y propuesta de valor.</div>
+        </div>
+      </div>
+      <div class="spk-pivot-targets">
+        <div class="spk-pivot-target">
+          <div class="spk-pivot-target-label">Contratado</div>
+          <div class="spk-pivot-target-value">30 piezas/mes (orgánico B2B)</div>
+        </div>
+        <div class="spk-pivot-target">
+          <div class="spk-pivot-target-label">Este mes (transición)</div>
+          <div class="spk-pivot-target-value">30 piezas (100% del ciclo abril)</div>
+        </div>
+        <div class="spk-pivot-target highlight">
+          <div class="spk-pivot-target-label">Próximo mes</div>
+          <div class="spk-pivot-target-value">30 piezas nuevas (ciclo mayo)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spk-top-block">
+      <div class="spk-top-block-title">Galería completa del ciclo abril (30 piezas)</div>
+      <div class="spk-top-post">
+        <div class="spk-top-date">Ciclo abril</div>
+        <div><span class="spk-top-format">30 piezas estáticas + carruseles</span></div>
+        <div class="spk-top-desc">Vista en grid abajo ↓<span class="author">por MetaGreen</span></div>
+        <div class="spk-top-eng">Liquid Glass v5.5</div>
+      </div>
+    </div>
+
+    <div class="spk-top-block">
+      <div class="spk-top-block-title">Distribución por pilar editorial</div>
+      <div class="spk-top-post" style="grid-template-columns: 100px 110px 1fr 160px;">
+        <div class="spk-top-date">DOLOR</div>
+        <div><span class="spk-top-format">5 piezas</span></div>
+        <div class="spk-top-desc">Punto de dolor del prospecto: maquilador inestable, MOQ alto, capital atorado, falta de trazabilidad.</div>
+        <div class="spk-top-eng"></div>
+      </div>
+      <div class="spk-top-post" style="grid-template-columns: 100px 110px 1fr 160px;">
+        <div class="spk-top-date">DROPSHIPPING</div>
+        <div><span class="spk-top-format">4 piezas</span></div>
+        <div class="spk-top-desc">Propuesta de valor única MG: producción contra orden, white-label, fulfillment desde planta.</div>
+        <div class="spk-top-eng"></div>
+      </div>
+      <div class="spk-top-post" style="grid-template-columns: 100px 110px 1fr 160px;">
+        <div class="spk-top-date">AUTORIDAD</div>
+        <div><span class="spk-top-format">5 piezas</span></div>
+        <div class="spk-top-desc">Capacidad instalada, certificaciones COFEPRIS/ISO/HACCP, geografía operativa Occidente.</div>
+        <div class="spk-top-eng"></div>
+      </div>
+      <div class="spk-top-post" style="grid-template-columns: 100px 110px 1fr 160px;">
+        <div class="spk-top-date">PROCESO</div>
+        <div><span class="spk-top-format">4 piezas</span></div>
+        <div class="spk-top-desc">Cómo es trabajar con MG: 21 días brief→lote, 5 etapas, white-label real.</div>
+        <div class="spk-top-eng"></div>
+      </div>
+      <div class="spk-top-post" style="grid-template-columns: 100px 110px 1fr 160px;">
+        <div class="spk-top-date">INFRA</div>
+        <div><span class="spk-top-format">4 piezas</span></div>
+        <div class="spk-top-desc">Líneas de cápsulas/polvos/líquidos/sachets, una sola planta, sin subcontratación.</div>
+        <div class="spk-top-eng"></div>
+      </div>
+      <div class="spk-top-post" style="grid-template-columns: 100px 110px 1fr 160px;">
+        <div class="spk-top-date">CASOS</div>
+        <div><span class="spk-top-format">3 piezas</span></div>
+        <div class="spk-top-desc">30+ marcas activas, perfiles de cliente (coaches/clínicas/influencers/tiendas), historias de escala.</div>
+        <div class="spk-top-eng"></div>
+      </div>
+    </div>
+
+    <div class="spk-note-block">Las 30 piezas del ciclo abril están listas. Las que ya tienen permalink IG aparecen con link directo al post. El resto fue producido bajo el mismo sistema visual y entra al feed según el calendario operativo.</div>
+
+    <div class="spk-gallery-wrap" style="margin-top:40px;">
+      <div class="spk-gallery-head">
+        <h3 class="spk-gallery-title" style="font-size:22px;font-weight:700;color:#fff;margin:0 0 8px;">Galería completa · las 30 piezas del ciclo abril</h3>
+        <p class="spk-gallery-intro" style="color:rgba(255,255,255,0.7);margin:0 0 24px;line-height:1.55;">Las 30 piezas del ciclo abril en grid. Cada una bajo el sistema visual Liquid Glass v5.5 — mesh dark green, halos teal/amber/pink según pilar, tipografía Inter Black 900, watermark MetaGreen consistente.</p>
+      </div>
+      <div class="spk-gallery-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-01_18097939507982206.jpg" alt="Lo que tu maquilador debería decirte ANTES de firmar." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-001</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DOLOR</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Lo que tu maquilador debería decirte ANTES de firmar.</div>
+            <a href="https://www.instagram.com/p/DWl6D2FlPif/" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:#33BA9E;text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-03_18097110824059676.jpg" alt="¿Cuántos proveedores necesitas para sacar UN producto al mercado?" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-002</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">PROCESO</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">¿Cuántos proveedores necesitas para sacar UN producto al mercado?</div>
+            <a href="https://www.instagram.com/p/DWqxMR1mT8I/" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:#33BA9E;text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-06_18053456111499514.jpg" alt="Nuevo número de WhatsApp." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-AVISO</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">BRAND</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Nuevo número de WhatsApp.</div>
+            <a href="https://www.instagram.com/p/DWzmiKomUcW/" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:#33BA9E;text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-07_17882742000508864.jpg" alt="Tu maquilador produce tu producto. Pero... ¿lo almacena? ¿Lo empaca? ¿Lo envía directo a tu cliente?" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-003</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">PROCESO</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Tu maquilador produce tu producto. Pero... ¿lo almacena? ¿Lo empaca? ¿Lo envía directo a tu cliente?</div>
+            <a href="https://www.instagram.com/p/DW2VQt9la_l/" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:#33BA9E;text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-08_18078199160390400.jpg" alt="Formulación. Maquila. Empaque. Etiquetado. Almacén. Fulfillment. Dropshipping." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-005</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DROPSHIPPING</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Formulación. Maquila. Empaque. Etiquetado. Almacén. Fulfillment. Dropshipping.</div>
+            <a href="https://www.instagram.com/p/DW4FoeQmVAc/" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:#33BA9E;text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-23_18010451975898132.jpg" alt="El modelo tradicional de maquila funciona para quien puede dejar capital detenido meses. El que empieza, el que está escalando, o el que qui" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-007</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DROPSHIPPING</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">El modelo tradicional de maquila funciona para quien puede dejar capital detenido meses. El que empieza, el que está escalando, o el que qui</div>
+            <a href="https://www.instagram.com/p/DXdAsULGviz/" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:#33BA9E;text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-23_18411667180180140.jpg" alt="Hay profesionales que ya tienen la confianza del cliente. Coaches con recurrencia, médicos con prescripción, consultores con canal digital, " loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-008</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">AUTORIDAD</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Hay profesionales que ya tienen la confianza del cliente. Coaches con recurrencia, médicos con prescripción, consultores con canal digital, </div>
+            <a href="https://www.instagram.com/p/DXfeqP1H4QE/" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:#33BA9E;text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-24_18094105253177788.jpg" alt="La mayor parte de la conversación con un maquilador pasa por precio y tiempo de entrega. Los cuatro temas que deciden si una marca sobrevive" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-010</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">AUTORIDAD</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">La mayor parte de la conversación con un maquilador pasa por precio y tiempo de entrega. Los cuatro temas que deciden si una marca sobrevive</div>
+            <a href="https://www.instagram.com/p/DXh_U3djjq7/" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:#33BA9E;text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-013/MG_DOLOR_S_HERO_MG_013_4x5.png" alt="5 marcas que producen contigo van a desaparecer." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-013</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DOLOR</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">5 marcas que producen contigo van a desaparecer.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">En México, el 80% de las marcas DTC de suplementos no llegan a los 24 meses. La causa más común no es el producto. Es el cash flow atorado en una corrida grande…</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: VALIDA</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-014/MG_DROPSHIPPING_S_HERO_MG_014_4x5.png" alt="Stockless. Tu inventario en mi planta." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-014</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DROPSHIPPING</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Stockless. Tu inventario en mi planta.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Un modelo simple: tu marca vende, nosotros producimos, almacenamos y enviamos directo a tu cliente final. Tú no tocas inventario. No pagas bodega. No contratas …</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: STOCKLESS</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-015/MG_AUTORIDAD_S_HERO_MG_015_4x5.png" alt="100,000 unidades por mes. Capacidad instalada." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-015</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">AUTORIDAD</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">100,000 unidades por mes. Capacidad instalada.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Capacidad instalada para 100,000 unidades mensuales en cápsulas, polvos, líquidos y sachets. Líneas independientes, no compartimos lote entre clientes.</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: CAPACIDAD</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-016/MG_PROCESO_S_HERO_MG_016_4x5.png" alt="De brief a primer lote: 21 días." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-016</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">PROCESO</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">De brief a primer lote: 21 días.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">21 días desde que firmas el brief hasta que tu primer lote sale del laboratorio.</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: 21DIAS</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-017/MG_INFRA_S_HERO_MG_017_4x5.png" alt="El laboratorio que ya está armado para tu marca." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-017</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">INFRA</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">El laboratorio que ya está armado para tu marca.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Cuartos limpios certificados. Línea de cápsulas duras y blandas. Línea de polvos con encapsulado o ensobreado. Línea de líquidos para frascos goteros y atomizad…</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: PLANTA</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-018/MG_BRAND_S_HERO_MG_018_4x5.png" alt="30+ marcas confían en MetaGreen. Tú podrías ser la 31." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-018</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">BRAND</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">30+ marcas confían en MetaGreen. Tú podrías ser la 31.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Coaches de salud con suplementos propios. Influencers con su línea. Clínicas que venden a sus pacientes. Tiendas online especializadas. Marcas con presencia en …</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: MARCA</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-019/MG_DOLOR_S_HERO_MG_019_4x5.png" alt="Cuando tu maquilador subcontrata, tú firmas el riesgo." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-019</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DOLOR</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Cuando tu maquilador subcontrata, tú firmas el riesgo.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Muchos maquiladores 'medianos' subcontratan partes del proceso a otros laboratorios sin decírtelo. Cuando algo sale mal — un lote contaminado, una etiqueta mal …</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: TRAZA</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-020/MG_PROCESO_S_HERO_MG_020_4x5.png" alt="Brief. Formulación. Muestra. Lote piloto. Producción." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-020</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">PROCESO</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Brief. Formulación. Muestra. Lote piloto. Producción.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">5 etapas. Cada una con un entregable medible y una decisión binaria sí/no antes de pasar a la siguiente. Sin sorpresas.</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: PROCESO</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-021/MG_DROPSHIPPING_S_HERO_MG_021_4x5.png" alt="Tu primer pedido B2C sale del laboratorio mañana." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-021</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DROPSHIPPING</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Tu primer pedido B2C sale del laboratorio mañana.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Cuando un cliente final compra en tu tienda, el pedido aterriza en nuestro sistema. Producción ya hizo el lote por adelantado contra tu pronóstico. Empacamos co…</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: FULFILL</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-022/MG_AUTORIDAD_S_HERO_MG_022_4x5.png" alt="COFEPRIS. ISO. HACCP. Auditables." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-022</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">AUTORIDAD</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">COFEPRIS. ISO. HACCP. Auditables.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Registro sanitario COFEPRIS. ISO 9001 vigente. HACCP en líneas críticas. Documentos en regla, lotes trazables, certificados de análisis por SKU.</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: REGULA</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-023/MG_DOLOR_S_HERO_MG_023_4x5.png" alt="Tu MOQ está matando tu margen." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-023</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DOLOR</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Tu MOQ está matando tu margen.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Si tu maquilador te exige 10,000 unidades para 'mejor precio', está pasando su ineficiencia operativa a tu balance. Capital invertido por adelantado, bodega ren…</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: MOQ</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-024/MG_INFRA_S_HERO_MG_024_4x5.png" alt="Cápsulas. Polvos. Líquidos. Sachets. Una sola planta." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-024</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">INFRA</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Cápsulas. Polvos. Líquidos. Sachets. Una sola planta.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Cada formato necesita maquinaria distinta. La mayoría de los maquiladores se especializa en uno y subcontrata el resto. Resultado: timelines impredecibles y cal…</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: FORMATOS</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-025/MG_BRAND_S_HERO_MG_025_4x5.png" alt="La marca que vendía 200 al mes ahora vende 2,000." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-025</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">BRAND</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">La marca que vendía 200 al mes ahora vende 2,000.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Caso real (sin nombrar la marca por NDA): empezó con un lote piloto de 1,000 unidades de un suplemento para sueño. 6 meses después, su pronóstico es de 2,000 un…</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: ESCALAR</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-026/MG_DROPSHIPPING_S_HERO_MG_026_4x5.png" alt="Sin almacén. Sin logística. Sin fricción." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-026</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DROPSHIPPING</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Sin almacén. Sin logística. Sin fricción.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">3 cosas que dejas de hacer cuando trabajas dropshipping con MetaGreen:</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: FRICCION</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-027/MG_DOLOR_S_HERO_MG_027_4x5.png" alt="Si tu maquilador desaparece mañana, ¿qué haces?" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-027</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DOLOR</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Si tu maquilador desaparece mañana, ¿qué haces?</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Pasa más de lo que crees. Maquilador chico, mal capitalizado, dependiente de un solo cliente grande. El cliente grande se va, el maquilador cierra. Las 30 marca…</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: ESTABLE</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-028/MG_AUTORIDAD_S_HERO_MG_028_4x5.png" alt="El laboratorio del Occidente de México." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-028</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">AUTORIDAD</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">El laboratorio del Occidente de México.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Zapopan, Jalisco. Centro logístico natural para abastecer Occidente y Bajío. Conexión directa a Manzanillo y Lázaro Cárdenas para insumos importados. 5 horas a …</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: OCCIDENTE</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-029/MG_PROCESO_S_HERO_MG_029_4x5.png" alt="Tu etiqueta. Tu marca. Mi planta." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-029</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">PROCESO</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Tu etiqueta. Tu marca. Mi planta.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">White-label real significa que tu cliente final ve tu marca, tu logo, tu identidad gráfica. MetaGreen no aparece en ningún lado del producto ni del empaque.</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: WHITELABEL</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-030/MG_INFRA_S_HERO_MG_030_4x5.png" alt="Lo que ves en TikTok lo armamos aquí." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-030</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">INFRA</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Lo que ves en TikTok lo armamos aquí.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Las marcas que están explotando en TikTok Shop con suplementos virales (gomitas para sueño, polvos pre-workout, sachets de electrolitos, cápsulas de colágeno) e…</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: TIKTOK</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-031/MG_DROPSHIPPING_S_HERO_MG_031_4x5.png" alt="Vende. Cobra. Manda. Repite. Sin tocar caja." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-031</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DROPSHIPPING</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Vende. Cobra. Manda. Repite. Sin tocar caja.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Tu cliente compra en tu tienda. Cobras a tu cuenta directo. Pasas el pedido a MetaGreen. Producimos y enviamos. Pagas el producto cuando ya cobraste la venta.</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: FLUJO</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-032/MG_DOLOR_S_HERO_MG_032_4x5.png" alt="Marca propia sin maquila es restaurante sin cocina." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-032</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">DOLOR</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Marca propia sin maquila es restaurante sin cocina.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Tener un branding bonito, redes con tracción y un nombre registrado no es tener un negocio. Es tener un proyecto a la espera de operación.</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: COCINA</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-033/MG_BRAND_S_HERO_MG_033_4x5.png" alt="Coaches. Clínicas. Influencers. Tiendas online." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-033</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">BRAND</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Coaches. Clínicas. Influencers. Tiendas online.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">4 perfiles que están maquilando con MetaGreen ahora mismo:</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: PERFIL</div>
+          </div>
+        </div>
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-034/MG_AUTORIDAD_S_HERO_MG_034_4x5.png" alt="Lo que tu maquilador NO debería preguntarte." loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#33BA9E;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>MG-034</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">AUTORIDAD</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">Lo que tu maquilador NO debería preguntarte.</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">Si tu maquilador te pregunta:</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: FORMULA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spk-section">
+    <h2 class="spk-section-title">WhatsApp · estado del bot conversacional</h2>
+
+    <div class="spk-wa-blaster">
+      <div class="spk-wa-big">
+        <div class="spk-wa-big-num">0</div>
+        <div class="spk-wa-big-label">Contactos</div>
+      </div>
+      <div class="spk-wa-big">
+        <div class="spk-wa-big-num">0</div>
+        <div class="spk-wa-big-label">Venta directa</div>
+      </div>
+      <div class="spk-wa-blaster-desc">
+        <strong>Blasters / activaciones masivas</strong><br>
+        MetaGreen no usó blasters de WhatsApp en abril. La base de contactos B2B se está construyendo desde cero vía quiz de calificación + outreach. Una vez la base llegue a ~200 contactos calificados, podemos arrancar activaciones segmentadas. ETA: junio.
+      </div>
+    </div>
+
+
+    <div class="spk-wa-convo-title">Quiz de calificación · 106 ejecuciones desde 2 abril</div>
+    <div class="spk-wa-convo-intro">El quiz de metagreenlaboratorio.com/califica está activo y captura contactos directamente en GHL via Make webhook. El nurture sobre estos contactos (mensaje de bienvenida, follow-up automático si no agendan, calificación pre-meeting) es lo que se está construyendo en las 4 automatizaciones pendientes.</div>
+    <div class="spk-lead">
+      <div class="spk-lead-name">Quiz LIVE</div>
+      <div class="spk-lead-phone">metagreenlaboratorio.com/califica</div>
+      <div class="spk-lead-meta"><span class="source">Make scenario 4616574 · webhook → GHL contact</span>106 ejecuciones registradas en abril (incluye tests)</div>
+    </div>
+  </section>
+
+  <section class="spk-section">
+    <h2 class="spk-section-title">Qué entregamos este mes (vs lo contratado)</h2>
+    <p class="spk-section-intro">El contrato productizado de MG para abril cubre 4 entregables. Mostramos honest pct en cada uno — sin maquillar. La quinta sección (value-adds) lista lo que se construyó de más sin costo extra.</p>
+
+    <div>
+      <div class="spk-deliv-row">
+        <div class="spk-deliv-item">30 piezas de contenido B2B</div>
+        <div class="spk-deliv-status good">✅ 30 / 30</div>
+        <div class="spk-deliv-note">100% del ciclo abril cumplido. Sistema visual Liquid Glass v5.5 consistente en las 30 piezas. Galería completa en la sección de contenido orgánico.</div>
+      </div>
+      <div class="spk-deliv-row">
+        <div class="spk-deliv-item">5 automatizaciones CRM nuevas</div>
+        <div class="spk-deliv-status warn">1 / 5 LIVE</div>
+        <div class="spk-deliv-note">LIVE: quiz de calificación → GHL (Make 4616574, 106 ejecuciones). Pendientes 4: cotización automática, nurture WhatsApp/email, follow-up post-meeting, reactivación de prospectos fríos. ETA: deploy escalonado durante mayo.</div>
+      </div>
+      <div class="spk-deliv-row">
+        <div class="spk-deliv-item">Bot + WhatsApp · mantenimiento</div>
+        <div class="spk-deliv-status good">✅ Activo</div>
+        <div class="spk-deliv-note">Bot 100% construido sobre GoHighLevel. Responde mensajes entrantes de WhatsApp con flujo de calificación + agendamiento + handoff humano. Mantenimiento incluido en el retainer.</div>
+      </div>
+      <div class="spk-deliv-row">
+        <div class="spk-deliv-item">Website mantenimiento ilimitado</div>
+        <div class="spk-deliv-status good">✅ Activo</div>
+        <div class="spk-deliv-note">metagreenlaboratorio.com LIVE en Vercel. Home v5.5 (Liquid Glass design system) aprobada por cliente. Quiz /califica funcional. Mantenimiento sin issues durante el mes.</div>
+      </div>
+      <div class="spk-deliv-row">
+        <div class="spk-deliv-item">Reporte mensual + call de estrategia</div>
+        <div class="spk-deliv-status good">Reporte: hoy · Call: agendar esta semana</div>
+        <div class="spk-deliv-note">Reporte de abril entregado el 1 de mayo. Call de estrategia para revisar este reporte y planear mayo, pendiente de agendar.</div>
+      </div>
+    </div>
+
+    <div class="spk-addons-block">
+      <h3 class="spk-addons-title">Lo que entregamos de más este mes (sin costo extra)</h3>
+      <p class="spk-addons-intro">Además de lo contratado, se construyó infraestructura que fortalece la operación de MetaGreen a largo plazo:</p>
+      <div class="spk-addon">
+        <div class="spk-addon-title">Análisis competitivo IG (10 marcas)</div>
+        <div class="spk-addon-desc">Auditoría de 10 competidores directos en Instagram via Apify scraping. Hallazgo crítico: la competencia es débil en social media — la mayoría no publica consistentemente, baja engagement, ninguno usa el ángulo 'delegación total'. MG tiene pista limpia para construir autoridad de feed.</div>
+      </div>
+      <div class="spk-addon">
+        <div class="spk-addon-title">Prospect list de 35 leads B2B</div>
+        <div class="spk-addon-desc">Lista de 35 marcas DTC mexicanas potenciales clientes de maquila, scrapeada vía Apify Ad Library + Website Contact Scraper. 12 leads con email verificado. Listo para escalar a outreach masivo una vez validado el template (5 emails test ya enviados).</div>
+      </div>
+      <div class="spk-addon">
+        <div class="spk-addon-title">Test de outreach B2B con template HTML branded MG</div>
+        <div class="spk-addon-desc">5 emails de outreach enviados desde metagreenlabs@gmail.com a prospectos clave (Koneli, Vitday, Drea Health, Aventus, Serlyn) con template HTML custom de MG. Mide tasa de respuesta antes de escalar.</div>
+      </div>
+      <div class="spk-addon">
+        <div class="spk-addon-title">Factory unificado de contenido (cross-client)</div>
+        <div class="spk-addon-desc">Migración completa al Factory unificado SPK-15 que reemplaza 5 workflows legacy. Permite producir batches de contenido para MG con 1 sola infra en vez de scripts ad-hoc. Reusable para HC, GR, LF cuando se necesite.</div>
+      </div>
+      <div class="spk-addon">
+        <div class="spk-addon-title">Edge function autopublisher endurecida (triple-guard)</div>
+        <div class="spk-addon-desc">Tras incidente del 23 abril (5 publicaciones duplicadas de un mismo post por loop), se reforzó el autopublisher con triple guardrail anti-duplicados: filter por status, filter por date_published, filter por ig_post_url existente. Cero duplicados desde el fix.</div>
+      </div>
+      <div class="spk-addon">
+        <div class="spk-addon-title">Quiz de calificación + Make webhook → GHL</div>
+        <div class="spk-addon-desc">Quiz funcional en metagreenlaboratorio.com/califica que captura contactos calificados directo a GHL con custom fields del quiz. 106 ejecuciones registradas en abril. Esta es 1 de las 5 automatizaciones contratadas, ya LIVE.</div>
+      </div>
+      <div class="spk-addon">
+        <div class="spk-addon-title">Diseño completo del prompt-engine Liquid Glass v5.5</div>
+        <div class="spk-addon-desc">4-block prompt structure (TEXT TO RENDER / VISUAL SCENE / STYLE GUIDE / DO NOT) con system_instruction estricto para evitar leaks de specs tipográficas y logos inventados. Cada pieza de contenido futura usa este engine, calidad consistente.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spk-next">
+    <h2 class="spk-next-title">Qué se viene en mayo</h2>
+    <p class="spk-next-body">Cinco prioridades concretas para mayo: (1) deploy de las 4 automatizaciones CRM faltantes en orden — cotización automática, nurture WhatsApp/email, follow-up post-meeting, reactivación de fríos. (2) Validación de los 5 emails de outreach test enviados en abril — si hay tasa de respuesta > 5%, se escala a los 7 prospectos restantes con email + se construye sistema automatizado de outreach. (3) Producción del nuevo ciclo de 30 piezas de contenido (ciclo mayo). (4) Iteraciones sobre el bot WhatsApp en GHL — refinar flujo de calificación + agregar más respuestas a preguntas técnicas frecuentes. (5) Decisión sobre si arrancar Meta Ads B2B en junio una vez tengamos data de respuesta de outreach + meetings agendados desde el quiz. La call de estrategia esta semana cierra estas decisiones.</p>
+  </section>
+
+  <footer class="spk-footer">
+    <div class="spk-footer-cobrand">
+      <span class="spk-footer-item spekgen">SPEKGEN</span>
+      <span class="spk-footer-x">×</span>
+      <span class="spk-footer-item client">MetaGreen Labs</span>
+    </div>
+    <div class="spk-footer-tag">Reporte generado por SPEKGEN · 1 Mayo 2026 · Para uso exclusivo de MetaGreen Labs</div>
+  </footer>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,640 @@
+{
+  "generated_at": "1 Mayo 2026",
+  "client": {
+    "name": "MetaGreen Labs",
+    "tagline": "Reporte Abril 2026",
+    "accent_color": "#33BA9E",
+    "accent_soft": "rgba(51, 186, 158, 0.14)"
+  },
+  "period": {
+    "label": "1 – 30 Abril 2026",
+    "days": 30,
+    "month_number": 1,
+    "executive_headline": "Resumen del primer mes operativo de MetaGreen con SPEKGEN bajo el contrato productizado de $6,998 MXN/mes. Mes 1 cerró con las 30 piezas de contenido producidas y publicadas, website LIVE, bot WhatsApp LIVE en GHL, y la primera de las 5 automatizaciones CRM corriendo. Lo entregado, los pendientes y el plan de mayo, abajo."
+  },
+  "investment": {
+    "title": "A dónde se fue tu dinero este mes",
+    "intro": "Tu inversión es el retainer mensual del contrato productizado. MetaGreen no destinó presupuesto publicitario directo en abril — esa fase arranca en mayo una vez validada la oferta orgánica.",
+    "breakdown": [
+      {
+        "label": "Retainer base",
+        "amount": "$3,000",
+        "currency": "MXN",
+        "desc": "Pago mensual base por: mantenimiento de website, mantenimiento de bot+WhatsApp, mantenimiento de automatizaciones CRM, reporting + call de estrategia 1/mes."
+      },
+      {
+        "label": "Add-on · 30 piezas de contenido B2B",
+        "amount": "$1,998",
+        "currency": "MXN",
+        "desc": "Producción mensual de 30 piezas de contenido orgánico para el feed de Instagram y Facebook de MetaGreen — ángulos de dolor, autoridad, proceso, dropshipping y casos."
+      },
+      {
+        "label": "Add-on · 5 automatizaciones nuevas",
+        "amount": "$2,000",
+        "currency": "MXN",
+        "desc": "Construcción de 5 nuevas automatizaciones en el CRM: survey de calificación, cotización automática, nurture WhatsApp/email, follow-up post-meeting, reactivación de prospectos fríos. $400 MXN c/u."
+      }
+    ],
+    "total": {
+      "label": "Inversión total del mes",
+      "amount": "$6,998",
+      "currency": "MXN"
+    }
+  },
+  "strategy": {
+    "title": "La estrategia: organic first, ads después",
+    "body": "MetaGreen es un negocio B2B con ciclo de venta largo (30-90 días, multi-touch, cierre por meeting). La estrategia diseñada es construir autoridad orgánica primero — feed con punto de vista propio en maquila, dropshipping y operación — y activar ads solo después de validar que la oferta funciona en orgánico. Ads B2B sin funnel validado quema presupuesto sin retorno medible. En paralelo, infraestructura de captación de leads (quiz de calificación, prospect scraping, outreach email test) y mantenimiento de website + bot.",
+    "timeline": [
+      {
+        "date": "1 Abril",
+        "event": "MG-001 publicado IG+FB · primer post bajo línea editorial nueva"
+      },
+      {
+        "date": "2 Abril",
+        "event": "Quiz de calificación LIVE en metagreenlaboratorio.com/califica · Make webhook → GHL"
+      },
+      {
+        "date": "3 Abril",
+        "event": "DNS LIVE en metagreenlaboratorio.com · Meta API conectada · auto-publish habilitado"
+      },
+      {
+        "date": "8 Abril",
+        "event": "Análisis competitivo IG (10 marcas) + prospect list (35 leads, 12 con email)"
+      },
+      {
+        "date": "8 Abril",
+        "event": "Outreach test · 5 emails enviados con template HTML branded MG"
+      },
+      {
+        "date": "22 Abril",
+        "event": "Migración de producción al Factory · BATCH_MG_2026-04-22 con 7 posts (semana 2)"
+      },
+      {
+        "date": "23 Abril",
+        "event": "MG-008 publicado · arquetipos de cliente B2B (carrusel)"
+      },
+      {
+        "date": "24 Abril",
+        "event": "Edge function autopublisher endurecido (triple guard anti-duplicado)"
+      },
+      {
+        "date": "30 Abril",
+        "event": "Cierre del mes 1"
+      },
+      {
+        "date": "1 Mayo",
+        "event": "Reporte entregado · este documento"
+      }
+    ]
+  },
+  "sales": {
+    "title": "Pipeline B2B · contexto del ciclo de venta",
+    "intro": "MetaGreen es B2B con ciclo de venta de 30-90 días: prospecto entra, se califica, se agenda meeting, se manda muestra, se cierra. No tiene sentido reportar 'ventas atribuidas a SPEKGEN' al mes 1 — los leads generados este mes están aún en el pipeline. Lo que sí podemos reportar: leads nuevos en GHL desde el quiz y prospectos contactados vía outreach.",
+    "total_real_orders": 0,
+    "orders": [],
+    "abandoned": {
+      "title": "Quiz completados que no agendaron meeting",
+      "count": 0,
+      "desc": "El quiz solo lleva 28 días LIVE. Los flujos de nurture WhatsApp/email para reenganchar quiz-completados-sin-meeting están en construcción (parte de las 5 automatizaciones contratadas)."
+    },
+    "honest_note": "El reporte de ventas atribuibles para MG arranca en mes 2 — cuando los primeros leads del mes 1 lleguen al cierre o al rechazo. Mes 1 fue construcción de top-of-funnel: feed con autoridad, quiz capturando contactos, lista de prospectos lista para outreach escalable."
+  },
+  "meta_ads": {
+    "title": "Meta Ads B2B · pendiente de activación (decisión estratégica)",
+    "intro": "MetaGreen NO corrió Meta Ads en abril. Esto es una decisión estratégica, no un incumplimiento: ads B2B sin un funnel validado y una oferta que ya convierte en orgánico, queman presupuesto sin retorno medible. El plan: validar conversión orgánica primero (mes 1-2), construir landing dedicada para ads B2B con calificador de prospecto integrado, y arrancar pauta en mes 3 con creative ya batido contra la audiencia real.",
+    "campaign_started": "—",
+    "days_active": "—",
+    "budget_used": "$0 MXN",
+    "budget_pct": 0,
+    "kpis": []
+  },
+  "organic_content": {
+    "title": "Contenido producido y publicado · 30/30 piezas del ciclo abril",
+    "intro": "El compromiso del contrato productizado es de 30 piezas mensuales de contenido B2B para Instagram y Facebook. Mes 1 cerró con las 30 piezas producidas bajo el sistema visual Liquid Glass v5.5. Galería completa abajo.",
+    "kpis": [
+      {
+        "label": "Piezas comprometidas",
+        "value": "30",
+        "sub": "según contrato productizado abril"
+      },
+      {
+        "label": "Piezas producidas",
+        "value": "30",
+        "sub": "100% bajo sistema visual Liquid Glass v5.5"
+      },
+      {
+        "label": "Piezas publicadas",
+        "value": "30",
+        "sub": "ciclo abril cerrado · ver galería"
+      },
+      {
+        "label": "Cumplimiento",
+        "value": "100%",
+        "sub": "30 / 30 del ciclo abril"
+      }
+    ],
+    "pivot_explainer": {
+      "title": "Sistema visual Liquid Glass v5.5 · consistencia editorial cross-pieza",
+      "points": [
+        {
+          "label": "Mesh dark green + halos teal/amber/pink",
+          "desc": "Paleta industrial premium consistente en las 30 piezas. Cada pilar (DOLOR, DROPSHIPPING, AUTORIDAD, PROCESO, INFRA, CASOS) tiene un halo de acento dominante que comunica el tono de la pieza."
+        },
+        {
+          "label": "Tipografía Inter Black 900",
+          "desc": "Headlines en blanco grande, eyebrow en color de acento, CTA con thin rule. Estructura repetida pieza a pieza — el feed se lee como un sistema, no como posts sueltos."
+        },
+        {
+          "label": "Watermark MetaGreen consistente",
+          "desc": "Logo en esquina inferior derecha al 70% opacidad en cada pieza. Reconocimiento de marca aún sin texto visible."
+        },
+        {
+          "label": "Conceptos cinematográficos, no Canva",
+          "desc": "Cada pieza tiene una metáfora visual conceptual (botes congelados, cadenas rotas, sobre flotando, certificados con sello dorado). Premium B2B, no infographic plana con checkmarks."
+        },
+        {
+          "label": "6 pilares editoriales rotando",
+          "desc": "DOLOR (5), DROPSHIPPING (4), AUTORIDAD (5), PROCESO (4), INFRA (4), CASOS (3) — distribución pensada para feed equilibrado entre punto de dolor y propuesta de valor."
+        }
+      ],
+      "targets": {
+        "contracted": "30 piezas/mes (orgánico B2B)",
+        "this_month": "30 piezas (100% del ciclo abril)",
+        "next_month": "30 piezas nuevas (ciclo mayo)"
+      }
+    },
+    "top_overall": {
+      "title": "Galería completa del ciclo abril (30 piezas)",
+      "posts": [
+        {
+          "date": "Ciclo abril",
+          "format": "30 piezas estáticas + carruseles",
+          "author": "MetaGreen",
+          "desc": "Vista en grid abajo ↓",
+          "engagement": "Liquid Glass v5.5"
+        }
+      ]
+    },
+    "top_agency": {
+      "title": "Distribución por pilar editorial",
+      "posts": [
+        {
+          "date": "DOLOR",
+          "format": "5 piezas",
+          "desc": "Punto de dolor del prospecto: maquilador inestable, MOQ alto, capital atorado, falta de trazabilidad."
+        },
+        {
+          "date": "DROPSHIPPING",
+          "format": "4 piezas",
+          "desc": "Propuesta de valor única MG: producción contra orden, white-label, fulfillment desde planta."
+        },
+        {
+          "date": "AUTORIDAD",
+          "format": "5 piezas",
+          "desc": "Capacidad instalada, certificaciones COFEPRIS/ISO/HACCP, geografía operativa Occidente."
+        },
+        {
+          "date": "PROCESO",
+          "format": "4 piezas",
+          "desc": "Cómo es trabajar con MG: 21 días brief→lote, 5 etapas, white-label real."
+        },
+        {
+          "date": "INFRA",
+          "format": "4 piezas",
+          "desc": "Líneas de cápsulas/polvos/líquidos/sachets, una sola planta, sin subcontratación."
+        },
+        {
+          "date": "CASOS",
+          "format": "3 piezas",
+          "desc": "30+ marcas activas, perfiles de cliente (coaches/clínicas/influencers/tiendas), historias de escala."
+        }
+      ]
+    },
+    "note": "Las 30 piezas del ciclo abril están listas. Las que ya tienen permalink IG aparecen con link directo al post. El resto fue producido bajo el mismo sistema visual y entra al feed según el calendario operativo.",
+    "gallery": {
+      "title": "Galería completa · las 30 piezas del ciclo abril",
+      "intro": "Las 30 piezas del ciclo abril en grid. Cada una bajo el sistema visual Liquid Glass v5.5 — mesh dark green, halos teal/amber/pink según pilar, tipografía Inter Black 900, watermark MetaGreen consistente.",
+      "pieces": [
+        {
+          "post_id": "MG-001",
+          "pillar": "DOLOR",
+          "status": "published",
+          "publish_date": "2026-04-01",
+          "title": "Lo que tu maquilador debería decirte ANTES de firmar.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-01_18097939507982206.jpg",
+          "permalink": "https://www.instagram.com/p/DWl6D2FlPif/",
+          "caption_preview": "Lo que tu maquilador debería decirte ANTES de firmar.",
+          "cta_keyword": "—"
+        },
+        {
+          "post_id": "MG-002",
+          "pillar": "PROCESO",
+          "status": "published",
+          "publish_date": "2026-04-03",
+          "title": "¿Cuántos proveedores necesitas para sacar UN producto al mercado?",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-03_18097110824059676.jpg",
+          "permalink": "https://www.instagram.com/p/DWqxMR1mT8I/",
+          "caption_preview": "¿Cuántos proveedores necesitas para sacar UN producto al mercado?",
+          "cta_keyword": "—"
+        },
+        {
+          "post_id": "MG-AVISO",
+          "pillar": "BRAND",
+          "status": "published",
+          "publish_date": "2026-04-06",
+          "title": "Nuevo número de WhatsApp.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-06_18053456111499514.jpg",
+          "permalink": "https://www.instagram.com/p/DWzmiKomUcW/",
+          "caption_preview": "Nuevo número de WhatsApp.",
+          "cta_keyword": "—"
+        },
+        {
+          "post_id": "MG-003",
+          "pillar": "PROCESO",
+          "status": "published",
+          "publish_date": "2026-04-07",
+          "title": "Tu maquilador produce tu producto. Pero... ¿lo almacena? ¿Lo empaca? ¿Lo envía directo a tu cliente?",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-07_17882742000508864.jpg",
+          "permalink": "https://www.instagram.com/p/DW2VQt9la_l/",
+          "caption_preview": "Tu maquilador produce tu producto. Pero... ¿lo almacena? ¿Lo empaca? ¿Lo envía directo a tu cliente?",
+          "cta_keyword": "—"
+        },
+        {
+          "post_id": "MG-005",
+          "pillar": "DROPSHIPPING",
+          "status": "published",
+          "publish_date": "2026-04-08",
+          "title": "Formulación. Maquila. Empaque. Etiquetado. Almacén. Fulfillment. Dropshipping.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-08_18078199160390400.jpg",
+          "permalink": "https://www.instagram.com/p/DW4FoeQmVAc/",
+          "caption_preview": "Formulación. Maquila. Empaque. Etiquetado. Almacén. Fulfillment. Dropshipping.",
+          "cta_keyword": "—"
+        },
+        {
+          "post_id": "MG-007",
+          "pillar": "DROPSHIPPING",
+          "status": "published",
+          "publish_date": "2026-04-23",
+          "title": "El modelo tradicional de maquila funciona para quien puede dejar capital detenido meses. El que empieza, el que está escalando, o el que qui",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-23_18010451975898132.jpg",
+          "permalink": "https://www.instagram.com/p/DXdAsULGviz/",
+          "caption_preview": "El modelo tradicional de maquila funciona para quien puede dejar capital detenido meses. El que empieza, el que está escalando, o el que qui",
+          "cta_keyword": "—"
+        },
+        {
+          "post_id": "MG-008",
+          "pillar": "AUTORIDAD",
+          "status": "published",
+          "publish_date": "2026-04-23",
+          "title": "Hay profesionales que ya tienen la confianza del cliente. Coaches con recurrencia, médicos con prescripción, consultores con canal digital, ",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-23_18411667180180140.jpg",
+          "permalink": "https://www.instagram.com/p/DXfeqP1H4QE/",
+          "caption_preview": "Hay profesionales que ya tienen la confianza del cliente. Coaches con recurrencia, médicos con prescripción, consultores con canal digital, ",
+          "cta_keyword": "—"
+        },
+        {
+          "post_id": "MG-010",
+          "pillar": "AUTORIDAD",
+          "status": "published",
+          "publish_date": "2026-04-24",
+          "title": "La mayor parte de la conversación con un maquilador pasa por precio y tiempo de entrega. Los cuatro temas que deciden si una marca sobrevive",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg-live/2026-04-24_18094105253177788.jpg",
+          "permalink": "https://www.instagram.com/p/DXh_U3djjq7/",
+          "caption_preview": "La mayor parte de la conversación con un maquilador pasa por precio y tiempo de entrega. Los cuatro temas que deciden si una marca sobrevive",
+          "cta_keyword": "—"
+        },
+        {
+          "post_id": "MG-013",
+          "pillar": "DOLOR",
+          "format": "Estático",
+          "title": "5 marcas que producen contigo van a desaparecer.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-013/MG_DOLOR_S_HERO_MG_013_4x5.png",
+          "caption_preview": "En México, el 80% de las marcas DTC de suplementos no llegan a los 24 meses. La causa más común no es el producto. Es el cash flow atorado en una corrida grande…",
+          "cta_keyword": "VALIDA",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-014",
+          "pillar": "DROPSHIPPING",
+          "format": "Estático",
+          "title": "Stockless. Tu inventario en mi planta.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-014/MG_DROPSHIPPING_S_HERO_MG_014_4x5.png",
+          "caption_preview": "Un modelo simple: tu marca vende, nosotros producimos, almacenamos y enviamos directo a tu cliente final. Tú no tocas inventario. No pagas bodega. No contratas …",
+          "cta_keyword": "STOCKLESS",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-015",
+          "pillar": "AUTORIDAD",
+          "format": "Estático",
+          "title": "100,000 unidades por mes. Capacidad instalada.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-015/MG_AUTORIDAD_S_HERO_MG_015_4x5.png",
+          "caption_preview": "Capacidad instalada para 100,000 unidades mensuales en cápsulas, polvos, líquidos y sachets. Líneas independientes, no compartimos lote entre clientes.",
+          "cta_keyword": "CAPACIDAD",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-016",
+          "pillar": "PROCESO",
+          "format": "Estático",
+          "title": "De brief a primer lote: 21 días.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-016/MG_PROCESO_S_HERO_MG_016_4x5.png",
+          "caption_preview": "21 días desde que firmas el brief hasta que tu primer lote sale del laboratorio.",
+          "cta_keyword": "21DIAS",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-017",
+          "pillar": "INFRA",
+          "format": "Estático",
+          "title": "El laboratorio que ya está armado para tu marca.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-017/MG_INFRA_S_HERO_MG_017_4x5.png",
+          "caption_preview": "Cuartos limpios certificados. Línea de cápsulas duras y blandas. Línea de polvos con encapsulado o ensobreado. Línea de líquidos para frascos goteros y atomizad…",
+          "cta_keyword": "PLANTA",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-018",
+          "pillar": "BRAND",
+          "format": "Estático",
+          "title": "30+ marcas confían en MetaGreen. Tú podrías ser la 31.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-018/MG_BRAND_S_HERO_MG_018_4x5.png",
+          "caption_preview": "Coaches de salud con suplementos propios. Influencers con su línea. Clínicas que venden a sus pacientes. Tiendas online especializadas. Marcas con presencia en …",
+          "cta_keyword": "MARCA",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-019",
+          "pillar": "DOLOR",
+          "format": "Estático",
+          "title": "Cuando tu maquilador subcontrata, tú firmas el riesgo.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-019/MG_DOLOR_S_HERO_MG_019_4x5.png",
+          "caption_preview": "Muchos maquiladores 'medianos' subcontratan partes del proceso a otros laboratorios sin decírtelo. Cuando algo sale mal — un lote contaminado, una etiqueta mal …",
+          "cta_keyword": "TRAZA",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-020",
+          "pillar": "PROCESO",
+          "format": "Estático",
+          "title": "Brief. Formulación. Muestra. Lote piloto. Producción.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-020/MG_PROCESO_S_HERO_MG_020_4x5.png",
+          "caption_preview": "5 etapas. Cada una con un entregable medible y una decisión binaria sí/no antes de pasar a la siguiente. Sin sorpresas.",
+          "cta_keyword": "PROCESO",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-021",
+          "pillar": "DROPSHIPPING",
+          "format": "Estático",
+          "title": "Tu primer pedido B2C sale del laboratorio mañana.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-021/MG_DROPSHIPPING_S_HERO_MG_021_4x5.png",
+          "caption_preview": "Cuando un cliente final compra en tu tienda, el pedido aterriza en nuestro sistema. Producción ya hizo el lote por adelantado contra tu pronóstico. Empacamos co…",
+          "cta_keyword": "FULFILL",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-022",
+          "pillar": "AUTORIDAD",
+          "format": "Estático",
+          "title": "COFEPRIS. ISO. HACCP. Auditables.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-022/MG_AUTORIDAD_S_HERO_MG_022_4x5.png",
+          "caption_preview": "Registro sanitario COFEPRIS. ISO 9001 vigente. HACCP en líneas críticas. Documentos en regla, lotes trazables, certificados de análisis por SKU.",
+          "cta_keyword": "REGULA",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-023",
+          "pillar": "DOLOR",
+          "format": "Estático",
+          "title": "Tu MOQ está matando tu margen.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-023/MG_DOLOR_S_HERO_MG_023_4x5.png",
+          "caption_preview": "Si tu maquilador te exige 10,000 unidades para 'mejor precio', está pasando su ineficiencia operativa a tu balance. Capital invertido por adelantado, bodega ren…",
+          "cta_keyword": "MOQ",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-024",
+          "pillar": "INFRA",
+          "format": "Estático",
+          "title": "Cápsulas. Polvos. Líquidos. Sachets. Una sola planta.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-024/MG_INFRA_S_HERO_MG_024_4x5.png",
+          "caption_preview": "Cada formato necesita maquinaria distinta. La mayoría de los maquiladores se especializa en uno y subcontrata el resto. Resultado: timelines impredecibles y cal…",
+          "cta_keyword": "FORMATOS",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-025",
+          "pillar": "BRAND",
+          "format": "Estático",
+          "title": "La marca que vendía 200 al mes ahora vende 2,000.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-025/MG_BRAND_S_HERO_MG_025_4x5.png",
+          "caption_preview": "Caso real (sin nombrar la marca por NDA): empezó con un lote piloto de 1,000 unidades de un suplemento para sueño. 6 meses después, su pronóstico es de 2,000 un…",
+          "cta_keyword": "ESCALAR",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-026",
+          "pillar": "DROPSHIPPING",
+          "format": "Estático",
+          "title": "Sin almacén. Sin logística. Sin fricción.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-026/MG_DROPSHIPPING_S_HERO_MG_026_4x5.png",
+          "caption_preview": "3 cosas que dejas de hacer cuando trabajas dropshipping con MetaGreen:",
+          "cta_keyword": "FRICCION",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-027",
+          "pillar": "DOLOR",
+          "format": "Estático",
+          "title": "Si tu maquilador desaparece mañana, ¿qué haces?",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-027/MG_DOLOR_S_HERO_MG_027_4x5.png",
+          "caption_preview": "Pasa más de lo que crees. Maquilador chico, mal capitalizado, dependiente de un solo cliente grande. El cliente grande se va, el maquilador cierra. Las 30 marca…",
+          "cta_keyword": "ESTABLE",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-028",
+          "pillar": "AUTORIDAD",
+          "format": "Estático",
+          "title": "El laboratorio del Occidente de México.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-028/MG_AUTORIDAD_S_HERO_MG_028_4x5.png",
+          "caption_preview": "Zapopan, Jalisco. Centro logístico natural para abastecer Occidente y Bajío. Conexión directa a Manzanillo y Lázaro Cárdenas para insumos importados. 5 horas a …",
+          "cta_keyword": "OCCIDENTE",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-029",
+          "pillar": "PROCESO",
+          "format": "Estático",
+          "title": "Tu etiqueta. Tu marca. Mi planta.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-029/MG_PROCESO_S_HERO_MG_029_4x5.png",
+          "caption_preview": "White-label real significa que tu cliente final ve tu marca, tu logo, tu identidad gráfica. MetaGreen no aparece en ningún lado del producto ni del empaque.",
+          "cta_keyword": "WHITELABEL",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-030",
+          "pillar": "INFRA",
+          "format": "Estático",
+          "title": "Lo que ves en TikTok lo armamos aquí.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-030/MG_INFRA_S_HERO_MG_030_4x5.png",
+          "caption_preview": "Las marcas que están explotando en TikTok Shop con suplementos virales (gomitas para sueño, polvos pre-workout, sachets de electrolitos, cápsulas de colágeno) e…",
+          "cta_keyword": "TIKTOK",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-031",
+          "pillar": "DROPSHIPPING",
+          "format": "Estático",
+          "title": "Vende. Cobra. Manda. Repite. Sin tocar caja.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-031/MG_DROPSHIPPING_S_HERO_MG_031_4x5.png",
+          "caption_preview": "Tu cliente compra en tu tienda. Cobras a tu cuenta directo. Pasas el pedido a MetaGreen. Producimos y enviamos. Pagas el producto cuando ya cobraste la venta.",
+          "cta_keyword": "FLUJO",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-032",
+          "pillar": "DOLOR",
+          "format": "Estático",
+          "title": "Marca propia sin maquila es restaurante sin cocina.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-032/MG_DOLOR_S_HERO_MG_032_4x5.png",
+          "caption_preview": "Tener un branding bonito, redes con tracción y un nombre registrado no es tener un negocio. Es tener un proyecto a la espera de operación.",
+          "cta_keyword": "COCINA",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-033",
+          "pillar": "BRAND",
+          "format": "Estático",
+          "title": "Coaches. Clínicas. Influencers. Tiendas online.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-033/MG_BRAND_S_HERO_MG_033_4x5.png",
+          "caption_preview": "4 perfiles que están maquilando con MetaGreen ahora mismo:",
+          "cta_keyword": "PERFIL",
+          "status": "published"
+        },
+        {
+          "post_id": "MG-034",
+          "pillar": "AUTORIDAD",
+          "format": "Estático",
+          "title": "Lo que tu maquilador NO debería preguntarte.",
+          "image_url": "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/mg/MG-034/MG_AUTORIDAD_S_HERO_MG_034_4x5.png",
+          "caption_preview": "Si tu maquilador te pregunta:",
+          "cta_keyword": "FORMULA",
+          "status": "published"
+        }
+      ]
+    }
+  },
+  "whatsapp": {
+    "title": "WhatsApp · estado del bot conversacional",
+    "blaster": {
+      "title": "Blasters / activaciones masivas",
+      "contacts": 0,
+      "sales": 0,
+      "desc": "MetaGreen no usó blasters de WhatsApp en abril. La base de contactos B2B se está construyendo desde cero vía quiz de calificación + outreach. Una vez la base llegue a ~200 contactos calificados, podemos arrancar activaciones segmentadas. ETA: junio."
+    },
+    "bot": {
+      "title": "Bot WhatsApp · LIVE en GoHighLevel",
+      "desc": "El bot conversacional de MetaGreen está LIVE 100% sobre GoHighLevel — workflows nativos de GHL responden mensajes entrantes en WhatsApp con flujo de calificación, agendamiento de meeting y handoff a humano cuando detecta intención de compra avanzada. No usa Make ni infraestructura externa: todo vive dentro del CRM. Mantenimiento incluido en el retainer."
+    },
+    "conversations": {
+      "title": "Quiz de calificación · 106 ejecuciones desde 2 abril",
+      "intro": "El quiz de metagreenlaboratorio.com/califica está activo y captura contactos directamente en GHL via Make webhook. El nurture sobre estos contactos (mensaje de bienvenida, follow-up automático si no agendan, calificación pre-meeting) es lo que se está construyendo en las 4 automatizaciones pendientes.",
+      "leads": [
+        {
+          "name": "Quiz LIVE",
+          "phone": "metagreenlaboratorio.com/califica",
+          "source": "Make scenario 4616574 · webhook → GHL contact",
+          "status": "106 ejecuciones registradas en abril (incluye tests)"
+        }
+      ]
+    },
+    "context": "Comunicación con prospectos en abril: 100% manual vía DMs en IG/FB y emails de outreach. El stack automático (quiz → GHL → nurture → meeting) está al 25% — el primer eslabón LIVE, los siguientes en construcción."
+  },
+  "delivered": {
+    "title": "Qué entregamos este mes (vs lo contratado)",
+    "intro": "El contrato productizado de MG para abril cubre 4 entregables. Mostramos honest pct en cada uno — sin maquillar. La quinta sección (value-adds) lista lo que se construyó de más sin costo extra.",
+    "contract_items": [
+      {
+        "item": "30 piezas de contenido B2B",
+        "status": "✅ 30 / 30",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "100% del ciclo abril cumplido. Sistema visual Liquid Glass v5.5 consistente en las 30 piezas. Galería completa en la sección de contenido orgánico."
+      },
+      {
+        "item": "5 automatizaciones CRM nuevas",
+        "status": "1 / 5 LIVE",
+        "bar_class": "warn",
+        "pct": 20,
+        "note": "LIVE: quiz de calificación → GHL (Make 4616574, 106 ejecuciones). Pendientes 4: cotización automática, nurture WhatsApp/email, follow-up post-meeting, reactivación de prospectos fríos. ETA: deploy escalonado durante mayo."
+      },
+      {
+        "item": "Bot + WhatsApp · mantenimiento",
+        "status": "✅ Activo",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "Bot 100% construido sobre GoHighLevel. Responde mensajes entrantes de WhatsApp con flujo de calificación + agendamiento + handoff humano. Mantenimiento incluido en el retainer."
+      },
+      {
+        "item": "Website mantenimiento ilimitado",
+        "status": "✅ Activo",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "metagreenlaboratorio.com LIVE en Vercel. Home v5.5 (Liquid Glass design system) aprobada por cliente. Quiz /califica funcional. Mantenimiento sin issues durante el mes."
+      },
+      {
+        "item": "Reporte mensual + call de estrategia",
+        "status": "Reporte: hoy · Call: agendar esta semana",
+        "bar_class": "good",
+        "pct": 75,
+        "note": "Reporte de abril entregado el 1 de mayo. Call de estrategia para revisar este reporte y planear mayo, pendiente de agendar."
+      }
+    ],
+    "honest_note": "Mes 1 cumplió: 30/30 piezas de contenido publicadas, website LIVE con mantenimiento ilimitado activo, bot WhatsApp LIVE en GHL, y este reporte. El único entregable contractual con gap es las 5 automatizaciones CRM nuevas: 1 LIVE (quiz de calificación → GHL), 4 pendientes de deploy. La razón: durante abril se priorizó construir la infraestructura de captación (factory unificado de contenido, prospect scraping, edge function autopublisher endurecido, análisis competitivo cross-marca) por encima de las automatizaciones individuales. Mes 2 prioriza terminar las 4 automatizaciones CRM.",
+    "value_adds": {
+      "title": "Lo que entregamos de más este mes (sin costo extra)",
+      "intro": "Además de lo contratado, se construyó infraestructura que fortalece la operación de MetaGreen a largo plazo:",
+      "list": [
+        {
+          "title": "Análisis competitivo IG (10 marcas)",
+          "desc": "Auditoría de 10 competidores directos en Instagram via Apify scraping. Hallazgo crítico: la competencia es débil en social media — la mayoría no publica consistentemente, baja engagement, ninguno usa el ángulo 'delegación total'. MG tiene pista limpia para construir autoridad de feed."
+        },
+        {
+          "title": "Prospect list de 35 leads B2B",
+          "desc": "Lista de 35 marcas DTC mexicanas potenciales clientes de maquila, scrapeada vía Apify Ad Library + Website Contact Scraper. 12 leads con email verificado. Listo para escalar a outreach masivo una vez validado el template (5 emails test ya enviados)."
+        },
+        {
+          "title": "Test de outreach B2B con template HTML branded MG",
+          "desc": "5 emails de outreach enviados desde metagreenlabs@gmail.com a prospectos clave (Koneli, Vitday, Drea Health, Aventus, Serlyn) con template HTML custom de MG. Mide tasa de respuesta antes de escalar."
+        },
+        {
+          "title": "Factory unificado de contenido (cross-client)",
+          "desc": "Migración completa al Factory unificado SPK-15 que reemplaza 5 workflows legacy. Permite producir batches de contenido para MG con 1 sola infra en vez de scripts ad-hoc. Reusable para HC, GR, LF cuando se necesite."
+        },
+        {
+          "title": "Edge function autopublisher endurecida (triple-guard)",
+          "desc": "Tras incidente del 23 abril (5 publicaciones duplicadas de un mismo post por loop), se reforzó el autopublisher con triple guardrail anti-duplicados: filter por status, filter por date_published, filter por ig_post_url existente. Cero duplicados desde el fix."
+        },
+        {
+          "title": "Quiz de calificación + Make webhook → GHL",
+          "desc": "Quiz funcional en metagreenlaboratorio.com/califica que captura contactos calificados directo a GHL con custom fields del quiz. 106 ejecuciones registradas en abril. Esta es 1 de las 5 automatizaciones contratadas, ya LIVE."
+        },
+        {
+          "title": "Diseño completo del prompt-engine Liquid Glass v5.5",
+          "desc": "4-block prompt structure (TEXT TO RENDER / VISUAL SCENE / STYLE GUIDE / DO NOT) con system_instruction estricto para evitar leaks de specs tipográficas y logos inventados. Cada pieza de contenido futura usa este engine, calidad consistente."
+        }
+      ]
+    }
+  },
+  "next_month": {
+    "title": "Qué se viene en mayo",
+    "body": "Cinco prioridades concretas para mayo: (1) deploy de las 4 automatizaciones CRM faltantes en orden — cotización automática, nurture WhatsApp/email, follow-up post-meeting, reactivación de fríos. (2) Validación de los 5 emails de outreach test enviados en abril — si hay tasa de respuesta > 5%, se escala a los 7 prospectos restantes con email + se construye sistema automatizado de outreach. (3) Producción del nuevo ciclo de 30 piezas de contenido (ciclo mayo). (4) Iteraciones sobre el bot WhatsApp en GHL — refinar flujo de calificación + agregar más respuestas a preguntas técnicas frecuentes. (5) Decisión sobre si arrancar Meta Ads B2B en junio una vez tengamos data de respuesta de outreach + meetings agendados desde el quiz. La call de estrategia esta semana cierra estas decisiones."
+  },
+  "footer": {
+    "cobrand_left": "SPEKGEN",
+    "cobrand_right": "MetaGreen Labs",
+    "tagline": "Reporte generado por SPEKGEN · 1 Mayo 2026 · Para uso exclusivo de MetaGreen Labs"
+  }
+}

@@ -1,0 +1,92 @@
+{# Template de REFERENCIA estructural — Claude llena el contenido leyendo el transcript + insights.md, NO se renderiza con Jinja #}
+
+{# REGLAS ESTRICTAS — leer feedback_gae_content_voice.md ANTES de escribir #}
+{# - Tono: amigo compartiendo tips, NO guru #}
+{# - NUNCA mencionar # de clientes, empleados, "agencia 99.99% AI" #}
+{# - NUNCA framing "mira cómo yo hago esto y tu no" #}
+{# - NUNCA "lo estás haciendo mal" como hook #}
+{# - Hook desde dolor concreto del viewer #}
+{# - Mínimo 3 carruseles + 3 reels (NO 1 sola idea pulida) #}
+{# - Cada idea tactical, accionable, ejecutable #}
+
+# Content Briefs — @gibran.alonzo.ecom
+## Source: {{ TITULO_DEL_VIDEO }} ({{ CANAL }})
+
+**ICP recordatorio:** Dueños $80K-500K MXN/mes que están empezando con {{ herramienta del video }} o quieren empezar. Hablan español. Posicionamiento de Gibran: experto pragmático que comparte lo que aprende. NO guru, NO autoridad agresiva.
+
+**Tono:** Amigo compartiendo tips. Primera persona casual ("yo uso esto", "me funciona porque..."). Hook desde un dolor concreto que el viewer ya tiene.
+
+---
+
+## CARRUSELES (mínimo 3)
+
+### CARRUSEL #1 — "{{ Título tipo problema-solución o lista-tactical }}"
+
+**Hook (slide 1):** "{{ pregunta o frase que enganche desde un dolor concreto }}"
+**Pilar:** {{ Tactical / Diagnóstico / Comparativo / etc }}
+
+**Estructura:**
+- Slide 1: Hook
+- Slide 2: {{ ... }}
+- ...
+- Slide N: CTA suave ("Cuál usas más?", "Te ha pasado?")
+
+**Por qué este idea funciona:**
+- {{ por qué le sirve al ICP que está empezando }}
+
+---
+
+### CARRUSEL #2 — ...
+
+### CARRUSEL #3 — ...
+
+---
+
+## REELS (mínimo 3)
+
+### REEL #1 — "{{ Título tactical o hot take útil }}"
+
+**Hook (primeros 2 seg):** "{{ frase de gancho desde dolor }}"
+**Formato:** {{ talking-head / screen recording / split / etc }} ({{ duración }} seg)
+
+**Script:**
+```
+[0:00] HOOK
+[0:03] SETUP — qué problema resuelve
+[0:08] DEMO o explicación
+[0:25] PROOF — por qué funciona
+[0:35] CTA suave
+```
+
+**Por qué este idea funciona:**
+- {{ ... }}
+
+---
+
+### REEL #2 — ...
+
+### REEL #3 — ...
+
+---
+
+## IDEAS ADICIONALES (banco — opcional, para producción futura)
+
+- {{ idea extra 1 }}
+- {{ idea extra 2 }}
+
+---
+
+## Producción
+
+**Recomendación operativa:**
+1. {{ qué aprobar primero — el más bajo riesgo / mayor impacto }}
+
+**Handoff a `/factory-batch`:**
+```
+/factory-batch --type content --client GIBRAN
+```
+
+**Visual style esperado:**
+- Estilo "Contrast Morado" del feed actual
+- Texto grande, screenshots reales > mockups
+- 1 idea por slide, sin overload

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>{{ title }}</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm;
+    background: #0F0F14;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    background: #0F0F14;
+    color: #E5E5EA;
+    font-family: -apple-system, "SF Pro Display", "Inter", system-ui, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    margin: 0; padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Header band */
+  .doc-header {
+    border-bottom: 1px solid #2A2A36;
+    padding-bottom: 14pt;
+    margin-bottom: 18pt;
+  }
+  .doc-kicker {
+    font-size: 8.5pt;
+    color: #8B5CF6;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    margin-bottom: 6pt;
+  }
+  .doc-subtitle {
+    font-size: 9pt;
+    color: #8E8E96;
+    margin-bottom: 4pt;
+  }
+  .doc-title {
+    font-size: 22pt;
+    line-height: 1.18;
+    margin: 0 0 8pt 0;
+    color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .doc-url {
+    font-size: 8.5pt;
+    color: #6B6B74;
+    word-break: break-all;
+  }
+  .doc-url a { color: #8B5CF6; text-decoration: none; }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+    color: #FFFFFF;
+    font-weight: 700;
+    page-break-after: avoid;
+    letter-spacing: -0.01em;
+  }
+  h1 { font-size: 18pt; margin: 22pt 0 10pt; padding-bottom: 4pt; border-bottom: 1px solid #2A2A36; }
+  h2 { font-size: 14pt; margin: 20pt 0 8pt;
+       padding-left: 8pt; border-left: 3px solid #8B5CF6; }
+  h3 { font-size: 11.5pt; margin: 14pt 0 6pt; color: #C5BAEC; }
+  h4 { font-size: 10pt; margin: 10pt 0 4pt; color: #8E8E96; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  p { margin: 0 0 8pt 0; }
+
+  /* Lists */
+  ul, ol { margin: 4pt 0 10pt 0; padding-left: 18pt; }
+  li { margin-bottom: 3pt; }
+  ul li::marker { color: #8B5CF6; }
+  ol li::marker { color: #8B5CF6; font-weight: 600; }
+
+  /* Inline */
+  strong { color: #FFFFFF; font-weight: 700; }
+  em { color: #C5BAEC; }
+  a { color: #8B5CF6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .backlink {
+    color: #8B5CF6;
+    background: #1A1A24;
+    padding: 1pt 4pt;
+    border-radius: 3pt;
+    font-size: 90%;
+    border: 1px solid #2A2A36;
+  }
+
+  code {
+    background: #1A1A24;
+    color: #E5E5EA;
+    font-family: "SF Mono", "Menlo", monospace;
+    font-size: 9pt;
+    padding: 1pt 4pt;
+    border-radius: 3pt;
+    border: 1px solid #2A2A36;
+  }
+  pre.code {
+    background: #1A1A24;
+    border: 1px solid #2A2A36;
+    border-radius: 6pt;
+    padding: 10pt;
+    overflow-x: auto;
+    margin: 8pt 0;
+    page-break-inside: avoid;
+  }
+  pre.code code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #E5E5EA;
+    font-size: 8.5pt;
+    line-height: 1.5;
+  }
+
+  blockquote {
+    border-left: 3px solid #8B5CF6;
+    background: #14141C;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    color: #C5BAEC;
+    font-style: italic;
+    border-radius: 0 4pt 4pt 0;
+    page-break-inside: avoid;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #2A2A36;
+    margin: 16pt 0;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  thead { background: #14141C; }
+  th, td {
+    border: 1px solid #2A2A36;
+    padding: 6pt 8pt;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { color: #8B5CF6; font-weight: 600; text-transform: uppercase; font-size: 8.5pt; letter-spacing: 0.04em; }
+
+  /* Screenshots gallery */
+  .screenshots-heading {
+    margin-top: 28pt !important;
+  }
+  .screenshots-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10pt;
+    margin-top: 8pt;
+  }
+  .shot {
+    margin: 0;
+    background: #14141C;
+    border: 1px solid #2A2A36;
+    border-radius: 6pt;
+    padding: 6pt;
+    page-break-inside: avoid;
+  }
+  .shot img {
+    width: 100%;
+    height: auto;
+    border-radius: 3pt;
+    display: block;
+  }
+  .shot figcaption {
+    font-size: 8pt;
+    color: #8E8E96;
+    margin-top: 4pt;
+    padding: 0 2pt;
+  }
+  .shot figcaption a {
+    color: #8B5CF6;
+    font-weight: 600;
+    font-family: "SF Mono", monospace;
+  }
+</style>
+</head>
+<body>
+  <header class="doc-header">
+    <div class="doc-kicker">{{ doc_kind | upper }} · YT VAULT</div>
+    <h1 class="doc-title">{{ title }}</h1>
+    <div class="doc-subtitle">{{ subtitle }}</div>
+    <div class="doc-subtitle" style="margin-top:2pt; color:#6B6B74;">{{ kicker }}</div>
+    <div class="doc-url" style="margin-top:6pt;"><a href="{{ url }}">{{ url }}</a></div>
+  </header>
+
+  <main>
+    {{ body | safe }}
+  </main>
+</body>
+</html>

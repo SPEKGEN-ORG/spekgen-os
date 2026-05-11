@@ -1,0 +1,2663 @@
+{
+  "client": "HEALTHY CHUCHOS",
+  "period": {
+    "start": "2026-03-19",
+    "end": "2026-04-19",
+    "days": 30
+  },
+  "generated_at": "2026-04-20",
+  "sources_read": {
+    "outreach_send_log": "HC - HEALTHY CHUCHOS/HC - 17. OUTREACH/00. DATABASE/HC_OUTREACH_SEND_LOG.xlsx",
+    "outreach_prospects_master": "HC - HEALTHY CHUCHOS/HC - 17. OUTREACH/00. DATABASE/HC_PROSPECTS_MASTER.xlsx",
+    "outreach_reply_monitor_state": "HC - HEALTHY CHUCHOS/HC - 17. OUTREACH/00. DATABASE/.reply_monitor_state",
+    "meta_ads_snapshot": "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/logs/snapshot_20260414_1821.json",
+    "social_media_calendar": "HC - HEALTHY CHUCHOS/HC - 06. SOCIAL MEDIA/MARZO ABRIL/HC_SOCIAL_MEDIA_CALENDAR.xlsx",
+    "client_context": "HC - HEALTHY CHUCHOS/_CLIENT_CONTEXT.md",
+    "broadcast_calendar": "HC - HEALTHY CHUCHOS/HC - 17. OUTREACH/HC_BROADCAST_CALENDAR_M1.md"
+  },
+  "outreach": {
+    "send_log_total_rows_all_time": 5,
+    "period_filter_note": "Todas las 5 envíos están dentro del período (2026-04-14)",
+    "period_total_sent": 5,
+    "by_track": {
+      "B2B": 5,
+      "D2C": 0,
+      "WA": 0
+    },
+    "by_step": {
+      "1": 5
+    },
+    "by_status": {
+      "sent": 5,
+      "opened": 0,
+      "replied": 0,
+      "bounced": 0
+    },
+    "by_city": {
+      "Guadalajara": 5
+    },
+    "companies": [
+      "Pet Gurú Tienda Alimento para perro Premium",
+      "ACC24 Hospital Veterinario Premium 24 Horas",
+      "Hospital Veterinario Guadalajara",
+      "La Perrita Tapatía",
+      "Pet Planet S.a. de C.v."
+    ],
+    "prospects_master": {
+      "B2B_MASTER": {
+        "total_rows": 89,
+        "by_city": {
+          "Guadalajara": 40,
+          "Zapopan": 14,
+          "CDMX": 35
+        },
+        "by_status": {
+          "sent": 5,
+          "no_email": 71,
+          "new": 13
+        }
+      },
+      "D2C_MASTER": {
+        "total_rows": 0,
+        "note": "Empty (headers only)"
+      },
+      "WA_MASTER": {
+        "total_rows": 0,
+        "note": "Empty (headers only)"
+      },
+      "SCRAPE_LOG": {
+        "total_rows": 0,
+        "note": "Empty (headers only)"
+      },
+      "BLOCKLIST": {
+        "total_rows": 5
+      }
+    },
+    "reply_monitor_state": {
+      "file": ".reply_monitor_state",
+      "content_last_msg_id_or_number": "209",
+      "interpretation": "IMAP cursor/UID — Gmail fetch baseline. No PII exposed.",
+      "file_last_modified": "Apr 14 04:36"
+    },
+    "notes": [
+      "Outreach B2B primer wave disparada 2026-04-14 madrugada (04:42-04:48 CST).",
+      "No hay replies registradas en el xlsx.",
+      "D2C y WA tracks sin activity en el período (tablas vacías).",
+      "89 prospectos B2B cargados en master, solo 5 enviados (18 tienen email válido: 5 sent + 13 new)."
+    ]
+  },
+  "meta_ads": {
+    "snapshot_file": "snapshot_20260414_1821.json",
+    "snapshot_fetched_utc": "2026-04-14T18:21:02.842258+00:00",
+    "snapshot_data_range": {
+      "start": "2026-03-31",
+      "stop": "2026-04-13",
+      "preset": "last_14d"
+    },
+    "snapshot_note": "El snapshot es last_14d (Mar 31 – Abr 13). Los primeros 12 días del período del reporte (Mar 19 – Mar 30) quedaron fuera de esta ventana; según _CLIENT_CONTEXT.md la campaña no tenía spend antes de Abr (bloqueos pre-GO: CHUCHO10, email flows, test purchase).",
+    "campaign": {
+      "id": "6899758932234",
+      "name": "HC-VENTAS-MES1"
+    },
+    "adset": {
+      "id": "6899759030034",
+      "name": "HC-BROAD-MX-PURCHASE",
+      "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
+      "daily_budget_mxn": 300.0,
+      "optimization_goal": "OFFSITE_CONVERSIONS"
+    },
+    "totals": {
+      "impressions": 6041,
+      "clicks": 146,
+      "reach": 4671,
+      "frequency": 1.29,
+      "spend_mxn": 898.19,
+      "ctr_pct": 2.417,
+      "cpc_mxn": 6.15,
+      "cpm_mxn": 148.68,
+      "purchases": 0,
+      "purchase_value_mxn": 0.0,
+      "cpa_mxn": 0.0,
+      "roas": 0.0
+    },
+    "ads": [
+      {
+        "ad_id": "6911066326834",
+        "ad_name": "HC-AD-DOLOR-SILENCIOSO-CAROUSEL",
+        "status": "ACTIVE",
+        "effective_status": "CAMPAIGN_PAUSED",
+        "impressions": 1669,
+        "clicks": 50,
+        "reach": 1478,
+        "frequency": 1.13,
+        "spend_mxn": 245.84,
+        "ctr_pct": 2.996,
+        "cpc_mxn": 4.92,
+        "cpm_mxn": 147.3,
+        "link_clicks": 28,
+        "add_to_cart": 2,
+        "initiate_checkout": 2,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066345034",
+        "ad_name": "HC-AD-CURCUMINA-CAROUSEL",
+        "status": "ACTIVE",
+        "effective_status": "CAMPAIGN_PAUSED",
+        "impressions": 57,
+        "clicks": 0,
+        "reach": 54,
+        "frequency": 1.06,
+        "spend_mxn": 11.06,
+        "ctr_pct": 0.0,
+        "cpc_mxn": 0.0,
+        "cpm_mxn": 194.04,
+        "link_clicks": 0,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066358834",
+        "ad_name": "HC-DR-OFF-CAROUSEL",
+        "status": "ACTIVE",
+        "effective_status": "CAMPAIGN_PAUSED",
+        "impressions": 62,
+        "clicks": 1,
+        "reach": 54,
+        "frequency": 1.15,
+        "spend_mxn": 20.07,
+        "ctr_pct": 1.613,
+        "cpc_mxn": 20.07,
+        "cpm_mxn": 323.71,
+        "link_clicks": 1,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066375434",
+        "ad_name": "HC-OD-OMEGA-EQUIVOCADO-CAROUSEL",
+        "status": "PAUSED",
+        "effective_status": "PAUSED",
+        "impressions": 1284,
+        "clicks": 39,
+        "reach": 1171,
+        "frequency": 1.1,
+        "spend_mxn": 220.21,
+        "ctr_pct": 3.037,
+        "cpc_mxn": 5.65,
+        "cpm_mxn": 171.5,
+        "link_clicks": 27,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066404634",
+        "ad_name": "HC-DR-ESTRES-CAROUSEL",
+        "status": "ACTIVE",
+        "effective_status": "CAMPAIGN_PAUSED",
+        "impressions": 2773,
+        "clicks": 52,
+        "reach": 2398,
+        "frequency": 1.16,
+        "spend_mxn": 366.47,
+        "ctr_pct": 1.875,
+        "cpc_mxn": 7.05,
+        "cpm_mxn": 132.16,
+        "link_clicks": 32,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066427234",
+        "ad_name": "HC-GD-REGENERACION-CAROUSEL",
+        "status": "ACTIVE",
+        "effective_status": "CAMPAIGN_PAUSED",
+        "impressions": 196,
+        "clicks": 4,
+        "reach": 172,
+        "frequency": 1.14,
+        "spend_mxn": 34.54,
+        "ctr_pct": 2.041,
+        "cpc_mxn": 8.63,
+        "cpm_mxn": 176.22,
+        "link_clicks": 2,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6899759106634",
+        "ad_name": "HC-GD-001",
+        "status": "PAUSED",
+        "effective_status": "PAUSED",
+        "impressions": 0,
+        "clicks": 0,
+        "spend_mxn": 0.0,
+        "purchases": 0,
+        "note": "Ad viejo del plan v1, pausado."
+      },
+      {
+        "ad_id": "6899759077034",
+        "ad_name": "HC-AD-001",
+        "status": "PAUSED",
+        "effective_status": "PAUSED",
+        "impressions": 0,
+        "clicks": 0,
+        "spend_mxn": 0.0,
+        "purchases": 0,
+        "note": "Ad viejo del plan v1, pausado."
+      },
+      {
+        "ad_id": "6899759090034",
+        "ad_name": "HC-DR-001",
+        "status": "PAUSED",
+        "effective_status": "PAUSED",
+        "impressions": 0,
+        "clicks": 0,
+        "spend_mxn": 0.0,
+        "purchases": 0,
+        "note": "Ad viejo del plan v1, pausado."
+      }
+    ],
+    "campaign1_folder_contents": [
+      "00. ESTRATEGIA/",
+      "01. ESTATICOS/",
+      "02. VIDEOS MONSE/",
+      "03. CHECKLIST/",
+      "04. MONITORING/ (dashboard gsheet + config + logs + scripts + launchd plist)"
+    ],
+    "brief_docs_at_meta_ads_root": [
+      "HC_ADS_STRATEGY_MES1_v1.md",
+      "HC_CREATIVE_BRIEF_CAMPAIGN1_v1.md",
+      "HC_CREATIVOS_ADS_BRIEF_v1.md",
+      "HC_VIDEO_SCRIPTS_MONSE_v1.md"
+    ],
+    "notes": [
+      "9 ads en total: 6 nuevos (carousels organic winners) + 3 viejos del plan v1 (pausados).",
+      "1 ad PAUSED manualmente: HC-OD-OMEGA-EQUIVOCADO-CAROUSEL (6911066375434).",
+      "Los demás activos están con effective_status=CAMPAIGN_PAUSED (la campaña está en pause total).",
+      "0 compras en toda la campaña. 4 add_to_cart + 4 initiate_checkout (solo HC-AD-DOLOR-SILENCIOSO).",
+      "CTR top: HC-OD-OMEGA-EQUIVOCADO 3.04% y HC-AD-DOLOR-SILENCIOSO 3.00%.",
+      "CTR peor: HC-AD-CURCUMINA 0% (impresiones mínimas).",
+      "Snapshot no cubre Abr 14-19 — necesitas jalar fresh desde Meta API para fin de mes."
+    ]
+  },
+  "organic": {
+    "calendar_file": "HC_SOCIAL_MEDIA_CALENDAR.xlsx",
+    "posts_in_period": 22,
+    "by_status": {
+      "Publicado": 9,
+      "Listo": 6,
+      "Pendiente": 4,
+      "Review (Content Hub)": 1,
+      "Revision": 1,
+      "Rechazado": 1
+    },
+    "by_formato": {
+      "Carrusel": 18,
+      "Estatico": 4
+    },
+    "by_tipo": {
+      "Single": 8,
+      "Educativo": 3,
+      "Comic": 2,
+      "Carrusel": 2,
+      "Educativo/Ciencia": 2,
+      "Transparency": 1,
+      "Brand multi": 1,
+      "Comic/Relatable": 1,
+      "Duo": 1,
+      "Relatable/Humor": 1
+    },
+    "by_funnel": {
+      "TOFU": 13,
+      "MOFU": 5,
+      "BOFU": 2,
+      "TOFU→BOFU": 1,
+      "TOFU→MOFU": 1
+    },
+    "by_producto": {
+      "DOGRELAX": 7,
+      "ARTRIDOG": 5,
+      "GASTRODOG": 4,
+      "OMEGADOG": 2,
+      "MULTI (4 productos)": 3,
+      "GASTRODOG + OMEGADOG": 1
+    },
+    "posts": [
+      {
+        "id": "HC-009",
+        "fecha": "2026-03-24",
+        "tipo": "Single",
+        "formato": "Estatico",
+        "producto": "GASTRODOG",
+        "status": "Publicado",
+        "funnel": "BOFU",
+        "note": "Post lanzamiento GastroDog"
+      },
+      {
+        "id": "HC-002",
+        "fecha": "2026-03-26",
+        "tipo": "Single",
+        "formato": "Estatico",
+        "producto": "DOGRELAX",
+        "status": "Publicado",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-003",
+        "fecha": "2026-03-30",
+        "tipo": "Single",
+        "formato": "Carrusel",
+        "producto": "DOGRELAX",
+        "status": "Publicado",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-004",
+        "fecha": "2026-04-01",
+        "tipo": "Single",
+        "formato": "Carrusel",
+        "producto": "ARTRIDOG",
+        "status": "Publicado",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-005",
+        "fecha": "2026-04-03",
+        "tipo": "Single",
+        "formato": "Carrusel",
+        "producto": "OMEGADOG",
+        "status": "Revision",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-006",
+        "fecha": "2026-04-06",
+        "tipo": "Single",
+        "formato": "Carrusel",
+        "producto": "GASTRODOG",
+        "status": "Publicado",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-007",
+        "fecha": "2026-04-07",
+        "tipo": "Educativo",
+        "formato": "Carrusel",
+        "producto": "DOGRELAX",
+        "status": "Publicado",
+        "funnel": "MOFU"
+      },
+      {
+        "id": "HC-008",
+        "fecha": "2026-04-05",
+        "tipo": "Comic",
+        "formato": "Carrusel",
+        "producto": "ARTRIDOG",
+        "status": "Publicado",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-009-v2",
+        "fecha": "2026-04-07",
+        "tipo": "Transparency",
+        "formato": "Carrusel",
+        "producto": "MULTI",
+        "status": "Listo",
+        "funnel": "TOFU→BOFU",
+        "note": "Duplicado de ID HC-009 en calendario"
+      },
+      {
+        "id": "HC-010",
+        "fecha": "2026-04-08",
+        "tipo": "Educativo",
+        "formato": "Carrusel",
+        "producto": "OMEGADOG",
+        "status": "Listo",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-011",
+        "fecha": "2026-04-10",
+        "tipo": "Educativo",
+        "formato": "Carrusel",
+        "producto": "ARTRIDOG",
+        "status": "Listo",
+        "funnel": "MOFU"
+      },
+      {
+        "id": "HC-012",
+        "fecha": "2026-04-10",
+        "tipo": "Brand multi",
+        "formato": "Carrusel",
+        "producto": "MULTI",
+        "status": "Publicado",
+        "funnel": "TOFU→MOFU"
+      },
+      {
+        "id": "HC-013",
+        "fecha": "2026-04-11",
+        "tipo": "Comic/Relatable",
+        "formato": "Carrusel",
+        "producto": "DOGRELAX",
+        "status": "Listo",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-014",
+        "fecha": "2026-04-12",
+        "tipo": "Comic",
+        "formato": "Estatico",
+        "producto": "DOGRELAX",
+        "status": "Rechazado",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-015",
+        "fecha": "2026-04-13",
+        "tipo": "Single",
+        "formato": "Carrusel",
+        "producto": "DOGRELAX",
+        "status": "Listo",
+        "funnel": "MOFU"
+      },
+      {
+        "id": "HC-016",
+        "fecha": "2026-04-15",
+        "tipo": "Carrusel",
+        "formato": "Carrusel",
+        "producto": "MULTI",
+        "status": "Listo",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-017",
+        "fecha": "2026-04-12",
+        "tipo": "Duo",
+        "formato": "Carrusel",
+        "producto": "GASTRODOG + OMEGADOG",
+        "status": "Publicado",
+        "funnel": "MOFU"
+      },
+      {
+        "id": "HC-018",
+        "fecha": "2026-04-14",
+        "tipo": "Single",
+        "formato": "Carrusel",
+        "producto": "GASTRODOG",
+        "status": "Pendiente",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-019",
+        "fecha": "2026-04-15",
+        "tipo": "Carrusel",
+        "formato": "Carrusel",
+        "producto": "ARTRIDOG",
+        "status": "Review (Content Hub)",
+        "funnel": "MOFU"
+      },
+      {
+        "id": "HC-020",
+        "fecha": "2026-04-16",
+        "tipo": "Relatable/Humor",
+        "formato": "Carrusel",
+        "producto": "DOGRELAX",
+        "status": "Pendiente",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-022",
+        "fecha": "2026-04-17",
+        "tipo": "Educativo/Ciencia",
+        "formato": "Estatico",
+        "producto": "GASTRODOG",
+        "status": "Pendiente",
+        "funnel": "TOFU"
+      },
+      {
+        "id": "HC-023",
+        "fecha": "2026-04-19",
+        "tipo": "Educativo/Ciencia",
+        "formato": "Carrusel",
+        "producto": "ARTRIDOG",
+        "status": "Pendiente",
+        "funnel": "TOFU"
+      }
+    ],
+    "notes": [
+      "22 posts planeados en el período; 9 publicados (41%), 1 en review hub, 1 en revisión, 1 rechazado, 6 listos pendientes de publicar, 4 pendientes de producción.",
+      "Mix TOFU-heavy (59%) con MOFU 23% y BOFU 9%.",
+      "Formato dominante: carrusel (82%).",
+      "Producto más trabajado: DOGRELAX (32%), seguido de ARTRIDOG (23%).",
+      "Target v2.0 del calendario: 28 posts organic en Mes 1 (Mar-Abr). Se cumplió 79% (22/28 planeados dentro del período; el restante cae fuera de la ventana de reporte).",
+      "HC-023 fue publicado el 2026-04-19 según _CLIENT_CONTEXT.md (IG https://www.instagram.com/p/DXUe_9rFSS7/), pero en el xlsx aparece 'Pendiente'. El xlsx está desfasado vs la realidad."
+    ]
+  },
+  "shopify_sales": {
+    "status": "NOT_FOUND_LOCALLY",
+    "paths_checked": [
+      "HC - HEALTHY CHUCHOS/HC - 04. WEBSITE/",
+      "HC - HEALTHY CHUCHOS/HC - 15. SHOPIFY/",
+      "HC - HEALTHY CHUCHOS/HC - 18. PEDIDOS/",
+      "HC - HEALTHY CHUCHOS/HC - 18. PEDIDOS/2026-04/",
+      "HC - HEALTHY CHUCHOS/HC - 12. REPORTES/"
+    ],
+    "findings": {
+      "04. WEBSITE/": "Contiene setup guides, PDPs, hero prompts, chatbot, theme export. Sin exports de orders.",
+      "15. SHOPIFY/": "HTMLs/PDFs de descuentos y envíos VIP, DogRelax PDP. Sin data de ventas.",
+      "18. PEDIDOS/": "Carpeta 2026-04/ VACÍA. _AUTOMATION_STATUS.md + _PACKAGING_RULES.md + _TICKET_V4_ASSETS.md + _BACKEND_SUPABASE/ + _BACKEND_VERCEL/. Sistema de fulfillment (Skydropx + Supabase Edge Function hc-process-order) en implementación.",
+      "12. REPORTES/": "Solo Desglose_Cargos_HC_Marzo2026.pdf (costos agency, no ventas)."
+    },
+    "gsheet_pointers_found": [
+      "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/HC- META ADS -SPEKGEN DASHBOARD.gsheet (ads dashboard, no sales)",
+      "HC - HEALTHY CHUCHOS/HC - 17. OUTREACH/HC_OUTREACH_MASTER.gsheet (outreach, no sales)"
+    ],
+    "hc_customers_log_gsheet_pointer": "NOT_FOUND — no existe archivo HC_CUSTOMERS_LOG.gsheet en el proyecto.",
+    "total_orders": null,
+    "total_revenue_mxn": null,
+    "aov_mxn": null,
+    "top_products": null,
+    "note_on_ads_attribution": "Según Meta snapshot, 0 compras reportadas desde ads (Mar 31 – Abr 13). Carpeta 18. PEDIDOS/2026-04/ está vacía — sugiere que no hubo orders atribuibles al mes 1 de ads o las orders no se han volcado ahí.",
+    "action_required": "Jalar orders de Shopify Admin API (tienda healthychuchos.com) para el período Mar 19 – Abr 19 — credenciales en HC/.env."
+  },
+  "ga4_clarity": {
+    "status": "NOT_FOUND_LOCALLY",
+    "paths_checked": [
+      "HC - HEALTHY CHUCHOS/ (búsqueda recursiva de snapshots json/xlsx)",
+      ".github/ (workflows)",
+      "HC - HEALTHY CHUCHOS/HC - 12. REPORTES/"
+    ],
+    "infra_found": {
+      "analytics_monitor_system": "Claude Code Cloud trigger `trig_01HfBBnHxi4SabUEJuXoLu9G`, corre días pares 9:07 AM MX. Fuente de datos cloud, NO hay snapshot local.",
+      "ga4_measurement_id": "G-V2FL067WSM",
+      "ga4_property_id": "529120588",
+      "clarity_project_id": "vy5jjgw9yi",
+      "service_account_viewer": "spekgen-sync@spekgen-sheets.iam.gserviceaccount.com (confirmado 2026-04-13)"
+    },
+    "action_required": "Jalar vía GA4 Data API + Clarity API para período Mar 19 – Abr 19. Alternativa: buscar Google Sheet poblado por el monitor (no hay pointer local)."
+  },
+  "timeline": {
+    "website_launch": {
+      "date": "2026-03-19 (approx)",
+      "evidence": [
+        "_CLIENT_CONTEXT.md: COFEPRIS removido de sitio 2026-03-19",
+        "About Us complete 2026-03-19",
+        "Clarity proyecto creado 2026-03-19",
+        "Tracking stack activo (GA4 + Meta Pixel + Clarity) 2026-03-23",
+        "CAPI activo vía Shopify FB app 2026-03-23",
+        "2026-03-18 bloque grande de trabajo web: PDPs con precios (ArtriDog $397, DogRelax $381, GastroDog $391, OmegaDog $397), carrusel cross-sell, página lanzamiento, distribuidores, contacto — todo creado."
+      ],
+      "interpretation": "Website entró en fase 'production ready' entre 2026-03-18 y 2026-03-23 (tracking stack completo)."
+    },
+    "first_organic_post": {
+      "date": "2026-03-24",
+      "post_id": "HC-009 (GastroDog lanzamiento)",
+      "note": "HC-001 precede pero no está en el calendario del período. HC-009 es el primer post dentro del período del reporte."
+    },
+    "first_ad_spend": {
+      "date": "2026-03-31 (snapshot inicial de la campaña)",
+      "evidence": "snapshot date_start=2026-03-31 en todos los ads del snapshot.",
+      "caveat": "La campaña está en effective_status=CAMPAIGN_PAUSED. El adset_daily_budget_log muestra spend acumulado $898.19 MXN en 14 días — los ads NO están 100% parados; algunos corrieron antes de ser pausados. Bloqueos pre-GO oficiales: email flows, CHUCHO10, test purchase. Gibran nunca dio GO manual a la campaña completa."
+    },
+    "whatsapp_blasters": {
+      "contract_dates_expected": [
+        "Marzo 20",
+        "Marzo 23"
+      ],
+      "status_in_data": "NO CONFIRMADO — no se encontraron registros de blasters de WhatsApp ejecutados en 2026-03-20 ni 2026-03-23 en los archivos disponibles.",
+      "broadcast_calendar_file": "HC_BROADCAST_CALENDAR_M1.md v1.0 creado 2026-04-10, período cubierto W15 (Abr 14) → W19 (May 11). NO cubre Mar 20/23.",
+      "wa_master_xlsx": "Vacío (solo headers).",
+      "note": "Los blasters Marzo 20/23 mencionados en contrato no tienen evidencia digital local. Verificar con Monse/Gibran o en logs WhatsApp."
+    },
+    "automations_make": [
+      {
+        "scenario_id": "4780535",
+        "name": "HC - Nuevo Pedido Almacen",
+        "go_live": "2026-04-17",
+        "trigger": "Shopify orders/create",
+        "purpose": "Email almacén: pendiente vs nuevo pedido pagado"
+      },
+      {
+        "scenario_id": "4780569",
+        "name": "HC - Pago Confirmado Almacen",
+        "go_live": "2026-04-17",
+        "trigger": "Shopify orders/paid",
+        "purpose": "Email PAGO CONFIRMADO + recibo imprimible; pendiente wire a Edge Function Skydropx"
+      },
+      {
+        "scenario_id": "4781819",
+        "name": "HC AI Bot",
+        "status": "Bot v2.4 deployed (2026-04-17 approx)",
+        "trigger": "WhatsApp inbound",
+        "purpose": "19 voice patterns + 21 reglas, system prompt sin concatenar KB"
+      }
+    ],
+    "meta_monitor_go_live": {
+      "platform": "GitHub Actions (g-bran/Spekgen-ops)",
+      "workflow": "hc-meta-monitor.yml",
+      "cron": "días impares 9:07 AM MX",
+      "build_date": "2026-04-10",
+      "mode": "DRY_RUN (hasta validación 2-3 corridas)"
+    }
+  },
+  "data_gaps_to_fill": [
+    "Shopify orders Mar 19 – Abr 19 (API call healthychuchos.com)",
+    "GA4 sesiones/conversiones período (Data API con property 529120588)",
+    "Clarity heatmaps/friction período (Clarity API con project vy5jjgw9yi)",
+    "Meta Ads fresh snapshot Abr 14-19 (6 días fuera del último snapshot)",
+    "Confirmación ejecución WhatsApp blasters Mar 20 + Mar 23",
+    "Métricas orgánicas IG/FB por post (impressions/likes/comments/saves/shares) — xlsx calendar tiene columnas vacías"
+  ],
+  "confirmed_numbers_ready_to_use": {
+    "outreach_emails_sent": 5,
+    "outreach_track_B2B": 5,
+    "outreach_replies": 0,
+    "outreach_bounces": 0,
+    "meta_ads_total_spend_mxn": 898.19,
+    "meta_ads_total_impressions": 6041,
+    "meta_ads_total_clicks": 146,
+    "meta_ads_total_reach": 4671,
+    "meta_ads_total_ctr_pct": 2.417,
+    "meta_ads_total_cpc_mxn": 6.15,
+    "meta_ads_total_cpm_mxn": 148.68,
+    "meta_ads_total_purchases": 0,
+    "meta_ads_total_roas": 0.0,
+    "meta_ads_add_to_carts": 2,
+    "meta_ads_initiate_checkouts": 2,
+    "meta_ads_count": 9,
+    "meta_ads_active": 5,
+    "meta_ads_paused": 4,
+    "organic_posts_planned_in_period": 22,
+    "organic_posts_published": 9,
+    "organic_posts_rejected": 1,
+    "organic_carousel_pct": 82,
+    "organic_tofu_pct": 59
+  },
+  "shopify_sales_live": {
+    "shop": "wza1wu-ki.myshopify.com",
+    "api_version": "2024-10",
+    "period": {
+      "start": "2026-03-19",
+      "end": "2026-04-19"
+    },
+    "totals": {
+      "total_orders": 30,
+      "total_revenue_mxn_paid": 6681.7,
+      "aov_mxn_paid": 222.72,
+      "orders_paid_like": 30,
+      "orders_with_discount_code": 28
+    },
+    "by_status": {
+      "paid": 30
+    },
+    "by_fulfillment": {
+      "fulfilled": 30
+    },
+    "by_product_paid": {
+      "ArtriDog": {
+        "qty": 18,
+        "revenue": 7146.0
+      },
+      "OmegaDog": {
+        "qty": 11,
+        "revenue": 4367.0
+      },
+      "GastroDog": {
+        "qty": 14,
+        "revenue": 5474.0
+      },
+      "DogRelax": {
+        "qty": 16,
+        "revenue": 6096.0
+      }
+    },
+    "discount_codes_used": {
+      "7 PIEZAS - 10% OFF": 1,
+      "MONSEVIP": 27,
+      "TEST": 24
+    },
+    "orders_raw": [
+      {
+        "id": 6923193516284,
+        "name": "#1031",
+        "created_at": "2026-04-18T10:43:11-06:00",
+        "currency": "MXN",
+        "total_price": 2501.1,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "5-perros, transferencia, whatsapp",
+        "discount_codes": [
+          "7 PIEZAS - 10% OFF"
+        ],
+        "customer_id": 9254756221180,
+        "line_items": [
+          {
+            "name": "ARTRIDOG",
+            "quantity": 6,
+            "price_line_total": 2382.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          },
+          {
+            "name": "OmegaDog",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          }
+        ]
+      },
+      {
+        "id": 6917268930812,
+        "name": "#1030",
+        "created_at": "2026-04-15T22:35:41-06:00",
+        "currency": "MXN",
+        "total_price": 898.6,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [],
+        "customer_id": 9249087684860,
+        "line_items": [
+          {
+            "name": "ARTRIDOG",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          },
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6904186339580,
+        "name": "#1029",
+        "created_at": "2026-04-09T18:27:34-06:00",
+        "currency": "MXN",
+        "total_price": 381.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "MONSEVIP"
+        ],
+        "customer_id": 9183442993404,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 1,
+            "price_line_total": 381.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          }
+        ]
+      },
+      {
+        "id": 6887464829180,
+        "name": "#1028",
+        "created_at": "2026-04-01T09:50:32-06:00",
+        "currency": "MXN",
+        "total_price": 391.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "MONSEVIP"
+        ],
+        "customer_id": 9183442993404,
+        "line_items": [
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6872354783484,
+        "name": "#1027",
+        "created_at": "2026-03-25T15:37:55-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "OmegaDog",
+            "quantity": 2,
+            "price_line_total": 794.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          }
+        ]
+      },
+      {
+        "id": 6871988994300,
+        "name": "#1026",
+        "created_at": "2026-03-25T12:13:58-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "ARTRIDOG",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          }
+        ]
+      },
+      {
+        "id": 6871981523196,
+        "name": "#1025",
+        "created_at": "2026-03-25T12:09:12-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "GastroDog",
+            "quantity": 2,
+            "price_line_total": 782.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6871974510844,
+        "name": "#1024",
+        "created_at": "2026-03-25T12:05:38-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6871971266812,
+        "name": "#1023",
+        "created_at": "2026-03-25T12:03:28-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "ARTRIDOG",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          }
+        ]
+      },
+      {
+        "id": 6871968022780,
+        "name": "#1022",
+        "created_at": "2026-03-25T12:01:17-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 1,
+            "price_line_total": 381.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          }
+        ]
+      },
+      {
+        "id": 6871961534716,
+        "name": "#1021",
+        "created_at": "2026-03-25T11:58:22-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6871097114876,
+        "name": "#1020",
+        "created_at": "2026-03-25T01:27:55-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "ARTRIDOG",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          }
+        ]
+      },
+      {
+        "id": 6871093772540,
+        "name": "#1019",
+        "created_at": "2026-03-25T01:22:50-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "OmegaDog",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          },
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6871090954492,
+        "name": "#1018",
+        "created_at": "2026-03-25T01:17:50-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 1,
+            "price_line_total": 381.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          },
+          {
+            "name": "ARTRIDOG",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          }
+        ]
+      },
+      {
+        "id": 6871077912828,
+        "name": "#1017",
+        "created_at": "2026-03-25T01:05:22-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 1,
+            "price_line_total": 381.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          },
+          {
+            "name": "OmegaDog",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          }
+        ]
+      },
+      {
+        "id": 6871069262076,
+        "name": "#1016",
+        "created_at": "2026-03-25T00:59:07-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          },
+          {
+            "name": "ARTRIDOG",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          }
+        ]
+      },
+      {
+        "id": 6871044161788,
+        "name": "#1015",
+        "created_at": "2026-03-25T00:27:32-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 1,
+            "price_line_total": 381.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          }
+        ]
+      },
+      {
+        "id": 6871029186812,
+        "name": "#1014",
+        "created_at": "2026-03-25T00:10:12-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9184481870076,
+        "line_items": [
+          {
+            "name": "GastroDog",
+            "quantity": 2,
+            "price_line_total": 782.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6870704095484,
+        "name": "#1013",
+        "created_at": "2026-03-24T22:26:41-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9184481870076,
+        "line_items": [
+          {
+            "name": "OmegaDog",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          }
+        ]
+      },
+      {
+        "id": 6870327492860,
+        "name": "#1012",
+        "created_at": "2026-03-24T21:19:54-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "ARTRIDOG",
+            "quantity": 2,
+            "price_line_total": 794.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          }
+        ]
+      },
+      {
+        "id": 6870258352380,
+        "name": "#1011",
+        "created_at": "2026-03-24T20:21:17-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180489908476,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 2,
+            "price_line_total": 762.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          }
+        ]
+      },
+      {
+        "id": 6870247604476,
+        "name": "#1010",
+        "created_at": "2026-03-24T20:15:36-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9183622856956,
+        "line_items": [
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6870205235452,
+        "name": "#1009",
+        "created_at": "2026-03-24T19:43:50-06:00",
+        "currency": "MXN",
+        "total_price": 1566.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "MONSEVIP"
+        ],
+        "customer_id": 9183442993404,
+        "line_items": [
+          {
+            "name": "OmegaDog",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          },
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          },
+          {
+            "name": "ARTRIDOG",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          },
+          {
+            "name": "DOGRELAX",
+            "quantity": 1,
+            "price_line_total": 381.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          }
+        ]
+      },
+      {
+        "id": 6868284801276,
+        "name": "#1008",
+        "created_at": "2026-03-23T20:07:31-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 4,
+            "price_line_total": 1524.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          }
+        ]
+      },
+      {
+        "id": 6868264911100,
+        "name": "#1007",
+        "created_at": "2026-03-23T19:54:14-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 2,
+            "price_line_total": 762.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          }
+        ]
+      },
+      {
+        "id": 6868169556220,
+        "name": "#1006",
+        "created_at": "2026-03-23T18:53:13-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "OmegaDog",
+            "quantity": 2,
+            "price_line_total": 794.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          }
+        ]
+      },
+      {
+        "id": 6868149240060,
+        "name": "#1005",
+        "created_at": "2026-03-23T18:39:50-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          }
+        ]
+      },
+      {
+        "id": 6868110377212,
+        "name": "#1004",
+        "created_at": "2026-03-23T18:13:17-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180404875516,
+        "line_items": [
+          {
+            "name": "DOGRELAX",
+            "quantity": 2,
+            "price_line_total": 762.0,
+            "sku": "HC-DR",
+            "bucket": "DogRelax"
+          },
+          {
+            "name": "GastroDog",
+            "quantity": 1,
+            "price_line_total": 391.0,
+            "sku": null,
+            "bucket": "GastroDog"
+          },
+          {
+            "name": "OmegaDog",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          }
+        ]
+      },
+      {
+        "id": 6868104118524,
+        "name": "#1003",
+        "created_at": "2026-03-23T18:07:59-06:00",
+        "currency": "MXN",
+        "total_price": 0.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [
+          "TEST",
+          "MONSEVIP"
+        ],
+        "customer_id": 9180489908476,
+        "line_items": [
+          {
+            "name": "ARTRIDOG",
+            "quantity": 2,
+            "price_line_total": 794.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          }
+        ]
+      },
+      {
+        "id": 6863433924860,
+        "name": "#1002",
+        "created_at": "2026-03-21T14:03:00-06:00",
+        "currency": "MXN",
+        "total_price": 944.0,
+        "financial_status": "paid",
+        "fulfillment_status": "fulfilled",
+        "tags": "",
+        "discount_codes": [],
+        "customer_id": 9143352164604,
+        "line_items": [
+          {
+            "name": "ARTRIDOG",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": "HC-AD",
+            "bucket": "ArtriDog"
+          },
+          {
+            "name": "OmegaDog",
+            "quantity": 1,
+            "price_line_total": 397.0,
+            "sku": null,
+            "bucket": "OmegaDog"
+          }
+        ]
+      }
+    ]
+  },
+  "meta_ads_full_period": {
+    "ad_account": "act_1626923298353925",
+    "period": {
+      "start": "2026-03-19",
+      "end": "2026-04-19"
+    },
+    "totals": {
+      "impressions": 15342,
+      "clicks": 453,
+      "spend_mxn": 1926.78,
+      "reach": 12771,
+      "ctr_pct": 2.953,
+      "cpc_mxn": 4.25,
+      "cpm_mxn": 125.59,
+      "link_clicks": 254,
+      "add_to_cart": 46.0,
+      "initiate_checkout": 32.0,
+      "purchases": 1.0,
+      "purchase_value_mxn": 898.6,
+      "cpa_mxn": 1926.78,
+      "roas": 0.466
+    },
+    "ad_count": 17,
+    "new_ads_vs_snapshot": [
+      "6913720761034",
+      "6913720781834",
+      "6913720802034",
+      "6913720827234",
+      "6913720869034",
+      "6913720882634",
+      "6913720902034",
+      "6915552714834"
+    ],
+    "snapshot_ads_not_in_fresh": [],
+    "by_ad": [
+      {
+        "ad_id": "6899759077034",
+        "ad_name": "HC-AD-001",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 382,
+        "clicks": 19,
+        "spend_mxn": 13.96,
+        "ctr_pct": 4.974,
+        "cpc_mxn": 0.73,
+        "cpm_mxn": 36.54,
+        "reach": 344,
+        "frequency": 1.11,
+        "link_clicks": 15,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6899759090034",
+        "ad_name": "HC-DR-001",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 185,
+        "clicks": 6,
+        "spend_mxn": 14.06,
+        "ctr_pct": 3.243,
+        "cpc_mxn": 2.34,
+        "cpm_mxn": 76.0,
+        "reach": 166,
+        "frequency": 1.114,
+        "link_clicks": 7,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6899759106634",
+        "ad_name": "HC-GD-001",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 70,
+        "clicks": 2,
+        "spend_mxn": 2.41,
+        "ctr_pct": 2.857,
+        "cpc_mxn": 1.21,
+        "cpm_mxn": 34.43,
+        "reach": 54,
+        "frequency": 1.296,
+        "link_clicks": 1,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066326834",
+        "ad_name": "HC-AD-DOLOR-SILENCIOSO-CAROUSEL",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 2563,
+        "clicks": 92,
+        "spend_mxn": 373.9,
+        "ctr_pct": 3.59,
+        "cpc_mxn": 4.06,
+        "cpm_mxn": 145.88,
+        "reach": 2049,
+        "frequency": 1.251,
+        "link_clicks": 49,
+        "add_to_cart": 8.0,
+        "initiate_checkout": 6.0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066345034",
+        "ad_name": "HC-AD-CURCUMINA-CAROUSEL",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 57,
+        "clicks": 0,
+        "spend_mxn": 11.06,
+        "ctr_pct": 0.0,
+        "cpc_mxn": 0.0,
+        "cpm_mxn": 194.04,
+        "reach": 54,
+        "frequency": 1.056,
+        "link_clicks": 0,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066358834",
+        "ad_name": "HC-DR-OFF-CAROUSEL",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 62,
+        "clicks": 1,
+        "spend_mxn": 20.07,
+        "ctr_pct": 1.613,
+        "cpc_mxn": 20.07,
+        "cpm_mxn": 323.71,
+        "reach": 54,
+        "frequency": 1.148,
+        "link_clicks": 1,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066375434",
+        "ad_name": "HC-OD-OMEGA-EQUIVOCADO-CAROUSEL",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 1284,
+        "clicks": 39,
+        "spend_mxn": 220.21,
+        "ctr_pct": 3.037,
+        "cpc_mxn": 5.65,
+        "cpm_mxn": 171.5,
+        "reach": 1171,
+        "frequency": 1.096,
+        "link_clicks": 27,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066404634",
+        "ad_name": "HC-DR-ESTRES-CAROUSEL",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 2773,
+        "clicks": 52,
+        "spend_mxn": 366.47,
+        "ctr_pct": 1.875,
+        "cpc_mxn": 7.05,
+        "cpm_mxn": 132.16,
+        "reach": 2398,
+        "frequency": 1.156,
+        "link_clicks": 32,
+        "add_to_cart": 10.0,
+        "initiate_checkout": 4.0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6911066427234",
+        "ad_name": "HC-GD-REGENERACION-CAROUSEL",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 196,
+        "clicks": 4,
+        "spend_mxn": 34.54,
+        "ctr_pct": 2.041,
+        "cpc_mxn": 8.63,
+        "cpm_mxn": 176.22,
+        "reach": 172,
+        "frequency": 1.14,
+        "link_clicks": 2,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6913720761034",
+        "ad_name": "HC-AD-HISTORIA-CAROUSEL",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 59,
+        "clicks": 0,
+        "spend_mxn": 9.29,
+        "ctr_pct": 0.0,
+        "cpc_mxn": 0.0,
+        "cpm_mxn": 157.46,
+        "reach": 52,
+        "frequency": 1.135,
+        "link_clicks": 0,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6913720781834",
+        "ad_name": "HC-AD-OFERTA-V1",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 49,
+        "clicks": 5,
+        "spend_mxn": 8.39,
+        "ctr_pct": 10.204,
+        "cpc_mxn": 1.68,
+        "cpm_mxn": 171.22,
+        "reach": 44,
+        "frequency": 1.114,
+        "link_clicks": 3,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6913720802034",
+        "ad_name": "HC-AD-OFERTA-V2",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 157,
+        "clicks": 9,
+        "spend_mxn": 23.68,
+        "ctr_pct": 5.732,
+        "cpc_mxn": 2.63,
+        "cpm_mxn": 150.83,
+        "reach": 143,
+        "frequency": 1.098,
+        "link_clicks": 4,
+        "add_to_cart": 4.0,
+        "initiate_checkout": 4.0,
+        "purchases": 1.0,
+        "purchase_value_mxn": 898.6,
+        "cpa_mxn": 23.68,
+        "roas": 37.948
+      },
+      {
+        "ad_id": "6913720827234",
+        "ad_name": "HC-AD-OFERTA-V3",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 1968,
+        "clicks": 52,
+        "spend_mxn": 254.01,
+        "ctr_pct": 2.642,
+        "cpc_mxn": 4.88,
+        "cpm_mxn": 129.07,
+        "reach": 1593,
+        "frequency": 1.235,
+        "link_clicks": 20,
+        "add_to_cart": 2.0,
+        "initiate_checkout": 2.0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6913720869034",
+        "ad_name": "HC-AD-PS-C-CAROUSEL",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 51,
+        "clicks": 0,
+        "spend_mxn": 8.61,
+        "ctr_pct": 0.0,
+        "cpc_mxn": 0.0,
+        "cpm_mxn": 168.82,
+        "reach": 44,
+        "frequency": 1.159,
+        "link_clicks": 0,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6913720882634",
+        "ad_name": "HC-AD-PS-S-V1",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 4072,
+        "clicks": 119,
+        "spend_mxn": 391.89,
+        "ctr_pct": 2.922,
+        "cpc_mxn": 3.29,
+        "cpm_mxn": 96.24,
+        "reach": 3078,
+        "frequency": 1.323,
+        "link_clicks": 62,
+        "add_to_cart": 22.0,
+        "initiate_checkout": 16.0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6913720902034",
+        "ad_name": "HC-AD-PS-S-V2",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6899759030034",
+        "adset_name": "HC-BROAD-MX-PURCHASE",
+        "impressions": 423,
+        "clicks": 18,
+        "spend_mxn": 45.9,
+        "ctr_pct": 4.255,
+        "cpc_mxn": 2.55,
+        "cpm_mxn": 108.51,
+        "reach": 381,
+        "frequency": 1.11,
+        "link_clicks": 9,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      },
+      {
+        "ad_id": "6915552714834",
+        "ad_name": "HC-AD-VID-ARTRIDOG-MONSE-STORYTELLING-V1",
+        "campaign_id": "6899758932234",
+        "campaign_name": "HC-VENTAS-MES1",
+        "adset_id": "6915550969234",
+        "adset_name": "HC-REEL-ARTRIDOG-SALES-01",
+        "impressions": 991,
+        "clicks": 35,
+        "spend_mxn": 128.33,
+        "ctr_pct": 3.532,
+        "cpc_mxn": 3.67,
+        "cpm_mxn": 129.5,
+        "reach": 974,
+        "frequency": 1.017,
+        "link_clicks": 22,
+        "add_to_cart": 0,
+        "initiate_checkout": 0,
+        "purchases": 0,
+        "purchase_value_mxn": 0.0,
+        "cpa_mxn": 0.0,
+        "roas": 0.0
+      }
+    ]
+  },
+  "ga4": {
+    "property_id": "529120588",
+    "period": {
+      "start": "2026-03-19",
+      "end": "2026-04-19"
+    },
+    "totals": {
+      "sessions": 526,
+      "activeUsers": 385,
+      "newUsers": 386,
+      "screenPageViews": 1041,
+      "averageSessionDuration_sec": 154.73,
+      "bounceRate": 0.5741,
+      "engagementRate": 0.4259,
+      "conversions": 27.0,
+      "eventCount": 4126,
+      "ecommercePurchases": 27,
+      "purchaseRevenue_mxn": 2338.0
+    },
+    "daily": [
+      {
+        "date": "20260323",
+        "sessions": 42,
+        "activeUsers": 30,
+        "purchases": 6,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260324",
+        "sessions": 34,
+        "activeUsers": 22,
+        "purchases": 8,
+        "revenue_mxn": 1566.0
+      },
+      {
+        "date": "20260325",
+        "sessions": 42,
+        "activeUsers": 33,
+        "purchases": 11,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260326",
+        "sessions": 14,
+        "activeUsers": 12,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260327",
+        "sessions": 11,
+        "activeUsers": 9,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260328",
+        "sessions": 7,
+        "activeUsers": 3,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260329",
+        "sessions": 2,
+        "activeUsers": 2,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260330",
+        "sessions": 3,
+        "activeUsers": 1,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260331",
+        "sessions": 2,
+        "activeUsers": 2,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260401",
+        "sessions": 4,
+        "activeUsers": 4,
+        "purchases": 1,
+        "revenue_mxn": 391.0
+      },
+      {
+        "date": "20260402",
+        "sessions": 5,
+        "activeUsers": 3,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260403",
+        "sessions": 5,
+        "activeUsers": 4,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260404",
+        "sessions": 12,
+        "activeUsers": 12,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260405",
+        "sessions": 7,
+        "activeUsers": 7,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260406",
+        "sessions": 13,
+        "activeUsers": 12,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260407",
+        "sessions": 3,
+        "activeUsers": 3,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260408",
+        "sessions": 10,
+        "activeUsers": 8,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260409",
+        "sessions": 11,
+        "activeUsers": 10,
+        "purchases": 1,
+        "revenue_mxn": 381.0
+      },
+      {
+        "date": "20260410",
+        "sessions": 11,
+        "activeUsers": 11,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260411",
+        "sessions": 28,
+        "activeUsers": 27,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260412",
+        "sessions": 36,
+        "activeUsers": 35,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260413",
+        "sessions": 23,
+        "activeUsers": 21,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260414",
+        "sessions": 22,
+        "activeUsers": 13,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260415",
+        "sessions": 39,
+        "activeUsers": 31,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260416",
+        "sessions": 21,
+        "activeUsers": 18,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260417",
+        "sessions": 39,
+        "activeUsers": 32,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260418",
+        "sessions": 36,
+        "activeUsers": 32,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      },
+      {
+        "date": "20260419",
+        "sessions": 44,
+        "activeUsers": 37,
+        "purchases": 0,
+        "revenue_mxn": 0.0
+      }
+    ],
+    "top_pages": [
+      {
+        "pagePath": "/products/artridog",
+        "pageViews": 274,
+        "sessions": 229,
+        "engagementRate": 0.4454
+      },
+      {
+        "pagePath": "/",
+        "pageViews": 272,
+        "sessions": 204,
+        "engagementRate": 0.6471
+      },
+      {
+        "pagePath": "/products/dogrelax",
+        "pageViews": 101,
+        "sessions": 84,
+        "engagementRate": 0.5119
+      },
+      {
+        "pagePath": "/products/omegadog",
+        "pageViews": 59,
+        "sessions": 54,
+        "engagementRate": 0.5556
+      },
+      {
+        "pagePath": "/collections/all",
+        "pageViews": 53,
+        "sessions": 31,
+        "engagementRate": 0.9355
+      },
+      {
+        "pagePath": "/products/gastrodog",
+        "pageViews": 51,
+        "sessions": 42,
+        "engagementRate": 0.6667
+      },
+      {
+        "pagePath": "/cart",
+        "pageViews": 44,
+        "sessions": 23,
+        "engagementRate": 0.913
+      },
+      {
+        "pagePath": "/pages/tienda",
+        "pageViews": 37,
+        "sessions": 26,
+        "engagementRate": 0.9615
+      },
+      {
+        "pagePath": "/pages/distribucion",
+        "pageViews": 15,
+        "sessions": 14,
+        "engagementRate": 0.5714
+      },
+      {
+        "pagePath": "/pages/afiliados",
+        "pageViews": 11,
+        "sessions": 9,
+        "engagementRate": 0.6667
+      }
+    ],
+    "top_sources": [
+      {
+        "source": "(direct)",
+        "medium": "(none)",
+        "sessions": 187,
+        "activeUsers": 126,
+        "purchases": 6
+      },
+      {
+        "source": "meta",
+        "medium": "paid",
+        "sessions": 170,
+        "activeUsers": 150,
+        "purchases": 0
+      },
+      {
+        "source": "facebook",
+        "medium": "paid",
+        "sessions": 38,
+        "activeUsers": 37,
+        "purchases": 0
+      },
+      {
+        "source": "meta",
+        "medium": "paid_social",
+        "sessions": 22,
+        "activeUsers": 20,
+        "purchases": 0
+      },
+      {
+        "source": "ig",
+        "medium": "social",
+        "sessions": 21,
+        "activeUsers": 21,
+        "purchases": 0
+      },
+      {
+        "source": "m.facebook.com",
+        "medium": "referral",
+        "sessions": 18,
+        "activeUsers": 18,
+        "purchases": 0
+      },
+      {
+        "source": "google",
+        "medium": "organic",
+        "sessions": 15,
+        "activeUsers": 7,
+        "purchases": 9
+      },
+      {
+        "source": "shopify.com",
+        "medium": "referral",
+        "sessions": 15,
+        "activeUsers": 3,
+        "purchases": 7
+      },
+      {
+        "source": "app.gohighlevel.com",
+        "medium": "referral",
+        "sessions": 10,
+        "activeUsers": 1,
+        "purchases": 0
+      },
+      {
+        "source": "app.spekgen.com",
+        "medium": "referral",
+        "sessions": 9,
+        "activeUsers": 1,
+        "purchases": 0
+      }
+    ],
+    "fetched_at_utc": "2026-04-20T15:21:45.159126Z",
+    "note": "Fetched in 2 requests (10 metric limit per request)."
+  },
+  "clarity": {
+    "project_id": "vy5jjgw9yi",
+    "window": "last_3_days (API free-tier max)",
+    "fetched_at_utc": "2026-04-20T15:21:02.239826Z",
+    "insights_raw": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "131",
+            "sessionsWithMetricPercentage": 6.11,
+            "sessionsWithoutMetricPercentage": 93.89,
+            "pagesViews": "8",
+            "subTotal": "11"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "131",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "131",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "131",
+            "sessionsWithMetricPercentage": 6.87,
+            "sessionsWithoutMetricPercentage": 93.13,
+            "pagesViews": "11",
+            "subTotal": "11"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "131",
+            "sessionsWithMetricPercentage": 8.4,
+            "sessionsWithoutMetricPercentage": 91.6,
+            "pagesViews": "13",
+            "subTotal": "18"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "131",
+            "sessionsWithMetricPercentage": 1.53,
+            "sessionsWithoutMetricPercentage": 98.47,
+            "pagesViews": "3",
+            "subTotal": "3"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 26.03
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "133",
+            "totalBotSessionCount": "49",
+            "distinctUserCount": "161",
+            "pagesPerSessionPercentage": 1.3695652173913044
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "121",
+            "activeTime": "51"
+          }
+        ]
+      },
+      {
+        "metricName": "Browser",
+        "information": [
+          {
+            "name": "FacebookApp",
+            "sessionsCount": "48"
+          },
+          {
+            "name": "InstagramApp",
+            "sessionsCount": "47"
+          },
+          {
+            "name": "Chrome",
+            "sessionsCount": "15"
+          },
+          {
+            "name": "ChromeMobile",
+            "sessionsCount": "13"
+          },
+          {
+            "name": "MobileSafari",
+            "sessionsCount": "10"
+          }
+        ]
+      },
+      {
+        "metricName": "Device",
+        "information": [
+          {
+            "name": "Mobile",
+            "sessionsCount": "117"
+          },
+          {
+            "name": "PC",
+            "sessionsCount": "15"
+          },
+          {
+            "name": "Tablet",
+            "sessionsCount": "1"
+          }
+        ]
+      },
+      {
+        "metricName": "OS",
+        "information": [
+          {
+            "name": "IOS",
+            "sessionsCount": "61"
+          },
+          {
+            "name": "Android",
+            "sessionsCount": "57"
+          },
+          {
+            "name": "MacOSX",
+            "sessionsCount": "9"
+          },
+          {
+            "name": "Linux",
+            "sessionsCount": "3"
+          },
+          {
+            "name": "Windows",
+            "sessionsCount": "3"
+          }
+        ]
+      },
+      {
+        "metricName": "Country",
+        "information": [
+          {
+            "name": "Mexico",
+            "sessionsCount": "129"
+          },
+          {
+            "name": "United States",
+            "sessionsCount": "3"
+          },
+          {
+            "name": "Kazakhstan",
+            "sessionsCount": "1"
+          }
+        ]
+      },
+      {
+        "metricName": "PageTitle",
+        "information": [
+          {
+            "name": "ARTRIDOG – Healthychuchos",
+            "sessionsCount": "110"
+          },
+          {
+            "name": "Healthychuchos",
+            "sessionsCount": "22"
+          },
+          {
+            "name": "OmegaDog – Healthychuchos",
+            "sessionsCount": "9"
+          },
+          {
+            "name": "Productos – Healthychuchos",
+            "sessionsCount": "7"
+          },
+          {
+            "name": "DOGRELAX – Healthychuchos",
+            "sessionsCount": "6"
+          },
+          {
+            "name": "GastroDog – Healthychuchos",
+            "sessionsCount": "3"
+          },
+          {
+            "name": "Tienda – Healthychuchos",
+            "sessionsCount": "2"
+          },
+          {
+            "name": "Tu carrito – Healthychuchos",
+            "sessionsCount": "2"
+          },
+          {
+            "name": "Distribución – Healthychuchos",
+            "sessionsCount": "2"
+          },
+          {
+            "name": "Afiliados – Healthychuchos",
+            "sessionsCount": "1"
+          }
+        ]
+      },
+      {
+        "metricName": "ReferrerUrl",
+        "information": [
+          {
+            "name": "https://instagram.com/",
+            "sessionsCount": "40"
+          },
+          {
+            "name": "http://m.facebook.com/",
+            "sessionsCount": "35"
+          },
+          {
+            "name": null,
+            "sessionsCount": "28"
+          },
+          {
+            "name": "https://facebook.com/",
+            "sessionsCount": "14"
+          },
+          {
+            "name": "https://l.facebook.com/",
+            "sessionsCount": "8"
+          },
+          {
+            "name": "https://healthychuchos.com/",
+            "sessionsCount": "6"
+          },
+          {
+            "name": "https://l.instagram.com/",
+            "sessionsCount": "5"
+          },
+          {
+            "name": "https://healthychuchos.com/collections/all",
+            "sessionsCount": "3"
+          },
+          {
+            "name": "https://healthychuchos.com/pages/tienda",
+            "sessionsCount": "3"
+          },
+          {
+            "name": "https://healthychuchos.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnqO5z3mvWYOrWOrCnMXWnX3rkpufJdmEsr4dJ6yKOBsnnlg_VczJzoa56iqI_aem_0xgGJiM15y1m4ag5CJ1Nlw",
+            "sessionsCount": "2"
+          }
+        ]
+      },
+      {
+        "metricName": "PopularPages",
+        "information": [
+          {
+            "url": "https://healthychuchos.com/products/artridog",
+            "visitsCount": "121"
+          },
+          {
+            "url": "https://healthychuchos.com/",
+            "visitsCount": "30"
+          },
+          {
+            "url": "https://healthychuchos.com/products/dogrelax",
+            "visitsCount": "19"
+          },
+          {
+            "url": "https://healthychuchos.com/products/omegadog",
+            "visitsCount": "14"
+          },
+          {
+            "url": "https://healthychuchos.com/collections/all",
+            "visitsCount": "7"
+          },
+          {
+            "url": "https://healthychuchos.com/products/artichu",
+            "visitsCount": "6"
+          },
+          {
+            "url": "https://healthychuchos.com/products/gastrodog",
+            "visitsCount": "4"
+          },
+          {
+            "url": "https://healthychuchos.com/pages/tienda",
+            "visitsCount": "4"
+          },
+          {
+            "url": "https://healthychuchos.com/pages/distribucion",
+            "visitsCount": "3"
+          },
+          {
+            "url": "https://healthychuchos.com/pages/contact",
+            "visitsCount": "3"
+          }
+        ]
+      }
+    ],
+    "note": "Clarity Data Export API solo retorna últimos 1-3 días. No cubre el período completo Mar 19 – Apr 19."
+  },
+  "_data_quality": {
+    "shopify": "complete",
+    "meta_ads": "complete",
+    "ga4": "complete",
+    "clarity": "partial",
+    "notes": [
+      "shopify_sales_live = API pull fresh. La clave original shopify_sales queda como registro del estado local previo.",
+      "meta_ads = snapshot local (Mar 31 – Apr 13). meta_ads_full_period = API pull Mar 19 – Apr 19 (período completo).",
+      "Clarity solo tiene data de últimos 3 días por limitación de la API export (no cubre el período completo).",
+      "GA4 via service account HC_SA_JSON_B64 + property 529120588."
+    ],
+    "fetched_at_utc": "2026-04-20T15:21:02.241324Z"
+  }
+}

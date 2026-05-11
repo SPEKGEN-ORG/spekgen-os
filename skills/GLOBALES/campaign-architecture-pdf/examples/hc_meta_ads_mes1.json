@@ -1,0 +1,450 @@
+{
+  "meta": {
+    "client": "HEALTHY CHUCHOS",
+    "client_code": "HC",
+    "title": "HEALTHY CHUCHOS · Arquitectura Meta Ads Mes 1",
+    "subtitle": "Lanzamiento Abril 2026 · 25 días · Broad MX 25-55",
+    "tagline": "Estrategia Organic-First · Winners Orgánicos → Paid Ads",
+    "date_generated": "2026-04-09",
+    "images_root": "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/01. ESTATICOS",
+    "output_pdf": "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/00. ESTRATEGIA/HC_ARQUITECTURA_META_ADS_MES1.pdf"
+  },
+  "header_metrics": [
+    {"label": "Budget", "value": "$4,000"},
+    {"label": "Campañas", "value": "2"},
+    {"label": "Ads Org.", "value": "6"},
+    {"label": "Videos", "value": "+6"}
+  ],
+  "pages": [
+    {
+      "type": "architecture",
+      "campaigns": [
+        {
+          "name": "HC-VENTAS-MES1",
+          "details": [
+            {"k": "Objective", "v": "Sales"},
+            {"k": "Optimization", "v": "Purchase"},
+            {"k": "Budget", "v": "$3,000 MXN · CBO $120/día"}
+          ],
+          "ad_sets": [
+            {
+              "name": "HC-BROAD-MX-PURCHASE",
+              "details": [
+                {"k": "Audience", "v": "Broad MX 25-55"},
+                {"k": "Placements", "v": "Advantage+"},
+                {"k": "Pixel", "v": "1813096612719811"},
+                {"k": "Interests", "v": "No · No LAL"}
+              ],
+              "phases": [
+                {
+                  "name": "FASE 1 · ORGANIC WINNERS (ACTIVO DÍA 1)",
+                  "info": "6 carruseles ya publicados con WCI validado · Imágenes reales · Ordenados por performance",
+                  "color": "#2563eb",
+                  "ads": [
+                    {
+                      "id": "O1",
+                      "name": "HC-AD-DOLOR-SILENCIOSO-CAROUSEL",
+                      "hook": "Lo que no puedes ver es lo que más le duele",
+                      "product": "ArtriDog",
+                      "product_code": "artridog",
+                      "format": "Carrusel · 3 slides · 1:1",
+                      "origin": "Origen: HC-004 · 2026-04-01",
+                      "metric_label": "WCI 9.81%",
+                      "metric_tier": "high",
+                      "images_folder": "O1_HC-004_ARTRIDOG_DOLOR_SILENCIOSO",
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/artridog",
+                        "detail": "$397 MXN"
+                      }
+                    },
+                    {
+                      "id": "O2",
+                      "name": "HC-AD-CURCUMINA-CAROUSEL",
+                      "hook": "La curcumina NO funciona. A menos que hagas esto",
+                      "product": "ArtriDog",
+                      "product_code": "artridog",
+                      "format": "Carrusel · 3 slides · 1:1",
+                      "origin": "Origen: HC-008 · 2026-04-05",
+                      "metric_label": "WCI 7.64%",
+                      "metric_tier": "high",
+                      "images_folder": "O2_HC-008_ARTRIDOG_CURCUMINA",
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/artridog",
+                        "detail": "$397 MXN"
+                      }
+                    },
+                    {
+                      "id": "O3",
+                      "name": "HC-DR-OFF-CAROUSEL",
+                      "hook": "Para tu chucho, el mundo no tiene botón de OFF",
+                      "product": "DogRelax",
+                      "product_code": "dogrelax",
+                      "format": "Carrusel · 6 slides · 1:1",
+                      "origin": "Origen: HC-003 · 2026-03-30",
+                      "metric_label": "WCI 7.57%",
+                      "metric_tier": "high",
+                      "images_folder": "O3_HC-003_DOGRELAX_OFF",
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/dogrelax",
+                        "detail": "$381 MXN"
+                      }
+                    },
+                    {
+                      "id": "O4",
+                      "name": "HC-OD-OMEGA-EQUIVOCADO-CAROUSEL",
+                      "hook": "¿Le das omega-3 a tu perro? Probablemente el equivocado",
+                      "product": "OmegaDog",
+                      "product_code": "omegadog",
+                      "format": "Carrusel · 6 slides · 1:1",
+                      "origin": "Origen: HC-005 · 2026-04-03",
+                      "metric_label": "WCI 7.18%",
+                      "metric_tier": "high",
+                      "images_folder": "O4_HC-005_OMEGADOG_OMEGA_EQUIVOCADO",
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/omegadog",
+                        "detail": "$397 MXN"
+                      }
+                    },
+                    {
+                      "id": "O5",
+                      "name": "HC-DR-ESTRES-CAROUSEL",
+                      "hook": "Tu perro no se porta mal. Está estresado",
+                      "product": "DogRelax",
+                      "product_code": "dogrelax",
+                      "format": "Carrusel · 6 slides · 1:1",
+                      "origin": "Origen: HC-007 · 2026-04-07",
+                      "metric_label": "WCI 6.41%",
+                      "metric_tier": "mid",
+                      "images_folder": "O5_HC-007_DOGRELAX_ESTRES",
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/dogrelax",
+                        "detail": "$381 MXN"
+                      }
+                    },
+                    {
+                      "id": "O6",
+                      "name": "HC-GD-REGENERACION-CAROUSEL",
+                      "hook": "Tu perro no necesita otro parche. Necesita regenerarse",
+                      "product": "GastroDog",
+                      "product_code": "gastrodog",
+                      "format": "Carrusel · 6 slides · 1:1",
+                      "origin": "Origen: HC-006 · 2026-04-07",
+                      "metric_label": "WCI 4.40%",
+                      "metric_tier": "low",
+                      "images_folder": "O6_HC-006_GASTRODOG_REGENERACION",
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/gastrodog",
+                        "detail": "$391 MXN"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "FASE 2 · VIDEOS MONSE (ACTIVO AL RECIBIR GRABACIONES)",
+                  "info": "Scripts entregados · Publicación orgánica primero · Paid solo si Tier 1",
+                  "color": "#7c3aed",
+                  "ads": [
+                    {
+                      "id": "V1",
+                      "name": "HC-BRAND-SOYVETERINARIA-VIDEO",
+                      "hook": "Soy veterinaria. Y formulé estos suplementos porque los míos los necesitaban",
+                      "product": "Marca",
+                      "product_code": "marca",
+                      "format": "Video · 45-60s · 9:16 + 1:1",
+                      "origin": "UGC Monse · Pendiente grabación",
+                      "metric_label": "Pendiente",
+                      "metric_tier": "tbd",
+                      "placeholder": true,
+                      "placeholder_icon": "▶",
+                      "placeholder_text": "Video pendiente\n45-60s",
+                      "is_video": true,
+                      "landing": {
+                        "type": "HOME / COLECCIÓN",
+                        "url": "healthychuchos.com",
+                        "detail": "Todo el catálogo"
+                      }
+                    },
+                    {
+                      "id": "V2",
+                      "name": "HC-GD-PROBIOTICOS-VIDEO",
+                      "hook": "El probiótico que sobrevive al ácido estomacal",
+                      "product": "GastroDog",
+                      "product_code": "gastrodog",
+                      "format": "Video · 40-50s · 9:16 + 1:1",
+                      "origin": "UGC Monse · Pendiente grabación",
+                      "metric_label": "Pendiente",
+                      "metric_tier": "tbd",
+                      "placeholder": true,
+                      "placeholder_icon": "▶",
+                      "placeholder_text": "Video pendiente\n40-50s",
+                      "is_video": true,
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/gastrodog",
+                        "detail": "$391 MXN"
+                      }
+                    },
+                    {
+                      "id": "V3",
+                      "name": "HC-OD-KRILL-VIDEO",
+                      "hook": "El omega-3 que sí se absorbe — aceite de krill antártico",
+                      "product": "OmegaDog",
+                      "product_code": "omegadog",
+                      "format": "Video · 35-45s · 9:16 + 1:1",
+                      "origin": "UGC Monse · Pendiente grabación",
+                      "metric_label": "Pendiente",
+                      "metric_tier": "tbd",
+                      "placeholder": true,
+                      "placeholder_icon": "▶",
+                      "placeholder_text": "Video pendiente\n35-45s",
+                      "is_video": true,
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/omegadog",
+                        "detail": "$397 MXN"
+                      }
+                    },
+                    {
+                      "id": "V4",
+                      "name": "HC-AD-SENALES-VIDEO",
+                      "hook": "Las señales que tu perro no puede decirte",
+                      "product": "ArtriDog",
+                      "product_code": "artridog",
+                      "format": "Video · 45-55s · 9:16 + 1:1",
+                      "origin": "UGC Monse · Pendiente grabación",
+                      "metric_label": "Pendiente",
+                      "metric_tier": "tbd",
+                      "placeholder": true,
+                      "placeholder_icon": "▶",
+                      "placeholder_text": "Video pendiente\n45-55s",
+                      "is_video": true,
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/artridog",
+                        "detail": "$397 MXN"
+                      }
+                    },
+                    {
+                      "id": "V5",
+                      "name": "HC-DR-RELAX-VIDEO",
+                      "hook": "DogRelax en 45s — calma real sin sedación",
+                      "product": "DogRelax",
+                      "product_code": "dogrelax",
+                      "format": "Video · 30-40s · 9:16 + 1:1",
+                      "origin": "UGC Monse · Pendiente grabación",
+                      "metric_label": "Pendiente",
+                      "metric_tier": "tbd",
+                      "placeholder": true,
+                      "placeholder_icon": "▶",
+                      "placeholder_text": "Video pendiente\n30-40s",
+                      "is_video": true,
+                      "landing": {
+                        "type": "PDP NATIVA",
+                        "url": "/products/dogrelax",
+                        "detail": "$381 MXN"
+                      }
+                    },
+                    {
+                      "id": "V6",
+                      "name": "HC-BRAND-60SEGUNDOS-VIDEO",
+                      "hook": "Todo HC en 60s — los 4 productos, para qué sirven, por qué",
+                      "product": "Marca",
+                      "product_code": "marca",
+                      "format": "Video · 50-60s · 9:16 + 1:1",
+                      "origin": "UGC Monse · Pendiente grabación",
+                      "metric_label": "Pendiente",
+                      "metric_tier": "tbd",
+                      "placeholder": true,
+                      "placeholder_icon": "▶",
+                      "placeholder_text": "Video pendiente\n50-60s",
+                      "is_video": true,
+                      "landing": {
+                        "type": "HOME / COLECCIÓN",
+                        "url": "healthychuchos.com",
+                        "detail": "Todo el catálogo"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "legend_items": [
+        {"kind": "dot", "color": "#f59e0b", "label": "ArtriDog $397"},
+        {"kind": "dot", "color": "#8b5cf6", "label": "DogRelax $381"},
+        {"kind": "dot", "color": "#06b6d4", "label": "OmegaDog $397"},
+        {"kind": "dot", "color": "#10b981", "label": "GastroDog $391"},
+        {"kind": "dot", "color": "#1e3a5f", "label": "Marca"},
+        {"kind": "text", "label": "<div class='dot' style='background:#10b981'></div>WCI Tier 1 / <div class='dot' style='background:#3b82f6'></div>Tier 2 / <div class='dot' style='background:#94a3b8'></div>Bajo"}
+      ],
+      "legend_meta": "Generado 2026-04-09 · HC SPEKGEN · Página 1 de 2",
+      "page_foot": "Healthy Chuchos · Arquitectura Meta Ads Mes 1 · Visual",
+      "page_num": "1 / 2"
+    },
+    {
+      "type": "detail",
+      "header": {
+        "title": "HC · Campaña 2 Quiz · Config · Cronograma",
+        "subtitle": "Detalle operativo · Budget · Kill criteria",
+        "tagline": "Todo lo que hay que saber antes de darle Publish",
+        "metrics": [
+          {"label": "Pixel", "value": "SPEKHC-23MARZO", "value_size": "10px"},
+          {"label": "BM", "value": "880354658373862", "value_size": "10px"},
+          {"label": "Account", "value": "1626923298", "value_size": "10px"}
+        ]
+      },
+      "phase_summary": [
+        {
+          "pn": "Fase 1 · Activo día 1",
+          "title": "Organic Winners",
+          "desc": "Posts orgánicos WCI Tier 1-2 reciclados como ads. Engagement real validado antes de pagar.",
+          "count": "6",
+          "count_label": "ads carrusel"
+        },
+        {
+          "pn": "Fase 2 · Día 7-10",
+          "title": "Videos Monse (UGC)",
+          "desc": "Scripts listos. Al grabarse se publican orgánicos primero. Se escalan a paid si Tier 1.",
+          "count": "+6",
+          "count_label": "videos 30-60s"
+        },
+        {
+          "pn": "Fase 3 · Reserva",
+          "title": "Creativos Ad Batch",
+          "desc": "Escaleras, 5 Señales, Bodymap, etc. Listos en backup. Activar si Fase 1/2 no cubren cuota.",
+          "count": "6",
+          "count_label": "estáticos reserva"
+        }
+      ],
+      "campaigns": [
+        {
+          "name": "HC-QUIZ-LEADS",
+          "style": "background:linear-gradient(90deg, #4c1d95 0%, #7c3aed 100%);",
+          "tag_style": "background:#c4b5fd;color:#4c1d95",
+          "details": [
+            {"k": "Objective", "v": "Leads"},
+            {"k": "Optimization", "v": "Form Completion"},
+            {"k": "Budget", "v": "$1,000 MXN · Activa Semana 2 si Fase 1 genera data"}
+          ],
+          "ad_sets": [
+            {
+              "name": "HC-QUIZ-BROAD-MX",
+              "style": "background:#5b21b6;",
+              "details": [
+                {"k": "Audience", "v": "Broad MX 25-55"},
+                {"k": "Placements", "v": "Advantage+"},
+                {"k": "Lead form", "v": "Instant Form + Quiz"},
+                {"k": "Destino", "v": "GHL"}
+              ],
+              "phases": []
+            }
+          ]
+        }
+      ],
+      "quiz_block": {
+        "flow_title": "Quiz Funnel — Flujo",
+        "flow_desc": "El usuario responde 5 preguntas sobre su perro (edad, síntomas, raza, hábitos). El quiz recomienda el producto ideal y captura lead en GHL con follow-up automático por SMS/email.",
+        "funnel": ["Meta Ad", "Quiz Page", "GHL CRM", "PDP recomendada"],
+        "landing_title": "Landing — Quiz GHL",
+        "landing_desc": "<b>Tipo:</b> Quiz dinámico (GHL)<br><b>URL:</b> healthychuchos.com/quiz<br><b>CTA final:</b> PDP del producto recomendado + captura email/WhatsApp<br><b>Tracking:</b> Pixel HC + UTM quiz-funnel + GHL form hook"
+      },
+      "detail_grid": {
+        "left": {
+          "dnum": "CAMPAÑA 1 · CONFIG TÉCNICA",
+          "dtitle": "HC-VENTAS-MES1",
+          "ddesc": "Escalar los winners orgánicos a paid. Meta: primer purchase en &lt;5 días.",
+          "sections": [
+            {
+              "heading": "Ad Set · HC-BROAD-MX-PURCHASE",
+              "kvs": [
+                {"k": "Objective", "v": "Sales"},
+                {"k": "Optimization", "v": "Purchase"},
+                {"k": "Attribution", "v": "7-day click / 1-day view"},
+                {"k": "Budget", "v": "<b>$3,000 MXN</b> · CBO $120/día × 25d"},
+                {"k": "Placements", "v": "Advantage+ (automático)"},
+                {"k": "Audience", "v": "Broad MX · 25-55 · Todos los géneros"},
+                {"k": "Interests / LAL", "v": "Ninguno (creative-as-targeting)"},
+                {"k": "Pixel ID", "v": "1813096612719811"},
+                {"k": "Conversion API", "v": "Activa vía Shopify FB App (Max)"},
+                {"k": "Dynamic Creative", "v": "OFF"}
+              ]
+            },
+            {
+              "heading": "Kill Criteria",
+              "kvs": [
+                {"k": "CTR link click", "v": "&ge; 1.0% · Pausar si bajo"},
+                {"k": "CPC link click", "v": "&le; $8 · Pausar si &gt; $12"},
+                {"k": "CPM", "v": "&le; $80 MXN (normal MX)"},
+                {"k": "Frecuencia", "v": "&lt; 2.5 · Pausar si &gt; 3.0"},
+                {"k": "Purchase (día 5)", "v": "&gt; 0 · Si cero, revisar pixel + landing"}
+              ]
+            }
+          ]
+        },
+        "right": [
+          {
+            "type": "card",
+            "head_style": "background:linear-gradient(90deg, #4c1d95 0%, #7c3aed 100%);",
+            "dnum_style": "color:#c4b5fd",
+            "dnum": "COBERTURA POR PRODUCTO",
+            "dtitle": "Portfolio Completo",
+            "ddesc": "Cómo se distribuyen los 12 ads entre los 4 productos.",
+            "sections": [
+              {
+                "heading": "",
+                "kvs": [
+                  {"k": "ArtriDog", "v": "O1 Dolor Silencioso + O2 Curcumina + V4 Señales"},
+                  {"k": "DogRelax", "v": "O3 OFF + O5 Estrés + V5 Relax"},
+                  {"k": "OmegaDog", "v": "O4 Omega Equivocado + V3 Krill"},
+                  {"k": "GastroDog", "v": "O6 Regeneración + V2 Probióticos"},
+                  {"k": "Marca", "v": "V1 Soy Veterinaria + V6 60 Segundos"}
+                ]
+              }
+            ]
+          },
+          {
+            "type": "budget_viz",
+            "title": "Distribución de Budget · $4,000 MXN",
+            "segments": [
+              {"flex": 3, "color": "#2563eb", "label": "VENTAS · $3,000 (75%)"},
+              {"flex": 1, "color": "#8b5cf6", "label": "QUIZ · $1,000 (25%)"}
+            ],
+            "legend": [
+              {"color": "#2563eb", "label": "HC-VENTAS-MES1 · CBO $120/día × 25d"},
+              {"color": "#8b5cf6", "label": "HC-QUIZ-LEADS · Reserva Semana 2"}
+            ]
+          },
+          {
+            "type": "timeline",
+            "title": "Cronograma 25 días",
+            "weeks": [
+              {"name": "SEM 1 · Lanzamiento", "task": "6 organic winners live (O1-O6). Monitor pixel. Baseline métricas."},
+              {"name": "SEM 2 · Videos + Quiz", "task": "Agregar videos Monse si entregados. Activar HC-QUIZ-LEADS si data OK."},
+              {"name": "SEM 3 · Optimización", "task": "Pausar 2 peores. Duplicar budget a top 4. Rotar creativos."},
+              {"name": "SEM 4 · Escala", "task": "Winners confirmados. Reporte final. Plan Mes 2."}
+            ]
+          }
+        ]
+      },
+      "legend_items": [
+        {"kind": "text", "label": "<b style='color:#7dd3fc'>PDP NATIVA</b> · Shopify"},
+        {"kind": "text", "label": "<b style='color:#c4b5fd'>QUIZ GHL</b> · Captura + CRM"},
+        {"kind": "text", "label": "<b style='color:#7dd3fc'>HOME</b> · healthychuchos.com"},
+        {"kind": "text", "label": "<b style='color:#7dd3fc'>COLECCIÓN</b> · Catálogo"},
+        {"kind": "dash"},
+        {"kind": "text", "label": "<b>Review semanal:</b> cada lunes"}
+      ],
+      "legend_meta": "Generado 2026-04-09 · HC SPEKGEN · Página 2 de 2",
+      "page_foot": "Healthy Chuchos · Arquitectura Meta Ads Mes 1 · Visual",
+      "page_num": "2 / 2"
+    }
+  ]
+}

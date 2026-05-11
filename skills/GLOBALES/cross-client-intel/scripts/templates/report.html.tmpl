@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cross-Client Meta Ads Intel — __DATE__</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  background: #0f0a1e;
+  color: #e8e4f0;
+  padding: 48px 56px;
+  width: 1200px;
+  line-height: 1.5;
+}
+.header { border-bottom: 2px solid #7c3aed; padding-bottom: 20px; margin-bottom: 32px; }
+.header h1 { color: #a78bfa; font-size: 32px; font-weight: 800; letter-spacing: -0.5px; }
+.header .meta { color: #8b7dc3; font-size: 14px; margin-top: 8px; }
+.section { margin: 28px 0 20px; }
+.section h2 { color: #c4b5fd; font-size: 20px; font-weight: 700; margin-bottom: 14px; padding-left: 10px; border-left: 3px solid #a78bfa; }
+.section h3 { color: #a78bfa; font-size: 15px; font-weight: 600; margin: 18px 0 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 13px; background: #1a1230; border-radius: 8px; overflow: hidden; }
+th { background: #2d1b5e; color: #c4b5fd; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+td { padding: 10px 12px; border-top: 1px solid #2d1b5e; color: #e8e4f0; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }
+.kill { color: #fb7185; font-weight: 700; }
+.win { color: #4ade80; font-weight: 700; }
+.warn { color: #fbbf24; font-weight: 600; }
+.muted { color: #8b7dc3; }
+.big-stat { display: inline-block; background: #2d1b5e; padding: 14px 20px; border-radius: 10px; margin-right: 12px; margin-bottom: 10px; min-width: 140px; }
+.big-stat .label { font-size: 10px; text-transform: uppercase; color: #8b7dc3; letter-spacing: 0.5px; }
+.big-stat .val { font-size: 22px; font-weight: 800; color: #fff; margin-top: 4px; }
+.big-stat .sub { font-size: 11px; color: #a78bfa; margin-top: 2px; }
+.pill { display: inline-block; padding: 3px 9px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+.pill-gr { background: #064e3b; color: #6ee7b7; }
+.pill-hc { background: #7c2d12; color: #fdba74; }
+.pill-lf { background: #3730a3; color: #a5b4fc; }
+ul { margin: 8px 0 16px 22px; }
+ul li { margin: 6px 0; color: #d4ccea; }
+.action-box { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); padding: 18px 22px; border-radius: 10px; margin: 14px 0; border: 1px solid #4c3794; }
+.action-box h4 { color: #a78bfa; font-size: 14px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+.footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #2d1b5e; color: #6b617c; font-size: 11px; }
+.insight { background: rgba(124,58,237,0.1); border-left: 3px solid #a78bfa; padding: 14px 18px; margin: 14px 0; border-radius: 4px; font-size: 13px; }
+.insight strong { color: #c4b5fd; }
+.empty { color: #6b617c; font-style: italic; padding: 12px 0; }
+code { background: #1a1230; padding: 2px 6px; border-radius: 3px; color: #a78bfa; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>CROSS-CLIENT META ADS INTEL</h1>
+  <div class="meta">SPEKGEN — __DATE__ · Ventana: ultimos __DAYS__ dias · Cuentas: GREENRAY · HEALTHY CHUCHOS · LO FITNESS</div>
+</div>
+
+<div class="section">
+  <h2>1. Snapshot por cuenta</h2>
+  <div>__SNAPSHOT_STATS__</div>
+  <div class="insight">__NETWORK_READ__</div>
+</div>
+
+<div class="section">
+  <h2>2. Ads recomendados para PAUSAR (requiere confirmar con <code>pause</code>)</h2>
+  __PAUSE_TABLE__
+  <div class="insight"><strong>Capital en riesgo: $__PAUSE_TOTAL__ MXN</strong> en estos ads. Confirmar pausas corriendo: <code>python3 scripts/pause.py</code></div>
+</div>
+
+<div class="section">
+  <h2>3. Winners cross-client (ROAS >= 2, spend >= $50, >= 1 compra)</h2>
+  __WINNERS_TABLE__
+</div>
+
+<div class="section">
+  <h2>4. Plan de replicacion cross-client</h2>
+  __REPLICATION_BOXES__
+</div>
+
+<div class="section">
+  <h2>5. Senales para el siguiente pull</h2>
+  __WATCHLIST__
+</div>
+
+<div class="section">
+  <h2>6. Formatos por cuenta (agregado)</h2>
+  __FORMAT_TABLES__
+</div>
+
+<div class="footer">
+  Generado por <code>cross-client-intel skill</code> · <code>cross_client_pull.py</code> · Meta Marketing API v21.0 · Archivo: <code>__FILENAME__</code>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+# SPEKGEN OS — .gitignore
+
+# === SECRETOS (NUNCA commitear) ===
+.env
+.env.local
+.env.*.local
+*.env.backup
+**/.env
+!.env.example
+
+# === SO / IDE ===
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# === DATOS QUE VAN EN DRIVE, NO EN GIT ===
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.tsv
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.ppt
+
+# Imágenes
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.svg
+*.ico
+*.heic
+
+# Videos
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Audio
+*.mp3
+*.wav
+*.m4a
+
+# Compressed
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# === EXCEPCIONES ===
+# Permite imágenes de docs (badges, diagramas pequeños del README)
+!docs/img/*.png
+!docs/img/*.svg
+
+# Permite templates / blueprints docx/pptx pequeños si están explícitos
+!**/templates/**/*.docx
+!**/blueprints/**/*.pptx
+
+# === MEMORIA PERSONAL DE GIBRAN (NUNCA commitear) ===
+memory/user_*.md
+memory/project_pedro_disconnection_plan.md
+memory/project_pedro_partner_multichannel.md
+memory/user_financial_situation.md
+memory/user_gibran_profile.md
+
+# === LOGS / OUTPUT ===
+*.log
+*.bak
+*.tmp
+*.cache
+**/output/
+**/dist/
+**/build/
+**/.next/
+**/node_modules/
+
+# === PLAYWRIGHT / SCRAPER ARTIFACTS ===
+test-results/
+playwright-report/
+screenshots/
+*.har

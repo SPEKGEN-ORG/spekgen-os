@@ -1,0 +1,627 @@
+{
+  "generated_at": "20 Abril 2026",
+  "assets": {
+    "logo_hc": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/logohc-12.png?v=1776714172",
+    "logo_spekgen": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/SPEKGEN_LOGO_BLACK.png?v=1776714176",
+    "ticket_brandeado": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/HC_TICKET_VERONICA_v4_FINAL.jpg?v=1776714224"
+  },
+  "client": {
+    "name": "Healthy Chuchos",
+    "tagline": "Reporte Mes 1"
+  },
+  "period": {
+    "label": "19 Marzo – 19 Abril 2026",
+    "days": 30,
+    "month_number": 1,
+    "executive_headline": "Un resumen honesto de tu primer mes con SPEKGEN. A dónde se fue tu inversión, cómo se empezó a recuperar, y qué se hizo para generar más ventas en los próximos meses."
+  },
+  "investment": {
+    "title": "A dónde se fue tu dinero este mes",
+    "intro": "Tu inversión del mes se divide en el retainer, la infraestructura permanente de WhatsApp, los dos blasters, y el presupuesto publicitario de Meta.",
+    "breakdown": [
+      {
+        "label": "Retainer SPEKGEN",
+        "amount": "$7,500",
+        "desc": "Pago mensual por todo el trabajo del equipo (estrategia, contenido, ads, automatizaciones, soporte Shopify, reportes)."
+      },
+      {
+        "label": "API WhatsApp (infraestructura permanente)",
+        "amount": "$500",
+        "desc": "Cargo mensual recurrente por la API oficial de WhatsApp. Habilita TODO el canal: blasters, notificaciones automáticas, confirmaciones, bot con IA. Sin esta API, nada de eso corre."
+      },
+      {
+        "label": "2 Blasters WhatsApp",
+        "amount": "$332",
+        "desc": "Costo directo de los 2 envíos masivos del mes (viernes 20 y lunes 23 de marzo)."
+      },
+      {
+        "label": "Meta Ads (tu presupuesto publicitario)",
+        "amount": "$1,927",
+        "desc": "Lo que se gastó directo en Facebook e Instagram Ads. De los $4,000 asignados, solo se usó el 48% — el resto quedó resguardado para la segunda fase de validación."
+      }
+    ],
+    "total": {
+      "label": "Inversión total del mes",
+      "amount": "$10,259"
+    },
+    "budget_highlight": {
+      "label": "Presupuesto publicitario",
+      "used": "$1,927",
+      "total": "$4,000",
+      "pct_used": 48,
+      "remaining": "$2,073",
+      "note": "Solo se utilizó el 48% del presupuesto. Fue intencional — campaña en fase de validación desde el 10 de abril para probar creative antes de soltar budget completo."
+    }
+  },
+  "strategy": {
+    "title": "La estrategia: Organic First",
+    "body": "Al inicio del mes solo tenías contratadas 30 piezas orgánicas. La propuesta era construir marca primero, crear confianza, y después meter presupuesto publicitario. A mediados del mes se expandió el acuerdo a 30 orgánicos + 30 ads, y arrancó el setup técnico de Meta Ads. El lanzamiento real de campañas fue el 10 de abril.",
+    "timeline": [
+      {
+        "date": "19 Mar",
+        "event": "Arranque del retainer · solo orgánico contratado (30 piezas)"
+      },
+      {
+        "date": "20 Mar",
+        "event": "Primer WhatsApp Blaster enviado"
+      },
+      {
+        "date": "22 Mar",
+        "event": "Post de rebrand publicado · IG/FB"
+      },
+      {
+        "date": "23 Mar",
+        "event": "Website live · tracking completo · Segundo Blaster"
+      },
+      {
+        "date": "Mediados",
+        "event": "Se expande contrato a 30 orgánicos + 30 ads"
+      },
+      {
+        "date": "24 Mar",
+        "event": "Configuración de campañas en Business Manager (setup técnico)"
+      },
+      {
+        "date": "10 Abr",
+        "event": "Arranque real de campañas Meta Ads"
+      },
+      {
+        "date": "15 Abr",
+        "event": "Primera venta atribuida a Meta Ads (Janet · $898.60)"
+      },
+      {
+        "date": "17 Abr",
+        "event": "3 automatizaciones de Make salen en vivo"
+      },
+      {
+        "date": "18 Abr",
+        "event": "Segunda venta Meta+WhatsApp (Verónica · $2,501.10)"
+      },
+      {
+        "date": "19 Abr",
+        "event": "Cierre del mes 1 · este reporte"
+      }
+    ]
+  },
+  "sales": {
+    "title": "Ventas reales del mes",
+    "intro": "De todas las órdenes en Shopify, la mayoría fueron internas (stock personal, pruebas técnicas). Abajo solo las ventas reales — clientes de verdad.",
+    "orders": [
+      {
+        "order": "#1002",
+        "customer": "Erick Márquez",
+        "channel": "Pre-lanzamiento",
+        "amount": "$944",
+        "desc": "ArtriDog + OmegaDog · venta semilla"
+      },
+      {
+        "order": "#1009",
+        "customer": "Monse Alonzo",
+        "channel": "Stock personal",
+        "amount": "$1,566",
+        "desc": "4 productos · reabastecimiento"
+      },
+      {
+        "order": "#1028",
+        "customer": "WhatsApp Blaster",
+        "channel": "Blaster",
+        "amount": "$391",
+        "desc": "GastroDog · venta directa del blaster"
+      },
+      {
+        "order": "#1029",
+        "customer": "Local Zamora",
+        "channel": "Orgánico local",
+        "amount": "$381",
+        "desc": "DogRelax · boca a boca"
+      },
+      {
+        "order": "#1030",
+        "customer": "Janet Fomperosa",
+        "channel": "Meta Ads",
+        "amount": "$899",
+        "desc": "ArtriDog + GastroDog · atribuida a campaña"
+      },
+      {
+        "order": "#1031",
+        "customer": "Verónica Echeverri",
+        "channel": "Meta + WhatsApp",
+        "amount": "$2,501",
+        "desc": "6 ArtriDog + OmegaDog · ticket grande del mes"
+      }
+    ],
+    "total_generated": "$6,682",
+    "honest_note": "6 ventas reales que suman $6,682 MXN en el mes 1. Las dos más grandes (Janet + Verónica = $3,400) vinieron de Meta Ads en los últimos 9 días — confirma que las campañas arrancaron a convertir desde el primer intento."
+  },
+  "meta_ads": {
+    "title": "Meta Ads · ROI del presupuesto publicitario",
+    "intro": "La configuración técnica fue el 24 de marzo, pero las campañas reales corrieron desde el 10 de abril. En 9 días activos se generaron 2 ventas atribuidas directamente. Solo se utilizó el 48% del presupuesto de $4,000 en esta primera fase de validación.",
+    "campaign_started": "10 Abril 2026",
+    "days_active": "9 días",
+    "budget_used": "$1,927 / $4,000",
+    "budget_pct": 48,
+    "kpis": [
+      {
+        "label": "Inversión publicitaria",
+        "value": "$1,927",
+        "sub": "48% del budget asignado"
+      },
+      {
+        "label": "Impresiones",
+        "value": "15,970",
+        "sub": "Veces mostrados los anuncios"
+      },
+      {
+        "label": "Alcance",
+        "value": "10,245",
+        "sub": "Personas únicas que vieron los ads"
+      },
+      {
+        "label": "Clicks al link",
+        "value": "470",
+        "sub": "CTR 2.94% · sano para cold traffic"
+      },
+      {
+        "label": "Add to Cart",
+        "value": "23",
+        "sub": "Agregaron al carrito desde ads"
+      },
+      {
+        "label": "Checkouts iniciados",
+        "value": "16",
+        "sub": "Arrancaron la compra"
+      }
+    ],
+    "roi": {
+      "title": "ROI · Meta Ads",
+      "invested_label": "Lo que invertiste",
+      "invested_amount": "$1,927",
+      "generated_label": "Lo que se generó en ventas",
+      "generated_amount": "$3,400",
+      "roas": "1.76x",
+      "net_label": "Ganancia neta sobre inversión",
+      "net_amount": "+$1,473",
+      "note": "Dos ventas atribuidas directamente a Meta Ads: Janet Fomperosa ($898.60) y Verónica Echeverri ($2,501.10). Cada peso invertido regresó $1.76 en ventas durante los primeros 9 días."
+    },
+    "creatives": {
+      "title": "Los 7 ads ArtriDog que están corriendo ahora mismo",
+      "intro": "Después de los primeros días vimos que ArtriDog generaba el mayor tráfico e interés. Pivotamos: pausamos el resto y concentramos toda la producción en ArtriDog. Este es el batch que está activo hoy y el que está generando las ventas. Todos enlazan a healthychuchos.com/products/artridog.",
+      "ads": [
+        {
+          "code": "A1",
+          "product": "ArtriDog",
+          "product_color": "#42838F",
+          "title": "Monse MV — Storytelling",
+          "hook": "La Médica Veterinaria detrás de ArtriDog te platica por qué funciona",
+          "format": "Video · 60s · 992 impr",
+          "meta": "Hook con cara humana + autoridad MV",
+          "badge_label": "CTR",
+          "badge_value": "3.53%",
+          "thumb": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/monse_video_thumb_17c8af0e-2437-4307-a2f6-f8162c3ea269.jpg?v=1776715074"
+        },
+        {
+          "code": "A2",
+          "product": "ArtriDog",
+          "product_color": "#42838F",
+          "title": "Oferta V3 — 2 perros piso",
+          "hook": "Dos chuchos. Dos historias. Una misma necesidad",
+          "format": "Static 4:5 · 1,969 impr · Top delivery",
+          "meta": "Lifestyle dúo Golden + Bernese · oferta soft",
+          "badge_label": "Spend",
+          "badge_value": "$254",
+          "thumb": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/HC-AD-OFERTA-V3_2perros-piso_4x5_16446059-62c5-46d4-8881-c74ae6b7d4b1.png?v=1776715053"
+        },
+        {
+          "code": "A3",
+          "product": "ArtriDog",
+          "product_color": "#42838F",
+          "title": "Oferta V2 — 2 frascos Bernese",
+          "hook": "Razas grandes envejecen más rápido. Bernese, Golden, Labrador",
+          "format": "Static 4:5 · Pack 2 frascos",
+          "meta": "1 compra confirmada · CTR 5.73%",
+          "badge_label": "ROAS",
+          "badge_value": "37.95x",
+          "thumb": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/HC-AD-OFERTA-V2_2frascos-bernese_4x5_7524f0e3-d3fc-475c-b364-9385833d4d66.png?v=1776715045"
+        },
+        {
+          "code": "A4",
+          "product": "ArtriDog",
+          "product_color": "#42838F",
+          "title": "PS-S-V2 — 9 años cambia eso",
+          "hook": "¿Tu chucho de 9 años ya no es el mismo?",
+          "format": "Static 4:5 · 423 impr",
+          "meta": "Hook directo · desafío a 'ya está viejito'",
+          "badge_label": "CTR",
+          "badge_value": "4.26%",
+          "thumb": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/HC-AD-PS-S-V2_9anos-cambia-eso_4x5_05e11fd2-a54d-4c54-96be-c765cbc1d668.png?v=1776715070"
+        },
+        {
+          "code": "A5",
+          "product": "ArtriDog",
+          "product_color": "#42838F",
+          "title": "Historia — Arjun 15 años",
+          "hook": "Arjun tiene 15 años. Hoy necesita ayuda para levantarse",
+          "format": "Carrusel · 7 slides",
+          "meta": "Storytelling POV emocional · TOFU→MOFU",
+          "badge_label": "Formato",
+          "badge_value": "Hero",
+          "thumb": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/HC-019_S01_hook-arjun-15anos.png?v=1776715028"
+        },
+        {
+          "code": "A6",
+          "product": "ArtriDog",
+          "product_color": "#42838F",
+          "title": "Oferta V1 — 3 frascos podio",
+          "hook": "3 frascos. 3 meses de movilidad. Un solo pedido",
+          "format": "Static 4:5 · Pack 3 frascos (ahorro)",
+          "meta": "Hook más alto del batch completo",
+          "badge_label": "CTR",
+          "badge_value": "10.20%",
+          "thumb": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/HC-AD-OFERTA-V1_3frascos-podio_4x5_201df3c9-89e9-49f6-baf9-cd54532340a5.png?v=1776715039"
+        },
+        {
+          "code": "A7",
+          "product": "ArtriDog",
+          "product_color": "#42838F",
+          "title": "PS-C — Problem / Solution",
+          "hook": "¿Tu chucho ya no se levanta como antes?",
+          "format": "Carrusel · 4 slides",
+          "meta": "Problema → Mecanismo COX/LOX → Ingredientes → Resultado",
+          "badge_label": "Funnel",
+          "badge_value": "Edu",
+          "thumb": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/HC-AD-PS-C_S1_hook-rigidez_4x5_eef5d8f5-6d81-4e6c-91c5-abf411f8af12.png?v=1776715059"
+        }
+      ]
+    }
+  },
+  "organic_content": {
+    "title": "Contenido producido · el giro estratégico",
+    "intro": "El contrato original era 30 piezas orgánicas/mes. A mitad del mes detectamos algo importante: varios de los posts orgánicos que también montamos en Meta Ads tenían buen performance publicitario, pero la planeación del orgánico era muy TOFU (awareness). Para que Meta Ads convirtiera bien se necesitaban piezas BOFU. Ahí se expandió el entregable a 30 orgánicos + 30 ads = 60 piezas/mes. Este primer mes fue de transición y cerramos con 49 piezas.",
+    "kpis": [
+      {
+        "label": "Piezas totales del mes",
+        "value": "49",
+        "sub": "Mes de transición hacia 60/mes"
+      },
+      {
+        "label": "Orgánicas (SPEKGEN)",
+        "value": "21",
+        "sub": "Carruseles y posts individuales"
+      },
+      {
+        "label": "Ads Meta (SPEKGEN)",
+        "value": "19",
+        "sub": "Creative publicitario producido"
+      },
+      {
+        "label": "Reels del equipo HC",
+        "value": "9",
+        "sub": "Monse · contenido espontáneo"
+      }
+    ],
+    "pivot_explainer": {
+      "title": "Organic (TOFU) + Meta Ads (BOFU) · una sola máquina de contenido",
+      "points": [
+        {
+          "label": "Orgánico · TOFU",
+          "desc": "Las redes orgánicas se enfocan en dar a conocer la marca, educar al dueño y generar confianza. Tono informativo, emocional, de comunidad — no se pide compra directa."
+        },
+        {
+          "label": "Meta Ads · BOFU",
+          "desc": "Los anuncios se enfocan en cerrar la venta: oferta clara, urgencia, beneficio específico. Ese cambio de tono requiere piezas creativas distintas a las orgánicas."
+        },
+        {
+          "label": "El bonus: intercambio de piezas",
+          "desc": "Muchas piezas BOFU de Meta Ads también se pueden postear en orgánico, y posts orgánicos con buen hook se convierten en ads. Más valor por creativo producido."
+        }
+      ],
+      "targets": {
+        "contracted": "30 orgánicas + 30 ads = 60 piezas/mes",
+        "this_month": "49 piezas (mes de transición)",
+        "next_month": "60 piezas (meta operativa)"
+      }
+    },
+    "top_posts": [
+      {
+        "date": "22 Mar",
+        "format": "Post",
+        "author": "SPEKGEN",
+        "desc": "Rebrand oficial de Healthy Chuchos",
+        "engagement": "37 likes · 2 comentarios"
+      },
+      {
+        "date": "05 Abr",
+        "format": "Reel",
+        "author": "Monse",
+        "desc": "Un pequeño resumen de cómo llegamos aquí",
+        "engagement": "22 likes · 12 comentarios"
+      },
+      {
+        "date": "27 Mar",
+        "format": "Reel",
+        "author": "Monse",
+        "desc": "Argos Pets Veterinaria",
+        "engagement": "22 likes · 6 comentarios"
+      }
+    ],
+    "note": "Los números absolutos de engagement son bajos porque es el primer mes de una cuenta nueva. Lo importante: la máquina de contenido quedó corriendo a dos carriles (orgánico + ads) y el output del mes 2 en adelante será de 60 piezas — 100% más producción sin costo adicional al retainer."
+  },
+  "whatsapp": {
+    "title": "WhatsApp · blasters + conversaciones cerradas",
+    "blaster": {
+      "contacts": 33,
+      "sales": 1,
+      "desc": "Se envió a 33 contactos de la base existente. Se cerró 1 venta directa (orden #1028). El blaster cumplió su función de reactivación — no es canal de adquisición nueva."
+    },
+    "blaster_roi": {
+      "title": "ROI · WhatsApp Blaster",
+      "invested_label": "Inversión en los 2 blasters",
+      "invested_amount": "$332",
+      "generated_label": "Ventas generadas",
+      "generated_amount": "$391",
+      "roas": "1.18x",
+      "net_label": "Ganancia neta",
+      "net_amount": "+$59",
+      "note": "Los $332 son el costo directo de los 2 envíos. Generaron 1 venta directa ($391). Cada peso regresó $1.18. Nota: la API de WhatsApp ($500) es infraestructura permanente separada — habilita mucho más que blasters."
+    },
+    "leads": [
+      {
+        "name": "Araceli Morantes",
+        "phone": "+52 1 56 1389 0491",
+        "source": "Meta Ads → Widget WhatsApp"
+      },
+      {
+        "name": "Alejandro Ángeles",
+        "phone": "+52 1 442 328 3382",
+        "source": "Meta Ads → Widget WhatsApp"
+      }
+    ]
+  },
+  "delivered": {
+    "title": "Qué entregamos este mes",
+    "intro": "Del contrato y de más. El contrato inicial era 30 piezas orgánicas. A mediados de mes se expandió a 30 orgánicos + 30 ads.",
+    "contract_items": [
+      {
+        "item": "30 piezas de contenido orgánico",
+        "status": "30 / 30",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "21 del equipo SPEKGEN + 9 reels de Monse."
+      },
+      {
+        "item": "30 ads en Meta Ads",
+        "status": "19 / 30",
+        "bar_class": "warn",
+        "pct": 63,
+        "note": "Arranque con presupuesto conservador — se completan en mes 2."
+      },
+      {
+        "item": "Website live en Shopify",
+        "status": "Live 23 Mar",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "Con tracking completo (Pixel, CAPI, GA4, Clarity)."
+      },
+      {
+        "item": "PDPs de los 4 productos",
+        "status": "4 / 4",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "ArtriDog · DogRelax · GastroDog · OmegaDog."
+      },
+      {
+        "item": "2 Blasters de WhatsApp",
+        "status": "2 / 2",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "Envíos del 20 y 23 de marzo."
+      }
+    ],
+    "value_adds": {
+      "title": "Lo que entregamos de más (sin costo extra)",
+      "intro": "Además del contrato, construimos infraestructura operativa que fortalece tu negocio hacia adelante:",
+      "list": [
+        {
+          "title": "Sistema de scraping de contenido",
+          "desc": "Infraestructura propia que monitorea diario la competencia de salud animal (ads de Meta + orgánico). Nos da visibilidad de qué hooks, formatos y ofertas están funcionando afuera para alimentar la estrategia creativa."
+        },
+        {
+          "title": "Notificación automática de nuevo pedido al equipo HC",
+          "desc": "Cada orden nueva en Shopify dispara una notificación instantánea con datos del pedido y status (pagado o pendiente). Nadie tiene que monitorear Shopify a mano."
+        },
+        {
+          "title": "Notificación automática de pedido pagado al equipo HC",
+          "desc": "Cuando una orden queda confirmada como pagada se dispara una segunda notificación — el pedido entra directo al flujo de fulfillment sin fricción."
+        },
+        {
+          "title": "Generación automática de guías vía Skydropx",
+          "desc": "Cada pedido pagado genera automáticamente la guía de envío aplicando las reglas de medidas y pesos. Cero captura manual — la guía queda lista para pegar a la caja."
+        },
+        {
+          "title": "Ticket de compra brandeado",
+          "desc": "Diseño del comprobante con la identidad visual oficial de Healthy Chuchos — listo para imprimir y meter en cada paquete como punto de contacto con el cliente."
+        },
+        {
+          "title": "Generación automática del ticket brandeado",
+          "desc": "Cada orden pagada genera automáticamente el ticket brandeado con los datos del pedido listo para imprimir. Sin tocar plantillas ni llenar datos."
+        },
+        {
+          "title": "Portal de contenido (Content Hub)",
+          "desc": "Dashboard donde Monse aprueba, edita o rechaza cada post antes de que se publique. Reemplaza el ida-y-vuelta por WhatsApp."
+        },
+        {
+          "title": "Sistema de Outreach B2B + D2C",
+          "desc": "Sistema completo para prospección de clínicas veterinarias y petshops por email y WhatsApp — templates listos y automatización."
+        }
+      ]
+    },
+    "fulfillment_flow": {
+      "title": "El flujo de pedido · de la venta al empaque sin fricción",
+      "intro": "Así se ve el proceso end-to-end cuando un cliente compra — todo automático, sin que nadie del equipo tenga que capturar datos o generar guías manualmente.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Venta en Shopify",
+          "desc": "El cliente compra desde el sitio. Orden creada automáticamente en Shopify."
+        },
+        {
+          "num": "02",
+          "title": "Notificación: pedido recibido",
+          "desc": "El equipo HC recibe notificación instantánea con datos del pedido + status."
+        },
+        {
+          "num": "03",
+          "title": "Pago confirmado",
+          "desc": "Cuando Shopify marca la orden como pagada se dispara segunda notificación."
+        },
+        {
+          "num": "04",
+          "title": "Guía Skydropx generada",
+          "desc": "El sistema arma automáticamente la guía de envío con medidas y peso correctos."
+        },
+        {
+          "num": "05",
+          "title": "Ticket brandeado listo",
+          "desc": "Se genera el comprobante con branding HC listo para imprimir y empacar."
+        }
+      ]
+    },
+    "automations": {
+      "title": "Ecosistema de automatización · 13 workflows activos",
+      "intro": "Estos son los workflows que corren en piloto automático hoy mismo. Cada uno dispara solo cuando toca — sin que nadie del equipo tenga que acordarse. El sistema vive 24/7 en la nube y escala sin supervisión.",
+      "stats": [
+        {
+          "label": "Categorías",
+          "value": "5"
+        },
+        {
+          "label": "Workflows live",
+          "value": "13"
+        },
+        {
+          "label": "Status sistema",
+          "value": "Activo"
+        }
+      ],
+      "categories": [
+        {
+          "name": "Marketing Automation",
+          "accent": "teal",
+          "workflows": [
+            "Healthy Chuchos — bienvenida",
+            "Onboarding 30 días",
+            "Programa de Constancia"
+          ]
+        },
+        {
+          "name": "NPS Tracking",
+          "accent": "navy",
+          "workflows": [
+            "NPS 2do pedido"
+          ]
+        },
+        {
+          "name": "Referral System (RAF)",
+          "accent": "orange",
+          "workflows": [
+            "Generación de código de referidos"
+          ]
+        },
+        {
+          "name": "Shopify Triggers",
+          "accent": "teal",
+          "workflows": [
+            "Ciclo 30 días de recompra",
+            "Carrito abandonado Shopify",
+            "Orden recibida",
+            "Remove from 30-day cycle",
+            "Solicitud de review",
+            "Survey Distribuidor"
+          ]
+        },
+        {
+          "name": "Social Media Auto",
+          "accent": "navy",
+          "workflows": [
+            "Respuesta a publicaciones",
+            "ManyChat campaigns"
+          ]
+        }
+      ]
+    }
+  },
+  "next_month": {
+    "eyebrow": "Siguientes pasos",
+    "title": "Abril → Mayo · ejecutar sobre lo construido",
+    "intro": "La infraestructura del mes 1 ya quedó montada. La máquina está lista. Lo que sigue no es construir más cosas — es meterle volumen a los canales que ya funcionan y medir qué convierte mejor.",
+    "pillars": [
+      {
+        "num": "01",
+        "accent": "orange",
+        "tag": "PDPs V2 · A/B test",
+        "title": "Una PDP V2 por producto — funnel vertical tipo Bloom",
+        "desc": "Esta semana sale la V2 de cada PDP con un layout de funnel vertical (referencia: Bloom). El A/B test corre contra las PDPs actuales usando los mismos ads activos de Meta, 7-14 días de prueba, y se deja como oficial la que gane. En paralelo ya tenemos en mira otras variaciones (quizzes, configuradores) — esta versión primero, luego iteramos.",
+        "items": [
+          "Bloom vertical funnel por producto",
+          "A/B test 7-14 días contra PDP actual",
+          "Winner oficial al final del periodo",
+          "Siguiente ola: quizzes + variantes"
+        ],
+        "preview": {
+          "image": "https://cdn.shopify.com/s/files/1/0814/8300/6209/files/bloom_pdp_v2_boceto.jpg?v=1776722946",
+          "caption": "Boceto ArtriDog V2 · layout en progreso, todavía se pulen imágenes"
+        }
+      },
+      {
+        "num": "02",
+        "accent": "teal",
+        "tag": "Motor de contenido M2",
+        "title": "60 piezas/mes · 30 orgánicas + 30 Meta Ads",
+        "desc": "El pipeline ya está corriendo y este mes cerramos con 49 piezas de transición. En mayo se activa el output completo del entregable: 30 orgánicas para construir marca y 30 creativos para Meta Ads. Mismo retainer, 100% más producción — y las piezas se intercambian entre los dos carriles para multiplicar valor por creativo.",
+        "items": [
+          "30 piezas orgánicas · TOFU / marca",
+          "30 creativos Meta Ads · BOFU / conversión",
+          "Intercambio orgánico ↔ ads (reutilización)",
+          "Foco ArtriDog · replicar a los otros 3 productos"
+        ]
+      },
+      {
+        "num": "03",
+        "accent": "navy",
+        "tag": "Sistema de Outreach",
+        "title": "Activar Outreach B2B + D2C · canal de leads propio",
+        "desc": "El sistema de Outreach ya está construido: templates listos, scrapers corriendo, infraestructura de envío y de réplicas. Lo que sigue es prenderlo en mayo para que empiece a alimentar el funnel con leads propios — clínicas veterinarias, petshops y dueños calificados — sin depender únicamente de Meta Ads.",
+        "items": [
+          "Arrancar envíos programados",
+          "B2B: clínicas + petshops",
+          "D2C: dueños calificados (razas senior)",
+          "Alimenta WhatsApp + Shopify + retargeting Meta"
+        ]
+      }
+    ],
+    "closing": "Los blasters de WhatsApp los guardamos por ahora — el volumen de contactos todavía es bajo y no tiene sentido otro envío hasta que Outreach y Meta Ads llenen la base. Todo lo demás son ejecuciones sobre infraestructura que ya existe."
+  },
+  "footer": {
+    "tagline": "Reporte generado por SPEKGEN · 20 Abril 2026 · Para uso exclusivo de Healthy Chuchos"
+  }
+}

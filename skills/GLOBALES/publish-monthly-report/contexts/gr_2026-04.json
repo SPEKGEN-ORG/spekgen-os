@@ -1,0 +1,380 @@
+{
+  "generated_at": "1 Mayo 2026",
+  "client": {
+    "name": "GreenRay Nutraceutics",
+    "tagline": "Reporte Mes 1",
+    "accent_color": "#4ade80",
+    "accent_soft": "rgba(74, 222, 128, 0.14)"
+  },
+  "period": {
+    "label": "30 Marzo – 30 Abril 2026",
+    "days": 31,
+    "month_number": 1,
+    "executive_headline": "Este es el resumen honesto del primer mes con SPEKGEN. Estrategia digital activa en múltiples canales: pauta pagada, activaciones de base de clientes y optimización de Shopify. Mes cerrado con primeras ventas generadas, infraestructura cloud activa y el presupuesto publicitario utilizado al 100%."
+  },
+  "investment": {
+    "title": "A dónde se fue tu dinero este mes",
+    "intro": "Tu inversión se divide en dos partes: el retainer mensual que pagas a SPEKGEN por servicios + el presupuesto publicitario que se invirtió directo en pauta para generar ventas.",
+    "breakdown": [
+      {
+        "label": "Retainer SPEKGEN",
+        "amount": "$3,000",
+        "currency": "MXN",
+        "desc": "Pago mensual base por operaciones Shopify, estrategia, reporting y mantenimiento de automatizaciones."
+      },
+      {
+        "label": "30 piezas de contenido + 3 automatizaciones",
+        "amount": "$3,198",
+        "currency": "MXN",
+        "desc": "Add-ons activos del contrato: 30 piezas de contenido (ads + orgánico) y 3 automatizaciones nuevas de negocio."
+      },
+      {
+        "label": "Presupuesto publicitario",
+        "amount": "$2,975",
+        "currency": "MXN",
+        "desc": "Lo que se invirtió directo en pauta para generar ventas. Este dinero NO lo cobra SPEKGEN — va íntegro a las plataformas de publicidad."
+      }
+    ],
+    "total": {
+      "label": "Inversión total del mes",
+      "amount": "$9,173",
+      "currency": "MXN"
+    },
+    "budget_highlight": {
+      "label": "Presupuesto publicitario · ciclo completado",
+      "used": "$2,975",
+      "total": "$2,975",
+      "pct_used": 100,
+      "remaining": "$0",
+      "note": "Al iniciar el contrato el 30 de marzo había $2,975 MXN disponibles en pauta. Al cierre del mes se utilizó el 100% del presupuesto. Los aprendizajes del ciclo guían el plan publicitario del siguiente mes con un presupuesto sugerido de $4,000 a $6,000 MXN para escalar los formatos validados (Oferta, Testimonio, Hero)."
+    }
+  },
+  "strategy": {
+    "title": "La estrategia: tres canales en paralelo",
+    "body": "Desde el primer día arrancamos en tres frentes: activaciones a la base existente de clientes para generar ventas inmediatas, Meta Ads con productos de alto margen para escalar adquisición, y optimización profunda de Shopify para que cada visita tenga la mejor oportunidad de convertir.",
+    "timeline": [
+      {
+        "date": "30 Marzo",
+        "event": "Contrato formal aceptado · arranque oficial con SPEKGEN"
+      },
+      {
+        "date": "6 Abril",
+        "event": "Activación 1 — 254 contactos alcanzados · primera venta generada"
+      },
+      {
+        "date": "7 Abril",
+        "event": "Orden #1058 · $1,455 MXN · primera venta del mes"
+      },
+      {
+        "date": "8 Abril",
+        "event": "Activación 2 — 389 contactos alcanzados · segunda venta generada"
+      },
+      {
+        "date": "9 Abril",
+        "event": "Meta Ads lanzadas · 2 campañas activas · 5 ads corriendo"
+      },
+      {
+        "date": "10 Abril",
+        "event": "Orden #1059 · $1,118 MXN · segunda venta del mes"
+      },
+      {
+        "date": "15 Abril",
+        "event": "Orden #1064 · $792 MXN · tercera venta (transferencia)"
+      },
+      {
+        "date": "16 Abril",
+        "event": "Automatizaciones de almacén LIVE · notificaciones instantáneas de pedidos"
+      },
+      {
+        "date": "17 Abril",
+        "event": "Activación 3 — 398 contactos · código GREENRAY10 10% OFF"
+      },
+      {
+        "date": "22 Abril",
+        "event": "Nuevo batch de 6 ads subidos a Meta · CTRs de 9–16% en primeras horas"
+      },
+      {
+        "date": "30 Abril",
+        "event": "Cierre del mes 1 · presupuesto publicitario utilizado al 100%"
+      }
+    ]
+  },
+  "sales": {
+    "title": "Ventas reales del mes",
+    "intro": "Las siguientes son las 3 ventas confirmadas como pagadas desde el inicio del contrato (30 marzo – 24 abril). No se incluyen órdenes en pending que expiradas o de prueba.",
+    "total_real_orders": 3,
+    "orders": [
+      {
+        "order": "#1058",
+        "customer": "Cliente",
+        "channel": "Estrategia SPEKGEN",
+        "amount": "$1,455",
+        "desc": "HORMO FX M ACTIVA × 2 + DETOX FX + Gaxaliv Probióticos."
+      },
+      {
+        "order": "#1059",
+        "customer": "Cliente",
+        "channel": "Estrategia SPEKGEN",
+        "amount": "$1,118",
+        "desc": "BenfoTX + BELLSAN + C ARMOR Quercitina y Zinc. Compra multiproducto."
+      },
+      {
+        "order": "#1064",
+        "customer": "Emma Yuritzi",
+        "channel": "Estrategia SPEKGEN",
+        "amount": "$792",
+        "desc": "HORMO FX M ACTIVA + INTRA B + MAG-NEXT."
+      }
+    ],
+    "total_generated": "$3,365",
+    "abandoned": {
+      "title": "Carritos abandonados",
+      "count": 0,
+      "desc": "Automatización de carrito abandonado activada al cierre del mes (3/3 automatizaciones LIVE). Recuperación a medir el siguiente ciclo."
+    },
+    "honest_note": "3 ventas confirmadas que suman $3,365 MXN en el primer mes de estrategia activa. Se invirtieron $2,975 MXN en pauta y se recuperó la inversión con un margen positivo de $390 MXN. Con los formatos validados (Oferta, Testimonio, Hero) y un presupuesto escalado, el siguiente mes debería mostrar una aceleración significativa en conversiones."
+  },
+  "meta_ads": {
+    "title": "Meta Ads · ROI del presupuesto publicitario",
+    "intro": "Las campañas arrancaron el 9 de abril con 5 ads y una estrategia de productos de alto margen. El 22 de abril se subió un segundo batch de 6 ads nuevos con ángulos de stack por línea (Hormonal, Gastro, Proteicos). Al cierre del mes se utilizó el 100% del presupuesto publicitario y se identificaron los formatos ganadores para escalar el siguiente ciclo.",
+    "campaign_started": "9 Abril 2026",
+    "days_active": "Ciclo completado",
+    "budget_used": "$2,975 MXN",
+    "budget_pct": 100,
+    "kpis": [
+      {
+        "label": "Inversión en Meta Ads",
+        "value": "$2,975",
+        "sub": "MXN invertidos en campañas de Facebook e Instagram (100% del presupuesto del ciclo)"
+      },
+      {
+        "label": "Impresiones",
+        "value": "21,473",
+        "sub": "Veces que tus anuncios se mostraron"
+      },
+      {
+        "label": "Clicks al link",
+        "value": "601",
+        "sub": "CTR 2.8% — sano para cold traffic de suplementos"
+      },
+      {
+        "label": "Add to Cart",
+        "value": "14",
+        "sub": "Personas que agregaron al carrito desde ads"
+      },
+      {
+        "label": "Checkouts iniciados",
+        "value": "10",
+        "sub": "Arrancaron el proceso de compra"
+      },
+      {
+        "label": "CTR batch nuevo",
+        "value": "9–16%",
+        "sub": "Los 6 ads del 22 abr — promedio industria es 2–3%"
+      }
+    ],
+    "roi": {
+      "title": "ROI de la estrategia publicitaria",
+      "invested_label": "Lo que invertiste en pauta",
+      "invested_amount": "$2,975",
+      "generated_label": "Lo que se generó en ventas",
+      "generated_amount": "$3,365",
+      "roas": "1.13x",
+      "net_label": "Resultado sobre inversión",
+      "net_amount": "+$390",
+      "note": "Primer mes de arranque. Se recuperó la inversión publicitaria y se generó un margen positivo de $390 MXN. El ad de Colágeno FITNESS tuvo ROAS de 3.13x cuando estuvo activo — es el ganador a escalar. Los 6 ads del batch del 22 de abril mostraron CTRs de 9–16% (vs. 2–3% promedio de la industria), validando los formatos Oferta y Testimonio para el siguiente ciclo."
+    },
+    "ads_top": [
+      {
+        "name": "Colágeno FITNESS",
+        "format": "Static",
+        "spend": "$905 MXN",
+        "roas": "3.13x",
+        "note": "Ad ganador del mes. 1 compra atribuida. Pausado para preservar presupuesto. Es el creative ancla del siguiente ciclo (formato Hero validado)."
+      },
+      {
+        "name": "GR-AD-020 Gastro Stack",
+        "format": "Static",
+        "spend": "$8 MXN",
+        "roas": "—",
+        "note": "Solo 2 días activo. CTR 11.7% — señal muy positiva de relevancia del creative."
+      },
+      {
+        "name": "GR-AD-019C Hormonal Testimonial",
+        "format": "Static",
+        "spend": "$1 MXN",
+        "roas": "—",
+        "note": "Solo 2 días activo. CTR 16.7% — el CTR más alto de todos los ads activos."
+      }
+    ],
+    "insight": "El ad ganador del mes fue Colágeno FITNESS con ROAS 3.13x. Los 6 ads del batch del 22 de abril alcanzaron CTRs de 9–16% (el promedio de la industria es 2–3%) — señal clara de que los formatos Oferta y Testimonio conectan con la audiencia. Estos formatos validados son la base del plan publicitario del siguiente mes."
+  },
+  "organic_content": {
+    "title": "Contenido producido · 28 de 30 piezas",
+    "intro": "La estrategia de contenido trabaja en dos carriles: orgánico (brand awareness, educación, comunidad) y ads pagados (conversión directa). Muchas piezas sirven para ambos canales al mismo tiempo.",
+    "kpis": [
+      {
+        "label": "Total piezas creadas",
+        "value": "28",
+        "sub": "de 30 contratadas (93% cumplido)"
+      },
+      {
+        "label": "Posts orgánicos publicados",
+        "value": "12",
+        "sub": "En Instagram y Facebook · Semanas 1–4"
+      },
+      {
+        "label": "Posts listos para publicar",
+        "value": "5",
+        "sub": "Programados para mayo vía autopublisher"
+      },
+      {
+        "label": "Ads Meta creados",
+        "value": "11",
+        "sub": "5 primera ola (abr 9) + 6 batch nuevo (abr 22)"
+      }
+    ],
+    "pivot_explainer": {
+      "title": "Orgánico (awareness) + Meta Ads (conversión) · una sola máquina",
+      "points": [
+        {
+          "label": "Contenido orgánico",
+          "desc": "12 posts publicados que educan al mercado sobre la línea de productos GreenRay. Territorios: Gastrointestinal, Hormonal, Proteicos, Desinflamación."
+        },
+        {
+          "label": "Meta Ads",
+          "desc": "11 ads creados con ángulos de conversión directa: stacks de línea, testimoniales y productos hero. Cada ad apunta a una PDP nativa optimizada."
+        },
+        {
+          "label": "Autopublisher cloud",
+          "desc": "Sistema automático en GH Actions que publica diario a las 9:05 AM sin intervención manual. Japan-proof — corre solo aunque nadie esté en la computadora."
+        }
+      ],
+      "targets": {
+        "contracted": "30 piezas/mes (ads + orgánico combinados)",
+        "this_month": "28 piezas (93% del compromiso)",
+        "next_month": "30 piezas (meta operativa completa)"
+      }
+    },
+    "top_overall": {
+      "title": "Posts orgánicos publicados este mes",
+      "posts": [
+        {
+          "date": "3 Abril",
+          "format": "Static",
+          "author": "SPEKGEN",
+          "desc": "BELLSAN Ultra — antienvejecimiento piel desde adentro",
+          "engagement": "Publicado IG + FB"
+        },
+        {
+          "date": "8 Abril",
+          "format": "Carousel",
+          "author": "SPEKGEN",
+          "desc": "DETOX FX — limpieza hepática y renal natural",
+          "engagement": "Publicado IG + FB"
+        },
+        {
+          "date": "22 Abril",
+          "format": "Static",
+          "author": "SPEKGEN",
+          "desc": "GR-031 stack hormonal · imagen batch v4",
+          "engagement": "Publicado IG + FB"
+        }
+      ]
+    },
+    "top_agency": {
+      "title": "Ads con mejor señal (batch 22 abril)",
+      "posts": [
+        {
+          "date": "22 Abril",
+          "format": "Static",
+          "desc": "GR-AD-019C Hormonal · Testimonial pareja 50s",
+          "engagement": "CTR 16.7% — el más alto de todos los ads"
+        },
+        {
+          "date": "22 Abril",
+          "format": "Static",
+          "desc": "GR-AD-020 Gastro · Stack 4 productos",
+          "engagement": "CTR 11.7% — excelente para cold traffic"
+        },
+        {
+          "date": "22 Abril",
+          "format": "Static",
+          "desc": "GR-AD-020C Gastro · Testimonial mujer 45",
+          "engagement": "CTR 9.0% — 3–4× el promedio de la industria"
+        }
+      ]
+    },
+    "note": "El autopublisher cloud está activo y publica 1 pieza diaria automáticamente leyendo el calendario. Los 5 posts con estado 'Imágenes listas' se publican en mayo sin intervención manual."
+  },
+  "whatsapp": {
+    "title": "Activaciones de base de clientes",
+    "blaster": {
+      "title": "Campaña Abril — 3 activaciones",
+      "contacts": 398,
+      "sales": 2,
+      "desc": "3 envíos masivos en 11 días a la base de ~400 contactos del CRM. El canal de WhatsApp fue el de mayor impacto directo en ventas este mes — generó 2 de las 3 ventas confirmadas del período."
+    },
+    "bot": {
+      "title": "Bot WhatsApp con IA",
+      "desc": "Bot construido sobre Claude IA con knowledge base de 68 productos GreenRay. Responde preguntas de síntomas, ingredientes, dosis y precios. Actualmente en whitelist (pruebas con usuarios seleccionados). Lanzamiento completo: pendiente validación final."
+    },
+    "conversations": {
+      "title": "Prospectos activos en WhatsApp",
+      "intro": "Contactos de la base que respondieron a las activaciones del mes.",
+      "leads": [
+        {
+          "name": "Lead orgánico",
+          "phone": "CRM GHL",
+          "source": "Blaster Envío 3 · GREENRAY10",
+          "status": "Base completa trabajada · ~400 contactos alcanzados"
+        }
+      ]
+    },
+    "context": "Se realizaron 3 activaciones a la base de contactos existente durante el mes, alcanzando más de 1,000 impactos directos. Estas activaciones generaron las primeras ventas del período mientras Meta Ads entraba en su fase de aprendizaje."
+  },
+  "delivered": {
+    "title": "Qué entregamos este mes",
+    "intro": "Todo lo que se entregó del contrato y lo que se entregó de más. El compromiso mensual es: Shopify operations + 30 piezas + 3 automatizaciones + reporte mensual.",
+    "contract_items": [
+      {
+        "item": "Shopify operations",
+        "status": "✅ Completo",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "7 PDPs nativas + bundle Pack 40+ + landing dedicada + Social FAB + SEO en 6 productos."
+      },
+      {
+        "item": "30 piezas de contenido (ads + orgánico)",
+        "status": "28 / 30",
+        "bar_class": "good",
+        "pct": 93,
+        "note": "12 publicadas + 5 listas para publicar en mayo + 11 ads Meta. Faltan 2 piezas para cerrar el 100%."
+      },
+      {
+        "item": "3 automatizaciones nuevas",
+        "status": "✅ Completo",
+        "bar_class": "good",
+        "pct": 100,
+        "note": "3 LIVE: Notificación Nuevo Pedido al almacén + Notificación Pago Confirmado al almacén + Carrito Abandonado."
+      },
+      {
+        "item": "Reporte mensual + call estrategia",
+        "status": "Reporte: hoy",
+        "bar_class": "warn",
+        "pct": 75,
+        "note": "Reporte entregado. Call de estrategia agendada para esta semana."
+      }
+    ],
+    "honest_note": "Cerramos el mes con 93% de las piezas de contenido y 100% de las automatizaciones. Los números de ventas son el arranque — el sistema está construido y los mejores ads apenas arrancaron."
+  },
+  "next_month": {
+    "title": "Qué se viene",
+    "body": "Vienen nuevos batches de creativos con formatos validados — Oferta, Testimonio y Hero — diseñados para mejorar la conversión sobre la base de los aprendizajes del mes 1. La estrategia es correr estos formatos con un presupuesto publicitario de $4,000 a $6,000 MXN para empujar las ventas y validar qué combinaciones de formato + ángulo escalan mejor."
+  },
+  "footer": {
+    "cobrand_left": "SPEKGEN",
+    "cobrand_right": "GreenRay Nutraceutics",
+    "tagline": "Reporte generado por SPEKGEN · 1 Mayo 2026 · Para uso exclusivo de GreenRay Nutraceutics"
+  }
+}

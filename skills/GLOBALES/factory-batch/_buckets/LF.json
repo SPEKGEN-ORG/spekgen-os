@@ -1,0 +1,81 @@
+{
+  "client": "LF",
+  "client_name": "LO FITNESS",
+  "ad_account": "act_542994632175434",
+  "page_id": "439469342587050",
+  "instagram_user_id": "17841463093393396",
+  "pixel_id": "1551281025566727",
+  "shop_url": "https://lofitness.club",
+  "pricing_reference_xlsx": "LF - LO FITNESS/LF - 02. PRODUCTOS/00. PRODUCT LOG GLOBAL/LF_PRICING_REFERENCE.xlsx",
+  "pricing_mechanic": {
+    "pack_2_discount_pct": 10,
+    "pack_4_discount_pct": 15,
+    "applies_to": "singles",
+    "kits_have_fixed_price": true
+  },
+  "split_pct": {
+    "OFFER": 50,
+    "LUPITA+AUTHORITY": 27,
+    "PROBLEM-SOLUTION": 13,
+    "WILDCARD": 10
+  },
+  "buckets": {
+    "OFFER": {
+      "label": "Offer puro",
+      "color": "#059669",
+      "destination_adset": "A_KIT_OFFERS",
+      "default_concept": "Bundle Pack 2/4 visual editorial product hero, sin persona"
+    },
+    "LUPITA+OFFER": {
+      "label": "Lupita + Offer",
+      "color": "#7C3AED",
+      "destination_adset": "C_LUPITA_AUTHORITY",
+      "default_concept": "Lupita lifestyle + offer fix + identity lock",
+      "subset_of": "OFFER",
+      "counts_toward_split": "OFFER"
+    },
+    "LUPITA+AUTHORITY": {
+      "label": "Lupita Authority",
+      "color": "#0EA5E9",
+      "destination_adset": "C_LUPITA_AUTHORITY",
+      "default_concept": "Lupita educativo sin offer, brand-build"
+    },
+    "PROBLEM-SOLUTION": {
+      "label": "Problem-Solution",
+      "color": "#F59E0B",
+      "destination_adset": "B_PROBLEM_SOLUTION",
+      "default_concept": "Hook problema agudo + offer fix"
+    },
+    "WILDCARD": {
+      "label": "Wildcard",
+      "color": "#DC2626",
+      "destination_adset": "D_WILDCARDS",
+      "default_concept": "Disrupción visual (Sneaky Hook native UI mocks, etc.) — ratio 70/30 Brain"
+    }
+  },
+  "adsets": {
+    "A_KIT_OFFERS": "120244794416320731",
+    "B_PROBLEM_SOLUTION": "120244794420430731",
+    "C_LUPITA_AUTHORITY": "120244794420800731",
+    "D_WILDCARDS": "120244794421490731",
+    "SCALE_BROAD_MX_25-65": "120244794377170731"
+  },
+  "campaigns": {
+    "LF-TESTING-MAY26": "120244794415860731",
+    "LF-SCALE-MAY26": "120244794376200731"
+  },
+  "calibration": {
+    "aov_30d": 1230,
+    "mc_pct": 0.47,
+    "breakeven_cpa": 578,
+    "breakeven_roas": 2.13,
+    "cpa_target": 700,
+    "roas_target": 2.5
+  },
+  "out_of_stock_excluded": ["Oceane", "Fitbar", "Hidronex Aqua Cell", "PH Detox"],
+  "person_identity_lock": {
+    "name": "Lupita Orejel",
+    "reference_image": "Lupita_identity.webp",
+    "brand_voice_doc": "LF - LO FITNESS/.claude/brand-voice-guidelines.md"
+  }
+}

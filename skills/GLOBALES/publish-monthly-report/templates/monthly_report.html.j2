@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ client.name }} — Reporte {{ period.label }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  #spekgen-prospect-wrap {
+    --bg: #0a0a0f;
+    --bg-2: #13131c;
+    --bg-3: #1c1c28;
+    --border: #2a2a38;
+    --border-strong: #3d3d50;
+    --text: #ffffff;
+    --text-dim: #d8d8e2;
+    --text-mute: #9a9aac;
+    --accent: {{ client.accent_color | default('#f59e0b') }};
+    --accent-soft: {{ client.accent_soft | default('rgba(245, 158, 11, 0.14)') }};
+    --spekgen: #a78bfa;
+    --spekgen-soft: rgba(167, 139, 250, 0.12);
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #fb7185;
+    --info: #60a5fa;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+  }
+
+  :where(#spekgen-prospect-wrap *) { margin: 0; padding: 0; box-sizing: border-box; }
+  :where(#spekgen-prospect-wrap ul, #spekgen-prospect-wrap ol) { list-style: none; }
+  :where(#spekgen-prospect-wrap p,
+         #spekgen-prospect-wrap div,
+         #spekgen-prospect-wrap span,
+         #spekgen-prospect-wrap li,
+         #spekgen-prospect-wrap td,
+         #spekgen-prospect-wrap th,
+         #spekgen-prospect-wrap h1,
+         #spekgen-prospect-wrap h2,
+         #spekgen-prospect-wrap h3,
+         #spekgen-prospect-wrap h4) { color: var(--text); font-family: inherit; }
+  :where(#spekgen-prospect-wrap a) { color: var(--text-dim); text-decoration: none; }
+  :where(#spekgen-prospect-wrap a:hover) { color: var(--text); }
+
+  .spk-mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+
+  /* Container */
+  .spk-report {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+
+  /* HERO */
+  .spk-hero {
+    padding: 56px 40px;
+    border-radius: 20px;
+    background: linear-gradient(140deg, var(--bg-2) 0%, var(--bg-3) 100%);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .spk-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle at center, var(--accent-soft) 0%, transparent 70%);
+    opacity: 0.8;
+    pointer-events: none;
+  }
+  .spk-cobrand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 18px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+  }
+  .spk-cobrand-item {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text) !important;
+  }
+  .spk-cobrand-item.spekgen { color: var(--spekgen) !important; }
+  .spk-cobrand-item.client { color: var(--accent) !important; }
+  .spk-cobrand-x {
+    color: var(--text-mute) !important;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .spk-hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+    color: var(--text) !important;
+    position: relative;
+    z-index: 2;
+  }
+  .spk-hero-title .accent { color: var(--accent) !important; }
+  .spk-hero-period {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dim) !important;
+    letter-spacing: 0.3px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+  }
+  .spk-hero-headline {
+    font-size: 16px;
+    color: var(--text-dim) !important;
+    max-width: 640px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Section base */
+  .spk-section {
+    margin-top: 56px;
+    padding: 40px 36px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .spk-section-title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    color: var(--text) !important;
+    margin-bottom: 10px;
+  }
+  .spk-section-intro {
+    font-size: 15px;
+    color: var(--text-dim) !important;
+    line-height: 1.75;
+    margin-bottom: 28px;
+    max-width: 720px;
+  }
+
+  /* Investment cards */
+  .spk-invest-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .spk-invest-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .spk-invest-amount {
+    flex-shrink: 0;
+    min-width: 140px;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent) !important;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .spk-invest-amount .cur {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-mute) !important;
+    margin-left: 4px;
+  }
+  .spk-invest-body { flex: 1; }
+  .spk-invest-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 4px;
+  }
+  .spk-invest-desc {
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.6;
+  }
+  .spk-invest-total {
+    margin-top: 16px;
+    padding: 22px 24px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .spk-invest-total-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text) !important;
+  }
+  .spk-invest-total-amount {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent) !important;
+    letter-spacing: -0.8px;
+  }
+
+  /* Budget highlight */
+  .spk-budget-hl {
+    margin-top: 20px;
+    padding: 24px;
+    background: var(--bg-3);
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+  }
+  .spk-budget-hl-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 14px;
+  }
+  .spk-budget-hl-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent) !important;
+    margin-bottom: 6px;
+  }
+  .spk-budget-hl-desc {
+    font-size: 13px;
+    color: var(--text-dim) !important;
+    line-height: 1.6;
+    max-width: 540px;
+  }
+  .spk-budget-hl-pct {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    background: var(--accent);
+    color: var(--bg) !important;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 999px;
+    letter-spacing: -0.3px;
+  }
+  .spk-budget-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .spk-budget-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--warning));
+    border-radius: 999px;
+  }
+  .spk-budget-hl-split {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .spk-budget-hl-num {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text) !important;
+    letter-spacing: -0.4px;
+  }
+  .spk-budget-hl-sub {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-left: 4px;
+  }
+
+  /* Sales header (count + total) */
+  .spk-sales-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .spk-sales-total {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent) !important;
+    letter-spacing: -0.5px;
+  }
+  .spk-sales-total .cur {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-mute) !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-left: 4px;
+  }
+  .spk-table td.amount {
+    text-align: right;
+    font-weight: 700;
+    color: var(--success) !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+
+  /* ROI block */
+  .spk-roi {
+    margin-top: 28px;
+    padding: 26px 28px;
+    background: var(--bg-3);
+    border: 1px solid var(--border-strong);
+    border-radius: 14px;
+  }
+  .spk-roi-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent) !important;
+    margin-bottom: 18px;
+  }
+  .spk-roi-grid {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .spk-roi-col {
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+  }
+  .spk-roi-col.invest { border-left: 3px solid var(--warning); }
+  .spk-roi-col.gen { border-left: 3px solid var(--success); }
+  .spk-roi-col-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-bottom: 8px;
+  }
+  .spk-roi-col-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text) !important;
+    letter-spacing: -0.8px;
+    line-height: 1;
+  }
+  .spk-roi-col.invest .spk-roi-col-value { color: var(--warning) !important; }
+  .spk-roi-col.gen .spk-roi-col-value { color: var(--success) !important; }
+  .spk-roi-arrow {
+    text-align: center;
+    font-size: 28px;
+    color: var(--text-mute) !important;
+    font-weight: 300;
+  }
+  .spk-roi-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding: 16px 18px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+  }
+  .spk-roi-metric-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-bottom: 4px;
+  }
+  .spk-roi-metric-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text) !important;
+    letter-spacing: -0.4px;
+  }
+  .spk-roi-metric-value.positive { color: var(--success) !important; }
+  .spk-roi-metric-value.negative { color: var(--danger) !important; }
+  .spk-roi-note {
+    font-size: 13px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+  }
+
+  /* Timeline */
+  .spk-strat-body {
+    font-size: 15px;
+    color: var(--text-dim) !important;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .spk-timeline {
+    border-left: 2px solid var(--border-strong);
+    padding-left: 24px;
+    margin-left: 8px;
+  }
+  .spk-timeline-item {
+    position: relative;
+    padding-bottom: 18px;
+  }
+  .spk-timeline-item:last-child { padding-bottom: 0; }
+  .spk-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 3px solid var(--bg-2);
+    box-sizing: content-box;
+  }
+  .spk-timeline-date {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent) !important;
+    margin-bottom: 2px;
+  }
+  .spk-timeline-event {
+    font-size: 14px;
+    color: var(--text) !important;
+    line-height: 1.5;
+  }
+
+  /* Sales table */
+  .spk-sales-count {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--success);
+    color: #0a0a0f !important;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  .spk-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .spk-table th {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    background: rgba(255,255,255,0.02);
+    border-bottom: 1px solid var(--border);
+  }
+  .spk-table td {
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: var(--text) !important;
+    border-bottom: 1px solid var(--border);
+  }
+  .spk-table tr:last-child td { border-bottom: none; }
+  .spk-table td.order { font-weight: 700; color: var(--accent) !important; font-family: 'JetBrains Mono', monospace; }
+  .spk-table td.customer { font-weight: 600; }
+  .spk-table td.channel { color: var(--text-dim) !important; font-size: 12.5px; }
+  .spk-table td.desc { color: var(--text-dim) !important; font-size: 12.5px; }
+
+  .spk-abandoned {
+    margin-top: 24px;
+    padding: 20px 22px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .spk-abandoned-num {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--warning) !important;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  .spk-abandoned-text { flex: 1; }
+  .spk-abandoned-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 4px;
+  }
+  .spk-abandoned-desc {
+    font-size: 13px;
+    color: var(--text-dim) !important;
+    line-height: 1.6;
+  }
+
+  .spk-honest {
+    margin-top: 24px;
+    padding: 18px 22px;
+    background: var(--spekgen-soft);
+    border-left: 3px solid var(--spekgen);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+  }
+  .spk-honest::before {
+    content: 'Nota honesta';
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--spekgen) !important;
+    margin-bottom: 6px;
+  }
+
+  /* KPI grid (for Meta / Organic / etc) */
+  .spk-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .spk-kpi {
+    padding: 20px 18px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .spk-kpi-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-bottom: 10px;
+  }
+  .spk-kpi-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text) !important;
+    letter-spacing: -0.6px;
+    margin-bottom: 4px;
+  }
+  .spk-kpi-sub {
+    font-size: 11.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.5;
+  }
+
+  .spk-meta-meta {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .spk-meta-meta-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.02);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+  }
+  .spk-meta-meta-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-bottom: 4px;
+  }
+  .spk-meta-meta-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text) !important;
+  }
+
+  .spk-learning {
+    margin-top: 22px;
+    padding: 18px 22px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+  }
+  .spk-learning::before {
+    content: 'Aprendizaje';
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent) !important;
+    margin-bottom: 6px;
+  }
+
+  /* Top posts */
+  .spk-top-block {
+    margin-top: 28px;
+    padding: 20px 22px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .spk-top-block-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent) !important;
+    margin-bottom: 14px;
+  }
+  .spk-top-post {
+    display: grid;
+    grid-template-columns: 100px 90px 1fr 160px;
+    gap: 14px;
+    padding: 12px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .spk-top-post:last-child { border-bottom: none; }
+  .spk-top-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-dim) !important;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .spk-top-format {
+    display: inline-block;
+    padding: 3px 10px;
+    background: var(--accent-soft);
+    color: var(--accent) !important;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 999px;
+    text-align: center;
+  }
+  .spk-top-desc {
+    font-size: 13.5px;
+    color: var(--text) !important;
+    line-height: 1.5;
+  }
+  .spk-top-desc .author {
+    display: block;
+    font-size: 11px;
+    color: var(--text-mute) !important;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .spk-top-eng {
+    font-size: 12px;
+    color: var(--text-dim) !important;
+    text-align: right;
+    font-weight: 500;
+  }
+
+  .spk-note-block {
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--text-mute) !important;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  /* Pivot explainer (TOFU/BOFU) */
+  .spk-pivot {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    padding: 24px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.06), rgba(245, 158, 11, 0.02));
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
+  }
+  .spk-pivot-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-strong) !important;
+    margin-bottom: 18px;
+    letter-spacing: -0.2px;
+  }
+  .spk-pivot-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .spk-pivot-point {
+    padding: 16px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .spk-pivot-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent) !important;
+    margin-bottom: 8px;
+    letter-spacing: -0.1px;
+  }
+  .spk-pivot-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text) !important;
+  }
+  .spk-pivot-targets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 16px;
+    background: rgba(255,255,255,0.02);
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+  }
+  .spk-pivot-target {
+    text-align: center;
+  }
+  .spk-pivot-target-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-mute) !important;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .spk-pivot-target-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-strong) !important;
+    line-height: 1.35;
+  }
+  .spk-pivot-target.highlight .spk-pivot-target-value {
+    color: var(--accent) !important;
+  }
+
+  /* WhatsApp */
+  .spk-wa-blaster {
+    display: grid;
+    grid-template-columns: 120px 120px 1fr;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 28px;
+    align-items: center;
+  }
+  .spk-wa-big {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+  }
+  .spk-wa-big-num {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--accent) !important;
+    line-height: 1;
+    letter-spacing: -0.8px;
+  }
+  .spk-wa-big-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-mute) !important;
+    margin-top: 6px;
+  }
+  .spk-wa-blaster-desc {
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+  }
+  .spk-wa-blaster-desc strong {
+    color: var(--text) !important;
+    font-weight: 700;
+  }
+
+  .spk-wa-convo-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 8px;
+  }
+  .spk-wa-convo-intro {
+    font-size: 13.5px;
+    color: var(--text-dim) !important;
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+  .spk-lead {
+    padding: 18px 22px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--success);
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .spk-lead-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 3px;
+  }
+  .spk-lead-phone {
+    font-size: 12.5px;
+    color: var(--text-dim) !important;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 6px;
+  }
+  .spk-lead-meta {
+    font-size: 12px;
+    color: var(--text-mute) !important;
+  }
+  .spk-lead-meta .source {
+    display: inline-block;
+    padding: 2px 8px;
+    background: var(--spekgen-soft);
+    color: var(--spekgen) !important;
+    font-weight: 600;
+    border-radius: 999px;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 8px;
+  }
+
+  /* Delivered */
+  .spk-deliv-row {
+    display: grid;
+    grid-template-columns: 1fr 110px 1fr;
+    gap: 20px;
+    padding: 18px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .spk-deliv-row:last-child { border-bottom: none; }
+  .spk-deliv-item {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text) !important;
+  }
+  .spk-deliv-status {
+    text-align: center;
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 999px;
+  }
+  .spk-deliv-status.good {
+    background: rgba(74, 222, 128, 0.12);
+    color: var(--success) !important;
+  }
+  .spk-deliv-status.warn {
+    background: rgba(251, 191, 36, 0.12);
+    color: var(--warning) !important;
+  }
+  .spk-deliv-status.bad {
+    background: rgba(251, 113, 133, 0.12);
+    color: var(--danger) !important;
+  }
+  .spk-deliv-note {
+    font-size: 12.5px;
+    color: var(--text-dim) !important;
+    line-height: 1.6;
+  }
+
+  .spk-addons-block {
+    margin-top: 40px;
+    padding-top: 36px;
+    border-top: 1px dashed var(--border-strong);
+  }
+  .spk-addons-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent) !important;
+    margin-bottom: 8px;
+    letter-spacing: -0.4px;
+  }
+  .spk-addons-intro {
+    font-size: 14px;
+    color: var(--text-dim) !important;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+  .spk-addon {
+    padding: 16px 20px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .spk-addon-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text) !important;
+    margin-bottom: 5px;
+  }
+  .spk-addon-title::before {
+    content: '+';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    background: var(--accent);
+    color: var(--bg) !important;
+    border-radius: 50%;
+    font-weight: 800;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .spk-addon-desc {
+    font-size: 13px;
+    color: var(--text-dim) !important;
+    line-height: 1.65;
+    padding-left: 30px;
+  }
+
+  /* Next month */
+  .spk-next {
+    padding: 36px 36px;
+    background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg-3) 100%);
+    border: 1px solid var(--accent);
+    border-radius: 16px;
+    margin-top: 56px;
+  }
+  .spk-next-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent) !important;
+    margin-bottom: 12px;
+    letter-spacing: -0.4px;
+  }
+  .spk-next-body {
+    font-size: 15px;
+    color: var(--text-dim) !important;
+    line-height: 1.8;
+  }
+
+  /* Footer */
+  .spk-footer {
+    margin-top: 56px;
+    padding: 32px 0 12px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  .spk-footer-cobrand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  .spk-footer-item {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+  .spk-footer-item.spekgen { color: var(--spekgen) !important; }
+  .spk-footer-item.client { color: var(--accent) !important; }
+  .spk-footer-x {
+    color: var(--text-mute) !important;
+    font-weight: 300;
+    font-size: 13px;
+  }
+  .spk-footer-tag {
+    font-size: 11.5px;
+    color: var(--text-mute) !important;
+    letter-spacing: 0.3px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .spk-report { padding: 24px 14px 64px; }
+    .spk-hero { padding: 36px 24px; }
+    .spk-hero-title { font-size: 32px; }
+    .spk-section { padding: 28px 22px; }
+    .spk-section-title { font-size: 22px; }
+    .spk-kpi-grid { grid-template-columns: 1fr 1fr; }
+    .spk-invest-row { flex-direction: column; gap: 6px; }
+    .spk-invest-amount { min-width: 0; font-size: 22px; }
+    .spk-invest-total { flex-direction: column; gap: 8px; align-items: flex-start; }
+    .spk-invest-total-amount { font-size: 26px; }
+    .spk-top-post { grid-template-columns: 1fr; gap: 4px; }
+    .spk-top-eng { text-align: left; }
+    .spk-wa-blaster { grid-template-columns: 1fr 1fr; }
+    .spk-wa-blaster-desc { grid-column: 1 / -1; }
+    .spk-deliv-row { grid-template-columns: 1fr; gap: 8px; }
+    .spk-deliv-status { justify-self: start; }
+    .spk-table th, .spk-table td { padding: 10px 12px; font-size: 12px; }
+    .spk-roi-grid { grid-template-columns: 1fr; }
+    .spk-roi-arrow { transform: rotate(90deg); }
+    .spk-roi-col-value { font-size: 26px; }
+    .spk-budget-hl-top { flex-direction: column; gap: 10px; }
+    .spk-budget-hl-pct { align-self: flex-start; }
+    .spk-pivot-points { grid-template-columns: 1fr; }
+    .spk-pivot-targets { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="spekgen-prospect-wrap">
+<div class="spk-report">
+
+  {# HERO #}
+  <section class="spk-hero">
+    <div class="spk-cobrand">
+      <span class="spk-cobrand-item spekgen">SPEKGEN</span>
+      <span class="spk-cobrand-x">×</span>
+      <span class="spk-cobrand-item client">{{ client.name }}</span>
+    </div>
+    <h1 class="spk-hero-title">{{ client.tagline }} <span class="accent">{{ client.name }}</span></h1>
+    <div class="spk-hero-period">{{ period.label }} · {{ period.days }} días</div>
+    <p class="spk-hero-headline">{{ period.executive_headline }}</p>
+  </section>
+
+  {# INVESTMENT #}
+  <section class="spk-section">
+    <h2 class="spk-section-title">{{ investment.title }}</h2>
+    <p class="spk-section-intro">{{ investment.intro }}</p>
+    <div class="spk-invest-grid">
+      {% for item in investment.breakdown %}
+      <div class="spk-invest-row">
+        <div class="spk-invest-amount">{{ item.amount }}<span class="cur">{{ item.currency }}</span></div>
+        <div class="spk-invest-body">
+          <div class="spk-invest-label">{{ item.label }}</div>
+          <div class="spk-invest-desc">{{ item.desc }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="spk-invest-total">
+      <div class="spk-invest-total-label">{{ investment.total.label }}</div>
+      <div class="spk-invest-total-amount">{{ investment.total.amount }} <span style="font-size: 14px; color: var(--text-mute); font-weight: 500;">{{ investment.total.currency }}</span></div>
+    </div>
+
+    {% if investment.budget_highlight %}
+    <div class="spk-budget-hl">
+      <div class="spk-budget-hl-top">
+        <div>
+          <div class="spk-budget-hl-label">{{ investment.budget_highlight.label }}</div>
+          <div class="spk-budget-hl-desc">{{ investment.budget_highlight.note }}</div>
+        </div>
+        <div class="spk-budget-hl-pct">{{ investment.budget_highlight.pct_used }}% usado</div>
+      </div>
+      <div class="spk-budget-bar">
+        <div class="spk-budget-bar-fill" style="width: {{ investment.budget_highlight.pct_used }}%;"></div>
+      </div>
+      <div class="spk-budget-hl-split">
+        <div><span class="spk-budget-hl-num">{{ investment.budget_highlight.used }}</span> <span class="spk-budget-hl-sub">gastado</span></div>
+        <div><span class="spk-budget-hl-num">{{ investment.budget_highlight.remaining }}</span> <span class="spk-budget-hl-sub">disponible</span></div>
+        <div><span class="spk-budget-hl-num">{{ investment.budget_highlight.total }}</span> <span class="spk-budget-hl-sub">total asignado</span></div>
+      </div>
+    </div>
+    {% endif %}
+  </section>
+
+  {# STRATEGY + TIMELINE #}
+  <section class="spk-section">
+    <h2 class="spk-section-title">{{ strategy.title }}</h2>
+    <p class="spk-strat-body">{{ strategy.body }}</p>
+    <div class="spk-timeline">
+      {% for ev in strategy.timeline %}
+      <div class="spk-timeline-item">
+        <div class="spk-timeline-date">{{ ev.date }}</div>
+        <div class="spk-timeline-event">{{ ev.event }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {# SALES #}
+  <section class="spk-section">
+    <h2 class="spk-section-title">{{ sales.title }}</h2>
+    <p class="spk-section-intro">{{ sales.intro }}</p>
+    <div class="spk-sales-header">
+      <div class="spk-sales-count">{{ sales.total_real_orders }} ventas reales</div>
+      {% if sales.total_generated %}<div class="spk-sales-total">{{ sales.total_generated }} <span class="cur">MXN total</span></div>{% endif %}
+    </div>
+    <table class="spk-table">
+      <thead>
+        <tr>
+          <th>Orden</th>
+          <th>Cliente</th>
+          <th>Canal</th>
+          <th style="text-align:right;">Monto</th>
+          <th>Detalle</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for o in sales.orders %}
+        <tr>
+          <td class="order">{{ o.order }}</td>
+          <td class="customer">{{ o.customer }}</td>
+          <td class="channel">{{ o.channel }}</td>
+          <td class="amount">{{ o.amount }}</td>
+          <td class="desc">{{ o.desc }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="spk-abandoned">
+      <div class="spk-abandoned-num">{{ sales.abandoned.count }}</div>
+      <div class="spk-abandoned-text">
+        <div class="spk-abandoned-title">{{ sales.abandoned.title }}</div>
+        <div class="spk-abandoned-desc">{{ sales.abandoned.desc }}</div>
+      </div>
+    </div>
+
+    <div class="spk-honest">{{ sales.honest_note }}</div>
+  </section>
+
+  {# META ADS #}
+  <section class="spk-section">
+    <h2 class="spk-section-title">{{ meta_ads.title }}</h2>
+    <p class="spk-section-intro">{{ meta_ads.intro }}</p>
+
+    <div class="spk-meta-meta">
+      <div class="spk-meta-meta-item">
+        <div class="spk-meta-meta-label">Campañas arrancaron</div>
+        <div class="spk-meta-meta-value">{{ meta_ads.campaign_started }}</div>
+      </div>
+      <div class="spk-meta-meta-item">
+        <div class="spk-meta-meta-label">Días activos</div>
+        <div class="spk-meta-meta-value">{{ meta_ads.days_active }}</div>
+      </div>
+      <div class="spk-meta-meta-item">
+        <div class="spk-meta-meta-label">Presupuesto usado</div>
+        <div class="spk-meta-meta-value">{{ meta_ads.budget_used }} <span style="color: var(--text-mute); font-size: 12px; font-weight: 500;">({{ meta_ads.budget_pct }}%)</span></div>
+      </div>
+    </div>
+
+    <div class="spk-kpi-grid">
+      {% for k in meta_ads.kpis %}
+      <div class="spk-kpi">
+        <div class="spk-kpi-label">{{ k.label }}</div>
+        <div class="spk-kpi-value">{{ k.value }}</div>
+        <div class="spk-kpi-sub">{{ k.sub }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if meta_ads.roi %}
+    <div class="spk-roi">
+      <div class="spk-roi-title">{{ meta_ads.roi.title }}</div>
+      <div class="spk-roi-grid">
+        <div class="spk-roi-col invest">
+          <div class="spk-roi-col-label">{{ meta_ads.roi.invested_label }}</div>
+          <div class="spk-roi-col-value">{{ meta_ads.roi.invested_amount }}</div>
+        </div>
+        <div class="spk-roi-arrow">→</div>
+        <div class="spk-roi-col gen">
+          <div class="spk-roi-col-label">{{ meta_ads.roi.generated_label }}</div>
+          <div class="spk-roi-col-value">{{ meta_ads.roi.generated_amount }}</div>
+        </div>
+      </div>
+      <div class="spk-roi-footer">
+        <div class="spk-roi-metric">
+          <div class="spk-roi-metric-label">ROAS</div>
+          <div class="spk-roi-metric-value">{{ meta_ads.roi.roas }}</div>
+        </div>
+        <div class="spk-roi-metric">
+          <div class="spk-roi-metric-label">{{ meta_ads.roi.net_label }}</div>
+          <div class="spk-roi-metric-value positive">{{ meta_ads.roi.net_amount }}</div>
+        </div>
+      </div>
+      <div class="spk-roi-note">{{ meta_ads.roi.note }}</div>
+    </div>
+    {% endif %}
+  </section>
+
+  {# ORGANIC CONTENT #}
+  <section class="spk-section">
+    <h2 class="spk-section-title">{{ organic_content.title }}</h2>
+    <p class="spk-section-intro">{{ organic_content.intro }}</p>
+
+    <div class="spk-kpi-grid" style="grid-template-columns: repeat(4, 1fr);">
+      {% for k in organic_content.kpis %}
+      <div class="spk-kpi">
+        <div class="spk-kpi-label">{{ k.label }}</div>
+        <div class="spk-kpi-value">{{ k.value }}</div>
+        <div class="spk-kpi-sub">{{ k.sub }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if organic_content.pivot_explainer %}
+    <div class="spk-pivot">
+      <div class="spk-pivot-title">{{ organic_content.pivot_explainer.title }}</div>
+      <div class="spk-pivot-points">
+        {% for p in organic_content.pivot_explainer.points %}
+        <div class="spk-pivot-point">
+          <div class="spk-pivot-label">{{ p.label }}</div>
+          <div class="spk-pivot-desc">{{ p.desc }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="spk-pivot-targets">
+        <div class="spk-pivot-target">
+          <div class="spk-pivot-target-label">Contratado</div>
+          <div class="spk-pivot-target-value">{{ organic_content.pivot_explainer.targets.contracted }}</div>
+        </div>
+        <div class="spk-pivot-target">
+          <div class="spk-pivot-target-label">Este mes (transición)</div>
+          <div class="spk-pivot-target-value">{{ organic_content.pivot_explainer.targets.this_month }}</div>
+        </div>
+        <div class="spk-pivot-target highlight">
+          <div class="spk-pivot-target-label">Próximo mes</div>
+          <div class="spk-pivot-target-value">{{ organic_content.pivot_explainer.targets.next_month }}</div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="spk-top-block">
+      <div class="spk-top-block-title">{{ organic_content.top_overall.title }}</div>
+      {% for p in organic_content.top_overall.posts %}
+      <div class="spk-top-post">
+        <div class="spk-top-date">{{ p.date }}</div>
+        <div><span class="spk-top-format">{{ p.format }}</span></div>
+        <div class="spk-top-desc">{{ p.desc }}<span class="author">por {{ p.author }}</span></div>
+        <div class="spk-top-eng">{{ p.engagement }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="spk-top-block">
+      <div class="spk-top-block-title">{{ organic_content.top_agency.title }}</div>
+      {% for p in organic_content.top_agency.posts %}
+      <div class="spk-top-post" style="grid-template-columns: 100px 110px 1fr 160px;">
+        <div class="spk-top-date">{{ p.date }}</div>
+        <div><span class="spk-top-format">{{ p.format }}</span></div>
+        <div class="spk-top-desc">{{ p.desc }}</div>
+        <div class="spk-top-eng">{{ p.engagement }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="spk-note-block">{{ organic_content.note }}</div>
+
+    {% if organic_content.gallery %}
+    <div class="spk-gallery-wrap" style="margin-top:40px;">
+      <div class="spk-gallery-head">
+        <h3 class="spk-gallery-title" style="font-size:22px;font-weight:700;color:#fff;margin:0 0 8px;">{{ organic_content.gallery.title }}</h3>
+        <p class="spk-gallery-intro" style="color:rgba(255,255,255,0.7);margin:0 0 24px;line-height:1.55;">{{ organic_content.gallery.intro }}</p>
+      </div>
+      <div class="spk-gallery-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+        {% for g in organic_content.gallery.pieces %}
+        <div class="spk-gallery-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="aspect-ratio:4/5;background:#0a1f1a;position:relative;overflow:hidden;">
+            <img src="{{ g.image_url }}" alt="{{ g.title }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <span style="position:absolute;top:10px;left:10px;background:#22c55e;color:#0a1f1a;font-size:10px;font-weight:800;letter-spacing:0.1em;padding:4px 8px;border-radius:4px;text-transform:uppercase;">PUBLICADO</span>
+          </div>
+          <div style="padding:14px 14px 16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:{{ client.accent_color | default('#33BA9E') }};letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:6px;">
+              <span>{{ g.post_id }}</span>
+              <span style="color:rgba(255,255,255,0.45);font-weight:600;">{{ g.pillar }}</span>
+            </div>
+            <div style="font-size:14px;color:#fff;font-weight:600;line-height:1.3;margin-bottom:8px;">{{ g.title }}</div>
+            {% if g.caption_preview and not g.permalink %}
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.45;margin-bottom:10px;">{{ g.caption_preview }}</div>
+            {% endif %}
+            {% if g.permalink %}
+            <a href="{{ g.permalink }}" target="_blank" rel="noopener" style="display:inline-block;font-size:11px;color:{{ client.accent_color | default('#33BA9E') }};text-decoration:none;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;">Ver en Instagram →</a>
+            {% elif g.cta_keyword and g.cta_keyword != '—' %}
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:monospace;">CTA: {{ g.cta_keyword }}</div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </section>
+
+  {# WHATSAPP #}
+  <section class="spk-section">
+    <h2 class="spk-section-title">{{ whatsapp.title }}</h2>
+
+    <div class="spk-wa-blaster">
+      <div class="spk-wa-big">
+        <div class="spk-wa-big-num">{{ whatsapp.blaster.contacts }}</div>
+        <div class="spk-wa-big-label">Contactos</div>
+      </div>
+      <div class="spk-wa-big">
+        <div class="spk-wa-big-num">{{ whatsapp.blaster.sales }}</div>
+        <div class="spk-wa-big-label">Venta directa</div>
+      </div>
+      <div class="spk-wa-blaster-desc">
+        <strong>{{ whatsapp.blaster.title }}</strong><br>
+        {{ whatsapp.blaster.desc }}
+      </div>
+    </div>
+
+    {% if whatsapp.blaster_roi %}
+    <div class="spk-roi" style="margin-bottom: 28px;">
+      <div class="spk-roi-title">{{ whatsapp.blaster_roi.title }}</div>
+      <div class="spk-roi-grid">
+        <div class="spk-roi-col invest">
+          <div class="spk-roi-col-label">{{ whatsapp.blaster_roi.invested_label }}</div>
+          <div class="spk-roi-col-value">{{ whatsapp.blaster_roi.invested_amount }}</div>
+        </div>
+        <div class="spk-roi-arrow">→</div>
+        <div class="spk-roi-col gen">
+          <div class="spk-roi-col-label">{{ whatsapp.blaster_roi.generated_label }}</div>
+          <div class="spk-roi-col-value">{{ whatsapp.blaster_roi.generated_amount }}</div>
+        </div>
+      </div>
+      <div class="spk-roi-footer">
+        <div class="spk-roi-metric">
+          <div class="spk-roi-metric-label">ROAS</div>
+          <div class="spk-roi-metric-value">{{ whatsapp.blaster_roi.roas }}</div>
+        </div>
+        <div class="spk-roi-metric">
+          <div class="spk-roi-metric-label">{{ whatsapp.blaster_roi.net_label }}</div>
+          <div class="spk-roi-metric-value negative">{{ whatsapp.blaster_roi.net_amount }}</div>
+        </div>
+      </div>
+      <div class="spk-roi-note">{{ whatsapp.blaster_roi.note }}</div>
+    </div>
+    {% endif %}
+
+    <div class="spk-wa-convo-title">{{ whatsapp.conversations.title }}</div>
+    <div class="spk-wa-convo-intro">{{ whatsapp.conversations.intro }}</div>
+    {% for l in whatsapp.conversations.leads %}
+    <div class="spk-lead">
+      <div class="spk-lead-name">{{ l.name }}</div>
+      <div class="spk-lead-phone">{{ l.phone }}</div>
+      <div class="spk-lead-meta"><span class="source">{{ l.source }}</span>{{ l.status }}</div>
+    </div>
+    {% endfor %}
+  </section>
+
+  {# DELIVERED + VALUE ADDS #}
+  <section class="spk-section">
+    <h2 class="spk-section-title">{{ delivered.title }}</h2>
+    <p class="spk-section-intro">{{ delivered.intro }}</p>
+
+    <div>
+      {% for d in delivered.contract_items %}
+      <div class="spk-deliv-row">
+        <div class="spk-deliv-item">{{ d.item }}</div>
+        <div class="spk-deliv-status {{ d.bar_class }}">{{ d.status }}</div>
+        <div class="spk-deliv-note">{{ d.note }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if delivered.value_adds %}
+    <div class="spk-addons-block">
+      <h3 class="spk-addons-title">{{ delivered.value_adds.title }}</h3>
+      <p class="spk-addons-intro">{{ delivered.value_adds.intro }}</p>
+      {% for a in delivered.value_adds.list %}
+      <div class="spk-addon">
+        <div class="spk-addon-title">{{ a.title }}</div>
+        <div class="spk-addon-desc">{{ a.desc }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+
+  {# NEXT MONTH #}
+  <section class="spk-next">
+    <h2 class="spk-next-title">{{ next_month.title }}</h2>
+    <p class="spk-next-body">{{ next_month.body }}</p>
+  </section>
+
+  {# FOOTER #}
+  <footer class="spk-footer">
+    <div class="spk-footer-cobrand">
+      <span class="spk-footer-item spekgen">{{ footer.cobrand_left }}</span>
+      <span class="spk-footer-x">×</span>
+      <span class="spk-footer-item client">{{ footer.cobrand_right }}</span>
+    </div>
+    <div class="spk-footer-tag">{{ footer.tagline }}</div>
+  </footer>
+
+</div>
+</div>
+
+</body>
+</html>

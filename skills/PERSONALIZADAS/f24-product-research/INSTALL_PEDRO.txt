@@ -1,0 +1,70 @@
+Pedro — esta es la v2 del setup, corregida para Windows después de tu primer reporte. Pre-requisito: Gibran ya te compartió la carpeta "01. CLIENTS OFFICIAL" en Google Drive Web y la activaste como Unidad Compartida en Google Drive Desktop. Si no la ves todavía sincronizada en tu máquina, contesta a Gibran antes de pegar esto en Claude.
+
+Copia TODO lo que está abajo (desde "=== INICIO ===" hasta "=== FIN ===") y pégalo como un solo mensaje en tu Claude Code, trabajando dentro de la carpeta "01. CLIENTS OFFICIAL" sincronizada.
+
+=== INICIO ===
+
+Hola Claude. Soy Pedro, socio de Gibran en SPEKGEN. Estoy en Windows con Python 3.12 ya instalado (registrado como `python`, NO `python3`). Voy a verificar que el skill /f24-product-research esté listo en mi máquina. Ejecuta este checklist completo, autodetecta el OS y usa el invocador de Python correcto según corresponda. Reportame ✓/✗ por paso + comando exacto si algo falla.
+
+**Detección inicial (hazla primero):**
+- Detecta mi OS (Windows / Mac / Linux).
+- Detecta cómo invocar Python 3 en mi sistema (prueba `python --version`, `py --version`, `python3 --version` — usa el que funcione y reporta cuál).
+- Detecta dónde tengo sincronizada "01. CLIENTS OFFICIAL" (mi Drive típicamente es G:\My Drive\ en Windows; podría estar en otra letra). Si no la encuentras, avísame antes de continuar.
+
+**Cuando ya tengas esos 3 datos, ejecuta:**
+
+1) UBICACIÓN — verifica que existan estos archivos en el Drive sincronizado:
+   - SPK - SPEKGEN AGENCY/SPK - 02. SKILLS/PERSONALIZADAS/f24-product-research/SKILL.md
+   - SPK - SPEKGEN AGENCY/SPK - 02. SKILLS/PERSONALIZADAS/f24-product-research/scripts/consolidate_to_xlsx.py
+   - SPK - SPEKGEN AGENCY/SPK - 02. SKILLS/PERSONALIZADAS/f24-product-research/scripts/_add_research_sheets.py
+   - SPK - SPEKGEN AGENCY/SPK - 02. SKILLS/PERSONALIZADAS/f24-product-research/agent_prompts/ (5 archivos: media.md, docs.md, specs.md, comercial.md, copy.md)
+   - F24- FERRE24/F24 - 02. PRODUCTOS/00_50_PRIORITARIOS_MARVELSA.xlsx
+   - F24- FERRE24/F24 - 02. PRODUCTOS/Hidrolavadora a gasolina 5.5hp/ (carpeta del piloto)
+
+2) DEPENDENCIAS PYTHON — usando el invocador correcto que detectaste:
+   <PYTHON> -c "import openpyxl, pypdf; print('deps OK')"
+   Si falla, instala con:
+   <PYTHON> -m pip install --user openpyxl pypdf
+
+3) SYMLINK / JUNCTION DEL SKILL al directorio de Claude:
+   - En Windows usa `mklink /J` desde cmd (no requiere admin):
+     mklink /J "%USERPROFILE%\.claude\skills\f24-product-research" "<RUTA_ABSOLUTA_AL_SKILL>"
+     donde <RUTA_ABSOLUTA_AL_SKILL> es la ruta completa a la carpeta del skill en mi Drive.
+   - Si %USERPROFILE%\.claude\skills no existe, créalo primero (mkdir).
+   - Alternativa si junction falla: `xcopy /E /I` la carpeta completa a %USERPROFILE%\.claude\skills\f24-product-research (hay que re-copiar cuando se actualice).
+   - En Mac/Linux sería: `mkdir -p ~/.claude/skills && ln -sf "<ruta>" ~/.claude/skills/f24-product-research`
+   Verifica que el path final exista y apunte al skill real.
+
+4) TEST DE PORTABILIDAD DE PATHS — el script resuelve la carpeta de productos automáticamente buscando "01. CLIENTS OFFICIAL" como anchor. Corre desde la raíz "01. CLIENTS OFFICIAL":
+   <PYTHON> "<RUTA_AL_SKILL>/scripts/consolidate_to_xlsx.py" HP5.5N "Hidrolavadora a gasolina 5.5hp"
+   Output esperado: 3 líneas que terminen con "%completo=81.2%" y "Saved 00_50_PRIORITARIOS_MARVELSA.xlsx". Si tira RuntimeError "No pude localizar...", define la env var antes de correr:
+   - PowerShell: $env:F24_PRODUCTS_DIR = "<ruta absoluta a F24 - 02. PRODUCTOS>"
+   - cmd: set F24_PRODUCTS_DIR=<ruta absoluta>
+   y vuelve a correr. Reporta el output completo si falla.
+
+5) LEE EL SKILL.md — abre y resúmemelo en 6-8 bullets para que yo sepa qué hace, cómo se invoca, qué outputs genera, y dónde están las reglas duras. Foco en:
+   - Workflow de 5 fases (4 agentes paralelos + 1 copy secuencial)
+   - Convención de columnas del xlsx (col E = precio Sergio→F24)
+   - Alcance: research del producto, NO análisis de pricing de proveedor
+   - Fuentes doradas (Ferrepat, Jardepot, AgroCoyote, Manualslib)
+   - Cross-platform notes (sección "Notas cross-platform" al final del SKILL.md)
+
+6) ESTADO DEL PILOTO — revisa la carpeta "F24 - 02. PRODUCTOS/Hidrolavadora a gasolina 5.5hp/" y dime qué hay (estructura 01-05 con imágenes, PDFs, specs.json, comercial.json, copy.md). Confirma que copy.md NO mencione la marca "Surtek" ni recomendaciones de renegociación con el proveedor — debe ser copy de venta limpio en español MX correcto.
+
+7) REPORTE FINAL — al terminar dame:
+   - OS + invocador de Python detectado + ruta del Drive sincronizado (los 3 datos del inicio)
+   - ✓/✗ por cada paso del 1 al 6
+   - Si todo pasa: confirma que el skill está listo para correr en un SKU nuevo (sugerencia: CA-25PH "Compresor de aire Power Hunt 25L")
+   - Si algo falla: el comando exacto que debo correr para resolverlo
+
+No corras el skill en un SKU nuevo todavía — solo verifica que el setup funcione. Yo decido cuándo arrancar el primer batch real.
+
+=== FIN ===
+
+Notas para ti Pedro:
+- La skill spawneja 4 sub-agentes en paralelo (cada uno con su propio contexto) + 1 secuencial para el copy. Costo aproximado: ~$0.50-$1.50 USD por SKU.
+- El hook `sync-skills.sh` de Gibran es bash y NO corre en Windows nativo — por eso el paso 3 usa `mklink /J` manual. Si en algún momento usas WSL o Git Bash, el hook podría correr ahí.
+- El xlsx maestro tiene 5 hojas: 50 SKUs Prioritarios (input), Checklist Recursos (dashboard), Research Log y Asset Index (datos del skill), No encontrados.
+- Cualquier duda escríbeme — no edites SKILL.md ni scripts hasta validar 3-5 SKUs juntos.
+
+Gibran

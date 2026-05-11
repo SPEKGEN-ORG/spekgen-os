@@ -1,0 +1,90 @@
+{
+  "_comment": "GREENRAY — Meta Upload Skill Config | SPEKGEN Clients AD LOG v2.0",
+  "_version": "1.0",
+  "_updated": "2026-03-09",
+
+  "client": {
+    "name": "GREENRAY",
+    "brand_id": "GR",
+    "ad_id_prefix": "GR-",
+    "industry": "Suplementos / Wellness / Gastrointestinal",
+    "ecommerce_platform": "shopify",
+    "store_url": "greenray.mx"
+  },
+
+  "paths": {
+    "workspace": "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/CLIENTS/GREENRAY OFFCIAL",
+    "products_base": "{workspace}/PRODUCTOS",
+    "ad_log": "{workspace}/05. LOGS/01. ADS LOG/SPEKGEN_CLIENTS_AD_LOG_v2.0.xlsx",
+    "ad_log_sheet": "📋 GREENRAY ADS",
+    "metrics_sheet": "📈 MÉTRICAS META GR",
+    "rotation_sheet": "🔄 ROTACIÓN CREATIVA",
+    "audiences_sheet": "🎯 AUDIENCIAS META",
+    "meta_scripts": "{workspace}/05. LOGS/02. META API SCRIPTS",
+    "env_file": "{meta_scripts}/.env"
+  },
+
+  "ad_log_columns": {
+    "id": "A",
+    "nombre_archivo": "B",
+    "marca": "C",
+    "fecha_creacion": "D",
+    "fecha_lanzamiento": "E",
+    "producto": "K",
+    "landing_url": "L",
+    "headline": "N",
+    "copy_a": "O",
+    "copy_corto": "P",
+    "cta": "Q",
+    "ruta_imagen": "V",
+    "status": "W",
+    "campana": "X",
+    "adset": "Y",
+    "utm_content": "AA",
+    "meta_creative_id": "AT",
+    "meta_ad_id": "AU"
+  },
+
+  "product_folder_structure": {
+    "_note": "GREENRAY usa PRODUCTOS/{CATEGORIA}/{PRODUCTO}/05 - META ADS/{ANGULO_O_BATCH}/IMAGENES/",
+    "categories": {
+      "GASTROINTESTINALES": ["GAX-ALIV", "PROTOCOLO GAXALIV"],
+      "PENDIENTE": []
+    },
+    "image_subfolders": {
+      "1x1": "IMAGENES",
+      "9x16": "IMAGENES",
+      "_note": "GREENRAY guarda ambos ratios en la misma carpeta IMAGENES/ con sufijo _SQ (1x1) y _VERT (9x16)"
+    },
+    "carousel_structure": {
+      "1x1_folder": "BATCH X - 1080 X 1080",
+      "9x16_folder": "BATCH X - 1080 X 1920"
+    }
+  },
+
+  "meta_constraints": {
+    "_inherited_from": "lo-fitness-meta-upload v1.2",
+    "no_degrees_of_freedom_spec": true,
+    "no_tracking_specs_in_ad": true,
+    "require_instagram_user_id": true,
+    "upload_both_ratios": true,
+    "default_upload_status": "PAUSED",
+    "destination_type": "WEBSITE",
+    "url_tags_no_leading_question_mark": true,
+    "require_instagram_story_attachment": true
+  },
+
+  "image_naming_conventions": {
+    "static_1x1": "{AD_ID}_SQ.jpg  or  {N}_SQ.jpg (numbered)",
+    "static_9x16": "{AD_ID}_VERT.jpg  or  {N}_VERT.jpg (numbered)",
+    "carousel_1x1": "inside 'BATCH X - 1080 X 1080/' folder",
+    "carousel_9x16": "inside 'BATCH X - 1080 X 1920/' folder",
+    "_note": "If naming is inconsistent, use glob to find all JPG/PNG files in folder"
+  },
+
+  "rotation_tracker": {
+    "default_fatigue_threshold": 2.5,
+    "rotation_section_marker": "━━━ GREENRAY — Rotación Creativa ━━━",
+    "audience_section_marker": "━━━ GREENRAY — Audiencias Meta ━━━"
+  }
+}
