@@ -107,15 +107,46 @@ git pull origin main         # baja el .enc actualizado
 
 ## 6. Tu primera semana
 
-Foco según lo que platicamos:
+### 6.1 Cold calls B2B (arranca día 1)
 
-1. **Outreach GDL** — replicar el sistema que ya corre para La Paz BCS. Estado actual: `spekgen-prospectos` repo separado (GH Actions corriendo) + dashboard local en `01. CLIENTS OFFICIAL/PROSPECTOS/`. Skills relevantes:
-   - `/website-proposal` — genera mockup + propuesta + lo publica a spekgen.com
-   - `/publish-prospect` — publica un set ya hecho
-   - `/kill-prospect` — cierra prospecto frío
-   - `hc-lead-scraper` — scraper Google Maps (adaptable a GDL)
-2. **Familiarizarte con clientes activos** — lee `clients/{HC,LF,GR,MG,F24}/_CLIENT_CONTEXT.md` cuando los movamos al repo (próxima ola).
-3. **Probar el skill `/f24-product-research`** end-to-end en un SKU nuevo (sugerencia: CA-25PH Compresor de aire 25L). Pero AVÍSAME antes — quiero estar disponible si algo se rompe en tu máquina.
+Sistema completo de outreach. **Genera leads frescos cada mañana, dashboard para llamar, mockup automático cuando alguien dice "interesado".**
+
+**Setup (una vez):**
+
+```powershell
+# Clonar el repo del sistema de prospectos (transferido a la org 2026-05-12)
+cd C:\dev
+git clone https://github.com/SPEKGEN-ORG/spekgen-prospectos.git
+```
+
+El sistema **vive en Drive**, no en el repo — porque el xlsx + el dashboard necesitan persistencia compartida. El repo solo contiene los GH Actions cloud (harvest bi-weekly) y el dashboard alterno cloud-friendly.
+
+**Tu xlsx personal:** `SPK - SPEKGEN AGENCY/PROSPECTOS/SPEKGEN_PROSPECTOS_GDL.xlsx` (separado del de Gibran para evitar conflictos en Drive).
+
+**Workflow diario (Mon-Fri):**
+
+1. Abre el folder Drive en Explorer: `G:\My Drive\01. CLIENTS OFFICIAL\SPK - SPEKGEN AGENCY\PROSPECTOS\_tools\`
+2. **Doble clic → `PEDRO_1_Generar_leads_del_dia.bat`** → genera 40 leads (20 GDL + 20 La Paz BCS) en tu xlsx.
+3. **Doble clic → `PEDRO_2_Abrir_dashboard.bat`** → abre http://localhost:8771 con los leads del día.
+4. Llama. Marca status en el dashboard (Pendiente / Contestó / Interesado / No interesado / Callback). El dashboard guarda al xlsx automáticamente.
+5. **Cuando alguien diga "interesado"** → marca status "Interesado" y el sistema dispara un mockup automático (mockup factory). Te llega un link `spekgen.com/{slug}mockup` para mandarle.
+
+> **Heads-up:** Los mockups actuales salen genéricos. Gibran y yo lo estamos pelando aparte — por ahora úsalos solo como referencia visual, no como propuesta final. Si llegas a un "sí", avisa para hacerle un mockup custom.
+
+**Reglas de uso del Google Places API (compartido con Gibran):**
+- 40 leads/día por operador es presupuesto razonable. NO corras el batch 2× el mismo día sin razón — la API tiene cuota.
+- El `.seen_place_ids.json` es compartido entre tú y Gibran (via Drive) → no se duplican leads cross-operador.
+
+**Skills relevantes para esta fase:**
+- `/website-proposal` — genera mockup + propuesta + publica a spekgen.com (úsalo cuando un lead diga "sí, mándame algo")
+- `/publish-prospect` — publica un set ya hecho
+- `/kill-prospect` — cierra prospecto frío (libera el slot)
+
+### 6.2 Familiarizarte con clientes activos
+Lee `clients/{HC,LF,GR,MG,F24}/_CLIENT_CONTEXT.md` cuando los movamos al repo (próxima ola).
+
+### 6.3 Probar el skill `/f24-product-research`
+End-to-end en un SKU nuevo (sugerencia: CA-25PH Compresor de aire 25L). Pero AVÍSAME antes — quiero estar disponible si algo se rompe en tu máquina.
 
 ## 7. Workflow de cambios
 
