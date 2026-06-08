@@ -7,10 +7,10 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-22 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+35 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (17 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (25 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 
@@ -22,26 +22,39 @@ Reglas de meses sin intereses (MSI) por promo:
 | `AK26` | $1,794 | $3,262 | 45% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `AKE100P` | solo MSI | $8,291 |  | 3, 6 | no | 2026-06-14 |
 | `BAKARAC250` | solo MSI | $18,935 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
-| `BAKARAC300-G` | $38,643 | $43,912 | 12% | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `BAKARAC300-G` | $25,683 | $29,186 | 12% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `BK1440` | $12,330 | $14,856 | 17% | 3, 6, 9, 12 | **Sí** | 2026-06-14 |
 | `BK2.515` | $2,914 | $3,511 | 17% | 3, 6, 9, 12 | **Sí** | 2026-06-14 |
 | `CA-25PH` | $2,840 | $3,121 | 9% | 3, 6 | no | 2026-06-14 |
 | `CA-50PH` | $6,223 | $6,838 | 9% | 3, 6 | no | 2026-06-14 |
 | `CSK5218` | $3,531 | $4,154 | 15% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `CSK6222` | $3,699 | $4,352 | 15% | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `GH26000E-A` | $135,285 | $143,920 | 6% | 3 | no | 2026-06-14 |
+| `GP10000GAS` | $82,259 | $96,775 | 15% | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `GP10000GAS-T` | $87,098 | $96,775 | 10% | 3, 6 | no | 2026-06-14 |
 | `GP5500` | $9,773 | $10,859 | 10% | 3, 6 | no | 2026-06-14 |
 | `GPD8.5M` | $24,989 | $29,399 | 15% | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `GPD8.5T` | $24,454 | $26,872 | 9% | 3, 6 | no | 2026-06-14 |
+| `GPDS14M` | $79,270 | $87,110 | 9% | 3, 6 | no | 2026-06-14 |
+| `GPDS14T` | $76,657 | $87,110 | 12% | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `GPDS8.5M` | $28,032 | $30,804 | 9% | 3, 6 | no | 2026-06-14 |
+| `GPDS8.5T` | $27,894 | $31,698 | 12% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `GPIS3.5KW` | $11,836 | $13,450 | 12% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `KF35X` | $2,689 | $4,888 | 45% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `KPD45TOP` | solo MSI | $5,032 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `KPD52TOP` | solo MSI | $5,111 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `KTR26` | $2,341 | $4,257 | 45% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `MAKO65` | solo MSI | $3,613 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `MAKO72` | solo MSI | $10,169 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `MHP11` | $9,560 | $10,506 | 9% | 3, 6 | no | 2026-06-14 |
+| `MP2.8` | $2,858 | $3,248 | 12% | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `MP7FF` | $3,358 | $3,816 | 12% | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `PPSB6.5AK` | $5,744 | $6,920 | 17% | 3, 6, 9, 12 | **Sí** | 2026-06-14 |
+| `PPSB6.5BK` | $6,054 | $7,294 | 17% | 3, 6, 9, 12 | **Sí** | 2026-06-14 |
 
 ## Generadores (39)
 
-- **GH26000E-A** · `id:44165111644248` · $143,920 (antes $287,840) · Parazzini Pro · GH26000E-AM
+- **GH26000E-A** · `GH26000E-A` · $135,285 (antes $143,920) · Parazzini Pro · GH26000E-AM · ⚡PROMO
   Especificaciones completas · SKU GH26000E-AM Motor · Tipo de motor Gas LP (Propano) · Combustible gas_lp · Encendido electrico · Identificación · Marca Parazzini Pro · Modelo GH26000E-AM · SKU GH26000E-AM
   PDP: https://ferre24.com.mx/products/gh26000e-a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1c8dce99-76a2-4486-9a1a-aeafe3b41865.png
@@ -49,11 +62,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Especificaciones completas · SKU GH26000E-AM Motor · Tipo de motor Gas LP (Propano) · Combustible gas_lp · Encendido electrico · Identificación · Marca Parazzini Pro · Modelo GH26000E-AM · SKU GH26000E-AM
   PDP: https://ferre24.com.mx/products/gh26000e-am
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a2a5dcd9-bed7-428e-af23-29e3da79de59.png
-- **Generador Diesel Silencioso 14 kW con ATS Automático** · `id:44163879698520` · $87,110 (antes $174,220) · Parazzini · GPDS14M
+- **Generador Diesel Silencioso 14 kW con ATS Automático** · `GPDS14M` · $79,270 (antes $87,110) · Parazzini · GPDS14M · ⚡PROMO
   Sin luz no se para, pero el ruido sí molesta · Cuando el CFE falla, cada segundo cuenta — en una clínica, en un taller, en tu casa. El problema de la mayoría de los generadores no es solo el apagón: es el rugido que…
   PDP: https://ferre24.com.mx/products/generador-diesel-silencioso-14-kw-con-ats-automatico-parazzini-gpds14m
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c4edd56e-f4da-419d-8bf6-a55d0227f70b.png
-- **Generador Diesel Silencioso Trifásico 8.5 kW Parazzini GPDS8.5T** · `id:44164272259160` · $31,698 (antes $63,396) · Parazzini Pro · GPDS8.5T
+- **Generador Diesel Silencioso Trifásico 8.5 kW Parazzini GPDS8.5T** · `GPDS8.5T` · $27,894 (antes $31,698) · Parazzini Pro · GPDS8.5T · ⚡PROMO 9MSI
   Especificaciones completas · SKU GPDS8.5T Motor · Potencia 15 HP · Tipo de motor Diesel · Combustible diesel · Cilindrada 531 cc · Encendido electrico · Tanque 24 L · Físicas · Peso 170 kg · Dimensiones (L × An × Al) 91…
   PDP: https://ferre24.com.mx/products/el-parazzini-gpds8-5t-rompe-el-paradigma-generador-diesel-trifasico-profesional-que-opera-a-solo-72-db-a-7-metros-mas-silencioso-que-una-conversacion-normal-disenado-para-instalaciones-que-exigen-lo-que-el-mercado-consideraba-imposible-potenci
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3e44300a-491a-4e96-bbbd-55a09ac04ace.png
@@ -65,7 +78,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz no siempre estás en casa o en el negocio para encender el generador. El Parazzini Pro GPD8.5M resuelve justo eso: su entrada ATS lo deja listo para conectar un Interruptor de Transferencia…
   PDP: https://ferre24.com.mx/products/generador-diesel-parazzini-pro-gpd8-5m-8-5-kw-monofasico-entrada-ats
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2fb6b41f-4f59-4610-81ac-fe75982f7f50.png
-- **Generador Estacionario a Gas LP/GN 10 kW** · `id:44163881369688` · $96,775 (antes $193,551) · Parazzini Pro · GP10000GAS
+- **Generador Estacionario a Gas LP/GN 10 kW** · `GP10000GAS` · $82,259 (antes $96,775) · Parazzini Pro · GP10000GAS · ⚡PROMO 9MSI
   El problema con los generadores que ya conoces · Los generadores portátiles a gasolina tienen un defecto fatal: se quedan sin combustible en el peor momento. A las 3 a.m. con un apagón activo, nadie quiere salir a…
   PDP: https://ferre24.com.mx/products/generador-estacionario-a-gas-lp-gn-10-kw-arranque-automatico-con-ats-parazzini-pro-gp10000gas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f7aab53d-92fe-4f79-8e90-873c543dfc19.png
@@ -153,7 +166,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, el problema no es solo la oscuridad: es el refrigerador que se descompone, la bomba de agua que se detiene y el negocio que deja de producir. El generador a gasolina Power Hunt GPH9000W existe para…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-power-hunt-gph9000w-18-hp-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8ccbaff6-c651-4f71-bcb4-daa43a4b7846.png
-- **Generador estacionario trifásico 10 kW** · `id:44163880812632` · $96,775 (antes $193,551) · Parazzini Pro · GP10000GAS-T
+- **Generador estacionario trifásico 10 kW** · `GP10000GAS-T` · $87,098 (antes $96,775) · Parazzini Pro · GP10000GAS-T · ⚡PROMO
   Un corte de CFE no debería detener tu negocio ni tu producción. · Los talleres, panaderías, clínicas y pequeñas industrias que operan con equipos trifásicos de 220 V saben lo que cuesta un apagón: máquinas paradas,…
   PDP: https://ferre24.com.mx/products/generador-estacionario-trifasico-10-kw-gas-lp-gn-ats-automatico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e542c913-faa0-4c76-9521-74e8f4d8e814.png
@@ -161,7 +174,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Por qué el Parazzini GP31200? · Cuando se va la luz, no tienes tiempo para complicaciones. El GP31200 arranca con un jalón de cuerda y en segundos tienes energía para lo que importa: iluminación, refrigerador,…
   PDP: https://ferre24.com.mx/products/generador-portatil-parazzini-gp31200-motor-3hp-1-200w-max-tanque-6-3-l-7-h-de-autonomia-respaldo-confiable-para-hogar-campo-y-emergencias-desde-4-769-mxn
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b928415c-c27e-42ea-b65e-9a0d197896bb.png
-- **Generador-Soldador Inverter Parazzini BAKARAC300-G** · `BAKARAC300-G` · $38,643 (antes $43,912) · Parazzini · BAKARAC300-G · ⚡PROMO 9MSI
+- **Generador-Soldador Inverter Parazzini BAKARAC300-G** · `BAKARAC300-G` · $25,683 (antes $29,186) · Parazzini · BAKARAC300-G · ⚡PROMO 9MSI
   ¿Te has quedado sin luz justo cuando más la necesitabas, o batallando con un generador que arranca a la tercera y truena tus aparatos? El Parazzini BAKARAC300-G resuelve las dos cosas con un equipo que la mayoría no…
   PDP: https://ferre24.com.mx/products/generador-soldador-inverter-parazzini-bakarac300-g-7-7-kw-17-hp-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f540661b-1e7e-4d85-adaf-8cbb90453c8f.png
@@ -172,11 +185,11 @@ Reglas de meses sin intereses (MSI) por promo:
 - **Motor Estacionario V-twin 22 HP Parazzini MP22** · `id:44163939860568` · $26,670 (antes $48,491) · Parazzini · MP22
   Cuando un motor industrial falla, cada hora parada cuesta dinero. El Parazzini MP22 es la solución de potencia que mantiene operando tus equipos sin vaciar el presupuesto: 22 HP de fuerza real en configuración V-twin…
   PDP: https://ferre24.com.mx/products/motor-estacionario-v-twin-22-hp-parazzini-mp22-arranque-electrico
-- **Motor Parazzini 2.8 HP / 97cc** · `id:44163890217048` · $3,248 (antes $5,906) · Parazzini · MP2.8
+- **Motor Parazzini 2.8 HP / 97cc** · `MP2.8` · $2,858 (antes $3,248) · Parazzini · MP2.8 · ⚡PROMO 9MSI
   ¿Tu bomba de riego o generador portátil dejó de funcionar y no encuentras el motor adecuado? · El Motor Parazzini 2.8 HP / 97cc es la solución compacta y confiable que necesitas. Diseñado para accionamiento directo,…
   PDP: https://ferre24.com.mx/products/motor-parazzini-2-8-hp-97cc-4-tiempos-ohv
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3a80644d-0e58-4cf2-8548-9c0dbc5a86e0.png
-- **Motor Parazzini 7 HP 4 Tiempos** · `id:44163917971544` · $3,816 (antes $6,939) · Parazzini · MP7FF
+- **Motor Parazzini 7 HP 4 Tiempos** · `MP7FF` · $3,358 (antes $3,816) · Parazzini · MP7FF · ⚡PROMO 9MSI
   Si tu motor falló en plena jornada y el repuesto OEM te cuesta el doble de lo que vale el equipo, el Parazzini MP7FF es la respuesta. Potencia de 7 HP real, motor 4 tiempos OHV de gasolina, arranque manual confiable —…
   PDP: https://ferre24.com.mx/products/motor-parazzini-7-hp-4-tiempos-doble-filtro-de-aire-para-obra-y-campo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a88a5405-9e76-46eb-b020-58166c2a3de8.png
@@ -184,7 +197,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu motor tronó en plena temporada y el de repuesto no llega en días? El Parazzini MP10D está en stock y sale al día siguiente. · Motor diesel estacionario de 10HP diseñado para trabajo continuo en campo, obra y taller.…
   PDP: https://ferre24.com.mx/products/parazzini-mp10d-motor-diesel-10hp-con-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b1537fbd-a360-420b-9b9e-80009aa13f7f.png
-- **Parazzini Pro GPDS14T** · `id:44163880353880` · $87,110 (antes $174,220) · Parazzini Pro · GPDS14T
+- **Parazzini Pro GPDS14T** · `GPDS14T` · $76,657 (antes $87,110) · Parazzini Pro · GPDS14T · ⚡PROMO 9MSI
   Un apagón no avisa — y en un negocio, cada minuto sin luz es dinero perdido. · Si tu taller, local comercial o rancho depende de corriente trifásica para operar, ya sabes lo que cuesta un corte inesperado: producción…
   PDP: https://ferre24.com.mx/products/parazzini-pro-gpds14t-generador-silencioso-14-kw-trifasico-diesel
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_e1bcba76-8eb7-484f-b695-24e480289b99.png
@@ -193,7 +206,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/soldadora-inverter-compacta-power-hunt-centella130-conecta-en-127v-toma-de-pared-casera-o-220v-taller-industrial-hasta-120a-de-potencia-ciclo-de-trabajo-85-tecnologia-inverter-peso-ligero-y-menor-consumo-respaldada-por-marvelsa-y-500-centros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_64ef2bd4-0aa5-4573-bf51-ff77b3a894c8.png
 - **```
-Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `id:44163878125656` · $30,804 (antes $61,608) · Parazzini · GPDS8.5M
+Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $28,032 (antes $30,804) · Parazzini · GPDS8.5M · ⚡PROMO
   Bloque 1 — Hero / Gancho principal · 72 dB. El generador que nadie escuchará. · Mientras otros generadores hacen más ruido que una motosierra (85–88 dB), el Parazzini GPDS8.5M trabaja a 72 dB medidos a 7 metros — el…
   PDP: https://ferre24.com.mx/products/generador-diesel-silencioso-parazzini-gpds8-5m-solo-72-db-apto-para-hoteles-residencias-y-oficinas-7-0-kw-monofasico-110-220v-arranque-electrico-envio-con-flete-especial
 
@@ -224,7 +237,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `id:441638781256
   ### Potencia de campo donde no llega la electricidad · La Kawashima BK621-1.5C es una motobomba centrífuga de 62cc y motor 2 tiempos diseñada para riego agrícola, trasvase de agua y drenaje en zonas sin acceso a red…
   PDP: https://ferre24.com.mx/products/kawashima-bk621-1-5c
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_62635.png
-- **Kawashima KTR26** · `id:44165665456216` · $4,257 (antes $7,739) · Kawashima · KTR26
+- **Kawashima KTR26** · `KTR26` · $2,341 (antes $4,257) · Kawashima · KTR26 · ⚡PROMO 9MSI
   Motor eficiente para jornadas completas en campo · El Kawashima KTR26 es un aspersor motorizado de mochila con motor 2 tiempos de 26 cc que trabaja hasta 7,500 RPM. Con 1.4 HP, está calibrado para su clase: no es un…
   PDP: https://ferre24.com.mx/products/kawashima-ktr26-aspersor-motorizado-26-cc-con-bomba-rompeolas-y-tanque-22-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_320d17be-6038-4479-b339-3ef6c21bcbe6.png
@@ -612,11 +625,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `id:441638781256
   Si fumas grandes extensiones y la presión cae a mitad del campo, el problema no es el motor — es el calibre de la manguera. · Las parihuelas estándar trabajan con manguera de 8 a 8.5 mm. A distancia, eso significa…
   PDP: https://ferre24.com.mx/products/parihuela-alta-presion-manguera-13-mm-pro-fumigacion-profesional-en-grandes-extensiones
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_19e67d04-d3f4-4a4f-baf8-8d09ec4c588d.png
-- **Parihuela Parazzini 6.5 hp** · `id:44163974758488` · $6,920 (antes $12,582) · Parazzini · PPSB6.5AK
+- **Parihuela Parazzini 6.5 hp** · `PPSB6.5AK` · $5,744 (antes $6,920) · Parazzini · PPSB6.5AK · ⚡PROMO 12MSI
   Comprar la parihuela y después buscar los accesorios es una pérdida de tiempo y dinero · La historia se repite: el operador tiene prisa porque la temporada de fumigación ya empezó, se compra el equipo base, y entonces…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-kit-completo-con-accesorios
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/marvelsa_img_01_hero.png
-- **Parihuela Parazzini 6.5HP Transmisión Directa** · `id:44163981443160` · $7,294 (antes $13,261) · Parazzini · PPSB6.5B
+- **Parihuela Parazzini 6.5HP Transmisión Directa** · `PPSB6.5BK` · $6,054 (antes $7,294) · Parazzini · PPSB6.5B · ⚡PROMO 12MSI
   La temporada no espera: cuando el brote de plaga aparece, necesitas una fumigadora que arranque, mantenga presión y no te deje a medias en el campo. · Lo que ningún catálogo te dice · La transmisión directa simplifica…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5hp-transmision-directa-kit-manguera-y-carrete
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_marvelsa_8dcca9af-ddee-48f9-8e94-b81b3285f2c5.png
@@ -827,7 +840,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `id:441638781256
 
 ## Otros (15)
 
-- **GPD8.5T** · `id:44163877666904` · $26,872 (antes $53,744) · Parazzini Pro · GPD8.5T
+- **GPD8.5T** · `GPD8.5T` · $24,454 (antes $26,872) · Parazzini Pro · GPD8.5T · ⚡PROMO
   El problema que resuelve · Cada corte de luz le cuesta dinero a tu negocio: cuartos fríos que suben de temperatura, máquinas que se detienen a la mitad, servicios interrumpidos, clientes insatisfechos. Y cada vez que…
   PDP: https://ferre24.com.mx/products/gpd8-5t
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6e1ecc85-6e04-4ce0-bb96-32fe8ce8dd2a.png

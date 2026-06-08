@@ -104,6 +104,26 @@
       "shopify_price": "5111.00"
     },
     {
+      "sku": "KTR26",
+      "sku_upper": "KTR26",
+      "producto": "Aspersor motorizado 26 cc rompeolas",
+      "regular_price": 4256.62,
+      "promo_price": 2341.14,
+      "pct_desc": "45%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "4256.62"
+    },
+    {
       "sku": "MAKO65",
       "sku_upper": "MAKO65",
       "producto": "Motosierra Kawashima Pro MAKO65 — 65 cc, Barra de 20\" + Kit de 2 Barras y 2 Cadenas",
@@ -240,7 +260,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "38642.56"
+      "shopify_price": "25683.46"
     },
     {
       "sku": "BK1440",
@@ -363,6 +383,63 @@
       "shopify_price": "3699.48"
     },
     {
+      "sku": "GH26000E-A",
+      "sku_upper": "GH26000E-A",
+      "producto": "Generador estacionario a gas LP de 22 Kw (no incluye bateria) - Trifasico",
+      "regular_price": 143920.0,
+      "promo_price": 135284.8,
+      "pct_desc": "6%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "143920.00"
+    },
+    {
+      "sku": "GP10000GAS",
+      "sku_upper": "GP10000GAS",
+      "producto": "Generador estacionario a gas LP y GN de 10 Kw - Monofasico",
+      "regular_price": 96775.0,
+      "promo_price": 82258.75,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "96775.00"
+    },
+    {
+      "sku": "GP10000GAS-T",
+      "sku_upper": "GP10000GAS-T",
+      "producto": "Generador estacionario a gas LP y GN de 10 Kw - Trifasico",
+      "regular_price": 96775.0,
+      "promo_price": 87097.5,
+      "pct_desc": "10%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "96775.00"
+    },
+    {
       "sku": "GP5500",
       "sku_upper": "GP5500",
       "producto": "Generador a Gasolina Parazzini GP5500 — 5500W, 9HP, Encendido Manual",
@@ -402,6 +479,103 @@
       "shopify_price": "24989.28"
     },
     {
+      "sku": "GPD8.5T",
+      "sku_upper": "GPD8.5T",
+      "producto": "Generador Parazzini 8.5 Kw Trifasico Diesel entrada ATS",
+      "regular_price": 26872.0,
+      "promo_price": 24453.52,
+      "pct_desc": "9%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "26872.00"
+    },
+    {
+      "sku": "GPDS14M",
+      "sku_upper": "GPDS14M",
+      "producto": "Generador Parazzini Silecioso 14 Kw Monofasico Diesel",
+      "regular_price": 87110.0,
+      "promo_price": 79270.1,
+      "pct_desc": "9%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "87110.00"
+    },
+    {
+      "sku": "GPDS14T",
+      "sku_upper": "GPDS14T",
+      "producto": "Generador Parazzini Silecioso 14 Kw Trifasico Diesel",
+      "regular_price": 87110.0,
+      "promo_price": 76656.8,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "87110.00"
+    },
+    {
+      "sku": "GPDS8.5M",
+      "sku_upper": "GPDS8.5M",
+      "producto": "Generador Parazzini Silencioso 8.5 Kw Monofasico Diesel",
+      "regular_price": 30804.0,
+      "promo_price": 28031.64,
+      "pct_desc": "9%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "30804.00"
+    },
+    {
+      "sku": "GPDS8.5T",
+      "sku_upper": "GPDS8.5T",
+      "producto": "Generador Parazzini Silencioso 8.5 Kw Trifasico Diesel",
+      "regular_price": 31698.0,
+      "promo_price": 27894.24,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "31698.00"
+    },
+    {
       "sku": "GPIS3.5KW",
       "sku_upper": "GPIS3.5KW",
       "producto": "Generador inverter 3.5 KW dual fuel compacto silencioso",
@@ -439,82 +613,99 @@
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
       "shopify_price": "9560.46"
+    },
+    {
+      "sku": "MP2.8",
+      "sku_upper": "MP2.8",
+      "producto": "Motor Parazzini 2.8 HP / 97cc",
+      "regular_price": 3248.0,
+      "promo_price": 2858.24,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "3248.00"
+    },
+    {
+      "sku": "MP7FF",
+      "sku_upper": "MP7FF",
+      "producto": "Motor 7 hp 4 tiempos con doble filtro de aire",
+      "regular_price": 3816.0,
+      "promo_price": 3358.08,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "3816.00"
+    },
+    {
+      "sku": "PPSB6.5AK",
+      "sku_upper": "PPSB6.5AK",
+      "producto": "Parihuela 6.5 hp Transmisión Directa kit-Manguera y Carrete",
+      "regular_price": 6920.0,
+      "promo_price": 5743.6,
+      "pct_desc": "17%",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "6920.00"
+    },
+    {
+      "sku": "PPSB6.5BK",
+      "sku_upper": "PPSB6.5BK",
+      "producto": "Parihuela 6.5 hp Transmisión Directa tipo M Kit -Manguera y carrete",
+      "regular_price": 7294.0,
+      "promo_price": 6054.02,
+      "pct_desc": "17%",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "Pendiente subir",
+      "in_shopify": true,
+      "shopify_price": "7294.00"
     }
   ],
   "excluidos_sin_pdp": [
-    {
-      "sku": "KTR26",
-      "producto": "Aspersor motorizado 26 cc rompeolas",
-      "estado_landing": "En landing"
-    },
     {
       "sku": "BK7.530",
       "producto": "Motobomba Agrícola 3HP Aluminio Autocebante — 200 L/min, Altura 15m, Boca 1.5\"",
       "estado_landing": "Pendiente subir"
     },
     {
-      "sku": "GH26000E-A",
-      "producto": "Generador estacionario a gas LP de 22 Kw (no incluye bateria) - Trifasico",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "GP10000GAS",
-      "producto": "Generador estacionario a gas LP y GN de 10 Kw - Monofasico",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "GP10000GAS-T",
-      "producto": "Generador estacionario a gas LP y GN de 10 Kw - Trifasico",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "GPD8.5T",
-      "producto": "Generador Parazzini 8.5 Kw Trifasico Diesel entrada ATS",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "GPDS14M",
-      "producto": "Generador Parazzini Silecioso 14 Kw Monofasico Diesel",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "GPDS14T",
-      "producto": "Generador Parazzini Silecioso 14 Kw Trifasico Diesel",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "GPDS8.5M",
-      "producto": "Generador Parazzini Silencioso 8.5 Kw Monofasico Diesel",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "GPDS8.5T",
-      "producto": "Generador Parazzini Silencioso 8.5 Kw Trifasico Diesel",
-      "estado_landing": "Pendiente subir"
-    },
-    {
       "sku": "LMH-1000W",
       "producto": "Foco de Haluro metálico 1000W",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "MP2.8",
-      "producto": "Motor Parazzini 2.8 HP / 97cc",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "MP7FF",
-      "producto": "Motor 7 hp 4 tiempos con doble filtro de aire",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "PPSB6.5AK",
-      "producto": "Parihuela 6.5 hp Transmisión Directa kit-Manguera y Carrete",
-      "estado_landing": "Pendiente subir"
-    },
-    {
-      "sku": "PPSB6.5BK",
-      "producto": "Parihuela 6.5 hp Transmisión Directa tipo M Kit -Manguera y carrete",
       "estado_landing": "Pendiente subir"
     }
   ]
