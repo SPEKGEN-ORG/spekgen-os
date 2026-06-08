@@ -816,10 +816,10 @@ sub_order_create = f24_process_order_module(42, 3100, 300, parse_module_id=8)
 sub_order_link = ghl_send_payment_link_module(43, 3300, 300, order_http_module_id=42)
 sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8)
 
-# Sub-route de HANDOFF: aviso por EMAIL al equipo cuando action es escalate/human_handoff.
-# (El tag GHL se reintroduce después; el módulo raw causó BundleValidationError en runtime.)
-# El email ya se validó en producción (llegó correctamente en la 1ª prueba).
+# Sub-route de HANDOFF: email al equipo + tag GHL cuando action es escalate/human_handoff.
+# Email validado en prod. Tag con body via data structure (NO raw) + onerror (best-effort).
 sub_handoff_email = team_email_module(45, 2900, 600)   # lleva el ESCALATE_FILTER (gate de la sub-route)
+sub_handoff_tag = ghl_tag_handoff_module(46, 3150, 600)
 
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
@@ -827,7 +827,7 @@ post_parse_router = {
     "routes": [
         {"flow": [sub_normal_send, sub_normal_ds]},
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
-        {"flow": [sub_handoff_email]},
+        {"flow": [sub_handoff_email, sub_handoff_tag]},
     ],
 }
 
