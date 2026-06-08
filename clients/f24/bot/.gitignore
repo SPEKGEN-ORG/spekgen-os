@@ -1,0 +1,7 @@
+# Nunca commitear: el blueprint generado lleva llaves embebidas (Anthropic + GHL PIT)
+_BLUEPRINTS/
+logs/
+token.json
+*.env
+.env
+sa.json

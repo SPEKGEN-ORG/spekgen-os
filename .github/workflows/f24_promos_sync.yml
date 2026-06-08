@@ -1,0 +1,84 @@
+name: F24 Promos Sync → Bot
+
+# Lee la hoja "🔥 PROMO ACTIVA" del Sheet INVENTARIO F24 (source of truth del equipo),
+# sincroniza precios promo + tag msi-912 a Shopify, regenera el knowledge del bot y
+# redeploya el cerebro en Make. Japan-proof: corre solo en la nube.
+
+on:
+  schedule:
+    - cron: '0 16,22 * * *'   # 09:00 y 15:00 La Paz (GMT-7) = 16:00 y 22:00 UTC
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Solo previsualizar (no escribe Shopify ni deploya)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: clients/f24/bot
+    env:
+      SHOPIFY_SHOP: ${{ secrets.F24_SHOPIFY_SHOP }}
+      SHOPIFY_CLIENT_ID: ${{ secrets.F24_SHOPIFY_CLIENT_ID }}
+      SHOPIFY_CLIENT_SECRET: ${{ secrets.F24_SHOPIFY_CLIENT_SECRET }}
+      SHOPIFY_API_VERSION: ${{ secrets.F24_SHOPIFY_API_VERSION }}
+      SHOPIFY_PRIMARY_DOMAIN: ${{ secrets.F24_SHOPIFY_PRIMARY_DOMAIN }}
+      GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.F24_ANTHROPIC_API_KEY }}
+      MAKE_API_TOKEN: ${{ secrets.MAKE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Write Google service account
+        env:
+          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
+        run: |
+          printf '%s' "$GCP_SA_JSON" > "$RUNNER_TEMP/sa.json"
+          echo "GOOGLE_SA_PATH=$RUNNER_TEMP/sa.json" >> "$GITHUB_ENV"
+
+      - name: Sync promos → Shopify (precios + tag msi-912) + promos_active.json
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python3 sync_f24_promos.py
+          else
+            python3 sync_f24_promos.py --apply
+          fi
+
+      - name: Rebuild knowledge base
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: python3 build_f24_knowledge.py
+
+      - name: Build Make blueprint
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: python3 build_f24_bot_blueprint.py
+
+      - name: Deploy to Make (scenario 5258612 / dev)
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: ./deploy_f24_bot.sh dev "$(date -u +%Y%m%d-%H%M)"
+
+      - name: Commit regenerated artifacts
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          git config user.name "spekgen-bot"
+          git config user.email "spekgen.ai@gmail.com"
+          git add clients/f24/bot/F24_BOT_KNOWLEDGE/promos_active.json \
+                  clients/f24/bot/F24_BOT_KNOWLEDGE/catalog.json \
+                  clients/f24/bot/F24_BOT_KNOWLEDGE/CATALOG_INDEX.md \
+                  clients/f24/bot/_promo_state.json || true
+          git commit -m "chore(f24): promo sync $(date -u +%Y-%m-%d)" || echo "nothing to commit"
+          git push || echo "push failed"
