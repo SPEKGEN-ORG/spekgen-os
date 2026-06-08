@@ -121,7 +121,7 @@
       "vigente": true,
       "estado_landing": "En landing",
       "in_shopify": true,
-      "shopify_price": "4256.62"
+      "shopify_price": "2341.14"
     },
     {
       "sku": "MAKO65",
@@ -398,7 +398,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "143920.00"
+      "shopify_price": "135284.80"
     },
     {
       "sku": "GP10000GAS",
@@ -418,7 +418,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "96775.00"
+      "shopify_price": "82258.75"
     },
     {
       "sku": "GP10000GAS-T",
@@ -437,7 +437,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "96775.00"
+      "shopify_price": "87097.50"
     },
     {
       "sku": "GP5500",
@@ -495,7 +495,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "26872.00"
+      "shopify_price": "24453.52"
     },
     {
       "sku": "GPDS14M",
@@ -514,7 +514,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "87110.00"
+      "shopify_price": "79270.10"
     },
     {
       "sku": "GPDS14T",
@@ -534,7 +534,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "87110.00"
+      "shopify_price": "76656.80"
     },
     {
       "sku": "GPDS8.5M",
@@ -553,7 +553,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "30804.00"
+      "shopify_price": "28031.64"
     },
     {
       "sku": "GPDS8.5T",
@@ -573,7 +573,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "31698.00"
+      "shopify_price": "27894.24"
     },
     {
       "sku": "GPIS3.5KW",
@@ -632,7 +632,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "3248.00"
+      "shopify_price": "2858.24"
     },
     {
       "sku": "MP7FF",
@@ -652,7 +652,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "3816.00"
+      "shopify_price": "3358.08"
     },
     {
       "sku": "PPSB6.5AK",
@@ -673,7 +673,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "6920.00"
+      "shopify_price": "5743.60"
     },
     {
       "sku": "PPSB6.5BK",
@@ -694,7 +694,7 @@
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
-      "shopify_price": "7294.00"
+      "shopify_price": "6054.02"
     }
   ],
   "excluidos_sin_pdp": [

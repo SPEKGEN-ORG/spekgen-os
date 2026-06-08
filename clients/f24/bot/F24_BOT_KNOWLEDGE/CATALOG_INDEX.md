@@ -58,7 +58,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Especificaciones completas · SKU GH26000E-AM Motor · Tipo de motor Gas LP (Propano) · Combustible gas_lp · Encendido electrico · Identificación · Marca Parazzini Pro · Modelo GH26000E-AM · SKU GH26000E-AM
   PDP: https://ferre24.com.mx/products/gh26000e-a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1c8dce99-76a2-4486-9a1a-aeafe3b41865.png
-- **GH26000E-AM** · `id:44163884679256` · $137,219 (antes $274,438) · Parazzini Pro · GH26000E-AM
+- **GH26000E-AM** · `GH26000E-AM` · $137,219 (antes $274,438) · Parazzini Pro · GH26000E-AM
   Especificaciones completas · SKU GH26000E-AM Motor · Tipo de motor Gas LP (Propano) · Combustible gas_lp · Encendido electrico · Identificación · Marca Parazzini Pro · Modelo GH26000E-AM · SKU GH26000E-AM
   PDP: https://ferre24.com.mx/products/gh26000e-am
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a2a5dcd9-bed7-428e-af23-29e3da79de59.png
@@ -70,7 +70,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Especificaciones completas · SKU GPDS8.5T Motor · Potencia 15 HP · Tipo de motor Diesel · Combustible diesel · Cilindrada 531 cc · Encendido electrico · Tanque 24 L · Físicas · Peso 170 kg · Dimensiones (L × An × Al) 91…
   PDP: https://ferre24.com.mx/products/el-parazzini-gpds8-5t-rompe-el-paradigma-generador-diesel-trifasico-profesional-que-opera-a-solo-72-db-a-7-metros-mas-silencioso-que-una-conversacion-normal-disenado-para-instalaciones-que-exigen-lo-que-el-mercado-consideraba-imposible-potenci
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3e44300a-491a-4e96-bbbd-55a09ac04ace.png
-- **Generador Diesel Trifásico 15,000W / 18.75 kVA Arranque Eléctrico** · `id:44163879239768` · $74,338 (antes $135,160) · Parazzini · GPD15000T
+- **Generador Diesel Trifásico 15,000W / 18.75 kVA Arranque Eléctrico** · `GPD15000T` · $74,338 (antes $135,160) · Parazzini · GPD15000T
   Potencia industrial sin compromisos · Cuando la luz se va, las pérdidas empiezan a contar en miles de pesos por hora. El Parazzini GPD15000T es el generador diesel trifásico de mayor potencia en la línea open-frame de…
   PDP: https://ferre24.com.mx/products/generador-diesel-trifasico-15-000w-18-75-kva-arranque-electrico-parazzini-gpd15000t
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_969c4766-2c58-4cee-a5e9-c442d68cf112.png
@@ -94,7 +94,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Conectaste tu refrigerador, tu computadora o tus herramientas a un generador convencional y temiste dañarlos? Es un miedo justificado: los generadores comunes entregan energía "sucia", con picos que arruinan tarjetas…
   PDP: https://ferre24.com.mx/products/generador-inverter-parazzini-gpidji9500-9500-w-19-hp-a-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c28318a-fedb-471c-9536-06e643d6867f.png
-- **Generador Parazzini 20 kW Gasolina V-Twin 36 HP** · `id:44163882188888` · $117,086 (antes $216,825) · Parazzini · GP20KWT
+- **Generador Parazzini 20 kW Gasolina V-Twin 36 HP** · `GP20KWT` · $117,086 (antes $216,825) · Parazzini · GP20KWT
   ¿Tu taller, obra o evento depende de la red eléctrica y no puedes permitirte un corte? · Con el Generador Parazzini GP20KWT llevas 20 kW de potencia continua donde la red no llega — o donde no puedes arriesgarte a que…
   PDP: https://ferre24.com.mx/products/generador-parazzini-20-kw-gasolina-v-twin-36-hp-gp20kwt
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aec6a174-aecc-4d14-8979-26755af07f2d.png
@@ -170,7 +170,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Un corte de CFE no debería detener tu negocio ni tu producción. · Los talleres, panaderías, clínicas y pequeñas industrias que operan con equipos trifásicos de 220 V saben lo que cuesta un apagón: máquinas paradas,…
   PDP: https://ferre24.com.mx/products/generador-estacionario-trifasico-10-kw-gas-lp-gn-ats-automatico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e542c913-faa0-4c76-9521-74e8f4d8e814.png
-- **Generador portátil Parazzini GP31200** · `id:44163876225112` · $6,059 (antes $11,651) · Parazzini · GP31200
+- **Generador portátil Parazzini GP31200** · `GP31200` · $6,059 (antes $11,651) · Parazzini · GP31200
   ¿Por qué el Parazzini GP31200? · Cuando se va la luz, no tienes tiempo para complicaciones. El GP31200 arranca con un jalón de cuerda y en segundos tienes energía para lo que importa: iluminación, refrigerador,…
   PDP: https://ferre24.com.mx/products/generador-portatil-parazzini-gp31200-motor-3hp-1-200w-max-tanque-6-3-l-7-h-de-autonomia-respaldo-confiable-para-hogar-campo-y-emergencias-desde-4-769-mxn
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b928415c-c27e-42ea-b65e-9a0d197896bb.png
@@ -178,11 +178,11 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Te has quedado sin luz justo cuando más la necesitabas, o batallando con un generador que arranca a la tercera y truena tus aparatos? El Parazzini BAKARAC300-G resuelve las dos cosas con un equipo que la mayoría no…
   PDP: https://ferre24.com.mx/products/generador-soldador-inverter-parazzini-bakarac300-g-7-7-kw-17-hp-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f540661b-1e7e-4d85-adaf-8cbb90453c8f.png
-- **Motor Diesel 15 HP Parazzini MP15D con Arranque Eléctrico** · `id:44163952705624` · $11,992 (antes $21,804) · Parazzini · MP15D
+- **Motor Diesel 15 HP Parazzini MP15D con Arranque Eléctrico** · `MP15D` · $11,992 (antes $21,804) · Parazzini · MP15D
   ¿Harto de motores que fallan justo cuando más los necesitas? Un motor diesel de calidad dudosa puede pararte una jornada completa de siembra, obra o producción — y las refacciones que no aparecen en región cuestan tres…
   PDP: https://ferre24.com.mx/products/motor-diesel-15-hp-parazzini-mp15d-con-arranque-electrico-para-bomba-generador-y-obra
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_marvelsa.png
-- **Motor Estacionario V-twin 22 HP Parazzini MP22** · `id:44163939860568` · $26,670 (antes $48,491) · Parazzini · MP22
+- **Motor Estacionario V-twin 22 HP Parazzini MP22** · `MP22` · $26,670 (antes $48,491) · Parazzini · MP22
   Cuando un motor industrial falla, cada hora parada cuesta dinero. El Parazzini MP22 es la solución de potencia que mantiene operando tus equipos sin vaciar el presupuesto: 22 HP de fuerza real en configuración V-twin…
   PDP: https://ferre24.com.mx/products/motor-estacionario-v-twin-22-hp-parazzini-mp22-arranque-electrico
 - **Motor Parazzini 2.8 HP / 97cc** · `MP2.8` · $2,858 (antes $3,248) · Parazzini · MP2.8 · ⚡PROMO 9MSI
@@ -193,7 +193,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Si tu motor falló en plena jornada y el repuesto OEM te cuesta el doble de lo que vale el equipo, el Parazzini MP7FF es la respuesta. Potencia de 7 HP real, motor 4 tiempos OHV de gasolina, arranque manual confiable —…
   PDP: https://ferre24.com.mx/products/motor-parazzini-7-hp-4-tiempos-doble-filtro-de-aire-para-obra-y-campo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a88a5405-9e76-46eb-b020-58166c2a3de8.png
-- **Parazzini MP10D** · `id:44163946709080` · $10,969 (antes $19,944) · Parazzini · MP10D
+- **Parazzini MP10D** · `MP10D` · $10,969 (antes $19,944) · Parazzini · MP10D
   ¿Tu motor tronó en plena temporada y el de repuesto no llega en días? El Parazzini MP10D está en stock y sale al día siguiente. · Motor diesel estacionario de 10HP diseñado para trabajo continuo en campo, obra y taller.…
   PDP: https://ferre24.com.mx/products/parazzini-mp10d-motor-diesel-10hp-con-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b1537fbd-a360-420b-9b9e-80009aa13f7f.png
@@ -201,7 +201,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Un apagón no avisa — y en un negocio, cada minuto sin luz es dinero perdido. · Si tu taller, local comercial o rancho depende de corriente trifásica para operar, ya sabes lo que cuesta un corte inesperado: producción…
   PDP: https://ferre24.com.mx/products/parazzini-pro-gpds14t-generador-silencioso-14-kw-trifasico-diesel
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_e1bcba76-8eb7-484f-b695-24e480289b99.png
-- **Soldadora inverter compacta Power Hunt CENTELLA130** · `id:44163886973016` · $1,166 (antes $2,120) · Power Hunt · CENTELLA130
+- **Soldadora inverter compacta Power Hunt CENTELLA130** · `CENTELLA130` · $1,166 (antes $2,120) · Power Hunt · CENTELLA130
   Conecta donde quieras. Suelda como profesional. · La CENTELLA130 resuelve el problema que frena a la mayoría de quienes quieren soldar: no tener 220V en casa . Con entrada dual 127V/220V automática, esta soldadora…
   PDP: https://ferre24.com.mx/products/soldadora-inverter-compacta-power-hunt-centella130-conecta-en-127v-toma-de-pared-casera-o-220v-taller-industrial-hasta-120a-de-potencia-ciclo-de-trabajo-85-tecnologia-inverter-peso-ligero-y-menor-consumo-respaldada-por-marvelsa-y-500-centros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_64ef2bd4-0aa5-4573-bf51-ff77b3a894c8.png
@@ -220,13 +220,13 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Fumigar una hectárea a mano tarda horas y agota antes de terminar. Con una fumigadora manual de 16 litros tienes que detenerte a recargar constantemente, y si tu parcela no tiene toma de corriente, los equipos…
   PDP: https://ferre24.com.mx/products/aspersor-motorizado-kawashima-kf35x-35cc
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b1b2d0f-443a-445f-96b0-f220d5a53842.png
-- **Aspersora Motorizada Parazzini 6.5 HP** · `id:44163967811672` · $4,914 (antes $8,934) · Parazzini · PPSB6.5B
+- **Aspersora Motorizada Parazzini 6.5 HP** · `PPSB6.5B` · $4,914 (antes $8,934) · Parazzini · PPSB6.5B
   Si fumiga herbicidas o fungicidas de contacto, su bomba de pistón está en cuenta regresiva. · Los agroquímicos agresivos — glifosato, paraquat, cobre, azufre, fungicidas de síntesis moderna — corroen las válvulas y…
   PDP: https://ferre24.com.mx/products/aspersora-motorizada-parazzini-6-5-hp-bomba-membrana-para-herbicidas-y-fungicidas
-- **Bomba Sumergible TORNADO 4" 1.1 HP** · `id:44163872129112` · $3,522 (antes $4,824) · TORNADO · KIN58-6/1115
+- **Bomba Sumergible TORNADO 4" 1.1 HP** · `KIN58-6/1115` · $3,522 (antes $4,824) · TORNADO · KIN58-6/1115
   ¿Para qué sirve? · La Bomba Sumergible TORNADO KIN58-6/1115 está diseñada para extraer agua de pozos profundos, norias y cisternas con instalación permanente. Opera completamente sumergida, sin necesidad de cebado…
   PDP: https://ferre24.com.mx/products/bomba-sumergible-tornado-4-1-1-hp-norias-cisternas-y-pozos-hasta-50-m
-- **Bomba Sumergible TORNADO KIN58-4 1/2 HP para Norias, Cisternas y Po...** · `id:44158260478040` · $3,220 (antes $4,600) · TORNADO · KIN58-4/1127A
+- **Bomba Sumergible TORNADO KIN58-4 1/2 HP para Norias, Cisternas y Po...** · `KIN58-4/1127A` · $3,220 (antes $4,600) · TORNADO · KIN58-4/1127A
   ¿Por qué eléctrica sumergible? A diferencia de las motobombas a gasolina, esta bomba trabaja completamente sumergida en el agua. Eso la hace silenciosa, más eficiente energéticamente y libre de mantenimiento de motor a…
   PDP: https://ferre24.com.mx/products/bomba-sumergible-tornado-kin58-4-1-2-hp-para-norias-cisternas-y-pozos-profundos
 - **Bomba de Agua Periférica Eléctrica 1 HP Parazzini BPP165** · `BPP165` · $1,059 (antes $2,118) · Parazzini · BPP165
@@ -241,11 +241,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Motor eficiente para jornadas completas en campo · El Kawashima KTR26 es un aspersor motorizado de mochila con motor 2 tiempos de 26 cc que trabaja hasta 7,500 RPM. Con 1.4 HP, está calibrado para su clase: no es un…
   PDP: https://ferre24.com.mx/products/kawashima-ktr26-aspersor-motorizado-26-cc-con-bomba-rompeolas-y-tanque-22-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_320d17be-6038-4479-b339-3ef6c21bcbe6.png
-- **Kit Parihuela Parazzini 7 HP** · `id:44163994353752` · $9,675 (antes $17,591) · Parazzini · PP7BK
+- **Kit Parihuela Parazzini 7 HP** · `PP7BK` · $9,675 (antes $17,591) · Parazzini · PP7BK
   El arranque de temporada no puede esperar. · Cuando llega el momento de fumigar, cada día cuenta. La parcela no espera a que consigas manguera, a que el motor agarre ritmo o a que la bomba se cale por uso brusco. El kit…
   PDP: https://ferre24.com.mx/products/kit-parihuela-parazzini-7-hp-bomba-bronce-100-m-de-manguera
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_438f68bc-af66-4545-85ef-b1153f91b23c.png
-- **Kit Parihuela Parazzini 7 HP** · `id:44164027940952` · $8,346 (antes $15,175) · Parazzini · PP7BK
+- **Kit Parihuela Parazzini 7 HP** · `PP7B` · $8,346 (antes $15,175) · Parazzini · PP7BK
   El arranque de temporada no puede esperar. · Cuando llega el momento de fumigar, cada día cuenta. La parcela no espera a que consigas manguera, a que el motor agarre ritmo o a que la bomba se cale por uso brusco. El kit…
   PDP: https://ferre24.com.mx/products/kit-parihuela-parazzini-7-hp-bomba-bronce-100-m-de-manguera-1
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6234defe-f337-4358-b25d-fb591df2e5a0.png
@@ -349,25 +349,25 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Cuando el trabajo es grande, necesitas una bomba a la altura. La Power Hunt HUNT3 es la motobomba de 3 pulgadas diseñada para quienes riegan hectáreas, drenan sitios de construcción o controlan inundaciones sin perder…
   PDP: https://ferre24.com.mx/products/motobomba-power-hunt-7-hp-3-pulgadas-autocebante-4-tiempos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3e5817ab-ee90-4cfc-9e34-c6badbf0189e.png
-- **Motobomba Sumergible TORNADO 1.5 HP** · `id:44163872555096` · $4,897 (antes $6,995) · TORNADO · KIN58-8/1230A
+- **Motobomba Sumergible TORNADO 1.5 HP** · `KIN58-8/1230A` · $4,897 (antes $6,995) · TORNADO · KIN58-8/1230A
   Motobomba sumergible TORNADO 1.5 HP, 230V monofásica. Llena cisternas automáticamente con flotador incluido. Caudal 116 L/min, sumergencia hasta 15 m, acero inox 304. · 1.5 HP / 1.1 kW 116 L/min Descarga 1¼" NPT IP68…
   PDP: https://ferre24.com.mx/products/bomba-sumergible-electrica-tornado-4-1-5-hp-norias-cisternas-y-pozos-profundos-hasta-50-m-kin58-8-1230a
-- **Motor Parazzini MHP8 8HP 4 Tiempos** · `id:44163890675800` · $3,637 (antes $6,613) · Parazzini · MHP8
+- **Motor Parazzini MHP8 8HP 4 Tiempos** · `MHP8` · $3,637 (antes $6,613) · Parazzini · MHP8
   Tu motor se trabó, el carburador está sucio o las refacciones ya no llegan a tiempo — y el equipo parado te cuesta más que el motor mismo. El MHP8 de Parazzini es la solución directa: motor desnudo de 8 HP y 212 cc OHV…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mhp8-8hp-4-tiempos-alto-rendimiento
-- **Parihuela Diafragma 6.5 HP Parazzini** · `id:44164028137560` · $14,659 (antes $26,653) · Parazzini · PP6.5D
+- **Parihuela Diafragma 6.5 HP Parazzini** · `PP6.5D` · $14,659 (antes $26,653) · Parazzini · PP6.5D
   ¿Tu bomba de pistones falla cada temporada con herbicidas? El diafragma cambia las reglas. · La Parihuela Diafragma 6.5 HP Parazzini PP6.5D está diseñada para agricultores y fumigadores profesionales que aplican…
   PDP: https://ferre24.com.mx/products/parihuela-diafragma-6-5-hp-parazzini-bomba-resistente-a-quimicos-agresivos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7563549b-7f0a-4514-99ff-99e04132178a.png
-- **Parihuela Kawashima PK26CC** · `id:44164009525336` · $2,628 (antes $4,779) · Kawashima · PK26CC
+- **Parihuela Kawashima PK26CC** · `PK26CC` · $2,628 (antes $4,779) · Kawashima · PK26CC
   ¿Cuántas veces has tenido que interrumpir una jornada de trabajo porque el aceite estaba mal mezclado o el filtro se atascó antes de terminar? Eso no debería pasar con una máquina que llevas en la espalda todo el día. ·…
   PDP: https://ferre24.com.mx/products/parihuela-kawashima-pk26cc-motobomba-mochila-26-cc-bomba-bronce
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_88e6c009-d7eb-4399-9db2-cfb36c7fbc23.png
-- **Parihuela Motorizada Parazzini 6.5HP** · `id:44164029415512` · $26,480 (antes $49,963) · Parazzini · PP6.5T300
+- **Parihuela Motorizada Parazzini 6.5HP** · `PP6.5T300` · $26,480 (antes $49,963) · Parazzini · PP6.5T300
   La parada más cara de tu jornada es la que haces a recargar. · Cada vez que detienes la máquina para llenar un tanque de 80 o 100 litros, pierdes tiempo, combustible y ritmo. En una parcela de 10 hectáreas eso puede…
   PDP: https://ferre24.com.mx/products/parihuela-motorizada-parazzini-6-5hp-240-litros-bomba-de-bronce
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4e92957e-bfb7-4435-948b-05a9e7797968.png
-- **Parihuela Parazzini 100 litros 2.5 HP** · `id:44164029087832` · $20,517 (antes $37,303) · Parazzini · PP2.5T100
+- **Parihuela Parazzini 100 litros 2.5 HP** · `PP2.5T100` · $20,517 (antes $37,303) · Parazzini · PP2.5T100
   Trabaja donde el agua no llega. · La mayoría de los equipos de presión te dejan varado cuando no hay toma de agua cercana. La Parazzini PP2.5T100 resuelve eso desde el arranque: lleva sus propios 100 litros de agua en…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-100-litros-2-5-hp-limpieza-de-alta-presion-donde-no-hay-agua
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f34749df-d1aa-460b-b64f-5402f36d2579.png
@@ -375,7 +375,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   ¿Tu equipo se queda sin presión justo cuando más lo necesitas? · En el campo, en la obra o en el taller no hay tiempo para paros inesperados. Una bomba de acero se desgasta rápido con agua de pozo, agua dura o uso…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-bomba-bronce-508-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6969f76-511a-4962-bf9c-98df178e2992.png
-- **Parihuela Parazzini 6.5 HP** · `id:44164014899288` · $4,655 (antes $8,464) · Parazzini
+- **Parihuela Parazzini 6.5 HP** · `PP6.5A` · $4,655 (antes $8,464) · Parazzini
   ¿Tu bomba no arranca cuando más la necesitas o pierdes presión a media jornada? · El riego no espera. Tampoco la obra con agua estancada. Lo que necesitas es una motobomba que arranque al primer jalón, mueva el agua con…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-motobomba-a-gasolina-sobre-carrito
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b341efe-6ecf-41e3-a55e-2145413d7696.png
@@ -391,13 +391,13 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   ### Agua con presión constante, sin sorpresas Si tu bomba arranca cada vez que alguien abre una llave, o si la presión cae en cuanto hay más de un punto de uso abierto, el problema no es la bomba: es la falta de un…
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-65-galones-altamira-altapro-xlb65
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0d63f34a-d544-4315-a100-24ca1380e7bb.png
-- **Tanque Precargado Vertical ALTAMIRA PRO 119 Galones** · `id:44164147183704` · $15,414 (antes $22,020) · ALTAMIRA · PRO XLB119
+- **Tanque Precargado Vertical ALTAMIRA PRO 119 Galones** · `ALTAPRO XLB119` · $15,414 (antes $22,020) · ALTAMIRA · PRO XLB119
   ¿Tu bomba arranca y se detiene constantemente, o el agua llega sin presión estable? Ese ciclo corto destruye el motor y dispara tu factura de luz — el problema no es la bomba, es la falta de acumulación de presión. ·…
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-altamira-pro-119-galones-garantia-6-anos
 
 ## Hidrolavadoras (10)
 
-- **Hidrolavadora Eléctrica Industrial Parazzini Pro 10 HP** · `id:44163889528920` · $31,317 (antes $60,225) · Parazzini Pro · HPPE10
+- **Hidrolavadora Eléctrica Industrial Parazzini Pro 10 HP** · `HPPE10` · $31,317 (antes $60,225) · Parazzini Pro · HPPE10
   ¿Tu operación exige resultados en el menor tiempo posible y no puedes perder horas en recargas de combustible o mantenimientos correctivos? La Parazzini Pro HPPE10 es la respuesta para servicios de limpieza profesional,…
   PDP: https://ferre24.com.mx/products/hidrolavadora-electrica-industrial-parazzini-pro-10-hp-234-bar
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e4e68c56-4a05-4672-bfcb-cd49281c96e0.png
@@ -413,7 +413,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   La hidrolavadora eléctrica Parazzini Pro HPULTRA2100PRO está diseñada para quienes buscan el poder del lavado a alta presión sin las complicaciones de un motor a gasolina. Con un potente motor eléctrico de 2100 W , este…
   PDP: https://ferre24.com.mx/products/hidrolavadora-electrica-2320-psi-parazzini-pro-hpultra2100pro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7b9c4981-b25f-404b-bcb9-7f60592d0282.png
-- **Hidrolavadora Industrial Trifásica 5.5 kW · 3,191 PSI Parazzini Pro** · `id:44163888709720` · $26,534 (antes $51,027) · Parazzini Pro · HPPE7.5
+- **Hidrolavadora Industrial Trifásica 5.5 kW · 3,191 PSI Parazzini Pro** · `HPPE7.5` · $26,534 (antes $51,027) · Parazzini Pro · HPPE7.5
   Las hidrolavadoras baratas se ven bien en el catálogo — hasta que la bomba fuga sellos a los seis meses y no consigues ni un empaque de repuesto. Con mangueras de 30 m la presión cae a menos de 2,000 PSI y terminas…
   PDP: https://ferre24.com.mx/products/hidrolavadora-industrial-trifasica-5-5-kw-3-191-psi-parazzini-pro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_786f4559-9603-4b0f-b1e6-b97b97fd4943.png
@@ -433,18 +433,18 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   ¿Tu hidrolavadora eléctrica ya no alcanza para limpiar maquinaria pesada, carrocerías o el rancho? Cuando la suciedad es de verdad, necesitas potencia de verdad. · La Parazzini HP13N entrega 3,600 PSI de presión y 17…
   PDP: https://ferre24.com.mx/products/parazzini-hp13n-hidrolavadora-gasolina-13-hp-3-600-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/ferrepat_hero.png
-- **Parazzini Pro HPPE4** · `id:44165125374040` · $19,655 (antes $37,798) · Parazzini · HPPE4M
+- **Parazzini Pro HPPE4** · `HPPE4` · $19,655 (antes $37,798) · Parazzini · HPPE4M
   La hidrolavadora eléctrica Parazzini Pro HPPE4M con motor de 2.2 kW es tu mejor aliada para limpiezas profundas en el hogar y el taller. Su potente motor eléctrico ofrece un hidrolavado eficiente sin las emisiones y el…
   PDP: https://ferre24.com.mx/products/hppe4
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c77ca6b-ce00-4171-a1f2-dfde54730647.png
 
 ## Compresores (8)
 
-- **Compresor 80 L libre de aceite, doble conexión rápida.** · `id:44163875864664` · $7,085 (antes $14,170) · Power Hunt · CP80SA
+- **Compresor 80 L libre de aceite, doble conexión rápida.** · `CP80SA` · $7,085 (antes $14,170) · Power Hunt · CP80SA
   Si ya tienes tu pistola de pintura, tu manguera y tus acoples, no necesitas pagar por accesorios que no vas a usar. El Power Hunt CP80SA es exactamente eso: el corazón de tu sistema de aire comprimido, sin nada de más.…
   PDP: https://ferre24.com.mx/products/compresor-80-l-libre-de-aceite-doble-conexion-rapida-aire-limpio-para-pintura-y-neumatica-sin-kit-tu-usas-tus-accesorios
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_70937529-8c39-4e05-b41e-5ce12bfd7c5e.png
-- **Compresor Eléctrico Power Hunt 80 L 3 HP** · `id:44163809902680` · $4,523 (antes $9,046) · Power Hunt · COMPHKIT80L
+- **Compresor Eléctrico Power Hunt 80 L 3 HP** · `COMPHKIT80L` · $4,523 (antes $9,046) · Power Hunt · COMPHKIT80L
   El Compresor Power Hunt COMPHKIT80L está diseñado para quien trabaja en serio. Con un motor eléctrico de 3 HP y un tanque de 80 litros , entrega aire de forma continua durante toda la jornada laboral sin los cortes de…
   PDP: https://ferre24.com.mx/products/compresor-electrico-power-hunt-80-l-3-hp-doble-conexion-rapida-kit-manguera-y-pistola-de-gravedad
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_619ee965-1beb-4809-a495-f699ed41e6a9.png
@@ -452,7 +452,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   El Compresor Power Hunt COMPHKIT50L es la solución completa para quien necesita potencia real sin perder tiempo buscando accesorios por separado. Con motor eléctrico de 2.5 HP y tanque de 50 litros , este equipo alcanza…
   PDP: https://ferre24.com.mx/products/compresor-power-hunt-2-5-hp-50-lts-kit-completo-manguera-pistola-gravedad
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d7aaeb1c-74a7-4c97-a03f-84957ab61552.png
-- **Compresor Power Hunt 50 L** · `id:44158304288856` · $3,358 (antes $6,717) · Power Hunt · CP50SA
+- **Compresor Power Hunt 50 L** · `CP50SA` · $3,358 (antes $6,717) · Power Hunt · CP50SA
   Trabaja más, mantén menos · El Power Hunt CP50SA es el compresor ideal para el taller, el garaje y el trabajo en campo que exige resultados sin interrupciones. Con una bomba 100 % libre de aceite eliminas por completo…
   PDP: https://ferre24.com.mx/products/compresor-power-hunt-50-l-libre-de-aceite-doble-conexion-rapida
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8753616b-ddc6-45bf-8d01-7afbcb41164a.png
@@ -491,15 +491,15 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Cuando el trabajo es tala real — árboles de gran diámetro, maderas de alta densidad, jornadas de 8 horas en campo — necesitas una herramienta que no te abandone a media mañana. La Motosierra Kawashima 62cc con barra de…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-62cc-barra-22-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0b9d3dcf-6a4a-4b4a-b381-8105b75f26f1.png
-- **Motosierra Kawashima Dakota 38cc** · `id:44164108681304` · $2,448 (antes $4,451) · Kawashima Dakota · MKD3816
+- **Motosierra Kawashima Dakota 38cc** · `MKD3816` · $2,448 (antes $4,451) · Kawashima Dakota · MKD3816
   Motosierra Kawashima Dakota 38cc — Lista para trabajar desde el primer día · ¿Tienes árboles que podar, leña que cortar o un jardín que ordenar? La Kawashima Dakota MKD3816 es la motosierra que necesitas: potencia real…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-38cc-barra-16-con-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1ee88704-4d4f-4441-a9ff-3f0afdac29a1.png
-- **Motosierra Kawashima Dakota 45cc** · `id:44164108812376` · $2,761 (antes $5,019) · Kawashima Dakota · MKD4518
+- **Motosierra Kawashima Dakota 45cc** · `MKD4518` · $2,761 (antes $5,019) · Kawashima Dakota · MKD4518
   ¿Tu motosierra no arranca o tarda diez intentos antes de encender? En la mayoría de los casos el problema no es la herramienta — es la mezcla de combustible. La Kawashima Dakota MKD4518 llega lista para trabajar: motor…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-45cc-barra-18-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_37f988bc-21c0-4e3a-b050-8cd8f30fe256.png
-- **Motosierra Kawashima Dakota 52cc** · `id:44164108976216` · $2,813 (antes $5,114) · Kawashima Dakota · MKD5220
+- **Motosierra Kawashima Dakota 52cc** · `MKD5220` · $2,813 (antes $5,114) · Kawashima Dakota · MKD5220
   ¿Tu motosierra no arranca o el carburador se obstruye a cada rato? · El problema más común con motosierras de gasolina no es la herramienta — es la mezcla incorrecta de combustible. Un error en la proporción…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-52cc-barra-20-pulg-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_656b333f-7cb7-47a9-af7a-c272ad7bbe31.png
@@ -507,11 +507,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Que se te quede una motosierra a media poda es perder la mañana. Y casi siempre es lo mismo: bujía sucia, combustible viejo o una mezcla de gasolina mal hecha que ya castigó el motor. La Motosierra Kawashima Pro 25 cc…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-25-cc-barra-12-incluye-2-barras-2-cadenas-oregon
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b0b020d-92c7-4309-a5d8-a2361ee579cd.png
-- **Motosierra Kawashima Pro 52cc** · `id:44164109959256` · $2,968 (antes $5,396) · Kawashima Pro · Motosierra 52cc 2 barras 16 pulg
+- **Motosierra Kawashima Pro 52cc** · `MAKO52` · $2,968 (antes $5,396) · Kawashima Pro · Motosierra 52cc 2 barras 16 pulg
   ¿Tu barra se desgasta a media jornada y tienes que detener el trabajo? ¿Tu motosierra no arranca a la primera cuando más la necesitas? · La Kawashima Pro MAKO52 es una motosierra profesional de 52cc diseñada para…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-52cc-2-barras-2-cadenas-oregon-incluidas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_034b73a9-bde0-48d1-85fd-8f4c434fd088.png
-- **Motosierra Kawashima Pro 58 cc** · `id:44164114481240` · $3,766 (antes $6,847) · Kawashima Pro · MAKO58
+- **Motosierra Kawashima Pro 58 cc** · `MAKO58` · $3,766 (antes $6,847) · Kawashima Pro · MAKO58
   La motosierra que no te deja tirado a la mitad del trabajo · Si ya quemaste una motosierra genérica en la segunda semana — o tardaste veinte minutos en arrancarla bajo el sol de agosto — sabes lo que cuesta comprar…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-58-cc-kit-completo-lista-para-trabajar
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_85641971-c7a2-4685-b048-cc675cb670dc.png
@@ -523,7 +523,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   ¿Tienes ramas altas que cortar y la única opción es subirte a una escalera tambaleante con una sierra en la mano? Esa es la combinación que termina en caídas y accidentes. La Motosierra Telescópica Kawashima 26 cc…
   PDP: https://ferre24.com.mx/products/motosierra-telescopica-kawashima-26-cc-poda-ramas-altas-sin-escalera
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_81319d8c-7e82-45b9-9675-343ab1a374ca.png
-- **Motosierra eléctrica Power Hunt 20V** · `id:44164065919064` · $2,495 (antes $4,536) · Power Hunt
+- **Motosierra eléctrica Power Hunt 20V** · `ME-PHE` · $2,495 (antes $4,536) · Power Hunt
   ¿Cansado de cargar gasolina, limpiar carburador y aguantar el humo para podar cuatro ramas en el patio? Hay una forma más limpia de hacerlo. · La motosierra eléctrica Power Hunt 20V resuelve exactamente ese problema:…
   PDP: https://ferre24.com.mx/products/motosierra-electrica-power-hunt-20v-barra-10-lubricacion-automatica-sin-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_35133dab-2528-42b7-9392-8414bc53b4cd.png
@@ -547,57 +547,57 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Las ramas altas siempre terminan en lo mismo: una escalera tambaleándose en el pasto y un susto que pudo salir caro. El serrucho de poda Kawashima PG500 elimina ese riesgo por completo. Cortas ramas a hasta 5 metros de…
   PDP: https://ferre24.com.mx/products/serrucho-poda-telescopico-kawashima-pg500-alcance-5-m
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7e0319b3-e61c-43bf-949c-3699eec59094.png
-- **Tractor Podador Parazzini PMR24** · `id:44164030759000` · $32,584 (antes $65,169) · Parazzini · PMR24
+- **Tractor Podador Parazzini PMR24** · `PMR24` · $32,584 (antes $65,169) · Parazzini · PMR24
   Cortar terrenos medianos y grandes con una podadora pequeña es perder horas que no tienes. El PMR24 de Parazzini resuelve eso: motor RV225-x de 223cc, 4 tiempos OHV, encendido eléctrico y un ancho de corte de 24…
   PDP: https://ferre24.com.mx/products/tractor-podador-parazzini-pmr24-motor-223cc-4t-24-pulgadas-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5d3676cb-554b-4a88-9259-49bf8aff4d42.png
-- **Tractor podador Troy-Bilt 42"** · `id:44164031086680` · $67,127 (antes $126,654) · Troy-Bilt · 13AN77BS309
+- **Tractor podador Troy-Bilt 42"** · `13AN77BS309` · $67,127 (antes $126,654) · Troy-Bilt · 13AN77BS309
   ¿Cuántas horas pierdes cada mes cortando pasto a mano en un terreno grande? · Si tu propiedad supera los 2,000 m² — o si mantienes jardines de clientes — cada sesión de corte es tiempo, esfuerzo y desgaste físico que se…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3584d25a-4649-4a63-b021-0b64a2cca8c2.png
 
 ## Desbrozadoras y Jardín (19)
 
-- **Aspersor Parazzini 200 L Aguilón 28"** · `id:44164118511704` · $39,372 (antes $75,715) · Parazzini · XGT12-200
+- **Aspersor Parazzini 200 L Aguilón 28"** · `XGT12-200` · $39,372 (antes $75,715) · Parazzini · XGT12-200
   Fumiga más hectáreas sin pagar un litro extra de gasolina · Si ya tienes tractor, el Parazzini XGT12-200 te da una estación de aplicación completa sin el costo ni el mantenimiento de un motor adicional. Se acopla…
   PDP: https://ferre24.com.mx/products/aspersor-parazzini-200-l-aguilon-28-pto-sin-motor-adicional
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_70f381de-29ee-4d34-ab7a-4329c3228428.png
-- **Aspersor Parazzini 200 L Kit Flecha Cardán 120 cm para Tractor 25 HP** · `id:44164122509400` · $61,916 (antes $123,833)
+- **Aspersor Parazzini 200 L Kit Flecha Cardán 120 cm para Tractor 25 HP** · `FXD5A-200K120` · $61,916 (antes $123,833)
   La flecha de 70 cm no llega — y en plena temporada, ese problema sale caro. · Si el PTO de tu tractor queda alejado del punto de montaje, la flecha corta obliga a improvisar, a comprar piezas adicionales o a perder días…
   PDP: https://ferre24.com.mx/products/aspersor-parazzini-200-l-kit-flecha-cardan-120-cm-para-tractor-25-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c860fda2-36a9-43a8-8f6e-0e6d63aa2172.png
-- **Aspersor Parazzini 200L Turbina 25HP** · `id:44164133224536` · $69,295 (antes $130,746) · Parazzini · FXL5B-200K
+- **Aspersor Parazzini 200L Turbina 25HP** · `FXL5B-200K` · $69,295 (antes $130,746) · Parazzini · FXL5B-200K
   Recupe su inversión antes de que termine la temporada. · Aplicar fungicidas y plaguicidas con mochila manual en 20 o 30 hectáreas cuesta jornadas enteras de mano de obra y decenas de recargas por día. Cada hora perdida…
   PDP: https://ferre24.com.mx/products/aspersor-parazzini-200l-turbina-25hp-kit-cardan-incluido
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a95ebe01-96fa-4022-8466-23283421a95a.png
-- **Aspersor Turbina Air-Blast 800 L Parazzini FXS8-800** · `id:44164143218776` · $93,880 (antes $187,760) · Parazzini · FXS8-800
+- **Aspersor Turbina Air-Blast 800 L Parazzini FXS8-800** · `FXS8-800` · $93,880 (antes $187,760) · Parazzini · FXS8-800
   En cultivos arbolados, la fumigación es el cuello de botella de la temporada: el aguilón horizontal no entra entre copas, los equipos de mochila son lentos, y cada parada a recargar es tiempo muerto que no se recupera.…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-air-blast-800-l-parazzini-fxs8-800-pto-75-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ae114c4d-ca3f-47f1-8d2f-40c8c4389e24.png
-- **Aspersor Turbina Parazzini 200 L** · `id:44164125425752` · $65,631 (antes $123,833) · Parazzini · FXD5A-200K
+- **Aspersor Turbina Parazzini 200 L** · `FXD5A-200K` · $65,631 (antes $123,833) · Parazzini · FXD5A-200K
   El Parazzini FXD5A-200K es el aspersor turbina de entrada de la línea Parazzini, diseñado para el productor de frutas que necesita cobertura interior de copa sin invertir en equipo sobredimensionado. Con un tanque de…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-parazzini-200-l-kit-completo-para-tractor-25-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6f2ae631-ba82-4462-9974-c40a4d6890a6.png
-- **Aspersor Turbina Parazzini 200 L** · `id:44164138336344` · $78,876 (antes $146,067) · Parazzini · FXD5A-200K
+- **Aspersor Turbina Parazzini 200 L** · `FXD5A-200` · $78,876 (antes $146,067) · Parazzini · FXD5A-200K
   El Parazzini FXD5A-200K es el aspersor turbina de entrada de la línea Parazzini, diseñado para el productor de frutas que necesita cobertura interior de copa sin invertir en equipo sobredimensionado. Con un tanque de…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-parazzini-200-l-kit-completo-para-tractor-25-hp-1
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fabaa771-4a42-420f-bb2e-8a4db3421940.png
-- **Aspersor Turbina Parazzini 600 L** · `id:44164142170200` · $96,534 (antes $175,517) · Parazzini · FXS8-600
+- **Aspersor Turbina Parazzini 600 L** · `FXS8-600` · $96,534 (antes $175,517) · Parazzini · FXS8-600
   El campo no espera — tu aspersor tampoco debería. · Fumigar a mano es lento, desigual y agotador. Un equipo mal calibrado o con poca presión deja zonas sin cobertura: hongos, virosis y pérdidas que suman cada temporada.…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-parazzini-600-l-pto-50-hp-32-24-boquillas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f8d258d-c1b4-45e9-be56-b22da3fc16b6.png
-- **Aspersor Turbina Vertical Parazzini 25HP** · `id:44164129161304` · $67,143 (antes $126,686) · Parazzini · FXL5B-200
+- **Aspersor Turbina Vertical Parazzini 25HP** · `FXL5B-200` · $67,143 (antes $126,686) · Parazzini · FXL5B-200
   En cultivos de mediana y gran escala, la presión irregular destruye la uniformidad de cobertura — y con ella, la calidad de la cosecha. Un sistema de riego que pierde presión en zonas alejadas o con desnivel no es un…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-vertical-parazzini-25hp-riego-profesional-para-cultivos-extensivos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9dbd6315-5f37-4b08-89e5-7f869d819ae1.png
-- **Aspersor de Aguijones Parazzini XGT12-300** · `id:44164120805464` · $41,930 (antes $83,859) · Parazzini · XGT12-300
+- **Aspersor de Aguijones Parazzini XGT12-300** · `XGT12-300` · $41,930 (antes $83,859) · Parazzini · XGT12-300
   ¿Tus cultivos en filas reciben el agroquímico de forma dispareja? La cobertura irregular no solo desperdicia producto — debilita el cultivo, abre la puerta a plagas y hongos, y te obliga a pasar dos veces donde solo…
   PDP: https://ferre24.com.mx/products/aspersor-de-aguijones-parazzini-xgt12-300-300-l-para-tractor-tdf
-- **Aspersor de turbina vertical 200L Parazzini** · `id:44164137091160` · $65,728 (antes $131,456) · Parazzini · FXL5B-200K120
+- **Aspersor de turbina vertical 200L Parazzini** · `FXL5B-200K120` · $65,728 (antes $131,456) · Parazzini · FXL5B-200K120
   ¿Llevas dos o tres repases por huerta y las plagas siguen en el interior de la copa? El problema no es el químico — es la distribución. Un aguijón solo ataca de frente; una turbina vertical envuelve el árbol en 360° de…
   PDP: https://ferre24.com.mx/products/aspersor-de-turbina-vertical-200l-parazzini-acoplable-a-tractor-cardan-120-cm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_180c6e62-6b94-4966-95ea-a0bdd781a18d.png
-- **Aspersora Motorizada 6.5 HP Transmisión Directa** · `id:44163960864856` · $4,540 (antes $8,254) · Parazzini · PPSB6.5A
+- **Aspersora Motorizada 6.5 HP Transmisión Directa** · `PPSB6.5A` · $4,540 (antes $8,254) · Parazzini · PPSB6.5A
   Si ya conoces la fatiga de cargar una parihuela varias horas y aun así no terminas la jornada, el problema no es el operario: es el equipo. · Las aspersoras con transmisión por correa o reductor pierden entre un 15 y…
   PDP: https://ferre24.com.mx/products/aspersora-motorizada-6-5-hp-transmision-directa-parazzini-ppsb6-5a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e7edf52a-3fb4-4851-9a72-e93efa9547b6.png
@@ -617,11 +617,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Si ya sabes lo que es fumigar con gasolina — el jalón del cordón a las 7 de la mañana, el humo adentro del invernadero, el ruido que no para — el ATV-25 de Kawashima fue hecho para ti. · Es un aspersor eléctrico de 100…
   PDP: https://ferre24.com.mx/products/kawashima-atv-25-aspersor-electrico-100-litros-sin-ruido-sin-humo-sin-esfuerzo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cfb6b08d-00c7-4276-9b4c-d0043a7c4551.png
-- **Kit Aspersor Parazzini 200 L, Aguijón 28" y Motor 35 HP** · `id:44164119068760` · $40,748 (antes $78,361) · Parazzini · XGT12-200K
+- **Kit Aspersor Parazzini 200 L, Aguijón 28" y Motor 35 HP** · `XGT12-200K` · $40,748 (antes $78,361) · Parazzini · XGT12-200K
   ¿Cuánto tiempo pierdes fumigando a mano? · Con mochila manual, una persona necesita 4 a 5 horas para cubrir una hectárea. En una finca de 10 hectáreas eso son 40-50 horas de trabajo por aplicación — y en temporada alta…
   PDP: https://ferre24.com.mx/products/kit-aspersor-parazzini-200-l-aguijon-28-y-motor-35-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_662cdb08-c686-4884-8ac1-458dbf59cf54.png
-- **Parihuela Alta Presión Manguera 13 mm PRO** · `id:44164003135576` · $11,592 (antes $21,076) · Parazzini · PPAP13MM
+- **Parihuela Alta Presión Manguera 13 mm PRO** · `PPAP13MM` · $11,592 (antes $21,076) · Parazzini · PPAP13MM
   Si fumas grandes extensiones y la presión cae a mitad del campo, el problema no es el motor — es el calibre de la manguera. · Las parihuelas estándar trabajan con manguera de 8 a 8.5 mm. A distancia, eso significa…
   PDP: https://ferre24.com.mx/products/parihuela-alta-presion-manguera-13-mm-pro-fumigacion-profesional-en-grandes-extensiones
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_19e67d04-d3f4-4a4f-baf8-8d09ec4c588d.png
@@ -652,15 +652,15 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   ¿Rentas una bailarina obra por obra y el costo se come tu margen? · La compactación de zanjas, rellenos y suelos cohesivos no se puede hacer a medias. Una placa vibratoria no llega donde la obra lo exige — la bailarina…
   PDP: https://ferre24.com.mx/products/bailarina-compactadora-takashi-tbl6-5-motor-loncin-6-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3b4c5da1-8f45-4990-bb56-a9fa6412d902.png
-- **Motor 5.5 HP 4 Tiempos Parazzini MPB** · `id:44163924820056` · $5,365 (antes $9,754) · Parazzini · MPB
+- **Motor 5.5 HP 4 Tiempos Parazzini MPB** · `MPB` · $5,365 (antes $9,754) · Parazzini · MPB
   ¿Tu bailarina Parazzini se quedó sin motor en plena compactación? Cada hora parada es dinero perdido — la cimentación no espera. · El Motor 5.5 HP 4 Tiempos Parazzini MPB es el reemplazo original diseñado para las…
   PDP: https://ferre24.com.mx/products/motor-5-5-hp-4-tiempos-parazzini-mpb-repuesto-original-para-bailarina-pbh160-y-pbl
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_9e734489-b4fd-4552-b849-c753ae4a5306.png
-- **Revolvedora Eléctrica Parazzini 180 L** · `id:44163886776408` · $6,932 (antes $13,864) · Parazzini · REVOLVER1E
+- **Revolvedora Eléctrica Parazzini 180 L** · `REVOLVER1E` · $6,932 (antes $13,864) · Parazzini · REVOLVER1E
   Rentar una revolvedora para cada obra te cuesta tiempo, traslados y dinero que se suma sin que lo notes. Con la Parazzini REVOLVER1E la compras una vez y recuperas la inversión en tres o cuatro trabajos — sin depender…
   PDP: https://ferre24.com.mx/products/revolvedora-electrica-parazzini-180-l-650w-110v-1-2-saco
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2a84512e-c6c4-478e-9a3c-80b8403ce260.png
-- **Vibrador de Concreto Parazzini 7 HP a Gasolina** · `id:44163887726680` · $5,903 (antes $10,733) · Parazzini · VCP5.5HP
+- **Vibrador de Concreto Parazzini 7 HP a Gasolina** · `VCP5.5HP` · $5,903 (antes $10,733) · Parazzini · VCP5.5HP
   ¿Tu chicote tronó en plena colada o el vibrador no arranca porque estuvo parado dos meses? Con el VCP5.5HP de Parazzini lo más costoso ya está cubierto: motor 4 tiempos OHV de 196 cc, refacciones disponibles en México y…
   PDP: https://ferre24.com.mx/products/vibrador-de-concreto-parazzini-7-hp-a-gasolina-vcp5-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_ff5f7947-3517-4ba5-8875-a80a3eca3365.png
@@ -844,7 +844,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   El problema que resuelve · Cada corte de luz le cuesta dinero a tu negocio: cuartos fríos que suben de temperatura, máquinas que se detienen a la mitad, servicios interrumpidos, clientes insatisfechos. Y cada vez que…
   PDP: https://ferre24.com.mx/products/gpd8-5t
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6e1ecc85-6e04-4ce0-bb96-32fe8ce8dd2a.png
-- **Motor Parazzini MP13C** · `id:44163931930712` · $9,432 (antes $17,149) · Parazzini · MP13C
+- **Motor Parazzini MP13C** · `MP13C` · $9,432 (antes $17,149) · Parazzini · MP13C
   Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mp13c-13-hp-4t-con-caja-reductora-integrada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f0786bf-a462-4d4b-abba-f2ea3fe39f00.png
@@ -857,39 +857,39 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
 - **Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS** · `id:44164149182552` · $2,099 (antes $2,998) · PURIKOR · PKUF-6UV
   ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
   PDP: https://ferre24.com.mx/products/sistema-de-ultrafiltracion-purikor-6-etapas-uv-philips
-- **Sistema de Ósmosis Inversa 6 Etapas + UV** · `id:44164148428888` · $5,210 (antes $7,443) · PURIKOR · PKRO200-6UVPM
+- **Sistema de Ósmosis Inversa 6 Etapas + UV** · `PKRO200-6UVPM` · $5,210 (antes $7,443) · PURIKOR · PKRO200-6UVPM
   ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4-6 personas gasta entre $250 y $300 mensuales en agua embotellada — dinero que se va sin dejar nada. El Sistema de Ósmosis Inversa PURIKOR PKRO200-6UVPM te…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-6-etapas-uv-200-gpd-purikor
-- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `id:44164148691032` · $7,056 (antes $10,080) · PURIKOR · PK-EASY-600US
+- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $7,056 (antes $10,080) · PURIKOR · PK-EASY-600US
   ¿Cuánto gastas al mes en garrafones? ¿Cuánto espacio te quita el tinaco o el filtro de debajo de la tarja? El PURIKOR PK-EASY-600US resuelve los dos problemas al mismo tiempo: agua purificada directamente del grifo, en…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-sin-tanque-600-gpd-purikor-pk-easy-600us
-- **Sistema de ósmosis inversa Purikor 5 etapas 100gpd** · `id:44164148854872` · $3,437 (antes $4,911) · Purikor · PKRO100-5P
+- **Sistema de ósmosis inversa Purikor 5 etapas 100gpd** · `PKRO100-5P` · $3,437 (antes $4,911) · Purikor · PKRO100-5P
   ¿Gastas cientos de pesos al mes en garrafones y no confías en el agua de tu llave? El agua de red puede contener cloro, metales pesados, bacterias y sólidos disueltos que ni hervir elimina. Hay una solución permanente…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-purikor-5-etapas-100gpd
-- **Soplador Kawashima 26 cc** · `id:44164029808728` · $2,124 (antes $3,862) · Kawashima · WIND26
+- **Soplador Kawashima 26 cc** · `WIND26` · $2,124 (antes $3,862) · Kawashima · WIND26
   Limpiar el jardín con rastrillo toma horas. Con el soplador Kawashima WIND26, el mismo trabajo se hace en minutos. · Potencia real donde más importa. Su motor 2 tiempos de 26 cc alcanza hasta 7,500 RPM y mueve 650 m³ de…
   PDP: https://ferre24.com.mx/products/soplador-kawashima-26-cc-motor-2t-650-m-h-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b0c36c14-4277-4b95-a44a-04dca091e31f.png
-- **Soplador de Mochila Profesional 77cc** · `id:44164030464088` · $8,961 (antes $16,292) · Kawashima Pro · SK772TPRO
+- **Soplador de Mochila Profesional 77cc** · `SK772TPRO` · $8,961 (antes $16,292) · Kawashima Pro · SK772TPRO
   Cada hora que pierdes con una herramienta sin potencia es dinero que no cobras. El jardinero o landscaper profesional sabe que el tiempo entre trabajo y trabajo es lo que separa un día rentable de uno mediocre. Con una…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-profesional-77cc-kawashima-pro-sk772tpro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_28b16a1d-b758-478b-a2fa-da0d18c08d4a.png
 - **Soplador de mochila Kawashima WIND76** · `id:44164030136408` · $5,622 (antes $10,222) · Kawashima · WIND76
   Cuando el jardín mide media manzana y el tiempo es dinero, un soplador de juguete no alcanza. El Kawashima WIND76 es la herramienta que usan los contratistas serios: motor 2T de 76 cc que arranca y no para, diseño de…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-kawashima-wind76-76-cc-1-440-m-h
-- **Tanque Precargado ALTAMIRA 86 Gal** · `id:44164147478616` · $11,386 (antes $16,265) · ALTAMIRA · ALTAPRO XLB86 — Tanque Precargado Vertical
+- **Tanque Precargado ALTAMIRA 86 Gal** · `ALTAPRO XLB86` · $11,386 (antes $16,265) · ALTAMIRA · ALTAPRO XLB86 — Tanque Precargado Vertical
   El ALTAPRO XLB86 es un tanque precargado de diafragma de la Serie PRO XLB de ALTAMIRA, diseñado para sistemas hidroneumáticos residenciales, comerciales, agrícolas e industriales que exigen presión de agua estable y…
   PDP: https://ferre24.com.mx/products/tanque-precargado-altamira-86-gal-garantia-6-anos-codo-inox-304-incluido
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e33f7ebf-1de3-4fc0-ab16-bcd1aa8ddab3.png
-- **Tanque Precargado AQUA PAK XLB26** · `id:44164147019864` · $3,088 (antes $4,411) · AQUA PAK · XLB26
+- **Tanque Precargado AQUA PAK XLB26** · `AQUAPAK XLB26` · $3,088 (antes $4,411) · AQUA PAK · XLB26
   Presión constante en tu hogar o negocio, sin sorpresas · ¿El agua llega con poca fuerza en las mañanas o la presión cae apenas abres dos llaves al mismo tiempo? El problema casi siempre está en la falta de un acumulador…
   PDP: https://ferre24.com.mx/products/tanque-precargado-aqua-pak-xlb26-26-galones-130-psi-garantia-4-anos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_91ba12ff-a43f-4188-adf6-b5ca98318a37.png
-- **Tanque Precargado Vertical 65 gal ALTAMIRA** · `id:44164147970136` · $9,962 (antes $14,232) · ALTAMIRA · ALTAPRO XLB65
+- **Tanque Precargado Vertical 65 gal ALTAMIRA** · `ALTAPRO XLB65` · $9,962 (antes $14,232) · ALTAMIRA · ALTAPRO XLB65
   Agua con presión constante, sin sorpresas · Si tu bomba arranca cada vez que alguien abre una llave, o si la presión cae en cuanto hay más de un punto de uso abierto, el problema no es la bomba: es la falta de un tanque…
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-65-gal-altamira-nsf-ansi-garantia-6-anos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fb34a38c-b05f-4c7e-a304-f91fdc76c8a0.png
-- **Tanque precargado vertical AQUA PAK XLB20** · `id:44164147085400` · $2,545 (antes $3,636) · AQUA PAK · XLB20
+- **Tanque precargado vertical AQUA PAK XLB20** · `AQUAPAK XLB20` · $2,545 (antes $3,636) · AQUA PAK · XLB20
   ¿El agua te llega a chorros a veces y casi nada en otras? La presión inconsistente en casa no es un problema del vecindario — es que tu sistema de agua no tiene regulación. El tanque precargado AQUA PAK XLB20 resuelve…
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-aqua-pak-xlb20-20-galones-130-psi-garantia-4-anos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fa8cb9c3-ac87-44f1-861e-b17f2d8e2ce3.png
