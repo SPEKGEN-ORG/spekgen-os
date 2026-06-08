@@ -594,6 +594,7 @@ def datastore_add_claude(module_id, x, y, parse_module_id):
                                 "formatDate(addHours(now; 24); \"YYYY-MM-DDTHH:mm:ss[Z]\"); "
                                 "ifempty(2.bot_muted_until; \"\"))}}"),
             "muted_by": ("{{if(" + pm + ".action = \"human_handoff\"; \"user_request\"; ifempty(2.muted_by; \"\"))}}"),
+            "followup_stage": 0,
         }},
         "metadata": {"designer": {"x": x, "y": y}},
     }
@@ -612,6 +613,7 @@ def datastore_add_greeting(module_id, x, y):
             "escalated": False,
             "bot_muted_until": "{{ifempty(2.bot_muted_until; \"\")}}",
             "muted_by": "{{ifempty(2.muted_by; \"\")}}",
+            "followup_stage": 0,
         }},
         "metadata": {"designer": {"x": x, "y": y}},
     }
@@ -694,25 +696,53 @@ ESCALATE_FILTER = {
 }
 
 
+# CRM SPEKGEN (white-label de GHL). El equipo abre aquí las conversaciones — NUNCA decir "GHL".
+SPEKGEN_CRM_URL = f"https://app.spekgen.com/v2/location/{F24_LOCATION_ID}/conversations/conversations/"
+# Logos hospedados (bucket público Supabase post-media) para el email.
+LOGO_F24 = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/f24/email-assets/f24-logo.png"
+LOGO_SPEKGEN = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/storage/v1/object/public/post-media/f24/email-assets/spekgen-logo.png"
+
+
 def team_email_module(module_id, x, y):
-    """Email interno al equipo F24 cuando el bot escala. Reusa el módulo google-email de HC."""
-    subject = "[F24 BOT] Cliente necesita asesor — {{ifempty(1.full_name; \"cliente\")}} ({{8.action}})"
-    inbox = f"https://app.leadconnectorhq.com/v2/location/{F24_LOCATION_ID}/conversations/conversations"
+    """Email interno al equipo F24 cuando el bot escala. google-email (conn HC) + branding."""
+    subject = "[Ferre24] Un cliente necesita asesor — {{ifempty(1.full_name; \"cliente\")}}"
     html = (
-        "<div style='font-family:Arial,sans-serif;max-width:600px;margin:0 auto'>"
-        "<div style='background:#2A2A2A;padding:16px 24px'>"
-        "<h2 style='margin:0;color:#fff;font-size:18px'>FERRE24 · Bot WhatsApp</h2>"
-        "<p style='margin:4px 0 0;color:#E8731C;font-size:13px'>Un cliente necesita que entre un asesor</p></div>"
-        "<div style='padding:22px 24px;background:#fff;border:1px solid #eee'>"
-        "<p style='margin:0 0 8px'><b>Tipo:</b> {{8.action}}</p>"
-        "<p style='margin:0 0 8px'><b>Cliente:</b> {{ifempty(1.full_name; \"(sin nombre)\")}}</p>"
-        "<p style='margin:0 0 8px'><b>Teléfono:</b> {{ifempty(1.phone; \"(sin tel)\")}}</p>"
-        "<p style='margin:0 0 8px'><b>Motivo / intent:</b> {{ifempty(8.intent; \"-\")}}</p>"
-        "<p style='margin:0 0 8px'><b>Último mensaje del cliente:</b><br>{{ifempty(28.user_msg; \"-\")}}</p>"
-        "<p style='margin:18px 0 0'><a href='" + inbox + "' "
-        "style='background:#E8731C;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:bold'>"
-        "Abrir conversación en GHL</a></p>"
-        "</div></div>"
+        "<table role='presentation' width='100%' cellpadding='0' cellspacing='0' "
+        "style='background:#f4f4f5;padding:24px 0;font-family:Arial,Helvetica,sans-serif'><tr><td align='center'>"
+        "<table role='presentation' width='600' cellpadding='0' cellspacing='0' "
+        "style='max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e7e7e9'>"
+        # Header con logo F24 (fondo cream para logo a color)
+        "<tr><td style='background:#F8F3E9;padding:18px 28px' align='left'>"
+        "<img src='" + LOGO_F24 + "' alt='Ferre24' height='40' style='height:40px;display:block;border:0'></td></tr>"
+        # Franja de alerta naranja F24
+        "<tr><td style='background:#FF5C00;padding:15px 28px' align='left'>"
+        "<p style='margin:0;color:#ffffff;font-size:17px;font-weight:bold'>🔔 Un cliente necesita un asesor</p>"
+        "<p style='margin:3px 0 0;color:#ffe2cf;font-size:12px'>Entra a la conversación para atenderlo</p></td></tr>"
+        # Body: datos
+        "<tr><td style='padding:24px 28px'>"
+        "<table role='presentation' width='100%' cellpadding='0' cellspacing='0' style='font-size:14px;color:#333333'>"
+        "<tr><td style='padding:6px 0;color:#999999;width:120px'>Tipo</td>"
+        "<td style='padding:6px 0;font-weight:bold'>{{if(8.action = \"human_handoff\"; \"Pidió hablar con humano\"; \"Escalación\")}}</td></tr>"
+        "<tr><td style='padding:6px 0;color:#999999'>Cliente</td>"
+        "<td style='padding:6px 0;font-weight:bold'>{{ifempty(1.full_name; \"(sin nombre)\")}}</td></tr>"
+        "<tr><td style='padding:6px 0;color:#999999'>Teléfono</td>"
+        "<td style='padding:6px 0;font-weight:bold'>{{ifempty(1.phone; \"(sin tel)\")}}</td></tr>"
+        "<tr><td style='padding:6px 0;color:#999999;vertical-align:top'>Motivo</td>"
+        "<td style='padding:6px 0'>{{ifempty(8.intent; \"-\")}}</td></tr></table>"
+        "<div style='margin-top:14px;background:#f7f7f8;border-left:3px solid #FF5C00;padding:12px 14px;border-radius:4px'>"
+        "<p style='margin:0 0 4px;font-size:11px;color:#999999;text-transform:uppercase;letter-spacing:.5px'>Último mensaje del cliente</p>"
+        "<p style='margin:0;font-size:14px;color:#333333'>{{ifempty(28.user_msg; \"-\")}}</p></div>"
+        # Botón → CRM SPEKGEN
+        "<table role='presentation' cellpadding='0' cellspacing='0' style='margin:22px 0 2px'><tr>"
+        "<td style='border-radius:8px;background:#FF5C00' align='center'>"
+        "<a href='" + SPEKGEN_CRM_URL + "' style='display:inline-block;padding:13px 28px;color:#ffffff;"
+        "font-size:15px;font-weight:bold;text-decoration:none'>Abrir conversación en SPEKGEN &rarr;</a>"
+        "</td></tr></table></td></tr>"
+        # Footer con logo SPEKGEN
+        "<tr><td style='background:#fafafa;padding:18px 28px;border-top:1px solid #eeeeee' align='center'>"
+        "<img src='" + LOGO_SPEKGEN + "' alt='SPEKGEN' height='20' style='height:20px;display:block;margin:0 auto 7px;border:0'>"
+        "<p style='margin:0;font-size:11px;color:#aaaaaa'>Notificación automática del bot de WhatsApp &middot; CRM SPEKGEN</p>"
+        "</td></tr></table></td></tr></table>"
     )
     return {
         "id": module_id, "module": "google-email:sendAnEmail", "version": 4,
