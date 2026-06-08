@@ -672,6 +672,79 @@ def datastore_reget_module(module_id, x, y):
     }
 
 
+# ---------- Handoff: aviso al equipo (email + tag GHL) ----------
+# Correos del equipo F24 que reciben las escaladas. Gibran los proporciona.
+F24_TEAM_EMAILS = [
+    "gibran.alonzo0506@gmail.com",   # MODO PRUEBA — Gibran avisará cuándo cambiar a los reales
+    # REALES (activar cuando Gibran lo confirme):
+    # "edgar.gvg@hotmail.com",
+    # "f24atencionalcliente@hotmail.com",
+]
+GMAIL_CONN_ID = 8183100        # conexión Gmail de Make (team 354061, reusada de HC)
+HANDOFF_TAG = "requiere-humano"
+
+# Filtro: dispara solo cuando Claude devuelve action escalate o human_handoff (OR).
+ESCALATE_FILTER = {
+    "name": "action es escalate o human_handoff",
+    "conditions": [
+        [{"a": "{{8.action}}", "o": "text:equal", "b": "escalate"}],
+        [{"a": "{{8.action}}", "o": "text:equal", "b": "human_handoff"}],
+    ],
+}
+
+
+def team_email_module(module_id, x, y):
+    """Email interno al equipo F24 cuando el bot escala. Reusa el módulo google-email de HC."""
+    subject = "[F24 BOT] Cliente necesita asesor — {{ifempty(1.full_name; \"cliente\")}} ({{8.action}})"
+    inbox = f"https://app.leadconnectorhq.com/v2/location/{F24_LOCATION_ID}/conversations/conversations"
+    html = (
+        "<div style='font-family:Arial,sans-serif;max-width:600px;margin:0 auto'>"
+        "<div style='background:#2A2A2A;padding:16px 24px'>"
+        "<h2 style='margin:0;color:#fff;font-size:18px'>FERRE24 · Bot WhatsApp</h2>"
+        "<p style='margin:4px 0 0;color:#E8731C;font-size:13px'>Un cliente necesita que entre un asesor</p></div>"
+        "<div style='padding:22px 24px;background:#fff;border:1px solid #eee'>"
+        "<p style='margin:0 0 8px'><b>Tipo:</b> {{8.action}}</p>"
+        "<p style='margin:0 0 8px'><b>Cliente:</b> {{ifempty(1.full_name; \"(sin nombre)\")}}</p>"
+        "<p style='margin:0 0 8px'><b>Teléfono:</b> {{ifempty(1.phone; \"(sin tel)\")}}</p>"
+        "<p style='margin:0 0 8px'><b>Motivo / intent:</b> {{ifempty(8.intent; \"-\")}}</p>"
+        "<p style='margin:0 0 8px'><b>Último mensaje del cliente:</b><br>{{ifempty(28.user_msg; \"-\")}}</p>"
+        "<p style='margin:18px 0 0'><a href='" + inbox + "' "
+        "style='background:#E8731C;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:bold'>"
+        "Abrir conversación en GHL</a></p>"
+        "</div></div>"
+    )
+    return {
+        "id": module_id, "module": "google-email:sendAnEmail", "version": 4,
+        "parameters": {"__IMTCONN__": GMAIL_CONN_ID},
+        "mapper": {"to": list(F24_TEAM_EMAILS), "subject": subject, "content": html, "bodyType": "rawHtml"},
+        "filter": ESCALATE_FILTER,
+        "metadata": {"designer": {"x": x, "y": y}},
+    }
+
+
+def ghl_tag_handoff_module(module_id, x, y):
+    """Agrega el tag 'requiere-humano' al contacto en GHL para marcar la conversación en el inbox."""
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": "https://services.leadconnectorhq.com/contacts/{{1.contact_id}}/tags",
+            "method": "post",
+            "headers": [
+                {"name": "Authorization", "value": f"Bearer {GHL_TOKEN}"},
+                {"name": "Version", "value": "2021-07-28"},
+                {"name": "Content-Type", "value": "application/json"},
+                {"name": "Accept", "value": "application/json"},
+            ],
+            "bodyType": "raw", "contentType": "application/json",
+            "data": "{\"tags\":[\"" + HANDOFF_TAG + "\"]}",
+            "timeout": 30, "shareCookies": False, "parseResponse": True,
+            "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
+    }
+
+
 # ---------- Build flow ----------
 webhook_module = {
     "id": 1, "module": "gateway:CustomWebHook", "version": 1,
@@ -739,12 +812,18 @@ sub_order_create = f24_process_order_module(42, 3100, 300, parse_module_id=8)
 sub_order_link = ghl_send_payment_link_module(43, 3300, 300, order_http_module_id=42)
 sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8)
 
+# Sub-route de HANDOFF: aviso al equipo (email + tag) cuando action es escalate/human_handoff.
+# El mensaje al cliente lo manda igual el módulo 9 (rama normal); esta corre EN PARALELO.
+sub_handoff_email = team_email_module(45, 2900, 600)   # lleva el ESCALATE_FILTER (gate de la sub-route)
+sub_handoff_tag = ghl_tag_handoff_module(46, 3150, 600)
+
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
     "metadata": {"designer": {"x": 2650, "y": 150}},
     "routes": [
         {"flow": [sub_normal_send, sub_normal_ds]},
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
+        {"flow": [sub_handoff_email, sub_handoff_tag]},
     ],
 }
 
