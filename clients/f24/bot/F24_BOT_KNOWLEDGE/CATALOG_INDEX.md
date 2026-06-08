@@ -1,16 +1,16 @@
 # Ferre24 — Catálogo (Knowledge Base del bot)
 
-*218 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
+*231 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
 
 > El bot cotiza ÚNICAMENTE productos de esta lista. El **precio** es el de venta;
 > el precio **tachado** (si existe) es referencia. Para cerrar, el bot pasa el/los
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-35 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+37 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (25 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (26 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 
@@ -25,6 +25,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BAKARAC300-G` | $25,683 | $29,186 | 12% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `BK1440` | $12,330 | $14,856 | 17% | 3, 6, 9, 12 | **Sí** | 2026-06-14 |
 | `BK2.515` | $2,914 | $3,511 | 17% | 3, 6, 9, 12 | **Sí** | 2026-06-14 |
+| `BK7.530` | $4,505 | $5,300 | 15% | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `CA-25PH` | $2,840 | $3,121 | 9% | 3, 6 | no | 2026-06-14 |
 | `CA-50PH` | $6,223 | $6,838 | 9% | 3, 6 | no | 2026-06-14 |
 | `CSK5218` | $3,531 | $4,154 | 15% | 3, 6, 9 | **Sí** | 2026-06-14 |
@@ -44,6 +45,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `KPD45TOP` | solo MSI | $5,032 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `KPD52TOP` | solo MSI | $5,111 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `KTR26` | $2,341 | $4,257 | 45% | 3, 6, 9 | **Sí** | 2026-06-14 |
+| `LMH-1000W` | solo MSI | ? |  | 3, 6 | no | 2026-06-14 |
 | `MAKO65` | solo MSI | $3,613 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `MAKO72` | solo MSI | $10,169 |  | 3, 6, 9 | **Sí** | 2026-06-14 |
 | `MHP11` | $9,560 | $10,506 | 9% | 3, 6 | no | 2026-06-14 |
@@ -52,7 +54,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PPSB6.5AK` | $5,744 | $6,920 | 17% | 3, 6, 9, 12 | **Sí** | 2026-06-14 |
 | `PPSB6.5BK` | $6,054 | $7,294 | 17% | 3, 6, 9, 12 | **Sí** | 2026-06-14 |
 
-## Generadores (39)
+## Generadores (40)
 
 - **GH26000E-A** · `GH26000E-A` · $135,285 (antes $143,920) · Parazzini Pro · GH26000E-AM · ⚡PROMO
   Especificaciones completas · SKU GH26000E-AM Motor · Tipo de motor Gas LP (Propano) · Combustible gas_lp · Encendido electrico · Identificación · Marca Parazzini Pro · Modelo GH26000E-AM · SKU GH26000E-AM
@@ -193,6 +195,10 @@ Reglas de meses sin intereses (MSI) por promo:
   Si tu motor falló en plena jornada y el repuesto OEM te cuesta el doble de lo que vale el equipo, el Parazzini MP7FF es la respuesta. Potencia de 7 HP real, motor 4 tiempos OHV de gasolina, arranque manual confiable —…
   PDP: https://ferre24.com.mx/products/motor-parazzini-7-hp-4-tiempos-doble-filtro-de-aire-para-obra-y-campo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a88a5405-9e76-46eb-b020-58166c2a3de8.png
+- **Parazzini BAKARAC300** · `BAKARAC300` · $43,912 (antes $87,824) · Parazzini · BAKARAC300
+  ### Suelda donde otros no pueden · Hay obras donde la luz eléctrica no llega. Ranchos, construcciones en desarrollo, sitios remotos, emergencias en campo. Para esos trabajos existe el Parazzini BAKARAC300 : un…
+  PDP: https://ferre24.com.mx/products/parazzini-bakarac300
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8e1dc002-18c5-4671-8b2e-c4933c1792ce.png
 - **Parazzini MP10D** · `MP10D` · $10,969 (antes $19,944) · Parazzini · MP10D
   ¿Tu motor tronó en plena temporada y el de repuesto no llega en días? El Parazzini MP10D está en stock y sale al día siguiente. · Motor diesel estacionario de 10HP diseñado para trabajo continuo en campo, obra y taller.…
   PDP: https://ferre24.com.mx/products/parazzini-mp10d-motor-diesel-10hp-con-arranque-electrico
@@ -210,7 +216,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Bloque 1 — Hero / Gancho principal · 72 dB. El generador que nadie escuchará. · Mientras otros generadores hacen más ruido que una motosierra (85–88 dB), el Parazzini GPDS8.5M trabaja a 72 dB medidos a 7 metros — el…
   PDP: https://ferre24.com.mx/products/generador-diesel-silencioso-parazzini-gpds8-5m-solo-72-db-apto-para-hoteles-residencias-y-oficinas-7-0-kw-monofasico-110-220v-arranque-electrico-envio-con-flete-especial
 
-## Motobombas (47)
+## Motobombas (50)
 
 - **Aspersor Kawashima AK26** · `AK26` · $1,794 (antes $3,262) · Kawashima · AK26 · ⚡PROMO 9MSI
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
@@ -223,6 +229,14 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
 - **Aspersora Motorizada Parazzini 6.5 HP** · `PPSB6.5B` · $4,914 (antes $8,934) · Parazzini · PPSB6.5B
   Si fumiga herbicidas o fungicidas de contacto, su bomba de pistón está en cuenta regresiva. · Los agroquímicos agresivos — glifosato, paraquat, cobre, azufre, fungicidas de síntesis moderna — corroen las válvulas y…
   PDP: https://ferre24.com.mx/products/aspersora-motorizada-parazzini-6-5-hp-bomba-membrana-para-herbicidas-y-fungicidas
+- **Bomba Agrícola Autocebante 7.5 HP 2" BK7.520** · `BK7.520` · $4,770 (antes $8,224) · Ferre24 · BK7.520
+  La bomba agrícola BK7.520 es la solución profesional para operaciones agrícolas medianas que requieren alto caudal y confiabilidad sostenida. Construida en aluminio resistente y equipada con motor gasolina 4 tiempos de…
+  PDP: https://ferre24.com.mx/products/bomba-agricola-autocebante-7-5-hp-2-pulgadas-533-lmin-aluminio-bk7520
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_845f4b50-bdd1-43c1-b2ea-abcfd0578a1a.png
+- **Bomba Agrícola Autocebante 7.5 HP 3" BK7.530** · `BK7.530` · $4,505 (antes $5,300) · Ferre24 · BK7.530 · ⚡PROMO 9MSI
+  La bomba agrícola BK7.530 es la solución de máxima capacidad para grandes operaciones agrícolas que necesitan bombear enormes volúmenes de agua con consistencia. Con motor gasolina 7.5 HP y salida de 3 pulgadas, entrega…
+  PDP: https://ferre24.com.mx/products/bomba-agricola-autocebante-7-5-hp-3-pulgadas-1000-lmin-aluminio-bk7530
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_ad5de481-bb9c-442e-9461-9bfeb479ee36.png
 - **Bomba Sumergible TORNADO 4" 1.1 HP** · `KIN58-6/1115` · $3,522 (antes $4,824) · TORNADO · KIN58-6/1115
   ¿Para qué sirve? · La Bomba Sumergible TORNADO KIN58-6/1115 está diseñada para extraer agua de pozos profundos, norias y cisternas con instalación permanente. Opera completamente sumergida, sin necesidad de cebado…
   PDP: https://ferre24.com.mx/products/bomba-sumergible-tornado-4-1-1-hp-norias-cisternas-y-pozos-hasta-50-m
@@ -341,6 +355,10 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Motobomba 2.5HP AUTOCEBANTE 1.5" — Riego Residencial y Agrícola sin Complicaciones
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-515-2-5hp-autocebante-1-5-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6eb530a-e06d-4eb6-9320-9b8dbc7be40d.png
+- **Motobomba Parazzini BP720A** · `BP720A` · $8,277 (antes $14,270) · Parazzini · BP720A
+  La motobomba BP720A combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
+  PDP: https://ferre24.com.mx/products/parazzini-bp720a
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_80e4ec45-8c92-4307-a3cf-03632ce8cfec.png
 - **Motobomba Portátil Kawashima BK2.510** · `BK2.510` · $3,577 (antes $6,168) · Kawashima · BK2.510 · 🔴 AGOTADO
   La BK2.510 es la motobomba agrícola portátil pensada para el productor que necesita llevar agua lejos y alto, sin cargar con el peso de una 3HP. Con motor de 2.5HP a gasolina de 4 tiempos y cuerpo de aluminio fundido,…
   PDP: https://ferre24.com.mx/products/motobomba-portatil-kawashima-bk2-510-2-5hp-aluminio-autocebante-boca-1-26m
@@ -371,10 +389,10 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Trabaja donde el agua no llega. · La mayoría de los equipos de presión te dejan varado cuando no hay toma de agua cercana. La Parazzini PP2.5T100 resuelve eso desde el arranque: lleva sus propios 100 litros de agua en…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-100-litros-2-5-hp-limpieza-de-alta-presion-donde-no-hay-agua
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f34749df-d1aa-460b-b64f-5402f36d2579.png
-- **Parihuela Parazzini 6.5 HP** · `id:44164022108248` · $5,622 (antes $10,222) · Parazzini · PP6.5B
+- **Parihuela Parazzini 6.5 HP** · `PP6.5B` · $5,622 (antes $10,222) · Parazzini · PP6.5B
   ¿Tu equipo se queda sin presión justo cuando más lo necesitas? · En el campo, en la obra o en el taller no hay tiempo para paros inesperados. Una bomba de acero se desgasta rápido con agua de pozo, agua dura o uso…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-bomba-bronce-508-psi
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6969f76-511a-4962-bf9c-98df178e2992.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_12bdb15e-c927-41f6-ac96-e212ab859674.png
 - **Parihuela Parazzini 6.5 HP** · `PP6.5A` · $4,655 (antes $8,464) · Parazzini
   ¿Tu bomba no arranca cuando más la necesitas o pierdes presión a media jornada? · El riego no espera. Tampoco la obra con agua estancada. Lo que necesitas es una motobomba que arranque al primer jalón, mueva el agua con…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-motobomba-a-gasolina-sobre-carrito
@@ -556,7 +574,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3584d25a-4649-4a63-b021-0b64a2cca8c2.png
 
-## Desbrozadoras y Jardín (19)
+## Desbrozadoras y Jardín (20)
 
 - **Aspersor Parazzini 200 L Aguilón 28"** · `XGT12-200` · $39,372 (antes $75,715) · Parazzini · XGT12-200
   Fumiga más hectáreas sin pagar un litro extra de gasolina · Si ya tienes tractor, el Parazzini XGT12-200 te da una estación de aplicación completa sin el costo ni el mantenimiento de un motor adicional. Se acopla…
@@ -609,11 +627,15 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   ### El terreno no espera. Tu herramienta tampoco debería fallar. · Si trabajas en campo, ejido o jardín de gran superficie, sabes lo que cuesta llegar a media jornada con una herramienta que ya no responde. Las…
   PDP: https://ferre24.com.mx/products/desbrozador-pro-45cc-2-tiempos-kawashima-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_86762dc7-e9bf-47e1-9633-d10e5e11de1f.png
+- **Desbrozadora Kawashima PRO 45cc** · `KPD45TOP-RA` · $2,191 (antes $2,578) · Kawashima Pro · KPD45TOP · 🔴 AGOTADO
+  ¿Cansado de que tu desbrozadora barata falle a mitad de la jornada o no tenga la fuerza para terrenos difíciles? · El Desbrozador Kawashima PRO KPD45TOP es la herramienta que usan los profesionales del campo para…
+  PDP: https://ferre24.com.mx/products/desbrozadora-kawashima-pro-45cc-outlet-nuevo
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_11a96860-4be9-4766-9e3d-a7a1f228fd2f.png
 - **Kawashima AKE100P** · `AKE100P` · $8,291 (antes $9,754) · Kawashima · AKE100P · ⚡PROMO · 🔴 AGOTADO
   Fumigar manualmente hectáreas enteras agota al operador, desperdicia agroquímicos y deja coberturas irregulares. El Kawashima AKE100P resuelve eso de raíz: es un remolque aspersor eléctrico de 100 litros que se acopla…
   PDP: https://ferre24.com.mx/products/kawashima-ake100p-aspersor-electrico-remolque-100-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_23b1c88a-6e8e-472e-a5fd-9a349d6ffef7.png
-- **Kawashima ATV-25** · `id:44164028596312` · $5,986 (antes $10,883) · Kawashima · ATV-25
+- **Kawashima ATV-25** · `ATV-25` · $5,986 (antes $10,883) · Kawashima · ATV-25
   Si ya sabes lo que es fumigar con gasolina — el jalón del cordón a las 7 de la mañana, el humo adentro del invernadero, el ruido que no para — el ATV-25 de Kawashima fue hecho para ti. · Es un aspersor eléctrico de 100…
   PDP: https://ferre24.com.mx/products/kawashima-atv-25-aspersor-electrico-100-litros-sin-ruido-sin-humo-sin-esfuerzo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cfb6b08d-00c7-4276-9b4c-d0043a7c4551.png
@@ -665,7 +687,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   PDP: https://ferre24.com.mx/products/vibrador-de-concreto-parazzini-7-hp-a-gasolina-vcp5-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_ff5f7947-3517-4ba5-8875-a80a3eca3365.png
 
-## Mangueras y Accesorios (2)
+## Mangueras y Accesorios (4)
 
 - **Cortasetos 22 cc Kawashima Pro** · `CK22CC` · $3,342 (antes $6,077) · Kawashima Pro · CK22CC
   ### El cortasetos que llega listo — y te respalda después · El Kawashima Pro CK22CC es un cortasetos a gasolina de 22 cc diseñado para quien necesita resultados, no sorpresas. Motor 2 tiempos con encendido retráctil…
@@ -675,6 +697,14 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Equipo totalmente ensamblado
   PDP: https://ferre24.com.mx/products/pres-pet13-p10-presurizador-individual-kit-presion
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_433f8e34-2b15-4493-9f5d-46b49b1007c2.png
+- **Presurizador Individual AQUA PAK con Kit de Presión PRES-AP10XB127-P16** · `PRES-AP10XB127-P16` · $2,991 (antes $4,273) · TUBMAM · PRES-AP10XB127-P16
+  ¿El agua no llega con suficiente fuerza a tu regadera, lavadora o sistema de riego? El Presurizador Individual AQUA PAK PRES-AP10XB127-P16 resuelve exactamente ese problema: llega listo para instalar, completamente…
+  PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-kit-presion-pres-ap10xb127-p16
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3e20d9d3-1397-4385-8525-8320e8461525.png
+- **Presurizador TUBMAM TM-P50X-P10** · `PRES-TM-P50X-P10` · $1,520 (antes $2,171) · TUBMAM · TM-P50X-P10
+  Ducha con presión débil, grifo que gotea, riego deficiente. La baja presión de agua arruina comodidad y eficiencia. El presurizador TUBMAM enciende automáticamente cuando detecta caída de presión y mantiene 40-60 PSI…
+  PDP: https://ferre24.com.mx/products/tubmam-tm-p50x-p10
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f94ac465-47eb-4dbb-9753-ed8780a9ce20.jpg
 
 ## Ahoyadoras a Gasolina (1)
 
@@ -682,6 +712,17 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   La Ahoyadora Kawashima MTT52M es la herramienta que acelera el trabajo más lento del rancho: abrir hoyos. Con un motor a gasolina de 52cc y 2 tiempos, perfora tierra blanda de forma rápida y uniforme — el trabajo que…
   PDP: https://ferre24.com.mx/products/ahoyadora-kawashima-mtt52m-52cc-3-brocas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d43ca7eb-da4a-41a8-a79e-ab6bb7316b3a.png
+
+## Calentadores de Agua (2)
+
+- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $11,977 (antes $17,109) · KASSAI · KASPRO-16P
+  El KASSAI KASPRO-16P es un calentador de paso instantáneo modulante de la Serie Profesional con capacidad de 16 litros por minuto, diseñado para abastecer hasta dos servicios simultáneos sin tanque y sin piloto de llama…
+  PDP: https://ferre24.com.mx/products/calentador-paso-instantaneo-modulante-kassai-kaspro-16p-16-l-agua-caliente-sin-p
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1ba80de2-04b4-463b-af53-f80243dff8e0.png
+- **Calentador de Paso TAKAGI TKGHE-38-IP** · `TKGHE-38-IP` · $37,980 (antes $54,257) · TAKAGI · TKGHE-38-IP
+  El TAKAGI TKGHE-38-IP es un calentador de agua instantáneo de alto rendimiento diseñado para aplicaciones residenciales y comerciales que demandan agua caliente de forma continua y eficiente. Con una capacidad de flujo…
+  PDP: https://ferre24.com.mx/products/calentador-paso-a-gas-lp-takagi-tkghe-38-ip-38-l-min-ultra-alta-eficiencia-uso-r
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c92aefe3-e36a-4fa7-a39a-50515b0fcfdf.png
 
 ## Escarificadores y Aireadores (1)
 
@@ -696,6 +737,17 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   El césped artificial que no recibe mantenimiento se nota. Las fibras se aplastan en las zonas de más pisadas, las hojas y el polvo se acumulan entre las hebras, y la arena de sílice se desplaza dejando parches sin…
   PDP: https://ferre24.com.mx/products/peinadora-electrica-300-w-pasto-sintetico-roll-comb-141e
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7bd6adde-3874-4146-8c40-e9fbf2196aa6.png
+
+## Motores Sumergibles (2)
+
+- **Motor Sumergible AQUA PAK MSQA4-51230** · `MSQA4-51230` · $15,547 (antes $22,209) · AQUA PAK · MSQA4-51230 · 🔴 AGOTADO
+  El Motor Sumergible AQUA PAK MSQA4-51230 es la solución de bombeo de alto rendimiento para pozos profundos de 4 pulgadas o mayores. Con una potencia nominal de 5 HP (3.7 kW) y operación monofásica a 230 V / 60 Hz, este…
+  PDP: https://ferre24.com.mx/products/motor-sumergible-5-hp-aqua-pak-msqa4-51230-serie-4-monofasico-230-v-ip68-acero-i
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_45bb6b2d-7952-47c1-8a28-cfa87ba3267f.png
+- **Motor Sumergible Altamira TRUST MSAT4-53230** · `MSAT4-53230` · $16,765 (antes $23,950) · Altamira · MSAT4-53230 · 🔴 AGOTADO
+  El motor sumergible encapsulado Altamira serie TRUST MSAT4-53230 entrega 5 HP de potencia en servicio continuo para bombeo en pozo profundo. Diseñado para columnas de agua exigentes, soporta una profundidad máxima de…
+  PDP: https://ferre24.com.mx/products/msat4-53230-motor-sumergible
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_137fa2f9-1e60-4683-aee5-1f642c4941f4.png
 
 ## Motores a Gasolina 4 Tiempos (1)
 
@@ -874,9 +926,10 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Cada hora que pierdes con una herramienta sin potencia es dinero que no cobras. El jardinero o landscaper profesional sabe que el tiempo entre trabajo y trabajo es lo que separa un día rentable de uno mediocre. Con una…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-profesional-77cc-kawashima-pro-sk772tpro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_28b16a1d-b758-478b-a2fa-da0d18c08d4a.png
-- **Soplador de mochila Kawashima WIND76** · `id:44164030136408` · $5,622 (antes $10,222) · Kawashima · WIND76
+- **Soplador de mochila Kawashima WIND76** · `WIND76` · $5,622 (antes $10,222) · Kawashima · WIND76
   Cuando el jardín mide media manzana y el tiempo es dinero, un soplador de juguete no alcanza. El Kawashima WIND76 es la herramienta que usan los contratistas serios: motor 2T de 76 cc que arranca y no para, diseño de…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-kawashima-wind76-76-cc-1-440-m-h
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8fd502fc-a009-44ad-b083-c1a07ad26a2f.png
 - **Tanque Precargado ALTAMIRA 86 Gal** · `ALTAPRO XLB86` · $11,386 (antes $16,265) · ALTAMIRA · ALTAPRO XLB86 — Tanque Precargado Vertical
   El ALTAPRO XLB86 es un tanque precargado de diafragma de la Serie PRO XLB de ALTAMIRA, diseñado para sistemas hidroneumáticos residenciales, comerciales, agrícolas e industriales que exigen presión de agua estable y…
   PDP: https://ferre24.com.mx/products/tanque-precargado-altamira-86-gal-garantia-6-anos-codo-inox-304-incluido
@@ -905,7 +958,14 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   PDP: https://ferre24.com.mx/products/garland-roll-comb-502-e-peinadora-electrica-1600-w-cesped-artificial
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_53e59d0a-8437-4358-8973-8c305e1c203c.jpg
 
-## Producto (9)
+## Presurizadores (1)
+
+- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12-1127` · $1,906 (antes $2,722) · AQUA PAK · MINI60-12-1127 · 🔴 AGOTADO
+  ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
+  PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_07f36f4d-bc33-4fbc-876d-35682533f72c.png
+
+## Producto (7)
 
 - **AQUAPAK CCQA-5230** · `CCQA 5230` · $2,786 (antes $3,980) · AQUAPAK · CCQA-5230 · 🔴 AGOTADO
   Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
@@ -923,10 +983,6 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Equipo totalmente ensamblado
   PDP: https://ferre24.com.mx/products/pres-ap5xb-24lm-presurizador-individual-velocidad-constante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_87d132d4-8b98-4930-b108-b449defcf652.png
-- **PURIKOR PK-EASY-200** · `PK-EASY-200US` · $4,812 (antes $6,875) · PURIKOR · PK-EASY-200
-  Agua de calidad laboratorio — Membrana RO reduce impurezas a 0.0001 micras · Ahorro económico — No más botellas de plástico; costo por litro 80% menor · Alto flujo sin esperas — 200 GPD garantiza agua abundante para…
-  PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f9e60041-88be-48eb-bfa7-104ddb8ba3dc.png
 - **Shellcoat 19L Aislante de Calor (Pintura Térmica Reflectante)** · `SHELL-19` · $1,595 (antes $1,994) · Shellcoat · SHELL-19 · 🔴 AGOTADO
   Aislante de Calor Shellcoat – Pintura Térmica Ultra Reflectante Aislante de Calor Shellcoat es una pintura térmica formulada para bloquear hasta el 90% de la radiación solar en superficies expuestas al sol. Su…
   PDP: https://ferre24.com.mx/products/shellcoat-19l-aislante-calor-pintura-termica-reflectante
@@ -939,10 +995,17 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Sellador Liga Shellcoat – Sellador y Primer de Alta Adherencia Sellador Liga Shellcoat SEAL es un recubrimiento diseñado para mejorar el anclaje, adherencia y rendimiento de otros productos como el aislante térmico…
   PDP: https://ferre24.com.mx/products/shellcoat-liga-seal-19l-sellador-promotor-adherencia-sellador
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_dad0cdbb-08ba-4079-9ebd-8b8b41eeafdc.png
-- **TUBMAM TM-P50X-P10** · `PRES-TM-P50X-P10` · $1,520 (antes $2,171) · TUBMAM · TM-P50X-P10
-  Flujo: 50 litros por minuto · Presión salida: 40-60 PSI (automático via presostato) · Entrada mínima: 5 PSI (funciona incluso con baja presión inicial) · Voltaje: 220V monofásico · Potencia: 370W (consumo bajo) ·…
-  PDP: https://ferre24.com.mx/products/tubmam-tm-p50x-p10
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e3467799-ddf1-4936-a17c-5e1b18666460.png
+
+## Purificación de Agua (2)
+
+- **Sistema de Ósmosis Inversa PURIKOR 600 GPD 6 Etapas con UV** · `PKRO600-6UVPM` · $8,093 (antes $11,561) · PURIKOR · PKRO600-6UVPM
+  El Sistema de Ósmosis Inversa PURIKOR PKRO600-6UVPM es la solución definitiva para quienes necesitan agua purificada de alto rendimiento en aplicaciones comerciales o industriales de punto de uso (POU). Con un flujo…
+  PDP: https://ferre24.com.mx/products/osmosis-inversa-purikor-600gpd-6-etapas-uv-pkro600-6uvpm
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_297a4527-16a8-4f87-a253-dc4279e8c96f.png
+- **Sistema de Ósmosis Inversa PURIKOR PK-EASY-200** · `PK-EASY-200US` · $4,812 (antes $6,875) · PURIKOR · PK-EASY-200
+  ¿Cansado del agua turbia, con sabor extraño o preocupaciones sobre contaminantes? El sistema PURIKOR elimina sedimento, cloro, minerales disueltos, bacterias y virus — llevando agua potable pura directamente a tu grifo.…
+  PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_772afc7e-f9dd-4383-b2d4-edb0909acc8c.jpg
 
 ## Purificadores por Ósmosis Inversa (1)
 
@@ -971,3 +1034,10 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Limpiar el jardín a mano lleva horas. Un soplador sin bolsa solo mueve el problema de lugar. Y contratar servicio de jardinería cada semana sale caro. El WINDBAG26 de Kawashima resuelve los tres problemas con una sola…
   PDP: https://ferre24.com.mx/products/soplador-aspirador-kawashima-26-cc-bolsa-recolectora
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b071cdaf-d87f-4823-9d62-a2a05c8348cb.png
+
+## Tanques Hidroneumaticos (1)
+
+- **Tanque Precargado Vertical ALTAMIRA PRO XLB45** · `ALTAPRO-XLB45` · $8,093 (antes $11,561) · ALTAMIRA · ALTAPRO-XLB45 · 🔴 AGOTADO
+  El tanque hidroneumático precargado vertical ALTAMIRA PRO XLB45 es la solución de presión constante diseñada para sistemas de agua residenciales, comerciales e industriales que demandan rendimiento sostenido y cero…
+  PDP: https://ferre24.com.mx/products/tanque-hidroneumatico-precargado-vertical-altamira-45-galones-serie-pro-xlb
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1358c180-6c77-4509-887a-d6df5a30dee1.png

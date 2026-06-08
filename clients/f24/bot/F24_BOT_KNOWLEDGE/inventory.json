@@ -29,6 +29,10 @@
       "qty": 161,
       "available": true
     },
+    "BAKARAC300": {
+      "qty": 26,
+      "available": true
+    },
     "CCQA 5230": {
       "qty": 0,
       "available": false
@@ -253,6 +257,10 @@
       "qty": 100,
       "available": true
     },
+    "PP6.5B": {
+      "qty": 100,
+      "available": true
+    },
     "PP6.5D": {
       "qty": 100,
       "available": true
@@ -311,6 +319,10 @@
     },
     "WIND26": {
       "qty": 100,
+      "available": true
+    },
+    "WIND76": {
+      "qty": 15,
       "available": true
     },
     "XGT12-200": {
@@ -396,6 +408,10 @@
     "COMPHKIT50L": {
       "qty": 370,
       "available": true
+    },
+    "LMH-1000W": {
+      "qty": 0,
+      "available": false
     },
     "GPDS14T": {
       "qty": 28,
@@ -741,12 +757,24 @@
       "qty": 0,
       "available": false
     },
+    "BK7.520": {
+      "qty": 100,
+      "available": true
+    },
+    "BK7.530": {
+      "qty": 100,
+      "available": true
+    },
     "BP1330C": {
       "qty": 38,
       "available": true
     },
     "BP2.515": {
       "qty": 100,
+      "available": true
+    },
+    "BP720A": {
+      "qty": 66,
       "available": true
     },
     "BP730D": {
@@ -793,6 +821,10 @@
       "qty": 1,
       "available": true
     },
+    "ATV-25": {
+      "qty": 100,
+      "available": true
+    },
     "BP4311": {
       "qty": 100,
       "available": true
@@ -821,12 +853,28 @@
       "qty": 21,
       "available": true
     },
+    "KASPRO-16P": {
+      "qty": 21,
+      "available": true
+    },
+    "PKRO600-6UVPM": {
+      "qty": 30,
+      "available": true
+    },
+    "PRES-AP10XB127-P16": {
+      "qty": 1,
+      "available": true
+    },
     "PRES-AP5XB-24LM": {
       "qty": 4,
       "available": true
     },
     "PRES-PET13-P10": {
       "qty": 11,
+      "available": true
+    },
+    "TKGHE-38-IP": {
+      "qty": 9,
       "available": true
     },
     "MHP11": {
