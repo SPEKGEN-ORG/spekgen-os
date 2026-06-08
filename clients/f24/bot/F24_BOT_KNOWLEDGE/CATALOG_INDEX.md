@@ -118,11 +118,11 @@ Reglas de meses sin intereses (MSI) por promo:
   El apagón llega sin avisar y siempre en el peor momento: la comida del refrigerador se echa a perder, te quedas sin luz y la casa entera se detiene. El Generador Ultra Fox BRAMA3000 es tu respaldo de energía para que…
   PDP: https://ferre24.com.mx/products/generador-portatil-3000w-ultra-fox-brama3000-motor-6-5hp-a-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e87e1597-8a53-48ed-8f2c-5e2f3238255f.png
-- **Generador Portátil 5000W Gasolina ENERWELL** · `ENERWELL-G5000` · $15,004 (antes $21,434) · F24
+- **Generador Portátil 5000W Gasolina ENERWELL** · `ENERWELL-G5000` · $15,004 (antes $21,434) · F24 · 🔴 AGOTADO
   El Generador Portátil ENERWELL-G5000 es la solución de energía que necesitas cuando la red eléctrica no está disponible o no es suficiente. Con 5,000W nominales y picos de hasta 5,500W , este generador de motor 4…
   PDP: https://ferre24.com.mx/products/generador-portatil-5000w-gasolina-enerwell-110v-220v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d17133b5-26bf-4ca4-8884-d82feeece7c4.png
-- **Generador Portátil 8000W Gasolina ENERWELL** · `ENERWELL-G8000` · $22,807 (antes $32,582) · F24
+- **Generador Portátil 8000W Gasolina ENERWELL** · `ENERWELL-G8000` · $22,807 (antes $32,582) · F24 · 🔴 AGOTADO
   Cuando la obra no se detiene y cada herramienta cuenta, necesitas un generador a la altura. El Generador Portátil ENERWELL-G8000 entrega 7,000W nominales y picos de 8,000W con motor de gasolina 4 tiempos de 420cc,…
   PDP: https://ferre24.com.mx/products/generador-portatil-8000w-gasolina-enerwell-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_77ea6781-7541-4bbe-9fba-5a74c1aac826.png
@@ -253,11 +253,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   El cuello de botella del riego no es la bomba — es la manguera que no llega. · Las mangueras rígidas se doblan en la curva, se quiebran bajo el sol, pesan el doble y ocupan media bodega. La LayFlat Power Hunt resuelve…
   PDP: https://ferre24.com.mx/products/power-hunt-ml24econ
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_64f8fcd5-0e67-4eaa-93d2-aa68cb1a6df1.png
-- **Motobomba 7 HP 4 Tiempos Autocebante 2"** · `HUNT2` · $2,351 (antes $4,053) · Power Hunt · HUNT2
+- **Motobomba 7 HP 4 Tiempos Autocebante 2"** · `HUNT2` · $2,351 (antes $4,053) · Power Hunt · HUNT2 · 🔴 AGOTADO
   Cuando el agua no llega sola, la Power Hunt HUNT2 hace el trabajo. Con 7 caballos de fuerza y motor 4 tiempos OHV a 3,600 RPM, esta motobomba autocebante mueve agua desde pozos, ríos, cisternas o zonas inundadas — sin…
   PDP: https://ferre24.com.mx/products/motobomba-7-hp-4-tiempos-autocebante-2-power-hunt-hunt2
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d83335d5-583c-4e2c-8511-e68b01bb3b45.png
-- **Motobomba Agrícola 3HP Aluminio Autocebante** · `BK2.515` · $2,914 (antes $3,511) · Kawashima · BK2.515 · ⚡PROMO 12MSI
+- **Motobomba Agrícola 3HP Aluminio Autocebante** · `BK2.515` · $2,914 (antes $3,511) · Kawashima · BK2.515 · ⚡PROMO 12MSI · 🔴 AGOTADO
   La [VERIFICAR marca] BK2.515 es una motobomba agrícola autocebante diseñada para trabajo de campo real: riego de parcelas, llenado de tinacos y traslados entre pozos sin depender de la corriente eléctrica. · Cuerpo de…
   PDP: https://ferre24.com.mx/products/motobomba-agricola-3hp-aluminio-autocebante-200-l-min-altura-15m-boca-1-5
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_be73405e-cea5-4492-90dd-478313642ebb.png
@@ -341,7 +341,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Motobomba 2.5HP AUTOCEBANTE 1.5" — Riego Residencial y Agrícola sin Complicaciones
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-515-2-5hp-autocebante-1-5-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6eb530a-e06d-4eb6-9320-9b8dbc7be40d.png
-- **Motobomba Portátil Kawashima BK2.510** · `BK2.510` · $3,577 (antes $6,168) · Kawashima · BK2.510
+- **Motobomba Portátil Kawashima BK2.510** · `BK2.510` · $3,577 (antes $6,168) · Kawashima · BK2.510 · 🔴 AGOTADO
   La BK2.510 es la motobomba agrícola portátil pensada para el productor que necesita llevar agua lejos y alto, sin cargar con el peso de una 3HP. Con motor de 2.5HP a gasolina de 4 tiempos y cuerpo de aluminio fundido,…
   PDP: https://ferre24.com.mx/products/motobomba-portatil-kawashima-bk2-510-2-5hp-aluminio-autocebante-boca-1-26m
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_041b8f50-b868-4d2a-9b0b-a1c9a8ee9b1b.png
@@ -456,7 +456,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Trabaja más, mantén menos · El Power Hunt CP50SA es el compresor ideal para el taller, el garaje y el trabajo en campo que exige resultados sin interrupciones. Con una bomba 100 % libre de aceite eliminas por completo…
   PDP: https://ferre24.com.mx/products/compresor-power-hunt-50-l-libre-de-aceite-doble-conexion-rapida
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8753616b-ddc6-45bf-8d01-7afbcb41164a.png
-- **Compresor Power Hunt 50 L** · `CA-50PH` · $6,223 (antes $6,838) · Power Hunt · ⚡PROMO
+- **Compresor Power Hunt 50 L** · `CA-50PH` · $6,223 (antes $6,838) · Power Hunt · ⚡PROMO · 🔴 AGOTADO
   ¿Tu compresor de 25 litros ya no te alcanza para la jornada completa? El salto al Power Hunt 50 L no es un lujo — es la herramienta que tu taller necesita para dejar de perder tiempo esperando que el tanque se recargue.…
   PDP: https://ferre24.com.mx/products/compresor-power-hunt-50-l-oil-free-doble-motor
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8b27240a-24ff-4189-81f1-1219841bc347.png
@@ -483,11 +483,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Cuando el trabajo forestal no para, no puedes perder tiempo esperando que llegue el segundo equipo. Las brigadas, ejidos y arboricultores que trabajan en campo real necesitan dos motosierras funcionando al mismo tiempo…
   PDP: https://ferre24.com.mx/products/kit-2-motosierras-kawashima-pro-mako72-72cc-barra-24
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_feafba01-4c69-40f0-ae36-f441b2b9d964.png
-- **Motosierra Kawashima 52 cc** · `CSK5218` · $3,531 (antes $4,154) · Kawashima · ⚡PROMO 9MSI
+- **Motosierra Kawashima 52 cc** · `CSK5218` · $3,531 (antes $4,154) · Kawashima · ⚡PROMO 9MSI · 🔴 AGOTADO
   En campo, aserradero o proyecto forestal, los tiempos muertos cuestan. La Motosierra Kawashima 52cc con barra de 18 pulgadas está construida para que eso no pase. · Motor que no se raja. Con 52cc de cilindrada y 1.9 kW…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-52cc-barra-18-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_26110968-dc25-4558-b652-2c8537b5b304.png
-- **Motosierra Kawashima 62cc Barra 22"** · `CSK6222` · $3,699 (antes $4,352) · Kawashima · ⚡PROMO 9MSI
+- **Motosierra Kawashima 62cc Barra 22"** · `CSK6222` · $3,699 (antes $4,352) · Kawashima · ⚡PROMO 9MSI · 🔴 AGOTADO
   Cuando el trabajo es tala real — árboles de gran diámetro, maderas de alta densidad, jornadas de 8 horas en campo — necesitas una herramienta que no te abandone a media mañana. La Motosierra Kawashima 62cc con barra de…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-62cc-barra-22-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0b9d3dcf-6a4a-4b4a-b381-8105b75f26f1.png
@@ -609,7 +609,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   ### El terreno no espera. Tu herramienta tampoco debería fallar. · Si trabajas en campo, ejido o jardín de gran superficie, sabes lo que cuesta llegar a media jornada con una herramienta que ya no responde. Las…
   PDP: https://ferre24.com.mx/products/desbrozador-pro-45cc-2-tiempos-kawashima-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_86762dc7-e9bf-47e1-9633-d10e5e11de1f.png
-- **Kawashima AKE100P** · `AKE100P` · $8,291 (antes $9,754) · Kawashima · AKE100P · ⚡PROMO
+- **Kawashima AKE100P** · `AKE100P` · $8,291 (antes $9,754) · Kawashima · AKE100P · ⚡PROMO · 🔴 AGOTADO
   Fumigar manualmente hectáreas enteras agota al operador, desperdicia agroquímicos y deja coberturas irregulares. El Kawashima AKE100P resuelve eso de raíz: es un remolque aspersor eléctrico de 100 litros que se acopla…
   PDP: https://ferre24.com.mx/products/kawashima-ake100p-aspersor-electrico-remolque-100-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_23b1c88a-6e8e-472e-a5fd-9a349d6ffef7.png
@@ -685,14 +685,14 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
 
 ## Escarificadores y Aireadores (1)
 
-- **Peinadora Eléctrica para Césped Artificial** · `302E` · $4,616 (antes $5,431) · Garland · Roll & Comb 302 E · ⚡PROMO 9MSI
+- **Peinadora Eléctrica para Césped Artificial** · `302E` · $4,616 (antes $5,431) · Garland · Roll & Comb 302 E · ⚡PROMO 9MSI · 🔴 AGOTADO
   El césped artificial de alta calidad merece mantenimiento de alta calidad. Con el tiempo, el tráfico constante aplana las fibras sintéticas y permite que hojas, musgo, agujas de pino y polvo se acumulen entre los…
   PDP: https://ferre24.com.mx/products/peinadora-electrica-cesped-artificial-garland-302e
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b62cd78f-b760-43b9-b584-e675af1b8520.png
 
 ## Herramientas para Pasto Sintético (1)
 
-- **Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E** · `141E` · $3,891 (antes $4,578) · Roll & Comb · 141E · ⚡PROMO 9MSI
+- **Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E** · `141E` · $3,891 (antes $4,578) · Roll & Comb · 141E · ⚡PROMO 9MSI · 🔴 AGOTADO
   El césped artificial que no recibe mantenimiento se nota. Las fibras se aplastan en las zonas de más pisadas, las hojas y el polvo se acumulan entre las hebras, y la arena de sílice se desplaza dejando parches sin…
   PDP: https://ferre24.com.mx/products/peinadora-electrica-300-w-pasto-sintetico-roll-comb-141e
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7bd6adde-3874-4146-8c40-e9fbf2196aa6.png
@@ -896,7 +896,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
 
 ## Peinadoras y Barredoras (2)
 
-- **Garland Roll & Comb 502 E** · `502E` · $6,691 (antes $7,872) · Garland · Roll & Comb 502 E · ⚡PROMO 9MSI
+- **Garland Roll & Comb 502 E** · `502E` · $6,691 (antes $7,872) · Garland · Roll & Comb 502 E · ⚡PROMO 9MSI · 🔴 AGOTADO
   Mantener el césped artificial en óptimas condiciones requiere más que un rastrillo. Con el paso del tiempo, las fibras sintéticas se aplastan, el musgo y las algas se acumulan, y hojas o agujas de pino quedan atrapadas…
   PDP: https://ferre24.com.mx/products/garland-roll-comb-502e-peinadora-cesped-artificial-1600w
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a7fd24bd-479c-405b-ad72-36e19394b6ab.png
@@ -907,7 +907,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
 
 ## Producto (9)
 
-- **AQUAPAK CCQA-5230** · `CCQA 5230` · $2,786 (antes $3,980) · AQUAPAK · CCQA-5230
+- **AQUAPAK CCQA-5230** · `CCQA 5230` · $2,786 (antes $3,980) · AQUAPAK · CCQA-5230 · 🔴 AGOTADO
   Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
   PDP: https://ferre24.com.mx/products/aquapak-ccqa-5230
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_01bd0201-942f-403b-90f8-b04cf5869189.png
@@ -927,15 +927,15 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $2
   Agua de calidad laboratorio — Membrana RO reduce impurezas a 0.0001 micras · Ahorro económico — No más botellas de plástico; costo por litro 80% menor · Alto flujo sin esperas — 200 GPD garantiza agua abundante para…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f9e60041-88be-48eb-bfa7-104ddb8ba3dc.png
-- **Shellcoat 19L Aislante de Calor (Pintura Térmica Reflectante)** · `SHELL-19` · $1,595 (antes $1,994) · Shellcoat · SHELL-19
+- **Shellcoat 19L Aislante de Calor (Pintura Térmica Reflectante)** · `SHELL-19` · $1,595 (antes $1,994) · Shellcoat · SHELL-19 · 🔴 AGOTADO
   Aislante de Calor Shellcoat – Pintura Térmica Ultra Reflectante Aislante de Calor Shellcoat es una pintura térmica formulada para bloquear hasta el 90% de la radiación solar en superficies expuestas al sol. Su…
   PDP: https://ferre24.com.mx/products/shellcoat-19l-aislante-calor-pintura-termica-reflectante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_119ce3fe-3fcf-4e73-94ea-7a084ab981cb.png
-- **Shellcoat HI10 19L Impermeabilizante Híbrido Acrílico-Poliuretano (...** · `HI10-19` · $2,400 (antes $3,000) · Shellcoat · HI10-19
+- **Shellcoat HI10 19L Impermeabilizante Híbrido Acrílico-Poliuretano (...** · `HI10-19` · $2,400 (antes $3,000) · Shellcoat · HI10-19 · 🔴 AGOTADO
   Impermeabilizante Hibrido Acrílico Poliuretano Shellcoat HI10 – Protección y Durabilidad Impermeabilizante Hibrido Acrílico Poliuretano HI10 es un impermeabilizante fibratado de tecnología híbrida color blanco, diseñado…
   PDP: https://ferre24.com.mx/products/shellcoat-hi10-19l-impermeabilizante-hibrido-acrilico-poliuretano-10-anos-lamina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_5c31d409-b7e1-4d44-8e95-074810bc4329.png
-- **Shellcoat Liga Seal 19L Sellador (Promotor de Adherencia + Sellador)** · `SHELIGA-19` · $1,399 (antes $1,749) · Shellcoat · SHELIGA-19
+- **Shellcoat Liga Seal 19L Sellador (Promotor de Adherencia + Sellador)** · `SHELIGA-19` · $1,399 (antes $1,749) · Shellcoat · SHELIGA-19 · 🔴 AGOTADO
   Sellador Liga Shellcoat – Sellador y Primer de Alta Adherencia Sellador Liga Shellcoat SEAL es un recubrimiento diseñado para mejorar el anclaje, adherencia y rendimiento de otros productos como el aislante térmico…
   PDP: https://ferre24.com.mx/products/shellcoat-liga-seal-19l-sellador-promotor-adherencia-sellador
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_dad0cdbb-08ba-4079-9ebd-8b8b41eeafdc.png

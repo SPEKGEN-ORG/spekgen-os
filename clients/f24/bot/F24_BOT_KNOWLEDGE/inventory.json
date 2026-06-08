@@ -1,0 +1,597 @@
+{
+  "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/📦 STOCK Y PROMOS",
+  "inventory": {
+    "AK26": {
+      "qty": 200,
+      "available": true
+    },
+    "CCQA 5230": {
+      "qty": 0,
+      "available": false
+    },
+    "GH26000E-A": {
+      "qty": 38,
+      "available": true
+    },
+    "GP10000GAS": {
+      "qty": 20,
+      "available": true
+    },
+    "GP10000GAS-T": {
+      "qty": 11,
+      "available": true
+    },
+    "GPD8.5T": {
+      "qty": 36,
+      "available": true
+    },
+    "GPDS14M": {
+      "qty": 24,
+      "available": true
+    },
+    "GPDS8.5M": {
+      "qty": 53,
+      "available": true
+    },
+    "GPDS8.5T": {
+      "qty": 37,
+      "available": true
+    },
+    "HI10-19": {
+      "qty": 0,
+      "available": false
+    },
+    "KAS-10P": {
+      "qty": 1,
+      "available": true
+    },
+    "KF35X": {
+      "qty": 80,
+      "available": true
+    },
+    "KTR26": {
+      "qty": 100,
+      "available": true
+    },
+    "MP2.8": {
+      "qty": 89,
+      "available": true
+    },
+    "MP7FF": {
+      "qty": 100,
+      "available": true
+    },
+    "PK-EASY-100CT": {
+      "qty": 14,
+      "available": true
+    },
+    "PK-EASY-200US": {
+      "qty": 1,
+      "available": true
+    },
+    "PKRO100-6UVPM": {
+      "qty": 11,
+      "available": true
+    },
+    "PKRO50-6UVPM": {
+      "qty": 72,
+      "available": true
+    },
+    "PKUF-6UV": {
+      "qty": 11,
+      "available": true
+    },
+    "PPSB6.5AK": {
+      "qty": 19,
+      "available": true
+    },
+    "PPSB6.5BK": {
+      "qty": 17,
+      "available": true
+    },
+    "PRES-TM-P50X-P10": {
+      "qty": 1,
+      "available": true
+    },
+    "SHELIGA-19": {
+      "qty": 0,
+      "available": false
+    },
+    "SHELL-19": {
+      "qty": 0,
+      "available": false
+    },
+    "BT6.530": {
+      "qty": 120,
+      "available": true
+    },
+    "HUNT2": {
+      "qty": 0,
+      "available": false
+    },
+    "HUNT3": {
+      "qty": 100,
+      "available": true
+    },
+    "MAKO72": {
+      "qty": 100,
+      "available": true
+    },
+    "HP13N": {
+      "qty": 64,
+      "available": true
+    },
+    "HP7N": {
+      "qty": 100,
+      "available": true
+    },
+    "MTT52M": {
+      "qty": 100,
+      "available": true
+    },
+    "BPP165": {
+      "qty": 6,
+      "available": true
+    },
+    "BK621-1.5C": {
+      "qty": 1,
+      "available": true
+    },
+    "PBH100": {
+      "qty": 21,
+      "available": true
+    },
+    "PBL": {
+      "qty": 41,
+      "available": true
+    },
+    "PBR": {
+      "qty": 22,
+      "available": true
+    },
+    "TBL6.5": {
+      "qty": 80,
+      "available": true
+    },
+    "CA-25PH": {
+      "qty": 1,
+      "available": true
+    },
+    "COMPH100L": {
+      "qty": 195,
+      "available": true
+    },
+    "COMPHKIT25L": {
+      "qty": 1,
+      "available": true
+    },
+    "CA-50PH": {
+      "qty": 0,
+      "available": false
+    },
+    "COMPHKIT50L": {
+      "qty": 370,
+      "available": true
+    },
+    "GPDS14T": {
+      "qty": 28,
+      "available": true
+    },
+    "CK22CC": {
+      "qty": 100,
+      "available": true
+    },
+    "KPD45TOP": {
+      "qty": 100,
+      "available": true
+    },
+    "KPD52TOP": {
+      "qty": 100,
+      "available": true
+    },
+    "DKY52K": {
+      "qty": 2,
+      "available": true
+    },
+    "ENERWELL-G1000": {
+      "qty": 1,
+      "available": true
+    },
+    "ENERWELL-G2500": {
+      "qty": 1,
+      "available": true
+    },
+    "ENERWELL-G5000": {
+      "qty": 0,
+      "available": false
+    },
+    "ENERWELL-G8000": {
+      "qty": 0,
+      "available": false
+    },
+    "EWBG2-500F": {
+      "qty": 2,
+      "available": true
+    },
+    "EWBG3-1000F": {
+      "qty": 1,
+      "available": true
+    },
+    "302E": {
+      "qty": 0,
+      "available": false
+    },
+    "BRAMA3000": {
+      "qty": 309,
+      "available": true
+    },
+    "GP5500": {
+      "qty": 1,
+      "available": true
+    },
+    "GP9500TB": {
+      "qty": 100,
+      "available": true
+    },
+    "GPH2500W": {
+      "qty": 41,
+      "available": true
+    },
+    "GPH5500W": {
+      "qty": 100,
+      "available": true
+    },
+    "GPH8000W": {
+      "qty": 100,
+      "available": true
+    },
+    "GPH9000W": {
+      "qty": 100,
+      "available": true
+    },
+    "GPD8.5M": {
+      "qty": 22,
+      "available": true
+    },
+    "BAKARAC300-G": {
+      "qty": 33,
+      "available": true
+    },
+    "GPIDJI9500": {
+      "qty": 27,
+      "available": true
+    },
+    "GPIS5.5KW": {
+      "qty": 13,
+      "available": true
+    },
+    "GP12000": {
+      "qty": 30,
+      "available": true
+    },
+    "GP3000M": {
+      "qty": 2,
+      "available": true
+    },
+    "GPH1000W": {
+      "qty": 1,
+      "available": true
+    },
+    "PG500": {
+      "qty": 6,
+      "available": true
+    },
+    "141E": {
+      "qty": 0,
+      "available": false
+    },
+    "HP5.5N": {
+      "qty": 2,
+      "available": true
+    },
+    "HPPE4M": {
+      "qty": 96,
+      "available": true
+    },
+    "HPULTRA2100PRO": {
+      "qty": 200,
+      "available": true
+    },
+    "HPH7": {
+      "qty": 135,
+      "available": true
+    },
+    "ML24ECON": {
+      "qty": 1,
+      "available": true
+    },
+    "BP2.510": {
+      "qty": 1,
+      "available": true
+    },
+    "BP720": {
+      "qty": 1,
+      "available": true
+    },
+    "BP730": {
+      "qty": 100,
+      "available": true
+    },
+    "HUNT521": {
+      "qty": 3,
+      "available": true
+    },
+    "BK2.510": {
+      "qty": 0,
+      "available": false
+    },
+    "BP2510V2": {
+      "qty": 200,
+      "available": true
+    },
+    "BP4316": {
+      "qty": 100,
+      "available": true
+    },
+    "MAKO25": {
+      "qty": 1,
+      "available": true
+    },
+    "MAKO65": {
+      "qty": 1,
+      "available": true
+    },
+    "CSK5218": {
+      "qty": 0,
+      "available": false
+    },
+    "CSK6222": {
+      "qty": 0,
+      "available": false
+    },
+    "3.0226.M3N": {
+      "qty": 1,
+      "available": true
+    },
+    "3.0327.H": {
+      "qty": 1,
+      "available": true
+    },
+    "0.8564": {
+      "qty": 1,
+      "available": true
+    },
+    "0.9663.MC": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3405": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3601.63": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3603": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3603.T": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3603.T2": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3603.T7": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3703": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3703.T": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3703.T2": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3703.T7": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3713.3": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3713.7": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3713.94": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3713.941": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3713.942": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3713.T": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3713.T2": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3713.T7": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3743": {
+      "qty": 1,
+      "available": true
+    },
+    "1.3763": {
+      "qty": 1,
+      "available": true
+    },
+    "1.4603": {
+      "qty": 1,
+      "available": true
+    },
+    "1.4703": {
+      "qty": 1,
+      "available": true
+    },
+    "1.6703": {
+      "qty": 1,
+      "available": true
+    },
+    "1.6795": {
+      "qty": 1,
+      "available": true
+    },
+    "1.6795.3": {
+      "qty": 1,
+      "available": true
+    },
+    "1.6795.T": {
+      "qty": 1,
+      "available": true
+    },
+    "1.6795.T2": {
+      "qty": 1,
+      "available": true
+    },
+    "502E": {
+      "qty": 0,
+      "available": false
+    },
+    "MTK26": {
+      "qty": 1,
+      "available": true
+    },
+    "PP170": {
+      "qty": 128,
+      "available": true
+    },
+    "PP190": {
+      "qty": 100,
+      "available": true
+    },
+    "PP190TT": {
+      "qty": 54,
+      "available": true
+    },
+    "AKE100P": {
+      "qty": 0,
+      "available": false
+    },
+    "BK2.515": {
+      "qty": 0,
+      "available": false
+    },
+    "BP1330C": {
+      "qty": 38,
+      "available": true
+    },
+    "BP2.515": {
+      "qty": 100,
+      "available": true
+    },
+    "BP730D": {
+      "qty": 73,
+      "available": true
+    },
+    "BPK31": {
+      "qty": 100,
+      "available": true
+    },
+    "HPP110V": {
+      "qty": 100,
+      "available": true
+    },
+    "BAKARAC150": {
+      "qty": 200,
+      "available": true
+    },
+    "BAKARAC200": {
+      "qty": 78,
+      "available": true
+    },
+    "BAKARAC250": {
+      "qty": 100,
+      "available": true
+    },
+    "WIND43": {
+      "qty": 100,
+      "available": true
+    },
+    "WINDBAG26": {
+      "qty": 100,
+      "available": true
+    },
+    "BP4310": {
+      "qty": 100,
+      "available": true
+    },
+    "1.3713": {
+      "qty": 1,
+      "available": true
+    },
+    "BP4311": {
+      "qty": 100,
+      "available": true
+    },
+    "BP4312": {
+      "qty": 100,
+      "available": true
+    },
+    "BP4313": {
+      "qty": 100,
+      "available": true
+    },
+    "BP4314": {
+      "qty": 100,
+      "available": true
+    },
+    "BP4315": {
+      "qty": 100,
+      "available": true
+    },
+    "GPIS3.5KW": {
+      "qty": 100,
+      "available": true
+    },
+    "KAS-12P-TF": {
+      "qty": 21,
+      "available": true
+    },
+    "PRES-AP5XB-24LM": {
+      "qty": 4,
+      "available": true
+    },
+    "PRES-PET13-P10": {
+      "qty": 11,
+      "available": true
+    },
+    "MHP11": {
+      "qty": 1,
+      "available": true
+    },
+    "BK1440": {
+      "qty": 1,
+      "available": true
+    }
+  }
+}

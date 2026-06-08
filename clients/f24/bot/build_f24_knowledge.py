@@ -249,6 +249,8 @@ def write_catalog_index(products: list[dict], domain: str, promos: dict | None =
                 if pr.get("eligible_912"):
                     tag += f" {pr.get('msi_max')}MSI"
                 head += f" · {tag}"
+            if not p.get("available", True):
+                head += " · 🔴 AGOTADO"
             md.append(head)
             if p.get("specs"):
                 md.append(f"  {p['specs']}")

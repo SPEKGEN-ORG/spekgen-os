@@ -58,6 +58,14 @@ jobs:
             python3 sync_f24_promos.py --apply
           fi
 
+      - name: Sync inventory → Shopify (stock/disponible) + inventory.json
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python3 sync_f24_inventory.py
+          else
+            python3 sync_f24_inventory.py --apply
+          fi
+
       - name: Rebuild knowledge base
         if: ${{ github.event.inputs.dry_run != 'true' }}
         run: python3 build_f24_knowledge.py
@@ -79,6 +87,7 @@ jobs:
           git add clients/f24/bot/F24_BOT_KNOWLEDGE/promos_active.json \
                   clients/f24/bot/F24_BOT_KNOWLEDGE/catalog.json \
                   clients/f24/bot/F24_BOT_KNOWLEDGE/CATALOG_INDEX.md \
+                  clients/f24/bot/F24_BOT_KNOWLEDGE/inventory.json \
                   clients/f24/bot/_promo_state.json || true
           git commit -m "chore(f24): promo sync $(date -u +%Y-%m-%d)" || echo "nothing to commit"
           git push || echo "push failed"
