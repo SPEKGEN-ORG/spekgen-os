@@ -682,6 +682,7 @@ F24_TEAM_EMAILS = [
 ]
 GMAIL_CONN_ID = 8183100        # conexión Gmail de Make (team 354061, reusada de HC)
 HANDOFF_TAG = "requiere-humano"
+GHL_TAGS_DATASTRUCTURE_ID = 395040   # body {tags:[...]} para POST /contacts/{id}/tags
 
 # Filtro: dispara solo cuando Claude devuelve action escalate o human_handoff (OR).
 ESCALATE_FILTER = {
@@ -723,7 +724,7 @@ def team_email_module(module_id, x, y):
 
 
 def ghl_tag_handoff_module(module_id, x, y):
-    """Agrega el tag 'requiere-humano' al contacto en GHL para marcar la conversación en el inbox."""
+    """Agrega el tag 'requiere-humano' al contacto en GHL. Body via data structure (patrón probado)."""
     return {
         "id": module_id, "module": "http:MakeRequest", "version": 4,
         "parameters": {"authenticationType": "noAuth"},
@@ -736,12 +737,15 @@ def ghl_tag_handoff_module(module_id, x, y):
                 {"name": "Content-Type", "value": "application/json"},
                 {"name": "Accept", "value": "application/json"},
             ],
-            "bodyType": "raw", "contentType": "application/json",
-            "data": "{\"tags\":[\"" + HANDOFF_TAG + "\"]}",
+            "contentType": "json", "inputMethod": "dataStructure",
+            "bodyDataStructure": GHL_TAGS_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": {"tags": [HANDOFF_TAG]},
             "timeout": 30, "shareCookies": False, "parseResponse": True,
             "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
         },
         "metadata": {"designer": {"x": x, "y": y}},
+        # Best-effort: si el tag falla, NO debe tumbar el bot.
+        "onerror": [resume_handler(48, {"ok": True}, x, y + 200)],
     }
 
 
@@ -812,10 +816,10 @@ sub_order_create = f24_process_order_module(42, 3100, 300, parse_module_id=8)
 sub_order_link = ghl_send_payment_link_module(43, 3300, 300, order_http_module_id=42)
 sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8)
 
-# Sub-route de HANDOFF: aviso al equipo (email + tag) cuando action es escalate/human_handoff.
-# El mensaje al cliente lo manda igual el módulo 9 (rama normal); esta corre EN PARALELO.
+# Sub-route de HANDOFF: aviso por EMAIL al equipo cuando action es escalate/human_handoff.
+# (El tag GHL se reintroduce después; el módulo raw causó BundleValidationError en runtime.)
+# El email ya se validó en producción (llegó correctamente en la 1ª prueba).
 sub_handoff_email = team_email_module(45, 2900, 600)   # lleva el ESCALATE_FILTER (gate de la sub-route)
-sub_handoff_tag = ghl_tag_handoff_module(46, 3150, 600)
 
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
@@ -823,7 +827,7 @@ post_parse_router = {
     "routes": [
         {"flow": [sub_normal_send, sub_normal_ds]},
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
-        {"flow": [sub_handoff_email, sub_handoff_tag]},
+        {"flow": [sub_handoff_email]},
     ],
 }
 
