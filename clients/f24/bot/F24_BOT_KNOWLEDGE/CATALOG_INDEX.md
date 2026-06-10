@@ -1,6 +1,6 @@
 # Ferre24 — Catálogo (Knowledge Base del bot)
 
-*232 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
+*225 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
 
 > El bot cotiza ÚNICAMENTE productos de esta lista. El **precio** es el de venta;
 > el precio **tachado** (si existe) es referencia. Para cerrar, el bot pasa el/los
@@ -26,11 +26,11 @@ Ahorita NO hay promos vigentes. Todos los SKUs: solo hasta 6 MSI (link normal).
 - **Generador Diesel Silencioso 14 kW con ATS Automático** · `GPDS14M` · $87,110 · Parazzini · GPDS14M
   Sin luz no se para, pero el ruido sí molesta · Cuando el CFE falla, cada segundo cuenta — en una clínica, en un taller, en tu casa. El problema de la mayoría de los generadores no es solo el apagón: es el rugido que…
   PDP: https://ferre24.com.mx/products/generador-diesel-silencioso-14-kw-con-ats-automatico-parazzini-gpds14m
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c4edd56e-f4da-419d-8bf6-a55d0227f70b.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_1885dfae-963d-40b0-9726-921c199d6c06.png
 - **Generador Diesel Silencioso Trifásico 8.5 kW Parazzini GPDS8.5T** · `GPDS8.5T` · $31,698 · Parazzini Pro · GPDS8.5T
   Especificaciones completas · SKU GPDS8.5T Motor · Potencia 15 HP · Tipo de motor Diesel · Combustible diesel · Cilindrada 531 cc · Encendido electrico · Tanque 24 L · Físicas · Peso 170 kg · Dimensiones (L × An × Al) 91…
   PDP: https://ferre24.com.mx/products/el-parazzini-gpds8-5t-rompe-el-paradigma-generador-diesel-trifasico-profesional-que-opera-a-solo-72-db-a-7-metros-mas-silencioso-que-una-conversacion-normal-disenado-para-instalaciones-que-exigen-lo-que-el-mercado-consideraba-imposible-potenci
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3e44300a-491a-4e96-bbbd-55a09ac04ace.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_e8a7b220-aec9-4052-936f-6fd29320145f.png
 - **Generador Diesel Trifásico 15,000W / 18.75 kVA Arranque Eléctrico** · `GPD15000T` · $74,338 (antes $135,160) · Parazzini · GPD15000T
   Potencia industrial sin compromisos · Cuando la luz se va, las pérdidas empiezan a contar en miles de pesos por hora. El Parazzini GPD15000T es el generador diesel trifásico de mayor potencia en la línea open-frame de…
   PDP: https://ferre24.com.mx/products/generador-diesel-trifasico-15-000w-18-75-kva-arranque-electrico-parazzini-gpd15000t
@@ -127,6 +127,10 @@ Ahorita NO hay promos vigentes. Todos los SKUs: solo hasta 6 MSI (link normal).
   Cuando se va la luz, el problema no es solo la oscuridad: es el refrigerador que se descompone, la bomba de agua que se detiene y el negocio que deja de producir. El generador a gasolina Power Hunt GPH9000W existe para…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-power-hunt-gph9000w-18-hp-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8ccbaff6-c651-4f71-bcb4-daa43a4b7846.png
+- **Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $30,804 · Parazzini · GPDS8.5M
+  Bloque 1 — Hero / Gancho principal · 72 dB. El generador que nadie escuchará. · Mientras otros generadores hacen más ruido que una motosierra (85–88 dB), el Parazzini GPDS8.5M trabaja a 72 dB medidos a 7 metros — el…
+  PDP: https://ferre24.com.mx/products/generador-diesel-silencioso-parazzini-gpds8-5m-solo-72-db-apto-para-hoteles-residencias-y-oficinas-7-0-kw-monofasico-110-220v-arranque-electrico-envio-con-flete-especial
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4c083857-64fc-4b00-b105-12f9e2945b90.png
 - **Generador estacionario trifásico 10 kW** · `GP10000GAS-T` · $96,775 · Parazzini Pro · GP10000GAS-T
   Un corte de CFE no debería detener tu negocio ni tu producción. · Los talleres, panaderías, clínicas y pequeñas industrias que operan con equipos trifásicos de 220 V saben lo que cuesta un apagón: máquinas paradas,…
   PDP: https://ferre24.com.mx/products/generador-estacionario-trifasico-10-kw-gas-lp-gn-ats-automatico
@@ -165,17 +169,13 @@ Ahorita NO hay promos vigentes. Todos los SKUs: solo hasta 6 MSI (link normal).
 - **Parazzini Pro GPDS14T** · `GPDS14T` · $87,110 · Parazzini Pro · GPDS14T
   Un apagón no avisa — y en un negocio, cada minuto sin luz es dinero perdido. · Si tu taller, local comercial o rancho depende de corriente trifásica para operar, ya sabes lo que cuesta un corte inesperado: producción…
   PDP: https://ferre24.com.mx/products/parazzini-pro-gpds14t-generador-silencioso-14-kw-trifasico-diesel
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_e1bcba76-8eb7-484f-b695-24e480289b99.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/marvelsa_hero_01.png
 - **Soldadora inverter compacta Power Hunt CENTELLA130** · `CENTELLA130` · $1,166 (antes $2,120) · Power Hunt · CENTELLA130
   Conecta donde quieras. Suelda como profesional. · La CENTELLA130 resuelve el problema que frena a la mayoría de quienes quieren soldar: no tener 220V en casa . Con entrada dual 127V/220V automática, esta soldadora…
   PDP: https://ferre24.com.mx/products/soldadora-inverter-compacta-power-hunt-centella130-conecta-en-127v-toma-de-pared-casera-o-220v-taller-industrial-hasta-120a-de-potencia-ciclo-de-trabajo-85-tecnologia-inverter-peso-ligero-y-menor-consumo-respaldada-por-marvelsa-y-500-centros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_64ef2bd4-0aa5-4573-bf51-ff77b3a894c8.png
-- **```
-Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $30,804 · Parazzini · GPDS8.5M
-  Bloque 1 — Hero / Gancho principal · 72 dB. El generador que nadie escuchará. · Mientras otros generadores hacen más ruido que una motosierra (85–88 dB), el Parazzini GPDS8.5M trabaja a 72 dB medidos a 7 metros — el…
-  PDP: https://ferre24.com.mx/products/generador-diesel-silencioso-parazzini-gpds8-5m-solo-72-db-apto-para-hoteles-residencias-y-oficinas-7-0-kw-monofasico-110-220v-arranque-electrico-envio-con-flete-especial
 
-## Motobombas (52)
+## Motobombas (45)
 
 - **Aspersor Kawashima AK26** · `AK26` · $3,262 · Kawashima · AK26
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
@@ -188,6 +188,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Aspersora Motorizada Parazzini 6.5 HP** · `PPSB6.5B` · $4,914 (antes $8,934) · Parazzini · PPSB6.5B
   Si fumiga herbicidas o fungicidas de contacto, su bomba de pistón está en cuenta regresiva. · Los agroquímicos agresivos — glifosato, paraquat, cobre, azufre, fungicidas de síntesis moderna — corroen las válvulas y…
   PDP: https://ferre24.com.mx/products/aspersora-motorizada-parazzini-6-5-hp-bomba-membrana-para-herbicidas-y-fungicidas
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7157ff19-b194-4eac-8a90-5dad13942578.png
 - **Bomba Agrícola Autocebante 7.5 HP 2" BK7.520** · `BK7.520` · $4,770 (antes $8,224) · Ferre24 · BK7.520
   La bomba agrícola BK7.520 es la solución profesional para operaciones agrícolas medianas que requieren alto caudal y confiabilidad sostenida. Construida en aluminio resistente y equipada con motor gasolina 4 tiempos de…
   PDP: https://ferre24.com.mx/products/bomba-agricola-autocebante-7-5-hp-2-pulgadas-533-lmin-aluminio-bk7520
@@ -195,13 +196,15 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Bomba Agrícola Autocebante 7.5 HP 3" BK7.530** · `BK7.530` · $5,300 · Ferre24 · BK7.530
   La bomba agrícola BK7.530 es la solución de máxima capacidad para grandes operaciones agrícolas que necesitan bombear enormes volúmenes de agua con consistencia. Con motor gasolina 7.5 HP y salida de 3 pulgadas, entrega…
   PDP: https://ferre24.com.mx/products/bomba-agricola-autocebante-7-5-hp-3-pulgadas-1000-lmin-aluminio-bk7530
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_ad5de481-bb9c-442e-9461-9bfeb479ee36.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_5deabc10-e1f5-4c93-8fa7-98ee4fd486c0.png
 - **Bomba Sumergible TORNADO 4" 1.1 HP** · `KIN58-6/1115` · $3,522 (antes $4,824) · TORNADO · KIN58-6/1115
   ¿Para qué sirve? · La Bomba Sumergible TORNADO KIN58-6/1115 está diseñada para extraer agua de pozos profundos, norias y cisternas con instalación permanente. Opera completamente sumergida, sin necesidad de cebado…
   PDP: https://ferre24.com.mx/products/bomba-sumergible-tornado-4-1-1-hp-norias-cisternas-y-pozos-hasta-50-m
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_431ec01c-f76a-4633-82cd-314b00e3c2fb.png
 - **Bomba Sumergible TORNADO KIN58-4 1/2 HP para Norias, Cisternas y Po...** · `KIN58-4/1127A` · $3,220 (antes $4,600) · TORNADO · KIN58-4/1127A
   ¿Por qué eléctrica sumergible? A diferencia de las motobombas a gasolina, esta bomba trabaja completamente sumergida en el agua. Eso la hace silenciosa, más eficiente energéticamente y libre de mantenimiento de motor a…
   PDP: https://ferre24.com.mx/products/bomba-sumergible-tornado-kin58-4-1-2-hp-para-norias-cisternas-y-pozos-profundos
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_23a54d2d-4745-44d3-8f73-87be34f8296d.png
 - **Bomba de Agua Periférica Eléctrica 1 HP Parazzini BPP165** · `BPP165` · $1,059 (antes $2,118) · Parazzini · BPP165
   ¿La regadera te llega sin fuerza y las llaves apenas escurren? En casas de 1 o 2 pisos la red de agua potable casi nunca tiene la presión suficiente, y subir el agua hasta el tinaco se vuelve un problema diario. · La…
   PDP: https://ferre24.com.mx/products/bomba-agua-periferica-electrica-1-hp-parazzini-bpp165
@@ -213,11 +216,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Kawashima KTR26** · `KTR26` · $4,257 · Kawashima · KTR26
   Motor eficiente para jornadas completas en campo · El Kawashima KTR26 es un aspersor motorizado de mochila con motor 2 tiempos de 26 cc que trabaja hasta 7,500 RPM. Con 1.4 HP, está calibrado para su clase: no es un…
   PDP: https://ferre24.com.mx/products/kawashima-ktr26-aspersor-motorizado-26-cc-con-bomba-rompeolas-y-tanque-22-l
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_320d17be-6038-4479-b339-3ef6c21bcbe6.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_c80ae284-a140-4f20-8587-efbede155ee5.png
 - **Kit Parihuela Parazzini 7 HP** · `PP7BK` · $9,675 (antes $17,591) · Parazzini · PP7BK
   El arranque de temporada no puede esperar. · Cuando llega el momento de fumigar, cada día cuenta. La parcela no espera a que consigas manguera, a que el motor agarre ritmo o a que la bomba se cale por uso brusco. El kit…
   PDP: https://ferre24.com.mx/products/kit-parihuela-parazzini-7-hp-bomba-bronce-100-m-de-manguera
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_438f68bc-af66-4545-85ef-b1153f91b23c.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_de667a14-4b69-4d26-a7c4-73ecc9223bf7.png
 - **Kit Parihuela Parazzini 7 HP** · `PP7B` · $8,346 (antes $15,175) · Parazzini · PP7BK
   El arranque de temporada no puede esperar. · Cuando llega el momento de fumigar, cada día cuenta. La parcela no espera a que consigas manguera, a que el motor agarre ritmo o a que la bomba se cale por uso brusco. El kit…
   PDP: https://ferre24.com.mx/products/kit-parihuela-parazzini-7-hp-bomba-bronce-100-m-de-manguera-1
@@ -233,11 +236,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Motobomba Agrícola 3HP Aluminio Autocebante** · `BK2.515` · $3,511 · Kawashima · BK2.515 · 🔴 AGOTADO
   La [VERIFICAR marca] BK2.515 es una motobomba agrícola autocebante diseñada para trabajo de campo real: riego de parcelas, llenado de tinacos y traslados entre pozos sin depender de la corriente eléctrica. · Cuerpo de…
   PDP: https://ferre24.com.mx/products/motobomba-agricola-3hp-aluminio-autocebante-200-l-min-altura-15m-boca-1-5
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_be73405e-cea5-4492-90dd-478313642ebb.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3dae3490-5c0a-4202-abc0-64bd7b65c0d5.png
 - **Motobomba Autocebante 6.5 HP 4 Tiempos** · `BT6.530` · $2,337 (antes $4,029) · Parazzini · BT6.530
   La BT6.530 es una motobomba autocebante de 6.5 HP [VERIFICAR] con motor a gasolina 4 tiempos OHV, diseñada para trabajos de riego agrícola, achique y trasvase en campo, rancho e instalaciones industriales ligeras. ·…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-6-5-hp-4-tiempos-descarga-3-pulgadas-verificar-riego-achiq
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d25fc2c8-fd85-44c3-9c3a-d933b00b70b8.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_884366ef-2413-4a66-9c7e-611915fd2ee7.png
 - **Motobomba Autocebante a Gasolina 7 HP 2"** · `BP720` · $4,483 (antes $8,965) · Parazzini · BP720
   Si riegas parcelas o mueves agua entre puntos de bombeo, sabes lo que cuesta una bomba que no succiona. La mayoría de las fallas no son del equipo: vienen de cebar la bomba sin agua en la carcasa o de una manguera de…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-a-gasolina-7-hp-2-parazzini-bp720
@@ -245,7 +248,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Motobomba Autocebante a Gasolina 7 HP 3" Parazzini BP730** · `BP730` · $6,776 (antes $11,682) · Parazzini · BP730
   La motobomba BP730 combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-gasolina-7-hp-3-parazzini-bp730
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001.jpg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_deee0f9d-d5c0-473c-9d04-7aac87f01ccc.png
 - **Motobomba Autocebante a Gasolina Power Hunt HUNT521** · `HUNT521` · $1,332 (antes $2,961) · Power Hunt · HUNT521
   ¿Necesitas mover agua donde no llega la luz? Pozos, aljibes, canales y parcelas casi nunca tienen una toma eléctrica cerca. La motobomba autocebante Power Hunt HUNT521 resuelve eso: funciona con gasolina, pesa solo 10…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-a-gasolina-power-hunt-hunt521-2-5-hp-1
@@ -274,34 +277,10 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
   Regar 15 hectáreas en una jornada, vaciar un depósito anegado en horas o trasladar miles de litros entre tanques sin depender de electricidad — eso es lo que hace la Kawashima BK1440 en el campo real. · Motor que no te…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-bk1440-4-14-hp-85-m3-h
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9133fb5f-cde1-4cbd-837e-68ddaf634b6c.png
-- **Motobomba Kawashima BP4316** · `BP4316` · $3,262 (antes $5,624) · Kawashima · BP4316
-  ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
-  PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4316
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7686dff9-cd4e-49c0-a835-b90bc9d16487.png
-- **Motobomba Kawashima BP4316** · `BP4310` · $3,258 (antes $5,618) · Kawashima · BP4316
+- **Motobomba Kawashima BP4310** · `BP4310` · $3,258 (antes $5,618) · Kawashima · BP4316
   ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4310
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_657096e2-99cc-42ce-a377-4edb126adb6b.png
-- **Motobomba Kawashima BP4316** · `BP4311` · $3,259 (antes $5,619) · Kawashima · BP4316
-  ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
-  PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4311
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b541bd6-967a-439a-8b90-1ce19d33e2d0.png
-- **Motobomba Kawashima BP4316** · `BP4312` · $3,260 (antes $5,620) · Kawashima · BP4316
-  ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
-  PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4312
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d37c73da-2b5d-4c13-b7cc-58d3de532cc2.png
-- **Motobomba Kawashima BP4316** · `BP4313` · $3,260 (antes $5,621) · Kawashima · BP4316
-  ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
-  PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4313
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cf1b8fdd-15af-4829-85c0-1d1f64e7c4ae.png
-- **Motobomba Kawashima BP4316** · `BP4314` · $3,261 (antes $5,622) · Kawashima · BP4316
-  ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
-  PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4314
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_97926059-a3b7-4f2a-8cd0-a03aa20d8278.png
-- **Motobomba Kawashima BP4316** · `BP4315` · $3,261 (antes $5,623) · Kawashima · BP4316
-  ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
-  PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4315
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e76c0b0c-3b90-41a1-8cdc-e859bb7ba414.png
 - **Motobomba Kawashima BPK31** · `BPK31` · $3,557 (antes $6,133) · F24
   Motobomba Compacta 31cc AUTOCEBANTE 1" — Riego Portátil para Huertos y Transferencia Rápida
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-bpk31-31cc-4t-autocebante-1-pulg
@@ -321,7 +300,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Motobomba Portátil Kawashima BK2.510** · `BK2.510` · $3,577 (antes $6,168) · Kawashima · BK2.510 · 🔴 AGOTADO
   La BK2.510 es la motobomba agrícola portátil pensada para el productor que necesita llevar agua lejos y alto, sin cargar con el peso de una 3HP. Con motor de 2.5HP a gasolina de 4 tiempos y cuerpo de aluminio fundido,…
   PDP: https://ferre24.com.mx/products/motobomba-portatil-kawashima-bk2-510-2-5hp-aluminio-autocebante-boca-1-26m
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_041b8f50-b868-4d2a-9b0b-a1c9a8ee9b1b.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_463a3c6d-5b34-48a0-af2c-fdfb7ca84e18.png
 - **Motobomba Power Hunt 7 HP** · `HUNT3` · $2,523 (antes $4,350) · Power Hunt · HUNT3
   Cuando el trabajo es grande, necesitas una bomba a la altura. La Power Hunt HUNT3 es la motobomba de 3 pulgadas diseñada para quienes riegan hectáreas, drenan sitios de construcción o controlan inundaciones sin perder…
   PDP: https://ferre24.com.mx/products/motobomba-power-hunt-7-hp-3-pulgadas-autocebante-4-tiempos
@@ -329,17 +308,18 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Motobomba Sumergible TORNADO 1.5 HP** · `KIN58-8/1230A` · $4,897 (antes $6,995) · TORNADO · KIN58-8/1230A
   Motobomba sumergible TORNADO 1.5 HP, 230V monofásica. Llena cisternas automáticamente con flotador incluido. Caudal 116 L/min, sumergencia hasta 15 m, acero inox 304. · 1.5 HP / 1.1 kW 116 L/min Descarga 1¼" NPT IP68…
   PDP: https://ferre24.com.mx/products/bomba-sumergible-electrica-tornado-4-1-5-hp-norias-cisternas-y-pozos-profundos-hasta-50-m-kin58-8-1230a
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9cdc4b6a-e525-4918-849b-90b9b1bd8a66.png
 - **Motor Parazzini MHP8 8HP 4 Tiempos** · `MHP8` · $3,637 (antes $6,613) · Parazzini · MHP8
   Tu motor se trabó, el carburador está sucio o las refacciones ya no llegan a tiempo — y el equipo parado te cuesta más que el motor mismo. El MHP8 de Parazzini es la solución directa: motor desnudo de 8 HP y 212 cc OHV…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mhp8-8hp-4-tiempos-alto-rendimiento
 - **Parihuela Diafragma 6.5 HP Parazzini** · `PP6.5D` · $14,659 (antes $26,653) · Parazzini · PP6.5D
   ¿Tu bomba de pistones falla cada temporada con herbicidas? El diafragma cambia las reglas. · La Parihuela Diafragma 6.5 HP Parazzini PP6.5D está diseñada para agricultores y fumigadores profesionales que aplican…
   PDP: https://ferre24.com.mx/products/parihuela-diafragma-6-5-hp-parazzini-bomba-resistente-a-quimicos-agresivos
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7563549b-7f0a-4514-99ff-99e04132178a.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_1397bfba-1d2f-495a-acf0-4dd3ef8edadf.png
 - **Parihuela Kawashima PK26CC** · `PK26CC` · $2,628 (antes $4,779) · Kawashima · PK26CC
   ¿Cuántas veces has tenido que interrumpir una jornada de trabajo porque el aceite estaba mal mezclado o el filtro se atascó antes de terminar? Eso no debería pasar con una máquina que llevas en la espalda todo el día. ·…
   PDP: https://ferre24.com.mx/products/parihuela-kawashima-pk26cc-motobomba-mochila-26-cc-bomba-bronce
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_88e6c009-d7eb-4399-9db2-cfb36c7fbc23.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_800eb3e8-5fa8-4ac1-8bde-29c66aa76c34.png
 - **Parihuela Motorizada Parazzini 6.5HP** · `PP6.5T300` · $26,480 (antes $49,963) · Parazzini · PP6.5T300
   La parada más cara de tu jornada es la que haces a recargar. · Cada vez que detienes la máquina para llenar un tanque de 80 o 100 litros, pierdes tiempo, combustible y ritmo. En una parcela de 10 hectáreas eso puede…
   PDP: https://ferre24.com.mx/products/parihuela-motorizada-parazzini-6-5hp-240-litros-bomba-de-bronce
@@ -355,7 +335,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Parihuela Parazzini 6.5 HP** · `PP6.5A` · $4,655 (antes $8,464) · Parazzini
   ¿Tu bomba no arranca cuando más la necesitas o pierdes presión a media jornada? · El riego no espera. Tampoco la obra con agua estancada. Lo que necesitas es una motobomba que arranque al primer jalón, mueva el agua con…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-motobomba-a-gasolina-sobre-carrito
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b341efe-6ecf-41e3-a55e-2145413d7696.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_5116d0fe-68b0-4582-9b9a-ed3fb643a4f1.png
 - **Parihuela Parazzini 6.5 hp** · `PPSB6.5AK` · $6,920 · Parazzini · PPSB6.5AK
   Comprar la parihuela y después buscar los accesorios es una pérdida de tiempo y dinero · La historia se repite: el operador tiene prisa porque la temporada de fumigación ya empezó, se compra el equipo base, y entonces…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-kit-completo-con-accesorios
@@ -364,10 +344,6 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
   La temporada no espera: cuando el brote de plaga aparece, necesitas una fumigadora que arranque, mantenga presión y no te deje a medias en el campo. · Lo que ningún catálogo te dice · La transmisión directa simplifica…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5hp-transmision-directa-kit-manguera-y-carrete
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_marvelsa_8dcca9af-ddee-48f9-8e94-b81b3285f2c5.png
-- **Sistema de Ósmosis Inversa 6 Etapas con UV y Bomba PURIKOR 100 GPD** · `id:44164148527192` · $4,849 (antes $6,926) · PURIKOR · PKRO100-6UVPM
-  ¿Cuánto gastas al mes en agua embotellada? Una familia típica en México gasta entre $400 y $600 pesos cada mes — solo en botellas de plástico que terminan en el basurero. Con el PURIKOR PKRO100-6UVPM, ese gasto…
-  PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-6-etapas-con-uv-y-bomba-purikor-100-gpd
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0e06505b-a4f4-464e-949a-96c0d27b63ea.png
 - **Sistema de Ósmosis Inversa 6 Etapas con UV y Bomba PURIKOR 100 GPD** · `PKRO100-6UVPM` · $4,849 (antes $6,926) · PURIKOR · PKRO100-6UVPM
   ¿Cuánto gastas al mes en agua embotellada? Una familia típica en México gasta entre $400 y $600 pesos cada mes — solo en botellas de plástico que terminan en el basurero. Con el PURIKOR PKRO100-6UVPM, ese gasto…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-6-etapas-uv-bomba-purikor-100-gpd
@@ -385,7 +361,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Hidrolavadora Eléctrica Industrial Parazzini Pro 10 HP** · `HPPE10` · $31,317 (antes $60,225) · Parazzini Pro · HPPE10
   ¿Tu operación exige resultados en el menor tiempo posible y no puedes perder horas en recargas de combustible o mantenimientos correctivos? La Parazzini Pro HPPE10 es la respuesta para servicios de limpieza profesional,…
   PDP: https://ferre24.com.mx/products/hidrolavadora-electrica-industrial-parazzini-pro-10-hp-234-bar
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e4e68c56-4a05-4672-bfcb-cd49281c96e0.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_d4426c36-d6a3-4e35-8e6b-629ea7575bd3.png
 - **Hidrolavadora Eléctrica Parazzini HPP110V** · `HPP110V` · $10,316 (antes $19,104) · Parazzini · HPP110V
   ¿Cansado de la suciedad incrustada en tu maquinaria o patio y del mantenimiento que requieren los equipos a gasolina? La Hidrolavadora Parazzini HPP110V te ofrece una solución de grado profesional con la conveniencia de…
   PDP: https://ferre24.com.mx/products/hidrolavadora-pro-110-120-v-monofasica-parazzini-hpp110v
@@ -417,7 +393,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Parazzini HP13N** · `HP13N` · $17,605 (antes $30,354) · Parazzini · HP13N
   ¿Tu hidrolavadora eléctrica ya no alcanza para limpiar maquinaria pesada, carrocerías o el rancho? Cuando la suciedad es de verdad, necesitas potencia de verdad. · La Parazzini HP13N entrega 3,600 PSI de presión y 17…
   PDP: https://ferre24.com.mx/products/parazzini-hp13n-hidrolavadora-gasolina-13-hp-3-600-psi
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/ferrepat_hero.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_90e504ea-177c-4fe2-a349-34cba8e2e9d0.png
 - **Parazzini Pro HPPE4** · `HPPE4` · $19,655 (antes $37,798) · Parazzini · HPPE4M
   La hidrolavadora eléctrica Parazzini Pro HPPE4M con motor de 2.2 kW es tu mejor aliada para limpiezas profundas en el hogar y el taller. Su potente motor eléctrico ofrece un hidrolavado eficiente sin las emisiones y el…
   PDP: https://ferre24.com.mx/products/hppe4
@@ -463,7 +439,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,030 (antes $5,826) · Kawashima · DKY52K
   Para quien necesita acabar la jornada, no empezarla. Si lo tuyo es maleza alta, predios grandes, brechas de rancho o mantenimiento agrícola y forestal, una orilladora doméstica no te alcanza. El Desbrozador Kawashima…
   PDP: https://ferre24.com.mx/products/desbrozador-kawashima-dky52k-recto-52-cc-kit-completo
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ad4138d2-b9b7-4bbd-9329-491ba34cca52.webp
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e59e6cb0-42b2-47a7-8f17-d8d9621f1c4e.png
 - **Desbrozador Kawashima Pro 52cc** · `KPD52TOP` · $5,111 (antes $9,293) · Kawashima Pro · KPD52TOP
   ### Maleza gruesa, terrenos grandes, trabajo de verdad. · Si ya sabrás que una desbrozadora eléctrica o de batería se rinde antes que tú, el KPD52TOP es lo que sigue. Motor de gasolina 2 tiempos, 52cc, 1.4 kW a 7,000…
   PDP: https://ferre24.com.mx/products/desbrozador-kawashima-pro-52cc-potencia-2t-terrenos-exigentes
@@ -503,11 +479,11 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Motosierra Kawashima Pro 52cc** · `MAKO52` · $2,968 (antes $5,396) · Kawashima Pro · Motosierra 52cc 2 barras 16 pulg
   ¿Tu barra se desgasta a media jornada y tienes que detener el trabajo? ¿Tu motosierra no arranca a la primera cuando más la necesitas? · La Kawashima Pro MAKO52 es una motosierra profesional de 52cc diseñada para…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-52cc-2-barras-2-cadenas-oregon-incluidas
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_034b73a9-bde0-48d1-85fd-8f4c434fd088.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_003_2aa3b91f-28e2-43d5-be91-c6ca433e4a1d.png
 - **Motosierra Kawashima Pro 58 cc** · `MAKO58` · $3,766 (antes $6,847) · Kawashima Pro · MAKO58
   La motosierra que no te deja tirado a la mitad del trabajo · Si ya quemaste una motosierra genérica en la segunda semana — o tardaste veinte minutos en arrancarla bajo el sol de agosto — sabes lo que cuesta comprar…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-58-cc-kit-completo-lista-para-trabajar
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_85641971-c7a2-4685-b048-cc675cb670dc.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_98dca70b-2ba0-49f3-aaef-66a625974100.png
 - **Motosierra Kawashima Pro MAKO65** · `MAKO65` · $3,613 (antes $7,226) · Kawashima Pro · MAKO65
   Talar un tronco grueso con una motosierra que se queda corta es perder el día. Una máquina de 50 o 52 cc pierde fuerza en madera dura, se atora y te obliga a forzar el corte. Para trabajo forestal real necesitas torque…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-mako65-65-cc-barra-20-kit-2-barras-2-cadenas
@@ -535,7 +511,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Podadora a Gasolina 190cc Parazzini Pro PP190** · `PP190` · $8,231 (antes $14,965) · Parazzini Pro · PP190
   La Parazzini Pro PP190 es la podadora a gasolina pensada para quien quiere un césped impecable sin pagar el precio de una autopropulsada. Su motor 190cc OHV de 5.5 HP gira a 3,600 rpm con arranque manual a cuerda:…
   PDP: https://ferre24.com.mx/products/podadora-gasolina-190cc-21-parazzini-pro-pp190
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fbaec0b1-ceee-4d8d-b3ba-948aefe962b2.jpg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f5429efb-be77-4d54-9f7f-18fe68e88d6d.png
 - **Serrucho de Poda Telescópico Kawashima PG500** · `PG500` · $1,176 (antes $1,960) · Kawashima · PG500
   Las ramas altas siempre terminan en lo mismo: una escalera tambaleándose en el pasto y un susto que pudo salir caro. El serrucho de poda Kawashima PG500 elimina ese riesgo por completo. Cortas ramas a hasta 5 metros de…
   PDP: https://ferre24.com.mx/products/serrucho-poda-telescopico-kawashima-pg500-alcance-5-m
@@ -636,7 +612,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Motor 5.5 HP 4 Tiempos Parazzini MPB** · `MPB` · $5,365 (antes $9,754) · Parazzini · MPB
   ¿Tu bailarina Parazzini se quedó sin motor en plena compactación? Cada hora parada es dinero perdido — la cimentación no espera. · El Motor 5.5 HP 4 Tiempos Parazzini MPB es el reemplazo original diseñado para las…
   PDP: https://ferre24.com.mx/products/motor-5-5-hp-4-tiempos-parazzini-mpb-repuesto-original-para-bailarina-pbh160-y-pbl
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_9e734489-b4fd-4552-b849-c753ae4a5306.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/marvelsa_hero_01_3cff0eaf-ec62-4c56-ac9f-d42fe3471bad.png
 - **Revolvedora Eléctrica Parazzini 180 L** · `REVOLVER1E` · $6,932 (antes $13,864) · Parazzini · REVOLVER1E
   Rentar una revolvedora para cada obra te cuesta tiempo, traslados y dinero que se suma sin que lo notes. Con la Parazzini REVOLVER1E la compras una vez y recuperas la inversión en tres o cuatro trabajos — sin depender…
   PDP: https://ferre24.com.mx/products/revolvedora-electrica-parazzini-180-l-650w-110v-1-2-saco
@@ -883,7 +859,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Soplador Kawashima 26 cc** · `WIND26` · $2,124 (antes $3,862) · Kawashima · WIND26
   Limpiar el jardín con rastrillo toma horas. Con el soplador Kawashima WIND26, el mismo trabajo se hace en minutos. · Potencia real donde más importa. Su motor 2 tiempos de 26 cc alcanza hasta 7,500 RPM y mueve 650 m³ de…
   PDP: https://ferre24.com.mx/products/soplador-kawashima-26-cc-motor-2t-650-m-h-encendido-manual
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b0c36c14-4277-4b95-a44a-04dca091e31f.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_5ec7fcc5-79bd-48fa-8282-e6753d13698b.png
 - **Soplador de Mochila Profesional 77cc** · `SK772TPRO` · $8,961 (antes $16,292) · Kawashima Pro · SK772TPRO
   Cada hora que pierdes con una herramienta sin potencia es dinero que no cobras. El jardinero o landscaper profesional sabe que el tiempo entre trabajo y trabajo es lo que separa un día rentable de uno mediocre. Con una…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-profesional-77cc-kawashima-pro-sk772tpro
@@ -995,7 +971,7 @@ Generador diesel silencioso Parazzini GPDS8.5M. Solo 72 dB** · `GPDS8.5M` · $3
 - **Soplador-aspirador Kawashima 26 cc con bolsa recolectora** · `WINDBAG26` · $2,624 (antes $4,770) · Kawashima · WINDBAG26
   Limpiar el jardín a mano lleva horas. Un soplador sin bolsa solo mueve el problema de lugar. Y contratar servicio de jardinería cada semana sale caro. El WINDBAG26 de Kawashima resuelve los tres problemas con una sola…
   PDP: https://ferre24.com.mx/products/soplador-aspirador-kawashima-26-cc-bolsa-recolectora
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b071cdaf-d87f-4823-9d62-a2a05c8348cb.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/secundaria_001.png
 
 ## Tanques Hidroneumaticos (1)
 
