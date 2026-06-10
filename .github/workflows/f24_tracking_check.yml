@@ -1,0 +1,31 @@
+name: F24 Tracking Check
+
+# Monitor Capa 1 (Japan-proof): revisa diario que ferre24.com.mx siga teniendo
+# los tags de medicion (GA4 G-VZB6X2YWT0, Google Ads AW-18195593805, numero
+# WhatsApp 523317903630). Si falta alguno el script termina con exit 1 -> el run
+# falla -> GitHub avisa por correo al dueno del repo. Si existe el secret
+# GMAIL_APP_PASSWORD, ademas manda un correo explicito de alerta.
+
+on:
+  schedule:
+    - cron: '0 16 * * *'   # 09:00 La Paz (GMT-7) = 16:00 UTC, diario
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run F24 tracking monitor
+        env:
+          SPEKGEN_GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_USER: spekgen.ai@gmail.com
+          ALERT_TO: gibran.alonzo0506@gmail.com
+        run: python3 clients/f24/google-ads/05_monitoring/f24_tracking_monitor.py
