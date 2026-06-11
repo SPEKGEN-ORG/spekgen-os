@@ -27,8 +27,8 @@
       "sku": "CA-25PH",
       "variant_id": "44102776717400",
       "variant_gid": "gid://shopify/ProductVariant/44102776717400",
-      "price": "3121.16",
-      "compare_at_price": null,
+      "price": "2840.26",
+      "compare_at_price": "3121.16",
       "available": true,
       "marca": "Power Hunt",
       "modelo": "COMPHKIT25L",
@@ -95,8 +95,8 @@
       "sku": "GP5500",
       "variant_id": "44111955394648",
       "variant_gid": "gid://shopify/ProductVariant/44111955394648",
-      "price": "10859.40",
-      "compare_at_price": null,
+      "price": "9773.46",
+      "compare_at_price": "10859.40",
       "available": true,
       "marca": "Parazzini",
       "modelo": "GP5500",
@@ -153,7 +153,7 @@
       "modelo": "MAKO65",
       "specs": "Talar un tronco grueso con una motosierra que se queda corta es perder el día. Una máquina de 50 o 52 cc pierde fuerza en madera dura, se atora y te obliga a forzar el corte. Para trabajo forestal real necesitas torque…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5659413a-7fe4-4f3f-a1e5-45c8a97cbf14.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Motosierra Telescópica Kawashima 26 cc — Poda Ramas Altas Sin Escalera",
@@ -272,7 +272,7 @@
       "modelo": "BAKARAC250",
       "specs": "Cuando el trabajo está donde no llega la luz —una obra nueva, un terreno sin acometida, un rancho o un segundo piso en construcción— no puedes detenerte a buscar una toma de corriente. El Parazzini BAKARAC250 resuelve…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_659ecb37-75e4-45fe-97e7-4b694e6a1660.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Generador Portátil 3000W Ultra Fox BRAMA3000 — Motor 6.5HP a Gasolina",
@@ -486,14 +486,14 @@
       "sku": "GPD8.5M",
       "variant_id": "44115728466008",
       "variant_gid": "gid://shopify/ProductVariant/44115728466008",
-      "price": "29399.15",
-      "compare_at_price": null,
+      "price": "24989.28",
+      "compare_at_price": "29399.15",
       "available": true,
       "marca": "Parazzini",
       "modelo": "GPD8.5M",
       "specs": "Cuando se va la luz no siempre estás en casa o en el negocio para encender el generador. El Parazzini Pro GPD8.5M resuelve justo eso: su entrada ATS lo deja listo para conectar un Interruptor de Transferencia…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2fb6b41f-4f59-4610-81ac-fe75982f7f50.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Generador Parazzini GP9500TB — 17 HP, 9500 W, encendido eléctrico",
@@ -520,14 +520,14 @@
       "sku": "BAKARAC300-G",
       "variant_id": "44115742589016",
       "variant_gid": "gid://shopify/ProductVariant/44115742589016",
-      "price": "29185.75",
-      "compare_at_price": null,
+      "price": "25683.46",
+      "compare_at_price": "29185.75",
       "available": true,
       "marca": "Parazzini",
       "modelo": "BAKARAC300-G",
       "specs": "¿Te has quedado sin luz justo cuando más la necesitabas, o batallando con un generador que arranca a la tercera y truena tus aparatos? El Parazzini BAKARAC300-G resuelve las dos cosas con un equipo que la mayoría no…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f540661b-1e7e-4d85-adaf-8cbb90453c8f.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Generador Inverter Parazzini GPIDJI9500 — 9500 W, 19 HP a Gasolina",
@@ -554,14 +554,14 @@
       "sku": "GPIS3.5KW",
       "variant_id": "44115752124504",
       "variant_gid": "gid://shopify/ProductVariant/44115752124504",
-      "price": "13450.25",
-      "compare_at_price": null,
+      "price": "11836.22",
+      "compare_at_price": "13450.25",
       "available": true,
       "marca": "Parazzini",
       "modelo": "GPIS3.5KW",
       "specs": "Se va la luz y empieza el calor en el refri, la oscuridad en la casa y el celular sin batería. O estás en la obra, en el taller o en el campamento y no hay un solo contacto cerca. Para esos momentos existe el Generador…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_82c5c19d-f957-477e-917d-e16f6a8adb1d.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Generador Inverter Dual Fuel 5.5 kW Parazzini — Gasolina o Gas LP",
@@ -707,14 +707,14 @@
       "sku": "BK2.515",
       "variant_id": "44126997282904",
       "variant_gid": "gid://shopify/ProductVariant/44126997282904",
-      "price": "3511.32",
-      "compare_at_price": null,
+      "price": "2914.40",
+      "compare_at_price": "3511.32",
       "available": false,
       "marca": "Kawashima",
       "modelo": "BK2.515",
       "specs": "La [VERIFICAR marca] BK2.515 es una motobomba agrícola autocebante diseñada para trabajo de campo real: riego de parcelas, llenado de tinacos y traslados entre pozos sin depender de la corriente eléctrica. · Cuerpo de…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3dae3490-5c0a-4202-abc0-64bd7b65c0d5.png",
-      "msi_promo": ""
+      "msi_promo": "12"
     },
     {
       "title": "Motobomba Diesel Autocebante Parazzini BP730D — 7 HP, 3 Pulgadas",
@@ -1496,7 +1496,7 @@
       "modelo": "MAKO72",
       "specs": "Cuando el trabajo forestal no para, no puedes perder tiempo esperando que llegue el segundo equipo. Las brigadas, ejidos y arboricultores que trabajan en campo real necesitan dos motosierras funcionando al mismo tiempo…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_feafba01-4c69-40f0-ae36-f441b2b9d964.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Desbrozador PRO 45cc 2 Tiempos Kawashima — Kit Completo",
@@ -1513,7 +1513,7 @@
       "modelo": "KPD45TOP",
       "specs": "### El terreno no espera. Tu herramienta tampoco debería fallar. · Si trabajas en campo, ejido o jardín de gran superficie, sabes lo que cuesta llegar a media jornada con una herramienta que ya no responde. Las…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_86762dc7-e9bf-47e1-9633-d10e5e11de1f.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Tanque Precargado Vertical 65 gal ALTAMIRA — NSF/ANSI, Garantía 6 Años\n\n---",
@@ -1564,7 +1564,7 @@
       "modelo": "KPD52TOP",
       "specs": "### Maleza gruesa, terrenos grandes, trabajo de verdad. · Si ya sabrás que una desbrozadora eléctrica o de batería se rinde antes que tú, el KPD52TOP es lo que sigue. Motor de gasolina 2 tiempos, 52cc, 1.4 kW a 7,000…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_10393b1a-11b7-4236-a5cf-ef9bb45ba73c.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Podadora Parazzini Pro 170cc Autopropulsada — Cuchilla 21 Pulg",
@@ -1863,8 +1863,8 @@
       "sku": "GPD8.5T",
       "variant_id": "44163877666904",
       "variant_gid": "gid://shopify/ProductVariant/44163877666904",
-      "price": "26872.00",
-      "compare_at_price": null,
+      "price": "24453.52",
+      "compare_at_price": "26872.00",
       "available": true,
       "marca": "Parazzini Pro",
       "modelo": "GPD8.5T",
@@ -1880,8 +1880,8 @@
       "sku": "GPDS8.5M",
       "variant_id": "44163878125656",
       "variant_gid": "gid://shopify/ProductVariant/44163878125656",
-      "price": "30804.00",
-      "compare_at_price": null,
+      "price": "28031.64",
+      "compare_at_price": "30804.00",
       "available": true,
       "marca": "Parazzini",
       "modelo": "GPDS8.5M",
@@ -1914,8 +1914,8 @@
       "sku": "GPDS14M",
       "variant_id": "44163879698520",
       "variant_gid": "gid://shopify/ProductVariant/44163879698520",
-      "price": "87110.00",
-      "compare_at_price": null,
+      "price": "79270.10",
+      "compare_at_price": "87110.00",
       "available": true,
       "marca": "Parazzini",
       "modelo": "GPDS14M",
@@ -1931,14 +1931,14 @@
       "sku": "GPDS14T",
       "variant_id": "44163880353880",
       "variant_gid": "gid://shopify/ProductVariant/44163880353880",
-      "price": "87110.00",
-      "compare_at_price": null,
+      "price": "76656.80",
+      "compare_at_price": "87110.00",
       "available": true,
       "marca": "Parazzini Pro",
       "modelo": "GPDS14T",
       "specs": "Un apagón no avisa — y en un negocio, cada minuto sin luz es dinero perdido. · Si tu taller, local comercial o rancho depende de corriente trifásica para operar, ya sabes lo que cuesta un corte inesperado: producción…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/marvelsa_hero_01.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Generador estacionario trifásico 10 kW — gas LP/GN, ATS automático",
@@ -1948,8 +1948,8 @@
       "sku": "GP10000GAS-T",
       "variant_id": "44163880812632",
       "variant_gid": "gid://shopify/ProductVariant/44163880812632",
-      "price": "96775.00",
-      "compare_at_price": null,
+      "price": "87097.50",
+      "compare_at_price": "96775.00",
       "available": true,
       "marca": "Parazzini Pro",
       "modelo": "GP10000GAS-T",
@@ -1965,14 +1965,14 @@
       "sku": "GP10000GAS",
       "variant_id": "44163881369688",
       "variant_gid": "gid://shopify/ProductVariant/44163881369688",
-      "price": "96775.00",
-      "compare_at_price": null,
+      "price": "82258.75",
+      "compare_at_price": "96775.00",
       "available": true,
       "marca": "Parazzini Pro",
       "modelo": "GP10000GAS",
       "specs": "El problema con los generadores que ya conoces · Los generadores portátiles a gasolina tienen un defecto fatal: se quedan sin combustible en el peor momento. A las 3 a.m. con un apagón activo, nadie quiere salir a…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f7aab53d-92fe-4f79-8e90-873c543dfc19.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Generador Parazzini 20 kW Gasolina V-Twin 36 HP — GP20KWT",
@@ -2101,14 +2101,14 @@
       "sku": "MP2.8",
       "variant_id": "44163890217048",
       "variant_gid": "gid://shopify/ProductVariant/44163890217048",
-      "price": "3248.00",
-      "compare_at_price": null,
+      "price": "2858.24",
+      "compare_at_price": "3248.00",
       "available": true,
       "marca": "Parazzini",
       "modelo": "MP2.8",
       "specs": "¿Tu bomba de riego o generador portátil dejó de funcionar y no encuentras el motor adecuado? · El Motor Parazzini 2.8 HP / 97cc es la solución compacta y confiable que necesitas. Diseñado para accionamiento directo,…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3a80644d-0e58-4cf2-8548-9c0dbc5a86e0.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Motor Parazzini MHP8 8HP 4 Tiempos — Alto Rendimiento",
@@ -2135,14 +2135,14 @@
       "sku": "MP7FF",
       "variant_id": "44163917971544",
       "variant_gid": "gid://shopify/ProductVariant/44163917971544",
-      "price": "3816.00",
-      "compare_at_price": null,
+      "price": "3358.08",
+      "compare_at_price": "3816.00",
       "available": true,
       "marca": "Parazzini",
       "modelo": "MP7FF",
       "specs": "Si tu motor falló en plena jornada y el repuesto OEM te cuesta el doble de lo que vale el equipo, el Parazzini MP7FF es la respuesta. Potencia de 7 HP real, motor 4 tiempos OHV de gasolina, arranque manual confiable —…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a88a5405-9e76-46eb-b020-58166c2a3de8.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Motor 5.5 HP 4 Tiempos Parazzini MPB — Repuesto Original para Bailarina PBH160 y PBL",
@@ -2271,14 +2271,14 @@
       "sku": "PPSB6.5AK",
       "variant_id": "44163974758488",
       "variant_gid": "gid://shopify/ProductVariant/44163974758488",
-      "price": "6920.00",
-      "compare_at_price": null,
+      "price": "5743.60",
+      "compare_at_price": "6920.00",
       "available": true,
       "marca": "Parazzini",
       "modelo": "PPSB6.5AK",
       "specs": "Comprar la parihuela y después buscar los accesorios es una pérdida de tiempo y dinero · La historia se repite: el operador tiene prisa porque la temporada de fumigación ya empezó, se compra el equipo base, y entonces…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/marvelsa_img_01_hero.png",
-      "msi_promo": ""
+      "msi_promo": "12"
     },
     {
       "title": "Parihuela Parazzini 6.5HP Transmisión Directa — Kit Manguera y Carrete",
@@ -2288,14 +2288,14 @@
       "sku": "PPSB6.5BK",
       "variant_id": "44163981443160",
       "variant_gid": "gid://shopify/ProductVariant/44163981443160",
-      "price": "7294.00",
-      "compare_at_price": null,
+      "price": "6054.02",
+      "compare_at_price": "7294.00",
       "available": true,
       "marca": "Parazzini",
       "modelo": "PPSB6.5B",
       "specs": "La temporada no espera: cuando el brote de plaga aparece, necesitas una fumigadora que arranque, mantenga presión y no te deje a medias en el campo. · Lo que ningún catálogo te dice · La transmisión directa simplifica…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_marvelsa_8dcca9af-ddee-48f9-8e94-b81b3285f2c5.png",
-      "msi_promo": ""
+      "msi_promo": "12"
     },
     {
       "title": "Kit Parihuela Parazzini 7 HP — Bomba Bronce + 100 m de Manguera",
@@ -3036,14 +3036,14 @@
       "sku": "GPDS8.5T",
       "variant_id": "44164272259160",
       "variant_gid": "gid://shopify/ProductVariant/44164272259160",
-      "price": "31698.00",
-      "compare_at_price": null,
+      "price": "27894.24",
+      "compare_at_price": "31698.00",
       "available": true,
       "marca": "Parazzini Pro",
       "modelo": "GPDS8.5T",
       "specs": "Especificaciones completas · SKU GPDS8.5T Motor · Potencia 15 HP · Tipo de motor Diesel · Combustible diesel · Cilindrada 531 cc · Encendido electrico · Tanque 24 L · Físicas · Peso 170 kg · Dimensiones (L × An × Al) 91…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_e8a7b220-aec9-4052-936f-6fd29320145f.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "GH26000E-A",
@@ -3053,8 +3053,8 @@
       "sku": "GH26000E-A",
       "variant_id": "44165111644248",
       "variant_gid": "gid://shopify/ProductVariant/44165111644248",
-      "price": "143920.00",
-      "compare_at_price": null,
+      "price": "135284.80",
+      "compare_at_price": "143920.00",
       "available": true,
       "marca": "Parazzini Pro",
       "modelo": "GH26000E-AM",
@@ -3087,14 +3087,14 @@
       "sku": "KTR26",
       "variant_id": "44165665456216",
       "variant_gid": "gid://shopify/ProductVariant/44165665456216",
-      "price": "4256.62",
-      "compare_at_price": null,
+      "price": "2341.14",
+      "compare_at_price": "4256.62",
       "available": true,
       "marca": "Kawashima",
       "modelo": "KTR26",
       "specs": "Motor eficiente para jornadas completas en campo · El Kawashima KTR26 es un aspersor motorizado de mochila con motor 2 tiempos de 26 cc que trabaja hasta 7,500 RPM. Con 1.4 HP, está calibrado para su clase: no es un…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_c80ae284-a140-4f20-8587-efbede155ee5.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Aspersor Motorizado Kawashima KF35X — Motor 4T 35cc, Tanque 25 L",
@@ -3104,14 +3104,14 @@
       "sku": "KF35X",
       "variant_id": "44165865472088",
       "variant_gid": "gid://shopify/ProductVariant/44165865472088",
-      "price": "4888.21",
-      "compare_at_price": null,
+      "price": "2688.52",
+      "compare_at_price": "4888.21",
       "available": true,
       "marca": "Kawashima",
       "modelo": "KF35X",
       "specs": "Fumigar una hectárea a mano tarda horas y agota antes de terminar. Con una fumigadora manual de 16 litros tienes que detenerte a recargar constantemente, y si tu parcela no tiene toma de corriente, los equipos…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b1b2d0f-443a-445f-96b0-f220d5a53842.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Aspersor Kawashima AK26 — Motor 2 Tiempos 26cc, Depósito 25 Litros",
@@ -3121,14 +3121,14 @@
       "sku": "AK26",
       "variant_id": "44165867831384",
       "variant_gid": "gid://shopify/ProductVariant/44165867831384",
-      "price": "3261.92",
-      "compare_at_price": null,
+      "price": "1794.06",
+      "compare_at_price": "3261.92",
       "available": true,
       "marca": "Kawashima",
       "modelo": "AK26",
       "specs": "Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Generador Portátil Inverter 1000W ENERWELL — A Gasolina",
@@ -3155,14 +3155,14 @@
       "sku": "CSK5218",
       "variant_id": "44180845789272",
       "variant_gid": "gid://shopify/ProductVariant/44180845789272",
-      "price": "4154.49",
-      "compare_at_price": null,
+      "price": "3531.32",
+      "compare_at_price": "4154.49",
       "available": false,
       "marca": "Kawashima",
       "modelo": "",
       "specs": "En campo, aserradero o proyecto forestal, los tiempos muertos cuestan. La Motosierra Kawashima 52cc con barra de 18 pulgadas está construida para que eso no pase. · Motor que no se raja. Con 52cc de cilindrada y 1.9 kW…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_26110968-dc25-4558-b652-2c8537b5b304.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Motosierra Kawashima 62cc Barra 22\" — Potencia Forestal de Grado Profesional",
@@ -3172,14 +3172,14 @@
       "sku": "CSK6222",
       "variant_id": "44181271314520",
       "variant_gid": "gid://shopify/ProductVariant/44181271314520",
-      "price": "4352.33",
-      "compare_at_price": null,
+      "price": "3699.48",
+      "compare_at_price": "4352.33",
       "available": false,
       "marca": "Kawashima",
       "modelo": "",
       "specs": "Cuando el trabajo es tala real — árboles de gran diámetro, maderas de alta densidad, jornadas de 8 horas en campo — necesitas una herramienta que no te abandone a media mañana. La Motosierra Kawashima 62cc con barra de…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0b9d3dcf-6a4a-4b4a-b381-8105b75f26f1.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Peinadora Eléctrica para Césped Artificial — Garland Roll & Comb 302 E, 1400 W",
@@ -3189,14 +3189,14 @@
       "sku": "302E",
       "variant_id": "44181311815768",
       "variant_gid": "gid://shopify/ProductVariant/44181311815768",
-      "price": "5430.76",
-      "compare_at_price": null,
+      "price": "4616.15",
+      "compare_at_price": "5430.76",
       "available": false,
       "marca": "Garland",
       "modelo": "Roll & Comb 302 E",
       "specs": "El césped artificial de alta calidad merece mantenimiento de alta calidad. Con el tiempo, el tráfico constante aplana las fibras sintéticas y permite que hojas, musgo, agujas de pino y polvo se acumulen entre los…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b62cd78f-b760-43b9-b584-e675af1b8520.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Garland Roll & Comb 502 E — Peinadora Eléctrica 1600 W para Césped Artificial",
@@ -3206,14 +3206,14 @@
       "sku": "502E",
       "variant_id": "44181536800856",
       "variant_gid": "gid://shopify/ProductVariant/44181536800856",
-      "price": "7871.92",
-      "compare_at_price": null,
+      "price": "6691.13",
+      "compare_at_price": "7871.92",
       "available": false,
       "marca": "Garland",
       "modelo": "Roll & Comb 502 E",
       "specs": "Mantener el césped artificial en óptimas condiciones requiere más que un rastrillo. Con el paso del tiempo, las fibras sintéticas se aplastan, el musgo y las algas se acumulan, y hojas o agujas de pino quedan atrapadas…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a7fd24bd-479c-405b-ad72-36e19394b6ab.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Garland Roll & Comb 502 E — Peinadora Eléctrica 1600 W para Césped Artificial",
@@ -3230,7 +3230,7 @@
       "modelo": "Roll & Comb 502 E",
       "specs": "⚠ Importante — voltaje: Este equipo opera a 230 V / 50 Hz (estándar europeo). La red eléctrica de México es de 127 V / 60 Hz. Antes de comprar, escríbenos a Ferre24 para confirmar la versión disponible en stock y, de…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_53e59d0a-8437-4358-8973-8c305e1c203c.jpg",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E",
@@ -3240,14 +3240,14 @@
       "sku": "141E",
       "variant_id": "44181702869080",
       "variant_gid": "gid://shopify/ProductVariant/44181702869080",
-      "price": "4578.00",
-      "compare_at_price": null,
+      "price": "3891.30",
+      "compare_at_price": "4578.00",
       "available": false,
       "marca": "Roll & Comb",
       "modelo": "141E",
       "specs": "El césped artificial que no recibe mantenimiento se nota. Las fibras se aplastan en las zonas de más pisadas, las hojas y el polvo se acumulan entre las hebras, y la arena de sílice se desplaza dejando parches sin…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7bd6adde-3874-4146-8c40-e9fbf2196aa6.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Kawashima AKE100P — Aspersor Eléctrico de Remolque 100 L",
@@ -3274,8 +3274,8 @@
       "sku": "CA-50PH",
       "variant_id": "44181756575832",
       "variant_gid": "gid://shopify/ProductVariant/44181756575832",
-      "price": "6838.00",
-      "compare_at_price": null,
+      "price": "6222.58",
+      "compare_at_price": "6838.00",
       "available": false,
       "marca": "Power Hunt",
       "modelo": "",
@@ -3291,8 +3291,8 @@
       "sku": "MHP11",
       "variant_id": "44182531506264",
       "variant_gid": "gid://shopify/ProductVariant/44182531506264",
-      "price": "10506.00",
-      "compare_at_price": null,
+      "price": "9560.46",
+      "compare_at_price": "10506.00",
       "available": true,
       "marca": "Parazzini",
       "modelo": "MHP11",
@@ -3308,14 +3308,14 @@
       "sku": "BK1440",
       "variant_id": "44182537961560",
       "variant_gid": "gid://shopify/ProductVariant/44182537961560",
-      "price": "14856.00",
-      "compare_at_price": null,
+      "price": "12330.48",
+      "compare_at_price": "14856.00",
       "available": true,
       "marca": "Kawashima",
       "modelo": "BK1440",
       "specs": "Regar 15 hectáreas en una jornada, vaciar un depósito anegado en horas o trasladar miles de litros entre tanques sin depender de electricidad — eso es lo que hace la Kawashima BK1440 en el campo real. · Motor que no te…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9133fb5f-cde1-4cbd-837e-68ddaf634b6c.png",
-      "msi_promo": ""
+      "msi_promo": "12"
     },
     {
       "title": "Generador Portátil 2500W ENERWELL — Motor 4T 6.5HP, 110/220V",
@@ -3597,14 +3597,14 @@
       "sku": "BK7.530",
       "variant_id": "44208505651288",
       "variant_gid": "gid://shopify/ProductVariant/44208505651288",
-      "price": "5300.04",
-      "compare_at_price": null,
+      "price": "4505.03",
+      "compare_at_price": "5300.04",
       "available": true,
       "marca": "Ferre24",
       "modelo": "BK7.530",
       "specs": "La bomba agrícola BK7.530 es la solución de máxima capacidad para grandes operaciones agrícolas que necesitan bombear enormes volúmenes de agua con consistencia. Con motor gasolina 7.5 HP y salida de 3 pulgadas, entrega…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_5deabc10-e1f5-4c93-8fa7-98ee4fd486c0.png",
-      "msi_promo": ""
+      "msi_promo": "9"
     },
     {
       "title": "Bomba Agrícola Autocebante 7.5 HP 2\" BK7.520 — 533 L/min, Aluminio",

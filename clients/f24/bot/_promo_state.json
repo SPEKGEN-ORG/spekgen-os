@@ -1,1 +1,122 @@
-{}
+{
+  "141E": {
+    "regular": 4578.0,
+    "promo": 3891.3
+  },
+  "302E": {
+    "regular": 5430.76,
+    "promo": 4616.15
+  },
+  "502E": {
+    "regular": 7871.92,
+    "promo": 6691.13
+  },
+  "AK26": {
+    "regular": 3261.92,
+    "promo": 1794.06
+  },
+  "BAKARAC300-G": {
+    "regular": 29185.75,
+    "promo": 25683.46
+  },
+  "BK1440": {
+    "regular": 14856.0,
+    "promo": 12330.48
+  },
+  "BK2.515": {
+    "regular": 3511.32,
+    "promo": 2914.4
+  },
+  "BK7.530": {
+    "regular": 5300.04,
+    "promo": 4505.03
+  },
+  "CA-25PH": {
+    "regular": 3121.16,
+    "promo": 2840.26
+  },
+  "CA-50PH": {
+    "regular": 6838.0,
+    "promo": 6222.58
+  },
+  "CSK5218": {
+    "regular": 4154.49,
+    "promo": 3531.32
+  },
+  "CSK6222": {
+    "regular": 4352.33,
+    "promo": 3699.48
+  },
+  "GH26000E-A": {
+    "regular": 143920.0,
+    "promo": 135284.8
+  },
+  "GP10000GAS": {
+    "regular": 96775.0,
+    "promo": 82258.75
+  },
+  "GP10000GAS-T": {
+    "regular": 96775.0,
+    "promo": 87097.5
+  },
+  "GP5500": {
+    "regular": 10859.4,
+    "promo": 9773.46
+  },
+  "GPD8.5M": {
+    "regular": 29399.15,
+    "promo": 24989.28
+  },
+  "GPD8.5T": {
+    "regular": 26872.0,
+    "promo": 24453.52
+  },
+  "GPDS14M": {
+    "regular": 87110.0,
+    "promo": 79270.1
+  },
+  "GPDS14T": {
+    "regular": 87110.0,
+    "promo": 76656.8
+  },
+  "GPDS8.5M": {
+    "regular": 30804.0,
+    "promo": 28031.64
+  },
+  "GPDS8.5T": {
+    "regular": 31698.0,
+    "promo": 27894.24
+  },
+  "GPIS3.5KW": {
+    "regular": 13450.25,
+    "promo": 11836.22
+  },
+  "KF35X": {
+    "regular": 4888.21,
+    "promo": 2688.52
+  },
+  "KTR26": {
+    "regular": 4256.62,
+    "promo": 2341.14
+  },
+  "MHP11": {
+    "regular": 10506.0,
+    "promo": 9560.46
+  },
+  "MP2.8": {
+    "regular": 3248.0,
+    "promo": 2858.24
+  },
+  "MP7FF": {
+    "regular": 3816.0,
+    "promo": 3358.08
+  },
+  "PPSB6.5AK": {
+    "regular": 6920.0,
+    "promo": 5743.6
+  },
+  "PPSB6.5BK": {
+    "regular": 7294.0,
+    "promo": 6054.02
+  }
+}
