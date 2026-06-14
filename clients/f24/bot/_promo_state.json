@@ -47,6 +47,14 @@
     "regular": 4352.33,
     "promo": 3699.48
   },
+  "ENERWELL-G1000": {
+    "regular": 4402.26,
+    "promo": 2861.47
+  },
+  "ENERWELL-G2500": {
+    "regular": 6054.62,
+    "promo": 3935.5
+  },
   "GH26000E-A": {
     "regular": 143920.0,
     "promo": 135284.8
@@ -91,6 +99,18 @@
     "regular": 13450.25,
     "promo": 11836.22
   },
+  "KAS-10P": {
+    "regular": 4004.25,
+    "promo": 2402.55
+  },
+  "KAS-12P-TF": {
+    "regular": 6211.42,
+    "promo": 3726.85
+  },
+  "KASPRO-16P": {
+    "regular": 11976.57,
+    "promo": 7784.77
+  },
   "KF35X": {
     "regular": 4888.21,
     "promo": 2688.52
@@ -110,6 +130,18 @@
   "MP7FF": {
     "regular": 3816.0,
     "promo": 3358.08
+  },
+  "PK-EASY-100CT": {
+    "regular": 7598.0,
+    "promo": 4938.7
+  },
+  "PK-EASY-200US": {
+    "regular": 4812.34,
+    "promo": 2887.4
+  },
+  "PK-EASY-600US": {
+    "regular": 7056.0,
+    "promo": 4233.6
   },
   "PPSB6.5AK": {
     "regular": 6920.0,

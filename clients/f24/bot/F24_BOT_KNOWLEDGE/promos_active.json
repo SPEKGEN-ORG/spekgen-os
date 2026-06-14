@@ -1,8 +1,212 @@
 {
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/🔥 PROMO ACTIVA",
-  "generated": "2026-06-13",
+  "generated": "2026-06-14",
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
+    {
+      "sku": "ENERWELL-G1000",
+      "sku_upper": "ENERWELL-G1000",
+      "producto": "Generador portátil a gasolina 1000w ENERWELL",
+      "regular_price": 4402.26,
+      "promo_price": 2861.47,
+      "pct_desc": "35%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "4402.26"
+    },
+    {
+      "sku": "ENERWELL-G2500",
+      "sku_upper": "ENERWELL-G2500",
+      "producto": "Generador portátil a gasolina 2500w ENERWELL",
+      "regular_price": 6054.62,
+      "promo_price": 3935.5,
+      "pct_desc": "35%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "6054.62"
+    },
+    {
+      "sku": "KAS-10P",
+      "sku_upper": "KAS-10P",
+      "producto": "Calentador de Paso Instantáneo KASSAI",
+      "regular_price": 4004.25,
+      "promo_price": 2402.55,
+      "pct_desc": "40%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "4004.25"
+    },
+    {
+      "sku": "KAS-12P-TF",
+      "sku_upper": "KAS-12P-TF",
+      "producto": "Calentador de Paso Instantáneo Modulante 12L KASSAI",
+      "regular_price": 6211.42,
+      "promo_price": 3726.85,
+      "pct_desc": "40%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "6211.00"
+    },
+    {
+      "sku": "KASPRO-16P",
+      "sku_upper": "KASPRO-16P",
+      "producto": "Calentador de Paso Instantáneo Modulante 16L KASSAI",
+      "regular_price": 11976.57,
+      "promo_price": 7784.77,
+      "pct_desc": "35%",
+      "msi_ladder": [
+        46087
+      ],
+      "msi_max": 46087,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "11977.00"
+    },
+    {
+      "sku": "PK-EASY-100CT",
+      "sku_upper": "PK-EASY-100CT",
+      "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
+      "regular_price": 7598.0,
+      "promo_price": 4938.7,
+      "pct_desc": "35%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "7598.00"
+    },
+    {
+      "sku": "PK-EASY-200US",
+      "sku_upper": "PK-EASY-200US",
+      "producto": "Sistema de ósmosis inversa de alto flujo PURIKOR",
+      "regular_price": 4812.34,
+      "promo_price": 2887.4,
+      "pct_desc": "40%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "4812.34"
+    },
+    {
+      "sku": "PK-EASY-600US",
+      "sku_upper": "PK-EASY-600US",
+      "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
+      "regular_price": 7056.0,
+      "promo_price": 4233.6,
+      "pct_desc": "40%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "7056.00"
+    },
+    {
+      "sku": "141E",
+      "sku_upper": "141E",
+      "producto": "Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E",
+      "regular_price": 4578.0,
+      "promo_price": 3891.3,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "3891.30"
+    },
+    {
+      "sku": "302E",
+      "sku_upper": "302E",
+      "producto": "Peinadora Eléctrica para Césped Artificial — Garland Roll & Comb 302 E, 1400 W",
+      "regular_price": 5430.76,
+      "promo_price": 4616.15,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "4616.15"
+    },
+    {
+      "sku": "502E",
+      "sku_upper": "502E",
+      "producto": "Garland Roll & Comb 502 E — Peinadora Eléctrica 1600 W para Césped Artificial",
+      "regular_price": 7871.92,
+      "promo_price": 6691.13,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "6691.13"
+    },
     {
       "sku": "AK26",
       "sku_upper": "AK26",
@@ -24,6 +228,25 @@
       "shopify_price": "1794.06"
     },
     {
+      "sku": "AKE100P",
+      "sku_upper": "AKE100P",
+      "producto": "Kawashima AKE100P — Aspersor Eléctrico de Remolque 100 L",
+      "regular_price": 8291.0,
+      "promo_price": null,
+      "pct_desc": "",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "8291.00"
+    },
+    {
       "sku": "BAKARAC250",
       "sku_upper": "BAKARAC250",
       "producto": "Generador Soldador Inverter 210A Parazzini BAKARAC250 — 5.5 kW a Gasolina",
@@ -42,6 +265,360 @@
       "estado_landing": "En landing",
       "in_shopify": true,
       "shopify_price": "18934.85"
+    },
+    {
+      "sku": "BAKARAC300-G",
+      "sku_upper": "BAKARAC300-G",
+      "producto": "Generador-Soldador Inverter Parazzini BAKARAC300-G — 7.7 kW · 17 HP Gasolina",
+      "regular_price": 29185.75,
+      "promo_price": 25683.46,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "25683.46"
+    },
+    {
+      "sku": "BK1440",
+      "sku_upper": "BK1440",
+      "producto": "Motobomba agrícola Kawashima 4\" 14 HP aluminio (85 m³/h)",
+      "regular_price": 14856.0,
+      "promo_price": 12330.48,
+      "pct_desc": "17%",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "12330.48"
+    },
+    {
+      "sku": "BK2.515",
+      "sku_upper": "BK2.515",
+      "producto": "Motobomba Agrícola 3HP Aluminio Autocebante — 200 L/min, Altura 15m, Boca 1.5\"",
+      "regular_price": 3511.32,
+      "promo_price": 2914.4,
+      "pct_desc": "17%",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "2914.40"
+    },
+    {
+      "sku": "BK7.530",
+      "sku_upper": "BK7.530",
+      "producto": "Motobomba Agrícola 3HP Aluminio Autocebante — 200 L/min, Altura 15m, Boca 1.5\"",
+      "regular_price": 5300.04,
+      "promo_price": 4505.03,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "4505.03"
+    },
+    {
+      "sku": "CA-25PH",
+      "sku_upper": "CA-25PH",
+      "producto": "Compresor de Aire Power Hunt 25L — Libre de Aceite / 2.5 HP / 115 PSI",
+      "regular_price": 3121.16,
+      "promo_price": 2840.26,
+      "pct_desc": "9%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "2840.26"
+    },
+    {
+      "sku": "CA-50PH",
+      "sku_upper": "CA-50PH",
+      "producto": "Compresor Power Hunt 50 L — Oil-Free, Doble Motor",
+      "regular_price": 6838.0,
+      "promo_price": 6222.58,
+      "pct_desc": "9%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "6222.58"
+    },
+    {
+      "sku": "CSK5218",
+      "sku_upper": "CSK5218",
+      "producto": "Motosierra Kawashima 52 cc — barra 18\", motor 2T, auto-choke",
+      "regular_price": 4154.49,
+      "promo_price": 3531.32,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "3531.32"
+    },
+    {
+      "sku": "CSK6222",
+      "sku_upper": "CSK6222",
+      "producto": "Motosierra Kawashima 62cc Barra 22\" — Potencia Forestal de Grado Profesional",
+      "regular_price": 4352.33,
+      "promo_price": 3699.48,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "3699.48"
+    },
+    {
+      "sku": "GH26000E-A",
+      "sku_upper": "GH26000E-A",
+      "producto": "Generador estacionario a gas LP de 22 Kw (no incluye bateria) - Trifasico",
+      "regular_price": 143920.0,
+      "promo_price": 135284.8,
+      "pct_desc": "6%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "135284.80"
+    },
+    {
+      "sku": "GP10000GAS",
+      "sku_upper": "GP10000GAS",
+      "producto": "Generador estacionario a gas LP y GN de 10 Kw - Monofasico",
+      "regular_price": 96775.0,
+      "promo_price": 82258.75,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "82258.75"
+    },
+    {
+      "sku": "GP10000GAS-T",
+      "sku_upper": "GP10000GAS-T",
+      "producto": "Generador estacionario a gas LP y GN de 10 Kw - Trifasico",
+      "regular_price": 96775.0,
+      "promo_price": 87097.5,
+      "pct_desc": "10%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "87097.50"
+    },
+    {
+      "sku": "GP5500",
+      "sku_upper": "GP5500",
+      "producto": "Generador a Gasolina Parazzini GP5500 — 5500W, 9HP, Encendido Manual",
+      "regular_price": 10859.4,
+      "promo_price": 9773.46,
+      "pct_desc": "10%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "9773.46"
+    },
+    {
+      "sku": "GPD8.5M",
+      "sku_upper": "GPD8.5M",
+      "producto": "Generador Diésel Parazzini Pro GPD8.5M — 8.5 kW Monofásico con Entrada ATS",
+      "regular_price": 29399.15,
+      "promo_price": 24989.28,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "24989.28"
+    },
+    {
+      "sku": "GPD8.5T",
+      "sku_upper": "GPD8.5T",
+      "producto": "Generador Parazzini 8.5 Kw Trifasico Diesel entrada ATS",
+      "regular_price": 26872.0,
+      "promo_price": 24453.52,
+      "pct_desc": "9%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "24453.52"
+    },
+    {
+      "sku": "GPDS14M",
+      "sku_upper": "GPDS14M",
+      "producto": "Generador Parazzini Silecioso 14 Kw Monofasico Diesel",
+      "regular_price": 87110.0,
+      "promo_price": 79270.1,
+      "pct_desc": "9%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "79270.10"
+    },
+    {
+      "sku": "GPDS14T",
+      "sku_upper": "GPDS14T",
+      "producto": "Generador Parazzini Silecioso 14 Kw Trifasico Diesel",
+      "regular_price": 87110.0,
+      "promo_price": 76656.8,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "76656.80"
+    },
+    {
+      "sku": "GPDS8.5T",
+      "sku_upper": "GPDS8.5T",
+      "producto": "Generador Parazzini Silencioso 8.5 Kw Trifasico Diesel",
+      "regular_price": 31698.0,
+      "promo_price": 27894.24,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "27894.24"
+    },
+    {
+      "sku": "GPIS3.5KW",
+      "sku_upper": "GPIS3.5KW",
+      "producto": "Generador inverter 3.5 KW dual fuel compacto silencioso",
+      "regular_price": 13450.25,
+      "promo_price": 11836.22,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "11836.22"
     },
     {
       "sku": "KF35X",
@@ -164,72 +741,12 @@
       "shopify_price": "10169.00"
     },
     {
-      "sku": "141E",
-      "sku_upper": "141E",
-      "producto": "Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E",
-      "regular_price": 4578.0,
-      "promo_price": 3891.3,
-      "pct_desc": "15%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "3891.30"
-    },
-    {
-      "sku": "302E",
-      "sku_upper": "302E",
-      "producto": "Peinadora Eléctrica para Césped Artificial — Garland Roll & Comb 302 E, 1400 W",
-      "regular_price": 5430.76,
-      "promo_price": 4616.15,
-      "pct_desc": "15%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "4616.15"
-    },
-    {
-      "sku": "502E",
-      "sku_upper": "502E",
-      "producto": "Garland Roll & Comb 502 E — Peinadora Eléctrica 1600 W para Césped Artificial",
-      "regular_price": 7871.92,
-      "promo_price": 6691.13,
-      "pct_desc": "15%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "6691.13"
-    },
-    {
-      "sku": "AKE100P",
-      "sku_upper": "AKE100P",
-      "producto": "Kawashima AKE100P — Aspersor Eléctrico de Remolque 100 L",
-      "regular_price": 8291.0,
-      "promo_price": null,
-      "pct_desc": "",
+      "sku": "MHP11",
+      "sku_upper": "MHP11",
+      "producto": "Motor 11 hp 4 tiempos Parazzini",
+      "regular_price": 10506.0,
+      "promo_price": 9560.46,
+      "pct_desc": "9%",
       "msi_ladder": [
         3,
         6
@@ -238,16 +755,16 @@
       "eligible_912": false,
       "vigencia": "2026-06-14",
       "vigente": true,
-      "estado_landing": "Pendiente subir",
+      "estado_landing": "En landing",
       "in_shopify": true,
-      "shopify_price": "8291.00"
+      "shopify_price": "9560.46"
     },
     {
-      "sku": "BAKARAC300-G",
-      "sku_upper": "BAKARAC300-G",
-      "producto": "Generador-Soldador Inverter Parazzini BAKARAC300-G — 7.7 kW · 17 HP Gasolina",
-      "regular_price": 29185.75,
-      "promo_price": 25683.46,
+      "sku": "MP2.8",
+      "sku_upper": "MP2.8",
+      "producto": "Motor Parazzini 2.8 HP / 97cc",
+      "regular_price": 3248.0,
+      "promo_price": 2858.24,
       "pct_desc": "12%",
       "msi_ladder": [
         3,
@@ -258,16 +775,36 @@
       "eligible_912": true,
       "vigencia": "2026-06-14",
       "vigente": true,
-      "estado_landing": "Pendiente subir",
+      "estado_landing": "En landing",
       "in_shopify": true,
-      "shopify_price": "25683.46"
+      "shopify_price": "2858.24"
     },
     {
-      "sku": "BK1440",
-      "sku_upper": "BK1440",
-      "producto": "Motobomba agrícola Kawashima 4\" 14 HP aluminio (85 m³/h)",
-      "regular_price": 14856.0,
-      "promo_price": 12330.48,
+      "sku": "MP7FF",
+      "sku_upper": "MP7FF",
+      "producto": "Motor 7 hp 4 tiempos con doble filtro de aire",
+      "regular_price": 3816.0,
+      "promo_price": 3358.08,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
+      "vigencia": "2026-06-14",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "3358.08"
+    },
+    {
+      "sku": "PPSB6.5AK",
+      "sku_upper": "PPSB6.5AK",
+      "producto": "Parihuela 6.5 hp Transmisión Directa kit-Manguera y Carrete",
+      "regular_price": 6920.0,
+      "promo_price": 5743.6,
       "pct_desc": "17%",
       "msi_ladder": [
         3,
@@ -279,16 +816,16 @@
       "eligible_912": true,
       "vigencia": "2026-06-14",
       "vigente": true,
-      "estado_landing": "Pendiente subir",
+      "estado_landing": "En landing",
       "in_shopify": true,
-      "shopify_price": "12330.48"
+      "shopify_price": "5743.60"
     },
     {
-      "sku": "BK2.515",
-      "sku_upper": "BK2.515",
-      "producto": "Motobomba Agrícola 3HP Aluminio Autocebante — 200 L/min, Altura 15m, Boca 1.5\"",
-      "regular_price": 3511.32,
-      "promo_price": 2914.4,
+      "sku": "PPSB6.5BK",
+      "sku_upper": "PPSB6.5BK",
+      "producto": "Parihuela 6.5 hp Transmisión Directa tipo M Kit -Manguera y carrete",
+      "regular_price": 7294.0,
+      "promo_price": 6054.02,
       "pct_desc": "17%",
       "msi_ladder": [
         3,
@@ -300,261 +837,9 @@
       "eligible_912": true,
       "vigencia": "2026-06-14",
       "vigente": true,
-      "estado_landing": "Pendiente subir",
+      "estado_landing": "En landing",
       "in_shopify": true,
-      "shopify_price": "2914.40"
-    },
-    {
-      "sku": "BK7.530",
-      "sku_upper": "BK7.530",
-      "producto": "Motobomba Agrícola 3HP Aluminio Autocebante — 200 L/min, Altura 15m, Boca 1.5\"",
-      "regular_price": 5300.04,
-      "promo_price": 4505.03,
-      "pct_desc": "15%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "4505.03"
-    },
-    {
-      "sku": "CA-25PH",
-      "sku_upper": "CA-25PH",
-      "producto": "Compresor de Aire Power Hunt 25L — Libre de Aceite / 2.5 HP / 115 PSI",
-      "regular_price": 3121.16,
-      "promo_price": 2840.26,
-      "pct_desc": "9%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "2840.26"
-    },
-    {
-      "sku": "CA-50PH",
-      "sku_upper": "CA-50PH",
-      "producto": "Compresor Power Hunt 50 L — Oil-Free, Doble Motor",
-      "regular_price": 6838.0,
-      "promo_price": 6222.58,
-      "pct_desc": "9%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "6222.58"
-    },
-    {
-      "sku": "CSK5218",
-      "sku_upper": "CSK5218",
-      "producto": "Motosierra Kawashima 52 cc — barra 18\", motor 2T, auto-choke",
-      "regular_price": 4154.49,
-      "promo_price": 3531.32,
-      "pct_desc": "15%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "3531.32"
-    },
-    {
-      "sku": "CSK6222",
-      "sku_upper": "CSK6222",
-      "producto": "Motosierra Kawashima 62cc Barra 22\" — Potencia Forestal de Grado Profesional",
-      "regular_price": 4352.33,
-      "promo_price": 3699.48,
-      "pct_desc": "15%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "3699.48"
-    },
-    {
-      "sku": "GH26000E-A",
-      "sku_upper": "GH26000E-A",
-      "producto": "Generador estacionario a gas LP de 22 Kw (no incluye bateria) - Trifasico",
-      "regular_price": 143920.0,
-      "promo_price": 135284.8,
-      "pct_desc": "6%",
-      "msi_ladder": [
-        3
-      ],
-      "msi_max": 3,
-      "eligible_912": false,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "135284.80"
-    },
-    {
-      "sku": "GP10000GAS",
-      "sku_upper": "GP10000GAS",
-      "producto": "Generador estacionario a gas LP y GN de 10 Kw - Monofasico",
-      "regular_price": 96775.0,
-      "promo_price": 82258.75,
-      "pct_desc": "15%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "82258.75"
-    },
-    {
-      "sku": "GP10000GAS-T",
-      "sku_upper": "GP10000GAS-T",
-      "producto": "Generador estacionario a gas LP y GN de 10 Kw - Trifasico",
-      "regular_price": 96775.0,
-      "promo_price": 87097.5,
-      "pct_desc": "10%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "87097.50"
-    },
-    {
-      "sku": "GP5500",
-      "sku_upper": "GP5500",
-      "producto": "Generador a Gasolina Parazzini GP5500 — 5500W, 9HP, Encendido Manual",
-      "regular_price": 10859.4,
-      "promo_price": 9773.46,
-      "pct_desc": "10%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "9773.46"
-    },
-    {
-      "sku": "GPD8.5M",
-      "sku_upper": "GPD8.5M",
-      "producto": "Generador Diésel Parazzini Pro GPD8.5M — 8.5 kW Monofásico con Entrada ATS",
-      "regular_price": 29399.15,
-      "promo_price": 24989.28,
-      "pct_desc": "15%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "24989.28"
-    },
-    {
-      "sku": "GPD8.5T",
-      "sku_upper": "GPD8.5T",
-      "producto": "Generador Parazzini 8.5 Kw Trifasico Diesel entrada ATS",
-      "regular_price": 26872.0,
-      "promo_price": 24453.52,
-      "pct_desc": "9%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "24453.52"
-    },
-    {
-      "sku": "GPDS14M",
-      "sku_upper": "GPDS14M",
-      "producto": "Generador Parazzini Silecioso 14 Kw Monofasico Diesel",
-      "regular_price": 87110.0,
-      "promo_price": 79270.1,
-      "pct_desc": "9%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "79270.10"
-    },
-    {
-      "sku": "GPDS14T",
-      "sku_upper": "GPDS14T",
-      "producto": "Generador Parazzini Silecioso 14 Kw Trifasico Diesel",
-      "regular_price": 87110.0,
-      "promo_price": 76656.8,
-      "pct_desc": "12%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "76656.80"
+      "shopify_price": "6054.02"
     },
     {
       "sku": "GPDS8.5M",
@@ -576,46 +861,6 @@
       "shopify_price": "28031.64"
     },
     {
-      "sku": "GPDS8.5T",
-      "sku_upper": "GPDS8.5T",
-      "producto": "Generador Parazzini Silencioso 8.5 Kw Trifasico Diesel",
-      "regular_price": 31698.0,
-      "promo_price": 27894.24,
-      "pct_desc": "12%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "27894.24"
-    },
-    {
-      "sku": "GPIS3.5KW",
-      "sku_upper": "GPIS3.5KW",
-      "producto": "Generador inverter 3.5 KW dual fuel compacto silencioso",
-      "regular_price": 13450.25,
-      "promo_price": 11836.22,
-      "pct_desc": "12%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "11836.22"
-    },
-    {
       "sku": "LMH-1000W",
       "sku_upper": "LMH-1000W",
       "producto": "Foco de Haluro metálico 1000W",
@@ -633,108 +878,28 @@
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
       "shopify_price": "18227.27"
-    },
-    {
-      "sku": "MHP11",
-      "sku_upper": "MHP11",
-      "producto": "Motor 11 hp 4 tiempos Parazzini",
-      "regular_price": 10506.0,
-      "promo_price": 9560.46,
-      "pct_desc": "9%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "9560.46"
-    },
-    {
-      "sku": "MP2.8",
-      "sku_upper": "MP2.8",
-      "producto": "Motor Parazzini 2.8 HP / 97cc",
-      "regular_price": 3248.0,
-      "promo_price": 2858.24,
-      "pct_desc": "12%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "2858.24"
-    },
-    {
-      "sku": "MP7FF",
-      "sku_upper": "MP7FF",
-      "producto": "Motor 7 hp 4 tiempos con doble filtro de aire",
-      "regular_price": 3816.0,
-      "promo_price": 3358.08,
-      "pct_desc": "12%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "3358.08"
-    },
-    {
-      "sku": "PPSB6.5AK",
-      "sku_upper": "PPSB6.5AK",
-      "producto": "Parihuela 6.5 hp Transmisión Directa kit-Manguera y Carrete",
-      "regular_price": 6920.0,
-      "promo_price": 5743.6,
-      "pct_desc": "17%",
-      "msi_ladder": [
-        3,
-        6,
-        9,
-        12
-      ],
-      "msi_max": 12,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "5743.60"
-    },
-    {
-      "sku": "PPSB6.5BK",
-      "sku_upper": "PPSB6.5BK",
-      "producto": "Parihuela 6.5 hp Transmisión Directa tipo M Kit -Manguera y carrete",
-      "regular_price": 7294.0,
-      "promo_price": 6054.02,
-      "pct_desc": "17%",
-      "msi_ladder": [
-        3,
-        6,
-        9,
-        12
-      ],
-      "msi_max": 12,
-      "eligible_912": true,
-      "vigencia": "2026-06-14",
-      "vigente": true,
-      "estado_landing": "Pendiente subir",
-      "in_shopify": true,
-      "shopify_price": "6054.02"
     }
   ],
-  "excluidos_sin_pdp": []
+  "excluidos_sin_pdp": [
+    {
+      "sku": "MINI60-12/1127",
+      "producto": "Presurizador individual automático 1/6hp",
+      "estado_landing": ""
+    },
+    {
+      "sku": "PK-EASY-400US",
+      "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
+      "estado_landing": ""
+    },
+    {
+      "sku": "PK-EASY-600N-US",
+      "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
+      "estado_landing": ""
+    },
+    {
+      "sku": "PK-EASY-800US",
+      "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
+      "estado_landing": ""
+    }
+  ]
 }
