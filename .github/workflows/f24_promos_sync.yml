@@ -55,7 +55,7 @@ jobs:
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             python3 sync_f24_promos.py
           else
-            python3 sync_f24_promos.py --apply
+            python3 sync_f24_promos.py --apply --apply-base
           fi
 
       - name: Sync inventory → Shopify (stock/disponible) + inventory.json

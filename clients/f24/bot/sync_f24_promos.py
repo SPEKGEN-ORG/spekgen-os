@@ -1,27 +1,28 @@
 #!/usr/bin/env python3
-"""Reconcilia las PROMOS ACTIVAS de Ferre24 desde el Google Sheet de inventario.
+"""Reconcilia PRECIOS + PROMOS de Ferre24 desde el Google Sheet → Shopify + knowledge del bot.
 
-SOURCE OF TRUTH: Sheet "INVENTARIO F24" (1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U),
-pestaña "🔥 PROMO ACTIVA". El equipo de F24 marca promos en "📦 STOCK Y PROMOS" y esa
-pestaña se auto-llena. Este script la lee y:
+SOURCE OF TRUTH: Sheet "INVENTARIO F24" (1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U).
+El sheet es DUEÑO TOTAL de los precios:
 
-  1. Filtra a promos VIGENTES (hoy <= Vigencia fin, formato dd/mm/yyyy).
-  2. Escribe F24_BOT_KNOWLEDGE/promos_active.json (lo consume build_f24_knowledge.py
-     para el knowledge del bot — precio promo + escalera MSI + elegibilidad 9/12).
-  3. Sincroniza precios a Shopify SOLO en SKUs con "Precio Promo":
-        variant.price = Precio Promo   ·   variant.compareAtPrice = Precio (regular)
-     y revierte (price = regular, compareAt = null) los SKUs que salieron de promo,
-     usando _promo_state.json para saber a qué revertir.
+  - Precio base (col E "Precio venta público" de "📦 STOCK Y PROMOS") → variant.price
+    de TODO SKU que no esté en promo (compareAtPrice se limpia).
+  - Promo vigente (pestaña "🔥 PROMO ACTIVA", con Precio Promo) → variant.price = Precio
+    Promo, variant.compareAtPrice = Precio base (tachado).
+  - Al expirar/quitar una promo, el SKU vuelve solo a su precio base (ya no se necesita
+    _promo_state.json: el base vive en el sheet).
 
-Por defecto corre en DRY-RUN (no escribe nada en Shopify, solo muestra el diff).
-Para aplicar: --apply
+Todo es DIFF-BASED: jala TODAS las variantes de Shopify de una (paginado) y solo escribe los
+SKUs cuyo precio/tachado difiere. Robusto a filas incompletas (SKU sin precio o sin match en
+Shopify se reporta y se omite, nunca truena).
 
-    /usr/bin/python3 sync_f24_promos.py            # dry-run (preview)
-    /usr/bin/python3 sync_f24_promos.py --apply     # aplica a Shopify + escribe json/state
+Además (sin cambios respecto a la versión previa):
+  - Pone/quita el tag `msi-912` (gate Cuenta B 9/12 MSI del edge function f24-process-order).
+  - Escribe F24_BOT_KNOWLEDGE/promos_active.json (lo consume build_f24_knowledge.py).
 
-Notas:
-  - Cuenta B (9/12 MSI) = solo SKUs cuya escalera "Meses MSI" incluye 9 o 12.
-  - SKUs en promo SIN "Precio Promo" = promo de solo-MSI (no se toca el precio Shopify).
+Por defecto DRY-RUN (no escribe nada). --apply para aplicar.
+
+    python3 sync_f24_promos.py            # preview (muestra el diff completo de precios)
+    python3 sync_f24_promos.py --apply
 """
 from __future__ import annotations
 
@@ -34,9 +35,14 @@ from datetime import date, datetime
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-F24_ROOT = SCRIPT_DIR.parent.parent  # .../F24- FERRE24
-SHOPIFY_SCRIPTS = F24_ROOT / "F24 - 04. WEBSITE (1)" / "01. LIVE BUILD" / "scripts"
-sys.path.insert(0, str(SHOPIFY_SCRIPTS))
+# (en el repo cloud shopify_client.py vive junto a este script; el insert de abajo es
+#  inofensivo si la ruta no existe — sys.path[0] ya cubre el import.)
+F24_ROOT = SCRIPT_DIR.parent.parent
+for cand in ("F24 - 04. WEBSITE (1)", "F24 - 04. WEBSITE "):
+    p = F24_ROOT / cand / "01. LIVE BUILD" / "scripts"
+    if p.exists():
+        sys.path.insert(0, str(p))
+        break
 
 OUT_DIR = SCRIPT_DIR / "F24_BOT_KNOWLEDGE"
 PROMOS_JSON = OUT_DIR / "promos_active.json"
@@ -44,17 +50,17 @@ STATE_PATH = SCRIPT_DIR / "_promo_state.json"
 
 SHEET_ID = "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U"
 PROMO_TAB = "🔥 PROMO ACTIVA"
-# Tag que marca los productos elegibles a 9/12 MSI (ruta MercadoPago Cuenta B). El edge
-# function f24-process-order exige este tag para permitir payment_method=msi_promo.
+STOCK_TAB = "📦 STOCK Y PROMOS"
 MSI912_TAG = "msi-912"
-# Columnas: SKU | Producto | Precio | Meses MSI | % Desc | Precio Promo | Vigencia (fin) | Estado Landing
+# PROMO ACTIVA: SKU | Producto | Precio | Meses MSI | % Desc | Precio Promo | Vigencia | Estado Landing
 COL = {"sku": 0, "producto": 1, "precio": 2, "msi": 3, "pct": 4, "promo": 5, "vig": 6, "landing": 7}
+# STOCK Y PROMOS: el precio base vive en la col E (index 4)
+STOCK_COL = {"sku": 0, "producto": 1, "precio_base": 4}
 
 SA_REL = "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json"
 
 
 def find_sa() -> Path | None:
-    # Cloud (GitHub Actions): el SA se escribe a un archivo y su ruta viene en GOOGLE_SA_PATH.
     envp = os.environ.get("GOOGLE_SA_PATH")
     if envp and Path(envp).exists():
         return Path(envp)
@@ -65,9 +71,8 @@ def find_sa() -> Path | None:
     return None
 
 
-def parse_money(s: str):
-    """'$3,261.92' -> 3261.92 ; '' -> None"""
-    s = (s or "").strip().replace("$", "").replace(",", "")
+def parse_money(s):
+    s = str(s or "").strip().replace("$", "").replace(",", "")
     if not s:
         return None
     try:
@@ -77,12 +82,10 @@ def parse_money(s: str):
 
 
 def parse_msi_ladder(s: str) -> list[int]:
-    """'3, 6, 9, 12' -> [3,6,9,12]"""
     return sorted({int(x) for x in re.findall(r"\d+", s or "")})
 
 
 def parse_vig(s: str):
-    """'14/06/2026' -> date(2026,6,14) ; tolera ISO y vacío."""
     s = (s or "").strip()
     if not s:
         return None
@@ -94,7 +97,7 @@ def parse_vig(s: str):
     return None
 
 
-def read_promo_active() -> list[dict]:
+def _sheets_svc():
     from google.oauth2 import service_account
     from googleapiclient.discovery import build
     sa = find_sa()
@@ -102,7 +105,10 @@ def read_promo_active() -> list[dict]:
         raise SystemExit("No encontré el service account de Sheets.")
     creds = service_account.Credentials.from_service_account_file(
         str(sa), scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"])
-    svc = build("sheets", "v4", credentials=creds, cache_discovery=False)
+    return build("sheets", "v4", credentials=creds, cache_discovery=False)
+
+
+def read_promo_active(svc) -> list[dict]:
     vals = svc.spreadsheets().values().get(
         spreadsheetId=SHEET_ID, range=f"{PROMO_TAB}!A2:H").execute().get("values", [])
     today = date.today()
@@ -114,14 +120,12 @@ def read_promo_active() -> list[dict]:
             continue
         ladder = parse_msi_ladder(r[COL["msi"]])
         vig = parse_vig(r[COL["vig"]])
-        regular = parse_money(r[COL["precio"]])
-        promo = parse_money(r[COL["promo"]])
         rows.append({
             "sku": sku,
             "sku_upper": sku.upper(),
             "producto": str(r[COL["producto"]]).strip(),
-            "regular_price": regular,
-            "promo_price": promo,
+            "regular_price": parse_money(r[COL["precio"]]),
+            "promo_price": parse_money(r[COL["promo"]]),
             "pct_desc": str(r[COL["pct"]]).strip(),
             "msi_ladder": ladder,
             "msi_max": max(ladder) if ladder else 0,
@@ -133,31 +137,61 @@ def read_promo_active() -> list[dict]:
     return rows
 
 
+def read_base_prices(svc) -> dict:
+    """{sku_upper: {'base': float|None, 'producto': str}} desde 📦 STOCK Y PROMOS col E."""
+    vals = svc.spreadsheets().values().get(
+        spreadsheetId=SHEET_ID, range=f"{STOCK_TAB}!A2:E").execute().get("values", [])
+    out = {}
+    for r in vals:
+        r = (list(r) + [""] * 5)[:5]
+        sku = str(r[STOCK_COL["sku"]]).strip()
+        if not sku:
+            continue
+        out[sku.upper()] = {
+            "base": parse_money(r[STOCK_COL["precio_base"]]),
+            "producto": str(r[STOCK_COL["producto"]]).strip(),
+        }
+    return out
+
+
 # ---------------- Shopify ----------------
 
-def sku_variant(sc, sku: str):
-    """Devuelve {variant_gid, price, compare_at} del SKU, o None."""
-    q = sku.replace('"', '\\"')
-    d = sc.graphql(
-        'query($q:String!){ productVariants(first:1, query:$q){ edges{ node{ id price compareAtPrice product{ id title } } } } }',
-        variables={"q": f"sku:{q}"})
-    edges = (d.get("productVariants", {}) or {}).get("edges", [])
-    if not edges:
-        return None
-    n = edges[0]["node"]
-    return {
-        "variant_gid": n["id"],
-        "product_gid": n["product"]["id"],
-        "title": n["product"].get("title", ""),
-        "price": n.get("price"),
-        "compare_at": n.get("compareAtPrice"),
-    }
+def fetch_all_variants(sc) -> dict:
+    """Jala TODAS las variantes de Shopify (paginado). {sku_upper: {vid,pid,price,compare_at,title}}."""
+    q = """query($cursor:String){
+      productVariants(first:250, after:$cursor){
+        edges{ node{ id sku price compareAtPrice product{ id title } } }
+        pageInfo{ hasNextPage endCursor }
+      }
+    }"""
+    out, cursor = {}, None
+    while True:
+        d = sc.graphql(q, {"cursor": cursor})
+        conn = d["productVariants"]
+        for e in conn["edges"]:
+            n = e["node"]
+            sku = (n.get("sku") or "").strip()
+            if not sku:
+                continue
+            out[sku.upper()] = {
+                "vid": n["id"], "pid": n["product"]["id"],
+                "title": n["product"].get("title", ""),
+                "price": n.get("price"), "compare_at": n.get("compareAtPrice"),
+            }
+        if conn["pageInfo"]["hasNextPage"]:
+            cursor = conn["pageInfo"]["endCursor"]
+        else:
+            return out
 
 
-def set_variant_price(sc, product_gid: str, variant_gid: str, price: float, compare_at):
-    """productVariantsBulkUpdate: setea price y compareAtPrice (compare_at=None lo limpia)."""
+# sentinela: dejar el compareAtPrice INTACTO (no incluir el campo en el update)
+LEAVE = object()
+
+
+def set_variant_price(sc, product_gid, variant_gid, price, compare_at):
     var = {"id": variant_gid, "price": f"{price:.2f}"}
-    var["compareAtPrice"] = f"{compare_at:.2f}" if compare_at is not None else None
+    if compare_at is not LEAVE:
+        var["compareAtPrice"] = f"{compare_at:.2f}" if compare_at is not None else None
     d = sc.graphql(
         """mutation($pid:ID!,$vars:[ProductVariantsBulkInput!]!){
              productVariantsBulkUpdate(productId:$pid, variants:$vars){
@@ -172,8 +206,7 @@ def set_variant_price(sc, product_gid: str, variant_gid: str, price: float, comp
     return d["productVariantsBulkUpdate"]["productVariants"][0]
 
 
-def set_product_tag(sc, product_gid: str, tag: str, add: bool = True):
-    """Agrega o quita un tag de un producto (idempotente)."""
+def set_product_tag(sc, product_gid, tag, add=True):
     mut = "tagsAdd" if add else "tagsRemove"
     d = sc.graphql(
         f"mutation($id:ID!,$tags:[String!]!){{ {mut}(id:$id, tags:$tags){{ userErrors{{ message }} }} }}",
@@ -183,100 +216,147 @@ def set_product_tag(sc, product_gid: str, tag: str, add: bool = True):
         raise RuntimeError(f"{mut} {product_gid}: {errs}")
 
 
+def _f(x):
+    return float(x) if x not in (None, "") else None
+
+
+BASE_TOL = 1.0      # tolerancia para ignorar diferencias de redondeo (<$1) en precio base
+SUSPECT_RATIO = 0.5  # cambio de precio base > 50% = sospechoso (dedazo 2×/mitad) → NO auto-aplica
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--apply", action="store_true", help="Aplica cambios a Shopify + escribe json/state. Sin esto = dry-run.")
+    ap.add_argument("--apply", action="store_true",
+                    help="Aplica PROMOS (precio promo + tachado + restauración al expirar) + msi-912 + json.")
+    ap.add_argument("--apply-base", action="store_true",
+                    help="ADEMÁS empuja los precios BASE del sheet a Shopify (productos sin promo). "
+                         "OFF por default: requiere reconciliar el sheet vs Shopify primero.")
     args = ap.parse_args()
     dry = not args.apply
 
-    print(f"{'DRY-RUN (preview, no escribe nada)' if dry else 'APPLY (escribe a Shopify + json/state)'}")
-    print(f"Source of truth: Sheet INVENTARIO F24 / '{PROMO_TAB}'\n")
+    print(f"{'DRY-RUN (preview, no escribe nada)' if dry else 'APPLY'}"
+          f"{' + base prices' if args.apply_base else ''}")
+    print("Source of truth: Sheet INVENTARIO F24\n")
 
-    rows = read_promo_active()
+    svc = _sheets_svc()
+    rows = read_promo_active(svc)
+    base = read_base_prices(svc)
     vigentes = [r for r in rows if r["vigente"]]
-    no_vig = [r for r in rows if not r["vigente"]]
-    with_promo = [r for r in vigentes if r["promo_price"] is not None]
-    msi_only = [r for r in vigentes if r["promo_price"] is None]
-    cuenta_b = [r for r in vigentes if r["eligible_912"]]
+    promo_by_sku = {r["sku_upper"]: r for r in vigentes if r["promo_price"] is not None}
 
-    print(f"Filas en PROMO ACTIVA: {len(rows)}  |  vigentes: {len(vigentes)}  |  expiradas: {len(no_vig)}")
-    print(f"  • con precio promo (sync Shopify): {len(with_promo)}")
-    print(f"  • solo-MSI (precio sin cambio):    {len(msi_only)}")
-    print(f"  • elegibles 9/12 (Cuenta B):       {len(cuenta_b)}\n")
-
-    state = json.loads(STATE_PATH.read_text()) if STATE_PATH.exists() else {}
-    new_state = {}
-
-    # cargar shopify y resolver TODA promo vigente contra Shopify (sellable = existe variante)
     import shopify_client as sc  # noqa
-    print(f"Shopify: {sc.SHOP}\n")
+    print(f"Shopify: {sc.SHOP}  ·  jalando variantes…")
+    variants = fetch_all_variants(sc)
+    print(f"Variantes en Shopify: {len(variants)}\n")
+
+    prev = json.loads(STATE_PATH.read_text()) if STATE_PATH.exists() else {}
+
+    # === 1) PROMOS: price=promo, compareAt=base (tachado). Captura el compareAt original. ===
+    promo_changes, new_state = [], {}
+    for sku_u, r in promo_by_sku.items():
+        v = variants.get(sku_u)
+        if not v:
+            continue
+        b = base.get(sku_u, {}).get("base")
+        want_p = r["promo_price"]
+        want_c = b if b is not None else r["regular_price"]
+        cur_p, cur_c = _f(v["price"]), _f(v["compare_at"])
+        # compareAt original (Marvelsa) = lo guardado antes, o el actual si entra fresco a promo
+        orig = prev.get(sku_u, {}).get("orig_compare_at", cur_c if sku_u not in prev else None)
+        new_state[sku_u] = {"base": b, "promo": want_p, "orig_compare_at": orig}
+        if cur_p is None or abs(cur_p - want_p) >= 0.01 or _f(want_c) != cur_c:
+            promo_changes.append({"sku": sku_u, "pid": v["pid"], "vid": v["vid"],
+                                  "cur_p": cur_p, "want_p": want_p, "want_c": want_c})
+
+    # === 2) EXPIRACIONES: estaban en state, ya no están en promo → precio base + restaurar tachado ===
+    expiries = []
+    for sku_u, info in prev.items():
+        if sku_u in promo_by_sku:
+            continue
+        v = variants.get(sku_u)
+        if not v:
+            continue
+        b = base.get(sku_u, {}).get("base") or info.get("base")
+        if b is None:
+            continue
+        restore_c = info.get("orig_compare_at")  # Marvelsa original (o None)
+        cur_p, cur_c = _f(v["price"]), _f(v["compare_at"])
+        if cur_p is None or abs(cur_p - b) >= 0.01 or _f(restore_c) != cur_c:
+            expiries.append({"sku": sku_u, "pid": v["pid"], "vid": v["vid"],
+                             "cur_p": cur_p, "want_p": b, "want_c": restore_c})
+
+    # === 3) PRECIO BASE (sin promo): el sheet manda, DIFF-based (>= $1). compareAt INTACTO. ===
+    #   Guard anti-error: un cambio > SUSPECT_RATIO (50%) NO se auto-aplica — se marca para
+    #   confirmar con Sergio (caza dedazos tipo 2× o mitad). Los cambios normales sí fluyen.
+    base_review, base_suspect = [], []
+    for sku_u, info in base.items():
+        if sku_u in promo_by_sku or sku_u in prev:
+            continue
+        b = info["base"]
+        v = variants.get(sku_u)
+        if v is None or b is None:
+            continue
+        cur_p = _f(v["price"])
+        if cur_p is not None and abs(cur_p - b) >= BASE_TOL:
+            entry = {"sku": sku_u, "pid": v["pid"], "vid": v["vid"],
+                     "cur_p": cur_p, "want_p": b, "title": v["title"]}
+            if cur_p > 0 and abs(b - cur_p) / cur_p > SUSPECT_RATIO:
+                base_suspect.append(entry)
+            else:
+                base_review.append(entry)
+
+    # --- Reporte ---
+    print(f"=== PROMOS — precio promo a setear ({len(promo_changes)}) ===")
+    for c in sorted(promo_changes, key=lambda x: x["sku"]):
+        print(f"  {c['sku']:<16} {str(c['cur_p']):>10} → {c['want_p']:>10.2f}  (tachado {c['want_c']})")
+    if expiries:
+        print(f"\n=== EXPIRARON — volver a precio base + restaurar tachado ({len(expiries)}) ===")
+        for c in sorted(expiries, key=lambda x: x["sku"]):
+            print(f"  {c['sku']:<16} {str(c['cur_p']):>10} → {c['want_p']:>10.2f}  (tachado {c['want_c']})")
+    estado = "SE APLICA (--apply-base)" if args.apply_base else "solo revisión (sin --apply-base)"
+    print(f"\n=== PRECIO BASE distinto en sheet ({len(base_review)}) — {estado} ===")
+    for c in sorted(base_review, key=lambda x: x["sku"]):
+        print(f"  {c['sku']:<18} shopify={c['cur_p']:>10}  sheet={c['want_p']:>10}  {c['title'][:34]}")
+    if base_suspect:
+        print(f"\n⚠️  PRECIO BASE SOSPECHOSO (>{int(SUSPECT_RATIO*100)}% — NUNCA auto-aplica, confirmar con Sergio) ({len(base_suspect)}):")
+        for c in sorted(base_suspect, key=lambda x: x["sku"]):
+            ratio = c["want_p"] / c["cur_p"] if c["cur_p"] else 0
+            print(f"  {c['sku']:<18} shopify={c['cur_p']:>10}  sheet={c['want_p']:>10}  ({ratio:.2f}×)  {c['title'][:28]}")
+
+    # msi-912 + promos_active.json
     for r in vigentes:
-        v = sku_variant(sc, r["sku"])
+        v = variants.get(r["sku_upper"])
         r["in_shopify"] = bool(v)
         r["shopify_price"] = v["price"] if v else None
-        r["variant_gid"] = v["variant_gid"] if v else None
-        r["product_gid"] = v["product_gid"] if v else None
+        r["product_gid"] = v["pid"] if v else None
+    sellable = [r for r in vigentes if r["in_shopify"]]
+    promo_missing = [r for r in vigentes if not r["in_shopify"]]
 
-    sellable = [r for r in vigentes if r["in_shopify"]]            # el bot SOLO vende estos
-    missing = [r for r in vigentes if not r["in_shopify"]]         # excluidos: aún sin PDP
-    promo_sellable = [r for r in sellable if r["promo_price"] is not None]
-
-    print(f"{'SKU':<16}{'regular':>11}{'promo':>11}{'%':>5}  {'MSI':<14}{'Shopify ahora':>16}  acción")
-    print("-" * 96)
-    changes = []  # (sku, product_gid, variant_gid, new_price, new_compare)
-    for r in sorted(promo_sellable, key=lambda x: x["sku"]):
-        ladder = ",".join(str(m) for m in r["msi_ladder"])
-        cur = f"${float(r['shopify_price']):,.0f}" if r.get("shopify_price") else "—"
-        want_price = r["promo_price"]
-        want_cmp = r["regular_price"]
-        already = (r.get("shopify_price") and abs(float(r["shopify_price"]) - want_price) < 0.01)
-        action = "ya está" if already else "SET promo"
-        print(f"{r['sku']:<16}{r['regular_price'] or 0:>11,.0f}{r['promo_price']:>11,.0f}{r['pct_desc']:>5}  {ladder:<14}{cur:>16}  {action}")
-        new_state[r["sku_upper"]] = {"regular": want_cmp, "promo": want_price}
-        if not already:
-            changes.append((r["sku"], r["product_gid"], r["variant_gid"], want_price, want_cmp))
-
-    if missing:
-        print(f"\nEXCLUIDOS del bot ({len(missing)} no están en Shopify — el equipo debe subir su PDP):")
-        for r in sorted(missing, key=lambda x: x["sku"]):
-            print(f"  {r['sku']:<16} {r['producto'][:54]:<54} [{r['estado_landing']}]")
-
-    # reverts: estaban en state pero ya no están en promo vendible con precio
-    active_skus = {r["sku_upper"] for r in promo_sellable}
-    reverts = [(sku_u, info) for sku_u, info in state.items() if sku_u not in active_skus]
-    if reverts:
-        print("\nREVERTIR (salieron de promo) — restaurar precio regular:")
-        for sku_u, info in reverts:
-            print(f"  {sku_u:<16} -> price ${info.get('regular',0):,.0f}, quitar tachado")
-
-    print(f"\nResumen: {len(sellable)} vendibles | {len(missing)} excluidos | "
-          f"{len(changes)} precio(s) a cambiar | {len(reverts)} a revertir.")
+    base_verb = "a aplicar" if args.apply_base else "por revisar"
+    print(f"\nResumen: {len(promo_changes)} promo + {len(expiries)} expiradas a aplicar | "
+          f"{len(base_review)} base {base_verb} + {len(base_suspect)} base SOSPECHOSAS (frenadas) | "
+          f"{len(sellable)} promos vendibles")
 
     if dry:
-        print("\n(DRY-RUN: no se escribió nada. Corre con --apply para aplicar.)")
+        print("\n(DRY-RUN: no se escribió nada.)")
         return
 
-    # APPLY — precios
-    for sku, pgid, vgid, price, cmp in changes:
-        res = set_variant_price(sc, pgid, vgid, price, cmp)
-        print(f"  ✓ {sku}: price={res['price']} compareAt={res['compareAtPrice']}")
-    for sku_u, info in reverts:
-        v = sku_variant(sc, sku_u)
-        if v:
-            res = set_variant_price(sc, v["product_gid"], v["variant_gid"], float(info["regular"]), None)
-            print(f"  ↩ {sku_u}: revertido a {res['price']}")
+    # ---- APPLY (promos + expiraciones siempre; base solo con --apply-base) ----
+    applied = list(promo_changes) + list(expiries)
+    if args.apply_base:
+        applied += [{**c, "want_c": LEAVE} for c in base_review]  # base: precio sí, tachado intacto
+    for c in applied:
+        res = set_variant_price(sc, c["pid"], c["vid"], c["want_p"], c.get("want_c", LEAVE))
+        print(f"  ✓ {c['sku']}: price={res['price']} compareAt={res['compareAtPrice']}")
 
-    # APPLY — tag msi-912 (gate de Cuenta B en el edge function)
+    active_eligible = {r["sku_upper"] for r in sellable if r["eligible_912"]}
     for r in sellable:
         set_product_tag(sc, r["product_gid"], MSI912_TAG, add=r["eligible_912"])
-    print(f"  🏷  tag {MSI912_TAG}: +{sum(1 for r in sellable if r['eligible_912'])} / "
-          f"-{sum(1 for r in sellable if not r['eligible_912'])}")
-    for sku_u, _info in reverts:
-        v = sku_variant(sc, sku_u)
-        if v:
-            set_product_tag(sc, v["product_gid"], MSI912_TAG, add=False)
+    for sku_u in prev:
+        if sku_u not in active_eligible and sku_u in variants:
+            set_product_tag(sc, variants[sku_u]["pid"], MSI912_TAG, add=False)
+    print(f"  🏷  msi-912 activos: {len(active_eligible)}")
 
-    # Limpiar campos internos antes de serializar el knowledge
     def clean(r):
         return {k: v for k, v in r.items() if k not in ("product_gid", "variant_gid")}
 
@@ -287,10 +367,11 @@ def main():
         "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
         "promos": [clean(r) for r in sellable],
         "excluidos_sin_pdp": [{"sku": r["sku"], "producto": r["producto"],
-                                "estado_landing": r["estado_landing"]} for r in missing],
+                                "estado_landing": r["estado_landing"]} for r in promo_missing],
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     STATE_PATH.write_text(json.dumps(new_state, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\n✅ {PROMOS_JSON.name} ({len(sellable)} vendibles, {len(missing)} excluidos) + {STATE_PATH.name} escritos.")
+    print(f"\n✅ {len(applied)} precios + msi-912 aplicados. {PROMOS_JSON.name} "
+          f"({len(sellable)} vendibles) + {STATE_PATH.name} escritos.")
 
 
 if __name__ == "__main__":
