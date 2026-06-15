@@ -94,22 +94,6 @@
       "shopify_price": "7784.77"
     },
     {
-      "sku": "MINI60-12/1127",
-      "sku_upper": "MINI60-12/1127",
-      "producto": "Presurizador individual automático 1/6hp",
-      "regular_price": 1905.64,
-      "promo_price": 1238.67,
-      "pct_desc": "35%",
-      "msi_ladder": [],
-      "msi_max": 0,
-      "eligible_912": false,
-      "vigencia": "2026-06-30",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "1238.67"
-    },
-    {
       "sku": "PK-EASY-100CT",
       "sku_upper": "PK-EASY-100CT",
       "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
@@ -146,42 +130,6 @@
       "shopify_price": "2887.40"
     },
     {
-      "sku": "PK-EASY-400US",
-      "sku_upper": "PK-EASY-400US",
-      "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
-      "regular_price": 6392.33,
-      "promo_price": 3835.4,
-      "pct_desc": "40%",
-      "msi_ladder": [
-        3
-      ],
-      "msi_max": 3,
-      "eligible_912": false,
-      "vigencia": "2026-06-30",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "3835.40"
-    },
-    {
-      "sku": "PK-EASY-600N-US",
-      "sku_upper": "PK-EASY-600N-US",
-      "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
-      "regular_price": 8346.21,
-      "promo_price": 5007.73,
-      "pct_desc": "40%",
-      "msi_ladder": [
-        3
-      ],
-      "msi_max": 3,
-      "eligible_912": false,
-      "vigencia": "2026-06-30",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "5007.73"
-    },
-    {
       "sku": "PK-EASY-600US",
       "sku_upper": "PK-EASY-600US",
       "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
@@ -200,6 +148,58 @@
       "shopify_price": "4233.60"
     },
     {
+      "sku": "MINI60-12/1127",
+      "sku_upper": "MINI60-12/1127",
+      "producto": "Presurizador individual automático 1/6hp",
+      "regular_price": 1905.64,
+      "promo_price": 1238.67,
+      "pct_desc": "35%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "Live",
+      "in_shopify": true,
+      "shopify_price": "1238.67"
+    },
+    {
+      "sku": "PK-EASY-400US",
+      "sku_upper": "PK-EASY-400US",
+      "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
+      "regular_price": 6392.33,
+      "promo_price": 3835.4,
+      "pct_desc": "40%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "Live",
+      "in_shopify": true,
+      "shopify_price": "3835.40"
+    },
+    {
+      "sku": "PK-EASY-600N-US",
+      "sku_upper": "PK-EASY-600N-US",
+      "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
+      "regular_price": 8346.21,
+      "promo_price": 5007.73,
+      "pct_desc": "40%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "Live",
+      "in_shopify": true,
+      "shopify_price": "5007.73"
+    },
+    {
       "sku": "PK-EASY-800US",
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
@@ -213,7 +213,7 @@
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
-      "estado_landing": "",
+      "estado_landing": "Live",
       "in_shopify": true,
       "shopify_price": "4653.13"
     }

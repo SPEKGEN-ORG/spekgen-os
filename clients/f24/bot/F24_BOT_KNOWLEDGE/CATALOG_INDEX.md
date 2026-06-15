@@ -873,6 +873,7 @@ Reglas de meses sin intereses (MSI) por promo:
 - **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $4,234 (antes $7,056) · PURIKOR · PK-EASY-600US · ⚡PROMO
   ¿Cuánto gastas al mes en garrafones? ¿Cuánto espacio te quita el tinaco o el filtro de debajo de la tarja? El PURIKOR PK-EASY-600US resuelve los dos problemas al mismo tiempo: agua purificada directamente del grifo, en…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-sin-tanque-600-gpd-purikor-pk-easy-600us
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ac57830b-0e5d-4063-a881-ca162db66e71.png
 - **Sistema de ósmosis inversa Purikor 5 etapas 100gpd** · `PKRO100-5P` · $3,437 (antes $4,911) · Purikor · PKRO100-5P
   ¿Gastas cientos de pesos al mes en garrafones y no confías en el agua de tu llave? El agua de red puede contener cloro, metales pesados, bacterias y sólidos disueltos que ni hervir elimina. Hay una solución permanente…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-purikor-5-etapas-100gpd
