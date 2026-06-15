@@ -135,7 +135,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz se detiene todo: el refrigerador, la bomba de agua, las herramientas en la obra. El generador Power Hunt GPH8000W te devuelve el control de tu energía con una salida potente y un arranque que no te…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-8000-w-motor-16-hp-power-hunt-gph8000w
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e8222ad0-3248-4d3c-8577-f0275e7f295e.png
-- **Generador a Gasolina Parazzini GP5500** · `GP5500` · $10,859 · Parazzini · GP5500
+- **Generador a Gasolina Parazzini GP5500** · `GP5500` · $21,718 · Parazzini · GP5500
   Un apagón a media jornada no avisa: se va la luz de CFE y se detiene el refrigerador, la bomba de agua o la herramienta de la obra. El Generador Parazzini GP5500 es la fuente de energía de respaldo que mantiene todo…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-parazzini-gp5500-5500w-9hp-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d44f51e5-e5ad-4ef5-a0ca-91a4a3cd78a1.png
@@ -382,7 +382,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cansado de la suciedad incrustada en tu maquinaria o patio y del mantenimiento que requieren los equipos a gasolina? La Hidrolavadora Parazzini HPP110V te ofrece una solución de grado profesional con la conveniencia de…
   PDP: https://ferre24.com.mx/products/hidrolavadora-pro-110-120-v-monofasica-parazzini-hpp110v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_612e3146-af4b-4f4c-8f05-bbcc33fe4a9c.png
-- **Hidrolavadora Eléctrica Parazzini HPPE4M** · `HPPE4M` · $19,655 (antes $37,798) · Parazzini · HPPE4M
+- **Hidrolavadora Eléctrica Parazzini HPPE4M** · `HPPE4M` · $20,023 (antes $37,798) · Parazzini · HPPE4M
   La hidrolavadora eléctrica Parazzini Pro HPPE4M con motor de 2.2 kW es tu mejor aliada para limpiezas profundas en el hogar y el taller. Su potente motor eléctrico ofrece un hidrolavado eficiente sin las emisiones y el…
   PDP: https://ferre24.com.mx/products/hidrolavadora-electrica-parazzini-hppe4m-1740-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a5732ddd-1738-4945-9159-5b2a38dbf13a.png
@@ -727,11 +727,11 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Navajas Multiusos Victorinox (30)
 
-- **Victorinox Climber 91mm Rojo Transparente** · `1.3703.T` · $953 (antes $1,059) · Victorinox · 1.3703.T
+- **Victorinox Climber 91mm Rojo Transparente** · `1.3703.T` · $985 (antes $1,059) · Victorinox · 1.3703.T
   El Climber transparente rojo combina ultraligero rendimiento con estética moderna. Con solo 80 gramos, 14 herramientas perfectamente integradas y escalas transparentes que revelan mecanismos suizos. Para escaladores,…
   PDP: https://ferre24.com.mx/products/victorinox-climber-91mm-18-funciones-rojo-transparente
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_de5fca0a-2f4d-4c45-aee6-bfb4c4218756.png
-- **Victorinox Climber 91mm Rojo** · `1.3703` · $953 (antes $1,059) · Victorinox · 1.3703
+- **Victorinox Climber 91mm Rojo** · `1.3703` · $985 (antes $1,059) · Victorinox · 1.3703
   El Climber transparente rojo combina ultraligero rendimiento con estética moderna. Con solo 80 gramos, 14 herramientas perfectamente integradas y escalas transparentes que revelan mecanismos suizos. Para escaladores,…
   PDP: https://ferre24.com.mx/products/victorinox-climber-91mm-18-funciones-rojo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5f235503-ac8e-492b-80e2-bfa53bbf2c1a.png
@@ -783,23 +783,23 @@ Reglas de meses sin intereses (MSI) por promo:
   La Navaja Victorinox Ranger 91 mm es la verdadera navaja suiza clásica que generaciones han confiado. Con 21 herramientas versátiles de acero inoxidable, representa excelencia y confiabilidad en forma de herramienta…
   PDP: https://ferre24.com.mx/products/victorinox-ranger-91mm-21-funciones
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_89a36dd4-d536-4f11-bc8f-4964c46aef3d.png
-- **Victorinox Spartan 91mm Azul Transparente** · `1.3603.T2` · $644 (antes $715) · Victorinox · 1.3603.T2
+- **Victorinox Spartan 91mm Azul Transparente** · `1.3603.T2` · $665 (antes $715) · Victorinox · 1.3603.T2
   La Spartan en azul transparente combina el icónico diseño de Victorinox con un toque contemporáneo. Las escalas azul transparente revelan la ingeniería suiza por dentro, mientras que 15 herramientas garantizan estar…
   PDP: https://ferre24.com.mx/products/victorinox-spartan-91mm-16-funciones-azul-transparente
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_53d94bfc-e743-484a-a552-30cb4324b47a.png
-- **Victorinox Spartan 91mm Rojo Transparente** · `1.3603.T` · $644 (antes $715) · Victorinox · 1.3603.T
+- **Victorinox Spartan 91mm Rojo Transparente** · `1.3603.T` · $665 (antes $715) · Victorinox · 1.3603.T
   La Spartan Transparente lleva el clásico de Victorinox al siguiente nivel. Con escalas de plástico transparente que revelan los mecanismos internos, esta navaja es tan hermosa como funcional. 15 herramientas…
   PDP: https://ferre24.com.mx/products/victorinox-spartan-91mm-16-funciones-rojo-transparente
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0d115389-d038-4a9a-a9cb-958c54c2f398.png
-- **Victorinox Spartan 91mm Rojo** · `1.3603` · $644 (antes $715) · Victorinox · 1.3603
+- **Victorinox Spartan 91mm Rojo** · `1.3603` · $665 (antes $715) · Victorinox · 1.3603
   La Spartan Transparente lleva el clásico de Victorinox al siguiente nivel. Con escalas de plástico transparente que revelan los mecanismos internos, esta navaja es tan hermosa como funcional. 15 herramientas…
   PDP: https://ferre24.com.mx/products/victorinox-spartan-91mm-16-funciones-rojo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1ae00d90-6bd6-486a-acac-7d632a8fa8b0.png
-- **Victorinox Spartan 91mm SilverTech** · `1.3603.T7` · $800 (antes $889) · Victorinox · 1.3603.T7
+- **Victorinox Spartan 91mm SilverTech** · `1.3603.T7` · $827 (antes $889) · Victorinox · 1.3603.T7
   La edición plateada transparente de la Spartan es la culminación de la elegancia y la funcionalidad. Escalas plateadas translúcidas que revelan mecanismos de ingeniería suiza pura. 15 herramientas integradas. Diseño que…
   PDP: https://ferre24.com.mx/products/victorinox-spartan-91mm-16-funciones-silvertech
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0195d07a-27eb-4ac2-bd1d-ef2505556d6f.png
-- **Victorinox Spartan Wood 91mm Nogal** · `1.3601.63` · $1,016 (antes $1,129) · Victorinox · 1.3601.63
+- **Victorinox Spartan Wood 91mm Nogal** · `1.3601.63` · $1,050 (antes $1,129) · Victorinox · 1.3601.63
   La Spartan Wood de Victorinox es más que una navaja. Es un objeto de belleza, de herencia, de tradición suiza pura. Escalas de madera natural, 15 herramientas integradas, diseño que ha funcionado perfectamente durante…
   PDP: https://ferre24.com.mx/products/victorinox-spartan-wood-91mm-16-funciones-nogal
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1ed71595-836f-4670-a00f-761978e4464f.png

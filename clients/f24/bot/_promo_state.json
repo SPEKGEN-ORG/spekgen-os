@@ -1,34 +1,42 @@
 {
   "ENERWELL-G1000": {
-    "regular": 4402.26,
-    "promo": 2861.47
+    "base": 4402.26,
+    "promo": 2861.47,
+    "orig_compare_at": null
   },
   "ENERWELL-G2500": {
-    "regular": 6054.62,
-    "promo": 3935.5
+    "base": 6054.62,
+    "promo": 3935.5,
+    "orig_compare_at": null
   },
   "KAS-10P": {
-    "regular": 4004.25,
-    "promo": 2402.55
+    "base": 4004.25,
+    "promo": 2402.55,
+    "orig_compare_at": null
   },
   "KAS-12P-TF": {
-    "regular": 6211.42,
-    "promo": 3726.85
+    "base": 6211.42,
+    "promo": 3726.85,
+    "orig_compare_at": null
   },
   "KASPRO-16P": {
-    "regular": 11976.57,
-    "promo": 7784.77
+    "base": 11976.57,
+    "promo": 7784.77,
+    "orig_compare_at": null
   },
   "PK-EASY-100CT": {
-    "regular": 7598.0,
-    "promo": 4938.7
+    "base": 7598.0,
+    "promo": 4938.7,
+    "orig_compare_at": null
   },
   "PK-EASY-200US": {
-    "regular": 4812.34,
-    "promo": 2887.4
+    "base": 4812.34,
+    "promo": 2887.4,
+    "orig_compare_at": null
   },
   "PK-EASY-600US": {
-    "regular": 7056.0,
-    "promo": 4233.6
+    "base": 7056.0,
+    "promo": 4233.6,
+    "orig_compare_at": null
   }
 }
