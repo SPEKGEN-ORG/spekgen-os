@@ -279,9 +279,11 @@ def set_vars_pre_claude_module(module_id, x, y, ctx_module_id=26):
             "Numero de pedido: {{ifempty(" + ctx + ".numero_pedido; \"(sin numero)\")}}\n"
             "Link de seguimiento (tracking_url): {{ifempty(" + ctx + ".tracking_url; \"(sin link de seguimiento)\")}}\n"
             "\n"
-            "[CONTEXTO: historial de esta conversacion. No repitas preguntas ya respondidas. "
-            "Cada linea es un turno: U=usuario, B=bot.]\n"
-            "{{ifempty(2.history; \"(primera interaccion, sin historial previo)\")}}\n\n"
+            "[CONVERSACION RECIENTE REAL DE WHATSAPP — los ultimos mensajes, MAS RECIENTE PRIMERO. "
+            "Incluye al Cliente, al Asesor humano (si un humano del equipo intervino) y al Bot. "
+            "Continua con PLENA conciencia de lo ya hablado; si un Asesor ya atendio o acordo algo, "
+            "respetalo y NO lo repreguntes ni lo contradigas. No repitas preguntas ya respondidas.]\n"
+            "{{ifempty(join(35.array; \"\n\"); ifempty(2.history; \"(primera interaccion, sin historial previo)\"))}}\n\n"
             "[MENSAJE NUEVO DEL CLIENTE A RESPONDER]\n"
             "{{28.user_msg}}"
         )}], "scope": "roundtrip"},
@@ -365,6 +367,26 @@ def aggregator_human_messages_module(module_id, x, y, iterator_module_id):
         "mapper": {"value": "{{" + it + ".id}}"},
         "metadata": {"designer": {"x": x, "y": y},
                      "restore": {"expect": {"value": {"label": "Message ID"}}},
+                     "expect": [{"name": "value", "type": "text", "label": "Value"}]},
+    }
+
+
+def aggregator_transcript_module(module_id, x, y, iterator_module_id):
+    """Arma el TRANSCRIPT REAL de la conversación de GHL (últimos ~20 mensajes) etiquetado por rol,
+    para dárselo a Claude como contexto. Resuelve el hueco de contexto cuando un humano (Asesor) toma
+    el chat durante una pausa por tag 'bot-pausado': al quitarse el tag, el bot lee TODO lo que se
+    habló (Cliente + Asesor + Bot) aunque su history interno del datastore no lo tenga.
+    Rol: inbound = Cliente; outbound con userId poblado = Asesor (humano staff); outbound sin userId = Bot.
+    (Usa el mismo discriminador userId que separa staff del bot.) Loop independiente del de handoff."""
+    it = str(iterator_module_id)
+    role = ("if(" + it + ".direction = \"inbound\"; \"Cliente\"; "
+            "if(length(ifempty(" + it + ".userId; \"\")) > 0; \"Asesor\"; \"Bot\"))")
+    return {
+        "id": module_id, "module": "builtin:BasicAggregator", "version": 1,
+        "parameters": {"feeder": iterator_module_id},
+        "mapper": {"value": "{{" + role + " + \": \" + ifempty(" + it + ".body; \"\")}}"},
+        "metadata": {"designer": {"x": x, "y": y},
+                     "restore": {"expect": {"value": {"label": "Linea"}}},
                      "expect": [{"name": "value", "type": "text", "label": "Value"}]},
     }
 
@@ -928,8 +950,12 @@ search_conv_module = ghl_search_conversation_module(20, 900, 0)
 list_msgs_module = ghl_list_messages_module(21, 1050, 0, search_module_id=20)
 iter_msgs_module = iterator_messages_module(22, 1200, 0, list_module_id=21)
 agg_human_module = aggregator_human_messages_module(23, 1350, 0, iterator_module_id=22)
-eval_handoff = evaluate_handoff_module(24, 1510, 0, agg_module_id=23)
-resolved_msg = resolved_msg_module(28, 1590, 0, search_module_id=20)
+# 2do loop (independiente del de handoff) sobre los mismos 20 mensajes de GHL: arma el transcript
+# real etiquetado por rol → contexto para Claude (resuelve el hueco tras una pausa por handoff).
+iter_transcript = iterator_messages_module(34, 1430, 250, list_module_id=21)
+agg_transcript = aggregator_transcript_module(35, 1510, 250, iterator_module_id=34)
+eval_handoff = evaluate_handoff_module(24, 1650, 0, agg_module_id=23)
+resolved_msg = resolved_msg_module(28, 1740, 0, search_module_id=20)
 
 should_respond_cond = {"a": "{{24.should_respond}}", "o": "text:equal", "b": "true"}
 # Debounce gate: solo procesa la corrida cuyo token sigue siendo el más reciente en el datastore
@@ -1011,6 +1037,7 @@ blueprint = {
              buf_my_ts, buf_write, buf_sleep, buf_reget,
              ghl_get_module, parse_contact_module,
              search_conv_module, list_msgs_module, iter_msgs_module, agg_human_module,
+             iter_transcript, agg_transcript,
              eval_handoff, resolved_msg, router_module],
     "metadata": {
         "instant": True, "version": 1,
