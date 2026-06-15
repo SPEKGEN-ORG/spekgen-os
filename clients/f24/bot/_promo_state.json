@@ -38,5 +38,10 @@
     "base": 7056.0,
     "promo": 4233.6,
     "orig_compare_at": null
+  },
+  "CENTELLA130": {
+    "base": 1166.0,
+    "desc": 0.2,
+    "orig_compare_at": 2119.96
   }
 }

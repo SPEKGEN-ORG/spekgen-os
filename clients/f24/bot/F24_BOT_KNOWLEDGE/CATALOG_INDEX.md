@@ -186,7 +186,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Un apagón no avisa — y en un negocio, cada minuto sin luz es dinero perdido. · Si tu taller, local comercial o rancho depende de corriente trifásica para operar, ya sabes lo que cuesta un corte inesperado: producción…
   PDP: https://ferre24.com.mx/products/parazzini-pro-gpds14t-generador-silencioso-14-kw-trifasico-diesel
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/marvelsa_hero_01.png
-- **Soldadora inverter compacta Power Hunt CENTELLA130** · `CENTELLA130` · $1,166 (antes $2,120) · Power Hunt · CENTELLA130
+- **Soldadora inverter compacta Power Hunt CENTELLA130** · `CENTELLA130` · $933 (antes $1,166) · Power Hunt · CENTELLA130
   Conecta donde quieras. Suelda como profesional. · La CENTELLA130 resuelve el problema que frena a la mayoría de quienes quieren soldar: no tener 220V en casa . Con entrada dual 127V/220V automática, esta soldadora…
   PDP: https://ferre24.com.mx/products/soldadora-inverter-compacta-power-hunt-centella130-conecta-en-127v-toma-de-pared-casera-o-220v-taller-industrial-hasta-120a-de-potencia-ciclo-de-trabajo-85-tecnologia-inverter-peso-ligero-y-menor-consumo-respaldada-por-marvelsa-y-500-centros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_64ef2bd4-0aa5-4573-bf51-ff77b3a894c8.png
