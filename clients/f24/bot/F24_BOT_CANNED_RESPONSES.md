@@ -63,10 +63,15 @@ Sí, puedes pagar en OXXO 🧾. En el link de pago que te mando al cerrar tu ped
 **Disparadores:** envío, cuánto tarda, cuándo llega, tiempo de entrega, costo de envío, paquetería, mandan a [ciudad]
 
 **Respuesta (texto):**
-🚚 Enviamos a todo México. En GDL y la zona de Michoacán (Tinguindín, Zamora, Los Reyes) la entrega es rápida, normalmente 24-48 horas; al resto del país llega por paquetería. Dime tu ciudad y te confirmo el tiempo estimado. (Costo/umbral de envío gratis: pregunta por la promo vigente.)
+🚚 Enviamos a todo México. En GDL y la zona de Michoacán (Tinguindín, Zamora, Los Reyes) la entrega es rápida, normalmente 24-48 horas; al resto del país llega por paquetería. Dime tu ciudad y te confirmo el tiempo estimado.
 
-**JSON esperado:**
+**REGLA DE COSTO DE ENVÍO (CRÍTICA — NO INVENTAR):** NUNCA inventes ni "estimes" un monto exacto de envío. Como referencia INTERNA el flete suele rondar HASTA ~10% del valor del equipo (jamás lo presentes como precio firme al cliente). Para destinos FUERA de la zona de cobertura (GDL + Michoacán: Tinguindín, Zamora, Los Reyes, Periván), o si el cliente pide/insiste en el costo exacto, ESCALA de inmediato con un asesor (action='escalate') para que confirme el flete y CIERRE la venta. Dentro de la zona de cobertura sí confirmas entrega 24-48h.
+
+**JSON esperado (tiempo de entrega / zona):**
 {"action":"respond","messages":["🚚 Enviamos a todo Mexico. En GDL y la zona de Michoacan (Tinguindin, Zamora, Los Reyes) la entrega es rapida, normalmente 24-48 horas; al resto del pais llega por paqueteria. Dime tu ciudad y te confirmo el tiempo estimado."],"products_mentioned":[],"intent":"asking","order":null,"attachments":[]}
+
+**JSON esperado (cliente pide el COSTO de envío fuera de cobertura o insiste):**
+{"action":"escalate","messages":["Para darte el costo exacto del envio a tu ciudad y cerrarte el pedido sin vueltas, te paso con un asesor que te lo confirma al instante 🚚. Te responde en breve por aqui."],"products_mentioned":[],"intent":"asking","order":null,"attachments":[]}
 
 ---
 

@@ -38,6 +38,16 @@ WHITELIST_MODE = False  # ABIERTO A TODOS (2026-06-04). Freno manual = tag 'bot-
 WHITELIST_TAG = "bot test"
 PAUSE_TAG = "bot-pausado"
 
+# ---------- Durable fix: inyección determinista de link por SKU (anti-alucinación de URLs) ----------
+# Cuando está ON: el LLM NO escribe URLs de producto; el sistema adjunta el link OFICIAL resuelto
+# desde catalog_links.json por cada SKU/ID en products_mentioned (hasta 3). El link se resuelve con
+# un switch() Make (match literal, dot-safe para SKUs como GPD8.5M). Cero módulos/datastores nuevos:
+# la resolución vive en el mapper del módulo de envío existente. Default OFF → build live sin cambio.
+# Activar para el candidato v2.1:  F24_LINK_INJECTION=1 /usr/bin/python3 build_f24_bot_blueprint.py
+SYSTEM_LINK_INJECTION = os.environ.get("F24_LINK_INJECTION") == "1"
+LINK_INJECTION_MAX_PRODUCTS = 3
+CATALOG_LINKS_PATH = os.path.join(KB_DIR, "catalog_links.json") if "KB_DIR" in dir() else None
+
 # ---------- F24-specific IDs ----------
 F24_LOCATION_ID = "HNuSoIl2aCXP2DXEdMVZ"  # LISTO — location GHL de Ferre24
 
@@ -57,7 +67,16 @@ F24_TRANSFER_CLABE = "706180276752083666"  # Banco Arcus
 F24_TRANSFER_HOLDER = "Sergio Jose Duarte Simon"
 
 # ---------- Auto-handoff (polling pre-respuesta) ----------
-HANDOFF_HOURS = 4
+# Controla DOS cosas en la ruta de polling (Route C): (1) la ventana de detección del
+# aggregator (módulo 23) — cuántas horas hacia atrás se busca un mensaje OUTBOUND de un
+# humano staff, y (2) la duración del mute que se escribe al detectarlo (módulo 24).
+# 24h = cuando un humano (Sergio/Gibran) contesta, el bot se apaga 24h. Además Route C
+# escribe el tag 'bot-pausado' (VISIBLE en el inbox); el cron de follow-ups (5278490) lo
+# retira cuando bot_muted_until expira. OJO: una vez puesto el tag, el pre-router (módulo 4)
+# bloquea TODO → el tag es el gate de reactivación, no el datastore. Por eso el cron debe
+# retirarlo. NO afecta los mutes por acción de Claude (escalate 4h / human_handoff 24h
+# viven hardcodeados en datastore_add_claude).
+HANDOFF_HOURS = 24
 
 # ---------- GHL custom field IDs (location F24, creados por API 2026-06-02) ----------
 F24_CF_NUMERO_PEDIDO = "ePF4Tr2ejgRp9z6WpJbq"
@@ -136,6 +155,22 @@ def build_full_prompt() -> str:
         parts.append("== POLÍTICA DE PRECIOS / PROMOS / ENVÍO ==")
         parts.append("=" * 40)
         parts.append(read_md_raw(PRICING_MD_PATH))
+
+    # Durable fix: cuando el sistema adjunta los links oficiales por SKU, el LLM NO debe escribir
+    # URLs de producto (evita duplicados y elimina la alucinación de slugs de raíz).
+    if SYSTEM_LINK_INJECTION:
+        parts.append("\n\n" + "=" * 40)
+        parts.append("== LINKS DE PRODUCTO: LOS ADJUNTA EL SISTEMA (NO LOS ESCRIBAS) ==")
+        parts.append("=" * 40)
+        parts.append(
+            "IMPORTANTE (override de la sección LINKS Y PRECIOS): NO escribas URLs de producto "
+            "(ferre24.com.mx/products/...) dentro de messages. Solo menciona el producto por nombre "
+            "y pon su SKU/ID EXACTO (de la columna 'SKU / ID' del catálogo) en products_mentioned. "
+            "El sistema adjunta automáticamente el link OFICIAL de cada SKU al final del mensaje. "
+            "Tú asegúrate de poner el/los SKU correctos en products_mentioned (hasta 3). Los PRECIOS "
+            "sí los sigues citando tú, copiados VERBATIM del catálogo (formato $X (antes $Y)). Las "
+            "URLs de imagen siguen yendo en attachments como siempre."
+        )
 
     return "\n".join(parts)
 
@@ -311,20 +346,22 @@ def iterator_messages_module(module_id, x, y, list_module_id):
 def aggregator_human_messages_module(module_id, x, y, iterator_module_id):
     it = str(iterator_module_id)
     recent = "{{addHours(now; -" + str(HANDOFF_HOURS) + ")}}"
-    base = [
+    # DISCRIMINADOR F24 (verificado con data real 2026-06-14): el bot manda vía API/PIT con
+    # `userId` VACÍO; un humano staff desde el inbox GHL manda con su `userId` POBLADO (~20 chars).
+    # Ambos salen como source="app" y con el MISMO `from` (+52 1 33 1790 3630), así que lo único
+    # que los separa es el userId. La lógica vieja de HC (userId>30 chars  O  userId<30 + from
+    # sin espacios) NUNCA hacía match aquí: el userId es ~20 chars y el from SIEMPRE trae espacios
+    # → el bot no detectaba la intervención humana. Regla correcta: outbound + userId no vacío.
+    human = [
         {"a": "{{" + it + ".direction}}", "o": "text:equal", "b": "outbound"},
         {"a": "{{" + it + ".source}}", "o": "text:notequal", "b": "workflow"},
         {"a": "{{parseDate(" + it + ".dateAdded)}}", "o": "date:later", "b": recent},
-    ]
-    case_a = base + [{"a": "{{length(ifempty(" + it + ".userId; \"\"))}}", "o": "numeric:greater", "b": "30"}]
-    case_b = base + [
-        {"a": "{{length(ifempty(" + it + ".userId; \"\"))}}", "o": "numeric:less", "b": "30"},
-        {"a": "{{ifempty(" + it + ".from; \"\")}}", "o": "text:notcontain", "b": " "},
+        {"a": "{{length(ifempty(" + it + ".userId; \"\"))}}", "o": "numeric:greater", "b": "0"},
     ]
     return {
         "id": module_id, "module": "builtin:BasicAggregator", "version": 1,
         "parameters": {"feeder": iterator_module_id},
-        "filter": {"name": "Outbound humano en ventana de handoff", "conditions": [case_a, case_b]},
+        "filter": {"name": "Outbound humano (userId poblado) en ventana", "conditions": [human]},
         "mapper": {"value": "{{" + it + ".id}}"},
         "metadata": {"designer": {"x": x, "y": y},
                      "restore": {"expect": {"value": {"label": "Message ID"}}},
@@ -423,6 +460,10 @@ def anthropic_http_module(module_id, x, y, set_vars_module_id):
             "dataStructureBodyContent": {
                 "model": "claude-haiku-4-5-20251001",
                 "max_tokens": 2048,
+                # temperature 0.3: bot de ventas con reglas estrictas + salida JSON. A 1.0 (default)
+                # el comportamiento variaba (a veces inventaba envío, a veces escalaba). Requiere que
+                # la data structure ANTHROPIC_BODY_DATASTRUCTURE_ID tenga el campo 'temperature' (number).
+                "temperature": 0.3,
                 "system": [{"type": "text", "text": SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
                 "messages": [
                     {"role": "user", "content": "{{" + str(set_vars_module_id) + ".user_message_content}}"},
@@ -449,8 +490,34 @@ def parse_json_module(module_id, x, y, source_module_id):
     }
 
 
+def _link_switch_cases() -> str:
+    """Construye los pares 'SKU'; 'NL+url' del switch() Make desde catalog_links.json.
+    Match literal (dot-safe para SKUs como GPD8.5M). Valor = doble salto de línea + URL oficial,
+    así el default '' no agrega línea en blanco cuando el SKU no resuelve."""
+    with open(CATALOG_LINKS_PATH, encoding="utf-8") as f:
+        raw = json.load(f)
+    pairs = []
+    for key, v in raw.items():
+        url = (v.get("url") or "").strip()
+        if not url or '"' in key or '"' in url:
+            continue
+        pairs.append('"%s"; "\n\n%s"' % (key, url))
+    return "; ".join(pairs)
+
+
+def _link_inject_suffix(pm: str) -> str:
+    """Sufijo Make que adjunta el link oficial de hasta N SKUs de products_mentioned via switch()."""
+    cases = _link_switch_cases()
+    segs = ""
+    for i in range(1, LINK_INJECTION_MAX_PRODUCTS + 1):
+        segs += " + switch(get(" + pm + ".products_mentioned; %d); %s; \"\")" % (i, cases)
+    return segs
+
+
 def ghl_send_module_from_claude(module_id, x, y, parse_module_id):
     pm = str(parse_module_id)
+    base = "join(" + pm + ".messages; \"\n\n\")"
+    message_expr = "{{" + base + (_link_inject_suffix(pm) if SYSTEM_LINK_INJECTION else "") + "}}"
     return {
         "id": module_id, "module": "http:MakeRequest", "version": 4,
         "parameters": {"authenticationType": "noAuth"},
@@ -466,7 +533,7 @@ def ghl_send_module_from_claude(module_id, x, y, parse_module_id):
             "bodyDataStructure": GHL_SEND_DATASTRUCTURE_ID,
             "dataStructureBodyContent": {
                 "type": "WhatsApp", "contactId": "{{1.contact_id}}",
-                "message": "{{join(" + pm + ".messages; \"\n\n\")}}",
+                "message": message_expr,
                 "attachments": "{{" + pm + ".attachments}}",
             },
             "shareCookies": False, "parseResponse": True, "allowRedirects": True,
@@ -578,24 +645,52 @@ def ghl_send_payment_link_module(module_id, x, y, order_http_module_id, parse_mo
     }
 
 
-def datastore_add_claude(module_id, x, y, parse_module_id):
+def datastore_add_claude(module_id, x, y, parse_module_id, is_order=False):
+    """Guarda el registro tras una respuesta de Claude.
+
+    Estado de conversación (lo leen el bot vía should_respond y el cron de follow-ups vía muted_by):
+      - is_order=True (módulo 44, rama create_order): muted_by='order_pending'. El bot SIGUE
+        contestando (no se mutea), pero el follow-up cron NO manda nudge de venta (manda recordatorio
+        de pago o nada). escalated=False.
+      - is_order=False (módulo 10, rama normal):
+          action='escalate'     → muteo 4h, muted_by='escalation', escalated=True, escalated_at=now.
+          action='human_handoff'→ muteo 24h, muted_by='user_request', escalated=True, escalated_at=now.
+          action='respond'      → estado BOT limpio (muted_by='', sin mute) → el cron sí puede dar nudge.
+    El cron de follow-ups solo nudgea cuando muted_by='' (estado BOT activo). escalated se auto-limpia
+    en la siguiente respuesta normal; escalated_at deja rastro para recuperación SLA del cron.
+    """
     pm = str(parse_module_id)
+    iso24 = "formatDate(addHours(now; 24); \"YYYY-MM-DDTHH:mm:ss[Z]\")"
+    iso4 = "formatDate(addHours(now; 4); \"YYYY-MM-DDTHH:mm:ss[Z]\")"
+    if is_order:
+        state = {
+            "escalated": False,
+            "escalated_at": "",
+            "bot_muted_until": "",
+            "muted_by": "order_pending",
+        }
+    else:
+        state = {
+            "escalated": "{{if(" + pm + ".action = \"human_handoff\" || " + pm + ".action = \"escalate\"; true; false)}}",
+            "escalated_at": "{{if(" + pm + ".action = \"human_handoff\" || " + pm + ".action = \"escalate\"; now; \"\")}}",
+            "bot_muted_until": ("{{if(" + pm + ".action = \"human_handoff\"; " + iso24 + "; "
+                                "if(" + pm + ".action = \"escalate\"; " + iso4 + "; \"\"))}}"),
+            "muted_by": ("{{if(" + pm + ".action = \"human_handoff\"; \"user_request\"; "
+                         "if(" + pm + ".action = \"escalate\"; \"escalation\"; \"\"))}}"),
+        }
+    data = {
+        "contactId": "{{1.contact_id}}", "contactName": "{{ifempty(1.full_name; \"Desconocido\")}}",
+        "phone": "{{ifempty(1.phone; \"\")}}", "channel": "WhatsApp",
+        "messageCount": 1, "lastMessageAt": "{{now}}",
+        "history": ("{{substring(ifempty(2.history; \"\"); max(0; length(ifempty(2.history; \"\")) - 2500))}}"
+                    "\nU: {{28.user_msg}}\nB: {{join(" + pm + ".messages; \" \")}}"),
+        "followup_stage": 0,
+    }
+    data.update(state)
     return {
         "id": module_id, "module": "datastore:AddRecord", "version": 1,
         "parameters": {"datastore": F24_DATASTORE_ID},
-        "mapper": {"key": "{{1.contact_id}}", "overwrite": True, "data": {
-            "contactId": "{{1.contact_id}}", "contactName": "{{ifempty(1.full_name; \"Desconocido\")}}",
-            "phone": "{{ifempty(1.phone; \"\")}}", "channel": "WhatsApp",
-            "messageCount": 1, "lastMessageAt": "{{now}}",
-            "history": ("{{substring(ifempty(2.history; \"\"); max(0; length(ifempty(2.history; \"\")) - 2500))}}"
-                        "\nU: {{28.user_msg}}\nB: {{join(" + pm + ".messages; \" \")}}"),
-            "escalated": False,
-            "bot_muted_until": ("{{if(" + pm + ".action = \"human_handoff\"; "
-                                "formatDate(addHours(now; 24); \"YYYY-MM-DDTHH:mm:ss[Z]\"); "
-                                "ifempty(2.bot_muted_until; \"\"))}}"),
-            "muted_by": ("{{if(" + pm + ".action = \"human_handoff\"; \"user_request\"; ifempty(2.muted_by; \"\"))}}"),
-            "followup_stage": 0,
-        }},
+        "mapper": {"key": "{{1.contact_id}}", "overwrite": True, "data": data},
         "metadata": {"designer": {"x": x, "y": y}},
     }
 
@@ -610,9 +705,11 @@ def datastore_add_greeting(module_id, x, y):
             "messageCount": 1, "lastMessageAt": "{{now}}",
             "history": ("{{substring(ifempty(2.history; \"\"); max(0; length(ifempty(2.history; \"\")) - 2500))}}"
                         "\nU: {{28.user_msg}}\nB: [Greeting canned enviado: Bienvenido a Ferre24]"),
+            # Saludo = estado BOT limpio (el saludo solo dispara cuando should_respond=true, o sea no muteado).
             "escalated": False,
-            "bot_muted_until": "{{ifempty(2.bot_muted_until; \"\")}}",
-            "muted_by": "{{ifempty(2.muted_by; \"\")}}",
+            "escalated_at": "",
+            "bot_muted_until": "",
+            "muted_by": "",
             "followup_stage": 0,
         }},
         "metadata": {"designer": {"x": x, "y": y}},
@@ -677,10 +774,9 @@ def datastore_reget_module(module_id, x, y):
 # ---------- Handoff: aviso al equipo (email + tag GHL) ----------
 # Correos del equipo F24 que reciben las escaladas. Gibran los proporciona.
 F24_TEAM_EMAILS = [
-    "gibran.alonzo0506@gmail.com",   # MODO PRUEBA — Gibran avisará cuándo cambiar a los reales
-    # REALES (activar cuando Gibran lo confirme):
-    # "edgar.gvg@hotmail.com",
-    # "f24atencionalcliente@hotmail.com",
+    "gibran.alonzo0506@gmail.com",      # Gibran (supervisión)
+    "edgar.gvg@hotmail.com",            # Edgar (equipo F24) — activado 2026-06-11
+    "f24atencionalcliente@hotmail.com", # Sergio Duarte (atención cliente) — activado 2026-06-11
 ]
 GMAIL_CONN_ID = 8183100        # conexión Gmail de Make (team 354061, reusada de HC)
 HANDOFF_TAG = "requiere-humano"
@@ -779,6 +875,35 @@ def ghl_tag_handoff_module(module_id, x, y):
     }
 
 
+def ghl_tag_pause_module(module_id, x, y):
+    """Agrega el tag 'bot-pausado' al contacto cuando un humano staff toma la conversación
+    (Route C / polling). Hace el mute VISIBLE en el inbox de GHL. Mismo patrón probado que
+    ghl_tag_handoff_module (body via data structure 395040 + onerror best-effort).
+    El cron de follow-ups (5278490) retira este tag cuando bot_muted_until expira (24h)."""
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": "https://services.leadconnectorhq.com/contacts/{{1.contact_id}}/tags",
+            "method": "post",
+            "headers": [
+                {"name": "Authorization", "value": f"Bearer {GHL_TOKEN}"},
+                {"name": "Version", "value": "2021-07-28"},
+                {"name": "Content-Type", "value": "application/json"},
+                {"name": "Accept", "value": "application/json"},
+            ],
+            "contentType": "json", "inputMethod": "dataStructure",
+            "bodyDataStructure": GHL_TAGS_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": {"tags": [PAUSE_TAG]},
+            "timeout": 30, "shareCookies": False, "parseResponse": True,
+            "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
+        # Best-effort: si el tag falla, el mute en datastore ya quedó escrito (módulo 25).
+        "onerror": [resume_handler(49, {"ok": True}, x, y + 200)],
+    }
+
+
 # ---------- Build flow ----------
 webhook_module = {
     "id": 1, "module": "gateway:CustomWebHook", "version": 1,
@@ -844,7 +969,7 @@ sub_order_send["filter"] = {"name": "action == create_order",
                             "conditions": [[{"a": "{{8.action}}", "o": "text:equal", "b": "create_order"}]]}
 sub_order_create = f24_process_order_module(42, 3100, 300, parse_module_id=8)
 sub_order_link = ghl_send_payment_link_module(43, 3300, 300, order_http_module_id=42)
-sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8)
+sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8, is_order=True)
 
 # Sub-route de HANDOFF: email al equipo + tag GHL cuando action es escalate/human_handoff.
 # Email validado en prod. Tag con body via data structure (NO raw) + onerror (best-effort).
@@ -861,10 +986,13 @@ post_parse_router = {
     ],
 }
 
-# Route C: humano detectado -> mutear 4h
+# Route C: humano staff detectado -> mutear 24h + escribir tag 'bot-pausado' (visible en inbox).
+# El tag lo retira el cron de follow-ups cuando bot_muted_until expira. route_c_tag va encadenado
+# después del mute (sin filtro propio): solo corre si route_c_mute corrió (su filtro pasó).
 route_c_mute = datastore_mute_module(25, 1800, 450, eval_module_id=24)
-route_c_mute["filter"] = {"name": "Humano respondio -> mutear bot 4h",
+route_c_mute["filter"] = {"name": "Humano respondio -> mutear bot 24h + tag",
                           "conditions": [[{"a": "{{24.is_human_active}}", "o": "text:equal", "b": "true"}, is_latest_cond]]}
+route_c_tag = ghl_tag_pause_module(47, 2050, 450)
 
 router_module = {
     "id": 4, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
@@ -873,7 +1001,7 @@ router_module = {
     "routes": [
         {"flow": [route_a_ghl, route_a_datastore]},
         {"flow": [route_b_customer_ctx, route_b_setvars, route_b_anthropic, route_b_parse, post_parse_router]},
-        {"flow": [route_c_mute]},
+        {"flow": [route_c_mute, route_c_tag]},
     ],
 }
 
