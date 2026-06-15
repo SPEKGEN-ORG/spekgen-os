@@ -1,0 +1,166 @@
+{{ 'f24-promo.js' | asset_url | script_tag }}
+
+{%- comment -%}
+  F24 Promo · Grid (PLANO) — refactor 2026-06-13.
+  Renderiza TODOS los productos de la colección `promociones-vigentes` directo, sin
+  grupos hardcodeados ni tags `promo-grupo-*`. El orden lo controla `sort_order`
+  (price-asc por defecto). La colección la reconcilia sync_f24_landing.py contra la
+  pestaña "🔥 PROMO ACTIVA" del Sheet: al expirar una promo, el producto sale de la
+  colección y su tarjeta desaparece sola. El diseño de cada tarjeta es idéntico al
+  grid agrupado anterior.
+{%- endcomment -%}
+
+{%- assign col_handle = section.settings.collection | default: 'promociones-vigentes' -%}
+{%- assign promo = collections[col_handle] -%}
+{%- assign wa_url = section.settings.wa_url -%}
+{%- assign sort = section.settings.sort_order | default: 'price-asc' -%}
+{%- if sort == 'price-asc' -%}
+  {%- assign promo_products = promo.products | sort: 'price' -%}
+{%- elsif sort == 'price-desc' -%}
+  {%- assign promo_products = promo.products | sort: 'price' | reverse -%}
+{%- elsif sort == 'title' -%}
+  {%- assign promo_products = promo.products | sort: 'title' -%}
+{%- else -%}
+  {%- assign promo_products = promo.products -%}
+{%- endif -%}
+
+<style>
+  .f24p-grid-sec{background:#08090b;color:#fff;padding-block:clamp(64px,8vw,110px);position:relative;overflow:hidden}
+  .f24p-grid-sec::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,184,0,.06),transparent 65%);pointer-events:none}
+  .f24p-grid-wrap{max-width:1240px;margin:0 auto;padding:0 clamp(14px,2vw,22px);position:relative}
+  .f24p-grid-head{text-align:center;max-width:780px;margin:0 auto clamp(28px,3.4vw,44px)}
+  .f24p-grid-head__kicker{display:inline-block;color:#ffb800;font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;background:rgba(255,184,0,.1);border-radius:999px}
+  .f24p-grid-head__h{font-weight:900;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.08;letter-spacing:-.02em;margin:14px 0 12px}
+  .f24p-grid-head__h em{font-style:normal;background:linear-gradient(135deg,#ffb800,#ff6a00);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .f24p-grid-head__sub{color:rgba(255,255,255,.65);font-size:1rem;line-height:1.55;max-width:60ch;margin:0 auto}
+  .f24p-grid-head__cd{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,184,0,.3);color:#ffb800;font-weight:700;font-size:.86rem}
+  .f24p-grid-head__cd svg{width:14px;height:14px;animation:f24p-pulse 1.6s ease-in-out infinite}
+  .f24p-grid{display:grid;gap:clamp(14px,1.6vw,22px);grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (min-width:760px){.f24p-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media (min-width:1080px){.f24p-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  .f24p-card{background:linear-gradient(180deg,#0e1014,#0a0b0e);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .25s ease,box-shadow .25s ease;position:relative}
+  .f24p-card:hover{transform:translateY(-6px);border-color:rgba(255,184,0,.4);box-shadow:0 24px 56px rgba(0,0,0,.55),0 0 0 1px rgba(255,184,0,.15)}
+  .f24p-card__media{position:relative;aspect-ratio:1/1;background:#13151a;overflow:hidden}
+  .f24p-card__media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+  .f24p-card:hover .f24p-card__media img{transform:scale(1.06)}
+  .f24p-card__msi{position:absolute;top:10px;left:10px;background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;font-weight:800;font-size:.72rem;letter-spacing:.04em;padding:6px 10px;border-radius:999px;text-transform:uppercase;box-shadow:0 6px 16px rgba(255,138,0,.35)}
+  .f24p-card__off{position:absolute;top:10px;right:10px;background:#e63946;color:#fff;font-weight:800;font-size:.78rem;padding:6px 9px;border-radius:8px}
+  .f24p-card__hot{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);color:#ff6a00;font-weight:800;font-size:.7rem;padding:5px 9px;border-radius:8px;display:inline-flex;align-items:center;gap:5px;text-transform:uppercase;letter-spacing:.04em;border:1px solid rgba(255,106,0,.4)}
+  .f24p-card__hot svg{width:11px;height:11px;animation:f24p-pulse 1.4s ease-in-out infinite}
+  .f24p-card__body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .f24p-card__title{font-weight:700;color:#fff;font-size:.98rem;line-height:1.3;min-height:2.6em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-decoration:none}
+  .f24p-card__prices{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .f24p-card__price{font-weight:900;color:#fff;font-size:1.25rem}
+  .f24p-card__was{color:rgba(255,255,255,.4);text-decoration:line-through;font-size:.86rem}
+  .f24p-card__msi-bd{display:flex;align-items:center;gap:6px;color:#ffb800;font-weight:700;font-size:.84rem;background:rgba(255,184,0,.08);padding:7px 10px;border-radius:8px;border:1px solid rgba(255,184,0,.18)}
+  .f24p-card__msi-bd svg{width:13px;height:13px;flex-shrink:0}
+  .f24p-card__msi-bd b{color:#fff;font-weight:800;font-variant-numeric:tabular-nums}
+  .f24p-card__ctas{display:flex;gap:8px;margin-top:auto}
+  .f24p-card__buy{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;font-weight:800;text-decoration:none;padding:12px;border-radius:10px;font-size:.88rem;transition:transform .2s ease,box-shadow .2s ease}
+  .f24p-card__buy:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(255,138,0,.35)}
+  .f24p-card__buy svg{width:14px;height:14px}
+  .f24p-card__wa{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:#25d366;color:#fff;text-decoration:none;flex-shrink:0;transition:background .2s ease,transform .2s ease}
+  .f24p-card__wa:hover{background:#1fb955;transform:translateY(-1px)}
+  .f24p-card__wa svg{width:18px;height:18px}
+  .f24p-grid__empty{grid-column:1/-1;text-align:center;color:rgba(255,255,255,.55);padding:48px 16px;border:1px dashed rgba(255,255,255,.12);border-radius:14px}
+  .f24p-grid__foot{text-align:center;margin-top:clamp(32px,3.4vw,48px);display:flex;flex-direction:column;align-items:center;gap:14px}
+  .f24p-grid__foot small{color:rgba(255,255,255,.45);font-size:.84rem}
+</style>
+
+<section class="f24p-grid-sec" id="promo-grid">
+  <div class="f24p-grid-wrap">
+    <div class="f24p-grid-head f24p-rev">
+      <span class="f24p-grid-head__kicker">{{ section.settings.eyebrow }}</span>
+      <h2 class="f24p-grid-head__h">{{ section.settings.heading_pre }} <em>{{ section.settings.heading_hl }}</em></h2>
+      <p class="f24p-grid-head__sub">{{ section.settings.subheading }}</p>
+      {%- if section.settings.end_iso != blank -%}
+        <div class="f24p-grid-head__cd" data-countdown-end="{{ section.settings.end_iso }}">
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
+          <span>Termina en </span><span data-cd-line>—</span>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="f24p-grid">
+      {%- for product in promo_products -%}
+        {%- assign off = 0 -%}
+        {%- if product.compare_at_price > product.price and product.compare_at_price > 0 -%}
+          {%- assign off = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -%}
+        {%- endif -%}
+        {%- assign sku = product.selected_or_first_available_variant.sku | default: product.variants.first.sku -%}
+        {%- comment -%} product.price is in cents; keep msi9 in cents so money_without_currency formats it correctly {%- endcomment -%}
+        {%- assign msi9 = product.price | divided_by: 9 -%}
+        {%- assign wa_msg = 'Hola Ferre24, me interesa ' | append: product.title | append: ' (' | append: sku | append: ') a 9 MSI sin intereses. ¿Me cotizan antes que termine la promo?' -%}
+        {%- assign wa_msg_enc = wa_msg | url_encode -%}
+        {%- assign wa_href = wa_url | append: '?text=' | append: wa_msg_enc -%}
+        {%- assign d = forloop.index0 | modulo: 4 -%}
+
+        <article class="f24p-card f24p-rev" data-d="{{ d }}">
+          <a href="{{ product.url }}" class="f24p-card__media" aria-label="Ver {{ product.title | escape }}">
+            <span class="f24p-card__msi">3·6·9 MSI</span>
+            {%- if off > 0 -%}<span class="f24p-card__off">-{{ off }}%</span>{%- endif -%}
+            {%- if product.featured_image -%}
+              <img src="{{ product.featured_image | image_url: width: 640 }}" alt="{{ product.title | escape }}" width="640" height="640" loading="lazy">
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag }}
+            {%- endif -%}
+          </a>
+          <div class="f24p-card__body">
+            <a href="{{ product.url }}" class="f24p-card__title">{{ product.title }}</a>
+            <div class="f24p-card__prices">
+              <span class="f24p-card__price">{{ product.price | money }}</span>
+              {%- if off > 0 -%}<span class="f24p-card__was">{{ product.compare_at_price | money }}</span>{%- endif -%}
+            </div>
+            <div class="f24p-card__msi-bd">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20M6 15h4"/></svg>
+              Desde <b>${{ msi9 | money_without_currency }}</b>/mes a 9 MSI
+            </div>
+            <div class="f24p-card__ctas">
+              <a href="{{ product.url }}" class="f24p-card__buy">
+                Ver y comprar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+              <a href="{{ wa_href }}" class="f24p-card__wa" target="_blank" rel="noopener" data-wa data-wa-group="promo-card" aria-label="Cotizar {{ product.title | escape }} por WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.789-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      {%- else -%}
+        <div class="f24p-grid__empty">No hay productos en la colección <code>{{ col_handle }}</code> todavía. Corre <code>sync_f24_landing.py --apply</code>.</div>
+      {%- endfor -%}
+    </div>
+
+    <div class="f24p-grid__foot f24p-rev">
+      <small>{{ section.settings.foot_note }}</small>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "F24 Promo · Grid",
+  "settings": [
+    { "type": "header", "content": "Colección rotation-safe" },
+    { "type": "text", "id": "collection", "label": "Handle de colección", "default": "promociones-vigentes" },
+    { "type": "select", "id": "sort_order", "label": "Orden", "default": "price-asc",
+      "options": [
+        { "value": "price-asc", "label": "Precio: menor a mayor" },
+        { "value": "price-desc", "label": "Precio: mayor a menor" },
+        { "value": "title", "label": "Título (A-Z)" },
+        { "value": "collection", "label": "Orden de la colección" }
+      ] },
+    { "type": "header", "content": "Encabezado" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Equipo en promoción" },
+    { "type": "text", "id": "heading_pre", "label": "Heading antes", "default": "Estos son los" },
+    { "type": "text", "id": "heading_hl", "label": "Heading destacado", "default": "equipos seleccionados" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Cada uno disponible a 3, 6 y 9 MSI durante la promoción vigente. Compra directo en línea o pide asesoría por WhatsApp si dudas cuál te conviene." },
+    { "type": "text", "id": "end_iso", "label": "Fecha fin ISO (countdown chip)", "default": "2026-06-14T23:59:59-06:00" },
+    { "type": "header", "content": "WhatsApp" },
+    { "type": "text", "id": "wa_url", "label": "URL WhatsApp", "default": "https://wa.me/523317903630" },
+    { "type": "header", "content": "Nota al pie" },
+    { "type": "textarea", "id": "foot_note", "label": "Nota", "default": "Stock real confirmado al cotizar. Envío gratis nacional. Factura disponible. MSI sujetos a tarjeta participante." }
+  ],
+  "presets": [{ "name": "F24 Promo · Grid" }]
+}
+{% endschema %}

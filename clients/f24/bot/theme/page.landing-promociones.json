@@ -1,0 +1,300 @@
+{
+  "sections": {
+    "promobar": {
+      "type": "f24-promo-bar",
+      "settings": {
+        "message": "3·6·9 MSI sin intereses · termina el 14 de junio",
+        "end_iso": "2026-06-30T23:59:59-06:00"
+      }
+    },
+    "hero": {
+      "type": "f24-promo-hero",
+      "settings": {
+        "eyebrow": "Promoción vigente · termina 14 jun 11:59 PM",
+        "title_pre": "Llévatelo a",
+        "title_hl": "9 MSI",
+        "title_post": "sin intereses",
+        "subtitle": "35 equipos profesionales seleccionados, precio directo marcado y financiamiento extendido a 3, 6 o 9 meses sin intereses. La promoción cierra el 14 de junio — después vuelve a precio normal.",
+        "end_iso": "2026-06-30T23:59:59-06:00",
+        "cta_primary": "Ver los 35 productos en promoción",
+        "cta_secondary": "Cotizar por WhatsApp",
+        "wa_url": "https://wa.me/523317903630",
+        "wa_msg": "Hola Ferre24, vi sus promociones a 3, 6 y 9 MSI. Quiero cotizar antes de que termine.",
+        "trust1": "3·6·9 MSI sin comisión",
+        "trust2": "Entrega 24 h en Jal. y Mich.",
+        "trust3": "Factura disponible",
+        "trust4": "Stock real",
+        "marquee": "3 MSI sin comisión, 6 MSI sin comisión, 9 MSI selecto, Entrega 24 h Jal./Mich., Factura, Stock real, Asesoría 1-a-1, Precio directo"
+      }
+    },
+    "urgency": {
+      "type": "f24-promo-urgency",
+      "blocks": {
+        "u1": {
+          "type": "card",
+          "settings": {
+            "icon": "clock",
+            "stat": "14 jun",
+            "title": "Vence el 14 de junio",
+            "desc": "Después de esa fecha los 35 equipos vuelven a precio normal sin MSI extendido. Cero excepciones, cero prórrogas."
+          }
+        },
+        "u2": {
+          "type": "card",
+          "settings": {
+            "icon": "wallet",
+            "stat": "9 MSI",
+            "title": "Hasta 9 meses sin intereses",
+            "desc": "El doble de plazo que el MSI estándar del catálogo. Compra el equipo pesado sin descapitalizarte ni pagar comisión."
+          }
+        },
+        "u3": {
+          "type": "card",
+          "settings": {
+            "icon": "truck",
+            "stat": "24 h",
+            "title": "Entrega en Jalisco y Michoacán",
+            "desc": "En Guadalajara y todo Michoacán tu pedido llega en 24 horas. Al resto de México enviamos por paquetería (costo según destino y peso)."
+          }
+        },
+        "u4": {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "stat": "Factura",
+            "title": "Factura para tu empresa",
+            "desc": "Comprobante fiscal disponible. Pide la factura al cotizar y aprovecha el deducible de tu negocio."
+          }
+        }
+      },
+      "block_order": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "settings": {
+        "eyebrow": "Por qué comprar ahora",
+        "heading_pre": "La ventana cierra el",
+        "heading_hl": "14 de junio",
+        "subheading": "Después de esa fecha estos productos vuelven a precio normal, sin MSI extendido. Si necesitas el equipo, esta es la quincena para conseguirlo a meses."
+      }
+    },
+    "promogrid": {
+      "type": "f24-promo-grid",
+      "settings": {
+        "collection": "promociones-vigentes",
+        "count": 8,
+        "hot_first": 2,
+        "eyebrow": "Equipo en promoción",
+        "heading_pre": "Estos son los",
+        "heading_hl": "35 equipos seleccionados",
+        "subheading": "Cada uno disponible a 3, 6 y 9 MSI hasta el 14 de junio. Compra directo en línea o pide asesoría por WhatsApp si dudas cuál te conviene.",
+        "end_iso": "2026-06-30T23:59:59-06:00",
+        "wa_url": "https://wa.me/523317903630",
+        "foot_note": "Stock real confirmado al cotizar. Envío a todo México (costo según destino). Factura disponible. MSI sujetos a tarjeta participante."
+      }
+    },
+    "calc": {
+      "type": "f24-promo-calc",
+      "settings": {
+        "collection": "promociones-vigentes",
+        "eyebrow": "Calculadora MSI",
+        "heading_pre": "Mira cuánto pagarías",
+        "heading_hl": "al mes",
+        "subheading": "Elige uno de los 35 equipos en promoción y mira el desglose mensual a 3, 6 y 9 MSI sin intereses. Listo para cotizar por WhatsApp en un clic.",
+        "note": "Cálculo orientativo. El monto exacto depende de tu banco emisor. 9 MSI aplica solo en bancos participantes — confírmalo con tu tarjeta por WhatsApp antes de comprar.",
+        "wa_url": "https://wa.me/523317903630"
+      }
+    },
+    "proveedor": {
+      "type": "f24-maq-proveedor",
+      "blocks": {
+        "f1": {
+          "type": "feat",
+          "settings": {
+            "title": "Precio directo marcado",
+            "desc": "Sin códigos ni letras chiquitas. El precio que ves es el que pagas."
+          }
+        },
+        "f2": {
+          "type": "feat",
+          "settings": {
+            "title": "Factura y MSI",
+            "desc": "Comprobante fiscal y meses sin intereses para tu flujo o tu empresa."
+          }
+        },
+        "f3": {
+          "type": "feat",
+          "settings": {
+            "title": "Entrega 24-48h zona rápida",
+            "desc": "GDL y Michoacán; envío a todo México con paquetería y flete especial."
+          }
+        },
+        "f4": {
+          "type": "feat",
+          "settings": {
+            "title": "Stock real, specs reales",
+            "desc": "Lo que ves es lo que llega. Stock confirmado al cotizar."
+          }
+        },
+        "f5": {
+          "type": "feat",
+          "settings": {
+            "title": "Asesoría 1-a-1",
+            "desc": "Te decimos qué equipo aguanta tu trabajo, no solo qué venderte."
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5"
+      ],
+      "settings": {
+        "eyebrow": "Por qué Ferre24",
+        "title": "Tu proveedor",
+        "title_accent": "de confianza",
+        "lead": "Operamos directo de bodega en Guadalajara. Sin intermediarios, sin sorpresas. Hablas con un asesor real que conoce el equipo y te respalda antes y después de la compra.",
+        "cta_wa": "Hablar con un asesor",
+        "wa_url": "https://wa.me/523317903630",
+        "wa_msg": "Hola Ferre24, quiero conocer más sobre sus promociones y servicio."
+      }
+    },
+    "prueba": {
+      "type": "f24-maq-prueba",
+      "settings": {
+        "eyebrow": "Cobertura nacional",
+        "heading": "Operamos desde Guadalajara,",
+        "heading_accent": "entregamos a todo México",
+        "subheading": "Red logística propia + paquetería. Specs reales y stock real — lo que ves es lo que llega, con respaldo de fábrica.",
+        "s1_v": "32",
+        "s1_v2": "",
+        "s1_t": "Estados con cobertura",
+        "s2_v": "24",
+        "s2_v2": "h",
+        "s2_t": "Zona rápida GDL/Mich",
+        "s3_v": "2 500",
+        "s3_v2": "+",
+        "s3_t": "Códigos postales",
+        "s4_v": "35",
+        "s4_v2": "",
+        "s4_t": "Equipos en esta promo",
+        "seals": "Garantía de fábrica, Factura disponible, Pago seguro Shopify, Asesoría técnica 1-a-1, Specs reales · stock real"
+      }
+    },
+    "faq": {
+      "type": "f24-maq-faq",
+      "blocks": {
+        "q1": {
+          "type": "faq",
+          "settings": {
+            "q": "¿Hasta cuándo está vigente la promoción?",
+            "a": "Hasta el 14 de junio a las 11:59 PM (hora del centro de México). Después de esa fecha los 35 productos vuelven a precio normal sin MSI extendido. No prorrogamos."
+          }
+        },
+        "q2": {
+          "type": "faq",
+          "settings": {
+            "q": "¿Qué tarjetas aplican para los MSI?",
+            "a": "La mayoría de tarjetas de crédito mexicanas participan en 3 y 6 MSI sin comisión (BBVA, Banamex, Banorte, Santander, HSBC, Scotiabank, Inbursa). 9 MSI aplica en bancos seleccionados. Confirma con tu tarjeta por WhatsApp antes de comprar y te decimos al instante."
+          }
+        },
+        "q3": {
+          "type": "faq",
+          "settings": {
+            "q": "¿Aplican los MSI a otros productos del catálogo?",
+            "a": "Los MSI sin comisión están garantizados solo para los 35 productos de esta promo. El resto del catálogo puede tener MSI con comisión o pagos diferidos — pregunta por el modelo que buscas y te confirmamos."
+          }
+        },
+        "q4": {
+          "type": "faq",
+          "settings": {
+            "q": "¿Facturan?",
+            "a": "Sí. Emitimos factura para tu empresa o proyecto — solo pídela al comprar o cotizar por WhatsApp."
+          }
+        },
+        "q5": {
+          "type": "faq",
+          "settings": {
+            "q": "¿Cuánto tarda la entrega?",
+            "a": "Enviamos a todo México. En la zona rápida (GDL y Michoacán) la entrega es de 24-48h; el equipo grande se coordina con flete especial. Al comprar te confirmamos el tiempo exacto para tu CP."
+          }
+        },
+        "q6": {
+          "type": "faq",
+          "settings": {
+            "q": "¿Me ayudan a elegir el equipo correcto?",
+            "a": "Para eso estamos. Dinos a qué te dedicas (obra, taller, agro, mantenimiento) y un asesor te dice qué equipo aguanta y cuál te conviene — sin venta dura."
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "eyebrow": "Antes de que preguntes",
+        "heading": "Dudas",
+        "heading_accent": "frecuentes",
+        "advisor_name": "Equipo Ferre24",
+        "advisor_role": "Asesoría en promociones MSI",
+        "response": "Te respondemos rápido en horario laboral",
+        "trust_list": "Hablas con un asesor real, no un bot, MSI sin comisión confirmados al instante, Entrega 24-48h en GDL y Michoacán, Stock real, factura disponible",
+        "cta": "Hablar con un asesor",
+        "wa_url": "https://wa.me/523317903630",
+        "wa_msg": "Hola Ferre24, tengo una duda sobre las promociones MSI y quiero cotizar antes que termine."
+      }
+    },
+    "final": {
+      "type": "f24-promo-final",
+      "settings": {
+        "kicker": "Última oportunidad",
+        "title_pre": "El reloj corre.",
+        "title_hl": "No dejes pasar los 9 MSI.",
+        "subtitle": "Un asesor te confirma stock, te dice si tu tarjeta aplica al 9 MSI y te arma la cotización en minutos. Sin venta dura, sin compromiso.",
+        "end_iso": "2026-06-30T23:59:59-06:00",
+        "cta_primary": "Cotizar antes que termine",
+        "cta_secondary": "Volver a ver productos",
+        "wa_url": "https://wa.me/523317903630",
+        "wa_msg": "Hola Ferre24, quiero aprovechar la promoción a 9 MSI antes del 14 de junio. ¿Me cotizan?"
+      }
+    },
+    "widgets": {
+      "type": "f24-maq-widgets",
+      "settings": {
+        "wa_url": "https://wa.me/523317903630",
+        "show_fab": true,
+        "fab_label": "Cotiza tus MSI",
+        "fab_msg": "Hola Ferre24, vi sus promociones a 3, 6 y 9 MSI. Quiero cotizar.",
+        "show_popup": true,
+        "pop_delay": 18,
+        "pop_kick": "Antes de irte",
+        "pop_title": "¿Te ayudo a elegir el equipo?",
+        "pop_sub": "La promo termina el 14 de junio. Un asesor te dice qué productos tienen 9 MSI, te confirma si tu tarjeta aplica y arma la cotización en minutos.",
+        "pop_cta": "Cotizar por WhatsApp",
+        "pop_msg": "Hola Ferre24, vi sus promociones MSI y quiero que me asesoren antes que termine. Esto es lo que busco:",
+        "pop_micro": "Respuesta rápida en horario laboral · GDL y Michoacán 24-48h",
+        "clarity_id": ""
+      }
+    }
+  },
+  "order": [
+    "promobar",
+    "hero",
+    "urgency",
+    "promogrid",
+    "calc",
+    "proveedor",
+    "prueba",
+    "faq",
+    "final",
+    "widgets"
+  ]
+}

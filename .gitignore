@@ -103,3 +103,4 @@ test-results/
 playwright-report/
 screenshots/
 *.har
+clients/f24/logs/
