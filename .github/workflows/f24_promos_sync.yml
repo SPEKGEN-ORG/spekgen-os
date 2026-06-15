@@ -6,7 +6,7 @@ name: F24 Promos Sync → Bot
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # cada 30 min: cambios del sheet (precio/desc/stock) reflejan en ≤30 min
+    - cron: '0 16,22 * * *'   # 2x/dia (red de seguridad). El gatillo Apps Script onEdit da el tiempo real.
   workflow_dispatch:
     inputs:
       dry_run:
