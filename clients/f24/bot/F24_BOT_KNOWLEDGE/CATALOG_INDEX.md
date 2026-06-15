@@ -1,13 +1,13 @@
 # Ferre24 — Catálogo (Knowledge Base del bot)
 
-*225 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
+*228 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
 
 > El bot cotiza ÚNICAMENTE productos de esta lista. El **precio** es el de venta;
 > el precio **tachado** (si existe) es referencia. Para cerrar, el bot pasa el/los
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-8 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+12 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -21,9 +21,13 @@ Reglas de meses sin intereses (MSI) por promo:
 | `KAS-10P` | $2,403 | $4,004 | 40% | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | $3,727 | $6,211 | 40% | 3 | no | 2026-06-30 |
 | `KASPRO-16P` | $7,785 | $11,977 | 35% | 46087 | no | 2026-06-30 |
+| `MINI60-12/1127` | $1,239 | $1,906 | 35% | — | no | 2026-06-30 |
 | `PK-EASY-100CT` | $4,939 | $7,598 | 35% | 3 | no | 2026-06-30 |
 | `PK-EASY-200US` | $2,887 | $4,812 | 40% | 3 | no | 2026-06-30 |
+| `PK-EASY-400US` | $3,835 | $6,392 | 40% | 3 | no | 2026-06-30 |
+| `PK-EASY-600N-US` | $5,008 | $8,346 | 40% | 3 | no | 2026-06-30 |
 | `PK-EASY-600US` | $4,234 | $7,056 | 40% | 3 | no | 2026-06-30 |
+| `PK-EASY-800US` | $4,653 | $7,755 | 40% | 3 | no | 2026-06-30 |
 
 ## Generadores (41)
 
@@ -135,7 +139,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz se detiene todo: el refrigerador, la bomba de agua, las herramientas en la obra. El generador Power Hunt GPH8000W te devuelve el control de tu energía con una salida potente y un arranque que no te…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-8000-w-motor-16-hp-power-hunt-gph8000w
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e8222ad0-3248-4d3c-8577-f0275e7f295e.png
-- **Generador a Gasolina Parazzini GP5500** · `GP5500` · $21,718 · Parazzini · GP5500
+- **Generador a Gasolina Parazzini GP5500** · `GP5500` · $10,859 · Parazzini · GP5500
   Un apagón a media jornada no avisa: se va la luz de CFE y se detiene el refrigerador, la bomba de agua o la herramienta de la obra. El Generador Parazzini GP5500 es la fuente de energía de respaldo que mantiene todo…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-parazzini-gp5500-5500w-9hp-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d44f51e5-e5ad-4ef5-a0ca-91a4a3cd78a1.png
@@ -914,7 +918,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Presurizadores (1)
 
-- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12-1127` · $1,906 (antes $2,722) · AQUA PAK · MINI60-12-1127 · 🔴 AGOTADO
+- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $1,239 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
   ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
   PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40fbe287-0d55-46cd-b9e8-020654c8c477.png
@@ -950,8 +954,16 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/shellcoat-liga-seal-19l-sellador-promotor-adherencia-sellador
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_dad0cdbb-08ba-4079-9ebd-8b8b41eeafdc.png
 
-## Purificación de Agua (2)
+## Purificación de Agua (5)
 
+- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $4,653 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
+  ¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…
+  PDP: https://ferre24.com.mx/products/purikor-pk-easy-800us-osmosis-inversa-800-gpd-sin-tanque
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aab62185-b15f-4f46-aaec-cd327bfb7f10.png
+- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $3,835 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
+  ¿Tu agua sabe rara, huele a cloro o simplemente no confías en lo que tomas del grifo? El agua de la red municipal trae sedimentos, cloro residual y microcontaminantes que ningún filtro de jarra elimina completamente. La…
+  PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-400-gpd-purikor-compacto-sin-tanque
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d6ae10e6-1a6c-42eb-abc0-e2e8ff260bdc.png
 - **Sistema de Ósmosis Inversa PURIKOR 600 GPD 6 Etapas con UV** · `PKRO600-6UVPM` · $8,093 (antes $11,561) · PURIKOR · PKRO600-6UVPM
   El Sistema de Ósmosis Inversa PURIKOR PKRO600-6UVPM es la solución definitiva para quienes necesitan agua purificada de alto rendimiento en aplicaciones comerciales o industriales de punto de uso (POU). Con un flujo…
   PDP: https://ferre24.com.mx/products/osmosis-inversa-purikor-600gpd-6-etapas-uv-pkro600-6uvpm
@@ -960,6 +972,10 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cansado del agua turbia, con sabor extraño o preocupaciones sobre contaminantes? El sistema PURIKOR elimina sedimento, cloro, minerales disueltos, bacterias y virus — llevando agua potable pura directamente a tu grifo.…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_772afc7e-f9dd-4383-b2d4-edb0909acc8c.jpg
+- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $5,008 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
+  ¿Tu familia espera minutos para llenar una jarra o la presión baja en cuanto abres la llave? Un purificador de flujo insuficiente no es ahorro — es frustración diaria. · El PURIKOR PK-EASY-600N-US resuelve eso de raíz:…
+  PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-purikor-537-gpd-4-etapas-sin-tanque
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_08c046db-d6f0-4810-b7a3-e7b607f54c52.png
 
 ## Purificadores por Ósmosis Inversa (1)
 
