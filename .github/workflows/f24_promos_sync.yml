@@ -6,7 +6,7 @@ name: F24 Promos Sync → Bot
 
 on:
   schedule:
-    - cron: '0 16,22 * * *'   # 09:00 y 15:00 La Paz (GMT-7) = 16:00 y 22:00 UTC
+    - cron: '*/30 * * * *'   # cada 30 min: cambios del sheet (precio/desc/stock) reflejan en ≤30 min
   workflow_dispatch:
     inputs:
       dry_run:
