@@ -54,8 +54,8 @@ STOCK_TAB = "📦 STOCK Y PROMOS"
 MSI912_TAG = "msi-912"
 # PROMO ACTIVA: SKU | Producto | Precio | Meses MSI | % Desc | Precio Promo | Vigencia | Estado Landing
 COL = {"sku": 0, "producto": 1, "precio": 2, "msi": 3, "pct": 4, "promo": 5, "vig": 6, "landing": 7}
-# STOCK Y PROMOS: el precio base vive en la col E (index 4)
-STOCK_COL = {"sku": 0, "producto": 1, "precio_base": 4}
+# STOCK Y PROMOS: precio base col E (4), descuento directo col Q (16)
+STOCK_COL = {"sku": 0, "producto": 1, "precio_base": 4, "direct_disc": 16}
 
 SA_REL = "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json"
 
@@ -79,6 +79,20 @@ def parse_money(s):
         return round(float(s), 2)
     except ValueError:
         return None
+
+
+def parse_frac(s):
+    """'20%' -> 0.20 ; 0.2 -> 0.2 ; '' / '0' -> None. Descuento como fracción 0..1."""
+    s = str(s or "").strip().replace("%", "").replace(" ", "")
+    if not s:
+        return None
+    try:
+        f = float(s)
+    except ValueError:
+        return None
+    if f > 1:
+        f = f / 100.0
+    return round(f, 4) if f > 0 else None
 
 
 def parse_msi_ladder(s: str) -> list[int]:
@@ -138,18 +152,20 @@ def read_promo_active(svc) -> list[dict]:
 
 
 def read_base_prices(svc) -> dict:
-    """{sku_upper: {'base': float|None, 'producto': str}} desde 📦 STOCK Y PROMOS col E."""
+    """{sku_upper: {'base','producto','direct_disc'}} desde 📦 STOCK Y PROMOS.
+    base = col E (precio venta) · direct_disc = col Q (descuento directo %, fracción|None)."""
     vals = svc.spreadsheets().values().get(
-        spreadsheetId=SHEET_ID, range=f"{STOCK_TAB}!A2:E").execute().get("values", [])
+        spreadsheetId=SHEET_ID, range=f"{STOCK_TAB}!A2:Q").execute().get("values", [])
     out = {}
     for r in vals:
-        r = (list(r) + [""] * 5)[:5]
+        r = (list(r) + [""] * 17)[:17]
         sku = str(r[STOCK_COL["sku"]]).strip()
         if not sku:
             continue
         out[sku.upper()] = {
             "base": parse_money(r[STOCK_COL["precio_base"]]),
             "producto": str(r[STOCK_COL["producto"]]).strip(),
+            "direct_disc": parse_frac(r[STOCK_COL["direct_disc"]]),
         }
     return out
 
@@ -268,10 +284,27 @@ def main():
             promo_changes.append({"sku": sku_u, "pid": v["pid"], "vid": v["vid"],
                                   "cur_p": cur_p, "want_p": want_p, "want_c": want_c})
 
-    # === 2) EXPIRACIONES: estaban en state, ya no están en promo → precio base + restaurar tachado ===
+    # === 1b) DESCUENTO DIRECTO (STOCK col Q, sin promo): price=base*(1-desc), compareAt=base ===
+    desc_by_sku, desc_changes = {}, []
+    for sku_u, info in base.items():
+        if sku_u in promo_by_sku:
+            continue  # una promo activa manda sobre el descuento directo
+        d, b, v = info.get("direct_disc"), info.get("base"), variants.get(sku_u)
+        if not d or b is None or not v:
+            continue
+        desc_by_sku[sku_u] = d
+        want_p, want_c = round(b * (1 - d), 2), b  # precio rebajado · tachado = precio base
+        cur_p, cur_c = _f(v["price"]), _f(v["compare_at"])
+        orig = prev.get(sku_u, {}).get("orig_compare_at", cur_c if sku_u not in prev else None)
+        new_state[sku_u] = {"base": b, "desc": d, "orig_compare_at": orig}
+        if cur_p is None or abs(cur_p - want_p) >= 0.01 or _f(want_c) != cur_c:
+            desc_changes.append({"sku": sku_u, "pid": v["pid"], "vid": v["vid"], "pct": d,
+                                 "cur_p": cur_p, "want_p": want_p, "want_c": want_c})
+
+    # === 2) EXPIRACIONES: en state pero ya no activos (ni promo ni descuento) → base + restaurar tachado ===
     expiries = []
     for sku_u, info in prev.items():
-        if sku_u in promo_by_sku:
+        if sku_u in promo_by_sku or sku_u in desc_by_sku:
             continue
         v = variants.get(sku_u)
         if not v:
@@ -290,7 +323,7 @@ def main():
     #   confirmar con Sergio (caza dedazos tipo 2× o mitad). Los cambios normales sí fluyen.
     base_review, base_suspect = [], []
     for sku_u, info in base.items():
-        if sku_u in promo_by_sku or sku_u in prev:
+        if sku_u in promo_by_sku or sku_u in desc_by_sku or sku_u in prev:
             continue
         b = info["base"]
         v = variants.get(sku_u)
@@ -309,6 +342,10 @@ def main():
     print(f"=== PROMOS — precio promo a setear ({len(promo_changes)}) ===")
     for c in sorted(promo_changes, key=lambda x: x["sku"]):
         print(f"  {c['sku']:<16} {str(c['cur_p']):>10} → {c['want_p']:>10.2f}  (tachado {c['want_c']})")
+    if desc_changes:
+        print(f"\n=== DESCUENTO DIRECTO — precio rebajado ({len(desc_changes)}) ===")
+        for c in sorted(desc_changes, key=lambda x: x["sku"]):
+            print(f"  {c['sku']:<16} {str(c['cur_p']):>10} → {c['want_p']:>10.2f}  (-{int(c['pct']*100)}%, tachado {c['want_c']})")
     if expiries:
         print(f"\n=== EXPIRARON — volver a precio base + restaurar tachado ({len(expiries)}) ===")
         for c in sorted(expiries, key=lambda x: x["sku"]):
@@ -333,7 +370,8 @@ def main():
     promo_missing = [r for r in vigentes if not r["in_shopify"]]
 
     base_verb = "a aplicar" if args.apply_base else "por revisar"
-    print(f"\nResumen: {len(promo_changes)} promo + {len(expiries)} expiradas a aplicar | "
+    print(f"\nResumen: {len(promo_changes)} promo + {len(desc_changes)} descuento directo + "
+          f"{len(expiries)} expiradas a aplicar | "
           f"{len(base_review)} base {base_verb} + {len(base_suspect)} base SOSPECHOSAS (frenadas) | "
           f"{len(sellable)} promos vendibles")
 
@@ -341,8 +379,8 @@ def main():
         print("\n(DRY-RUN: no se escribió nada.)")
         return
 
-    # ---- APPLY (promos + expiraciones siempre; base solo con --apply-base) ----
-    applied = list(promo_changes) + list(expiries)
+    # ---- APPLY (promos + descuento directo + expiraciones siempre; base solo con --apply-base) ----
+    applied = list(promo_changes) + list(desc_changes) + list(expiries)
     if args.apply_base:
         applied += [{**c, "want_c": LEAVE} for c in base_review]  # base: precio sí, tachado intacto
     for c in applied:
