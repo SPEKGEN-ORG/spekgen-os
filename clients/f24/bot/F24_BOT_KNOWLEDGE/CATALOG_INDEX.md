@@ -31,7 +31,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-600N-US` | solo MSI | $8,346 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-600US` | solo MSI | $7,056 |  | 3 | no | 2026-06-30 |
 | `PK-EASY-800US` | solo MSI | $7,755 |  | 46176 | no | 2026-06-30 |
-| `PMR24` | $29,326 | $65,168 | 55% | 3 | no | 2026-06-28 |
+| `PMR24` | $29,326 | $65,168 | 55% | 39967 | no | 2026-06-28 |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
 
 ## Generadores (41)

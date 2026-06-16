@@ -207,15 +207,15 @@
       "promo_price": 29325.6,
       "pct_desc": "55%",
       "msi_ladder": [
-        3
+        39967
       ],
-      "msi_max": 3,
+      "msi_max": 39967,
       "eligible_912": false,
       "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "14662.80"
+      "shopify_price": "29325.60"
     },
     {
       "sku": "PP7BK",
