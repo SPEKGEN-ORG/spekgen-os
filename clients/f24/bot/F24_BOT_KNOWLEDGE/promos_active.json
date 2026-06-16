@@ -51,7 +51,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "2734.20"
+      "shopify_price": "3038.00"
     },
     {
       "sku": "ENERWELL-G1000",
@@ -424,8 +424,8 @@
       "sku": "PP190",
       "sku_upper": "PP190",
       "producto": "Podadora a Gasolina 190cc Parazzini Pro PP190 — Corte 21\" y Bolsa 65L",
-      "regular_price": 8231.0,
-      "promo_price": 3703.95,
+      "regular_price": 14964.0,
+      "promo_price": 6733.8,
       "pct_desc": "55%",
       "msi_ladder": [
         46176
@@ -436,14 +436,14 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3703.95"
+      "shopify_price": "6733.80"
     },
     {
       "sku": "PP190TT",
       "sku_upper": "PP190TT",
       "producto": "Podadora Autopropulsada 190cc — Corte 21\" y Bolsa 65L",
-      "regular_price": 8889.0,
-      "promo_price": 4000.05,
+      "regular_price": 16162.0,
+      "promo_price": 7272.9,
       "pct_desc": "55%",
       "msi_ladder": [
         46176

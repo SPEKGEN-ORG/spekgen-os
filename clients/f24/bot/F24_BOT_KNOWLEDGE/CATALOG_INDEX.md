@@ -43,8 +43,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-800US` | solo MSI | $7,755 |  | 46176 | no | 2026-06-30 |
 | `PMR24` | $29,326 | $65,168 | 55% | 39967 | no | 2026-06-28 |
 | `PP170` | $5,101 | $11,336 | 55% | 39967 | no | 2026-06-30 |
-| `PP190` | $3,704 | $8,231 | 55% | 46176 | no | 2026-06-30 |
-| `PP190TT` | $4,000 | $8,889 | 55% | 46176 | no | 2026-06-30 |
+| `PP190` | $6,734 | $14,964 | 55% | 46176 | no | 2026-06-30 |
+| `PP190TT` | $7,273 | $16,162 | 55% | 46176 | no | 2026-06-30 |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
 | `SK772TPRO` | $4,032 | $8,961 | 55% | 3 | no | 2026-06-30 |
 | `WIND43` | $0 | $0 | 55% | 3 | no | 2026-06-30 |
@@ -541,7 +541,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Ya te cansaste de empujar la podadora? · Podar un jardín de 400 m² empujando una máquina de 29 kg no es ejercicio — es castigo. Y si el cesped lleva semanas sin corte o hay maleza mezclada, el problema se duplica:…
   PDP: https://ferre24.com.mx/products/podadora-autopropulsada-parazzini-pro-190cc-21-bolsa-65l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_21dffdb2-eb41-433c-8e73-a9f511dc0a6e.png
-- **Podadora Autopropulsada 190cc** · `PP190TT` · $4,000 (antes $8,889) · Parazzini Pro · PP190TT · ⚡PROMO
+- **Podadora Autopropulsada 190cc** · `PP190TT` · $7,273 (antes $16,162) · Parazzini Pro · PP190TT · ⚡PROMO
   ¿Ya te cansaste de empujar la podadora? · Podar un jardín de 400 m² empujando una máquina de 29 kg no es ejercicio — es castigo. Y si el cesped lleva semanas sin corte o hay maleza mezclada, el problema se duplica:…
   PDP: https://ferre24.com.mx/products/podadora-autopropulsada-190cc-corte-21-bolsa-65l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_11d8dfe4-e70f-4e2d-ad31-36ae33fccafd.png
@@ -549,7 +549,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Domina tu jardín sin agotarte · Podar un terreno mediano con una máquina manual o una podadora eléctrica de baja potencia deja al usuario exhausto y sin terminar el trabajo. La Parazzini Pro PP170 resuelve ese problema…
   PDP: https://ferre24.com.mx/products/podadora-parazzini-pro-170cc-autopropulsada-cuchilla-21-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7b8620e1-6c8a-499f-acdb-c3bea639176f.png
-- **Podadora a Gasolina 190cc Parazzini Pro PP190** · `PP190` · $3,704 (antes $8,231) · Parazzini Pro · PP190 · ⚡PROMO
+- **Podadora a Gasolina 190cc Parazzini Pro PP190** · `PP190` · $6,734 (antes $14,964) · Parazzini Pro · PP190 · ⚡PROMO
   La Parazzini Pro PP190 es la podadora a gasolina pensada para quien quiere un césped impecable sin pagar el precio de una autopropulsada. Su motor 190cc OHV de 5.5 HP gira a 3,600 rpm con arranque manual a cuerda:…
   PDP: https://ferre24.com.mx/products/podadora-gasolina-190cc-21-parazzini-pro-pp190
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f5429efb-be77-4d54-9f7f-18fe68e88d6d.png
