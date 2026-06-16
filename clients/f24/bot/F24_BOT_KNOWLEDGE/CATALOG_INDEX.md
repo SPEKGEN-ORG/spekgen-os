@@ -22,7 +22,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
 | `FXL5B-200K120` | $59,155 | $131,455 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
-| `GP9500TB` | $16,627 | $36,949 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
+| `GP9500TB` | $30,231 | $67,179 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $25,147 | 55% | 3 | no | 2026-06-28 |
@@ -98,7 +98,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, no hay tiempo para improvisar. El Parazzini GP3000M te da respaldo inmediato con 3,000W de potencia máxima y 2,800W nominales — suficiente para mantener el refrigerador, la iluminación y la…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp3000m-3-000w-motor-4-tiempos-voltaje-dual-110-220v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_marvelsa.png
-- **Generador Parazzini GP9500TB** · `GP9500TB` · $16,627 (antes $36,949) · Parazzini · GP9500TB · ⚡PROMO 12MSI
+- **Generador Parazzini GP9500TB** · `GP9500TB` · $30,231 (antes $67,179) · Parazzini · GP9500TB · ⚡PROMO 12MSI
   Cuando se va la luz, tu casa o tu obra no tienen por qué detenerse. Un apagón de CFE significa refrigerador apagado, herramienta parada y operación interrumpida. El generador Parazzini GP9500TB existe para que eso deje…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp9500tb-17-hp-9500-w-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b6e0a72-de26-414a-9d65-823bf3925548.png

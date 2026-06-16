@@ -119,8 +119,8 @@
       "sku": "GP9500TB",
       "sku_upper": "GP9500TB",
       "producto": "Generador Parazzini GP9500TB — 17 HP, 9500 W, encendido eléctrico",
-      "regular_price": 36949.0,
-      "promo_price": 16627.05,
+      "regular_price": 67179.0,
+      "promo_price": 30230.55,
       "pct_desc": "55%",
       "msi_ladder": [
         3,
@@ -134,7 +134,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "36949.00"
+      "shopify_price": "16627.05"
     },
     {
       "sku": "GPH1000W",
