@@ -14,6 +14,16 @@
     "promo": 3038.0,
     "orig_compare_at": 6076.51
   },
+  "ENERWELL-G1000": {
+    "base": 4402.26,
+    "promo": 4402.26,
+    "orig_compare_at": null
+  },
+  "ENERWELL-G2500": {
+    "base": 8649.0,
+    "promo": 6054.62,
+    "orig_compare_at": null
+  },
   "FXL5B-200": {
     "base": 130743.0,
     "promo": 58834.35,
@@ -59,10 +69,40 @@
     "promo": 8596.35,
     "orig_compare_at": 19104.0
   },
+  "KAS-10P": {
+    "base": 4004.25,
+    "promo": 4004.25,
+    "orig_compare_at": null
+  },
+  "KAS-12P-TF": {
+    "base": 6211.42,
+    "promo": 6211.0,
+    "orig_compare_at": null
+  },
+  "KASPRO-16P": {
+    "base": 11976.57,
+    "promo": 11977.0,
+    "orig_compare_at": null
+  },
   "MP13C": {
     "base": 17150.0,
     "promo": 7717.5,
     "orig_compare_at": 17149.45
+  },
+  "PK-EASY-100CT": {
+    "base": 7598.0,
+    "promo": 7598.0,
+    "orig_compare_at": null
+  },
+  "PK-EASY-200US": {
+    "base": 4812.34,
+    "promo": 4812.34,
+    "orig_compare_at": null
+  },
+  "PK-EASY-600US": {
+    "base": 7056.0,
+    "promo": 7056.0,
+    "orig_compare_at": null
   },
   "PMR24": {
     "base": 65168.0,
@@ -103,5 +143,25 @@
     "base": 4770.0,
     "promo": 2385.0,
     "orig_compare_at": 4770.35
+  },
+  "MINI60-12/1127": {
+    "base": 1905.64,
+    "promo": 1905.64,
+    "orig_compare_at": 1905.64
+  },
+  "PK-EASY-400US": {
+    "base": 6392.33,
+    "promo": 3515.78,
+    "orig_compare_at": 6392.33
+  },
+  "PK-EASY-600N-US": {
+    "base": 8346.21,
+    "promo": 4590.42,
+    "orig_compare_at": 8346.21
+  },
+  "PK-EASY-800US": {
+    "base": 7755.22,
+    "promo": 4265.37,
+    "orig_compare_at": 7755.22
   }
 }
