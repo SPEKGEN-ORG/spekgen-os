@@ -20,7 +20,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
-| `FXL5B-200K120` | $29,578 | $65,728 | 55% | — | no |  |
+| `FXL5B-200K120` | $59,155 | $131,455 | 55% | — | no |  |
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $25,147 | 55% | 3 | no | 2026-06-28 |
@@ -591,7 +591,7 @@ Reglas de meses sin intereses (MSI) por promo:
 - **Aspersor de Aguijones Parazzini XGT12-300** · `XGT12-300` · $41,930 (antes $83,859) · Parazzini · XGT12-300
   ¿Tus cultivos en filas reciben el agroquímico de forma dispareja? La cobertura irregular no solo desperdicia producto — debilita el cultivo, abre la puerta a plagas y hongos, y te obliga a pasar dos veces donde solo…
   PDP: https://ferre24.com.mx/products/aspersor-de-aguijones-parazzini-xgt12-300-300-l-para-tractor-tdf
-- **Aspersor de turbina vertical 200L Parazzini** · `FXL5B-200K120` · $29,578 (antes $65,728) · Parazzini · FXL5B-200K120 · ⚡PROMO
+- **Aspersor de turbina vertical 200L Parazzini** · `FXL5B-200K120` · $59,155 (antes $131,455) · Parazzini · FXL5B-200K120 · ⚡PROMO
   ¿Llevas dos o tres repases por huerta y las plagas siguen en el interior de la copa? El problema no es el químico — es la distribución. Un aguijón solo ataca de frente; una turbina vertical envuelve el árbol en 360° de…
   PDP: https://ferre24.com.mx/products/aspersor-de-turbina-vertical-200l-parazzini-acoplable-a-tractor-cardan-120-cm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_180c6e62-6b94-4966-95ea-a0bdd781a18d.png
