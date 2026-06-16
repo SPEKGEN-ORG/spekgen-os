@@ -19,7 +19,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ATV-25` | $4,897 | $10,883 | 55% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `BP4310` | $2,808 | $5,617 | 50% | — | no | 2026-06-30 |
 | `CK22CC` | $3,038 | $6,076 | 50% | — | no | 2026-06-30 |
-| `ENERWELL-G1000` | $2,641 | $4,402 | 40% | 3 | no | 2026-06-28 |
+| `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 3, 6 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
 | `FXL5B-200K120` | $59,155 | $131,455 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
@@ -128,7 +128,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando la obra no se detiene y cada herramienta cuenta, necesitas un generador a la altura. El Generador Portátil ENERWELL-G8000 entrega 7,000W nominales y picos de 8,000W con motor de gasolina 4 tiempos de 420cc,…
   PDP: https://ferre24.com.mx/products/generador-portatil-8000w-gasolina-enerwell-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_77ea6781-7541-4bbe-9fba-5a74c1aac826.png
-- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $2,641 (antes $4,402) · ENERWELL · ENERWELL-G1000 · ⚡PROMO
+- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $4,402 · ENERWELL · ENERWELL-G1000 · ⚡PROMO
   El Generador Portátil ENERWELL G1000 es la solución compacta y confiable para quienes necesitan energía eléctrica en cualquier lugar. Con tecnología inverter , entrega corriente limpia y estable que protege tus…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-1000w-enerwell-inverter
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a49dbcb0-94a0-4d4f-a9d8-e6c0efc46f2a.png
