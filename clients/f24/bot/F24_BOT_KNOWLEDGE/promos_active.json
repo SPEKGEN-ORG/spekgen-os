@@ -25,17 +25,17 @@
       "sku": "BP4310",
       "sku_upper": "BP4310",
       "producto": "Motobomba 43cc 2 tiempos autocebante 1 pulg",
-      "regular_price": 3258.44,
-      "promo_price": null,
-      "pct_desc": "",
+      "regular_price": 5617.0,
+      "promo_price": 2808.5,
+      "pct_desc": "50%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3258.44"
+      "shopify_price": "1629.22"
     },
     {
       "sku": "ENERWELL-G1000",

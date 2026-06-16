@@ -17,7 +17,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
 | `ATV-25` | $4,897 | $10,883 | 55% | 39967 | no | 2026-06-28 |
-| `BP4310` | solo MSI | $3,258 |  | — | no |  |
+| `BP4310` | $2,808 | $5,617 | 50% | — | no | 2026-06-30 |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
@@ -307,7 +307,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Regar 15 hectáreas en una jornada, vaciar un depósito anegado en horas o trasladar miles de litros entre tanques sin depender de electricidad — eso es lo que hace la Kawashima BK1440 en el campo real. · Motor que no te…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-bk1440-4-14-hp-85-m3-h
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9133fb5f-cde1-4cbd-837e-68ddaf634b6c.png
-- **Motobomba Kawashima BP4310** · `BP4310` · $3,258 (antes $5,618) · Kawashima · BP4316 · ⚡PROMO
+- **Motobomba Kawashima BP4310** · `BP4310` · $2,808 (antes $5,617) · Kawashima · BP4316 · ⚡PROMO
   ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4310
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_657096e2-99cc-42ce-a377-4edb126adb6b.png
