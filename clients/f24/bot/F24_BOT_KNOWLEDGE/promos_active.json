@@ -25,8 +25,8 @@
       "sku": "ENERWELL-G2500",
       "sku_upper": "ENERWELL-G2500",
       "producto": "Generador portátil a gasolina 2500w ENERWELL",
-      "regular_price": 6054.62,
-      "promo_price": 5449.16,
+      "regular_price": 8649.0,
+      "promo_price": 7784.1,
       "pct_desc": "10%",
       "msi_ladder": [
         46176
@@ -83,9 +83,9 @@
       "promo_price": 10778.91,
       "pct_desc": "10%",
       "msi_ladder": [
-        46087
+        3
       ],
-      "msi_max": 46087,
+      "msi_max": 3,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -137,9 +137,9 @@
       "promo_price": 6209.28,
       "pct_desc": "12%",
       "msi_ladder": [
-        39967
+        3
       ],
-      "msi_max": 39967,
+      "msi_max": 3,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -189,9 +189,9 @@
       "promo_price": 7344.66,
       "pct_desc": "12%",
       "msi_ladder": [
-        3
+        46176
       ],
-      "msi_max": 3,
+      "msi_max": 46176,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -207,9 +207,9 @@
       "promo_price": 6824.59,
       "pct_desc": "12%",
       "msi_ladder": [
-        3
+        46176
       ],
-      "msi_max": 3,
+      "msi_max": 46176,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,

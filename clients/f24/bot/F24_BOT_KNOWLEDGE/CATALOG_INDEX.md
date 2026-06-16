@@ -17,17 +17,17 @@ Reglas de meses sin intereses (MSI) por promo:
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
 | `ENERWELL-G1000` | $3,962 | $4,402 | 10% | 3 | no | 2026-06-28 |
-| `ENERWELL-G2500` | $5,449 | $6,055 | 10% | 46176 | no | 2026-06-30 |
+| `ENERWELL-G2500` | $7,784 | $8,649 | 10% | 46176 | no | 2026-06-30 |
 | `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | $5,590 | $6,211 | 10% | 3 | no | 2026-06-30 |
-| `KASPRO-16P` | $10,779 | $11,977 | 10% | 46087 | no | 2026-06-30 |
+| `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-06-30 |
 | `MINI60-12/1127` | $1,715 | $1,906 | 10% | — | no | 2026-06-30 |
 | `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 46176 | no | 2026-06-30 |
 | `PK-EASY-200US` | $4,235 | $4,812 | 12% | 46176 | no | 2026-06-30 |
 | `PK-EASY-400US` | $5,625 | $6,392 | 12% | 46176 | no | 2026-06-30 |
-| `PK-EASY-600N-US` | $7,345 | $8,346 | 12% | 3 | no | 2026-06-30 |
-| `PK-EASY-600US` | $6,209 | $7,056 | 12% | 39967 | no | 2026-06-30 |
-| `PK-EASY-800US` | $6,825 | $7,755 | 12% | 3 | no | 2026-06-30 |
+| `PK-EASY-600N-US` | $7,345 | $8,346 | 12% | 46176 | no | 2026-06-30 |
+| `PK-EASY-600US` | $6,209 | $7,056 | 12% | 3 | no | 2026-06-30 |
+| `PK-EASY-800US` | $6,825 | $7,755 | 12% | 46176 | no | 2026-06-30 |
 
 ## Generadores (41)
 
@@ -91,7 +91,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, tu casa o tu obra no tienen por qué detenerse. Un apagón de CFE significa refrigerador apagado, herramienta parada y operación interrumpida. El generador Parazzini GP9500TB existe para que eso deje…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp9500tb-17-hp-9500-w-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b6e0a72-de26-414a-9d65-823bf3925548.png
-- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $5,449 (antes $6,055) · ENERWELL · G2500 · ⚡PROMO
+- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $7,784 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
   El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc [VERIFICAR: datos inferidos de estándar de mercado — confirmar con Marvelsa],…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-2500w-enerwell-4t-6-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_45e8886a-e494-4400-8a07-e8ea7a107f01.png
