@@ -9,34 +9,14 @@
     "promo": 8752.5,
     "orig_compare_at": 19450.0
   },
-  "KAS-10P": {
-    "base": 4004.25,
-    "promo": 3603.83,
-    "orig_compare_at": null
-  },
-  "KAS-12P-TF": {
-    "base": 6211.42,
-    "promo": 5590.28,
-    "orig_compare_at": null
-  },
-  "KASPRO-16P": {
-    "base": 11976.57,
-    "promo": 10778.91,
-    "orig_compare_at": null
+  "GPH8000W": {
+    "base": 13830.85,
+    "promo": 6223.88,
+    "orig_compare_at": 13830.85
   },
   "PP7BK": {
     "base": 17590.0,
     "promo": 7915.5,
     "orig_compare_at": 17590.89
-  },
-  "MINI60-12/1127": {
-    "base": 1905.64,
-    "promo": 1715.08,
-    "orig_compare_at": 1905.64
-  },
-  "PK-EASY-600N-US": {
-    "base": 8346.21,
-    "promo": 7344.66,
-    "orig_compare_at": 8346.21
   }
 }

@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-15 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+16 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -20,14 +20,15 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
-| `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-06-30 |
-| `KAS-12P-TF` | $5,590 | $6,211 | 10% | 3 | no | 2026-06-30 |
-| `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-06-30 |
-| `MINI60-12/1127` | $1,715 | $1,906 | 10% | — | no | 2026-06-30 |
+| `GPH8000W` | $6,224 | $13,831 | 55% | 3 | no | 2026-06-28 |
+| `KAS-10P` | solo MSI | $4,004 |  | 3 | no | 2026-06-30 |
+| `KAS-12P-TF` | solo MSI | $6,211 |  | 3 | no | 2026-06-30 |
+| `KASPRO-16P` | solo MSI | $11,977 |  | 3 | no | 2026-06-30 |
+| `MINI60-12/1127` | solo MSI | $1,906 |  | — | no | 2026-06-30 |
 | `PK-EASY-100CT` | solo MSI | $7,598 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-200US` | solo MSI | $4,812 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-400US` | solo MSI | $6,392 |  | 46176 | no | 2026-06-30 |
-| `PK-EASY-600N-US` | $7,345 | $8,346 | 12% | 46176 | no | 2026-06-30 |
+| `PK-EASY-600N-US` | solo MSI | $8,346 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-600US` | solo MSI | $7,056 |  | 3 | no | 2026-06-30 |
 | `PK-EASY-800US` | solo MSI | $7,755 |  | 46176 | no | 2026-06-30 |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
@@ -138,7 +139,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Te quedaste sin poder soldar porque no hay toma de corriente cerca? En obra nueva, en herrería a domicilio o en una reparación en el campo, la electricidad casi nunca está donde la necesitas. El Parazzini BAKARAC200…
   PDP: https://ferre24.com.mx/products/generador-soldador-parazzini-bakarac200-inverter-200-a-a-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_83f0adba-4a0d-4f24-b9c0-67201bc70f95.png
-- **Generador a Gasolina 8000 W con Motor de 16 HP** · `GPH8000W` · $13,831 (antes $25,147) · Power Hunt · GPH8000W
+- **Generador a Gasolina 8000 W con Motor de 16 HP** · `GPH8000W` · $11,316 (antes $25,147) · Power Hunt · GPH8000W · ⚡PROMO
   Cuando se va la luz se detiene todo: el refrigerador, la bomba de agua, las herramientas en la obra. El generador Power Hunt GPH8000W te devuelve el control de tu energía con una salida potente y un arranque que no te…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-8000-w-motor-16-hp-power-hunt-gph8000w
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e8222ad0-3248-4d3c-8577-f0275e7f295e.png
