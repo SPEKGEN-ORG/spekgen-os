@@ -64,14 +64,19 @@
       "regular_price": 130743.0,
       "promo_price": 58834.35,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
-      "eligible_912": false,
-      "vigencia": "",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "30214.35"
+      "shopify_price": "58834.35"
     },
     {
       "sku": "FXL5B-200K120",
