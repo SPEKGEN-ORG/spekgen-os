@@ -18,7 +18,7 @@ Reglas de meses sin intereses (MSI) por promo:
 |---|---|---|---|---|---|---|
 | `ATV-25` | $4,897 | $10,883 | 55% | 39967 | no | 2026-06-28 |
 | `BP4310` | $2,808 | $5,617 | 50% | — | no | 2026-06-30 |
-| `CK22CC` | $1,504 | $3,342 | 55% | — | no | 2026-06-30 |
+| `CK22CC` | $3,038 | $6,076 | 50% | — | no | 2026-06-30 |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
@@ -665,7 +665,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Mangueras y Accesorios (4)
 
-- **Cortasetos 22 cc Kawashima Pro** · `CK22CC` · $1,504 (antes $3,342) · Kawashima Pro · CK22CC · ⚡PROMO
+- **Cortasetos 22 cc Kawashima Pro** · `CK22CC` · $3,038 (antes $6,076) · Kawashima Pro · CK22CC · ⚡PROMO
   ### El cortasetos que llega listo — y te respalda después · El Kawashima Pro CK22CC es un cortasetos a gasolina de 22 cc diseñado para quien necesita resultados, no sorpresas. Motor 2 tiempos con encendido retráctil…
   PDP: https://ferre24.com.mx/products/cortasetos-22-cc-kawashima-pro-kit-listo-refacciones-locales
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66a7a0a9-36ca-41e2-a499-4d2270471469.png

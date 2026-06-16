@@ -41,9 +41,9 @@
       "sku": "CK22CC",
       "sku_upper": "CK22CC",
       "producto": "Cortasetos 22 cc Kawashima Pro — Kit listo, refacciones locales",
-      "regular_price": 3342.0,
-      "promo_price": 1503.9,
-      "pct_desc": "55%",
+      "regular_price": 6076.0,
+      "promo_price": 3038.0,
+      "pct_desc": "50%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -51,7 +51,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "1503.90"
+      "shopify_price": "2734.20"
     },
     {
       "sku": "ENERWELL-G1000",
@@ -220,7 +220,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "2561.09"
+      "shopify_price": "4692.15"
     },
     {
       "sku": "HP7N",
