@@ -85,14 +85,19 @@
       "regular_price": 131455.0,
       "promo_price": 59154.75,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
-      "eligible_912": false,
-      "vigencia": "",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "29577.60"
+      "shopify_price": "59154.75"
     },
     {
       "sku": "GPH1000W",
