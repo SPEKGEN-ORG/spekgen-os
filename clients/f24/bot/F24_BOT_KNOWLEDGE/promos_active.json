@@ -19,7 +19,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "2861.47"
+      "shopify_price": "3962.03"
     },
     {
       "sku": "ENERWELL-G2500",
@@ -29,15 +29,15 @@
       "promo_price": 5449.16,
       "pct_desc": "10%",
       "msi_ladder": [
-        3
+        46176
       ],
-      "msi_max": 3,
+      "msi_max": 46176,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3935.50"
+      "shopify_price": "5449.16"
     },
     {
       "sku": "KAS-10P",
@@ -98,54 +98,54 @@
       "sku_upper": "PK-EASY-100CT",
       "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
       "regular_price": 7598.0,
-      "promo_price": 4938.7,
-      "pct_desc": "35%",
+      "promo_price": 6838.2,
+      "pct_desc": "10%",
       "msi_ladder": [
-        3
+        46176
       ],
-      "msi_max": 3,
+      "msi_max": 46176,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4938.70"
+      "shopify_price": "6838.20"
     },
     {
       "sku": "PK-EASY-200US",
       "sku_upper": "PK-EASY-200US",
       "producto": "Sistema de ósmosis inversa de alto flujo PURIKOR",
       "regular_price": 4812.34,
-      "promo_price": 2887.4,
-      "pct_desc": "40%",
+      "promo_price": 4234.86,
+      "pct_desc": "12%",
       "msi_ladder": [
-        3
+        46176
       ],
-      "msi_max": 3,
+      "msi_max": 46176,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "2887.40"
+      "shopify_price": "4234.86"
     },
     {
       "sku": "PK-EASY-600US",
       "sku_upper": "PK-EASY-600US",
       "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
       "regular_price": 7056.0,
-      "promo_price": 4233.6,
-      "pct_desc": "40%",
+      "promo_price": 6209.28,
+      "pct_desc": "12%",
       "msi_ladder": [
-        3
+        39967
       ],
-      "msi_max": 3,
+      "msi_max": 39967,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4233.60"
+      "shopify_price": "6209.28"
     },
     {
       "sku": "MINI60-12/1127",
@@ -168,26 +168,26 @@
       "sku_upper": "PK-EASY-400US",
       "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
       "regular_price": 6392.33,
-      "promo_price": 3835.4,
-      "pct_desc": "40%",
+      "promo_price": 5625.25,
+      "pct_desc": "12%",
       "msi_ladder": [
-        3
+        46176
       ],
-      "msi_max": 3,
+      "msi_max": 46176,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "3835.40"
+      "shopify_price": "5625.25"
     },
     {
       "sku": "PK-EASY-600N-US",
       "sku_upper": "PK-EASY-600N-US",
       "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
       "regular_price": 8346.21,
-      "promo_price": 5007.73,
-      "pct_desc": "40%",
+      "promo_price": 7344.66,
+      "pct_desc": "12%",
       "msi_ladder": [
         3
       ],
@@ -197,15 +197,15 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "5007.73"
+      "shopify_price": "7344.66"
     },
     {
       "sku": "PK-EASY-800US",
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 7755.22,
-      "promo_price": 4653.13,
-      "pct_desc": "40%",
+      "promo_price": 6824.59,
+      "pct_desc": "12%",
       "msi_ladder": [
         3
       ],
@@ -215,7 +215,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "4653.13"
+      "shopify_price": "6824.59"
     }
   ],
   "excluidos_sin_pdp": []
