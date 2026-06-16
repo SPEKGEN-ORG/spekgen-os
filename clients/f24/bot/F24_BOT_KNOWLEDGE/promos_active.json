@@ -152,8 +152,8 @@
       "sku_upper": "PP7BK",
       "producto": "Kit parihuela 7 hp bronce con manguera de 8.5 mm",
       "regular_price": 17590.0,
-      "promo_price": 15831.0,
-      "pct_desc": "10%",
+      "promo_price": 7915.5,
+      "pct_desc": "55%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -161,7 +161,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "8707.50"
+      "shopify_price": "15831.00"
     },
     {
       "sku": "MINI60-12/1127",
