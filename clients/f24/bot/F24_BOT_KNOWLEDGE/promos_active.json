@@ -8,8 +8,8 @@
       "sku_upper": "ENERWELL-G1000",
       "producto": "Generador portátil a gasolina 1000w ENERWELL",
       "regular_price": 4402.26,
-      "promo_price": 3962.03,
-      "pct_desc": "10%",
+      "promo_price": null,
+      "pct_desc": "",
       "msi_ladder": [
         3
       ],
@@ -26,8 +26,8 @@
       "sku_upper": "ENERWELL-G2500",
       "producto": "Generador portátil a gasolina 2500w ENERWELL",
       "regular_price": 8649.0,
-      "promo_price": 7784.1,
-      "pct_desc": "10%",
+      "promo_price": null,
+      "pct_desc": "",
       "msi_ladder": [
         46176
       ],
@@ -54,6 +54,24 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "2127.00"
+    },
+    {
+      "sku": "GPH5500W",
+      "sku_upper": "GPH5500W",
+      "producto": "Generador Power Hunt GPH5500W — 5,500W, 15HP, Voltaje Dual 120/220V",
+      "regular_price": 19450.0,
+      "promo_price": 8752.5,
+      "pct_desc": "55%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "8752.50"
     },
     {
       "sku": "KAS-10P",
@@ -114,8 +132,8 @@
       "sku_upper": "PK-EASY-100CT",
       "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
       "regular_price": 7598.0,
-      "promo_price": 6838.2,
-      "pct_desc": "10%",
+      "promo_price": null,
+      "pct_desc": "",
       "msi_ladder": [
         46176
       ],
@@ -132,8 +150,8 @@
       "sku_upper": "PK-EASY-200US",
       "producto": "Sistema de ósmosis inversa de alto flujo PURIKOR",
       "regular_price": 4812.34,
-      "promo_price": 4234.86,
-      "pct_desc": "12%",
+      "promo_price": null,
+      "pct_desc": "",
       "msi_ladder": [
         46176
       ],
@@ -150,8 +168,8 @@
       "sku_upper": "PK-EASY-600US",
       "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
       "regular_price": 7056.0,
-      "promo_price": 6209.28,
-      "pct_desc": "12%",
+      "promo_price": null,
+      "pct_desc": "",
       "msi_ladder": [
         3
       ],
@@ -202,8 +220,8 @@
       "sku_upper": "PK-EASY-400US",
       "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
       "regular_price": 6392.33,
-      "promo_price": 5625.25,
-      "pct_desc": "12%",
+      "promo_price": null,
+      "pct_desc": "",
       "msi_ladder": [
         46176
       ],
@@ -238,8 +256,8 @@
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 7755.22,
-      "promo_price": 6824.59,
-      "pct_desc": "12%",
+      "promo_price": null,
+      "pct_desc": "",
       "msi_ladder": [
         46176
       ],
