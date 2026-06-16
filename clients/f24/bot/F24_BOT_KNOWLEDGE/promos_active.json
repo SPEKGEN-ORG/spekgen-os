@@ -11,9 +11,11 @@
       "promo_price": 4897.35,
       "pct_desc": "55%",
       "msi_ladder": [
-        39967
+        3,
+        6,
+        2009
       ],
-      "msi_max": 39967,
+      "msi_max": 2009,
       "eligible_912": false,
       "vigencia": "2026-06-28",
       "vigente": true,
@@ -79,9 +81,10 @@
       "promo_price": null,
       "pct_desc": "",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -230,9 +233,10 @@
       "promo_price": 10363.5,
       "pct_desc": "55%",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -316,8 +320,8 @@
       "sku": "MP13C",
       "sku_upper": "MP13C",
       "producto": "Motor 13 hp 4 tiempos con reductor",
-      "regular_price": 9432.0,
-      "promo_price": 4244.4,
+      "regular_price": 17150.0,
+      "promo_price": 7717.5,
       "pct_desc": "55%",
       "msi_ladder": [
         3
@@ -328,7 +332,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4244.40"
+      "shopify_price": "7717.50"
     },
     {
       "sku": "PK-EASY-100CT",
@@ -338,9 +342,10 @@
       "promo_price": null,
       "pct_desc": "",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -356,9 +361,10 @@
       "promo_price": null,
       "pct_desc": "",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -392,9 +398,11 @@
       "promo_price": 29325.6,
       "pct_desc": "55%",
       "msi_ladder": [
-        39967
+        3,
+        6,
+        2009
       ],
-      "msi_max": 39967,
+      "msi_max": 2009,
       "eligible_912": false,
       "vigencia": "2026-06-28",
       "vigente": true,
@@ -410,9 +418,11 @@
       "promo_price": 5101.2,
       "pct_desc": "55%",
       "msi_ladder": [
-        39967
+        3,
+        6,
+        2009
       ],
-      "msi_max": 39967,
+      "msi_max": 2009,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -428,9 +438,10 @@
       "promo_price": 6733.8,
       "pct_desc": "55%",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -446,9 +457,11 @@
       "promo_price": 7272.9,
       "pct_desc": "55%",
       "msi_ladder": [
-        46176
+        3,
+        6,
+        2026
       ],
-      "msi_max": 46176,
+      "msi_max": 2026,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -482,15 +495,16 @@
       "promo_price": 7331.4,
       "pct_desc": "55%",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4032.45"
+      "shopify_price": "7331.40"
     },
     {
       "sku": "WIND43",
@@ -550,9 +564,10 @@
       "promo_price": null,
       "pct_desc": "",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -568,9 +583,10 @@
       "promo_price": null,
       "pct_desc": "",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -586,9 +602,10 @@
       "promo_price": null,
       "pct_desc": "",
       "msi_ladder": [
-        46176
+        3,
+        6
       ],
-      "msi_max": 46176,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
