@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-17 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+18 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -16,6 +16,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
+| `ATV-25` | $2,694 | $5,986 | 55% | — | no |  |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
@@ -603,7 +604,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Fumigar manualmente hectáreas enteras agota al operador, desperdicia agroquímicos y deja coberturas irregulares. El Kawashima AKE100P resuelve eso de raíz: es un remolque aspersor eléctrico de 100 litros que se acopla…
   PDP: https://ferre24.com.mx/products/kawashima-ake100p-aspersor-electrico-remolque-100-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_23b1c88a-6e8e-472e-a5fd-9a349d6ffef7.png
-- **Kawashima ATV-25** · `ATV-25` · $5,986 (antes $10,883) · Kawashima · ATV-25
+- **Kawashima ATV-25** · `ATV-25` · $2,694 (antes $5,986) · Kawashima · ATV-25 · ⚡PROMO
   Si ya sabes lo que es fumigar con gasolina — el jalón del cordón a las 7 de la mañana, el humo adentro del invernadero, el ruido que no para — el ATV-25 de Kawashima fue hecho para ti. · Es un aspersor eléctrico de 100…
   PDP: https://ferre24.com.mx/products/kawashima-atv-25-aspersor-electrico-100-litros-sin-ruido-sin-humo-sin-esfuerzo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cfb6b08d-00c7-4276-9b4c-d0043a7c4551.png
