@@ -28,7 +28,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-600N-US` | $7,345 | $8,346 | 12% | 46176 | no | 2026-06-30 |
 | `PK-EASY-600US` | $6,209 | $7,056 | 12% | 3 | no | 2026-06-30 |
 | `PK-EASY-800US` | $6,825 | $7,755 | 12% | 46176 | no | 2026-06-30 |
-| `PP7BK` | $8,708 | $9,675 | 10% | — | no | 2026-06-28 |
+| `PP7BK` | $15,831 | $17,590 | 10% | — | no | 2026-06-28 |
 
 ## Generadores (41)
 
@@ -238,7 +238,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Motor eficiente para jornadas completas en campo · El Kawashima KTR26 es un aspersor motorizado de mochila con motor 2 tiempos de 26 cc que trabaja hasta 7,500 RPM. Con 1.4 HP, está calibrado para su clase: no es un…
   PDP: https://ferre24.com.mx/products/kawashima-ktr26-aspersor-motorizado-26-cc-con-bomba-rompeolas-y-tanque-22-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_c80ae284-a140-4f20-8587-efbede155ee5.png
-- **Kit Parihuela Parazzini 7 HP** · `PP7BK` · $8,708 (antes $9,675) · Parazzini · PP7BK · ⚡PROMO
+- **Kit Parihuela Parazzini 7 HP** · `PP7BK` · $15,831 (antes $17,590) · Parazzini · PP7BK · ⚡PROMO
   El arranque de temporada no puede esperar. · Cuando llega el momento de fumigar, cada día cuenta. La parcela no espera a que consigas manguera, a que el motor agarre ritmo o a que la bomba se cale por uso brusco. El kit…
   PDP: https://ferre24.com.mx/products/kit-parihuela-parazzini-7-hp-bomba-bronce-100-m-de-manguera
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_de667a14-4b69-4d26-a7c4-73ecc9223bf7.png
