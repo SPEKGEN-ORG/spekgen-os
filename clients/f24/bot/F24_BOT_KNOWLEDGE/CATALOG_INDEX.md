@@ -27,7 +27,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $25,147 | 55% | 3 | no | 2026-06-28 |
-| `HP5.5N` | $2,561 | $5,691 | 55% | 3 | no | 2026-06-30 |
+| `HP5.5N` | $4,692 | $10,427 | 55% | 3 | no | 2026-06-30 |
 | `HP7N` | $10,364 | $23,030 | 55% | 46176 | no | 2026-06-30 |
 | `HPP110V` | $8,596 | $19,103 | 55% | 3 | no | 2026-06-30 |
 | `KAS-10P` | solo MSI | $4,004 |  | 3 | no | 2026-06-30 |
@@ -423,7 +423,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tienes grasa incrustada, fachada manchada o un patio que ninguna manguera puede con él? · La Power Hunt HPH7 es una hidrolavadora a gasolina de 7 HP que trabaja donde no llega la corriente eléctrica: obra en…
   PDP: https://ferre24.com.mx/products/hidrolavadora-power-hunt-hph7-7-hp-2-200-psi-sin-corriente
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2df8fe7a-f240-4d8d-a5f8-b828aebf9b6e.png
-- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $2,561 (antes $5,691) · Parazzini · HP5.5N · ⚡PROMO
+- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $4,692 (antes $10,427) · Parazzini · HP5.5N · ⚡PROMO
   ¿Cansado de pagar $80 a $150 cada vez que llevas tu coche al autolavado? ¿O de arrastrar extensiones eléctricas hasta el patio para que la hidrolavadora se quede corta de presión? · La Hidrolavadora a Gasolina Parazzini…
   PDP: https://ferre24.com.mx/products/hidrolavadora-gasolina-parazzini-hp5-5-2200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_96126fff-ef0f-42da-a91f-9915e00d6757.png

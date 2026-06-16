@@ -208,8 +208,8 @@
       "sku": "HP5.5N",
       "sku_upper": "HP5.5N",
       "producto": "Hidrolavadora a Gasolina Parazzini HP5.5 — 2,200 PSI / 5.5 HP / 4 Tiempos",
-      "regular_price": 5691.31,
-      "promo_price": 2561.09,
+      "regular_price": 10427.0,
+      "promo_price": 4692.15,
       "pct_desc": "55%",
       "msi_ladder": [
         3
@@ -238,7 +238,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6010.83"
+      "shopify_price": "10363.50"
     },
     {
       "sku": "HPP110V",
