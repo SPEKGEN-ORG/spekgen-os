@@ -58,6 +58,38 @@
       "shopify_price": "8649.00"
     },
     {
+      "sku": "FXL5B-200",
+      "sku_upper": "FXL5B-200",
+      "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp",
+      "regular_price": 67143.0,
+      "promo_price": 30214.35,
+      "pct_desc": "55%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "67143.00"
+    },
+    {
+      "sku": "FXL5B-200K120",
+      "sku_upper": "FXL5B-200K120",
+      "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp con flecha cardan de 120 cm",
+      "regular_price": 65728.0,
+      "promo_price": 29577.6,
+      "pct_desc": "55%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "65728.00"
+    },
+    {
       "sku": "GPH1000W",
       "sku_upper": "GPH1000W",
       "producto": "Generador Portátil Power Hunt 1000W — 6 Horas de Autonomía",

@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-19 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+21 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -19,6 +19,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ATV-25` | $4,897 | $10,883 | 55% | 39967 | no | 2026-06-28 |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
+| `FXL5B-200` | $30,214 | $67,143 | 55% | — | no |  |
+| `FXL5B-200K120` | $29,578 | $65,728 | 55% | — | no |  |
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $25,147 | 55% | 3 | no | 2026-06-28 |
@@ -582,14 +584,14 @@ Reglas de meses sin intereses (MSI) por promo:
   El campo no espera — tu aspersor tampoco debería. · Fumigar a mano es lento, desigual y agotador. Un equipo mal calibrado o con poca presión deja zonas sin cobertura: hongos, virosis y pérdidas que suman cada temporada.…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-parazzini-600-l-pto-50-hp-32-24-boquillas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f8d258d-c1b4-45e9-be56-b22da3fc16b6.png
-- **Aspersor Turbina Vertical Parazzini 25HP** · `FXL5B-200` · $67,143 (antes $126,686) · Parazzini · FXL5B-200
+- **Aspersor Turbina Vertical Parazzini 25HP** · `FXL5B-200` · $30,214 (antes $67,143) · Parazzini · FXL5B-200 · ⚡PROMO
   En cultivos de mediana y gran escala, la presión irregular destruye la uniformidad de cobertura — y con ella, la calidad de la cosecha. Un sistema de riego que pierde presión en zonas alejadas o con desnivel no es un…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-vertical-parazzini-25hp-riego-profesional-para-cultivos-extensivos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9dbd6315-5f37-4b08-89e5-7f869d819ae1.png
 - **Aspersor de Aguijones Parazzini XGT12-300** · `XGT12-300` · $41,930 (antes $83,859) · Parazzini · XGT12-300
   ¿Tus cultivos en filas reciben el agroquímico de forma dispareja? La cobertura irregular no solo desperdicia producto — debilita el cultivo, abre la puerta a plagas y hongos, y te obliga a pasar dos veces donde solo…
   PDP: https://ferre24.com.mx/products/aspersor-de-aguijones-parazzini-xgt12-300-300-l-para-tractor-tdf
-- **Aspersor de turbina vertical 200L Parazzini** · `FXL5B-200K120` · $65,728 (antes $131,456) · Parazzini · FXL5B-200K120
+- **Aspersor de turbina vertical 200L Parazzini** · `FXL5B-200K120` · $29,578 (antes $65,728) · Parazzini · FXL5B-200K120 · ⚡PROMO
   ¿Llevas dos o tres repases por huerta y las plagas siguen en el interior de la copa? El problema no es el químico — es la distribución. Un aguijón solo ataca de frente; una turbina vertical envuelve el árbol en 360° de…
   PDP: https://ferre24.com.mx/products/aspersor-de-turbina-vertical-200l-parazzini-acoplable-a-tractor-cardan-120-cm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_180c6e62-6b94-4966-95ea-a0bdd781a18d.png
