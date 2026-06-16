@@ -18,7 +18,7 @@ Reglas de meses sin intereses (MSI) por promo:
 |---|---|---|---|---|---|---|
 | `ATV-25` | $4,897 | $10,883 | 55% | 39967 | no | 2026-06-28 |
 | `BP4310` | $2,808 | $5,617 | 50% | — | no | 2026-06-30 |
-| `CK22CC` | $1,504 | $3,342 | 55% | — | no |  |
+| `CK22CC` | $1,504 | $3,342 | 55% | — | no | 2026-06-30 |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
@@ -27,14 +27,14 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $25,147 | 55% | 3 | no | 2026-06-28 |
-| `HP5.5N` | $2,561 | $5,691 | 55% | — | no |  |
-| `HP7N` | $6,011 | $13,357 | 55% | — | no |  |
-| `HPP110V` | $4,642 | $10,316 | 55% | — | no |  |
+| `HP5.5N` | $2,561 | $5,691 | 55% | 3 | no | 2026-06-30 |
+| `HP7N` | $6,011 | $13,357 | 55% | 46176 | no | 2026-06-30 |
+| `HPP110V` | $8,596 | $19,103 | 55% | 3 | no | 2026-06-30 |
 | `KAS-10P` | solo MSI | $4,004 |  | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | solo MSI | $6,211 |  | 3 | no | 2026-06-30 |
 | `KASPRO-16P` | solo MSI | $11,977 |  | 3 | no | 2026-06-30 |
 | `MINI60-12/1127` | solo MSI | $1,906 |  | — | no | 2026-06-30 |
-| `MP13C` | $4,244 | $9,432 | 55% | — | no |  |
+| `MP13C` | $4,244 | $9,432 | 55% | 3 | no | 2026-06-30 |
 | `PK-EASY-100CT` | solo MSI | $7,598 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-200US` | solo MSI | $4,812 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-400US` | solo MSI | $6,392 |  | 46176 | no | 2026-06-30 |
@@ -43,12 +43,12 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-800US` | solo MSI | $7,755 |  | 46176 | no | 2026-06-30 |
 | `PMR24` | $29,326 | $65,168 | 55% | 39967 | no | 2026-06-28 |
 | `PP170` | $5,101 | $11,336 | 55% | 39967 | no | 2026-06-30 |
-| `PP190` | $3,704 | $8,231 | 55% | — | no |  |
-| `PP190TT` | $4,000 | $8,889 | 55% | — | no |  |
+| `PP190` | $3,704 | $8,231 | 55% | 46176 | no | 2026-06-30 |
+| `PP190TT` | $4,000 | $8,889 | 55% | 46176 | no | 2026-06-30 |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
-| `SK772TPRO` | $4,032 | $8,961 | 55% | — | no |  |
-| `WIND43` | $0 | $0 | 55% | — | no |  |
-| `WINDBAG26` | $1,181 | $2,624 | 55% | — | no |  |
+| `SK772TPRO` | $4,032 | $8,961 | 55% | 3 | no | 2026-06-30 |
+| `WIND43` | $0 | $0 | 55% | 3 | no | 2026-06-30 |
+| `WINDBAG26` | $1,181 | $2,624 | 55% | — | no | 2026-06-30 |
 
 ## Generadores (41)
 
@@ -403,7 +403,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu operación exige resultados en el menor tiempo posible y no puedes perder horas en recargas de combustible o mantenimientos correctivos? La Parazzini Pro HPPE10 es la respuesta para servicios de limpieza profesional,…
   PDP: https://ferre24.com.mx/products/hidrolavadora-electrica-industrial-parazzini-pro-10-hp-234-bar
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_d4426c36-d6a3-4e35-8e6b-629ea7575bd3.png
-- **Hidrolavadora Eléctrica Parazzini HPP110V** · `HPP110V` · $4,642 (antes $10,316) · Parazzini · HPP110V · ⚡PROMO
+- **Hidrolavadora Eléctrica Parazzini HPP110V** · `HPP110V` · $8,596 (antes $19,103) · Parazzini · HPP110V · ⚡PROMO
   ¿Cansado de la suciedad incrustada en tu maquinaria o patio y del mantenimiento que requieren los equipos a gasolina? La Hidrolavadora Parazzini HPP110V te ofrece una solución de grado profesional con la conveniencia de…
   PDP: https://ferre24.com.mx/products/hidrolavadora-pro-110-120-v-monofasica-parazzini-hpp110v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_612e3146-af4b-4f4c-8f05-bbcc33fe4a9c.png

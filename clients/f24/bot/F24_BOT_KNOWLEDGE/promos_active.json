@@ -47,11 +47,11 @@
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3342.00"
+      "shopify_price": "1503.90"
     },
     {
       "sku": "ENERWELL-G1000",
@@ -211,14 +211,16 @@
       "regular_price": 5691.31,
       "promo_price": 2561.09,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "5691.00"
+      "shopify_price": "2561.09"
     },
     {
       "sku": "HP7N",
@@ -227,30 +229,34 @@
       "regular_price": 13357.4,
       "promo_price": 6010.83,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        46176
+      ],
+      "msi_max": 46176,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "13357.40"
+      "shopify_price": "6010.83"
     },
     {
       "sku": "HPP110V",
       "sku_upper": "HPP110V",
       "producto": "Hidrolavadora Pro 110 -120 V Monofasica — Parazzini HPP110V",
-      "regular_price": 10316.16,
-      "promo_price": 4642.27,
+      "regular_price": 19103.0,
+      "promo_price": 8596.35,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "10316.16"
+      "shopify_price": "4642.27"
     },
     {
       "sku": "KAS-10P",
@@ -313,14 +319,16 @@
       "regular_price": 9432.0,
       "promo_price": 4244.4,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "9432.00"
+      "shopify_price": "4244.40"
     },
     {
       "sku": "PK-EASY-100CT",
@@ -419,14 +427,16 @@
       "regular_price": 8231.0,
       "promo_price": 3703.95,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        46176
+      ],
+      "msi_max": 46176,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "8231.00"
+      "shopify_price": "3703.95"
     },
     {
       "sku": "PP190TT",
@@ -435,14 +445,16 @@
       "regular_price": 8889.0,
       "promo_price": 4000.05,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        46176
+      ],
+      "msi_max": 46176,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "8889.00"
+      "shopify_price": "4000.05"
     },
     {
       "sku": "PP7BK",
@@ -469,14 +481,16 @@
       "regular_price": 8961.0,
       "promo_price": 4032.45,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "8961.00"
+      "shopify_price": "4032.45"
     },
     {
       "sku": "WIND43",
@@ -485,10 +499,12 @@
       "regular_price": 0.0,
       "promo_price": 0.0,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
@@ -504,11 +520,11 @@
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "2624.00"
+      "shopify_price": "1180.80"
     },
     {
       "sku": "MINI60-12/1127",
