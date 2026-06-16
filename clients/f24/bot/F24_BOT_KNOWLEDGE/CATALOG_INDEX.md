@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-18 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+19 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -33,6 +33,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-600US` | solo MSI | $7,056 |  | 3 | no | 2026-06-30 |
 | `PK-EASY-800US` | solo MSI | $7,755 |  | 46176 | no | 2026-06-30 |
 | `PMR24` | $29,326 | $65,168 | 55% | 39967 | no | 2026-06-28 |
+| `PP170` | $5,101 | $11,336 | 55% | — | no |  |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
 
 ## Generadores (41)
@@ -530,7 +531,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Ya te cansaste de empujar la podadora? · Podar un jardín de 400 m² empujando una máquina de 29 kg no es ejercicio — es castigo. Y si el cesped lleva semanas sin corte o hay maleza mezclada, el problema se duplica:…
   PDP: https://ferre24.com.mx/products/podadora-autopropulsada-190cc-corte-21-bolsa-65l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_11d8dfe4-e70f-4e2d-ad31-36ae33fccafd.png
-- **Podadora Parazzini Pro 170cc Autopropulsada** · `PP170` · $2,806 (antes $6,235) · Parazzini Pro
+- **Podadora Parazzini Pro 170cc Autopropulsada** · `PP170` · $5,101 (antes $11,336) · Parazzini Pro · ⚡PROMO
   Domina tu jardín sin agotarte · Podar un terreno mediano con una máquina manual o una podadora eléctrica de baja potencia deja al usuario exhausto y sin terminar el trabajo. La Parazzini Pro PP170 resuelve ese problema…
   PDP: https://ferre24.com.mx/products/podadora-parazzini-pro-170cc-autopropulsada-cuchilla-21-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7b8620e1-6c8a-499f-acdb-c3bea639176f.png

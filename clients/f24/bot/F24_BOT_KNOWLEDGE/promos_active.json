@@ -236,6 +236,22 @@
       "shopify_price": "29325.60"
     },
     {
+      "sku": "PP170",
+      "sku_upper": "PP170",
+      "producto": "Podadora Parazzini Pro 170cc Autopropulsada — Cuchilla 21 Pulg",
+      "regular_price": 11336.0,
+      "promo_price": 5101.2,
+      "pct_desc": "55%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "2805.75"
+    },
+    {
       "sku": "PP7BK",
       "sku_upper": "PP7BK",
       "producto": "Kit parihuela 7 hp bronce con manguera de 8.5 mm",
