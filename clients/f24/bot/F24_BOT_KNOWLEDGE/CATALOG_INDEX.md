@@ -10,13 +10,13 @@
 33 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (3 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (6 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
-| `ATV-25` | $4,897 | $10,883 | 55% | 3, 6, 2009 | no | 2026-06-28 |
+| `ATV-25` | $4,897 | $10,883 | 55% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `BP4310` | $2,808 | $5,617 | 50% | — | no | 2026-06-30 |
 | `CK22CC` | $3,038 | $6,076 | 50% | — | no | 2026-06-30 |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
@@ -41,10 +41,10 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-600N-US` | solo MSI | $8,346 |  | 3, 6 | no | 2026-06-30 |
 | `PK-EASY-600US` | solo MSI | $7,056 |  | 3 | no | 2026-06-30 |
 | `PK-EASY-800US` | solo MSI | $7,755 |  | 3, 6 | no | 2026-06-30 |
-| `PMR24` | $29,326 | $65,168 | 55% | 3, 6, 2009 | no | 2026-06-28 |
-| `PP170` | $5,101 | $11,336 | 55% | 3, 6, 2009 | no | 2026-06-30 |
+| `PMR24` | $29,326 | $65,168 | 55% | 3, 6, 9 | **Sí** | 2026-06-28 |
+| `PP170` | $5,101 | $11,336 | 55% | 3, 6, 9 | **Sí** | 2026-06-30 |
 | `PP190` | $6,734 | $14,964 | 55% | 3, 6 | no | 2026-06-30 |
-| `PP190TT` | $7,273 | $16,162 | 55% | 3, 6, 2026 | no | 2026-06-30 |
+| `PP190TT` | $7,273 | $16,162 | 55% | 3, 6 | no | 2026-06-30 |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
 | `SK772TPRO` | $7,331 | $16,292 | 55% | 3, 6 | no | 2026-06-30 |
 | `WIND43` | $2,683 | $5,962 | 55% | 3 | no | 2026-06-30 |
@@ -545,7 +545,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Ya te cansaste de empujar la podadora? · Podar un jardín de 400 m² empujando una máquina de 29 kg no es ejercicio — es castigo. Y si el cesped lleva semanas sin corte o hay maleza mezclada, el problema se duplica:…
   PDP: https://ferre24.com.mx/products/podadora-autopropulsada-190cc-corte-21-bolsa-65l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_11d8dfe4-e70f-4e2d-ad31-36ae33fccafd.png
-- **Podadora Parazzini Pro 170cc Autopropulsada** · `PP170` · $5,101 (antes $11,336) · Parazzini Pro · ⚡PROMO
+- **Podadora Parazzini Pro 170cc Autopropulsada** · `PP170` · $5,101 (antes $11,336) · Parazzini Pro · ⚡PROMO 9MSI
   Domina tu jardín sin agotarte · Podar un terreno mediano con una máquina manual o una podadora eléctrica de baja potencia deja al usuario exhausto y sin terminar el trabajo. La Parazzini Pro PP170 resuelve ese problema…
   PDP: https://ferre24.com.mx/products/podadora-parazzini-pro-170cc-autopropulsada-cuchilla-21-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7b8620e1-6c8a-499f-acdb-c3bea639176f.png
@@ -557,7 +557,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Las ramas altas siempre terminan en lo mismo: una escalera tambaleándose en el pasto y un susto que pudo salir caro. El serrucho de poda Kawashima PG500 elimina ese riesgo por completo. Cortas ramas a hasta 5 metros de…
   PDP: https://ferre24.com.mx/products/serrucho-poda-telescopico-kawashima-pg500-alcance-5-m
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7e0319b3-e61c-43bf-949c-3699eec59094.png
-- **Tractor Podador Parazzini PMR24** · `PMR24` · $29,326 (antes $65,168) · Parazzini · PMR24 · ⚡PROMO
+- **Tractor Podador Parazzini PMR24** · `PMR24` · $29,326 (antes $65,168) · Parazzini · PMR24 · ⚡PROMO 9MSI
   Cortar terrenos medianos y grandes con una podadora pequeña es perder horas que no tienes. El PMR24 de Parazzini resuelve eso: motor RV225-x de 223cc, 4 tiempos OHV, encendido eléctrico y un ancho de corte de 24…
   PDP: https://ferre24.com.mx/products/tractor-podador-parazzini-pmr24-motor-223cc-4t-24-pulgadas-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5d3676cb-554b-4a88-9259-49bf8aff4d42.png
@@ -619,7 +619,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Fumigar manualmente hectáreas enteras agota al operador, desperdicia agroquímicos y deja coberturas irregulares. El Kawashima AKE100P resuelve eso de raíz: es un remolque aspersor eléctrico de 100 litros que se acopla…
   PDP: https://ferre24.com.mx/products/kawashima-ake100p-aspersor-electrico-remolque-100-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_23b1c88a-6e8e-472e-a5fd-9a349d6ffef7.png
-- **Kawashima ATV-25** · `ATV-25` · $4,897 (antes $10,883) · Kawashima · ATV-25 · ⚡PROMO
+- **Kawashima ATV-25** · `ATV-25` · $4,897 (antes $10,883) · Kawashima · ATV-25 · ⚡PROMO 9MSI
   Si ya sabes lo que es fumigar con gasolina — el jalón del cordón a las 7 de la mañana, el humo adentro del invernadero, el ruido que no para — el ATV-25 de Kawashima fue hecho para ti. · Es un aspersor eléctrico de 100…
   PDP: https://ferre24.com.mx/products/kawashima-atv-25-aspersor-electrico-100-litros-sin-ruido-sin-humo-sin-esfuerzo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cfb6b08d-00c7-4276-9b4c-d0043a7c4551.png

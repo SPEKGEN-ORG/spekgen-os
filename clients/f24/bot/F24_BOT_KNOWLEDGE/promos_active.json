@@ -13,10 +13,10 @@
       "msi_ladder": [
         3,
         6,
-        2009
+        9
       ],
-      "msi_max": 2009,
-      "eligible_912": false,
+      "msi_max": 9,
+      "eligible_912": true,
       "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
@@ -400,10 +400,10 @@
       "msi_ladder": [
         3,
         6,
-        2009
+        9
       ],
-      "msi_max": 2009,
-      "eligible_912": false,
+      "msi_max": 9,
+      "eligible_912": true,
       "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
@@ -420,10 +420,10 @@
       "msi_ladder": [
         3,
         6,
-        2009
+        9
       ],
-      "msi_max": 2009,
-      "eligible_912": false,
+      "msi_max": 9,
+      "eligible_912": true,
       "vigencia": "2026-06-30",
       "vigente": true,
       "estado_landing": "",
@@ -458,10 +458,9 @@
       "pct_desc": "55%",
       "msi_ladder": [
         3,
-        6,
-        2026
+        6
       ],
-      "msi_max": 2026,
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
