@@ -9,6 +9,11 @@
     "promo": 2808.5,
     "orig_compare_at": 3258.44
   },
+  "CK22CC": {
+    "base": 3342.0,
+    "promo": 1503.9,
+    "orig_compare_at": 6076.51
+  },
   "FXL5B-200": {
     "base": 130743.0,
     "promo": 58834.35,
@@ -39,6 +44,26 @@
     "promo": 11316.15,
     "orig_compare_at": 13830.85
   },
+  "HP5.5N": {
+    "base": 5691.31,
+    "promo": 2561.09,
+    "orig_compare_at": 10347.84
+  },
+  "HP7N": {
+    "base": 13357.4,
+    "promo": 6010.83,
+    "orig_compare_at": 23030.0
+  },
+  "HPP110V": {
+    "base": 10316.16,
+    "promo": 4642.27,
+    "orig_compare_at": 19104.0
+  },
+  "MP13C": {
+    "base": 9432.0,
+    "promo": 4244.4,
+    "orig_compare_at": 17149.45
+  },
   "PMR24": {
     "base": 65168.0,
     "promo": 29325.6,
@@ -49,9 +74,34 @@
     "promo": 5101.2,
     "orig_compare_at": 6235.0
   },
+  "PP190": {
+    "base": 8231.0,
+    "promo": 3703.95,
+    "orig_compare_at": 14964.6
+  },
+  "PP190TT": {
+    "base": 8889.0,
+    "promo": 4000.05,
+    "orig_compare_at": 16161.8
+  },
   "PP7BK": {
     "base": 17590.0,
     "promo": 7915.5,
     "orig_compare_at": 17590.89
+  },
+  "SK772TPRO": {
+    "base": 8961.0,
+    "promo": 4032.45,
+    "orig_compare_at": 16292.12
+  },
+  "WIND43": {
+    "base": 0.0,
+    "promo": 0.0,
+    "orig_compare_at": 1910.52
+  },
+  "WINDBAG26": {
+    "base": 2624.0,
+    "promo": 1180.8,
+    "orig_compare_at": 4770.35
   }
 }

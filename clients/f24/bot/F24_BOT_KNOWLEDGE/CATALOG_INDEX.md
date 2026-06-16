@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-31 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+33 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (3 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -18,7 +18,7 @@ Reglas de meses sin intereses (MSI) por promo:
 |---|---|---|---|---|---|---|
 | `ATV-25` | $4,897 | $10,883 | 55% | 39967 | no | 2026-06-28 |
 | `BP4310` | $2,808 | $5,617 | 50% | — | no | 2026-06-30 |
-| `CK22CC` | solo MSI | $3,342 |  | — | no |  |
+| `CK22CC` | $1,504 | $3,342 | 55% | — | no |  |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 55% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
@@ -27,13 +27,14 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $25,147 | 55% | 3 | no | 2026-06-28 |
-| `HP5.5N` | solo MSI | $5,691 |  | — | no |  |
-| `HP7N` | solo MSI | $13,357 |  | — | no |  |
-| `HPP110V` | solo MSI | $10,316 |  | — | no |  |
+| `HP5.5N` | $2,561 | $5,691 | 55% | — | no |  |
+| `HP7N` | $6,011 | $13,357 | 55% | — | no |  |
+| `HPP110V` | $4,642 | $10,316 | 55% | — | no |  |
 | `KAS-10P` | solo MSI | $4,004 |  | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | solo MSI | $6,211 |  | 3 | no | 2026-06-30 |
 | `KASPRO-16P` | solo MSI | $11,977 |  | 3 | no | 2026-06-30 |
 | `MINI60-12/1127` | solo MSI | $1,906 |  | — | no | 2026-06-30 |
+| `MP13C` | $4,244 | $9,432 | 55% | — | no |  |
 | `PK-EASY-100CT` | solo MSI | $7,598 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-200US` | solo MSI | $4,812 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-400US` | solo MSI | $6,392 |  | 46176 | no | 2026-06-30 |
@@ -42,11 +43,12 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-800US` | solo MSI | $7,755 |  | 46176 | no | 2026-06-30 |
 | `PMR24` | $29,326 | $65,168 | 55% | 39967 | no | 2026-06-28 |
 | `PP170` | $5,101 | $11,336 | 55% | 39967 | no | 2026-06-30 |
-| `PP190` | solo MSI | $8,231 |  | — | no |  |
-| `PP190TT` | solo MSI | $8,889 |  | — | no |  |
+| `PP190` | $3,704 | $8,231 | 55% | — | no |  |
+| `PP190TT` | $4,000 | $8,889 | 55% | — | no |  |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
-| `WIND43` | solo MSI | $0 |  | — | no |  |
-| `WINDBAG26` | solo MSI | $2,624 |  | — | no |  |
+| `SK772TPRO` | $4,032 | $8,961 | 55% | — | no |  |
+| `WIND43` | $0 | $0 | 55% | — | no |  |
+| `WINDBAG26` | $1,181 | $2,624 | 55% | — | no |  |
 
 ## Generadores (41)
 
@@ -401,7 +403,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu operación exige resultados en el menor tiempo posible y no puedes perder horas en recargas de combustible o mantenimientos correctivos? La Parazzini Pro HPPE10 es la respuesta para servicios de limpieza profesional,…
   PDP: https://ferre24.com.mx/products/hidrolavadora-electrica-industrial-parazzini-pro-10-hp-234-bar
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_d4426c36-d6a3-4e35-8e6b-629ea7575bd3.png
-- **Hidrolavadora Eléctrica Parazzini HPP110V** · `HPP110V` · $10,316 (antes $19,104) · Parazzini · HPP110V · ⚡PROMO
+- **Hidrolavadora Eléctrica Parazzini HPP110V** · `HPP110V` · $4,642 (antes $10,316) · Parazzini · HPP110V · ⚡PROMO
   ¿Cansado de la suciedad incrustada en tu maquinaria o patio y del mantenimiento que requieren los equipos a gasolina? La Hidrolavadora Parazzini HPP110V te ofrece una solución de grado profesional con la conveniencia de…
   PDP: https://ferre24.com.mx/products/hidrolavadora-pro-110-120-v-monofasica-parazzini-hpp110v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_612e3146-af4b-4f4c-8f05-bbcc33fe4a9c.png
@@ -421,11 +423,11 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tienes grasa incrustada, fachada manchada o un patio que ninguna manguera puede con él? · La Power Hunt HPH7 es una hidrolavadora a gasolina de 7 HP que trabaja donde no llega la corriente eléctrica: obra en…
   PDP: https://ferre24.com.mx/products/hidrolavadora-power-hunt-hph7-7-hp-2-200-psi-sin-corriente
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2df8fe7a-f240-4d8d-a5f8-b828aebf9b6e.png
-- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $5,691 (antes $10,348) · Parazzini · HP5.5N · ⚡PROMO
+- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $2,561 (antes $5,691) · Parazzini · HP5.5N · ⚡PROMO
   ¿Cansado de pagar $80 a $150 cada vez que llevas tu coche al autolavado? ¿O de arrastrar extensiones eléctricas hasta el patio para que la hidrolavadora se quede corta de presión? · La Hidrolavadora a Gasolina Parazzini…
   PDP: https://ferre24.com.mx/products/hidrolavadora-gasolina-parazzini-hp5-5-2200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_96126fff-ef0f-42da-a91f-9915e00d6757.png
-- **Hidrolavadora a Gasolina Parazzini HP7N** · `HP7N` · $13,357 (antes $23,030) · Parazzini · HP7N · ⚡PROMO
+- **Hidrolavadora a Gasolina Parazzini HP7N** · `HP7N` · $6,011 (antes $13,357) · Parazzini · HP7N · ⚡PROMO
   ¿Necesitas limpiar superficies grandes, maquinaria pesada o áreas remotas pero siempre te detiene la falta de conexiones eléctricas cercanas? La hidrolavadora a gasolina Parazzini HP7N está diseñada exactamente para…
   PDP: https://ferre24.com.mx/products/hidrolavadora-a-gasolina-parazzini-hp7n-7-hp-2-700-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4322125b-beab-4ce8-a934-dc7770766dc0.png
@@ -539,7 +541,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Ya te cansaste de empujar la podadora? · Podar un jardín de 400 m² empujando una máquina de 29 kg no es ejercicio — es castigo. Y si el cesped lleva semanas sin corte o hay maleza mezclada, el problema se duplica:…
   PDP: https://ferre24.com.mx/products/podadora-autopropulsada-parazzini-pro-190cc-21-bolsa-65l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_21dffdb2-eb41-433c-8e73-a9f511dc0a6e.png
-- **Podadora Autopropulsada 190cc** · `PP190TT` · $8,889 (antes $16,162) · Parazzini Pro · PP190TT · ⚡PROMO
+- **Podadora Autopropulsada 190cc** · `PP190TT` · $4,000 (antes $8,889) · Parazzini Pro · PP190TT · ⚡PROMO
   ¿Ya te cansaste de empujar la podadora? · Podar un jardín de 400 m² empujando una máquina de 29 kg no es ejercicio — es castigo. Y si el cesped lleva semanas sin corte o hay maleza mezclada, el problema se duplica:…
   PDP: https://ferre24.com.mx/products/podadora-autopropulsada-190cc-corte-21-bolsa-65l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_11d8dfe4-e70f-4e2d-ad31-36ae33fccafd.png
@@ -547,7 +549,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Domina tu jardín sin agotarte · Podar un terreno mediano con una máquina manual o una podadora eléctrica de baja potencia deja al usuario exhausto y sin terminar el trabajo. La Parazzini Pro PP170 resuelve ese problema…
   PDP: https://ferre24.com.mx/products/podadora-parazzini-pro-170cc-autopropulsada-cuchilla-21-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7b8620e1-6c8a-499f-acdb-c3bea639176f.png
-- **Podadora a Gasolina 190cc Parazzini Pro PP190** · `PP190` · $8,231 (antes $14,965) · Parazzini Pro · PP190 · ⚡PROMO
+- **Podadora a Gasolina 190cc Parazzini Pro PP190** · `PP190` · $3,704 (antes $8,231) · Parazzini Pro · PP190 · ⚡PROMO
   La Parazzini Pro PP190 es la podadora a gasolina pensada para quien quiere un césped impecable sin pagar el precio de una autopropulsada. Su motor 190cc OHV de 5.5 HP gira a 3,600 rpm con arranque manual a cuerda:…
   PDP: https://ferre24.com.mx/products/podadora-gasolina-190cc-21-parazzini-pro-pp190
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f5429efb-be77-4d54-9f7f-18fe68e88d6d.png
@@ -663,7 +665,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Mangueras y Accesorios (4)
 
-- **Cortasetos 22 cc Kawashima Pro** · `CK22CC` · $3,342 (antes $6,077) · Kawashima Pro · CK22CC · ⚡PROMO
+- **Cortasetos 22 cc Kawashima Pro** · `CK22CC` · $1,504 (antes $3,342) · Kawashima Pro · CK22CC · ⚡PROMO
   ### El cortasetos que llega listo — y te respalda después · El Kawashima Pro CK22CC es un cortasetos a gasolina de 22 cc diseñado para quien necesita resultados, no sorpresas. Motor 2 tiempos con encendido retráctil…
   PDP: https://ferre24.com.mx/products/cortasetos-22-cc-kawashima-pro-kit-listo-refacciones-locales
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66a7a0a9-36ca-41e2-a499-4d2270471469.png
@@ -873,7 +875,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Otros (14)
 
-- **Motor Parazzini MP13C** · `MP13C` · $9,432 (antes $17,149) · Parazzini · MP13C
+- **Motor Parazzini MP13C** · `MP13C` · $4,244 (antes $9,432) · Parazzini · MP13C · ⚡PROMO
   Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mp13c-13-hp-4t-con-caja-reductora-integrada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f0786bf-a462-4d4b-abba-f2ea3fe39f00.png
@@ -900,7 +902,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Limpiar el jardín con rastrillo toma horas. Con el soplador Kawashima WIND26, el mismo trabajo se hace en minutos. · Potencia real donde más importa. Su motor 2 tiempos de 26 cc alcanza hasta 7,500 RPM y mueve 650 m³ de…
   PDP: https://ferre24.com.mx/products/soplador-kawashima-26-cc-motor-2t-650-m-h-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_5ec7fcc5-79bd-48fa-8282-e6753d13698b.png
-- **Soplador de Mochila Profesional 77cc** · `SK772TPRO` · $8,961 (antes $16,292) · Kawashima Pro · SK772TPRO
+- **Soplador de Mochila Profesional 77cc** · `SK772TPRO` · $4,032 (antes $8,961) · Kawashima Pro · SK772TPRO · ⚡PROMO
   Cada hora que pierdes con una herramienta sin potencia es dinero que no cobras. El jardinero o landscaper profesional sabe que el tiempo entre trabajo y trabajo es lo que separa un día rentable de uno mediocre. Con una…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-profesional-77cc-kawashima-pro-sk772tpro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_28b16a1d-b758-478b-a2fa-da0d18c08d4a.png
@@ -1020,7 +1022,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Sopladores a gasolina (1)
 
-- **Soplador-aspirador Kawashima 26 cc con bolsa recolectora** · `WINDBAG26` · $2,624 (antes $4,770) · Kawashima · WINDBAG26 · ⚡PROMO
+- **Soplador-aspirador Kawashima 26 cc con bolsa recolectora** · `WINDBAG26` · $1,181 (antes $2,624) · Kawashima · WINDBAG26 · ⚡PROMO
   Limpiar el jardín a mano lleva horas. Un soplador sin bolsa solo mueve el problema de lugar. Y contratar servicio de jardinería cada semana sale caro. El WINDBAG26 de Kawashima resuelve los tres problemas con una sola…
   PDP: https://ferre24.com.mx/products/soplador-aspirador-kawashima-26-cc-bolsa-recolectora
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/secundaria_001.png
