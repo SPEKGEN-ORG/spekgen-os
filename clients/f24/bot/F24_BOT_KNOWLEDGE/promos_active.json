@@ -37,7 +37,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "5449.16"
+      "shopify_price": "7784.10"
     },
     {
       "sku": "KAS-10P",
@@ -146,6 +146,22 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "6209.28"
+    },
+    {
+      "sku": "PP7BK",
+      "sku_upper": "PP7BK",
+      "producto": "Kit parihuela 7 hp bronce con manguera de 8.5 mm",
+      "regular_price": 9675.0,
+      "promo_price": 8707.5,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "9675.00"
     },
     {
       "sku": "MINI60-12/1127",
