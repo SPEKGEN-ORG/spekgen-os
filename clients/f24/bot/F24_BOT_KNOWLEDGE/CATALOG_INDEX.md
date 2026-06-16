@@ -48,7 +48,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
 | `SK772TPRO` | $4,032 | $8,961 | 55% | 3 | no | 2026-06-30 |
 | `WIND43` | $0 | $0 | 55% | 3 | no | 2026-06-30 |
-| `WINDBAG26` | $1,181 | $2,624 | 55% | — | no | 2026-06-30 |
+| `WINDBAG26` | $2,385 | $4,770 | 50% | — | no | 2026-06-30 |
 
 ## Generadores (41)
 
@@ -1022,7 +1022,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Sopladores a gasolina (1)
 
-- **Soplador-aspirador Kawashima 26 cc con bolsa recolectora** · `WINDBAG26` · $1,181 (antes $2,624) · Kawashima · WINDBAG26 · ⚡PROMO
+- **Soplador-aspirador Kawashima 26 cc con bolsa recolectora** · `WINDBAG26` · $2,385 (antes $4,770) · Kawashima · WINDBAG26 · ⚡PROMO
   Limpiar el jardín a mano lleva horas. Un soplador sin bolsa solo mueve el problema de lugar. Y contratar servicio de jardinería cada semana sale caro. El WINDBAG26 de Kawashima resuelve los tres problemas con una sola…
   PDP: https://ferre24.com.mx/products/soplador-aspirador-kawashima-26-cc-bolsa-recolectora
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/secundaria_001.png

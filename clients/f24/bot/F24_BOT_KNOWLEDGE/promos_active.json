@@ -454,7 +454,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4000.05"
+      "shopify_price": "7272.90"
     },
     {
       "sku": "PP7BK",
@@ -514,9 +514,9 @@
       "sku": "WINDBAG26",
       "sku_upper": "WINDBAG26",
       "producto": "Soplador-aspirador Kawashima 26 cc con bolsa recolectora",
-      "regular_price": 2624.0,
-      "promo_price": 1180.8,
-      "pct_desc": "55%",
+      "regular_price": 4770.0,
+      "promo_price": 2385.0,
+      "pct_desc": "50%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
