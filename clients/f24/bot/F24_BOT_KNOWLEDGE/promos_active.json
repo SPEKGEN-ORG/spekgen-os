@@ -7,17 +7,19 @@
       "sku": "ATV-25",
       "sku_upper": "ATV-25",
       "producto": "Aspersor electrico 100 litros",
-      "regular_price": 5985.88,
-      "promo_price": 2693.65,
+      "regular_price": 10883.0,
+      "promo_price": 4897.35,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        46176
+      ],
+      "msi_max": 46176,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "5986.00"
+      "shopify_price": "2693.65"
     },
     {
       "sku": "ENERWELL-G1000",
