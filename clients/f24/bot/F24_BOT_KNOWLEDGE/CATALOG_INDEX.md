@@ -112,7 +112,7 @@ Reglas de meses sin intereses (MSI) por promo:
   El Generador Portátil ENERWELL G1000 es la solución compacta y confiable para quienes necesitan energía eléctrica en cualquier lugar. Con tecnología inverter , entrega corriente limpia y estable que protege tus…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-1000w-enerwell-inverter
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a49dbcb0-94a0-4d4f-a9d8-e6c0efc46f2a.png
-- **Generador Portátil Power Hunt 1000W** · `GPH1000W` · $2,127 (antes $4,254) · Power Hunt · GPH1000W
+- **Generador Portátil Power Hunt 1000W** · `GPH1000W` · $1,064 (antes $2,127) · Power Hunt · GPH1000W
   ¿Se fue la luz y no tienes con qué cargar el teléfono, encender la lámpara o seguir trabajando? El generador portátil Power Hunt GPH1000W te da 1,000 W de potencia donde la red eléctrica no llega. · Con su motor de 2…
   PDP: https://ferre24.com.mx/products/generador-portatil-power-hunt-1000w-6-horas-autonomia
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d5e7e2f4-b266-45a2-a7e0-7f56b317604a.png

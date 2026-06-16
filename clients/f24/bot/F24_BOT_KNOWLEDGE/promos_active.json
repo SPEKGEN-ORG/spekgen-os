@@ -236,5 +236,11 @@
       "shopify_price": "6824.59"
     }
   ],
-  "excluidos_sin_pdp": []
+  "excluidos_sin_pdp": [
+    {
+      "sku": "PT6.5AK",
+      "producto": "Parihuela 6.5hp con manguera 8.5 mm",
+      "estado_landing": ""
+    }
+  ]
 }
