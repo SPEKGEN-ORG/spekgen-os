@@ -154,14 +154,16 @@
       "regular_price": 17590.0,
       "promo_price": 7915.5,
       "pct_desc": "55%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
       "eligible_912": false,
       "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "15831.00"
+      "shopify_price": "7915.50"
     },
     {
       "sku": "MINI60-12/1127",
