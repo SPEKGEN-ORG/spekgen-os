@@ -16,7 +16,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
-| `ATV-25` | $4,897 | $10,883 | 55% | 46176 | no | 2026-06-28 |
+| `ATV-25` | $4,897 | $10,883 | 55% | 39967 | no | 2026-06-28 |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
@@ -530,7 +530,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Ya te cansaste de empujar la podadora? · Podar un jardín de 400 m² empujando una máquina de 29 kg no es ejercicio — es castigo. Y si el cesped lleva semanas sin corte o hay maleza mezclada, el problema se duplica:…
   PDP: https://ferre24.com.mx/products/podadora-autopropulsada-190cc-corte-21-bolsa-65l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_11d8dfe4-e70f-4e2d-ad31-36ae33fccafd.png
-- **Podadora Parazzini Pro 170cc Autopropulsada** · `PP170` · $6,235 (antes $11,336) · Parazzini Pro
+- **Podadora Parazzini Pro 170cc Autopropulsada** · `PP170` · $2,806 (antes $6,235) · Parazzini Pro
   Domina tu jardín sin agotarte · Podar un terreno mediano con una máquina manual o una podadora eléctrica de baja potencia deja al usuario exhausto y sin terminar el trabajo. La Parazzini Pro PP170 resuelve ese problema…
   PDP: https://ferre24.com.mx/products/podadora-parazzini-pro-170cc-autopropulsada-cuchilla-21-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7b8620e1-6c8a-499f-acdb-c3bea639176f.png
