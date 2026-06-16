@@ -1,0 +1,49 @@
+{{ 'f24-promo.js' | asset_url | script_tag }}
+
+{%- comment -%} Datos vivos: contador + fecha desde la colección/metafield (sync_f24_landing.py). {%- endcomment -%}
+{%- liquid
+  assign _pcol = collections['promociones-vigentes']
+  assign promo_count = _pcol.products_count
+  assign promo_end_iso = _pcol.metafields.custom.promo_end.value | default: section.settings.end_iso
+  assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+-%}
+
+<style>
+  .f24p-bar{position:sticky;top:0;z-index:80;background:linear-gradient(90deg,#ffb800,#ff8a00);color:#0a0a0a;font-weight:700;letter-spacing:.02em;border-bottom:1px solid rgba(0,0,0,.08);overflow:hidden}
+  .f24p-bar__wrap{max-width:1240px;margin:0 auto;padding:9px clamp(14px,2vw,22px);display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;position:relative}
+  .f24p-bar__text{display:inline-flex;align-items:center;gap:8px;font-size:.92rem}
+  .f24p-bar__text svg{width:15px;height:15px;flex-shrink:0;animation:f24p-pulse 1.6s ease-in-out infinite}
+  @keyframes f24p-pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.18);opacity:.75}}
+  .f24p-bar__cd{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.12);color:#0a0a0a;font-weight:800;padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums;font-size:.88rem}
+  .f24p-bar__cd b{font-weight:800}
+  .f24p-bar__close{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:transparent;border:0;color:rgba(0,0,0,.5);cursor:pointer;padding:6px;line-height:0;border-radius:6px;transition:background .15s ease}
+  .f24p-bar__close:hover{background:rgba(0,0,0,.1)}
+  .f24p-bar__close svg{width:14px;height:14px}
+  @media (max-width:560px){.f24p-bar__close{display:none}.f24p-bar__wrap{justify-content:flex-start}}
+</style>
+
+<div class="f24p-bar" data-promo-bar data-countdown-end="{{ promo_end_iso }}">
+  <div class="f24p-bar__wrap">
+    <span class="f24p-bar__text">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      {{ section.settings.message | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}
+    </span>
+    <span class="f24p-bar__cd">
+      <b data-cd-d>00</b>d <b data-cd-h>00</b>h <b data-cd-m>00</b>m <b data-cd-s>00</b>s
+    </span>
+    <button class="f24p-bar__close" data-promo-bar-close aria-label="Cerrar aviso">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "F24 Promo · Bar sticky",
+  "settings": [
+    { "type": "text", "id": "message", "label": "Mensaje", "default": "3·6·9 MSI sin intereses · termina el 14 de junio" },
+    { "type": "text", "id": "end_iso", "label": "Fecha fin ISO (ej. 2026-06-14T23:59:59-06:00)", "default": "2026-06-14T23:59:59-06:00" }
+  ],
+  "presets": [{ "name": "F24 Promo · Bar sticky" }]
+}
+{% endschema %}

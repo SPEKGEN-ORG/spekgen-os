@@ -1,0 +1,66 @@
+{{ 'f24-maq.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%} Datos vivos de la promo (sync_f24_landing.py). Inerte fuera de /pages/promociones: si los settings no traen tokens, el replace no hace nada. {%- endcomment -%}
+{%- liquid
+  assign _pcol = collections['promociones-vigentes']
+  assign promo_count = _pcol.products_count
+  assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+-%}
+
+<div class="f24m">
+  <section class="f24m-sec f24m-proof">
+    <div class="f24m-wrap">
+      <div class="f24m-anim">
+        <span class="f24m-eyebrow">{{ section.settings.eyebrow }}</span>
+        <h2 class="f24m-h2">{{ section.settings.heading }} <span class="y">{{ section.settings.heading_accent }}</span></h2>
+        <p class="f24m-lead">{{ section.settings.subheading }}</p>
+      </div>
+
+      <div class="f24m-proof__stats">
+        <div class="f24m-stat f24m-anim"><div class="f24m-stat__v"><span data-countup="{{ section.settings.s1_v }}">{{ section.settings.s1_v }}</span><span class="y">{{ section.settings.s1_v2 }}</span></div><div class="f24m-stat__t">{{ section.settings.s1_t }}</div></div>
+        <div class="f24m-stat f24m-anim d2"><div class="f24m-stat__v"><span data-countup="{{ section.settings.s2_v }}">{{ section.settings.s2_v }}</span><span class="y">{{ section.settings.s2_v2 }}</span></div><div class="f24m-stat__t">{{ section.settings.s2_t }}</div></div>
+        <div class="f24m-stat f24m-anim d3"><div class="f24m-stat__v"><span data-countup="{{ section.settings.s3_v }}">{{ section.settings.s3_v }}</span><span class="y">{{ section.settings.s3_v2 }}</span></div><div class="f24m-stat__t">{{ section.settings.s3_t }}</div></div>
+        {%- assign s4_v = section.settings.s4_v | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha -%}
+        <div class="f24m-stat f24m-anim d4"><div class="f24m-stat__v"><span data-countup="{{ s4_v }}">{{ s4_v }}</span><span class="y">{{ section.settings.s4_v2 }}</span></div><div class="f24m-stat__t">{{ section.settings.s4_t }}</div></div>
+      </div>
+
+      <div class="f24m-proof__seals f24m-anim d2">
+        {%- assign seals = section.settings.seals | split: ',' -%}
+        {%- for s in seals -%}
+          <span class="f24m-seal">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            {{ s | strip }}
+          </span>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "F24 Maq · Prueba",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Por qué nos eligen" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Operamos desde Guadalajara," },
+    { "type": "text", "id": "heading_accent", "label": "Título acento", "default": "entregamos a todo México" },
+    { "type": "textarea", "id": "subheading", "label": "Subtítulo", "default": "Red logística propia + paquetería. Specs reales y stock real — lo que ves es lo que llega, con respaldo de fábrica." },
+    { "type": "header", "content": "KPIs" },
+    { "type": "text", "id": "s1_v", "label": "KPI 1 valor", "default": "32" },
+    { "type": "text", "id": "s1_v2", "label": "KPI 1 acento (opcional)" },
+    { "type": "text", "id": "s1_t", "label": "KPI 1 etiqueta", "default": "Estados con cobertura" },
+    { "type": "text", "id": "s2_v", "label": "KPI 2 valor", "default": "24" },
+    { "type": "text", "id": "s2_v2", "label": "KPI 2 acento", "default": "h" },
+    { "type": "text", "id": "s2_t", "label": "KPI 2 etiqueta", "default": "Zona rápida GDL/Mich" },
+    { "type": "text", "id": "s3_v", "label": "KPI 3 valor", "default": "2 500" },
+    { "type": "text", "id": "s3_v2", "label": "KPI 3 acento", "default": "+" },
+    { "type": "text", "id": "s3_t", "label": "KPI 3 etiqueta", "default": "Códigos postales" },
+    { "type": "text", "id": "s4_v", "label": "KPI 4 valor", "default": "70" },
+    { "type": "text", "id": "s4_v2", "label": "KPI 4 acento", "default": "+" },
+    { "type": "text", "id": "s4_t", "label": "KPI 4 etiqueta", "default": "Equipos en catálogo" },
+    { "type": "header", "content": "Sellos" },
+    { "type": "textarea", "id": "seals", "label": "Sellos (coma)", "default": "Garantía de fábrica, Factura disponible, Pago seguro Shopify, Asesoría técnica 1-a-1, Specs reales · stock real" }
+  ],
+  "presets": [{ "name": "F24 Maq · Prueba" }]
+}
+{% endschema %}

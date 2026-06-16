@@ -1,0 +1,123 @@
+{{ 'f24-promo.js' | asset_url | script_tag }}
+
+{%- comment -%} Datos vivos: contador + fecha desde la colección/metafield (sync_f24_landing.py). {%- endcomment -%}
+{%- liquid
+  assign _pcol = collections['promociones-vigentes']
+  assign promo_count = _pcol.products_count
+  assign promo_end_iso = _pcol.metafields.custom.promo_end.value | default: section.settings.end_iso
+  assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+-%}
+
+{%- assign wa_msg = section.settings.wa_msg | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | url_encode -%}
+{%- assign wa_href = section.settings.wa_url | append: '?text=' | append: wa_msg -%}
+
+<style>
+  .f24p-hero{position:relative;background:#08090b;color:#fff;overflow:hidden;padding-block:clamp(72px,9vw,140px)}
+  .f24p-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,rgba(255,184,0,.25),transparent 50%),radial-gradient(circle at 80% 80%,rgba(255,138,0,.18),transparent 55%);z-index:0}
+  .f24p-hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);z-index:0;opacity:.6}
+  .f24p-hero__wrap{position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:0 clamp(14px,2vw,22px);text-align:center}
+  .f24p-hero__eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(255,184,0,.14);color:#ffb800;border:1px solid rgba(255,184,0,.35);border-radius:999px;font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+  .f24p-hero__eyebrow svg{width:14px;height:14px;animation:f24p-spin 6s linear infinite}
+  @keyframes f24p-spin{to{transform:rotate(360deg)}}
+  .f24p-hero__title{font-family:inherit;font-weight:900;font-size:clamp(2.4rem,7vw,5.2rem);line-height:1.02;letter-spacing:-.02em;margin:18px auto 14px;max-width:14ch}
+  .f24p-hero__title em{font-style:normal;background:linear-gradient(135deg,#ffb800,#ff6a00);background-clip:text;-webkit-background-clip:text;color:transparent;display:inline-block}
+  .f24p-hero__lead{color:rgba(255,255,255,.78);max-width:62ch;margin:0 auto 30px;font-size:clamp(1rem,1.4vw,1.16rem);line-height:1.55}
+  .f24p-cd{display:inline-grid;grid-auto-flow:column;gap:clamp(10px,1.4vw,18px);padding:18px clamp(16px,2vw,28px);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin:8px auto 28px}
+  .f24p-cd__cell{min-width:64px;text-align:center}
+  .f24p-cd__num{font-weight:900;font-size:clamp(2rem,4.4vw,3.4rem);line-height:1;color:#fff;font-variant-numeric:tabular-nums;background:linear-gradient(180deg,#fff,rgba(255,255,255,.55));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .f24p-cd__lbl{margin-top:6px;color:rgba(255,255,255,.55);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase}
+  .f24p-cd__sep{align-self:center;color:rgba(255,255,255,.25);font-weight:700;font-size:1.6rem;margin-top:-22px}
+  .f24p-cd[data-expired="1"] .f24p-cd__num{color:#888;-webkit-text-fill-color:#888}
+  .f24p-hero__ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+  .f24p-btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;padding:14px 22px;border-radius:12px;text-decoration:none;font-size:.98rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;border:0;cursor:pointer}
+  .f24p-btn--gold{background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;box-shadow:0 10px 30px rgba(255,138,0,.35)}
+  .f24p-btn--gold:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(255,138,0,.5)}
+  .f24p-btn--ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.22)}
+  .f24p-btn--ghost:hover{background:rgba(255,255,255,.06)}
+  .f24p-btn svg{width:18px;height:18px}
+  .f24p-hero__trust{margin-top:32px;display:flex;justify-content:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap;color:rgba(255,255,255,.7);font-size:.88rem}
+  .f24p-hero__trust span{display:inline-flex;align-items:center;gap:6px}
+  .f24p-hero__trust svg{width:14px;height:14px;color:#ffb800}
+  .f24p-marquee{margin-top:42px;overflow:hidden;border-block:1px solid rgba(255,255,255,.08);padding-block:14px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .f24p-marquee__track{display:flex;gap:42px;animation:f24p-mq 38s linear infinite;width:max-content}
+  @keyframes f24p-mq{to{transform:translateX(-50%)}}
+  .f24p-marquee__item{color:rgba(255,255,255,.55);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.86rem;display:inline-flex;align-items:center;gap:14px;white-space:nowrap}
+  .f24p-marquee__item::after{content:"●";color:#ffb800;font-size:.6em}
+  .f24p-rev{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .f24p-rev.is-in{opacity:1;transform:none}
+  .f24p-rev[data-d="1"]{transition-delay:.08s}
+  .f24p-rev[data-d="2"]{transition-delay:.16s}
+  .f24p-rev[data-d="3"]{transition-delay:.24s}
+  .f24p-rev[data-d="4"]{transition-delay:.32s}
+</style>
+
+<section class="f24p-hero">
+  <div class="f24p-hero__wrap">
+    <div class="f24p-hero__eyebrow f24p-rev">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      {{ section.settings.eyebrow | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}
+    </div>
+    <h1 class="f24p-hero__title f24p-rev" data-d="1">{{ section.settings.title_pre }} <em>{{ section.settings.title_hl }}</em> {{ section.settings.title_post }}</h1>
+    <p class="f24p-hero__lead f24p-rev" data-d="2">{{ section.settings.subtitle | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</p>
+
+    <div class="f24p-cd f24p-rev" data-d="3" data-countdown-end="{{ promo_end_iso }}">
+      <div class="f24p-cd__cell"><div class="f24p-cd__num" data-cd-d>00</div><div class="f24p-cd__lbl">Días</div></div>
+      <div class="f24p-cd__sep">:</div>
+      <div class="f24p-cd__cell"><div class="f24p-cd__num" data-cd-h>00</div><div class="f24p-cd__lbl">Horas</div></div>
+      <div class="f24p-cd__sep">:</div>
+      <div class="f24p-cd__cell"><div class="f24p-cd__num" data-cd-m>00</div><div class="f24p-cd__lbl">Min</div></div>
+      <div class="f24p-cd__sep">:</div>
+      <div class="f24p-cd__cell"><div class="f24p-cd__num" data-cd-s>00</div><div class="f24p-cd__lbl">Seg</div></div>
+    </div>
+
+    <div class="f24p-hero__ctas f24p-rev" data-d="3">
+      <a href="#promo-grid" class="f24p-btn f24p-btn--gold">
+        {{ section.settings.cta_primary | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+      <a href="{{ wa_href }}" target="_blank" rel="noopener" class="f24p-btn f24p-btn--ghost" data-wa data-wa-group="promo-hero">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.789-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        {{ section.settings.cta_secondary }}
+      </a>
+    </div>
+
+    <div class="f24p-hero__trust f24p-rev" data-d="4">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust1 }}</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust2 }}</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust3 }}</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust4 }}</span>
+    </div>
+  </div>
+
+  <div class="f24p-marquee" aria-hidden="true">
+    <div class="f24p-marquee__track">
+      {%- assign items = section.settings.marquee | split: "," -%}
+      {%- for i in items -%}<span class="f24p-marquee__item">{{ i | strip }}</span>{%- endfor -%}
+      {%- for i in items -%}<span class="f24p-marquee__item">{{ i | strip }}</span>{%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "F24 Promo · Hero",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Termina el 14 de junio · 11:59 PM" },
+    { "type": "text", "id": "title_pre", "label": "Título — antes", "default": "Llévatelo a" },
+    { "type": "text", "id": "title_hl", "label": "Título — destacado", "default": "9 MSI" },
+    { "type": "text", "id": "title_post", "label": "Título — después", "default": "sin intereses" },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "8 equipos profesionales seleccionados, precio directo marcado y financiamiento extendido a 3, 6 o 9 meses sin intereses. La promoción cierra el 14 de junio — después vuelve a precio normal." },
+    { "type": "text", "id": "end_iso", "label": "Fecha fin ISO (countdown)", "default": "2026-06-14T23:59:59-06:00" },
+    { "type": "text", "id": "cta_primary", "label": "CTA primario", "default": "Ver los 8 productos en promoción" },
+    { "type": "text", "id": "cta_secondary", "label": "CTA secundario", "default": "Cotizar por WhatsApp" },
+    { "type": "text", "id": "wa_url", "label": "URL WhatsApp", "default": "https://wa.me/523317903630" },
+    { "type": "textarea", "id": "wa_msg", "label": "Mensaje WA", "default": "Hola Ferre24, vi sus promociones a 3, 6 y 9 MSI. Quiero cotizar antes de que termine." },
+    { "type": "text", "id": "trust1", "label": "Trust 1", "default": "3·6·9 MSI sin comisión" },
+    { "type": "text", "id": "trust2", "label": "Trust 2", "default": "Envío gratis nacional" },
+    { "type": "text", "id": "trust3", "label": "Trust 3", "default": "Factura disponible" },
+    { "type": "text", "id": "trust4", "label": "Trust 4", "default": "Stock real" },
+    { "type": "text", "id": "marquee", "label": "Marquee (separado por comas)", "default": "3 MSI sin comisión, 6 MSI sin comisión, 9 MSI selecto, Envío gratis, Factura, Stock real, Asesoría 1-a-1, Precio directo" }
+  ],
+  "presets": [{ "name": "F24 Promo · Hero" }]
+}
+{% endschema %}

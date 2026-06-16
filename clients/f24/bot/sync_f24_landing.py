@@ -10,10 +10,14 @@ marca promos en "📦 STOCK Y PROMOS" y esa pestaña se auto-llena. Este script 
        - AGREGA los SKUs vigentes que existan en Shopify (resuelven a un producto).
        - QUITA los productos que ya NO estén vigentes (esto da de baja la tarjeta en la
          landing cuando una promo expira). Idempotente: no toca lo que ya está bien.
-  3. Setea el contador: pone `end_iso` en las secciones del template
-     page.landing-promociones.json a la vigencia MÁXIMA de las promos activas.
-     Trabaja sobre la copia VERSIONADA EN EL REPO (clients/f24/bot/theme/...), NO sube
-     nada al tema. El operador principal sube el template después.
+  3. Escribe los DATOS VIVOS del contador/fecha en metafields de la colección:
+       - custom.promo_end   = vigencia máx en ISO (lo consume el countdown JS).
+       - custom.promo_fecha = vigencia máx en texto español ("30 de junio").
+     El Liquid del tema (ya subido una vez) lee estos metafields + collection.products_count
+     EN VIVO, así que el contador, la fecha y el countdown se mantienen solos en cada sync
+     SIN redeploy del tema. Además bustea el full-page cache de /pages/promociones cuando
+     cambia el count o la fecha (re-PUT del body_html), para que el cambio se vea de inmediato.
+     Mantiene también `end_iso` en la copia del template del repo como FALLBACK (no se sube).
 
 Robusto a filas incompletas: si un SKU no resuelve en Shopify, lo reporta y lo omite
 (no truena). El grid liquid plano (theme/f24-promo-grid.liquid) renderiza TODA la
@@ -74,8 +78,14 @@ SHEET_ID = "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U"
 PROMO_TAB = "🔥 PROMO ACTIVA"
 COLLECTION_HANDLE = "promociones-vigentes"
 COLLECTION_TITLE = "Promociones vigentes"
+# Página landing (para el FPC-bust al cambiar la promo).
+PAGE_HANDLE = "promociones"
 # Secciones del template que llevan el chip countdown end_iso.
 COUNTDOWN_SECTIONS = ("promobar", "hero", "promogrid", "final")
+
+# Meses en español para el texto humano de la fecha (locale-independiente).
+SPANISH_MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
+                  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
 # Columnas: SKU | Producto | Precio | Meses MSI | % Desc | Precio Promo | Vigencia (fin) | Estado Landing
 COL = {"sku": 0, "producto": 1, "precio": 2, "msi": 3, "pct": 4, "promo": 5, "vig": 6, "landing": 7}
@@ -248,13 +258,79 @@ def update_template_dates(end_iso: str, apply: bool) -> tuple[str, list[str]]:
     return prev, touched
 
 
-def max_vigencia_end_iso(vigentes: list[dict]) -> str:
-    """Vigencia MÁXIMA de las promos activas -> ISO con tz -06:00 a las 23:59:59."""
+def max_vigencia_date(vigentes: list[dict]):
+    """Devuelve la fecha de vigencia MÁXIMA entre las promos activas, o None."""
     dates = [r["vig_date"] for r in vigentes if r.get("vig_date")]
-    if not dates:
-        return ""
-    mx = max(dates)
-    return f"{mx.isoformat()}T23:59:59-06:00"
+    return max(dates) if dates else None
+
+
+def end_iso_from_date(d) -> str:
+    """date -> ISO con tz -06:00 a las 23:59:59 (formato que consume el countdown JS)."""
+    return f"{d.isoformat()}T23:59:59-06:00" if d else ""
+
+
+def spanish_date(d) -> str:
+    """date(2026,6,30) -> '30 de junio' (texto humano para la landing)."""
+    return f"{d.day} de {SPANISH_MONTHS[d.month - 1]}" if d else ""
+
+
+def max_vigencia_end_iso(vigentes: list[dict]) -> str:
+    """Compat: vigencia MÁXIMA -> ISO. Mantiene la firma usada por el resto del script."""
+    return end_iso_from_date(max_vigencia_date(vigentes))
+
+
+# ---------------- Metafields de la colección (count/fecha viven en datos vivos) ----------------
+
+def set_collection_promo_metafields(sc, cid: int, end_iso: str, fecha_txt: str,
+                                     apply: bool) -> list[str]:
+    """Escribe custom.promo_end (ISO countdown) y custom.promo_fecha (texto español)
+    en la colección vía GraphQL metafieldsSet (upsert real). El Liquid los lee vivos,
+    así el contador y la fecha de la landing NO requieren redeploy del tema.
+
+    Devuelve la lista de keys escritas (vacía en dry-run o si no hay fecha)."""
+    if not end_iso or not fecha_txt:
+        return []
+    if not apply:
+        return ["promo_end", "promo_fecha"]
+    owner = f"gid://shopify/Collection/{cid}"
+    sc.graphql(
+        """mutation setMF($mf:[MetafieldsSetInput!]!){
+             metafieldsSet(metafields:$mf){
+               metafields{ namespace key value }
+               userErrors{ field message }
+             }
+           }""",
+        variables={"mf": [
+            {"ownerId": owner, "namespace": "custom", "key": "promo_end",
+             "type": "single_line_text_field", "value": end_iso},
+            {"ownerId": owner, "namespace": "custom", "key": "promo_fecha",
+             "type": "single_line_text_field", "value": fecha_txt},
+        ]})
+    return ["promo_end", "promo_fecha"]
+
+
+def bust_page_cache(sc, handle: str, marker: str, apply: bool) -> bool:
+    """Invalida el full-page cache de Shopify de /pages/{handle} re-PUTeando body_html
+    con un comentario-marcador. Solo cambia el HTML cuando cambia el marker (count/fecha),
+    así un cambio de fecha se ve de inmediato sin tocar el tema. NO es un theme push.
+
+    Patrón validado en feedback_shopify_fpc_cachebust. Devuelve True si bustó."""
+    data = sc.rest("GET", "pages.json", params={"handle": handle})
+    pages = data.get("pages", [])
+    if not pages:
+        print(f"  (FPC-bust: no encontré la página handle='{handle}', omito)")
+        return False
+    page = pages[0]
+    body = page.get("body_html") or ""
+    # Quita un marcador previo y agrega el nuevo.
+    body = re.sub(r"<!-- promo-sync:.*? -->", "", body).rstrip()
+    new_body = f"{body}\n<!-- promo-sync: {marker} -->"
+    if new_body == (page.get("body_html") or ""):
+        return False  # nada cambió
+    if apply:
+        sc.rest("PUT", f"pages/{page['id']}.json",
+                payload={"page": {"id": page["id"], "body_html": new_body}})
+    return True
 
 
 # ---------------- Main ----------------
@@ -319,15 +395,22 @@ def main():
         for r in sorted(missing, key=lambda x: x["sku"]):
             print(f"  · {r['sku']:<16} {r['producto'][:50]:<50} [{r['estado_landing']}]")
 
-    # Contador.
-    end_iso = max_vigencia_end_iso(vigentes)
+    # Contador + fecha humana (viven en datos vivos: metafields de la colección).
+    max_date = max_vigencia_date(vigentes)
+    end_iso = end_iso_from_date(max_date)
+    fecha_txt = spanish_date(max_date)
     prev_iso, _ = update_template_dates(end_iso, apply=False) if end_iso else ("", [])
-    print(f"\nCONTADOR (end_iso) en {REPO_TEMPLATE_PATH.name}:")
+    print(f"\nCONTADOR (end_iso fallback en {REPO_TEMPLATE_PATH.name}):")
     if end_iso:
         print(f"  actual: {prev_iso or '—'}  ->  nuevo (vigencia máx): {end_iso}")
-        print(f"  secciones: {', '.join(COUNTDOWN_SECTIONS)}")
+        print(f"  secciones template: {', '.join(COUNTDOWN_SECTIONS)}")
     else:
         print("  sin vigencias fechadas en las promos activas — no se toca el contador.")
+
+    print(f"\nDATOS VIVOS (metafields de la colección — los lee el Liquid sin redeploy):")
+    print(f"  custom.promo_end   -> {end_iso or '—'}")
+    print(f"  custom.promo_fecha -> {fecha_txt or '—'}")
+    print(f"  contador equipos   -> {len(want_pids)} (collection.products_count, vivo)")
 
     print(f"\nResumen: +{len(to_add)} agregar | -{len(to_remove)} quitar | "
           f"{len(keep)} sin cambio | {len(missing)} omitidos | contador -> {end_iso or 'sin cambio'}")
@@ -347,16 +430,29 @@ def main():
         sc.rest("DELETE", f"collects/{current_collects[pid]}.json")
         print(f"  ✓ -#{pid}")
 
-    # APPLY — contador en el template del repo (NO se sube al tema).
+    # APPLY — contador en el template del repo (fallback; NO se sube al tema).
     if end_iso:
         _, touched = update_template_dates(end_iso, apply=True)
         if touched:
-            print(f"  ✓ end_iso -> {end_iso} en {', '.join(touched)} ({REPO_TEMPLATE_PATH})")
+            print(f"  ✓ end_iso (fallback) -> {end_iso} en {', '.join(touched)} ({REPO_TEMPLATE_PATH})")
         else:
-            print(f"  = contador ya estaba en {end_iso}")
+            print(f"  = contador (fallback) ya estaba en {end_iso}")
+
+    # APPLY — metafields de la colección (fuente viva del contador/fecha en el Liquid).
+    written = set_collection_promo_metafields(sc, cid, end_iso, fecha_txt, apply=True)
+    if written:
+        print(f"  ✓ metafields colección: custom.promo_end={end_iso} · custom.promo_fecha='{fecha_txt}'")
+
+    # APPLY — bustear el full-page cache de la landing si cambió count/fecha.
+    marker = f"{len(want_pids)} {end_iso}"
+    if bust_page_cache(sc, PAGE_HANDLE, marker, apply=True):
+        print(f"  ✓ FPC-bust /pages/{PAGE_HANDLE} (marker: {marker})")
+    else:
+        print(f"  = /pages/{PAGE_HANDLE} sin cambio de count/fecha (no se bustea)")
 
     print(f"\n✅ Colección reconciliada (+{len(to_add)}/-{len(to_remove)}). "
-          f"Template repo actualizado. NADA subido al tema — eso lo hace el operador.")
+          f"Metafields vivos escritos + cache busteado. "
+          f"El Liquid del tema (ya subido) renderiza contador/fecha solos en cada sync.")
 
 
 if __name__ == "__main__":

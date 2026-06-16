@@ -1,0 +1,98 @@
+{{ 'f24-maq.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%} Datos vivos de la promo (sync_f24_landing.py). Inerte fuera de /pages/promociones. {%- endcomment -%}
+{%- liquid
+  assign _pcol = collections['promociones-vigentes']
+  assign promo_count = _pcol.products_count
+  assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+-%}
+{%- assign wa = section.settings.wa_url -%}
+{%- capture wa_svg -%}<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.789-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>{%- endcapture -%}
+{%- capture check -%}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{%- endcapture -%}
+
+<div class="f24m">
+  <section class="f24m-sec f24m-faq">
+    <div class="f24m-wrap">
+      <div class="f24m-anim" style="margin-bottom:30px;">
+        <span class="f24m-eyebrow">{{ section.settings.eyebrow }}</span>
+        <h2 class="f24m-h2">{{ section.settings.heading }} <span class="y">{{ section.settings.heading_accent }}</span></h2>
+      </div>
+
+      <div class="f24m-faq__grid">
+        <aside class="f24m-trust f24m-anim">
+          <div class="f24m-trust__hex" aria-hidden="true"></div>
+          <div class="f24m-trust__inner">
+            <div class="f24m-advisor">
+              <span class="f24m-advisor__pic">
+                {%- if section.settings.advisor_image != blank -%}<img src="{{ section.settings.advisor_image | image_url: width: 120 }}" alt="{{ section.settings.advisor_name | escape }}">{%- else -%}{{ section.settings.advisor_name | slice: 0 }}{%- endif -%}
+              </span>
+              <div>
+                <div class="f24m-advisor__name">{{ section.settings.advisor_name }}</div>
+                <div class="f24m-advisor__role">{{ section.settings.advisor_role }}</div>
+              </div>
+            </div>
+            <div class="f24m-trust__resp"><span class="f24m-spec__dot"></span>{{ section.settings.response }}</div>
+            <ul class="f24m-trust__list">
+              {%- assign tl = section.settings.trust_list | split: ',' -%}
+              {%- for t in tl -%}<li>{{ check }}<span>{{ t | strip }}</span></li>{%- endfor -%}
+            </ul>
+            <div class="f24m-trust__cta">
+              <a href="{{ wa }}?text={{ section.settings.wa_msg | url_encode }}" class="f24m-btn f24m-btn--wa" target="_blank" rel="noopener" data-wa data-wa-group="faq">
+                {{ wa_svg }}{{ section.settings.cta }}
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <div class="f24m-faq__list f24m-anim d2">
+          {%- for block in section.blocks -%}
+            <details class="f24m-acc"{% if forloop.first %} open{% endif %} {{ block.shopify_attributes }}>
+              <summary>
+                <span>{{ block.settings.q }}</span>
+                <span class="f24m-acc__ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+              </summary>
+              <div class="f24m-acc__a">{{ block.settings.a | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</div>
+            </details>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "F24 Maq · FAQ",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Antes de que preguntes" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Dudas" },
+    { "type": "text", "id": "heading_accent", "label": "Título acento", "default": "frecuentes" },
+    { "type": "header", "content": "Franja de confianza / asesor" },
+    { "type": "image_picker", "id": "advisor_image", "label": "Foto del asesor (opcional)" },
+    { "type": "text", "id": "advisor_name", "label": "Nombre del asesor", "default": "Equipo Ferre24" },
+    { "type": "text", "id": "advisor_role", "label": "Rol", "default": "Asesoría técnica en maquinaria" },
+    { "type": "text", "id": "response", "label": "Tiempo de respuesta", "default": "Te respondemos rápido en horario laboral" },
+    { "type": "textarea", "id": "trust_list", "label": "Bullets de confianza (coma)", "default": "Hablas con un asesor real, no un bot, Factura y 3-6 MSI disponibles, Entrega 24-48h en GDL y Michoacán, Specs reales y stock real" },
+    { "type": "text", "id": "cta", "label": "CTA WhatsApp", "default": "Hablar con un asesor" },
+    { "type": "text", "id": "wa_url", "label": "URL WhatsApp (sin ?text)", "default": "https://wa.me/523317903630" },
+    { "type": "textarea", "id": "wa_msg", "label": "Mensaje pre-escrito", "default": "Hola Ferre24, tengo una duda sobre su maquinaria y quiero cotizar. ¿Me asesoran?" }
+  ],
+  "blocks": [
+    { "type": "faq", "name": "Pregunta", "settings": [
+      { "type": "text", "id": "q", "label": "Pregunta", "default": "¿Facturan?" },
+      { "type": "textarea", "id": "a", "label": "Respuesta", "default": "Sí. Emitimos factura para tu empresa o proyecto. Pídela al cotizar por WhatsApp." }
+    ]}
+  ],
+  "presets": [{
+    "name": "F24 Maq · FAQ",
+    "blocks": [
+      { "type": "faq", "settings": { "q": "¿Facturan?", "a": "Sí. Emitimos factura para tu empresa o proyecto — solo pídela al cotizar por WhatsApp." } },
+      { "type": "faq", "settings": { "q": "¿Manejan meses sin intereses?", "a": "Sí, de 3 a 6 MSI en equipo seleccionado. Pregunta por las condiciones vigentes para el modelo que buscas." } },
+      { "type": "faq", "settings": { "q": "¿Entregan en obra o a domicilio?", "a": "Enviamos a todo México. En la zona rápida (GDL y Michoacán) la entrega es de 24-48h; el equipo grande se coordina con flete especial." } },
+      { "type": "faq", "settings": { "q": "¿Tienen existencia?", "a": "Trabajamos con stock real — lo que ves es lo que hay. Al cotizar te confirmamos disponibilidad y tiempo de entrega del modelo exacto." } },
+      { "type": "faq", "settings": { "q": "¿El equipo trae garantía?", "a": "Sí, garantía de fábrica según el fabricante. Te entregamos la documentación y te damos respaldo y asesoría técnica." } },
+      { "type": "faq", "settings": { "q": "¿Me ayudan a elegir el equipo correcto?", "a": "Para eso estamos. Dinos tu carga de trabajo (obra, taller, nave, comercio) y un asesor te dice qué equipo aguanta y cuál te conviene — sin venta dura." } }
+    ]
+  }]
+}
+{% endschema %}

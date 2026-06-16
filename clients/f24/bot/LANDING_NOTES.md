@@ -40,7 +40,28 @@ best-effort de cargar el `.env` de F24 desde el árbol de Drive (función
 SKUs que no resuelven en Shopify se **reportan y se omiten** (no truena la corrida).
 
 El **contador** se pone a la **vigencia MÁXIMA** de las promos activas, en formato
-`YYYY-MM-DDT23:59:59-06:00`, en las secciones `promobar, hero, promogrid, final`.
+`YYYY-MM-DDT23:59:59-06:00`, en las secciones `promobar, hero, promogrid, final` (fallback).
+
+## Contador / fecha / countdown 100% AUTOACTUALIZABLES (2026-06-15, Opción A)
+
+El número de equipos ("12 equipos"), la fecha legible ("30 de junio") y la fecha del
+countdown ya **NO están hardcodeados** en el template — se renderizan desde datos vivos:
+
+- **Contador** = `collections['promociones-vigentes'].products_count` (vivo en el Liquid).
+- **Fecha + countdown** = metafields de la colección `custom.promo_end` (ISO) y
+  `custom.promo_fecha` (texto español), que `sync_f24_landing.py` escribe en cada corrida
+  vía `metafieldsSet`.
+- El copy del template usa **tokens centinela** `[[count]]` y `[[fecha]]`; cada sección los
+  reemplaza con los valores vivos (`| replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha`).
+- Las secciones tocadas: `f24-promo-{bar,hero,urgency,grid,calc,final}` + las compartidas
+  `f24-maq-{prueba,faq,widgets}` (el replace es **inerte** en las landings de maquinaria/agro
+  porque su copy no trae tokens).
+- **Cero redeploy del tema** tras el setup único: el GH Action `f24_promos_sync.yml` corre
+  `sync_f24_landing.py --apply` (metafields + reconciliación de colección + FPC-bust) y la
+  página se actualiza sola en <2 min vía el gatillo Apps Script. El theme push solo se
+  necesita si se cambia el DISEÑO de una sección, no los datos de la promo.
+- **Cache:** Shopify FPC ignora query params; el script bustea re-PUTeando `pages/{id}` con
+  un comentario-marcador cuando cambia count/fecha. Ver [[feedback_shopify_fpc_cachebust]].
 
 ## Helpers portados (de `swap_promo_cycle.py`, ahora self-contained)
 

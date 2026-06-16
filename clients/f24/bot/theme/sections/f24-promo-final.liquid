@@ -1,0 +1,82 @@
+{{ 'f24-promo.js' | asset_url | script_tag }}
+
+{%- comment -%} Datos vivos: contador + fecha desde la colección/metafield (sync_f24_landing.py). {%- endcomment -%}
+{%- liquid
+  assign _pcol = collections['promociones-vigentes']
+  assign promo_count = _pcol.products_count
+  assign promo_end_iso = _pcol.metafields.custom.promo_end.value | default: section.settings.end_iso
+  assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+-%}
+
+{%- assign wa_msg = section.settings.wa_msg | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | url_encode -%}
+{%- assign wa_href = section.settings.wa_url | append: '?text=' | append: wa_msg -%}
+
+<style>
+  .f24p-final{position:relative;background:linear-gradient(135deg,#1a1206 0%,#0b0c0f 60%);color:#fff;padding-block:clamp(72px,8vw,120px);overflow:hidden}
+  .f24p-final::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 100%,rgba(255,184,0,.18),transparent 70%);pointer-events:none}
+  .f24p-final::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:6px;background:linear-gradient(90deg,#ffb800,#ff6a00)}
+  .f24p-final__wrap{max-width:880px;margin:0 auto;padding:0 clamp(14px,2vw,22px);position:relative;text-align:center}
+  .f24p-final__kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(255,184,0,.14);color:#ffb800;border:1px solid rgba(255,184,0,.4);border-radius:999px;font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+  .f24p-final__kicker svg{width:14px;height:14px;animation:f24p-pulse 1.4s ease-in-out infinite}
+  .f24p-final__h{font-weight:900;font-size:clamp(2.2rem,5.2vw,3.8rem);line-height:1.04;letter-spacing:-.02em;margin:18px 0 14px}
+  .f24p-final__h em{font-style:normal;background:linear-gradient(135deg,#ffb800,#ff6a00);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .f24p-final__lead{color:rgba(255,255,255,.72);font-size:clamp(1rem,1.4vw,1.16rem);line-height:1.55;max-width:54ch;margin:0 auto 28px}
+  .f24p-final__cd{display:inline-flex;align-items:baseline;gap:10px;padding:14px 22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;font-weight:700;font-size:1.05rem;margin-bottom:30px}
+  .f24p-final__cd b{color:#ffb800;font-size:1.4rem;font-variant-numeric:tabular-nums}
+  .f24p-final__cd small{color:rgba(255,255,255,.5);font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+  .f24p-final__ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .f24p-final__micro{margin-top:24px;color:rgba(255,255,255,.5);font-size:.84rem;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+  .f24p-final__micro span{display:inline-flex;align-items:center;gap:5px}
+  .f24p-final__micro svg{width:12px;height:12px;color:#ffb800}
+</style>
+
+<section class="f24p-final">
+  <div class="f24p-final__wrap">
+    <div class="f24p-final__kicker f24p-rev">
+      <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
+      {{ section.settings.kicker }}
+    </div>
+    <h2 class="f24p-final__h f24p-rev" data-d="1">{{ section.settings.title_pre }} <em>{{ section.settings.title_hl }}</em></h2>
+    <p class="f24p-final__lead f24p-rev" data-d="2">{{ section.settings.subtitle }}</p>
+
+    <div class="f24p-final__cd f24p-rev" data-d="2" data-countdown-end="{{ promo_end_iso }}">
+      <small>Quedan</small>
+      <b data-cd-line>—</b>
+    </div>
+
+    <div class="f24p-final__ctas f24p-rev" data-d="3">
+      <a href="{{ wa_href }}" target="_blank" rel="noopener" class="f24p-btn f24p-btn--gold" data-wa data-wa-group="promo-final">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.789-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        {{ section.settings.cta_primary }}
+      </a>
+      <a href="#promo-grid" class="f24p-btn f24p-btn--ghost">
+        {{ section.settings.cta_secondary }}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="f24p-final__micro f24p-rev" data-d="4">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Asesor real, no bot</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Respuesta rápida en horario laboral</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sin compromiso</span>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "F24 Promo · CTA final",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Última oportunidad" },
+    { "type": "text", "id": "title_pre", "label": "Título antes", "default": "El reloj corre." },
+    { "type": "text", "id": "title_hl", "label": "Título destacado", "default": "No dejes pasar los 9 MSI." },
+    { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Un asesor te confirma stock, te dice si tu tarjeta aplica al 9 MSI y te arma la cotización en minutos. Sin venta dura." },
+    { "type": "text", "id": "end_iso", "label": "Fecha fin ISO", "default": "2026-06-14T23:59:59-06:00" },
+    { "type": "text", "id": "cta_primary", "label": "CTA primario", "default": "Cotizar antes que termine" },
+    { "type": "text", "id": "cta_secondary", "label": "CTA secundario", "default": "Volver a ver productos" },
+    { "type": "text", "id": "wa_url", "label": "URL WhatsApp", "default": "https://wa.me/523317903630" },
+    { "type": "textarea", "id": "wa_msg", "label": "Mensaje WA", "default": "Hola Ferre24, quiero aprovechar la promoción a 9 MSI antes del 14 de junio. ¿Me cotizan?" }
+  ],
+  "presets": [{ "name": "F24 Promo · CTA final" }]
+}
+{% endschema %}

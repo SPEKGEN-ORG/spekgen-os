@@ -1,0 +1,96 @@
+{{ 'f24-promo.js' | asset_url | script_tag }}
+
+{%- comment -%} Datos vivos: contador + fecha desde la colección/metafield (sync_f24_landing.py). {%- endcomment -%}
+{%- liquid
+  assign _pcol = collections['promociones-vigentes']
+  assign promo_count = _pcol.products_count
+  assign promo_end_iso = _pcol.metafields.custom.promo_end.value | default: section.settings.end_iso
+  assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+-%}
+
+<style>
+  .f24p-urg{background:#0b0c0f;color:#fff;padding-block:clamp(48px,6vw,80px);position:relative;overflow:hidden}
+  .f24p-urg::before{content:"";position:absolute;inset:0;background:radial-gradient(800px circle at 50% 0%,rgba(255,184,0,.08),transparent 60%);pointer-events:none}
+  .f24p-urg__wrap{max-width:1240px;margin:0 auto;padding:0 clamp(14px,2vw,22px);position:relative}
+  .f24p-urg__head{text-align:center;max-width:780px;margin:0 auto clamp(28px,3vw,44px)}
+  .f24p-urg__kicker{display:inline-block;color:#ffb800;font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;background:rgba(255,184,0,.1);border-radius:999px}
+  .f24p-urg__h{font-weight:900;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.1;letter-spacing:-.02em;margin:14px 0 12px}
+  .f24p-urg__h em{font-style:normal;background:linear-gradient(135deg,#ffb800,#ff6a00);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .f24p-urg__sub{color:rgba(255,255,255,.65);font-size:1rem;line-height:1.55;max-width:60ch;margin:0 auto}
+  .f24p-urg__grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .f24p-urg__card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;gap:10px;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;position:relative;overflow:hidden}
+  .f24p-urg__card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#ffb800,#ff6a00);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+  .f24p-urg__card:hover{transform:translateY(-4px);border-color:rgba(255,184,0,.3);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .f24p-urg__card:hover::before{transform:scaleX(1)}
+  .f24p-urg__icon{width:44px;height:44px;border-radius:12px;background:rgba(255,184,0,.12);color:#ffb800;display:inline-flex;align-items:center;justify-content:center}
+  .f24p-urg__icon svg{width:22px;height:22px}
+  .f24p-urg__num{font-weight:900;font-size:2rem;color:#fff;line-height:1;font-variant-numeric:tabular-nums}
+  .f24p-urg__title{font-weight:700;color:#fff;font-size:1.05rem;line-height:1.3}
+  .f24p-urg__desc{color:rgba(255,255,255,.62);font-size:.92rem;line-height:1.5}
+</style>
+
+<section class="f24p-urg">
+  <div class="f24p-urg__wrap">
+    <div class="f24p-urg__head f24p-rev">
+      <span class="f24p-urg__kicker">{{ section.settings.eyebrow }}</span>
+      <h2 class="f24p-urg__h">{{ section.settings.heading_pre }} <em>{{ section.settings.heading_hl | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</em></h2>
+      <p class="f24p-urg__sub">{{ section.settings.subheading | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</p>
+    </div>
+    <div class="f24p-urg__grid">
+      {%- assign idx = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- assign idx = idx | plus: 1 -%}
+        <div class="f24p-urg__card f24p-rev" data-d="{{ idx }}" {{ block.shopify_attributes }}>
+          <div class="f24p-urg__icon">
+            {%- case block.settings.icon -%}
+              {%- when 'clock' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              {%- when 'wallet' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20M16 15h2"/></svg>
+              {%- when 'truck' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="13" height="11" rx="1"/><path d="M14 9h4l3 3v5h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+              {%- when 'shield' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4v6c0 5.5-3.8 10.4-9 12-5.2-1.6-9-6.5-9-12V6l9-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+              {%- when 'bolt' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              {%- else -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {%- endcase -%}
+          </div>
+          {%- if block.settings.stat != blank -%}<div class="f24p-urg__num">{{ block.settings.stat | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</div>{%- endif -%}
+          <div class="f24p-urg__title">{{ block.settings.title | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</div>
+          <p class="f24p-urg__desc">{{ block.settings.desc | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "F24 Promo · Urgency strip",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Por qué comprar ahora" },
+    { "type": "text", "id": "heading_pre", "label": "Heading antes", "default": "La ventana cierra el" },
+    { "type": "text", "id": "heading_hl", "label": "Heading destacado", "default": "14 de junio" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Después de esa fecha estos productos vuelven a precio normal, sin MSI extendido. Si necesitas el equipo, esta es la quincena para conseguirlo a meses." }
+  ],
+  "blocks": [
+    { "type": "card", "name": "Tarjeta", "settings": [
+      { "type": "select", "id": "icon", "label": "Icono", "options": [
+        { "value": "clock", "label": "Reloj" },
+        { "value": "wallet", "label": "Cartera" },
+        { "value": "truck", "label": "Envío" },
+        { "value": "shield", "label": "Garantía" },
+        { "value": "bolt", "label": "Rayo" }
+      ], "default": "clock" },
+      { "type": "text", "id": "stat", "label": "Stat (opcional)", "default": "—" },
+      { "type": "text", "id": "title", "label": "Título" },
+      { "type": "textarea", "id": "desc", "label": "Descripción" }
+    ]}
+  ],
+  "presets": [{
+    "name": "F24 Promo · Urgency",
+    "blocks": [
+      { "type": "card", "settings": { "icon": "clock", "stat": "14 jun", "title": "Vence el 14 de junio", "desc": "Después de esa fecha estos 8 productos vuelven a precio normal sin MSI extendido. Cero excepciones." } },
+      { "type": "card", "settings": { "icon": "wallet", "stat": "9 MSI", "title": "Hasta 9 meses sin intereses", "desc": "El doble de plazo que el MSI estándar del catálogo. Compra el equipo pesado sin descapitalizarte." } },
+      { "type": "card", "settings": { "icon": "truck", "stat": "Gratis", "title": "Envío nacional incluido", "desc": "Llega a todo México. Zona rápida (GDL y Michoacán) en 24-48 horas — el resto con paquetería estándar." } },
+      { "type": "card", "settings": { "icon": "shield", "stat": "Factura", "title": "Factura para tu empresa", "desc": "Comprobante fiscal disponible. Pide la factura al cotizar por WhatsApp y aprovecha el deducible." } }
+    ]
+  }]
+}
+{% endschema %}

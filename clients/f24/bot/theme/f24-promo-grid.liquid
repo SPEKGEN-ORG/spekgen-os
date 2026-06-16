@@ -13,6 +13,10 @@
 {%- assign col_handle = section.settings.collection | default: 'promociones-vigentes' -%}
 {%- assign promo = collections[col_handle] -%}
 {%- assign wa_url = section.settings.wa_url -%}
+{%- comment -%} Datos vivos: contador + fecha desde la colección/metafield (sync_f24_landing.py). {%- endcomment -%}
+{%- assign promo_count = promo.products_count -%}
+{%- assign promo_end_iso = promo.metafields.custom.promo_end.value | default: section.settings.end_iso -%}
+{%- assign promo_fecha = promo.metafields.custom.promo_fecha.value | default: 'la fecha límite' -%}
 {%- assign sort = section.settings.sort_order | default: 'price-asc' -%}
 {%- if sort == 'price-asc' -%}
   {%- assign promo_products = promo.products | sort: 'price' -%}
@@ -71,10 +75,10 @@
   <div class="f24p-grid-wrap">
     <div class="f24p-grid-head f24p-rev">
       <span class="f24p-grid-head__kicker">{{ section.settings.eyebrow }}</span>
-      <h2 class="f24p-grid-head__h">{{ section.settings.heading_pre }} <em>{{ section.settings.heading_hl }}</em></h2>
-      <p class="f24p-grid-head__sub">{{ section.settings.subheading }}</p>
-      {%- if section.settings.end_iso != blank -%}
-        <div class="f24p-grid-head__cd" data-countdown-end="{{ section.settings.end_iso }}">
+      <h2 class="f24p-grid-head__h">{{ section.settings.heading_pre }} <em>{{ section.settings.heading_hl | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</em></h2>
+      <p class="f24p-grid-head__sub">{{ section.settings.subheading | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</p>
+      {%- if promo_end_iso != blank -%}
+        <div class="f24p-grid-head__cd" data-countdown-end="{{ promo_end_iso }}">
           <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
           <span>Termina en </span><span data-cd-line>—</span>
         </div>
