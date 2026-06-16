@@ -31,7 +31,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-600N-US` | solo MSI | $8,346 |  | 46176 | no | 2026-06-30 |
 | `PK-EASY-600US` | solo MSI | $7,056 |  | 3 | no | 2026-06-30 |
 | `PK-EASY-800US` | solo MSI | $7,755 |  | 46176 | no | 2026-06-30 |
-| `PMR24` | $14,663 | $32,584 | 55% | 3 | no | 2026-06-28 |
+| `PMR24` | $29,326 | $65,168 | 55% | 3 | no | 2026-06-28 |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
 
 ## Generadores (41)
@@ -541,7 +541,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Las ramas altas siempre terminan en lo mismo: una escalera tambaleándose en el pasto y un susto que pudo salir caro. El serrucho de poda Kawashima PG500 elimina ese riesgo por completo. Cortas ramas a hasta 5 metros de…
   PDP: https://ferre24.com.mx/products/serrucho-poda-telescopico-kawashima-pg500-alcance-5-m
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7e0319b3-e61c-43bf-949c-3699eec59094.png
-- **Tractor Podador Parazzini PMR24** · `PMR24` · $14,663 (antes $32,584) · Parazzini · PMR24 · ⚡PROMO
+- **Tractor Podador Parazzini PMR24** · `PMR24` · $29,326 (antes $65,168) · Parazzini · PMR24 · ⚡PROMO
   Cortar terrenos medianos y grandes con una podadora pequeña es perder horas que no tienes. El PMR24 de Parazzini resuelve eso: motor RV225-x de 223cc, 4 tiempos OHV, encendido eléctrico y un ancho de corte de 24…
   PDP: https://ferre24.com.mx/products/tractor-podador-parazzini-pmr24-motor-223cc-4t-24-pulgadas-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5d3676cb-554b-4a88-9259-49bf8aff4d42.png

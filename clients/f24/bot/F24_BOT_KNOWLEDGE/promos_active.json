@@ -203,8 +203,8 @@
       "sku": "PMR24",
       "sku_upper": "PMR24",
       "producto": "Tractor podador motor RV225-x 223cc 24 pulg",
-      "regular_price": 32584.0,
-      "promo_price": 14662.8,
+      "regular_price": 65168.0,
+      "promo_price": 29325.6,
       "pct_desc": "55%",
       "msi_ladder": [
         3
@@ -215,7 +215,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "32584.00"
+      "shopify_price": "14662.80"
     },
     {
       "sku": "PP7BK",
