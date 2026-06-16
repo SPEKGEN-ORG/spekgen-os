@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-13 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+14 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -18,6 +18,7 @@ Reglas de meses sin intereses (MSI) por promo:
 |---|---|---|---|---|---|---|
 | `ENERWELL-G1000` | $3,962 | $4,402 | 10% | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | $7,784 | $8,649 | 10% | 46176 | no | 2026-06-30 |
+| `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | $5,590 | $6,211 | 10% | 3 | no | 2026-06-30 |
 | `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-06-30 |
@@ -112,7 +113,7 @@ Reglas de meses sin intereses (MSI) por promo:
   El Generador Portátil ENERWELL G1000 es la solución compacta y confiable para quienes necesitan energía eléctrica en cualquier lugar. Con tecnología inverter , entrega corriente limpia y estable que protege tus…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-1000w-enerwell-inverter
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a49dbcb0-94a0-4d4f-a9d8-e6c0efc46f2a.png
-- **Generador Portátil Power Hunt 1000W** · `GPH1000W` · $1,064 (antes $2,127) · Power Hunt · GPH1000W
+- **Generador Portátil Power Hunt 1000W** · `GPH1000W` · $2,127 (antes $4,254) · Power Hunt · GPH1000W · ⚡PROMO
   ¿Se fue la luz y no tienes con qué cargar el teléfono, encender la lámpara o seguir trabajando? El generador portátil Power Hunt GPH1000W te da 1,000 W de potencia donde la red eléctrica no llega. · Con su motor de 2…
   PDP: https://ferre24.com.mx/products/generador-portatil-power-hunt-1000w-6-horas-autonomia
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d5e7e2f4-b266-45a2-a7e0-7f56b317604a.png

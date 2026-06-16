@@ -40,6 +40,22 @@
       "shopify_price": "7784.10"
     },
     {
+      "sku": "GPH1000W",
+      "sku_upper": "GPH1000W",
+      "producto": "Generador Portátil Power Hunt 1000W — 6 Horas de Autonomía",
+      "regular_price": 4254.0,
+      "promo_price": 2127.0,
+      "pct_desc": "50%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "1063.50"
+    },
+    {
       "sku": "KAS-10P",
       "sku_upper": "KAS-10P",
       "producto": "Calentador de Paso Instantáneo KASSAI",
