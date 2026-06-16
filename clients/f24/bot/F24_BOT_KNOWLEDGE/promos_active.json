@@ -478,13 +478,13 @@
       "sku": "SK772TPRO",
       "sku_upper": "SK772TPRO",
       "producto": "Soplador PRO 77cc",
-      "regular_price": 8961.0,
-      "promo_price": 4032.45,
+      "regular_price": 16292.0,
+      "promo_price": 7331.4,
       "pct_desc": "55%",
       "msi_ladder": [
-        3
+        46176
       ],
-      "msi_max": 3,
+      "msi_max": 46176,
       "eligible_912": false,
       "vigencia": "2026-06-30",
       "vigente": true,
@@ -496,8 +496,8 @@
       "sku": "WIND43",
       "sku_upper": "WIND43",
       "producto": "Soplador de Mochila Kawashima 43cc — Potencia Real, Respaldo Nacional",
-      "regular_price": 0.0,
-      "promo_price": 0.0,
+      "regular_price": 5962.0,
+      "promo_price": 2682.9,
       "pct_desc": "55%",
       "msi_ladder": [
         3
@@ -508,7 +508,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "0.00"
+      "shopify_price": "2682.90"
     },
     {
       "sku": "WINDBAG26",
@@ -524,7 +524,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "1180.80"
+      "shopify_price": "2385.00"
     },
     {
       "sku": "MINI60-12/1127",

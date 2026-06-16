@@ -46,8 +46,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PP190` | $6,734 | $14,964 | 55% | 46176 | no | 2026-06-30 |
 | `PP190TT` | $7,273 | $16,162 | 55% | 46176 | no | 2026-06-30 |
 | `PP7BK` | $7,916 | $17,590 | 55% | 3 | no | 2026-06-28 |
-| `SK772TPRO` | $4,032 | $8,961 | 55% | 3 | no | 2026-06-30 |
-| `WIND43` | $0 | $0 | 55% | 3 | no | 2026-06-30 |
+| `SK772TPRO` | $7,331 | $16,292 | 55% | 46176 | no | 2026-06-30 |
+| `WIND43` | $2,683 | $5,962 | 55% | 3 | no | 2026-06-30 |
 | `WINDBAG26` | $2,385 | $4,770 | 50% | — | no | 2026-06-30 |
 
 ## Generadores (41)
@@ -875,7 +875,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Otros (14)
 
-- **Motor Parazzini MP13C** · `MP13C` · $4,244 (antes $9,432) · Parazzini · MP13C · ⚡PROMO
+- **Motor Parazzini MP13C** · `MP13C` · $7,718 (antes $17,150) · Parazzini · MP13C · ⚡PROMO
   Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mp13c-13-hp-4t-con-caja-reductora-integrada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f0786bf-a462-4d4b-abba-f2ea3fe39f00.png
@@ -902,7 +902,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Limpiar el jardín con rastrillo toma horas. Con el soplador Kawashima WIND26, el mismo trabajo se hace en minutos. · Potencia real donde más importa. Su motor 2 tiempos de 26 cc alcanza hasta 7,500 RPM y mueve 650 m³ de…
   PDP: https://ferre24.com.mx/products/soplador-kawashima-26-cc-motor-2t-650-m-h-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_5ec7fcc5-79bd-48fa-8282-e6753d13698b.png
-- **Soplador de Mochila Profesional 77cc** · `SK772TPRO` · $4,032 (antes $8,961) · Kawashima Pro · SK772TPRO · ⚡PROMO
+- **Soplador de Mochila Profesional 77cc** · `SK772TPRO` · $7,331 (antes $16,292) · Kawashima Pro · SK772TPRO · ⚡PROMO
   Cada hora que pierdes con una herramienta sin potencia es dinero que no cobras. El jardinero o landscaper profesional sabe que el tiempo entre trabajo y trabajo es lo que separa un día rentable de uno mediocre. Con una…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-profesional-77cc-kawashima-pro-sk772tpro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_28b16a1d-b758-478b-a2fa-da0d18c08d4a.png
