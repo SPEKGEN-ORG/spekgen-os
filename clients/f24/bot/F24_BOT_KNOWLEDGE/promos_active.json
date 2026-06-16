@@ -90,7 +90,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "8649.00"
+      "shopify_price": "6054.62"
     },
     {
       "sku": "FXL5B-200",
@@ -296,7 +296,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6211.42"
+      "shopify_price": "6211.00"
     },
     {
       "sku": "KASPRO-16P",
@@ -314,7 +314,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "11976.57"
+      "shopify_price": "11977.00"
     },
     {
       "sku": "MP13C",
@@ -572,7 +572,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "6392.33"
+      "shopify_price": "3515.78"
     },
     {
       "sku": "PK-EASY-600N-US",
@@ -591,7 +591,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "8346.21"
+      "shopify_price": "4590.42"
     },
     {
       "sku": "PK-EASY-800US",
@@ -610,7 +610,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "7755.22"
+      "shopify_price": "4265.37"
     }
   ],
   "excluidos_sin_pdp": [
