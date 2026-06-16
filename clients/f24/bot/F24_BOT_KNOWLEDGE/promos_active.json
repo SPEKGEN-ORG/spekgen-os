@@ -35,7 +35,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "1629.22"
+      "shopify_price": "2808.50"
     },
     {
       "sku": "ENERWELL-G1000",
@@ -114,6 +114,27 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "59154.75"
+    },
+    {
+      "sku": "GP9500TB",
+      "sku_upper": "GP9500TB",
+      "producto": "Generador Parazzini GP9500TB — 17 HP, 9500 W, encendido eléctrico",
+      "regular_price": 36949.0,
+      "promo_price": 16627.05,
+      "pct_desc": "55%",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "36949.00"
     },
     {
       "sku": "GPH1000W",
