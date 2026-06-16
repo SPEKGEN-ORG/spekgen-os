@@ -134,7 +134,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "16627.05"
+      "shopify_price": "30230.55"
     },
     {
       "sku": "GPH1000W",
@@ -187,6 +187,22 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "11316.15"
+    },
+    {
+      "sku": "HPP110V",
+      "sku_upper": "HPP110V",
+      "producto": "Hidrolavadora Pro 110 -120 V Monofasica — Parazzini HPP110V",
+      "regular_price": 10316.16,
+      "promo_price": null,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "10316.16"
     },
     {
       "sku": "KAS-10P",

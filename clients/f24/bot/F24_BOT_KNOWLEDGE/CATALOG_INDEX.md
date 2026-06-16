@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-23 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+24 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (3 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -26,6 +26,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $25,147 | 55% | 3 | no | 2026-06-28 |
+| `HPP110V` | solo MSI | $10,316 |  | — | no |  |
 | `KAS-10P` | solo MSI | $4,004 |  | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | solo MSI | $6,211 |  | 3 | no | 2026-06-30 |
 | `KASPRO-16P` | solo MSI | $11,977 |  | 3 | no | 2026-06-30 |
@@ -393,7 +394,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu operación exige resultados en el menor tiempo posible y no puedes perder horas en recargas de combustible o mantenimientos correctivos? La Parazzini Pro HPPE10 es la respuesta para servicios de limpieza profesional,…
   PDP: https://ferre24.com.mx/products/hidrolavadora-electrica-industrial-parazzini-pro-10-hp-234-bar
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_d4426c36-d6a3-4e35-8e6b-629ea7575bd3.png
-- **Hidrolavadora Eléctrica Parazzini HPP110V** · `HPP110V` · $10,316 (antes $19,104) · Parazzini · HPP110V
+- **Hidrolavadora Eléctrica Parazzini HPP110V** · `HPP110V` · $10,316 (antes $19,104) · Parazzini · HPP110V · ⚡PROMO
   ¿Cansado de la suciedad incrustada en tu maquinaria o patio y del mantenimiento que requieren los equipos a gasolina? La Hidrolavadora Parazzini HPP110V te ofrece una solución de grado profesional con la conveniencia de…
   PDP: https://ferre24.com.mx/products/hidrolavadora-pro-110-120-v-monofasica-parazzini-hpp110v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_612e3146-af4b-4f4c-8f05-bbcc33fe4a9c.png
