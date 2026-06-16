@@ -61,8 +61,8 @@
       "sku": "FXL5B-200",
       "sku_upper": "FXL5B-200",
       "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp",
-      "regular_price": 67143.0,
-      "promo_price": 30214.35,
+      "regular_price": 130743.0,
+      "promo_price": 58834.35,
       "pct_desc": "55%",
       "msi_ladder": [],
       "msi_max": 0,
@@ -71,7 +71,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "67143.00"
+      "shopify_price": "30214.35"
     },
     {
       "sku": "FXL5B-200K120",
@@ -87,7 +87,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "65728.00"
+      "shopify_price": "29577.60"
     },
     {
       "sku": "GPH1000W",

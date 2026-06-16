@@ -19,7 +19,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ATV-25` | $4,897 | $10,883 | 55% | 39967 | no | 2026-06-28 |
 | `ENERWELL-G1000` | solo MSI | $4,402 |  | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | solo MSI | $8,649 |  | 46176 | no | 2026-06-30 |
-| `FXL5B-200` | $30,214 | $67,143 | 55% | — | no |  |
+| `FXL5B-200` | $58,834 | $130,743 | 55% | — | no |  |
 | `FXL5B-200K120` | $29,578 | $65,728 | 55% | — | no |  |
 | `GPH1000W` | $2,127 | $4,254 | 50% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 55% | 3 | no | 2026-06-28 |
@@ -584,7 +584,7 @@ Reglas de meses sin intereses (MSI) por promo:
   El campo no espera — tu aspersor tampoco debería. · Fumigar a mano es lento, desigual y agotador. Un equipo mal calibrado o con poca presión deja zonas sin cobertura: hongos, virosis y pérdidas que suman cada temporada.…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-parazzini-600-l-pto-50-hp-32-24-boquillas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f8d258d-c1b4-45e9-be56-b22da3fc16b6.png
-- **Aspersor Turbina Vertical Parazzini 25HP** · `FXL5B-200` · $30,214 (antes $67,143) · Parazzini · FXL5B-200 · ⚡PROMO
+- **Aspersor Turbina Vertical Parazzini 25HP** · `FXL5B-200` · $58,834 (antes $130,743) · Parazzini · FXL5B-200 · ⚡PROMO
   En cultivos de mediana y gran escala, la presión irregular destruye la uniformidad de cobertura — y con ella, la calidad de la cosecha. Un sistema de riego que pierde presión en zonas alejadas o con desnivel no es un…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-vertical-parazzini-25hp-riego-profesional-para-cultivos-extensivos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9dbd6315-5f37-4b08-89e5-7f869d819ae1.png
