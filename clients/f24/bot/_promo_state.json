@@ -10,9 +10,14 @@
     "orig_compare_at": 19450.0
   },
   "GPH8000W": {
-    "base": 13830.85,
-    "promo": 6223.88,
+    "base": 25147.0,
+    "promo": 11316.15,
     "orig_compare_at": 13830.85
+  },
+  "PMR24": {
+    "base": 32584.0,
+    "promo": 14662.8,
+    "orig_compare_at": 65168.54
   },
   "PP7BK": {
     "base": 17590.0,

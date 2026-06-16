@@ -77,8 +77,8 @@
       "sku": "GPH8000W",
       "sku_upper": "GPH8000W",
       "producto": "Generador a Gasolina 8000 W con Motor de 16 HP — Power Hunt GPH8000W",
-      "regular_price": 13830.85,
-      "promo_price": 6223.88,
+      "regular_price": 25147.0,
+      "promo_price": 11316.15,
       "pct_desc": "55%",
       "msi_ladder": [
         3
@@ -89,7 +89,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6223.88"
+      "shopify_price": "11316.15"
     },
     {
       "sku": "KAS-10P",
@@ -198,6 +198,24 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "7056.00"
+    },
+    {
+      "sku": "PMR24",
+      "sku_upper": "PMR24",
+      "producto": "Tractor podador motor RV225-x 223cc 24 pulg",
+      "regular_price": 32584.0,
+      "promo_price": 14662.8,
+      "pct_desc": "55%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "32584.00"
     },
     {
       "sku": "PP7BK",
