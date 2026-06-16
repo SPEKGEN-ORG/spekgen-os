@@ -22,6 +22,22 @@
       "shopify_price": "4897.35"
     },
     {
+      "sku": "BP4310",
+      "sku_upper": "BP4310",
+      "producto": "Motobomba 43cc 2 tiempos autocebante 1 pulg",
+      "regular_price": 3258.44,
+      "promo_price": null,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "3258.44"
+    },
+    {
       "sku": "ENERWELL-G1000",
       "sku_upper": "ENERWELL-G1000",
       "producto": "Generador portátil a gasolina 1000w ENERWELL",
