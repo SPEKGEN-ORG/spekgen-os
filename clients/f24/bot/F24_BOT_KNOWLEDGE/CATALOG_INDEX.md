@@ -121,7 +121,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, todo se detiene: el refrigerador, los focos, el ventilador, el modem. Y si trabajas en obra o en el campo, muchas veces ni siquiera hay una toma de corriente cerca. El Generador Portátil Power Hunt…
   PDP: https://ferre24.com.mx/products/generador-max-2500w-power-hunt-gph2500w
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f33b86b7-a2ca-44d6-b983-8ee5a8180a00.png
-- **Generador Power Hunt GPH5500W** · `GPH5500W` · $10,698 (antes $19,450) · Power Hunt · GPH5500W
+- **Generador Power Hunt GPH5500W** · `GPH5500W` · $8,752 (antes $19,450) · Power Hunt · GPH5500W
   Cuando se va la luz, el refrigerador, las bombas y las herramientas se detienen. El generador a gasolina Power Hunt GPH5500W te devuelve la energía en minutos y la mantiene durante toda la jornada. · Con 5500 W de…
   PDP: https://ferre24.com.mx/products/generador-power-hunt-gph5500w-5500w-15hp-voltaje-dual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_384153dd-1f81-4ecc-9fab-92a8d439c3cd.png
