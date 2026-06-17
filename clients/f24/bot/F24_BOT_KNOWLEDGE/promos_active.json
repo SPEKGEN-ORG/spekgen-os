@@ -78,7 +78,7 @@
       "sku_upper": "ENERWELL-G2500",
       "producto": "Generador portátil a gasolina 2500w ENERWELL",
       "regular_price": 8649.0,
-      "promo_price": 6054.62,
+      "promo_price": 8649.0,
       "pct_desc": "",
       "msi_ladder": [
         3,
@@ -97,7 +97,7 @@
       "sku_upper": "FXL5B-200",
       "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp",
       "regular_price": 130743.0,
-      "promo_price": 58834.35,
+      "promo_price": 58834.32,
       "pct_desc": "12%",
       "msi_ladder": [
         3,
@@ -118,7 +118,7 @@
       "sku_upper": "FXL5B-200K120",
       "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp con flecha cardan de 120 cm",
       "regular_price": 131455.0,
-      "promo_price": 59154.75,
+      "promo_price": 59154.74,
       "pct_desc": "10%",
       "msi_ladder": [
         3,
@@ -139,7 +139,7 @@
       "sku_upper": "GP9500TB",
       "producto": "Generador Parazzini GP9500TB — 17 HP, 9500 W, encendido eléctrico",
       "regular_price": 67179.0,
-      "promo_price": 30230.55,
+      "promo_price": 30230.56,
       "pct_desc": "18%",
       "msi_ladder": [
         3,
@@ -303,8 +303,8 @@
       "sku_upper": "KASPRO-16P",
       "producto": "Calentador de Paso Instantáneo Modulante 16L KASSAI",
       "regular_price": 11976.57,
-      "promo_price": 11977.0,
-      "pct_desc": "",
+      "promo_price": 11976.57,
+      "pct_desc": "0%",
       "msi_ladder": [
         3
       ],
@@ -321,8 +321,8 @@
       "sku_upper": "MP13C",
       "producto": "Motor 13 hp 4 tiempos con reductor",
       "regular_price": 17150.0,
-      "promo_price": 4244.4,
-      "pct_desc": "55%",
+      "promo_price": 7717.5,
+      "pct_desc": "18%",
       "msi_ladder": [
         3
       ],
@@ -332,7 +332,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "7717.50"
+      "shopify_price": "4244.40"
     },
     {
       "sku": "PK-EASY-100CT",
@@ -511,7 +511,7 @@
       "producto": "Soplador de Mochila Kawashima 43cc — Potencia Real, Respaldo Nacional",
       "regular_price": 5962.0,
       "promo_price": 2682.9,
-      "pct_desc": "55%",
+      "pct_desc": "",
       "msi_ladder": [
         3
       ],
@@ -560,7 +560,7 @@
       "sku_upper": "PK-EASY-400US",
       "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
       "regular_price": 6392.33,
-      "promo_price": 3515.78,
+      "promo_price": 6392.33,
       "pct_desc": "",
       "msi_ladder": [
         3,
@@ -579,7 +579,7 @@
       "sku_upper": "PK-EASY-600N-US",
       "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
       "regular_price": 8346.21,
-      "promo_price": 4590.42,
+      "promo_price": 8346.21,
       "pct_desc": "",
       "msi_ladder": [
         3,
@@ -598,7 +598,7 @@
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 7755.22,
-      "promo_price": 4265.37,
+      "promo_price": 7755.22,
       "pct_desc": "",
       "msi_ladder": [
         3,

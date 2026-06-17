@@ -20,7 +20,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BP4310` | $2,808 | $5,617 | 14% | — | no | 2026-06-30 |
 | `CK22CC` | $3,038 | $6,076 | 9% | — | no | 2026-06-30 |
 | `ENERWELL-G1000` | $4,402 | $4,402 |  | 3 | no | 2026-06-28 |
-| `ENERWELL-G2500` | $6,055 | $8,649 |  | 3, 6 | no | 2026-06-30 |
+| `ENERWELL-G2500` | $8,649 | $8,649 |  | 3, 6 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 12% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
 | `FXL5B-200K120` | $59,155 | $131,455 | 10% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
 | `GP9500TB` | $30,231 | $67,179 | 18% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
@@ -32,22 +32,22 @@ Reglas de meses sin intereses (MSI) por promo:
 | `HPP110V` | $8,596 | $19,103 | 17% | 3 | no | 2026-06-30 |
 | `KAS-10P` | $4,004 | $4,004 |  | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | $6,211 | $6,211 |  | 3 | no | 2026-06-30 |
-| `KASPRO-16P` | $11,977 | $11,977 |  | 3 | no | 2026-06-30 |
+| `KASPRO-16P` | $11,977 | $11,977 | 0% | 3 | no | 2026-06-30 |
 | `MINI60-12/1127` | $1,906 | $1,906 |  | — | no | 2026-06-30 |
-| `MP13C` | $4,244 | $17,150 | 55% | 3 | no | 2026-06-30 |
+| `MP13C` | $7,718 | $17,150 | 18% | 3 | no | 2026-06-30 |
 | `PK-EASY-100CT` | $7,598 | $7,598 |  | 3, 6 | no | 2026-06-30 |
 | `PK-EASY-200US` | $4,812 | $4,812 |  | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-400US` | $3,516 | $6,392 |  | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-600N-US` | $4,590 | $8,346 |  | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-400US` | $6,392 | $6,392 |  | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-600N-US` | $8,346 | $8,346 |  | 3, 6 | no | 2026-06-30 |
 | `PK-EASY-600US` | $7,056 | $7,056 |  | 3 | no | 2026-06-30 |
-| `PK-EASY-800US` | $4,265 | $7,755 |  | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-800US` | $7,755 | $7,755 |  | 3, 6 | no | 2026-06-30 |
 | `PMR24` | $29,326 | $65,168 | 10% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `PP170` | $5,101 | $11,336 | 18% | 3, 6, 9 | **Sí** | 2026-06-30 |
 | `PP190` | $6,734 | $14,964 | 18% | 3, 6 | no | 2026-06-30 |
 | `PP190TT` | $7,273 | $16,162 | 18% | 3, 6 | no | 2026-06-30 |
 | `PP7BK` | $7,916 | $17,590 | 18% | 3 | no | 2026-06-28 |
 | `SK772TPRO` | $7,331 | $16,292 | 18% | 3, 6 | no | 2026-06-30 |
-| `WIND43` | $2,683 | $5,962 | 55% | 3 | no | 2026-06-30 |
+| `WIND43` | $2,683 | $5,962 |  | 3 | no | 2026-06-30 |
 | `WINDBAG26` | $2,385 | $4,770 | 9% | — | no | 2026-06-30 |
 
 ## Generadores (41)
@@ -112,7 +112,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, tu casa o tu obra no tienen por qué detenerse. Un apagón de CFE significa refrigerador apagado, herramienta parada y operación interrumpida. El generador Parazzini GP9500TB existe para que eso deje…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp9500tb-17-hp-9500-w-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b6e0a72-de26-414a-9d65-823bf3925548.png
-- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $6,055 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
+- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $8,649 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
   El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc [VERIFICAR: datos inferidos de estándar de mercado — confirmar con Marvelsa],…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-2500w-enerwell-4t-6-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_45e8886a-e494-4400-8a07-e8ea7a107f01.png
@@ -875,7 +875,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Otros (14)
 
-- **Motor Parazzini MP13C** · `MP13C` · $4,244 (antes $17,150) · Parazzini · MP13C · ⚡PROMO
+- **Motor Parazzini MP13C** · `MP13C` · $7,718 (antes $17,150) · Parazzini · MP13C · ⚡PROMO
   Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mp13c-13-hp-4t-con-caja-reductora-integrada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f0786bf-a462-4d4b-abba-f2ea3fe39f00.png
@@ -978,11 +978,11 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Purificación de Agua (5)
 
-- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $4,265 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
+- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $7,755 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
   ¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-800us-osmosis-inversa-800-gpd-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aab62185-b15f-4f46-aaec-cd327bfb7f10.png
-- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $3,516 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
+- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $6,392 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
   ¿Tu agua sabe rara, huele a cloro o simplemente no confías en lo que tomas del grifo? El agua de la red municipal trae sedimentos, cloro residual y microcontaminantes que ningún filtro de jarra elimina completamente. La…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-400-gpd-purikor-compacto-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d6ae10e6-1a6c-42eb-abc0-e2e8ff260bdc.png
@@ -994,7 +994,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cansado del agua turbia, con sabor extraño o preocupaciones sobre contaminantes? El sistema PURIKOR elimina sedimento, cloro, minerales disueltos, bacterias y virus — llevando agua potable pura directamente a tu grifo.…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_772afc7e-f9dd-4383-b2d4-edb0909acc8c.jpg
-- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $4,590 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
+- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $8,346 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
   ¿Tu familia espera minutos para llenar una jarra o la presión baja en cuanto abres la llave? Un purificador de flujo insuficiente no es ahorro — es frustración diaria. · El PURIKOR PK-EASY-600N-US resuelve eso de raíz:…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-purikor-537-gpd-4-etapas-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_08c046db-d6f0-4810-b7a3-e7b607f54c52.png
