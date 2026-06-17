@@ -34,7 +34,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `KAS-12P-TF` | $6,211 | $6,211 |  | 3 | no | 2026-06-30 |
 | `KASPRO-16P` | $11,977 | $11,977 |  | 3 | no | 2026-06-30 |
 | `MINI60-12/1127` | $1,906 | $1,906 |  | — | no | 2026-06-30 |
-| `MP13C` | $7,718 | $17,150 | 18% | 3 | no | 2026-06-30 |
+| `MP13C` | $4,244 | $17,150 | 55% | 3 | no | 2026-06-30 |
 | `PK-EASY-100CT` | $7,598 | $7,598 |  | 3, 6 | no | 2026-06-30 |
 | `PK-EASY-200US` | $4,812 | $4,812 |  | 3, 6 | no | 2026-06-30 |
 | `PK-EASY-400US` | $3,516 | $6,392 |  | 3, 6 | no | 2026-06-30 |
@@ -875,7 +875,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Otros (14)
 
-- **Motor Parazzini MP13C** · `MP13C` · $7,718 (antes $17,150) · Parazzini · MP13C · ⚡PROMO
+- **Motor Parazzini MP13C** · `MP13C` · $4,244 (antes $17,150) · Parazzini · MP13C · ⚡PROMO
   Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mp13c-13-hp-4t-con-caja-reductora-integrada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f0786bf-a462-4d4b-abba-f2ea3fe39f00.png
