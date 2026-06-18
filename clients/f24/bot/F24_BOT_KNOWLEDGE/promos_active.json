@@ -60,8 +60,8 @@
       "sku_upper": "ENERWELL-G1000",
       "producto": "Generador portátil a gasolina 1000w ENERWELL",
       "regular_price": 4402.26,
-      "promo_price": 4402.26,
-      "pct_desc": "",
+      "promo_price": 2861.47,
+      "pct_desc": "35%",
       "msi_ladder": [
         3
       ],
@@ -71,15 +71,15 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4402.26"
+      "shopify_price": "2861.47"
     },
     {
       "sku": "ENERWELL-G2500",
       "sku_upper": "ENERWELL-G2500",
       "producto": "Generador portátil a gasolina 2500w ENERWELL",
       "regular_price": 8649.0,
-      "promo_price": 8649.0,
-      "pct_desc": "",
+      "promo_price": 4929.93,
+      "pct_desc": "43%",
       "msi_ladder": [
         3,
         6
@@ -90,7 +90,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "8649.00"
+      "shopify_price": "4929.93"
     },
     {
       "sku": "FXL5B-200",
@@ -267,8 +267,8 @@
       "sku_upper": "KAS-10P",
       "producto": "Calentador de Paso Instantáneo KASSAI",
       "regular_price": 4004.25,
-      "promo_price": 4004.25,
-      "pct_desc": "",
+      "promo_price": 2402.55,
+      "pct_desc": "40%",
       "msi_ladder": [
         3
       ],
@@ -278,15 +278,15 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4004.25"
+      "shopify_price": "2402.55"
     },
     {
       "sku": "KAS-12P-TF",
       "sku_upper": "KAS-12P-TF",
       "producto": "Calentador de Paso Instantáneo Modulante 12L KASSAI",
       "regular_price": 6211.42,
-      "promo_price": 6211.0,
-      "pct_desc": "",
+      "promo_price": 3726.6,
+      "pct_desc": "40%",
       "msi_ladder": [
         3
       ],
@@ -296,15 +296,15 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6211.00"
+      "shopify_price": "3726.60"
     },
     {
       "sku": "KASPRO-16P",
       "sku_upper": "KASPRO-16P",
       "producto": "Calentador de Paso Instantáneo Modulante 16L KASSAI",
       "regular_price": 11976.57,
-      "promo_price": 11976.57,
-      "pct_desc": "0%",
+      "promo_price": 7785.05,
+      "pct_desc": "35%",
       "msi_ladder": [
         3
       ],
@@ -314,7 +314,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "11976.57"
+      "shopify_price": "7785.05"
     },
     {
       "sku": "MP13C",
@@ -339,8 +339,8 @@
       "sku_upper": "PK-EASY-100CT",
       "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
       "regular_price": 7598.0,
-      "promo_price": 7598.0,
-      "pct_desc": "",
+      "promo_price": 4938.7,
+      "pct_desc": "35%",
       "msi_ladder": [
         3,
         6
@@ -351,15 +351,15 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "7598.00"
+      "shopify_price": "4938.70"
     },
     {
       "sku": "PK-EASY-200US",
       "sku_upper": "PK-EASY-200US",
       "producto": "Sistema de ósmosis inversa de alto flujo PURIKOR",
       "regular_price": 4812.34,
-      "promo_price": 4812.34,
-      "pct_desc": "",
+      "promo_price": 2887.4,
+      "pct_desc": "40%",
       "msi_ladder": [
         3,
         6
@@ -370,15 +370,15 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4812.34"
+      "shopify_price": "2887.40"
     },
     {
       "sku": "PK-EASY-600US",
       "sku_upper": "PK-EASY-600US",
       "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
       "regular_price": 7056.0,
-      "promo_price": 7056.0,
-      "pct_desc": "",
+      "promo_price": 4233.6,
+      "pct_desc": "40%",
       "msi_ladder": [
         3
       ],
@@ -388,7 +388,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "7056.00"
+      "shopify_price": "4233.60"
     },
     {
       "sku": "PMR24",
@@ -544,8 +544,8 @@
       "sku_upper": "MINI60-12/1127",
       "producto": "Presurizador individual automático 1/6hp",
       "regular_price": 1905.64,
-      "promo_price": 1905.64,
-      "pct_desc": "",
+      "promo_price": 1238.67,
+      "pct_desc": "35%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -553,15 +553,15 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "1905.64"
+      "shopify_price": "1238.67"
     },
     {
       "sku": "PK-EASY-400US",
       "sku_upper": "PK-EASY-400US",
       "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
       "regular_price": 6392.33,
-      "promo_price": 6392.33,
-      "pct_desc": "",
+      "promo_price": 3835.4,
+      "pct_desc": "40%",
       "msi_ladder": [
         3,
         6
@@ -572,15 +572,15 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "6392.33"
+      "shopify_price": "3835.40"
     },
     {
       "sku": "PK-EASY-600N-US",
       "sku_upper": "PK-EASY-600N-US",
       "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
       "regular_price": 8346.21,
-      "promo_price": 8346.21,
-      "pct_desc": "",
+      "promo_price": 5007.73,
+      "pct_desc": "40%",
       "msi_ladder": [
         3,
         6
@@ -591,15 +591,15 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "8346.21"
+      "shopify_price": "5007.73"
     },
     {
       "sku": "PK-EASY-800US",
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 7755.22,
-      "promo_price": 7755.22,
-      "pct_desc": "",
+      "promo_price": 4653.13,
+      "pct_desc": "40%",
       "msi_ladder": [
         3,
         6
@@ -610,7 +610,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "7755.22"
+      "shopify_price": "4653.13"
     }
   ],
   "excluidos_sin_pdp": [
