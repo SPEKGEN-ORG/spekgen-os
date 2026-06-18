@@ -1,6 +1,6 @@
 {
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/🔥 PROMO ACTIVA",
-  "generated": "2026-06-17",
+  "generated": "2026-06-18",
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
     {
@@ -90,7 +90,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6054.62"
+      "shopify_price": "8649.00"
     },
     {
       "sku": "FXL5B-200",
@@ -111,7 +111,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "58834.35"
+      "shopify_price": "58834.32"
     },
     {
       "sku": "FXL5B-200K120",
@@ -132,7 +132,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "59154.75"
+      "shopify_price": "59154.74"
     },
     {
       "sku": "GP9500TB",
@@ -153,7 +153,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "30230.55"
+      "shopify_price": "30230.56"
     },
     {
       "sku": "GPH1000W",
@@ -314,7 +314,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "11977.00"
+      "shopify_price": "11976.57"
     },
     {
       "sku": "MP13C",
@@ -332,7 +332,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4244.40"
+      "shopify_price": "7717.50"
     },
     {
       "sku": "PK-EASY-100CT",
@@ -572,7 +572,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "3515.78"
+      "shopify_price": "6392.33"
     },
     {
       "sku": "PK-EASY-600N-US",
@@ -591,7 +591,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "4590.42"
+      "shopify_price": "8346.21"
     },
     {
       "sku": "PK-EASY-800US",
@@ -610,7 +610,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "4265.37"
+      "shopify_price": "7755.22"
     }
   ],
   "excluidos_sin_pdp": [
