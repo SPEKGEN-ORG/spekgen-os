@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-35 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+34 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (6 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -16,7 +16,6 @@ Reglas de meses sin intereses (MSI) por promo:
 
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
-| `ALTAPRO XLB86` | solo MSI | $11,386 | 2000% | 3, 6 | no | 2026-06-30 |
 | `ATV-25` | $4,897 | $10,883 | 18% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `BP4310` | $2,808 | $5,617 | 14% | — | no | 2026-06-30 |
 | `CK22CC` | $3,038 | $6,076 | 9% | — | no | 2026-06-30 |
@@ -912,7 +911,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando el jardín mide media manzana y el tiempo es dinero, un soplador de juguete no alcanza. El Kawashima WIND76 es la herramienta que usan los contratistas serios: motor 2T de 76 cc que arranca y no para, diseño de…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-kawashima-wind76-76-cc-1-440-m-h
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8fd502fc-a009-44ad-b083-c1a07ad26a2f.png
-- **Tanque Precargado ALTAMIRA 86 Gal** · `ALTAPRO XLB86` · $11,386 (antes $16,265) · ALTAMIRA · ALTAPRO XLB86 — Tanque Precargado Vertical · ⚡PROMO
+- **Tanque Precargado ALTAMIRA 86 Gal** · `ALTAPRO XLB86` · $11,386 (antes $16,265) · ALTAMIRA · ALTAPRO XLB86 — Tanque Precargado Vertical
   El ALTAPRO XLB86 es un tanque precargado de diafragma de la Serie PRO XLB de ALTAMIRA, diseñado para sistemas hidroneumáticos residenciales, comerciales, agrícolas e industriales que exigen presión de agua estable y…
   PDP: https://ferre24.com.mx/products/tanque-precargado-altamira-86-gal-garantia-6-anos-codo-inox-304-incluido
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e33f7ebf-1de3-4fc0-ab16-bcd1aa8ddab3.png

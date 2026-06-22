@@ -4,25 +4,6 @@
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
     {
-      "sku": "ALTAPRO XLB86",
-      "sku_upper": "ALTAPRO XLB86",
-      "producto": "Tanque precargado vertical 86gal",
-      "regular_price": 11386.0,
-      "promo_price": null,
-      "pct_desc": "2000%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-06-30",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "11386.00"
-    },
-    {
       "sku": "ATV-25",
       "sku_upper": "ATV-25",
       "producto": "Aspersor electrico 100 litros",
