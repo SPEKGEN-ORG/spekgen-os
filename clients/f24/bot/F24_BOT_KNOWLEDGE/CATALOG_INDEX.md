@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-33 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+34 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (6 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -23,6 +23,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ENERWELL-G2500` | $5,449 | $8,649 | 10% | 3, 6 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 12% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `FXL5B-200K120` | $59,155 | $131,455 | 10% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
+| `GP5500` | $10,751 | $21,718 | 10% | 3, 6 | no | 2026-06-30 |
 | `GP9500TB` | $30,231 | $67,179 | 18% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
 | `GPH1000W` | $2,127 | $4,254 |  | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 18% | 3 | no | 2026-06-28 |
@@ -160,7 +161,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz se detiene todo: el refrigerador, la bomba de agua, las herramientas en la obra. El generador Power Hunt GPH8000W te devuelve el control de tu energía con una salida potente y un arranque que no te…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-8000-w-motor-16-hp-power-hunt-gph8000w
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e8222ad0-3248-4d3c-8577-f0275e7f295e.png
-- **Generador a Gasolina Parazzini GP5500** · `GP5500` · $10,859 · Parazzini · GP5500
+- **Generador a Gasolina Parazzini GP5500** · `GP5500` · $10,751 (antes $21,718) · Parazzini · GP5500 · ⚡PROMO
   Un apagón a media jornada no avisa: se va la luz de CFE y se detiene el refrigerador, la bomba de agua o la herramienta de la obra. El Generador Parazzini GP5500 es la fuente de energía de respaldo que mantiene todo…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-parazzini-gp5500-5500w-9hp-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d44f51e5-e5ad-4ef5-a0ca-91a4a3cd78a1.png

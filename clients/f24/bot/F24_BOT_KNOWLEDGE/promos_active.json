@@ -540,6 +540,25 @@
       "shopify_price": "2385.00"
     },
     {
+      "sku": "GP5500",
+      "sku_upper": "GP5500",
+      "producto": "Generador a Gasolina Parazzini GP5500 — 5500W, 9HP, Encendido Manual",
+      "regular_price": 21718.0,
+      "promo_price": 10750.8,
+      "pct_desc": "10%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "10859.40"
+    },
+    {
       "sku": "MINI60-12/1127",
       "sku_upper": "MINI60-12/1127",
       "producto": "Presurizador individual automático 1/6hp",
