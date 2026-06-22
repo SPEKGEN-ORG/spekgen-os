@@ -107,7 +107,7 @@
       ],
       "msi_max": 12,
       "eligible_912": true,
-      "vigencia": "2026-06-30",
+      "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
@@ -128,7 +128,7 @@
       ],
       "msi_max": 12,
       "eligible_912": true,
-      "vigencia": "2026-06-30",
+      "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
@@ -314,7 +314,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "7785.05"
+      "shopify_price": "10779.30"
     },
     {
       "sku": "MP13C",
@@ -424,7 +424,7 @@
       ],
       "msi_max": 9,
       "eligible_912": true,
-      "vigencia": "2026-06-30",
+      "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
@@ -553,7 +553,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "1238.67"
+      "shopify_price": "1715.08"
     },
     {
       "sku": "PK-EASY-400US",
