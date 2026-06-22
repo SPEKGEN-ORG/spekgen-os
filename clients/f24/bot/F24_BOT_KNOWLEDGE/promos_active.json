@@ -1,6 +1,6 @@
 {
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/🔥 PROMO ACTIVA",
-  "generated": "2026-06-21",
+  "generated": "2026-06-22",
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
     {
@@ -60,8 +60,8 @@
       "sku_upper": "ENERWELL-G1000",
       "producto": "Generador portátil a gasolina 1000w ENERWELL",
       "regular_price": 4402.26,
-      "promo_price": 2861.47,
-      "pct_desc": "35%",
+      "promo_price": 3962.03,
+      "pct_desc": "10%",
       "msi_ladder": [
         3
       ],
@@ -78,8 +78,8 @@
       "sku_upper": "ENERWELL-G2500",
       "producto": "Generador portátil a gasolina 2500w ENERWELL",
       "regular_price": 8649.0,
-      "promo_price": 4929.93,
-      "pct_desc": "43%",
+      "promo_price": 7784.1,
+      "pct_desc": "10%",
       "msi_ladder": [
         3,
         6
