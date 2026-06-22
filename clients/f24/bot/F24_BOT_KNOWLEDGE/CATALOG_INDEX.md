@@ -19,8 +19,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ATV-25` | $4,897 | $10,883 | 18% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `BP4310` | $2,808 | $5,617 | 14% | — | no | 2026-06-30 |
 | `CK22CC` | $3,038 | $6,076 | 9% | — | no | 2026-06-30 |
-| `ENERWELL-G1000` | $3,962 | $4,402 | 10% | 3 | no | 2026-06-28 |
-| `ENERWELL-G2500` | $7,784 | $8,649 | 10% | 3, 6 | no | 2026-06-30 |
+| `ENERWELL-G1000` | $3,082 | $4,402 | 30% | 3 | no | 2026-06-28 |
+| `ENERWELL-G2500` | $6,054 | $8,649 | 30% | 3, 6 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 12% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `FXL5B-200K120` | $59,155 | $131,455 | 10% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `GP9500TB` | $30,231 | $67,179 | 18% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
@@ -112,7 +112,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, tu casa o tu obra no tienen por qué detenerse. Un apagón de CFE significa refrigerador apagado, herramienta parada y operación interrumpida. El generador Parazzini GP9500TB existe para que eso deje…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp9500tb-17-hp-9500-w-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b6e0a72-de26-414a-9d65-823bf3925548.png
-- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $7,784 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
+- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $6,054 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
   El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc [VERIFICAR: datos inferidos de estándar de mercado — confirmar con Marvelsa],…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-2500w-enerwell-4t-6-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_45e8886a-e494-4400-8a07-e8ea7a107f01.png
@@ -128,7 +128,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando la obra no se detiene y cada herramienta cuenta, necesitas un generador a la altura. El Generador Portátil ENERWELL-G8000 entrega 7,000W nominales y picos de 8,000W con motor de gasolina 4 tiempos de 420cc,…
   PDP: https://ferre24.com.mx/products/generador-portatil-8000w-gasolina-enerwell-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_77ea6781-7541-4bbe-9fba-5a74c1aac826.png
-- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $3,962 (antes $4,402) · ENERWELL · ENERWELL-G1000 · ⚡PROMO
+- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $3,082 (antes $4,402) · ENERWELL · ENERWELL-G1000 · ⚡PROMO
   El Generador Portátil ENERWELL G1000 es la solución compacta y confiable para quienes necesitan energía eléctrica en cualquier lugar. Con tecnología inverter , entrega corriente limpia y estable que protege tus…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-1000w-enerwell-inverter
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a49dbcb0-94a0-4d4f-a9d8-e6c0efc46f2a.png
