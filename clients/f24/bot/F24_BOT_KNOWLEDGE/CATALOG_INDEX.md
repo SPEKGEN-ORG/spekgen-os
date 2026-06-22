@@ -19,8 +19,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ATV-25` | $4,897 | $10,883 | 18% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `BP4310` | $2,808 | $5,617 | 14% | — | no | 2026-06-30 |
 | `CK22CC` | $3,038 | $6,076 | 9% | — | no | 2026-06-30 |
-| `ENERWELL-G1000` | $3,082 | $4,402 | 30% | 3 | no | 2026-06-28 |
-| `ENERWELL-G2500` | $6,054 | $8,649 | 30% | 3, 6 | no | 2026-06-30 |
+| `ENERWELL-G1000` | $4,402 | $4,402 |  | 3 | no | 2026-06-28 |
+| `ENERWELL-G2500` | $6,055 | $8,649 |  | 3, 6 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $130,743 | 12% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `FXL5B-200K120` | $59,155 | $131,455 | 10% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `GP9500TB` | $30,231 | $67,179 | 18% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
@@ -30,24 +30,24 @@ Reglas de meses sin intereses (MSI) por promo:
 | `HP5.5N` | $4,692 | $10,427 | 18% | 3 | no | 2026-06-30 |
 | `HP7N` | $10,364 | $23,030 | 22% | 3, 6 | no | 2026-06-30 |
 | `HPP110V` | $8,596 | $19,103 | 17% | 3 | no | 2026-06-30 |
-| `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-06-30 |
-| `KAS-12P-TF` | $5,590 | $6,211 | 10% | 3 | no | 2026-06-30 |
-| `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-06-30 |
-| `MINI60-12/1127` | $1,715 | $1,906 | 10% | — | no | 2026-06-30 |
+| `KAS-10P` | $4,004 | $4,004 |  | 3 | no | 2026-06-30 |
+| `KAS-12P-TF` | $6,211 | $6,211 | 0% | 3 | no | 2026-06-30 |
+| `KASPRO-16P` | $11,977 | $11,977 | 0% | 3 | no | 2026-06-30 |
+| `MINI60-12/1127` | $1,906 | $1,906 |  | — | no | 2026-06-30 |
 | `MP13C` | $7,718 | $17,150 | 18% | 3 | no | 2026-06-30 |
-| `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-200US` | $4,331 | $4,812 | 10% | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-400US` | $5,753 | $6,392 | 10% | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-600N-US` | $7,512 | $8,346 | 10% | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-600US` | $6,350 | $7,056 | 10% | 3 | no | 2026-06-30 |
-| `PK-EASY-800US` | $6,980 | $7,755 | 10% | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-100CT` | $7,598 | $7,598 |  | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-200US` | $4,812 | $4,812 |  | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-400US` | $4,475 | $6,392 |  | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-600N-US` | $8,346 | $8,346 |  | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-600US` | $7,056 | $7,056 |  | 3 | no | 2026-06-30 |
+| `PK-EASY-800US` | $5,429 | $7,755 |  | 3, 6 | no | 2026-06-30 |
 | `PMR24` | $29,326 | $65,168 | 10% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `PP170` | $5,101 | $11,336 | 18% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `PP190` | $6,734 | $14,964 | 18% | 3, 6 | no | 2026-06-30 |
 | `PP190TT` | $7,273 | $16,162 | 18% | 3, 6 | no | 2026-06-30 |
 | `PP7BK` | $7,916 | $17,590 | 18% | 3 | no | 2026-06-28 |
 | `SK772TPRO` | $7,331 | $16,292 | 18% | 3, 6 | no | 2026-06-30 |
-| `WIND43` | $2,415 | $5,962 | 10% | 3 | no | 2026-06-30 |
+| `WIND43` | $2,683 | $5,962 |  | 3 | no | 2026-06-30 |
 | `WINDBAG26` | $2,385 | $4,770 | 9% | — | no | 2026-06-30 |
 
 ## Generadores (41)
@@ -112,7 +112,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, tu casa o tu obra no tienen por qué detenerse. Un apagón de CFE significa refrigerador apagado, herramienta parada y operación interrumpida. El generador Parazzini GP9500TB existe para que eso deje…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp9500tb-17-hp-9500-w-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b6e0a72-de26-414a-9d65-823bf3925548.png
-- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $6,054 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
+- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $6,055 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
   El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc [VERIFICAR: datos inferidos de estándar de mercado — confirmar con Marvelsa],…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-2500w-enerwell-4t-6-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_45e8886a-e494-4400-8a07-e8ea7a107f01.png
@@ -128,7 +128,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando la obra no se detiene y cada herramienta cuenta, necesitas un generador a la altura. El Generador Portátil ENERWELL-G8000 entrega 7,000W nominales y picos de 8,000W con motor de gasolina 4 tiempos de 420cc,…
   PDP: https://ferre24.com.mx/products/generador-portatil-8000w-gasolina-enerwell-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_77ea6781-7541-4bbe-9fba-5a74c1aac826.png
-- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $3,082 (antes $4,402) · ENERWELL · ENERWELL-G1000 · ⚡PROMO
+- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $4,402 (antes $4,402) · ENERWELL · ENERWELL-G1000 · ⚡PROMO
   El Generador Portátil ENERWELL G1000 es la solución compacta y confiable para quienes necesitan energía eléctrica en cualquier lugar. Con tecnología inverter , entrega corriente limpia y estable que protege tus…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-1000w-enerwell-inverter
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a49dbcb0-94a0-4d4f-a9d8-e6c0efc46f2a.png
@@ -691,7 +691,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Calentadores de Agua (2)
 
-- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $10,779 (antes $11,977) · KASSAI · KASPRO-16P · ⚡PROMO
+- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $11,977 (antes $11,977) · KASSAI · KASPRO-16P · ⚡PROMO
   El KASSAI KASPRO-16P es un calentador de paso instantáneo modulante de la Serie Profesional con capacidad de 16 litros por minuto, diseñado para abastecer hasta dos servicios simultáneos sin tanque y sin piloto de llama…
   PDP: https://ferre24.com.mx/products/calentador-paso-instantaneo-modulante-kassai-kaspro-16p-16-l-agua-caliente-sin-p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f13c1e7-b888-425c-a86e-02416b48e0b9.png
@@ -891,7 +891,7 @@ Reglas de meses sin intereses (MSI) por promo:
 - **Sistema de Ósmosis Inversa 6 Etapas + UV** · `PKRO200-6UVPM` · $5,210 (antes $7,443) · PURIKOR · PKRO200-6UVPM
   ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4-6 personas gasta entre $250 y $300 mensuales en agua embotellada — dinero que se va sin dejar nada. El Sistema de Ósmosis Inversa PURIKOR PKRO200-6UVPM te…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-6-etapas-uv-200-gpd-purikor
-- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $6,350 (antes $7,056) · PURIKOR · PK-EASY-600US · ⚡PROMO
+- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $7,056 (antes $7,056) · PURIKOR · PK-EASY-600US · ⚡PROMO
   ¿Cuánto gastas al mes en garrafones? ¿Cuánto espacio te quita el tinaco o el filtro de debajo de la tarja? El PURIKOR PK-EASY-600US resuelve los dos problemas al mismo tiempo: agua purificada directamente del grifo, en…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-sin-tanque-600-gpd-purikor-pk-easy-600us
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ac57830b-0e5d-4063-a881-ca162db66e71.png
@@ -940,7 +940,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Presurizadores (1)
 
-- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $1,715 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
+- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $1,334 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
   ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
   PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40fbe287-0d55-46cd-b9e8-020654c8c477.png
@@ -951,11 +951,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
   PDP: https://ferre24.com.mx/products/aquapak-ccqa-5230
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_01bd0201-942f-403b-90f8-b04cf5869189.png
-- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $5,590 (antes $6,211) · KASSAI · KAS-12P-TF · ⚡PROMO
+- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $6,211 (antes $6,211) · KASSAI · KAS-12P-TF · ⚡PROMO
   Calentador de Paso Instantáneo Modulante
   PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
-- **KASSAI KAS-10P** · `KAS-10P` · $3,604 (antes $4,004) · KASSAI · KAS-10P · ⚡PROMO
+- **KASSAI KAS-10P** · `KAS-10P` · $4,004 (antes $4,004) · KASSAI · KAS-10P · ⚡PROMO
   Potencia: 9500W (eficiente para 220V monofásico) · Flujo: 2-6 litros por minuto · Elevación térmica: +20°C a +45°C (según flujo y temperatura entrada) · Regulación: Dial manual, fácil ajuste · Seguridad: Protección…
   PDP: https://ferre24.com.mx/products/kassai-kas-10p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1429a6b9-02ea-4764-afa7-3535dcd75d1b.png
@@ -978,11 +978,11 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Purificación de Agua (5)
 
-- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $6,980 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
+- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $5,429 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
   ¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-800us-osmosis-inversa-800-gpd-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aab62185-b15f-4f46-aaec-cd327bfb7f10.png
-- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $5,753 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
+- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $4,475 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
   ¿Tu agua sabe rara, huele a cloro o simplemente no confías en lo que tomas del grifo? El agua de la red municipal trae sedimentos, cloro residual y microcontaminantes que ningún filtro de jarra elimina completamente. La…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-400-gpd-purikor-compacto-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d6ae10e6-1a6c-42eb-abc0-e2e8ff260bdc.png
@@ -990,18 +990,18 @@ Reglas de meses sin intereses (MSI) por promo:
   El Sistema de Ósmosis Inversa PURIKOR PKRO600-6UVPM es la solución definitiva para quienes necesitan agua purificada de alto rendimiento en aplicaciones comerciales o industriales de punto de uso (POU). Con un flujo…
   PDP: https://ferre24.com.mx/products/osmosis-inversa-purikor-600gpd-6-etapas-uv-pkro600-6uvpm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94ac0d04-72ea-4d68-b6bb-03b22feb3ea0.png
-- **Sistema de Ósmosis Inversa PURIKOR PK-EASY-200** · `PK-EASY-200US` · $4,331 (antes $4,812) · PURIKOR · PK-EASY-200 · ⚡PROMO
+- **Sistema de Ósmosis Inversa PURIKOR PK-EASY-200** · `PK-EASY-200US` · $4,812 (antes $4,812) · PURIKOR · PK-EASY-200 · ⚡PROMO
   ¿Cansado del agua turbia, con sabor extraño o preocupaciones sobre contaminantes? El sistema PURIKOR elimina sedimento, cloro, minerales disueltos, bacterias y virus — llevando agua potable pura directamente a tu grifo.…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_772afc7e-f9dd-4383-b2d4-edb0909acc8c.jpg
-- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $7,512 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
+- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $5,842 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
   ¿Tu familia espera minutos para llenar una jarra o la presión baja en cuanto abres la llave? Un purificador de flujo insuficiente no es ahorro — es frustración diaria. · El PURIKOR PK-EASY-600N-US resuelve eso de raíz:…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-purikor-537-gpd-4-etapas-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_08c046db-d6f0-4810-b7a3-e7b607f54c52.png
 
 ## Purificadores por Ósmosis Inversa (1)
 
-- **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $6,838 (antes $7,598) · PK-EASY · 100CT · ⚡PROMO
+- **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $7,598 (antes $7,598) · PK-EASY · 100CT · ⚡PROMO
   ¿Cuánto llevas gastando en garrafones este mes? Una familia de 4 personas gasta entre $1,560 y $2,080 MXN al mes en agua embotellada — más de $18,000 al año — y aun así no tiene certeza de lo que está tomando. · El…
   PDP: https://ferre24.com.mx/products/purificador-osmosis-inversa-100gpd-dispensador-pk-easy-100ct
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a1b8095f-75d4-4e63-8671-e1b090fbd688.png

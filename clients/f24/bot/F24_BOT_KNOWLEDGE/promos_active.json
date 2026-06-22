@@ -60,8 +60,8 @@
       "sku_upper": "ENERWELL-G1000",
       "producto": "Generador portátil a gasolina 1000w ENERWELL",
       "regular_price": 4402.26,
-      "promo_price": 3081.58,
-      "pct_desc": "30%",
+      "promo_price": 4402.26,
+      "pct_desc": "",
       "msi_ladder": [
         3
       ],
@@ -71,15 +71,15 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3962.03"
+      "shopify_price": "3081.58"
     },
     {
       "sku": "ENERWELL-G2500",
       "sku_upper": "ENERWELL-G2500",
       "producto": "Generador portátil a gasolina 2500w ENERWELL",
       "regular_price": 8649.0,
-      "promo_price": 6054.3,
-      "pct_desc": "30%",
+      "promo_price": 6054.62,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -90,14 +90,14 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "7784.10"
+      "shopify_price": "6054.30"
     },
     {
       "sku": "FXL5B-200",
       "sku_upper": "FXL5B-200",
       "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp",
       "regular_price": 130743.0,
-      "promo_price": 58834.32,
+      "promo_price": 58834.35,
       "pct_desc": "12%",
       "msi_ladder": [
         3,
@@ -118,7 +118,7 @@
       "sku_upper": "FXL5B-200K120",
       "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp con flecha cardan de 120 cm",
       "regular_price": 131455.0,
-      "promo_price": 59154.74,
+      "promo_price": 59154.75,
       "pct_desc": "10%",
       "msi_ladder": [
         3,
@@ -139,7 +139,7 @@
       "sku_upper": "GP9500TB",
       "producto": "Generador Parazzini GP9500TB — 17 HP, 9500 W, encendido eléctrico",
       "regular_price": 67179.0,
-      "promo_price": 30230.56,
+      "promo_price": 30230.55,
       "pct_desc": "18%",
       "msi_ladder": [
         3,
@@ -267,8 +267,8 @@
       "sku_upper": "KAS-10P",
       "producto": "Calentador de Paso Instantáneo KASSAI",
       "regular_price": 4004.25,
-      "promo_price": 3603.83,
-      "pct_desc": "10%",
+      "promo_price": 4004.25,
+      "pct_desc": "",
       "msi_ladder": [
         3
       ],
@@ -285,8 +285,8 @@
       "sku_upper": "KAS-12P-TF",
       "producto": "Calentador de Paso Instantáneo Modulante 12L KASSAI",
       "regular_price": 6211.42,
-      "promo_price": 5589.9,
-      "pct_desc": "10%",
+      "promo_price": 6211.42,
+      "pct_desc": "0%",
       "msi_ladder": [
         3
       ],
@@ -303,8 +303,8 @@
       "sku_upper": "KASPRO-16P",
       "producto": "Calentador de Paso Instantáneo Modulante 16L KASSAI",
       "regular_price": 11976.57,
-      "promo_price": 10779.3,
-      "pct_desc": "10%",
+      "promo_price": 11976.57,
+      "pct_desc": "0%",
       "msi_ladder": [
         3
       ],
@@ -339,8 +339,8 @@
       "sku_upper": "PK-EASY-100CT",
       "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
       "regular_price": 7598.0,
-      "promo_price": 6838.2,
-      "pct_desc": "10%",
+      "promo_price": 7598.0,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -358,8 +358,8 @@
       "sku_upper": "PK-EASY-200US",
       "producto": "Sistema de ósmosis inversa de alto flujo PURIKOR",
       "regular_price": 4812.34,
-      "promo_price": 4331.11,
-      "pct_desc": "10%",
+      "promo_price": 4812.34,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -377,8 +377,8 @@
       "sku_upper": "PK-EASY-600US",
       "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
       "regular_price": 7056.0,
-      "promo_price": 6350.4,
-      "pct_desc": "10%",
+      "promo_price": 7056.0,
+      "pct_desc": "",
       "msi_ladder": [
         3
       ],
@@ -510,8 +510,8 @@
       "sku_upper": "WIND43",
       "producto": "Soplador de Mochila Kawashima 43cc — Potencia Real, Respaldo Nacional",
       "regular_price": 5962.0,
-      "promo_price": 2414.61,
-      "pct_desc": "10%",
+      "promo_price": 2682.9,
+      "pct_desc": "",
       "msi_ladder": [
         3
       ],
@@ -544,8 +544,8 @@
       "sku_upper": "MINI60-12/1127",
       "producto": "Presurizador individual automático 1/6hp",
       "regular_price": 1905.64,
-      "promo_price": 1715.08,
-      "pct_desc": "10%",
+      "promo_price": 1905.64,
+      "pct_desc": "",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -560,8 +560,8 @@
       "sku_upper": "PK-EASY-400US",
       "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
       "regular_price": 6392.33,
-      "promo_price": 5753.1,
-      "pct_desc": "10%",
+      "promo_price": 4474.63,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -579,8 +579,8 @@
       "sku_upper": "PK-EASY-600N-US",
       "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
       "regular_price": 8346.21,
-      "promo_price": 7511.59,
-      "pct_desc": "10%",
+      "promo_price": 8346.21,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -598,8 +598,8 @@
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 7755.22,
-      "promo_price": 6979.7,
-      "pct_desc": "10%",
+      "promo_price": 5428.65,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
