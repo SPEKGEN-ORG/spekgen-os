@@ -71,7 +71,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4402.26"
+      "shopify_price": "3962.03"
     },
     {
       "sku": "ENERWELL-G2500",
@@ -90,7 +90,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6054.62"
+      "shopify_price": "5449.16"
     },
     {
       "sku": "FXL5B-200",
@@ -278,7 +278,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4004.25"
+      "shopify_price": "3603.83"
     },
     {
       "sku": "KAS-12P-TF",
@@ -296,15 +296,15 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6211.42"
+      "shopify_price": "5589.90"
     },
     {
       "sku": "KASPRO-16P",
       "sku_upper": "KASPRO-16P",
       "producto": "Calentador de Paso Instantáneo Modulante 16L KASSAI",
       "regular_price": 11976.57,
-      "promo_price": 11976.57,
-      "pct_desc": "0%",
+      "promo_price": 10779.3,
+      "pct_desc": "10%",
       "msi_ladder": [
         3
       ],
@@ -314,7 +314,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "11976.57"
+      "shopify_price": "10779.30"
     },
     {
       "sku": "MP13C",
@@ -351,7 +351,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "7598.00"
+      "shopify_price": "6838.20"
     },
     {
       "sku": "PK-EASY-200US",
@@ -370,7 +370,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4812.34"
+      "shopify_price": "4331.11"
     },
     {
       "sku": "PK-EASY-600US",
@@ -388,7 +388,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "7056.00"
+      "shopify_price": "6350.40"
     },
     {
       "sku": "PMR24",
@@ -544,8 +544,8 @@
       "sku_upper": "MINI60-12/1127",
       "producto": "Presurizador individual automático 1/6hp",
       "regular_price": 1905.64,
-      "promo_price": 1333.95,
-      "pct_desc": "",
+      "promo_price": 1200.55,
+      "pct_desc": "10%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -553,7 +553,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "1333.95"
+      "shopify_price": "1200.55"
     },
     {
       "sku": "PK-EASY-400US",
@@ -572,7 +572,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "4474.63"
+      "shopify_price": "4027.17"
     },
     {
       "sku": "PK-EASY-600N-US",
@@ -591,7 +591,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "5842.35"
+      "shopify_price": "5258.11"
     },
     {
       "sku": "PK-EASY-800US",
@@ -610,7 +610,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "5428.65"
+      "shopify_price": "4885.79"
     }
   ],
   "excluidos_sin_pdp": [
