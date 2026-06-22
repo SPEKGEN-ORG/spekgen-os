@@ -30,17 +30,17 @@ Reglas de meses sin intereses (MSI) por promo:
 | `HP5.5N` | $4,692 | $10,427 | 18% | 3 | no | 2026-06-30 |
 | `HP7N` | $10,364 | $23,030 | 22% | 3, 6 | no | 2026-06-30 |
 | `HPP110V` | $8,596 | $19,103 | 17% | 3 | no | 2026-06-30 |
-| `KAS-10P` | $2,403 | $4,004 | 40% | 3 | no | 2026-06-30 |
-| `KAS-12P-TF` | $3,727 | $6,211 | 40% | 3 | no | 2026-06-30 |
-| `KASPRO-16P` | $7,785 | $11,977 | 35% | 3 | no | 2026-06-30 |
-| `MINI60-12/1127` | $1,239 | $1,906 | 35% | — | no | 2026-06-30 |
+| `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-06-30 |
+| `KAS-12P-TF` | $5,590 | $6,211 | 10% | 3 | no | 2026-06-30 |
+| `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-06-30 |
+| `MINI60-12/1127` | $1,715 | $1,906 | 10% | — | no | 2026-06-30 |
 | `MP13C` | $7,718 | $17,150 | 18% | 3 | no | 2026-06-30 |
-| `PK-EASY-100CT` | $4,939 | $7,598 | 35% | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-200US` | $2,887 | $4,812 | 40% | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-400US` | $3,835 | $6,392 | 40% | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-600N-US` | $5,008 | $8,346 | 40% | 3, 6 | no | 2026-06-30 |
-| `PK-EASY-600US` | $4,234 | $7,056 | 40% | 3 | no | 2026-06-30 |
-| `PK-EASY-800US` | $4,653 | $7,755 | 40% | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-200US` | $4,331 | $4,812 | 10% | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-400US` | $5,753 | $6,392 | 10% | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-600N-US` | $7,512 | $8,346 | 10% | 3, 6 | no | 2026-06-30 |
+| `PK-EASY-600US` | $6,350 | $7,056 | 10% | 3 | no | 2026-06-30 |
+| `PK-EASY-800US` | $6,980 | $7,755 | 10% | 3, 6 | no | 2026-06-30 |
 | `PMR24` | $29,326 | $65,168 | 10% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `PP170` | $5,101 | $11,336 | 18% | 3, 6, 9 | **Sí** | 2026-06-30 |
 | `PP190` | $6,734 | $14,964 | 18% | 3, 6 | no | 2026-06-30 |
@@ -691,7 +691,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Calentadores de Agua (2)
 
-- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $7,785 (antes $11,977) · KASSAI · KASPRO-16P · ⚡PROMO
+- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $10,779 (antes $11,977) · KASSAI · KASPRO-16P · ⚡PROMO
   El KASSAI KASPRO-16P es un calentador de paso instantáneo modulante de la Serie Profesional con capacidad de 16 litros por minuto, diseñado para abastecer hasta dos servicios simultáneos sin tanque y sin piloto de llama…
   PDP: https://ferre24.com.mx/products/calentador-paso-instantaneo-modulante-kassai-kaspro-16p-16-l-agua-caliente-sin-p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f13c1e7-b888-425c-a86e-02416b48e0b9.png
@@ -940,7 +940,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Presurizadores (1)
 
-- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $1,239 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
+- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $1,715 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
   ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
   PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40fbe287-0d55-46cd-b9e8-020654c8c477.png
@@ -951,11 +951,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
   PDP: https://ferre24.com.mx/products/aquapak-ccqa-5230
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_01bd0201-942f-403b-90f8-b04cf5869189.png
-- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $3,727 (antes $6,211) · KASSAI · KAS-12P-TF · ⚡PROMO
+- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $5,590 (antes $6,211) · KASSAI · KAS-12P-TF · ⚡PROMO
   Calentador de Paso Instantáneo Modulante
   PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
-- **KASSAI KAS-10P** · `KAS-10P` · $2,403 (antes $4,004) · KASSAI · KAS-10P · ⚡PROMO
+- **KASSAI KAS-10P** · `KAS-10P` · $3,604 (antes $4,004) · KASSAI · KAS-10P · ⚡PROMO
   Potencia: 9500W (eficiente para 220V monofásico) · Flujo: 2-6 litros por minuto · Elevación térmica: +20°C a +45°C (según flujo y temperatura entrada) · Regulación: Dial manual, fácil ajuste · Seguridad: Protección…
   PDP: https://ferre24.com.mx/products/kassai-kas-10p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1429a6b9-02ea-4764-afa7-3535dcd75d1b.png
@@ -994,7 +994,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cansado del agua turbia, con sabor extraño o preocupaciones sobre contaminantes? El sistema PURIKOR elimina sedimento, cloro, minerales disueltos, bacterias y virus — llevando agua potable pura directamente a tu grifo.…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_772afc7e-f9dd-4383-b2d4-edb0909acc8c.jpg
-- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $5,008 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
+- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $7,512 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
   ¿Tu familia espera minutos para llenar una jarra o la presión baja en cuanto abres la llave? Un purificador de flujo insuficiente no es ahorro — es frustración diaria. · El PURIKOR PK-EASY-600N-US resuelve eso de raíz:…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-purikor-537-gpd-4-etapas-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_08c046db-d6f0-4810-b7a3-e7b607f54c52.png
