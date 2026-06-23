@@ -24,6 +24,22 @@
       "shopify_price": "4897.35"
     },
     {
+      "sku": "BAKARAC300",
+      "sku_upper": "BAKARAC300",
+      "producto": "Generador soldador inverter 250A Diésel",
+      "regular_price": 43912.0,
+      "promo_price": 39520.8,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "39520.80"
+    },
+    {
       "sku": "BP1330C",
       "sku_upper": "BP1330C",
       "producto": "Motobomba Centrífuga Parazzini BP1330C — 13 HP, 3 Pulgadas",
@@ -37,7 +53,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "11075.68"
+      "shopify_price": "9968.11"
     },
     {
       "sku": "BP2510V2",
@@ -53,7 +69,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "2489.94"
+      "shopify_price": "2240.95"
     },
     {
       "sku": "BP4310",
@@ -72,6 +88,38 @@
       "shopify_price": "2808.50"
     },
     {
+      "sku": "BP720",
+      "sku_upper": "BP720",
+      "producto": "Motobomba Autocebante a Gasolina 7 HP 2\" — Parazzini BP720",
+      "regular_price": 4482.72,
+      "promo_price": 4034.45,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "4034.45"
+    },
+    {
+      "sku": "BP720A",
+      "sku_upper": "BP720A",
+      "producto": "Parazzini BP720A",
+      "regular_price": 8276.6,
+      "promo_price": 7448.94,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "7448.94"
+    },
+    {
       "sku": "BP730",
       "sku_upper": "BP730",
       "producto": "Motobomba Autocebante a Gasolina 7 HP 3\" Parazzini BP730",
@@ -85,7 +133,23 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6775.56"
+      "shopify_price": "6098.00"
+    },
+    {
+      "sku": "BP730D",
+      "sku_upper": "BP730D",
+      "producto": "Motobomba Diesel Autocebante Parazzini BP730D — 7 HP, 3 Pulgadas",
+      "regular_price": 13021.0,
+      "promo_price": 11718.9,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "11718.90"
     },
     {
       "sku": "BPK31",
@@ -101,7 +165,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3557.14"
+      "shopify_price": "3201.43"
     },
     {
       "sku": "CK22CC",
@@ -199,6 +263,22 @@
       "shopify_price": "59154.75"
     },
     {
+      "sku": "GP20KWT",
+      "sku_upper": "GP20KWT",
+      "producto": "Generador 36 HP V- Bicilindrico encendido electrico 20,000 W",
+      "regular_price": 117086.0,
+      "promo_price": 105377.4,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "105377.40"
+    },
+    {
       "sku": "GP9500TB",
       "sku_upper": "GP9500TB",
       "producto": "Generador Parazzini GP9500TB — 17 HP, 9500 W, encendido eléctrico",
@@ -270,6 +350,22 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "11316.15"
+    },
+    {
+      "sku": "GPIDJI9500",
+      "sku_upper": "GPIDJI9500",
+      "producto": "Generador Inverter Parazzini GPIDJI9500 — 9500 W, 19 HP a Gasolina",
+      "regular_price": 42557.35,
+      "promo_price": 38301.62,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "38301.62"
     },
     {
       "sku": "HP5.5N",
@@ -356,7 +452,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "19655.00"
+      "shopify_price": "17689.50"
     },
     {
       "sku": "HPPE4M",
@@ -372,7 +468,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "20022.74"
+      "shopify_price": "18020.47"
     },
     {
       "sku": "HUNT521",
@@ -458,7 +554,23 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "2448.00"
+      "shopify_price": "2203.20"
+    },
+    {
+      "sku": "MKD4518",
+      "sku_upper": "MKD4518",
+      "producto": "Motosierra 45 cc barra 18 pulg.",
+      "regular_price": 2761.0,
+      "promo_price": 2484.9,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "2484.90"
     },
     {
       "sku": "MP13C",
@@ -492,7 +604,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "26670.00"
+      "shopify_price": "24003.00"
     },
     {
       "sku": "MTT52M",
@@ -508,7 +620,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "5691.35"
+      "shopify_price": "5292.96"
     },
     {
       "sku": "PK-EASY-100CT",
@@ -658,7 +770,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "14659.00"
+      "shopify_price": "13193.10"
     },
     {
       "sku": "PP7BK",
@@ -698,6 +810,22 @@
       "shopify_price": "7331.40"
     },
     {
+      "sku": "WIND26",
+      "sku_upper": "WIND26",
+      "producto": "Soplador 26 cc",
+      "regular_price": 2124.0,
+      "promo_price": 1911.6,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "1911.60"
+    },
+    {
       "sku": "WIND43",
       "sku_upper": "WIND43",
       "producto": "Soplador de Mochila Kawashima 43cc — Potencia Real, Respaldo Nacional",
@@ -716,6 +844,22 @@
       "shopify_price": "1138.14"
     },
     {
+      "sku": "WIND76",
+      "sku_upper": "WIND76",
+      "producto": "Soplador de mochila 76 cc",
+      "regular_price": 5622.0,
+      "promo_price": 5059.8,
+      "pct_desc": "10%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "5059.80"
+    },
+    {
       "sku": "WINDBAG26",
       "sku_upper": "WINDBAG26",
       "producto": "Soplador-aspirador Kawashima 26 cc con bolsa recolectora",
@@ -730,6 +874,22 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "2385.00"
+    },
+    {
+      "sku": "GH26000E-A",
+      "sku_upper": "GH26000E-A",
+      "producto": "Generador estacionario a gas LP de 22 Kw (no incluye bateria) - Trifasico",
+      "regular_price": 143920.0,
+      "promo_price": 132406.4,
+      "pct_desc": "8%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-06-28",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "132406.40"
     },
     {
       "sku": "GP5500",
@@ -808,41 +968,56 @@
       "sku_upper": "PK-EASY-600N-US",
       "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
       "regular_price": 5842.35,
-      "promo_price": 5258.12,
-      "pct_desc": "10%",
+      "promo_price": 5258.11,
+      "pct_desc": "30/12/1899",
       "msi_ladder": [
         3,
         6
       ],
       "msi_max": 6,
       "eligible_912": false,
-      "vigencia": "2026-06-30",
+      "vigencia": "",
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "5258.12"
+      "shopify_price": "5258.11"
     },
     {
       "sku": "PK-EASY-800US",
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 5428.65,
-      "promo_price": 4885.79,
-      "pct_desc": "10%",
+      "promo_price": 4885.78,
+      "pct_desc": "30/12/1899",
       "msi_ladder": [
         3,
         6
       ],
       "msi_max": 6,
       "eligible_912": false,
-      "vigencia": "2026-06-30",
+      "vigencia": "",
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "4885.79"
+      "shopify_price": "4885.78"
     }
   ],
   "excluidos_sin_pdp": [
+    {
+      "sku": "BP1040D",
+      "producto": "Motobomba 10 hp diesel autocebante 4 pulg con encendido eléctrico",
+      "estado_landing": ""
+    },
+    {
+      "sku": "BP1340",
+      "producto": "Motobomba 13 hp 4 tiempos ohv autocebante 4 pulg",
+      "estado_landing": ""
+    },
+    {
+      "sku": "BPC720D",
+      "producto": "Motobomba 7 hp diesel centrifuga 2 pulg con arranque eléctrico y manual",
+      "estado_landing": ""
+    },
     {
       "sku": "PT6.5AK",
       "producto": "Parihuela 6.5hp con manguera 8.5 mm",

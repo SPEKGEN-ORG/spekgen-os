@@ -4,6 +4,11 @@
     "promo": 4897.35,
     "orig_compare_at": 10883.41
   },
+  "BAKARAC300": {
+    "base": 43912.0,
+    "promo": 39520.8,
+    "orig_compare_at": 43912.0
+  },
   "BP1330C": {
     "base": 11075.68,
     "promo": 9968.11,
@@ -19,10 +24,25 @@
     "promo": 2808.5,
     "orig_compare_at": 3258.44
   },
+  "BP720": {
+    "base": 4482.72,
+    "promo": 4034.45,
+    "orig_compare_at": 4482.72
+  },
+  "BP720A": {
+    "base": 8276.6,
+    "promo": 7448.94,
+    "orig_compare_at": 8276.6
+  },
   "BP730": {
     "base": 6775.56,
     "promo": 6098.0,
     "orig_compare_at": 11682.0
+  },
+  "BP730D": {
+    "base": 13021.0,
+    "promo": 11718.9,
+    "orig_compare_at": 13021.0
   },
   "BPK31": {
     "base": 3557.14,
@@ -54,6 +74,11 @@
     "promo": 59154.75,
     "orig_compare_at": 131455.93
   },
+  "GP20KWT": {
+    "base": 117086.0,
+    "promo": 105377.4,
+    "orig_compare_at": 117086.0
+  },
   "GP9500TB": {
     "base": 36949.0,
     "promo": 30230.55,
@@ -73,6 +98,11 @@
     "base": 13830.85,
     "promo": 11316.15,
     "orig_compare_at": 13830.85
+  },
+  "GPIDJI9500": {
+    "base": 42557.35,
+    "promo": 38301.62,
+    "orig_compare_at": 42557.35
   },
   "HP5.5N": {
     "base": 5691.31,
@@ -128,6 +158,11 @@
     "base": 2448.0,
     "promo": 2203.2,
     "orig_compare_at": 4451.05
+  },
+  "MKD4518": {
+    "base": 2761.0,
+    "promo": 2484.9,
+    "orig_compare_at": 2761.0
   },
   "MP13C": {
     "base": 9432.0,
@@ -194,15 +229,30 @@
     "promo": 7331.4,
     "orig_compare_at": 16292.12
   },
+  "WIND26": {
+    "base": 2124.0,
+    "promo": 1911.6,
+    "orig_compare_at": 2124.0
+  },
   "WIND43": {
     "base": 1138.14,
     "promo": 1138.14,
     "orig_compare_at": 1910.52
   },
+  "WIND76": {
+    "base": 5622.0,
+    "promo": 5059.8,
+    "orig_compare_at": 5622.0
+  },
   "WINDBAG26": {
     "base": 2624.0,
     "promo": 2385.0,
     "orig_compare_at": 4770.35
+  },
+  "GH26000E-A": {
+    "base": 143920.0,
+    "promo": 132406.4,
+    "orig_compare_at": 143920.0
   },
   "GP5500": {
     "base": 11945.33,
@@ -226,12 +276,12 @@
   },
   "PK-EASY-600N-US": {
     "base": 5842.35,
-    "promo": 5258.12,
+    "promo": 5258.11,
     "orig_compare_at": 8346.21
   },
   "PK-EASY-800US": {
     "base": 5428.65,
-    "promo": 4885.79,
+    "promo": 4885.78,
     "orig_compare_at": 7755.22
   }
 }
