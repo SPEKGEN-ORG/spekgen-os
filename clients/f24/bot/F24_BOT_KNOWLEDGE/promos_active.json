@@ -1,13 +1,13 @@
 {
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/🔥 PROMO ACTIVA",
-  "generated": "2026-06-22",
+  "generated": "2026-06-23",
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
     {
       "sku": "ATV-25",
       "sku_upper": "ATV-25",
       "producto": "Aspersor electrico 100 litros",
-      "regular_price": 10883.0,
+      "regular_price": 5986.0,
       "promo_price": 4897.35,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -27,7 +27,7 @@
       "sku": "BP4310",
       "sku_upper": "BP4310",
       "producto": "Motobomba 43cc 2 tiempos autocebante 1 pulg",
-      "regular_price": 5617.0,
+      "regular_price": 3258.44,
       "promo_price": 2808.5,
       "pct_desc": "14%",
       "msi_ladder": [],
@@ -43,7 +43,7 @@
       "sku": "CK22CC",
       "sku_upper": "CK22CC",
       "producto": "Cortasetos 22 cc Kawashima Pro — Kit listo, refacciones locales",
-      "regular_price": 6076.0,
+      "regular_price": 3342.0,
       "promo_price": 3038.0,
       "pct_desc": "9%",
       "msi_ladder": [],
@@ -77,7 +77,7 @@
       "sku": "ENERWELL-G2500",
       "sku_upper": "ENERWELL-G2500",
       "producto": "Generador portátil a gasolina 2500w ENERWELL",
-      "regular_price": 8649.0,
+      "regular_price": 6054.62,
       "promo_price": 5449.16,
       "pct_desc": "10%",
       "msi_ladder": [
@@ -96,7 +96,7 @@
       "sku": "FXL5B-200",
       "sku_upper": "FXL5B-200",
       "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp",
-      "regular_price": 130743.0,
+      "regular_price": 67143.0,
       "promo_price": 58834.35,
       "pct_desc": "12%",
       "msi_ladder": [
@@ -117,7 +117,7 @@
       "sku": "FXL5B-200K120",
       "sku_upper": "FXL5B-200K120",
       "producto": "Aspersor 200 lts turbina vertical 20 pulg 25hp con flecha cardan de 120 cm",
-      "regular_price": 131455.0,
+      "regular_price": 65728.0,
       "promo_price": 59154.75,
       "pct_desc": "10%",
       "msi_ladder": [
@@ -138,7 +138,7 @@
       "sku": "GP9500TB",
       "sku_upper": "GP9500TB",
       "producto": "Generador Parazzini GP9500TB — 17 HP, 9500 W, encendido eléctrico",
-      "regular_price": 67179.0,
+      "regular_price": 36949.0,
       "promo_price": 30230.55,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -159,7 +159,7 @@
       "sku": "GPH1000W",
       "sku_upper": "GPH1000W",
       "producto": "Generador Portátil Power Hunt 1000W — 6 Horas de Autonomía",
-      "regular_price": 4254.0,
+      "regular_price": 2127.0,
       "promo_price": 2127.0,
       "pct_desc": "0%",
       "msi_ladder": [],
@@ -175,7 +175,7 @@
       "sku": "GPH5500W",
       "sku_upper": "GPH5500W",
       "producto": "Generador Power Hunt GPH5500W — 5,500W, 15HP, Voltaje Dual 120/220V",
-      "regular_price": 19450.0,
+      "regular_price": 10697.5,
       "promo_price": 8752.5,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -193,7 +193,7 @@
       "sku": "GPH8000W",
       "sku_upper": "GPH8000W",
       "producto": "Generador a Gasolina 8000 W con Motor de 16 HP — Power Hunt GPH8000W",
-      "regular_price": 25147.0,
+      "regular_price": 13830.85,
       "promo_price": 11316.15,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -211,7 +211,7 @@
       "sku": "HP5.5N",
       "sku_upper": "HP5.5N",
       "producto": "Hidrolavadora a Gasolina Parazzini HP5.5 — 2,200 PSI / 5.5 HP / 4 Tiempos",
-      "regular_price": 10427.0,
+      "regular_price": 5691.31,
       "promo_price": 4692.15,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -229,7 +229,7 @@
       "sku": "HP7N",
       "sku_upper": "HP7N",
       "producto": "Hidrolavadora a Gasolina Parazzini HP5.5 — 2,200 PSI / 5.5 HP / 4 Tiempos",
-      "regular_price": 23030.0,
+      "regular_price": 13357.4,
       "promo_price": 10363.5,
       "pct_desc": "22%",
       "msi_ladder": [
@@ -248,7 +248,7 @@
       "sku": "HPP110V",
       "sku_upper": "HPP110V",
       "producto": "Hidrolavadora Pro 110 -120 V Monofasica — Parazzini HPP110V",
-      "regular_price": 19103.0,
+      "regular_price": 10316.16,
       "promo_price": 8596.35,
       "pct_desc": "17%",
       "msi_ladder": [
@@ -285,7 +285,7 @@
       "sku_upper": "KAS-12P-TF",
       "producto": "Calentador de Paso Instantáneo Modulante 12L KASSAI",
       "regular_price": 6211.42,
-      "promo_price": 5589.9,
+      "promo_price": 5590.28,
       "pct_desc": "10%",
       "msi_ladder": [
         3
@@ -303,7 +303,7 @@
       "sku_upper": "KASPRO-16P",
       "producto": "Calentador de Paso Instantáneo Modulante 16L KASSAI",
       "regular_price": 11976.57,
-      "promo_price": 10779.3,
+      "promo_price": 10778.91,
       "pct_desc": "10%",
       "msi_ladder": [
         3
@@ -320,7 +320,7 @@
       "sku": "MP13C",
       "sku_upper": "MP13C",
       "producto": "Motor 13 hp 4 tiempos con reductor",
-      "regular_price": 17150.0,
+      "regular_price": 9432.0,
       "promo_price": 7717.5,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -394,7 +394,7 @@
       "sku": "PMR24",
       "sku_upper": "PMR24",
       "producto": "Tractor podador motor RV225-x 223cc 24 pulg",
-      "regular_price": 65168.0,
+      "regular_price": 32584.0,
       "promo_price": 29325.6,
       "pct_desc": "10%",
       "msi_ladder": [
@@ -414,7 +414,7 @@
       "sku": "PP170",
       "sku_upper": "PP170",
       "producto": "Podadora Parazzini Pro 170cc Autopropulsada — Cuchilla 21 Pulg",
-      "regular_price": 11336.0,
+      "regular_price": 6235.0,
       "promo_price": 5101.2,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -434,7 +434,7 @@
       "sku": "PP190",
       "sku_upper": "PP190",
       "producto": "Podadora a Gasolina 190cc Parazzini Pro PP190 — Corte 21\" y Bolsa 65L",
-      "regular_price": 14964.0,
+      "regular_price": 8231.0,
       "promo_price": 6733.8,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -453,7 +453,7 @@
       "sku": "PP190TT",
       "sku_upper": "PP190TT",
       "producto": "Podadora Autopropulsada 190cc — Corte 21\" y Bolsa 65L",
-      "regular_price": 16162.0,
+      "regular_price": 8889.0,
       "promo_price": 7272.9,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -472,7 +472,7 @@
       "sku": "PP7BK",
       "sku_upper": "PP7BK",
       "producto": "Kit parihuela 7 hp bronce con manguera de 8.5 mm",
-      "regular_price": 17590.0,
+      "regular_price": 9675.0,
       "promo_price": 7915.5,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -490,7 +490,7 @@
       "sku": "SK772TPRO",
       "sku_upper": "SK772TPRO",
       "producto": "Soplador PRO 77cc",
-      "regular_price": 16292.0,
+      "regular_price": 8961.0,
       "promo_price": 7331.4,
       "pct_desc": "18%",
       "msi_ladder": [
@@ -509,7 +509,7 @@
       "sku": "WIND43",
       "sku_upper": "WIND43",
       "producto": "Soplador de Mochila Kawashima 43cc — Potencia Real, Respaldo Nacional",
-      "regular_price": 5962.0,
+      "regular_price": 1138.14,
       "promo_price": 1138.14,
       "pct_desc": "0%",
       "msi_ladder": [
@@ -527,7 +527,7 @@
       "sku": "WINDBAG26",
       "sku_upper": "WINDBAG26",
       "producto": "Soplador-aspirador Kawashima 26 cc con bolsa recolectora",
-      "regular_price": 4770.0,
+      "regular_price": 2624.0,
       "promo_price": 2385.0,
       "pct_desc": "9%",
       "msi_ladder": [],
@@ -543,7 +543,7 @@
       "sku": "GP5500",
       "sku_upper": "GP5500",
       "producto": "Generador a Gasolina Parazzini GP5500 — 5500W, 9HP, Encendido Manual",
-      "regular_price": 21718.0,
+      "regular_price": 11945.33,
       "promo_price": 10750.8,
       "pct_desc": "10%",
       "msi_ladder": [
@@ -563,7 +563,7 @@
       "sku_upper": "KF35X",
       "producto": "Aspersor Motorizado 35 cc",
       "regular_price": 4888.21,
-      "promo_price": 2199.69,
+      "promo_price": 2199.79,
       "pct_desc": "55%",
       "msi_ladder": [
         3
@@ -574,14 +574,14 @@
       "vigente": true,
       "estado_landing": "En landing",
       "in_shopify": true,
-      "shopify_price": "4888.21"
+      "shopify_price": "2199.69"
     },
     {
       "sku": "MINI60-12/1127",
       "sku_upper": "MINI60-12/1127",
       "producto": "Presurizador individual automático 1/6hp",
-      "regular_price": 1905.64,
-      "promo_price": 1200.55,
+      "regular_price": 1333.95,
+      "promo_price": 1200.56,
       "pct_desc": "10%",
       "msi_ladder": [],
       "msi_max": 0,
@@ -596,7 +596,7 @@
       "sku": "PK-EASY-400US",
       "sku_upper": "PK-EASY-400US",
       "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
-      "regular_price": 6392.33,
+      "regular_price": 4474.63,
       "promo_price": 4027.17,
       "pct_desc": "10%",
       "msi_ladder": [
@@ -615,8 +615,8 @@
       "sku": "PK-EASY-600N-US",
       "sku_upper": "PK-EASY-600N-US",
       "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
-      "regular_price": 8346.21,
-      "promo_price": 5258.11,
+      "regular_price": 5842.35,
+      "promo_price": 5258.12,
       "pct_desc": "10%",
       "msi_ladder": [
         3,
@@ -634,7 +634,7 @@
       "sku": "PK-EASY-800US",
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
-      "regular_price": 7755.22,
+      "regular_price": 5428.65,
       "promo_price": 4885.79,
       "pct_desc": "10%",
       "msi_ladder": [

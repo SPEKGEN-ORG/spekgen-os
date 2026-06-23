@@ -1,16 +1,16 @@
 {
   "ATV-25": {
-    "base": 10883.0,
+    "base": 5986.0,
     "promo": 4897.35,
     "orig_compare_at": 10883.41
   },
   "BP4310": {
-    "base": 5617.0,
+    "base": 3258.44,
     "promo": 2808.5,
     "orig_compare_at": 3258.44
   },
   "CK22CC": {
-    "base": 6076.0,
+    "base": 3342.0,
     "promo": 3038.0,
     "orig_compare_at": 6076.51
   },
@@ -20,52 +20,52 @@
     "orig_compare_at": null
   },
   "ENERWELL-G2500": {
-    "base": 8649.0,
+    "base": 6054.62,
     "promo": 5449.16,
     "orig_compare_at": null
   },
   "FXL5B-200": {
-    "base": 130743.0,
+    "base": 67143.0,
     "promo": 58834.35,
     "orig_compare_at": 126685.65
   },
   "FXL5B-200K120": {
-    "base": 131455.0,
+    "base": 65728.0,
     "promo": 59154.75,
     "orig_compare_at": 131455.93
   },
   "GP9500TB": {
-    "base": 67179.0,
+    "base": 36949.0,
     "promo": 30230.55,
     "orig_compare_at": 67180.0
   },
   "GPH1000W": {
-    "base": 4254.0,
+    "base": 2127.0,
     "promo": 2127.0,
     "orig_compare_at": 2127.0
   },
   "GPH5500W": {
-    "base": 19450.0,
+    "base": 10697.5,
     "promo": 8752.5,
     "orig_compare_at": 19450.0
   },
   "GPH8000W": {
-    "base": 25147.0,
+    "base": 13830.85,
     "promo": 11316.15,
     "orig_compare_at": 13830.85
   },
   "HP5.5N": {
-    "base": 10427.0,
+    "base": 5691.31,
     "promo": 4692.15,
     "orig_compare_at": 10347.84
   },
   "HP7N": {
-    "base": 23030.0,
+    "base": 13357.4,
     "promo": 10363.5,
     "orig_compare_at": 23030.0
   },
   "HPP110V": {
-    "base": 19103.0,
+    "base": 10316.16,
     "promo": 8596.35,
     "orig_compare_at": 19104.0
   },
@@ -76,16 +76,16 @@
   },
   "KAS-12P-TF": {
     "base": 6211.42,
-    "promo": 5589.9,
+    "promo": 5590.28,
     "orig_compare_at": null
   },
   "KASPRO-16P": {
     "base": 11976.57,
-    "promo": 10779.3,
+    "promo": 10778.91,
     "orig_compare_at": null
   },
   "MP13C": {
-    "base": 17150.0,
+    "base": 9432.0,
     "promo": 7717.5,
     "orig_compare_at": 17149.45
   },
@@ -105,72 +105,72 @@
     "orig_compare_at": null
   },
   "PMR24": {
-    "base": 65168.0,
+    "base": 32584.0,
     "promo": 29325.6,
     "orig_compare_at": 65168.54
   },
   "PP170": {
-    "base": 11336.0,
+    "base": 6235.0,
     "promo": 5101.2,
     "orig_compare_at": 6235.0
   },
   "PP190": {
-    "base": 14964.0,
+    "base": 8231.0,
     "promo": 6733.8,
     "orig_compare_at": 14964.6
   },
   "PP190TT": {
-    "base": 16162.0,
+    "base": 8889.0,
     "promo": 7272.9,
     "orig_compare_at": 16161.8
   },
   "PP7BK": {
-    "base": 17590.0,
+    "base": 9675.0,
     "promo": 7915.5,
     "orig_compare_at": 17590.89
   },
   "SK772TPRO": {
-    "base": 16292.0,
+    "base": 8961.0,
     "promo": 7331.4,
     "orig_compare_at": 16292.12
   },
   "WIND43": {
-    "base": 5962.0,
+    "base": 1138.14,
     "promo": 1138.14,
     "orig_compare_at": 1910.52
   },
   "WINDBAG26": {
-    "base": 4770.0,
+    "base": 2624.0,
     "promo": 2385.0,
     "orig_compare_at": 4770.35
   },
   "GP5500": {
-    "base": 21718.0,
+    "base": 11945.33,
     "promo": 10750.8,
     "orig_compare_at": null
   },
   "KF35X": {
     "base": 4888.21,
-    "promo": 2199.69,
+    "promo": 2199.79,
     "orig_compare_at": null
   },
   "MINI60-12/1127": {
-    "base": 1905.64,
-    "promo": 1200.55,
+    "base": 1333.95,
+    "promo": 1200.56,
     "orig_compare_at": 1905.64
   },
   "PK-EASY-400US": {
-    "base": 6392.33,
+    "base": 4474.63,
     "promo": 4027.17,
     "orig_compare_at": 6392.33
   },
   "PK-EASY-600N-US": {
-    "base": 8346.21,
-    "promo": 5258.11,
+    "base": 5842.35,
+    "promo": 5258.12,
     "orig_compare_at": 8346.21
   },
   "PK-EASY-800US": {
-    "base": 7755.22,
+    "base": 5428.65,
     "promo": 4885.79,
     "orig_compare_at": 7755.22
   }
