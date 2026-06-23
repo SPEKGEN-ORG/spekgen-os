@@ -54,8 +54,8 @@ STOCK_TAB = "📦 STOCK Y PROMOS"
 MSI912_TAG = "msi-912"
 # PROMO ACTIVA: SKU | Producto | Precio | Meses MSI | % Desc | Precio Promo | Vigencia | Estado Landing
 COL = {"sku": 0, "producto": 1, "precio": 2, "msi": 3, "pct": 4, "promo": 5, "vig": 6, "landing": 7}
-# STOCK Y PROMOS: precio base col E (4), descuento directo col Q (16)
-STOCK_COL = {"sku": 0, "producto": 1, "precio_base": 4, "direct_disc": 16}
+# STOCK Y PROMOS: precio base col E (4), descuento directo col Q (16), tachado marketing col T (19)
+STOCK_COL = {"sku": 0, "producto": 1, "precio_base": 4, "direct_disc": 16, "tachado": 19}
 
 SA_REL = "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json"
 
@@ -152,13 +152,13 @@ def read_promo_active(svc) -> list[dict]:
 
 
 def read_base_prices(svc) -> dict:
-    """{sku_upper: {'base','producto','direct_disc'}} desde 📦 STOCK Y PROMOS.
-    base = col E (precio venta) · direct_disc = col Q (descuento directo %, fracción|None)."""
+    """{sku_upper: {'base','producto','direct_disc','tachado'}} desde 📦 STOCK Y PROMOS.
+    base = col E (precio venta real) · direct_disc = col Q · tachado = col T (ancla marketing)."""
     vals = svc.spreadsheets().values().get(
-        spreadsheetId=SHEET_ID, range=f"{STOCK_TAB}!A2:Q").execute().get("values", [])
+        spreadsheetId=SHEET_ID, range=f"{STOCK_TAB}!A2:T").execute().get("values", [])
     out = {}
     for r in vals:
-        r = (list(r) + [""] * 17)[:17]
+        r = (list(r) + [""] * 20)[:20]
         sku = str(r[STOCK_COL["sku"]]).strip()
         if not sku:
             continue
@@ -166,6 +166,7 @@ def read_base_prices(svc) -> dict:
             "base": parse_money(r[STOCK_COL["precio_base"]]),
             "producto": str(r[STOCK_COL["producto"]]).strip(),
             "direct_disc": parse_frac(r[STOCK_COL["direct_disc"]]),
+            "tachado": parse_money(r[STOCK_COL["tachado"]]),
         }
     return out
 
@@ -274,8 +275,10 @@ def main():
         if not v:
             continue
         b = base.get(sku_u, {}).get("base")
+        tach = base.get(sku_u, {}).get("tachado")
         want_p = r["promo_price"]
-        want_c = b if b is not None else r["regular_price"]
+        # tachado (compareAt) = ancla de marketing si existe, si no el base, si no el regular
+        want_c = tach if tach is not None else (b if b is not None else r["regular_price"])
         cur_p, cur_c = _f(v["price"]), _f(v["compare_at"])
         # compareAt original (Marvelsa) = lo guardado antes, o el actual si entra fresco a promo
         orig = prev.get(sku_u, {}).get("orig_compare_at", cur_c if sku_u not in prev else None)
@@ -293,7 +296,9 @@ def main():
         if not d or b is None or not v:
             continue
         desc_by_sku[sku_u] = d
-        want_p, want_c = round(b * (1 - d), 2), b  # precio rebajado · tachado = precio base
+        tach = info.get("tachado")
+        # precio rebajado · tachado = ancla de marketing si existe, si no el base
+        want_p, want_c = round(b * (1 - d), 2), (tach if tach is not None else b)
         cur_p, cur_c = _f(v["price"]), _f(v["compare_at"])
         orig = prev.get(sku_u, {}).get("orig_compare_at", cur_c if sku_u not in prev else None)
         new_state[sku_u] = {"base": b, "desc": d, "orig_compare_at": orig}
@@ -333,10 +338,11 @@ def main():
         if cur_p is not None and abs(cur_p - b) >= BASE_TOL:
             entry = {"sku": sku_u, "pid": v["pid"], "vid": v["vid"],
                      "cur_p": cur_p, "want_p": b, "title": v["title"]}
+            # Política "sin freno": el cambio SIEMPRE se aplica. Los cambios grandes
+            # (>50%) solo se loguean como aviso para dejar rastro auditable (no congelan).
+            base_review.append(entry)
             if cur_p > 0 and abs(b - cur_p) / cur_p > SUSPECT_RATIO:
                 base_suspect.append(entry)
-            else:
-                base_review.append(entry)
 
     # --- Reporte ---
     print(f"=== PROMOS — precio promo a setear ({len(promo_changes)}) ===")
@@ -355,7 +361,7 @@ def main():
     for c in sorted(base_review, key=lambda x: x["sku"]):
         print(f"  {c['sku']:<18} shopify={c['cur_p']:>10}  sheet={c['want_p']:>10}  {c['title'][:34]}")
     if base_suspect:
-        print(f"\n⚠️  PRECIO BASE SOSPECHOSO (>{int(SUSPECT_RATIO*100)}% — NUNCA auto-aplica, confirmar con Sergio) ({len(base_suspect)}):")
+        print(f"\n⚠️  CAMBIO DE BASE GRANDE (>{int(SUSPECT_RATIO*100)}%) — SE APLICA, queda en log de auditoría ({len(base_suspect)}):")
         for c in sorted(base_suspect, key=lambda x: x["sku"]):
             ratio = c["want_p"] / c["cur_p"] if c["cur_p"] else 0
             print(f"  {c['sku']:<18} shopify={c['cur_p']:>10}  sheet={c['want_p']:>10}  ({ratio:.2f}×)  {c['title'][:28]}")
@@ -372,7 +378,7 @@ def main():
     base_verb = "a aplicar" if args.apply_base else "por revisar"
     print(f"\nResumen: {len(promo_changes)} promo + {len(desc_changes)} descuento directo + "
           f"{len(expiries)} expiradas a aplicar | "
-          f"{len(base_review)} base {base_verb} + {len(base_suspect)} base SOSPECHOSAS (frenadas) | "
+          f"{len(base_review)} base {base_verb} ({len(base_suspect)} con cambio grande, en log) | "
           f"{len(sellable)} promos vendibles")
 
     if dry:
