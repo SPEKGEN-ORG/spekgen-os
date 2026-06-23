@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-34 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+35 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (6 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -25,7 +25,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `FXL5B-200K120` | $59,155 | $131,455 | 10% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `GP5500` | $10,751 | $21,718 | 10% | 3, 6 | no | 2026-06-30 |
 | `GP9500TB` | $30,231 | $67,179 | 18% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
-| `GPH1000W` | $2,127 | $4,254 |  | — | no | 2026-06-28 |
+| `GPH1000W` | $2,127 | $4,254 | 0% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $19,450 | 18% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $25,147 | 18% | 3 | no | 2026-06-28 |
 | `HP5.5N` | $4,692 | $10,427 | 18% | 3 | no | 2026-06-30 |
@@ -34,6 +34,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | $5,590 | $6,211 | 10% | 3 | no | 2026-06-30 |
 | `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-06-30 |
+| `KF35X` | $2,200 | $4,888 | 55% | 3 | no | 2026-06-30 |
 | `MINI60-12/1127` | $1,201 | $1,906 | 10% | — | no | 2026-06-30 |
 | `MP13C` | $7,718 | $17,150 | 18% | 3 | no | 2026-06-30 |
 | `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 3, 6 | no | 2026-06-30 |
@@ -48,7 +49,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PP190TT` | $7,273 | $16,162 | 18% | 3, 6 | no | 2026-06-30 |
 | `PP7BK` | $7,916 | $17,590 | 18% | 3 | no | 2026-06-28 |
 | `SK772TPRO` | $7,331 | $16,292 | 18% | 3, 6 | no | 2026-06-30 |
-| `WIND43` | $1,138 | $5,962 |  | 3 | no | 2026-06-30 |
+| `WIND43` | $1,138 | $5,962 | 0% | 3 | no | 2026-06-30 |
 | `WINDBAG26` | $2,385 | $4,770 | 9% | — | no | 2026-06-30 |
 
 ## Generadores (41)
@@ -223,7 +224,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
   PDP: https://ferre24.com.mx/products/aspersor-kawashima-ak26-motor-2-tiempos-25-litros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png
-- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $4,888 · Kawashima · KF35X
+- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $2,200 (antes $4,888) · Kawashima · KF35X · ⚡PROMO
   Fumigar una hectárea a mano tarda horas y agota antes de terminar. Con una fumigadora manual de 16 litros tienes que detenerte a recargar constantemente, y si tu parcela no tiene toma de corriente, los equipos…
   PDP: https://ferre24.com.mx/products/aspersor-motorizado-kawashima-kf35x-35cc
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b1b2d0f-443a-445f-96b0-f220d5a53842.png

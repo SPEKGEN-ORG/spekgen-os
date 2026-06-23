@@ -161,7 +161,7 @@
       "producto": "Generador Portátil Power Hunt 1000W — 6 Horas de Autonomía",
       "regular_price": 4254.0,
       "promo_price": 2127.0,
-      "pct_desc": "",
+      "pct_desc": "0%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -511,7 +511,7 @@
       "producto": "Soplador de Mochila Kawashima 43cc — Potencia Real, Respaldo Nacional",
       "regular_price": 5962.0,
       "promo_price": 1138.14,
-      "pct_desc": "",
+      "pct_desc": "0%",
       "msi_ladder": [
         3
       ],
@@ -557,6 +557,24 @@
       "estado_landing": "En landing",
       "in_shopify": true,
       "shopify_price": "10750.80"
+    },
+    {
+      "sku": "KF35X",
+      "sku_upper": "KF35X",
+      "producto": "Aspersor Motorizado 35 cc",
+      "regular_price": 4888.21,
+      "promo_price": 2199.69,
+      "pct_desc": "55%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-06-30",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "4888.21"
     },
     {
       "sku": "MINI60-12/1127",
