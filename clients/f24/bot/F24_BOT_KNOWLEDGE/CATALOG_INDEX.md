@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-35 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+47 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (6 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -17,26 +17,37 @@ Reglas de meses sin intereses (MSI) por promo:
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
 | `ATV-25` | $4,897 | $5,986 | 18% | 3, 6, 9 | **Sí** | 2026-06-28 |
+| `BP1330C` | $9,968 | $11,076 | 10% | — | no | 2026-06-28 |
+| `BP2510V2` | $2,241 | $2,490 | 10% | — | no | 2026-06-28 |
 | `BP4310` | $2,808 | $3,258 | 14% | — | no | 2026-06-28 |
-| `CK22CC` | $3,038 | $3,342 | 9% | — | no | 2026-06-30 |
+| `BP730` | $6,098 | $6,776 | 10% | — | no | 2026-06-28 |
+| `BPK31` | $3,201 | $3,557 | 10% | — | no | 2026-06-28 |
+| `CK22CC` | $3,038 | $3,342 | 9% | — | no | 2026-06-28 |
 | `ENERWELL-G1000` | $3,962 | $4,402 | 10% | 3 | no | 2026-06-28 |
 | `ENERWELL-G2500` | $5,449 | $6,055 | 10% | 3, 6 | no | 2026-06-30 |
 | `FXL5B-200` | $58,834 | $67,143 | 12% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `FXL5B-200K120` | $59,155 | $65,728 | 10% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `GP5500` | $10,751 | $11,945 | 10% | 3, 6 | no | 2026-06-30 |
-| `GP9500TB` | $30,231 | $36,949 | 18% | 3, 6, 9, 12 | **Sí** | 2026-06-30 |
+| `GP9500TB` | $30,231 | $36,949 | 18% | 3, 6, 9, 12 | **Sí** | 2026-06-28 |
 | `GPH1000W` | $2,127 | $2,127 | 0% | — | no | 2026-06-28 |
 | `GPH5500W` | $8,752 | $10,698 | 18% | 3 | no | 2026-06-28 |
 | `GPH8000W` | $11,316 | $13,831 | 18% | 3 | no | 2026-06-28 |
-| `HP5.5N` | $4,692 | $5,691 | 18% | 3 | no | 2026-06-30 |
-| `HP7N` | $10,364 | $13,357 | 22% | 3, 6 | no | 2026-06-30 |
-| `HPP110V` | $8,596 | $10,316 | 17% | 3 | no | 2026-06-30 |
+| `HP5.5N` | $4,692 | $5,691 | 18% | 3 | no | 2026-06-28 |
+| `HP7N` | $10,364 | $13,357 | 22% | 3, 6 | no | 2026-06-28 |
+| `HPH7` | $0 | $0 | 10% | — | no | 2026-06-28 |
+| `HPP110V` | $8,596 | $10,316 | 17% | 3 | no | 2026-06-28 |
+| `HPPE4` | $17,690 | $19,655 | 10% | — | no | 2026-06-28 |
+| `HPPE4M` | $18,020 | $20,023 | 10% | — | no | 2026-06-28 |
+| `HUNT521` | $1,332 | $1,332 |  | — | no | 2026-06-28 |
 | `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-06-30 |
 | `KAS-12P-TF` | $5,590 | $6,211 | 10% | 3 | no | 2026-06-30 |
 | `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-06-30 |
 | `KF35X` | $2,200 | $4,888 | 55% | 3 | no | 2026-06-28 |
 | `MINI60-12/1127` | $1,201 | $1,334 | 10% | — | no | 2026-06-30 |
-| `MP13C` | $7,718 | $9,432 | 18% | 3 | no | 2026-06-30 |
+| `MKD3816` | $2,203 | $2,448 | 10% | — | no | 2026-06-28 |
+| `MP13C` | $7,718 | $9,432 | 18% | 3 | no | 2026-06-28 |
+| `MP22` | $24,003 | $26,670 | 10% | — | no | 2026-06-28 |
+| `MTT52M` | $5,293 | $5,691 | 7% | — | no | 2026-06-28 |
 | `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 3, 6 | no | 2026-06-30 |
 | `PK-EASY-200US` | $4,331 | $4,812 | 10% | 3, 6 | no | 2026-06-30 |
 | `PK-EASY-400US` | $4,027 | $4,475 | 10% | 3, 6 | no | 2026-06-30 |
@@ -45,16 +56,17 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-800US` | $4,886 | $5,429 | 10% | 3, 6 | no | 2026-06-30 |
 | `PMR24` | $29,326 | $32,584 | 10% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `PP170` | $5,101 | $6,235 | 18% | 3, 6, 9 | **Sí** | 2026-06-28 |
-| `PP190` | $6,734 | $8,231 | 18% | 3, 6 | no | 2026-06-30 |
-| `PP190TT` | $7,273 | $8,889 | 18% | 3, 6 | no | 2026-06-30 |
+| `PP190` | $6,734 | $8,231 | 18% | 3, 6 | no | 2026-06-28 |
+| `PP190TT` | $7,273 | $8,889 | 18% | 3, 6 | no | 2026-06-28 |
+| `PP6.5D` | $13,193 | $14,659 | 10% | — | no | 2026-06-28 |
 | `PP7BK` | $7,916 | $9,675 | 18% | 3 | no | 2026-06-28 |
-| `SK772TPRO` | $7,331 | $8,961 | 18% | 3, 6 | no | 2026-06-30 |
-| `WIND43` | $1,138 | $1,138 | 0% | 3 | no | 2026-06-30 |
-| `WINDBAG26` | $2,385 | $2,624 | 9% | — | no | 2026-06-30 |
+| `SK772TPRO` | $7,331 | $8,961 | 18% | 3, 6 | no | 2026-06-28 |
+| `WIND43` | $1,138 | $1,138 | 0% | 3 | no | 2026-06-28 |
+| `WINDBAG26` | $2,385 | $2,624 | 9% | — | no | 2026-06-28 |
 
 ## Generadores (41)
 
-- **GH26000E-A** · `GH26000E-A` · $143,920 · Parazzini Pro · GH26000E-AM
+- **GH26000E-A** · `GH26000E-A` · $132,406 (antes $143,920) · Parazzini Pro · GH26000E-AM
   Especificaciones completas · SKU GH26000E-AM Motor · Tipo de motor Gas LP (Propano) · Combustible gas_lp · Encendido electrico · Identificación · Marca Parazzini Pro · Modelo GH26000E-AM · SKU GH26000E-AM
   PDP: https://ferre24.com.mx/products/gh26000e-a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1c8dce99-76a2-4486-9a1a-aeafe3b41865.png
@@ -94,11 +106,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, tu casa o tu negocio no tienen por qué detenerse. Los apagones dejan sin energía al refrigerador, las luces y el equipo de cómputo justo cuando más los necesitas. El generador inverter Parazzini…
   PDP: https://ferre24.com.mx/products/generador-inverter-dual-fuel-5-5-kw-parazzini-gasolina-gas-lp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94e48c28-b912-4edc-8597-81c84a697b43.png
-- **Generador Inverter Parazzini GPIDJI9500** · `GPIDJI9500` · $42,557 (antes $77,377) · Parazzini · GPIDJI9500
+- **Generador Inverter Parazzini GPIDJI9500** · `GPIDJI9500` · $38,302 (antes $42,557) · Parazzini · GPIDJI9500
   ¿Conectaste tu refrigerador, tu computadora o tus herramientas a un generador convencional y temiste dañarlos? Es un miedo justificado: los generadores comunes entregan energía "sucia", con picos que arruinan tarjetas…
   PDP: https://ferre24.com.mx/products/generador-inverter-parazzini-gpidji9500-9500-w-19-hp-a-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c28318a-fedb-471c-9536-06e643d6867f.png
-- **Generador Parazzini 20 kW Gasolina V-Twin 36 HP** · `GP20KWT` · $117,086 (antes $216,825) · Parazzini · GP20KWT
+- **Generador Parazzini 20 kW Gasolina V-Twin 36 HP** · `GP20KWT` · $105,377 (antes $117,086) · Parazzini · GP20KWT
   ¿Tu taller, obra o evento depende de la red eléctrica y no puedes permitirte un corte? · Con el Generador Parazzini GP20KWT llevas 20 kW de potencia continua donde la red no llega — o donde no puedes arriesgarte a que…
   PDP: https://ferre24.com.mx/products/generador-parazzini-20-kw-gasolina-v-twin-36-hp-gp20kwt
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aec6a174-aecc-4d14-8979-26755af07f2d.png
@@ -190,7 +202,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Harto de motores que fallan justo cuando más los necesitas? Un motor diesel de calidad dudosa puede pararte una jornada completa de siembra, obra o producción — y las refacciones que no aparecen en región cuestan tres…
   PDP: https://ferre24.com.mx/products/motor-diesel-15-hp-parazzini-mp15d-con-arranque-electrico-para-bomba-generador-y-obra
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_marvelsa.png
-- **Motor Estacionario V-twin 22 HP Parazzini MP22** · `MP22` · $26,670 (antes $48,491) · Parazzini · MP22
+- **Motor Estacionario V-twin 22 HP Parazzini MP22** · `MP22` · $24,003 (antes $26,670) · Parazzini · MP22 · ⚡PROMO
   Cuando un motor industrial falla, cada hora parada cuesta dinero. El Parazzini MP22 es la solución de potencia que mantiene operando tus equipos sin vaciar el presupuesto: 22 HP de fuerza real en configuración V-twin…
   PDP: https://ferre24.com.mx/products/motor-estacionario-v-twin-22-hp-parazzini-mp22-arranque-electrico
 - **Motor Parazzini 2.8 HP / 97cc** · `MP2.8` · $3,248 · Parazzini · MP2.8
@@ -201,7 +213,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Si tu motor falló en plena jornada y el repuesto OEM te cuesta el doble de lo que vale el equipo, el Parazzini MP7FF es la respuesta. Potencia de 7 HP real, motor 4 tiempos OHV de gasolina, arranque manual confiable —…
   PDP: https://ferre24.com.mx/products/motor-parazzini-7-hp-4-tiempos-doble-filtro-de-aire-para-obra-y-campo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a88a5405-9e76-46eb-b020-58166c2a3de8.png
-- **Parazzini BAKARAC300** · `BAKARAC300` · $43,912 (antes $87,824) · Parazzini · BAKARAC300
+- **Parazzini BAKARAC300** · `BAKARAC300` · $39,521 (antes $43,912) · Parazzini · BAKARAC300
   ### Suelda donde otros no pueden · Hay obras donde la luz eléctrica no llega. Ranchos, construcciones en desarrollo, sitios remotos, emergencias en campo. Para esos trabajos existe el Parazzini BAKARAC300 : un…
   PDP: https://ferre24.com.mx/products/parazzini-bakarac300
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8e1dc002-18c5-4671-8b2e-c4933c1792ce.png
@@ -284,23 +296,23 @@ Reglas de meses sin intereses (MSI) por promo:
   La BT6.530 es una motobomba autocebante de 6.5 HP [VERIFICAR] con motor a gasolina 4 tiempos OHV, diseñada para trabajos de riego agrícola, achique y trasvase en campo, rancho e instalaciones industriales ligeras. ·…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-6-5-hp-4-tiempos-descarga-3-pulgadas-verificar-riego-achiq
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_884366ef-2413-4a66-9c7e-611915fd2ee7.png
-- **Motobomba Autocebante a Gasolina 7 HP 2"** · `BP720` · $4,483 (antes $8,965) · Parazzini · BP720
+- **Motobomba Autocebante a Gasolina 7 HP 2"** · `BP720` · $4,034 (antes $4,483) · Parazzini · BP720
   Si riegas parcelas o mueves agua entre puntos de bombeo, sabes lo que cuesta una bomba que no succiona. La mayoría de las fallas no son del equipo: vienen de cebar la bomba sin agua en la carcasa o de una manguera de…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-a-gasolina-7-hp-2-parazzini-bp720
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0bd74b2a-6fc3-4814-b409-c41680e5ed9e.png
-- **Motobomba Autocebante a Gasolina 7 HP 3" Parazzini BP730** · `BP730` · $6,776 (antes $11,682) · Parazzini · BP730
+- **Motobomba Autocebante a Gasolina 7 HP 3" Parazzini BP730** · `BP730` · $6,098 (antes $6,776) · Parazzini · BP730 · ⚡PROMO
   La motobomba BP730 combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-gasolina-7-hp-3-parazzini-bp730
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_deee0f9d-d5c0-473c-9d04-7aac87f01ccc.png
-- **Motobomba Autocebante a Gasolina Power Hunt HUNT521** · `HUNT521` · $1,332 (antes $2,961) · Power Hunt · HUNT521
+- **Motobomba Autocebante a Gasolina Power Hunt HUNT521** · `HUNT521` · $1,332 (antes $1,332) · Power Hunt · HUNT521 · ⚡PROMO
   ¿Necesitas mover agua donde no llega la luz? Pozos, aljibes, canales y parcelas casi nunca tienen una toma eléctrica cerca. La motobomba autocebante Power Hunt HUNT521 resuelve eso: funciona con gasolina, pesa solo 10…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-a-gasolina-power-hunt-hunt521-2-5-hp-1
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d1fbde35-12a4-4c5e-b632-27b6cd1dee82.png
-- **Motobomba Centrífuga Parazzini BP1330C** · `BP1330C` · $11,076 (antes $19,096) · F24
+- **Motobomba Centrífuga Parazzini BP1330C** · `BP1330C` · $9,968 (antes $11,076) · F24 · ⚡PROMO
   Motobomba 13HP CENTRÍFUGA — Bombeo Potente para Obras y Riego de Grandes Áreas
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp1330c-13hp-centrifuga-3-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_88a27af9-2188-48d5-af88-61895eeacf19.png
-- **Motobomba Diesel Autocebante Parazzini BP730D** · `BP730D` · $13,021 (antes $22,450) · F24
+- **Motobomba Diesel Autocebante Parazzini BP730D** · `BP730D` · $11,719 (antes $13,021) · F24
   Motobomba Parazzini BP730D de 7 HP con motor Diesel de 4 tiempos OHV, tipo autocebante de 3" — solución robusta y confiable para riego, drenaje y transferencia de agua en campos, granjas e industria.
   PDP: https://ferre24.com.mx/products/motobomba-diesel-parazzini-bp730d-7hp-autocebante-3-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f2942839-b38e-4f36-9e6e-7f6a66412360.png
@@ -312,7 +324,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La motobomba ENERWELL EWBG3-1000F es la herramienta de alto rendimiento para quienes necesitan mover grandes volúmenes de agua de forma confiable y sin dependencia eléctrica. Con conexiones de entrada y salida de 3…
   PDP: https://ferre24.com.mx/products/motobomba-enerwell-7hp-gasolina-autocebante-3x3-1000-gpm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5e649f49-379b-489c-910c-6cc0fca3ad5d.png
-- **Motobomba Kawashima 26cc 2 Tiempos Autocebante 1 Pulgada** · `BP2510V2` · $2,490 (antes $4,293) · Kawashima · BP2510V2
+- **Motobomba Kawashima 26cc 2 Tiempos Autocebante 1 Pulgada** · `BP2510V2` · $2,241 (antes $2,490) · Kawashima · BP2510V2 · ⚡PROMO
   Lleva el agua donde la necesitas, sin enchufes y sin complicaciones. · La Kawashima BP2510V2 es la motobomba a gasolina más ligera y accesible de la línea — diseñada para el agricultor, ranchero o propietario que…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-26cc-2-tiempos-autocebante-1-pulgada-bp2510v2
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5e1b09fa-465e-40bc-beab-313c0f56dcfc.png
@@ -324,7 +336,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4310
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_657096e2-99cc-42ce-a377-4edb126adb6b.png
-- **Motobomba Kawashima BPK31** · `BPK31` · $3,557 (antes $6,133) · F24
+- **Motobomba Kawashima BPK31** · `BPK31` · $3,201 (antes $3,557) · F24 · ⚡PROMO
   Motobomba Compacta 31cc AUTOCEBANTE 1" — Riego Portátil para Huertos y Transferencia Rápida
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-bpk31-31cc-4t-autocebante-1-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_78cdc349-4039-413e-8088-198fe06d560c.png
@@ -336,7 +348,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba 2.5HP AUTOCEBANTE 1.5" — Riego Residencial y Agrícola sin Complicaciones
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-515-2-5hp-autocebante-1-5-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6eb530a-e06d-4eb6-9320-9b8dbc7be40d.png
-- **Motobomba Parazzini BP720A** · `BP720A` · $8,277 (antes $14,270) · Parazzini · BP720A
+- **Motobomba Parazzini BP720A** · `BP720A` · $7,449 (antes $8,277) · Parazzini · BP720A
   La motobomba BP720A combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
   PDP: https://ferre24.com.mx/products/parazzini-bp720a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_80e4ec45-8c92-4307-a3cf-03632ce8cfec.png
@@ -355,7 +367,7 @@ Reglas de meses sin intereses (MSI) por promo:
 - **Motor Parazzini MHP8 8HP 4 Tiempos** · `MHP8` · $3,637 (antes $6,613) · Parazzini · MHP8
   Tu motor se trabó, el carburador está sucio o las refacciones ya no llegan a tiempo — y el equipo parado te cuesta más que el motor mismo. El MHP8 de Parazzini es la solución directa: motor desnudo de 8 HP y 212 cc OHV…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mhp8-8hp-4-tiempos-alto-rendimiento
-- **Parihuela Diafragma 6.5 HP Parazzini** · `PP6.5D` · $14,659 (antes $26,653) · Parazzini · PP6.5D
+- **Parihuela Diafragma 6.5 HP Parazzini** · `PP6.5D` · $13,193 (antes $14,659) · Parazzini · PP6.5D · ⚡PROMO
   ¿Tu bomba de pistones falla cada temporada con herbicidas? El diafragma cambia las reglas. · La Parihuela Diafragma 6.5 HP Parazzini PP6.5D está diseñada para agricultores y fumigadores profesionales que aplican…
   PDP: https://ferre24.com.mx/products/parihuela-diafragma-6-5-hp-parazzini-bomba-resistente-a-quimicos-agresivos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_1397bfba-1d2f-495a-acf0-4dd3ef8edadf.png
@@ -409,7 +421,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cansado de la suciedad incrustada en tu maquinaria o patio y del mantenimiento que requieren los equipos a gasolina? La Hidrolavadora Parazzini HPP110V te ofrece una solución de grado profesional con la conveniencia de…
   PDP: https://ferre24.com.mx/products/hidrolavadora-pro-110-120-v-monofasica-parazzini-hpp110v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_612e3146-af4b-4f4c-8f05-bbcc33fe4a9c.png
-- **Hidrolavadora Eléctrica Parazzini HPPE4M** · `HPPE4M` · $20,023 (antes $37,798) · Parazzini · HPPE4M
+- **Hidrolavadora Eléctrica Parazzini HPPE4M** · `HPPE4M` · $18,020 (antes $20,023) · Parazzini · HPPE4M · ⚡PROMO
   La hidrolavadora eléctrica Parazzini Pro HPPE4M con motor de 2.2 kW es tu mejor aliada para limpiezas profundas en el hogar y el taller. Su potente motor eléctrico ofrece un hidrolavado eficiente sin las emisiones y el…
   PDP: https://ferre24.com.mx/products/hidrolavadora-electrica-parazzini-hppe4m-1740-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a5732ddd-1738-4945-9159-5b2a38dbf13a.png
@@ -421,7 +433,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Las hidrolavadoras baratas se ven bien en el catálogo — hasta que la bomba fuga sellos a los seis meses y no consigues ni un empaque de repuesto. Con mangueras de 30 m la presión cae a menos de 2,000 PSI y terminas…
   PDP: https://ferre24.com.mx/products/hidrolavadora-industrial-trifasica-5-5-kw-3-191-psi-parazzini-pro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_786f4559-9603-4b0f-b1e6-b97b97fd4943.png
-- **Hidrolavadora Power Hunt HPH7** · `HPH7` · $0 · Power Hunt · HPH7
+- **Hidrolavadora Power Hunt HPH7** · `HPH7` · $0 (antes $0) · Power Hunt · HPH7 · ⚡PROMO
   ¿Tienes grasa incrustada, fachada manchada o un patio que ninguna manguera puede con él? · La Power Hunt HPH7 es una hidrolavadora a gasolina de 7 HP que trabaja donde no llega la corriente eléctrica: obra en…
   PDP: https://ferre24.com.mx/products/hidrolavadora-power-hunt-hph7-7-hp-2-200-psi-sin-corriente
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2df8fe7a-f240-4d8d-a5f8-b828aebf9b6e.png
@@ -437,7 +449,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu hidrolavadora eléctrica ya no alcanza para limpiar maquinaria pesada, carrocerías o el rancho? Cuando la suciedad es de verdad, necesitas potencia de verdad. · La Parazzini HP13N entrega 3,600 PSI de presión y 17…
   PDP: https://ferre24.com.mx/products/parazzini-hp13n-hidrolavadora-gasolina-13-hp-3-600-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_90e504ea-177c-4fe2-a349-34cba8e2e9d0.png
-- **Parazzini Pro HPPE4** · `HPPE4` · $19,655 (antes $37,798) · Parazzini · HPPE4M
+- **Parazzini Pro HPPE4** · `HPPE4` · $17,690 (antes $19,655) · Parazzini · HPPE4M · ⚡PROMO
   La hidrolavadora eléctrica Parazzini Pro HPPE4M con motor de 2.2 kW es tu mejor aliada para limpiezas profundas en el hogar y el taller. Su potente motor eléctrico ofrece un hidrolavado eficiente sin las emisiones y el…
   PDP: https://ferre24.com.mx/products/hppe4
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c77ca6b-ce00-4171-a1f2-dfde54730647.png
@@ -503,11 +515,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando el trabajo es tala real — árboles de gran diámetro, maderas de alta densidad, jornadas de 8 horas en campo — necesitas una herramienta que no te abandone a media mañana. La Motosierra Kawashima 62cc con barra de…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-62cc-barra-22-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0b9d3dcf-6a4a-4b4a-b381-8105b75f26f1.png
-- **Motosierra Kawashima Dakota 38cc** · `MKD3816` · $2,448 (antes $4,451) · Kawashima Dakota · MKD3816
+- **Motosierra Kawashima Dakota 38cc** · `MKD3816` · $2,203 (antes $2,448) · Kawashima Dakota · MKD3816 · ⚡PROMO
   Motosierra Kawashima Dakota 38cc — Lista para trabajar desde el primer día · ¿Tienes árboles que podar, leña que cortar o un jardín que ordenar? La Kawashima Dakota MKD3816 es la motosierra que necesitas: potencia real…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-38cc-barra-16-con-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1ee88704-4d4f-4441-a9ff-3f0afdac29a1.png
-- **Motosierra Kawashima Dakota 45cc** · `MKD4518` · $2,761 (antes $5,019) · Kawashima Dakota · MKD4518
+- **Motosierra Kawashima Dakota 45cc** · `MKD4518` · $2,485 (antes $2,761) · Kawashima Dakota · MKD4518
   ¿Tu motosierra no arranca o tarda diez intentos antes de encender? En la mayoría de los casos el problema no es la herramienta — es la mezcla de combustible. La Kawashima Dakota MKD4518 llega lista para trabajar: motor…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-45cc-barra-18-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_37f988bc-21c0-4e3a-b050-8cd8f30fe256.png
@@ -686,7 +698,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Ahoyadoras a Gasolina (1)
 
-- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,691 (antes $10,348) · Kawashima · MTT52M
+- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,293 (antes $5,691) · Kawashima · MTT52M · ⚡PROMO
   La Ahoyadora Kawashima MTT52M es la herramienta que acelera el trabajo más lento del rancho: abrir hoyos. Con un motor a gasolina de 52cc y 2 tiempos, perfora tierra blanda de forma rápida y uniforme — el trabajo que…
   PDP: https://ferre24.com.mx/products/ahoyadora-kawashima-mtt52m-52cc-3-brocas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d43ca7eb-da4a-41a8-a79e-ab6bb7316b3a.png
@@ -900,7 +912,7 @@ Reglas de meses sin intereses (MSI) por promo:
 - **Sistema de ósmosis inversa Purikor 5 etapas 100gpd** · `PKRO100-5P` · $3,437 (antes $4,911) · Purikor · PKRO100-5P
   ¿Gastas cientos de pesos al mes en garrafones y no confías en el agua de tu llave? El agua de red puede contener cloro, metales pesados, bacterias y sólidos disueltos que ni hervir elimina. Hay una solución permanente…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-purikor-5-etapas-100gpd
-- **Soplador Kawashima 26 cc** · `WIND26` · $2,124 (antes $3,862) · Kawashima · WIND26
+- **Soplador Kawashima 26 cc** · `WIND26` · $1,912 (antes $2,124) · Kawashima · WIND26
   Limpiar el jardín con rastrillo toma horas. Con el soplador Kawashima WIND26, el mismo trabajo se hace en minutos. · Potencia real donde más importa. Su motor 2 tiempos de 26 cc alcanza hasta 7,500 RPM y mueve 650 m³ de…
   PDP: https://ferre24.com.mx/products/soplador-kawashima-26-cc-motor-2t-650-m-h-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_5ec7fcc5-79bd-48fa-8282-e6753d13698b.png
@@ -908,7 +920,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cada hora que pierdes con una herramienta sin potencia es dinero que no cobras. El jardinero o landscaper profesional sabe que el tiempo entre trabajo y trabajo es lo que separa un día rentable de uno mediocre. Con una…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-profesional-77cc-kawashima-pro-sk772tpro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_28b16a1d-b758-478b-a2fa-da0d18c08d4a.png
-- **Soplador de mochila Kawashima WIND76** · `WIND76` · $5,622 (antes $10,222) · Kawashima · WIND76
+- **Soplador de mochila Kawashima WIND76** · `WIND76` · $5,060 (antes $5,622) · Kawashima · WIND76
   Cuando el jardín mide media manzana y el tiempo es dinero, un soplador de juguete no alcanza. El Kawashima WIND76 es la herramienta que usan los contratistas serios: motor 2T de 76 cc que arranca y no para, diseño de…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-kawashima-wind76-76-cc-1-440-m-h
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8fd502fc-a009-44ad-b083-c1a07ad26a2f.png
