@@ -10,7 +10,7 @@
 57 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (6 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (7 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 
@@ -24,7 +24,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BP720` | $4,034 | $4,483 | 10% | — | no | 2026-06-28 |
 | `BP720A` | $7,035 | $8,277 | 15% | 3, 6 | no | 2026-06-28 |
 | `BP730` | $6,098 | $6,776 | 10% | — | no | 2026-06-28 |
-| `BP730D` | $11,719 | $13,021 | 10% | — | no | 2026-06-28 |
+| `BP730D` | $11,068 | $13,021 | 15% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `BPK31` | $3,201 | $3,557 | 10% | — | no | 2026-06-28 |
 | `CK22CC` | $3,038 | $3,342 | 9% | — | no | 2026-06-28 |
 | `ENERWELL-G1000` | $3,962 | $4,402 | 10% | 3 | no | 2026-06-28 |
@@ -322,7 +322,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba 13HP CENTRÍFUGA — Bombeo Potente para Obras y Riego de Grandes Áreas
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp1330c-13hp-centrifuga-3-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_88a27af9-2188-48d5-af88-61895eeacf19.png
-- **Motobomba Diesel Autocebante Parazzini BP730D** · `BP730D` · $10,417 (antes $13,021) · F24 · ⚡PROMO
+- **Motobomba Diesel Autocebante Parazzini BP730D** · `BP730D` · $11,068 (antes $13,021) · F24 · ⚡PROMO 9MSI
   Motobomba Parazzini BP730D de 7 HP con motor Diesel de 4 tiempos OHV, tipo autocebante de 3" — solución robusta y confiable para riego, drenaje y transferencia de agua en campos, granjas e industria.
   PDP: https://ferre24.com.mx/products/motobomba-diesel-parazzini-bp730d-7hp-autocebante-3-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f2942839-b38e-4f36-9e6e-7f6a66412360.png

@@ -143,16 +143,20 @@
       "sku_upper": "BP730D",
       "producto": "Motobomba Diesel Autocebante Parazzini BP730D — 7 HP, 3 Pulgadas",
       "regular_price": 13021.0,
-      "promo_price": 11718.9,
-      "pct_desc": "10%",
-      "msi_ladder": [],
-      "msi_max": 0,
-      "eligible_912": false,
+      "promo_price": 11067.85,
+      "pct_desc": "15%",
+      "msi_ladder": [
+        3,
+        6,
+        9
+      ],
+      "msi_max": 9,
+      "eligible_912": true,
       "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "11718.90"
+      "shopify_price": "10416.80"
     },
     {
       "sku": "BPK31",
