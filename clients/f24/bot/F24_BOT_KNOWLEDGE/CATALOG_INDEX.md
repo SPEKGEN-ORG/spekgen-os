@@ -22,7 +22,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BP2510V2` | $2,241 | $2,490 | 10% | — | no | 2026-06-28 |
 | `BP4310` | $2,808 | $3,258 | 14% | — | no | 2026-06-28 |
 | `BP720` | $4,034 | $4,483 | 10% | — | no | 2026-06-28 |
-| `BP720A` | $7,035 | $8,277 | 15% | — | no | 2026-06-28 |
+| `BP720A` | $7,035 | $8,277 | 15% | 3, 6 | no | 2026-06-28 |
 | `BP730` | $6,098 | $6,776 | 10% | — | no | 2026-06-28 |
 | `BP730D` | $11,719 | $13,021 | 10% | — | no | 2026-06-28 |
 | `BPK31` | $3,201 | $3,557 | 10% | — | no | 2026-06-28 |
@@ -322,7 +322,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba 13HP CENTRÍFUGA — Bombeo Potente para Obras y Riego de Grandes Áreas
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp1330c-13hp-centrifuga-3-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_88a27af9-2188-48d5-af88-61895eeacf19.png
-- **Motobomba Diesel Autocebante Parazzini BP730D** · `BP730D` · $11,719 (antes $13,021) · F24 · ⚡PROMO
+- **Motobomba Diesel Autocebante Parazzini BP730D** · `BP730D` · $10,417 (antes $13,021) · F24 · ⚡PROMO
   Motobomba Parazzini BP730D de 7 HP con motor Diesel de 4 tiempos OHV, tipo autocebante de 3" — solución robusta y confiable para riego, drenaje y transferencia de agua en campos, granjas e industria.
   PDP: https://ferre24.com.mx/products/motobomba-diesel-parazzini-bp730d-7hp-autocebante-3-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f2942839-b38e-4f36-9e6e-7f6a66412360.png

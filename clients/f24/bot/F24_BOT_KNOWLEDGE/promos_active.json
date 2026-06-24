@@ -110,14 +110,17 @@
       "regular_price": 8276.6,
       "promo_price": 7035.11,
       "pct_desc": "15%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-06-28",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "7448.94"
+      "shopify_price": "7035.11"
     },
     {
       "sku": "BP730",
