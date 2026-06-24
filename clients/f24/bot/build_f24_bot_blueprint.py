@@ -610,12 +610,43 @@ def f24_process_order_module(module_id, x, y, parse_module_id):
                 "phone": "{{ifempty(1.phone; \"\")}}",
                 # payment_method habilita la rama msi_promo (MercadoPago Cuenta B 9/12) en la Edge Function.
                 "payment_method": "{{ifempty(" + pm + ".order.payment_method; \"online\")}}",
+                # CP del cliente → la Edge Function lo escribe en el custom field codigo_postal de GHL.
+                # Prefiere order.customer.codigo_postal; cae al top-level codigo_postal si falta.
+                "codigo_postal": "{{ifempty(" + pm + ".order.customer.codigo_postal; ifempty(" + pm + ".codigo_postal; \"\"))}}",
             },
             "timeout": 60, "shareCookies": False, "parseResponse": True,
             "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
         },
         "metadata": {"designer": {"x": x, "y": y}},
         "onerror": [resume_handler(98, {"invoice_url": "", "ok": False}, x, y + 300)],
+    }
+
+
+def f24_save_cp_module(module_id, x, y, parse_module_id):
+    """POST best-effort a la Edge Function (mode=save_cp) para guardar el codigo_postal del cliente
+    en su contacto GHL cuando lo da SIN crear orden (ej. al preguntar por el envío). En el cierre
+    (create_order) el CP ya lo escribe la rama de la orden, así que este módulo va en la ruta NORMAL
+    y se gatea con un filtro a codigo_postal no vacío. onerror = nunca rompe el bot."""
+    pm = str(parse_module_id)
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": F24_PROCESS_ORDER_URL, "method": "post",
+            "headers": [{"name": "Content-Type", "value": "application/json"}],
+            "contentType": "json", "inputMethod": "dataStructure",
+            # Reusa la DS del process-order (389552) mapeando solo mode + contact_id + codigo_postal.
+            "bodyDataStructure": F24_PROCESS_ORDER_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": {
+                "mode": "save_cp",
+                "contact_id": "{{1.contact_id}}",
+                "codigo_postal": "{{" + pm + ".codigo_postal}}",
+            },
+            "timeout": 60, "shareCookies": False, "parseResponse": True,
+            "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
+        "onerror": [resume_handler(95, {"ok": False}, x, y + 300)],
     }
 
 
@@ -989,6 +1020,11 @@ sub_normal_send = ghl_send_module_from_claude(9, 2900, 0, parse_module_id=8)
 sub_normal_send["filter"] = {"name": "action != create_order",
                              "conditions": [[{"a": "{{8.action}}", "o": "text:notequal", "b": "create_order"}]]}
 sub_normal_ds = datastore_add_claude(10, 3200, 0, parse_module_id=8)
+# Guarda el CP en GHL cuando el cliente lo da en una respuesta normal (ej. pregunta de envío),
+# sin crear orden. Gateado a codigo_postal no vacío. Va al final de la ruta normal (id 50).
+sub_cp_save = f24_save_cp_module(50, 3500, 0, parse_module_id=8)
+sub_cp_save["filter"] = {"name": "codigo_postal presente",
+                         "conditions": [[{"a": "{{8.codigo_postal}}", "o": "text:notequal", "b": ""}]]}
 
 sub_order_send = ghl_send_module_from_claude(41, 2900, 300, parse_module_id=8)
 sub_order_send["filter"] = {"name": "action == create_order",
@@ -1006,7 +1042,7 @@ post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
     "metadata": {"designer": {"x": 2650, "y": 150}},
     "routes": [
-        {"flow": [sub_normal_send, sub_normal_ds]},
+        {"flow": [sub_normal_send, sub_normal_ds, sub_cp_save]},
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
         {"flow": [sub_handoff_email, sub_handoff_tag]},
     ],
