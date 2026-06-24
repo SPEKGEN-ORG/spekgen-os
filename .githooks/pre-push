@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Bloquea push directo a main. La regla SPEKGEN es branch + PR (gh pr create / gh pr merge).
+# gh pr merge NO se ve afectado (mergea server-side, no es push local).
+# Override de emergencia: SPEKGEN_ALLOW_MAIN_PUSH=1 git push ...
+while read -r _localref _localsha remoteref _remotesha; do
+  if [[ "$remoteref" == "refs/heads/main" && "${SPEKGEN_ALLOW_MAIN_PUSH:-}" != "1" ]]; then
+    echo "⛔ Push directo a main BLOQUEADO. Usa un PR:"
+    echo "   git push -u origin tu-rama  &&  gh pr create  &&  gh pr merge"
+    echo "   (emergencia real: SPEKGEN_ALLOW_MAIN_PUSH=1 git push ...)"
+    exit 1
+  fi
+done
+exit 0

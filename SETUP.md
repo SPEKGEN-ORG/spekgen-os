@@ -13,6 +13,21 @@ Instrucciones de instalación para Mac, Windows y Linux. Sigue la sección de tu
 
 ---
 
+## 0.5 Después de clonar — activa los git hooks (TODOS los OS)
+
+Una vez clonado el repo, activa los hooks versionados (bloquean push directo a `main` para
+forzar el flujo branch + PR — no hay branch protection en el plan free de GitHub):
+
+```bash
+cd ~/dev/spekgen-os        # o donde lo clonaste
+git config core.hooksPath .githooks
+```
+
+`gh pr create` / `gh pr merge` siguen funcionando normal. Para el bot, lee además
+`clients/f24/bot/docs/BOT_DEPLOY_SOP.md`.
+
+---
+
 ## 1. Mac (Gibran)
 
 ```bash
