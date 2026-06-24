@@ -92,10 +92,12 @@
       "sku_upper": "BP720",
       "producto": "Motobomba Autocebante a Gasolina 7 HP 2\" — Parazzini BP720",
       "regular_price": 4482.72,
-      "promo_price": 4034.45,
-      "pct_desc": "10%",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "promo_price": 3944.79,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
       "eligible_912": false,
       "vigencia": "2026-06-28",
       "vigente": true,
@@ -156,7 +158,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "10416.80"
+      "shopify_price": "11067.85"
     },
     {
       "sku": "BPK31",

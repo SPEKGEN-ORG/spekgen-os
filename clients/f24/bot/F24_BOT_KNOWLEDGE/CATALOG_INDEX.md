@@ -21,7 +21,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BP1330C` | $9,968 | $11,076 | 10% | — | no | 2026-06-28 |
 | `BP2510V2` | $2,241 | $2,490 | 10% | — | no | 2026-06-28 |
 | `BP4310` | $2,808 | $3,258 | 14% | — | no | 2026-06-28 |
-| `BP720` | $4,034 | $4,483 | 10% | — | no | 2026-06-28 |
+| `BP720` | $3,945 | $4,483 | 12% | 3 | no | 2026-06-28 |
 | `BP720A` | $7,035 | $8,277 | 15% | 3, 6 | no | 2026-06-28 |
 | `BP730` | $6,098 | $6,776 | 10% | — | no | 2026-06-28 |
 | `BP730D` | $11,068 | $13,021 | 15% | 3, 6, 9 | **Sí** | 2026-06-28 |
@@ -306,7 +306,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La BT6.530 es una motobomba autocebante de 6.5 HP [VERIFICAR] con motor a gasolina 4 tiempos OHV, diseñada para trabajos de riego agrícola, achique y trasvase en campo, rancho e instalaciones industriales ligeras. ·…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-6-5-hp-4-tiempos-descarga-3-pulgadas-verificar-riego-achiq
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_884366ef-2413-4a66-9c7e-611915fd2ee7.png
-- **Motobomba Autocebante a Gasolina 7 HP 2"** · `BP720` · $4,034 (antes $4,483) · Parazzini · BP720 · ⚡PROMO
+- **Motobomba Autocebante a Gasolina 7 HP 2"** · `BP720` · $3,945 (antes $4,483) · Parazzini · BP720 · ⚡PROMO
   Si riegas parcelas o mueves agua entre puntos de bombeo, sabes lo que cuesta una bomba que no succiona. La mayoría de las fallas no son del equipo: vienen de cebar la bomba sin agua en la carcasa o de una manguera de…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-a-gasolina-7-hp-2-parazzini-bp720
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0bd74b2a-6fc3-4814-b409-c41680e5ed9e.png
