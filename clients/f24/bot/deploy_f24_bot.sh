@@ -62,9 +62,12 @@ fi
 mkdir -p "$BLUEPRINTS_DIR"
 
 # Estampa el commit git en el nombre del scenario → en Make UI se ve EXACTAMENTE qué commit
-# está live. "-dirty" = se deployó con cambios sin commitear (señal de un deploy manual fuera de git).
-GITSHA="$(git -C "$(dirname "$0")" rev-parse --short HEAD 2>/dev/null || echo nogit)"
-git -C "$(dirname "$0")" diff --quiet 2>/dev/null || GITSHA="${GITSHA}-dirty"
+# está live. "-dirty" = se deployó con cambios SIN COMMITEAR en archivos FUENTE del bot (señal
+# de un deploy manual fuera de git). Acotado a fuente para que el cron —que regenera los JSON de
+# knowledge antes de deployar— NO salga falsamente dirty.
+_HD="$(dirname "$0")"
+GITSHA="$(git -C "$_HD" rev-parse --short HEAD 2>/dev/null || echo nogit)"
+git -C "$_HD" diff --quiet -- F24_BOT_SYSTEM_PROMPT.md F24_BOT_CANNED_RESPONSES.md build_f24_bot_blueprint.py 2>/dev/null || GITSHA="${GITSHA}-dirty"
 
 python3 <<PYEOF
 import json
