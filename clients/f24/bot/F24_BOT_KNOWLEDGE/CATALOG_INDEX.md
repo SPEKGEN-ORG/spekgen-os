@@ -22,7 +22,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BP2510V2` | $2,241 | $2,490 | 10% | — | no | 2026-06-28 |
 | `BP4310` | $2,808 | $3,258 | 14% | — | no | 2026-06-28 |
 | `BP720` | $3,945 | $4,483 | 12% | 3 | no | 2026-06-28 |
-| `BP720A` | $7,449 | $8,277 | 10% | 3, 6 | no | 2026-06-28 |
+| `BP720A` | $7,035 | $8,277 | 15% | 3, 6 | no | 2026-06-28 |
 | `BP730` | $6,098 | $6,776 | 10% | — | no | 2026-06-28 |
 | `BP730D` | $11,068 | $13,021 | 15% | 3, 6, 9 | **Sí** | 2026-06-28 |
 | `BPK31` | $3,201 | $3,557 | 10% | — | no | 2026-06-28 |
@@ -358,7 +358,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba 2.5HP AUTOCEBANTE 1.5" — Riego Residencial y Agrícola sin Complicaciones
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-515-2-5hp-autocebante-1-5-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6eb530a-e06d-4eb6-9320-9b8dbc7be40d.png
-- **Motobomba Parazzini BP720A** · `BP720A` · $7,449 (antes $8,277) · Parazzini · BP720A · ⚡PROMO
+- **Motobomba Parazzini BP720A** · `BP720A` · $7,035 (antes $8,277) · Parazzini · BP720A · ⚡PROMO
   La motobomba BP720A combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
   PDP: https://ferre24.com.mx/products/parazzini-bp720a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_80e4ec45-8c92-4307-a3cf-03632ce8cfec.png
