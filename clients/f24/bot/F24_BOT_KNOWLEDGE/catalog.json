@@ -1,6 +1,6 @@
 {
   "domain": "ferre24.com.mx",
-  "count": 228,
+  "count": 229,
   "products": [
     {
       "title": "Hidrolavadora a Gasolina Parazzini HP5.5 — 2,200 PSI / 5.5 HP / 4 Tiempos",
@@ -63,7 +63,7 @@
       "variant_gid": "gid://shopify/ProductVariant/44103304511576",
       "price": "3029.52",
       "compare_at_price": "5826.00",
-      "available": true,
+      "available": false,
       "marca": "Kawashima",
       "modelo": "DKY52K",
       "specs": "Para quien necesita acabar la jornada, no empezarla. Si lo tuyo es maleza alta, predios grandes, brechas de rancho o mantenimiento agrícola y forestal, una orilladora doméstica no te alcanza. El Desbrozador Kawashima…",
@@ -3876,6 +3876,23 @@
       "modelo": "PK-EASY-800US",
       "specs": "¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aab62185-b15f-4f46-aaec-cd327bfb7f10.png",
+      "msi_promo": ""
+    },
+    {
+      "title": "TEST",
+      "short_title": "TEST",
+      "handle": "test",
+      "category": "Otros",
+      "sku": "",
+      "variant_id": "44274471632984",
+      "variant_gid": "gid://shopify/ProductVariant/44274471632984",
+      "price": "1.00",
+      "compare_at_price": null,
+      "available": true,
+      "marca": "",
+      "modelo": "",
+      "specs": "",
+      "image_url": "",
       "msi_promo": ""
     }
   ]

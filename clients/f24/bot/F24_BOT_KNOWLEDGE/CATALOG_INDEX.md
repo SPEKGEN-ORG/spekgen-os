@@ -1,6 +1,6 @@
 # Ferre24 — Catálogo (Knowledge Base del bot)
 
-*228 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
+*229 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
 
 > El bot cotiza ÚNICAMENTE productos de esta lista. El **precio** es el de venta;
 > el precio **tachado** (si existe) es referencia. Para cerrar, el bot pasa el/los
@@ -501,7 +501,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Motosierras y Poda (22)
 
-- **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,030 (antes $5,826) · Kawashima · DKY52K
+- **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,030 (antes $5,826) · Kawashima · DKY52K · 🔴 AGOTADO
   Para quien necesita acabar la jornada, no empezarla. Si lo tuyo es maleza alta, predios grandes, brechas de rancho o mantenimiento agrícola y forestal, una orilladora doméstica no te alcanza. El Desbrozador Kawashima…
   PDP: https://ferre24.com.mx/products/desbrozador-kawashima-dky52k-recto-52-cc-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e59e6cb0-42b2-47a7-8f17-d8d9621f1c4e.png
@@ -897,7 +897,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/victorinox-work-champ-111mm-21-funciones
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c2dd1fe-d070-4124-9958-df1181db1de1.png
 
-## Otros (14)
+## Otros (15)
 
 - **Motor Parazzini MP13C** · `MP13C` · $7,718 (antes $17,150) · Parazzini · MP13C · ⚡PROMO
   Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
@@ -934,6 +934,8 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando el jardín mide media manzana y el tiempo es dinero, un soplador de juguete no alcanza. El Kawashima WIND76 es la herramienta que usan los contratistas serios: motor 2T de 76 cc que arranca y no para, diseño de…
   PDP: https://ferre24.com.mx/products/soplador-de-mochila-kawashima-wind76-76-cc-1-440-m-h
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8fd502fc-a009-44ad-b083-c1a07ad26a2f.png
+- **TEST** · `id:44274471632984` · $1
+  PDP: https://ferre24.com.mx/products/test
 - **Tanque Precargado ALTAMIRA 86 Gal** · `ALTAPRO XLB86` · $11,386 (antes $16,265) · ALTAMIRA · ALTAPRO XLB86 — Tanque Precargado Vertical
   El ALTAPRO XLB86 es un tanque precargado de diafragma de la Serie PRO XLB de ALTAMIRA, diseñado para sistemas hidroneumáticos residenciales, comerciales, agrícolas e industriales que exigen presión de agua estable y…
   PDP: https://ferre24.com.mx/products/tanque-precargado-altamira-86-gal-garantia-6-anos-codo-inox-304-incluido
