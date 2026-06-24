@@ -6,7 +6,7 @@ Instrucciones de instalación para Mac, Windows y Linux. Sigue la sección de tu
 
 ## 0. Pre-requisitos (todos los OS)
 
-1. **Cuenta GitHub con acceso a `g-bran/spekgen-os`** (Gibran te invita como collaborator).
+1. **Cuenta GitHub con acceso a `SPEKGEN-ORG/spekgen-os`** (Gibran ya te dio acceso como collaborator de la org).
 2. **Google Drive Desktop** instalado y sincronizando la carpeta compartida `01. CLIENTS OFFICIAL` (Gibran te comparte como Editor; si es Shared Drive te lo dará distinto).
 3. **Python 3.9+** instalado.
 4. **Claude Code** instalado.
@@ -33,7 +33,7 @@ git config core.hooksPath .githooks
 ```bash
 # Clonar repo
 mkdir -p ~/dev && cd ~/dev
-git clone https://github.com/g-bran/spekgen-os.git
+git clone https://github.com/SPEKGEN-ORG/spekgen-os.git
 cd spekgen-os
 
 # Verificar Drive sincronizado
@@ -68,7 +68,7 @@ Las skills aparecen en Claude Code como `/factory-batch`, `/publish-prospect`, `
 # Clonar repo
 mkdir C:\dev
 cd C:\dev
-git clone https://github.com/g-bran/spekgen-os.git
+git clone https://github.com/SPEKGEN-ORG/spekgen-os.git
 cd spekgen-os
 
 # Verificar Drive sincronizado (ajusta letra según tu Drive)
@@ -110,7 +110,7 @@ dir $HOME\.claude\skills
 
 ```bash
 mkdir -p ~/dev && cd ~/dev
-git clone https://github.com/g-bran/spekgen-os.git
+git clone https://github.com/SPEKGEN-ORG/spekgen-os.git
 cd spekgen-os
 
 # Drive Desktop oficial no existe para Linux. Alternativas:

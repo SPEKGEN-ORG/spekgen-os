@@ -45,7 +45,7 @@ spekgen-os/
 Ver [SETUP.md](SETUP.md) para instrucciones completas según OS.
 
 Resumen:
-1. `git clone https://github.com/g-bran/spekgen-os.git ~/dev/spekgen-os` (Mac/Linux) o `C:\dev\spekgen-os` (Windows)
+1. `git clone https://github.com/SPEKGEN-ORG/spekgen-os.git ~/dev/spekgen-os` (Mac/Linux) o `C:\dev\spekgen-os` (Windows)
 2. Verificar que Google Drive Desktop tenga `01. CLIENTS OFFICIAL` sincronizado
 3. Instalar Python 3 + deps: `pip install openpyxl pypdf playwright requests jinja2 pillow pymupdf`
 4. Copiar `.env.example` a `~/.env.spekgen` y llenar con valores reales (pedirlos por canal seguro al admin)
