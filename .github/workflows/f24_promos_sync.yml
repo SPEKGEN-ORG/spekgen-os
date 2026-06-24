@@ -82,9 +82,11 @@ jobs:
         if: ${{ github.event.inputs.dry_run != 'true' }}
         run: python3 build_f24_bot_blueprint.py
 
-      - name: Deploy to Make (scenario 5258612 / dev)
+      - name: Deploy to Make (PROD 5258612 — bot LIVE)
         if: ${{ github.event.inputs.dry_run != 'true' }}
-        run: ./deploy_f24_bot.sh dev "$(date -u +%Y%m%d-%H%M)"
+        env:
+          CONFIRM_PROD: "yes"   # el cron deploya al LIVE de forma no-interactiva
+        run: ./deploy_f24_bot.sh prod "$(date -u +%Y%m%d-%H%M)"
 
       - name: Commit regenerated artifacts
         if: ${{ github.event.inputs.dry_run != 'true' }}

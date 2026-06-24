@@ -27,6 +27,10 @@
 
 7. **Lo que NO es código (Shopify Admin en vivo, imágenes sueltas en Drive) Git NO lo fusiona.** Ahí la regla es coordinarse (avisarse antes de editar lo mismo), no hay merge automático. Usen ClickUp para eso.
 
+8. **Bots (F24, HC): fuente = repo `main`, nunca Drive ni la UI de Make.** El bot LIVE se deploya SOLO desde `main` (cron `f24_promos_sync.yml` 2x/día + on-edit). Editar en la UI de Make se PIERDE (el cron rebuildea desde el código). Probar en el scenario DEV aislado (`./deploy_f24_bot.sh dev`) antes de mergear; nunca deployar a prod ANTES de mergear a main (se revierte). Detalle obligatorio: `clients/f24/bot/docs/BOT_DEPLOY_SOP.md`.
+
+9. **Hooks locales:** corre `git config core.hooksPath .githooks` una vez por clon (ver `SETUP.md`). Bloquea push directo a `main` — fuerza el flujo PR. No hay branch protection (repo privado plan free).
+
 ## Cómo lo pide el humano (no teclean git)
 - "tráeme lo último" → pull
 - "súbelo" → branch + commit + PR

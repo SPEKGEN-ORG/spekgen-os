@@ -18,17 +18,29 @@ if [[ -z "$TARGET" || -z "$VERSION" ]]; then
   exit 1
 fi
 
-# === Scenario IDs + hook IDs (Make team 354061, creados 2026-06-01) ===
-# Nota: por ahora hay 1 solo webhook (2394767). DEV usa ese hook. Cuando se cree el
-# scenario PROD con su propio webhook, rellenar prod abajo.
+# === Scenario IDs + hook IDs (Make team 354061) ===
+# PROD = cerebro LIVE (recibe tráfico real de WhatsApp). DEV = clon aislado para pruebas.
+# OJO: mapeo CORREGIDO 2026-06-24. Antes 'dev' apuntaba al LIVE 5258612 (footgun grave:
+# cualquiera que corriera "deploy dev" pisaba el bot de producción).
 case "$TARGET" in
-  prod) SCENARIO_ID=0; HOOK=0; SUFFIX="PROD" ;;          # PENDIENTE: crear PROD + su hook
-  dev)  SCENARIO_ID=5258612; HOOK=2394767; SUFFIX="DEV" ;;
+  prod) SCENARIO_ID=5258612; HOOK=2394767; SUFFIX="PROD" ;;   # LIVE — tráfico real
+  dev)  SCENARIO_ID=5381174; HOOK=2451202; SUFFIX="DEV"  ;;   # aislado — sin tráfico
   *) echo "Target must be prod or dev"; exit 1 ;;
 esac
 
+# Candado anti-accidente: deployar a PROD (el bot LIVE) exige confirmación explícita.
+# Interactivo → teclear PROD. No interactivo (cron/CI) → exportar CONFIRM_PROD=yes.
+if [[ "$TARGET" == "prod" && "${CONFIRM_PROD:-}" != "yes" ]]; then
+  if [[ -t 0 ]]; then
+    read -r -p "⚠️  Vas a deployar al BOT LIVE (5258612). Escribe PROD para confirmar: " _ans
+    [[ "$_ans" == "PROD" ]] || { echo "Cancelado."; exit 1; }
+  else
+    echo "ERROR: deploy a PROD requiere CONFIRM_PROD=yes (no interactivo). Cancelado."; exit 1
+  fi
+fi
+
 if [[ "$SCENARIO_ID" == "0" || "$HOOK" == "0" ]]; then
-  echo "ERROR: scenario/hook IDs no configurados todavía (Fase 2). Edita deploy_f24_bot.sh."
+  echo "ERROR: scenario/hook IDs no configurados. Edita deploy_f24_bot.sh."
   exit 1
 fi
 
@@ -49,6 +61,14 @@ fi
 
 mkdir -p "$BLUEPRINTS_DIR"
 
+# Estampa el commit git en el nombre del scenario → en Make UI se ve EXACTAMENTE qué commit
+# está live. "-dirty" = se deployó con cambios SIN COMMITEAR en archivos FUENTE del bot (señal
+# de un deploy manual fuera de git). Acotado a fuente para que el cron —que regenera los JSON de
+# knowledge antes de deployar— NO salga falsamente dirty.
+_HD="$(dirname "$0")"
+GITSHA="$(git -C "$_HD" rev-parse --short HEAD 2>/dev/null || echo nogit)"
+git -C "$_HD" diff --quiet -- F24_BOT_SYSTEM_PROMPT.md F24_BOT_CANNED_RESPONSES.md build_f24_bot_blueprint.py 2>/dev/null || GITSHA="${GITSHA}-dirty"
+
 python3 <<PYEOF
 import json
 with open("$BP") as f: bp = json.load(f)
@@ -59,7 +79,7 @@ def swap(flow):
         if "routes" in m:
             for r in m["routes"]: swap(r.get("flow", []))
 swap(bp["flow"])
-bp["name"] = "Ferre24 AI Bot WhatsApp (GHL) - $VERSION $SUFFIX"
+bp["name"] = "Ferre24 AI Bot WhatsApp (GHL) - $VERSION $SUFFIX [$GITSHA]"
 scheduling = bp.pop("scheduling", None)
 bp.pop("interface", None)
 body = {"blueprint": json.dumps(bp),
