@@ -69,8 +69,13 @@ _HD="$(dirname "$0")"
 GITSHA="$(git -C "$_HD" rev-parse --short HEAD 2>/dev/null || echo nogit)"
 git -C "$_HD" diff --quiet -- F24_BOT_SYSTEM_PROMPT.md F24_BOT_CANNED_RESPONSES.md build_f24_bot_blueprint.py 2>/dev/null || GITSHA="${GITSHA}-dirty"
 
+# Idempotencia anti-thrash: hash del blueprint por target. Si no cambió nada real vs el último
+# deploy, se SALTA el PATCH (no se re-inicializa el scenario live → no se tiran mensajes entrantes).
+HASHTMP="/tmp/f24_bot_bp_hash_${TARGET}.txt"
+HASHFILE="$BLUEPRINTS_DIR/.last_deployed_${TARGET}.sha256"
+
 python3 <<PYEOF
-import json
+import json, hashlib
 with open("$BP") as f: bp = json.load(f)
 def swap(flow):
     for m in flow:
@@ -82,12 +87,23 @@ swap(bp["flow"])
 bp["name"] = "Ferre24 AI Bot WhatsApp (GHL) - $VERSION $SUFFIX [$GITSHA]"
 scheduling = bp.pop("scheduling", None)
 bp.pop("interface", None)
+# Hash del contenido SIN el name volátil (timestamp+sha) → detecta "no cambió nada real".
+_canon = {k: v for k, v in bp.items() if k != "name"}
+_h = hashlib.sha256(json.dumps(_canon, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+open("$HASHTMP", "w").write(_h)
 body = {"blueprint": json.dumps(bp),
         "scheduling": json.dumps(scheduling) if scheduling else None,
         "name": bp["name"]}
 body = {k: v for k, v in body.items() if v is not None}
 with open("$PATCH", "w") as f: json.dump(body, f)
 PYEOF
+
+# GUARD: blueprint idéntico al último deploy de este target → NO PATCHees el live (evita el thrash).
+NEWHASH="$(cat "$HASHTMP" 2>/dev/null || echo new)"
+if [[ -f "$HASHFILE" && "$(cat "$HASHFILE")" == "$NEWHASH" ]]; then
+  echo "⏭️  Blueprint idéntico al último deploy ($TARGET) — SKIP PATCH (idempotente, anti-thrash)."
+  exit 0
+fi
 
 echo "Subiendo a scenario $SCENARIO_ID ($SUFFIX)..."
 RESP=$(curl -sS -X PATCH "https://us2.make.com/api/v2/scenarios/$SCENARIO_ID" \
@@ -100,6 +116,12 @@ import json, sys
 r = json.load(sys.stdin); s = r.get('scenario', r)
 print('  name:', s.get('name')); print('  isinvalid:', s.get('isinvalid')); print('  isActive:', s.get('isActive'))
 "
+
+# Guarda el hash SOLO si el PATCH fue válido → la próxima corrida con el mismo blueprint salta el PATCH.
+if echo "$RESP" | python3 -c "import json,sys; s=json.load(sys.stdin).get('scenario',{}); sys.exit(0 if s.get('isinvalid') is False else 1)" 2>/dev/null; then
+  echo "$NEWHASH" > "$HASHFILE"
+  echo "Hash de idempotencia guardado: $HASHFILE"
+fi
 
 ARCHIVE="$BLUEPRINTS_DIR/f24_bot_${VERSION}_${TARGET}_$(date +%Y-%m-%d).json"
 cp "$BP" "$ARCHIVE"
