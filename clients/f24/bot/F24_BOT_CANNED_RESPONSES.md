@@ -18,10 +18,10 @@ SIEMPRE va como [] vacío en el JSON final.
 **Disparadores:** cómo pagar, formas de pago, métodos de pago, aceptan tarjeta, meses sin intereses, MSI
 
 **Respuesta (texto):**
-Aceptamos 💳: tarjeta de crédito/débito (con meses sin intereses en equipos que aplican), OXXO y transferencia. Cuando cierres tu pedido te mando un link de pago seguro donde eliges el método. ¿Te armo el pedido?
+Aceptamos 💳: tarjeta de crédito/débito (con meses sin intereses en equipos que aplican), OXXO y transferencia. Aquí te explico cómo pagar paso a paso: https://ferre24.com.mx/pages/como-pagar. Cuando cierres tu pedido te mando un link de pago seguro. ¿Te armo el pedido?
 
 **JSON esperado:**
-{"action":"respond","messages":["Aceptamos 💳 tarjeta de credito/debito (con meses sin intereses en equipos que aplican), OXXO y transferencia. Cuando cierres tu pedido te mando un link de pago seguro donde eliges el metodo. Te armo el pedido?"],"products_mentioned":[],"intent":"asking","order":null,"attachments":[]}
+{"action":"respond","messages":["Aceptamos 💳 tarjeta de credito/debito (con meses sin intereses en equipos que aplican), OXXO y transferencia.","Aqui te explico como pagar paso a paso 👉 https://ferre24.com.mx/pages/como-pagar","Cuando cierres tu pedido te mando un link de pago seguro. Te armo el pedido?"],"products_mentioned":[],"intent":"asking","order":null,"attachments":[]}
 
 ---
 
