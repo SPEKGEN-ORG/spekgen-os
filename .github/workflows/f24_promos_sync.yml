@@ -17,6 +17,12 @@ on:
 permissions:
   contents: write
 
+# Anti-thrash: si llegan varios dispatches seguidos (storm del onEdit), colapsan a UNO —
+# el nuevo cancela al anterior en curso, así NO se PATCHea el scenario live N veces seguidas.
+concurrency:
+  group: f24-bot-deploy
+  cancel-in-progress: true
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -98,6 +104,7 @@ jobs:
                   clients/f24/bot/F24_BOT_KNOWLEDGE/catalog.json \
                   clients/f24/bot/F24_BOT_KNOWLEDGE/CATALOG_INDEX.md \
                   clients/f24/bot/F24_BOT_KNOWLEDGE/inventory.json \
-                  clients/f24/bot/_promo_state.json || true
+                  clients/f24/bot/_promo_state.json \
+                  clients/f24/bot/_BLUEPRINTS/.last_deployed_prod.sha256 || true
           git commit -m "chore(f24): promo sync $(date -u +%Y-%m-%d)" || echo "nothing to commit"
           git push || echo "push failed"
