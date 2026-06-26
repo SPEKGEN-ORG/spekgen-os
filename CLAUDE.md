@@ -14,13 +14,19 @@
 
 ## Bot de WhatsApp (F24 / HC) — reglas críticas
 
-- **Fuente de verdad = este repo, rama `main`.** NUNCA edites el bot en la UI de Make (el cron lo
+- **Fuente de verdad = este repo, rama `main`.** NUNCA edites el bot en la UI de Make (el deploy lo
   borra al rebuildar) ni en Drive (no se deploya).
-- **El bot LIVE se deploya SOLO desde `main`** vía el GitHub Action `f24_promos_sync.yml` (2x/día +
-  on-edit). Mergeas a `main` → se va al bot.
-- **Prueba en el scenario DEV aislado** antes de mergear: `./deploy_f24_bot.sh dev <tag>` (5381174,
-  sin tráfico). PROD = `deploy_f24_bot.sh prod` (5258612, pide confirmación o `CONFIRM_PROD=yes`).
-- **NUNCA deployes a prod ANTES de mergear a `main`** (el cron rebuildea desde main y te lo revierte).
+- **El bot se deploya por un PIPELINE automático, NO a mano.** Mergeas un cambio del bot a `main` →
+  el Action `f24_bot_deploy.yml` corre solo: **build → deploy DEV → smoke DEV (compuerta) → deploy
+  PROD → smoke PROD → si rompe, auto-rollback al último bueno + email**. No corras `deploy prod` a mano.
+- **La compuerta DEV te protege:** si tu cambio rompe el bot, falla en DEV (scenario aislado 5381174)
+  y PROD (5258612, el live) NUNCA se toca. Te llega un email y el bot sigue sano.
+- **Un monitor** (`f24_bot_healthcheck.yml`) prueba el bot live cada 20 min y alerta por email
+  (Gibran + Pedro) si se cae — aunque la caída no venga de un deploy.
+- **NO hace falta "lock" ni avisar al otro:** git serializa los merges; dos PRs no chocan en el live.
+  Trabajen en paralelo con confianza (cada quien su rama + PR).
+- **Deploy manual = SOLO emergencia** (`CONFIRM_PROD=yes ./deploy_f24_bot.sh prod <tag>`), p.ej. si el
+  pipeline está caído. En operación normal nunca se usa.
 - En Make, el nombre del scenario trae el commit git (`...PROD [abc1234]`) → así ves qué está live.
 - SOP completo del bot: **`clients/f24/bot/docs/BOT_DEPLOY_SOP.md`**.
 

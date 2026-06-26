@@ -1,0 +1,74 @@
+name: F24 Bot Healthcheck
+
+# Monitor de salud del bot LIVE de Ferre24 (Make scenario PROD 5258612).
+# Cada 20 min hace un smoke test VIVO: crea un contacto efímero, le manda un mensaje al
+# webhook del bot, verifica que el bot conteste, y borra el contacto. Si NO responde (con
+# 1 reintento para descartar un blip), manda un correo de alerta a Gibran + Pedro.
+#
+# Por decisión: el monitor SÓLO ALERTA, no hace rollback (un blip momentáneo no debe
+# revertir un deploy que estaba bien). El rollback vive en el pipeline de deploy.
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'   # cada 20 min
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# No choca con los deploys: si justo está corriendo un deploy, el smoke puede dar un falso
+# negativo. El grupo + cancel evita solaparse con sí mismo; el reintento cubre el blip de deploy.
+concurrency:
+  group: f24-bot-healthcheck
+  cancel-in-progress: true
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    defaults:
+      run:
+        working-directory: clients/f24/bot
+    env:
+      F24_GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
+      SPEKGEN_GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      GMAIL_USER: spekgen.ai@gmail.com
+      BOT_ALERT_RECIPIENTS: ${{ vars.BOT_ALERT_RECIPIENTS }}
+      ALERT_TO: gibran.alonzo0506@gmail.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Smoke test PROD (con 1 reintento)
+        id: smoke
+        run: |
+          if python3 ci/smoke_test_bot.py prod; then
+            echo "El bot respondió. OK."
+            exit 0
+          fi
+          echo "Primer intento falló — reintentando en 30s (descartar blip)..."
+          sleep 30
+          if python3 ci/smoke_test_bot.py prod; then
+            echo "El bot respondió en el reintento. OK."
+            exit 0
+          fi
+          echo "El bot NO respondió en 2 intentos."
+          exit 1
+
+      - name: Alertar si el bot está caído
+        if: failure()
+        run: |
+          BODY=$(printf '%s\n' \
+            "El monitor de salud hizo un smoke test al bot LIVE de Ferre24 (PROD 5258612) y el bot NO respondió en 2 intentos." \
+            "" \
+            "Esto significa que clientes reales en WhatsApp probablemente NO están siendo atendidos AHORA." \
+            "" \
+            "Qué revisar (en orden):" \
+            "1. Make scenario 5258612 — ¿está activo? ¿última ejecución con error?" \
+            "2. ¿El puente GHL->Make (tagger) sigue disparando?" \
+            "3. ¿Hubo un deploy reciente que rompió algo? (Actions -> F24 Bot Deploy)" \
+            "" \
+            "Run del monitor: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")
+          python3 ci/alert_email.py --subject "🔴 BOT F24 CAÍDO — el monitor no obtuvo respuesta" --body "$BODY"

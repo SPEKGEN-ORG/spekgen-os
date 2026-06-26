@@ -1,5 +1,9 @@
-# Nunca commitear: el blueprint generado lleva llaves embebidas (Anthropic + GHL PIT)
-_BLUEPRINTS/
+# Los blueprints generados (.json) llevan llaves embebidas (Anthropic + GHL PIT) → NUNCA a git,
+# y son pesados (~210KB c/u). El pipeline NO commitea blueprints: el punto de rollback es un SHA.
+_BLUEPRINTS/*.json
+# Sí trackeamos los punteros key-free que el pipeline necesita persistir entre runs de CI:
+#   LAST_GOOD_prod.sha          → commit que reproduce el último bot bueno (target de rollback)
+#   .last_deployed_*.sha256     → hashes anti-thrash del guard de idempotencia
 logs/
 token.json
 *.env

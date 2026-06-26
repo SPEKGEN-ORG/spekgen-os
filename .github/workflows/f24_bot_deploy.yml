@@ -1,0 +1,142 @@
+name: F24 Bot Deploy
+
+# Pipeline CI/CD del bot Ferre24. Se dispara SOLO al mergear a main un cambio en los
+# archivos FUENTE del bot. Flujo de equipo serio:
+#
+#   build → deploy DEV → smoke DEV (compuerta) → deploy PROD → smoke PROD
+#         → si PROD falla: auto-rollback al último bueno + alerta
+#         → si PROD pasa: guarda LAST_GOOD (punto de rollback) + commit
+#
+# Nadie deploya a PROD a mano. Git serializa los merges → dos personas no pueden chocar.
+# La compuerta DEV garantiza que un cambio roto JAMÁS toca el bot live.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'clients/f24/bot/**'
+      # Ignora los artefactos que regenera/commitea el cron de promos y este mismo workflow,
+      # para que esos commits automáticos NO re-disparen un deploy (evita loops y dobles deploys).
+      - '!clients/f24/bot/F24_BOT_KNOWLEDGE/promos_active.json'
+      - '!clients/f24/bot/F24_BOT_KNOWLEDGE/catalog.json'
+      - '!clients/f24/bot/F24_BOT_KNOWLEDGE/CATALOG_INDEX.md'
+      - '!clients/f24/bot/F24_BOT_KNOWLEDGE/inventory.json'
+      - '!clients/f24/bot/_BLUEPRINTS/**'
+      - '!clients/f24/bot/_promo_state.json'
+      - '!clients/f24/bot/__pycache__/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Mismo grupo que el cron de promos → un deploy y un promo-sync NUNCA corren a la vez
+# (uno cancela al otro). Esa serialización es lo que mata el thrash que tiró el bot el 24-jun.
+concurrency:
+  group: f24-bot-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: clients/f24/bot
+    env:
+      # Llaves que el builder hornea en el blueprint:
+      GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.F24_ANTHROPIC_API_KEY }}
+      MAKE_API_TOKEN: ${{ secrets.MAKE_API_TOKEN }}
+      # Smoke test (llama GHL directo):
+      F24_GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
+      # Alertas:
+      SPEKGEN_GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      GMAIL_USER: spekgen.ai@gmail.com
+      BOT_ALERT_RECIPIENTS: ${{ vars.BOT_ALERT_RECIPIENTS }}
+      ALERT_TO: gibran.alonzo0506@gmail.com
+      DEV_SCENARIO_ID: "5381174"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # historia completa: el rollback hace checkout de un commit pasado
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build blueprint
+        run: python3 build_f24_bot_blueprint.py
+
+      - name: Deploy DEV (scenario 5381174 — aislado)
+        run: ./deploy_f24_bot.sh dev "$(date -u +%Y%m%d-%H%M)"
+
+      - name: Activar DEV (para que el smoke pueda ejecutar)
+        run: |
+          curl -sS -X POST "https://us2.make.com/api/v2/scenarios/${DEV_SCENARIO_ID}/start" \
+            -H "Authorization: Token ${MAKE_API_TOKEN}" -o /dev/null -w "start DEV: HTTP %{http_code}\n" || true
+
+      - name: Smoke DEV (COMPUERTA — si falla, PROD no se toca)
+        id: smoke_dev
+        run: python3 ci/smoke_test_bot.py dev
+
+      - name: Alertar falla de compuerta DEV
+        if: failure() && steps.smoke_dev.outcome == 'failure'
+        run: |
+          BODY=$(printf '%s\n' \
+            "Un cambio mergeado a main rompió el bot en DEV. La compuerta lo detuvo: PROD (bot live) NO fue tocado y sigue con la versión anterior." \
+            "" \
+            "El bot live sigue sano. Corrige el cambio y vuelve a mergear." \
+            "" \
+            "Commit y run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")
+          python3 ci/alert_email.py --subject "⛔ Deploy F24 BLOQUEADO en compuerta DEV — PROD intacto" --body "$BODY"
+
+      - name: Deploy PROD (scenario 5258612 — bot LIVE)
+        if: success()
+        id: deploy_prod
+        env:
+          CONFIRM_PROD: "yes"
+        run: ./deploy_f24_bot.sh prod "$(date -u +%Y%m%d-%H%M)"
+
+      - name: Smoke PROD
+        if: success()
+        id: smoke_prod
+        run: python3 ci/smoke_test_bot.py prod
+
+      - name: Auto-rollback si PROD falló
+        if: failure() && steps.smoke_prod.outcome == 'failure'
+        run: |
+          echo "Smoke PROD falló — ejecutando rollback al último bueno..."
+          ./ci/rollback_prod.sh
+          echo "Verificando que el rollback dejó el bot sano..."
+          if python3 ci/smoke_test_bot.py prod; then
+            ROLL_MSG="El rollback funcionó: el bot live volvió a responder con la versión anterior."
+          else
+            ROLL_MSG="ATENCION: el rollback corrió pero el bot SIGUE sin responder. Intervención manual urgente."
+          fi
+          BODY=$(printf '%s\n' \
+            "Un deploy a PROD pasó la compuerta DEV pero rompió el smoke en PROD. Se revirtió automáticamente al último blueprint bueno." \
+            "" \
+            "Resultado del rollback: ${ROLL_MSG}" \
+            "" \
+            "Commit y run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")
+          python3 ci/alert_email.py --subject "🚨 Deploy F24 rompió PROD — se ejecutó AUTO-ROLLBACK" --body "$BODY"
+          exit 1
+
+      - name: Guardar LAST_GOOD (SHA) + commit (punto de rollback)
+        if: success()
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          # El commit deployado (GITHUB_SHA) reproduce el bot que acaba de pasar smoke → es el target.
+          echo "${GITHUB_SHA}" > clients/f24/bot/_BLUEPRINTS/LAST_GOOD_prod.sha
+          git config user.name "spekgen-bot"
+          git config user.email "spekgen.ai@gmail.com"
+          git add clients/f24/bot/_BLUEPRINTS/LAST_GOOD_prod.sha \
+                  clients/f24/bot/_BLUEPRINTS/.last_deployed_prod.sha256 \
+                  clients/f24/bot/_BLUEPRINTS/.last_deployed_dev.sha256 || true
+          git commit -m "chore(f24-bot): LAST_GOOD=${GITHUB_SHA:0:7} tras deploy verificado" \
+            || echo "nothing to commit"
+          git push || echo "push failed"
+
+      - name: Resumen
+        if: success()
+        run: |
+          echo "Deploy verificado — DEV smoke PASS, PROD smoke PASS, LAST_GOOD guardado."
