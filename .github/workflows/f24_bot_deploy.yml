@@ -121,20 +121,16 @@ jobs:
           python3 ci/alert_email.py --subject "🚨 Deploy F24 rompió PROD — se ejecutó AUTO-ROLLBACK" --body "$BODY"
           exit 1
 
-      - name: Guardar LAST_GOOD (SHA) + commit (punto de rollback)
+      - name: Avanzar tag LAST_GOOD (punto de rollback)
         if: success()
         run: |
-          cd "$GITHUB_WORKSPACE"
-          # El commit deployado (GITHUB_SHA) reproduce el bot que acaba de pasar smoke → es el target.
-          echo "${GITHUB_SHA}" > clients/f24/bot/_BLUEPRINTS/LAST_GOOD_prod.sha
+          # main está protegido por PR (no se puede pushear commit). El target de rollback es un
+          # TAG móvil → el commit deployado (GITHUB_SHA), que reproduce el bot que pasó smoke.
           git config user.name "spekgen-bot"
           git config user.email "spekgen.ai@gmail.com"
-          git add clients/f24/bot/_BLUEPRINTS/LAST_GOOD_prod.sha \
-                  clients/f24/bot/_BLUEPRINTS/.last_deployed_prod.sha256 \
-                  clients/f24/bot/_BLUEPRINTS/.last_deployed_dev.sha256 || true
-          git commit -m "chore(f24-bot): LAST_GOOD=${GITHUB_SHA:0:7} tras deploy verificado" \
-            || echo "nothing to commit"
-          git push || echo "push failed"
+          git tag -f f24-bot-last-good "${GITHUB_SHA}"
+          git push -f origin f24-bot-last-good
+          echo "LAST_GOOD → ${GITHUB_SHA}"
 
       - name: Resumen
         if: success()

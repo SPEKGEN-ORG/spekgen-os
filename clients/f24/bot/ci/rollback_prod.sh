@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # rollback_prod.sh — restaura el bot LIVE (PROD 5258612) al último estado que pasó smoke.
 #
-# Diseño GitOps (sin llaves en git): el punto de rollback es un SHA de commit guardado en
-# _BLUEPRINTS/LAST_GOOD_prod.sha. Aquí: checkout de la FUENTE del bot en ese commit → rebuild
-# del blueprint (llaves desde env/.env) → deploy a prod → restaurar el árbol de trabajo.
+# Diseño GitOps (sin llaves en git): el punto de rollback es el commit al que apunta el TAG móvil
+# 'f24-bot-last-good' (lo avanza el pipeline en cada deploy verificado). El bot SÍ puede pushear
+# tags (main está protegido por PR, pero los tags no). Aquí: checkout de la FUENTE del bot en ese
+# commit → rebuild del blueprint (llaves desde env/.env) → deploy a prod → restaurar el árbol.
 #
 # Lo usa el pipeline cuando un deploy nuevo rompe el smoke de PROD. Reusa deploy_f24_bot.sh.
 # Requiere GHL_API_KEY + ANTHROPIC_API_KEY en el entorno (CI: secrets; local: F24/.env).
@@ -12,7 +13,8 @@
 set -euo pipefail
 
 BOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-SHA_FILE="$BOT_DIR/_BLUEPRINTS/LAST_GOOD_prod.sha"
+GOOD_TAG="f24-bot-last-good"
+SHA_FILE="$BOT_DIR/_BLUEPRINTS/LAST_GOOD_prod.sha"   # fallback seed si el tag no existe
 
 # Archivos FUENTE que alimentan el build (los únicos que hay que revertir para reproducir el bot).
 INPUTS=(
@@ -22,13 +24,15 @@ INPUTS=(
   "build_f24_bot_blueprint.py"
 )
 
-if [[ ! -f "$SHA_FILE" ]]; then
-  echo "ERROR: no existe $SHA_FILE — no hay punto de rollback. Aborta."
-  exit 1
+# Resuelve el commit bueno: primero del tag (fuente de verdad), si no, del seed file.
+git -C "$BOT_DIR" fetch -q --tags origin 2>/dev/null || true
+GOOD_SHA="$(git -C "$BOT_DIR" rev-list -n1 "$GOOD_TAG" 2>/dev/null || true)"
+if [[ -z "$GOOD_SHA" && -f "$SHA_FILE" ]]; then
+  GOOD_SHA="$(tr -d '[:space:]' < "$SHA_FILE")"
+  echo "(tag $GOOD_TAG no encontrado — usando seed $SHA_FILE)"
 fi
-GOOD_SHA="$(tr -d '[:space:]' < "$SHA_FILE")"
 if [[ -z "$GOOD_SHA" ]]; then
-  echo "ERROR: $SHA_FILE está vacío. Aborta."
+  echo "ERROR: no hay punto de rollback (ni tag $GOOD_TAG ni $SHA_FILE). Aborta."
   exit 1
 fi
 
