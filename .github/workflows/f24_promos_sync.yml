@@ -39,8 +39,16 @@ jobs:
       GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.F24_ANTHROPIC_API_KEY }}
       MAKE_API_TOKEN: ${{ secrets.MAKE_API_TOKEN }}
+      # Smoke + alerta post-deploy (red de seguridad para el deploy del cron):
+      F24_GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
+      SPEKGEN_GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      GMAIL_USER: spekgen.ai@gmail.com
+      BOT_ALERT_RECIPIENTS: ${{ vars.BOT_ALERT_RECIPIENTS }}
+      ALERT_TO: gibran.alonzo0506@gmail.com
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # historia completa: el rollback hace checkout de un commit pasado
 
       - uses: actions/setup-python@v5
         with:
@@ -94,8 +102,33 @@ jobs:
           CONFIRM_PROD: "yes"   # el cron deploya al LIVE de forma no-interactiva
         run: ./deploy_f24_bot.sh prod "$(date -u +%Y%m%d-%H%M)"
 
-      - name: Commit regenerated artifacts
+      - name: Smoke PROD (verifica que el deploy no rompió el bot)
         if: ${{ github.event.inputs.dry_run != 'true' }}
+        id: smoke_prod
+        run: python3 ci/smoke_test_bot.py prod
+
+      - name: Auto-rollback si el smoke falló
+        if: ${{ !cancelled() && steps.smoke_prod.outcome == 'failure' }}
+        run: |
+          echo "Smoke PROD falló tras el promo-sync — rollback al último bueno..."
+          ./ci/rollback_prod.sh
+          if python3 ci/smoke_test_bot.py prod; then
+            ROLL_MSG="El rollback funcionó: el bot volvió a responder con la versión anterior."
+          else
+            ROLL_MSG="ATENCION: el rollback corrió pero el bot SIGUE sin responder. Intervención manual urgente."
+          fi
+          BODY=$(printf '%s\n' \
+            "El cron de promos redeployó el bot y el smoke de PROD falló. Se revirtió automáticamente al último blueprint bueno." \
+            "" \
+            "Resultado del rollback: ${ROLL_MSG}" \
+            "" \
+            "Probable causa: un cambio de datos en la hoja INVENTARIO F24 rompió el armado." \
+            "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")
+          python3 ci/alert_email.py --subject "🚨 Promo-sync F24 rompió el bot — se ejecutó AUTO-ROLLBACK" --body "$BODY"
+          exit 1
+
+      - name: Commit regenerated artifacts
+        if: ${{ github.event.inputs.dry_run != 'true' && steps.smoke_prod.outcome == 'success' }}
         run: |
           cd "$GITHUB_WORKSPACE"
           git config user.name "spekgen-bot"
