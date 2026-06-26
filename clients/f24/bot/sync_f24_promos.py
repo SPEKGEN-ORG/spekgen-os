@@ -248,10 +248,13 @@ def main():
     ap.add_argument("--apply-base", action="store_true",
                     help="ADEMÁS empuja los precios BASE del sheet a Shopify (productos sin promo). "
                          "OFF por default: requiere reconciliar el sheet vs Shopify primero.")
+    ap.add_argument("--json-only", action="store_true",
+                    help="Regenera promos_active.json + state DESDE el Sheet SIN escribir nada a Shopify "
+                         "(read-only). Lo usa el deploy-on-merge para hornear promos frescas sin side effects.")
     args = ap.parse_args()
-    dry = not args.apply
+    dry = not args.apply and not args.json_only
 
-    print(f"{'DRY-RUN (preview, no escribe nada)' if dry else 'APPLY'}"
+    print(f"{'DRY-RUN (preview, no escribe nada)' if dry else ('JSON-ONLY (read-only, sin Shopify)' if args.json_only else 'APPLY')}"
           f"{' + base prices' if args.apply_base else ''}")
     print("Source of truth: Sheet INVENTARIO F24\n")
 
@@ -386,20 +389,22 @@ def main():
         return
 
     # ---- APPLY (promos + descuento directo + expiraciones siempre; base solo con --apply-base) ----
-    applied = list(promo_changes) + list(desc_changes) + list(expiries)
-    if args.apply_base:
-        applied += [{**c, "want_c": LEAVE} for c in base_review]  # base: precio sí, tachado intacto
-    for c in applied:
-        res = set_variant_price(sc, c["pid"], c["vid"], c["want_p"], c.get("want_c", LEAVE))
-        print(f"  ✓ {c['sku']}: price={res['price']} compareAt={res['compareAtPrice']}")
+    # En --json-only se SALTAN todas las escrituras a Shopify; solo se regenera el JSON (más abajo).
+    if not args.json_only:
+        applied = list(promo_changes) + list(desc_changes) + list(expiries)
+        if args.apply_base:
+            applied += [{**c, "want_c": LEAVE} for c in base_review]  # base: precio sí, tachado intacto
+        for c in applied:
+            res = set_variant_price(sc, c["pid"], c["vid"], c["want_p"], c.get("want_c", LEAVE))
+            print(f"  ✓ {c['sku']}: price={res['price']} compareAt={res['compareAtPrice']}")
 
-    active_eligible = {r["sku_upper"] for r in sellable if r["eligible_912"]}
-    for r in sellable:
-        set_product_tag(sc, r["product_gid"], MSI912_TAG, add=r["eligible_912"])
-    for sku_u in prev:
-        if sku_u not in active_eligible and sku_u in variants:
-            set_product_tag(sc, variants[sku_u]["pid"], MSI912_TAG, add=False)
-    print(f"  🏷  msi-912 activos: {len(active_eligible)}")
+        active_eligible = {r["sku_upper"] for r in sellable if r["eligible_912"]}
+        for r in sellable:
+            set_product_tag(sc, r["product_gid"], MSI912_TAG, add=r["eligible_912"])
+        for sku_u in prev:
+            if sku_u not in active_eligible and sku_u in variants:
+                set_product_tag(sc, variants[sku_u]["pid"], MSI912_TAG, add=False)
+        print(f"  🏷  msi-912 activos: {len(active_eligible)}")
 
     def clean(r):
         return {k: v for k, v in r.items() if k not in ("product_gid", "variant_gid")}
@@ -414,8 +419,12 @@ def main():
                                 "estado_landing": r["estado_landing"]} for r in promo_missing],
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     STATE_PATH.write_text(json.dumps(new_state, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\n✅ {len(applied)} precios + msi-912 aplicados. {PROMOS_JSON.name} "
-          f"({len(sellable)} vendibles) + {STATE_PATH.name} escritos.")
+    if args.json_only:
+        print(f"\n✅ JSON-ONLY: {PROMOS_JSON.name} ({len(sellable)} vendibles) + {STATE_PATH.name} "
+              f"regenerados del Sheet. Cero escrituras a Shopify.")
+    else:
+        print(f"\n✅ {len(applied)} precios + msi-912 aplicados. {PROMOS_JSON.name} "
+              f"({len(sellable)} vendibles) + {STATE_PATH.name} escritos.")
 
 
 if __name__ == "__main__":
