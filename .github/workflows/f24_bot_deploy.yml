@@ -47,6 +47,12 @@ jobs:
       GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.F24_ANTHROPIC_API_KEY }}
       MAKE_API_TOKEN: ${{ secrets.MAKE_API_TOKEN }}
+      # Shopify (catálogo live) — build_f24_knowledge.py lee precios/SKUs en vivo:
+      SHOPIFY_SHOP: ${{ secrets.F24_SHOPIFY_SHOP }}
+      SHOPIFY_CLIENT_ID: ${{ secrets.F24_SHOPIFY_CLIENT_ID }}
+      SHOPIFY_CLIENT_SECRET: ${{ secrets.F24_SHOPIFY_CLIENT_SECRET }}
+      SHOPIFY_API_VERSION: ${{ secrets.F24_SHOPIFY_API_VERSION }}
+      SHOPIFY_PRIMARY_DOMAIN: ${{ secrets.F24_SHOPIFY_PRIMARY_DOMAIN }}
       # Smoke test (llama GHL directo):
       F24_GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
       # Alertas:
@@ -62,6 +68,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Write Google service account
+        env:
+          GCP_SA_JSON: ${{ secrets.GCP_SA_JSON }}
+        run: |
+          printf '%s' "$GCP_SA_JSON" > "$RUNNER_TEMP/sa.json"
+          echo "GOOGLE_SA_PATH=$RUNNER_TEMP/sa.json" >> "$GITHUB_ENV"
+
+      - name: Regenerar knowledge FRESCO del Sheet (read-only, sin escribir a Shopify)
+        run: |
+          # --json-only regenera promos_active.json desde el Sheet SIN tocar Shopify, para que el
+          # blueprint hornee promos frescas aunque la copia commiteada en main esté atrasada
+          # (main está protegido → el cron no puede pushear sus JSONs). Camino B.
+          python3 sync_f24_promos.py --json-only
+          python3 build_f24_knowledge.py
 
       - name: Build blueprint
         run: python3 build_f24_bot_blueprint.py
