@@ -1,0 +1,43 @@
+name: social-sweep
+
+# Barrido de DMs/comentarios IG-FB sin atender + digest por email.
+# Japan-proof: corre en GH Actions, no depende de la Mac de Gibran.
+on:
+  schedule:
+    - cron: "0 */3 * * *"   # barrido cada 3h
+    - cron: "0 15 * * *"    # digest diario 15:00 UTC (~9am MX)
+  workflow_dispatch:
+    inputs:
+      send_digest:
+        description: "Enviar digest tras el barrido"
+        type: boolean
+        default: true
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: social-manager
+    env:
+      AGENCY_META_TOKEN: ${{ secrets.AGENCY_META_TOKEN }}
+      LF_META_TOKEN: ${{ secrets.LF_META_TOKEN }}
+      F24_META_TOKEN: ${{ secrets.F24_META_TOKEN }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      SPEKGEN_GMAIL_APP_PASSWORD: ${{ secrets.SPEKGEN_GMAIL_APP_PASSWORD }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Barrido (todos los clientes activos)
+        run: python3 social_sweep.py --client all
+      - name: Redactar borradores (cerebro)
+        run: python3 social_brain.py --client all
+      - name: Publicar lo ya aprobado
+        run: python3 social_publish.py
+      - name: Digest por email
+        if: github.event.schedule == '0 15 * * *' || inputs.send_digest
+        run: python3 social_digest.py

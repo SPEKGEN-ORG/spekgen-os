@@ -1,0 +1,28 @@
+name: social-publish
+
+# Publica respuestas APROBADAS (status='approved') en Meta. Corre seguido para que el
+# tiempo entre "Gibran aprueba en el email" y "se publica" sea de minutos.
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # cada 30 min
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: social-manager
+    env:
+      AGENCY_META_TOKEN: ${{ secrets.AGENCY_META_TOKEN }}
+      LF_META_TOKEN: ${{ secrets.LF_META_TOKEN }}
+      F24_META_TOKEN: ${{ secrets.F24_META_TOKEN }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Publicar aprobados
+        run: python3 social_publish.py
