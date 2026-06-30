@@ -78,14 +78,14 @@ STEP_GAP = {2: 120, 3: 1230, 4: 1440, 5: 7200, 6: 14400}
 
 NUDGES = {
     2: [
-        "¿Te quedó alguna duda sobre specs, meses sin intereses o tiempos de entrega? Puedo asesorarte sin compromiso — solo pregunta.",
-        "¿Sigues por ahí? A veces la decisión no es fácil cuando hay varias opciones. Si quieres te ayudo a comparar o te paso el precio exacto del equipo que viste.",
-        "Por si te lo preguntas: tenemos meses sin intereses en varios equipos. Si el precio es lo que te frena, puedo mostrarte cómo queda con el plan que más te convenga. ¿Le buscamos?",
+        "¿Te pude ayudar con lo que buscabas? Si quedó alguna duda de specs, precio o entrega, dime y te la aclaro al momento.",
+        "¿Seguimos? Si estás entre varias opciones te ayudo a compararlas, o te paso el precio exacto del equipo que viste.",
+        "Quedé al pendiente de tu cotización. Si el precio es lo que te frena, te muestro cómo queda a meses sin intereses. ¿Le entramos?",
     ],
     3: [
-        "Hola, vi que quedamos a media conversación. ¿Sigues buscando equipo? Dime qué necesitas y le seguimos. 🔧",
-        "¿Sigues por ahí? Quedamos a medias con tu cotización — si tienes dudas o quieres retomar, aquí ando.",
-        "Hola, veo que nos quedamos sin cerrar tu consulta. ¿Aún necesitas equipo o maquinaria? Con gusto te ayudo a cotizar. 🛠️",
+        "Te escribo para retomar — quedamos a media plática con tu equipo. ¿Lo sigues necesitando? Dime y te paso la recomendación con precio. 🔧",
+        "No quise dejarte sin respuesta. Si todavía andas viendo lo de tu cotización, aquí sigo para ayudarte a cerrarlo. ¿Retomamos?",
+        "¿Cómo vas con lo del equipo que platicamos? Si aún lo necesitas, en un minuto te armo la opción y el precio. Cuando gustes. 🛠️",
     ],
 }
 
