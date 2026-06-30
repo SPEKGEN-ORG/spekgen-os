@@ -13,6 +13,7 @@ Uso:
 import argparse
 import json
 import os
+import re
 import sys
 import urllib.request
 import urllib.error
@@ -23,6 +24,21 @@ from lib import secrets, store  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 MODEL = "claude-haiku-4-5-20251001"
 KNOWLEDGE_BUDGET = 14000  # chars
+AUTO_MAX_AGE_DAYS = 45    # no auto-responder comentarios más viejos que esto
+AUTO_MIN_CONFIDENCE = 0.8
+AUTO_CATEGORIES = {"question", "intent"}  # solo intención clara de venta/duda
+
+# Guardarraíl: NO auto-publicar respuestas con claims que no podemos verificar en vivo
+# (precios, números, promos). Esas van a revisión humana. Auto = solo redirect-a-DM limpio.
+_RISKY_RE = re.compile(
+    r"\d|hot\s*sale|buen\s*fin|descuent|gratis|%|oferta|promoci|vence|hasta el|"
+    r"\b\dx\d\b|3x2|2x1|bogo|cup[oó]n|env[ií]o\s+gratis",
+    re.IGNORECASE,
+)
+
+
+def _risky_for_auto(text):
+    return bool(_RISKY_RE.search(text or ""))
 
 
 def load_config():
@@ -68,6 +84,9 @@ Si el dato NO está en el catálogo, NO lo inventes: responde amable e invita a 
 mensaje directo (DM) o WhatsApp para darle el detalle.
 - Para precio/compra: si tienes el dato dalo, y SIEMPRE invita a DM/WhatsApp para cerrar.
 - NUNCA inventes precios, promociones, garantías ni envíos gratis.
+- PROHIBIDO mencionar promociones, descuentos, "Hot Sale", Buen Fin, fechas límite o \
+cualquier oferta con vigencia: pueden estar VENCIDAS. Quédate en info perenne (qué es, para \
+qué sirve) + invitar a DM. Si el precio del catálogo es estable, puedes darlo; las ofertas no.
 - Español de MÉXICO, trato de "tú": "escríbenos", "te interesa", "te cotizamos". \
 NUNCA uses voseo ("vos", "escribís", "tenés", "querés").
 - Tono de {name}. Máximo 1 emoji, opcional.
@@ -170,22 +189,40 @@ def main():
             draft = (out.get("draft") or "").strip()
             conf_score = out.get("confidence")
             needs_human = out.get("needs_human", False)
-            print(f"  [{action}] {(r.get('body') or '')[:40]!r}")
-            print(f"      -> {draft!r}  (conf={conf_score}, humano={needs_human})")
+            category = (r.get("meta") or {}).get("category")
+            age = r.get("age_days") or 0
+
+            # ¿califica para auto-publicar? (delegación con guardarraíles)
+            auto = (
+                cfg.get("comment_mode") == "auto"
+                and action == "reply" and draft
+                and (conf_score or 0) >= AUTO_MIN_CONFIDENCE
+                and not needs_human
+                and category in AUTO_CATEGORIES
+                and age <= AUTO_MAX_AGE_DAYS
+                and not _risky_for_auto(draft)   # sin precios/promos/números sin verificar
+            )
+            if action == "reply":
+                status = "approved" if auto else "drafted"
+            else:
+                status = {"skip": "skipped", "escalate": "escalated"}.get(action, "drafted")
+
+            tag = "AUTO→publica" if auto else ("revisar" if status == "drafted" else status)
+            print(f"  [{tag}] {(r.get('body') or '')[:38]!r}  (conf={conf_score}, cat={category}, {age}d)")
+            print(f"      -> {draft!r}")
 
             if args.dry_run:
                 continue
 
-            fields = {
+            store.update(r["external_id"], {
                 "draft": draft if action == "reply" else None,
                 "confidence": conf_score,
-                "status": {"reply": "drafted", "skip": "skipped",
-                           "escalate": "escalated"}.get(action, "drafted"),
+                "status": status,
+                "acted_by": "auto" if auto else None,
                 "meta": {**(r.get("meta") or {}),
                          "needs_human": needs_human,
                          "brain_reason": out.get("reason")},
-            }
-            store.update(r["external_id"], fields)
+            })
             done += 1
 
     print(f"\nBorradores escritos: {done}" + ("  [DRY-RUN]" if args.dry_run else ""))

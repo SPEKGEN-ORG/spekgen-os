@@ -22,7 +22,7 @@
       "ig_id": "17841430824981516",
       "ig_username": "healthychuchos",
       "ad_account": "act_1626923298353925",
-      "comment_mode": "draft",
+      "comment_mode": "auto",
       "dm_mode": "auto",
       "knowledge": "HC - HEALTHY CHUCHOS/HC - 08. WHATSAPP/HC_BOT_KNOWLEDGE",
       "active": true
@@ -34,7 +34,7 @@
       "ig_id": "17841463093393396",
       "ig_username": "lofitness_club",
       "ad_account": "act_542994632175434",
-      "comment_mode": "draft",
+      "comment_mode": "auto",
       "dm_mode": "auto",
       "knowledge": "LF - LO FITNESS/LF - 08. WHATSAPP/bot_multimodal/LF_BOT_KNOWLEDGE/CATALOG_INDEX.md",
       "active": true
@@ -46,10 +46,10 @@
       "ig_id": "17841422987383944",
       "ig_username": "ferre24.com.mx",
       "ad_account": "act_1515948230126551",
-      "comment_mode": "draft",
+      "comment_mode": "auto",
       "dm_mode": "draft",
       "knowledge": "~/dev/spekgen-os/clients/f24/bot/F24_BOT_KNOWLEDGE/CATALOG_INDEX.md",
-      "_nota": "F24 = solo borrador en TODO (WABA baneada 18-jun, riesgo de sancion). Nunca auto-publicar.",
+      "_nota": "F24 comentarios = AUTO autorizado por Gibran 29-jun (respuestas son redirect-a-DM, otra superficie que el ban de WhatsApp). DMs siguen en draft. Guardarraíles aplican: nada de precios/promos en auto.",
       "active": true
     }
   }

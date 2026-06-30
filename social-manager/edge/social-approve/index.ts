@@ -59,7 +59,9 @@ button{background:${color};color:#062;border:0;border-radius:8px;padding:11px 20
 font-size:14px;font-weight:600;cursor:pointer;width:100%}
 .muted{color:#8b92a0;font-size:12px;margin-top:14px}
 </style></head><body><div class="card">${body}</div></body></html>`;
-  return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8" } });
+  const headers = new Headers();
+  headers.set("content-type", "text/html; charset=utf-8");
+  return new Response(html, { status: 200, headers });
 }
 
 Deno.serve(async (req) => {
