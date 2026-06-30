@@ -19,6 +19,11 @@
 //   body: { mode: "save_cp", contact_id: "<ghl>", codigo_postal: "44100" }
 //   - Lo usa el bot cuando el cliente da su CP al preguntar por el envío (aún sin comprar).
 //
+// Mode: save_name  (guarda solo el firstName nativo del contacto GHL, sin crear orden)
+//   body: { mode: "save_name", contact_id: "<ghl>", customer_name: "Juan" }
+//   - Lo usa el bot cuando captura el nombre real ("¿con quién tengo el gusto?") para
+//     reemplazar el alias basura de perfil de WhatsApp. Saneado server-side. Best-effort.
+//
 // Secrets (Supabase → Project Settings → Edge Functions secrets):
 //   SHOPIFY_SHOP, SHOPIFY_CLIENT_ID, SHOPIFY_CLIENT_SECRET, SHOPIFY_API_VERSION
 //   (client-credentials OAuth, igual que el shopify_client.py de F24)
@@ -119,6 +124,39 @@ async function saveCpOnly(contactId: string, cp: string): Promise<{ ok: boolean;
   if (!GHL_TOKEN || !contactId) return { ok: false, error: "no_token_or_contact" };
   const ok = await putGhlCustomFields(contactId, [{ id: GHL_CF.codigo_postal, value: cp }]);
   return ok ? { ok: true } : { ok: false, error: "ghl_write_failed" };
+}
+
+// Sanea el nombre que captura el bot ("¿con quién tengo el gusto?") antes de escribirlo.
+// El bot ya mandó un nombre real; aquí solo limpiamos: trim, sin emojis, primer nombre, cap 40.
+// Devuelve "" si lo que llegó no parece un nombre (puro emoji/símbolo/número) → no se escribe.
+function sanitizeFirstName(raw: string): string {
+  let s = String(raw ?? "").trim();
+  if (!s) return "";
+  // Quita emojis y símbolos sueltos; deja letras (incl. acentos/ñ), espacios, guiones, apóstrofes.
+  s = s.replace(/[^\p{L}\p{M}\s'\-.]/gu, "").replace(/\s+/g, " ").trim();
+  if (s.length < 2) return "";
+  // Toma el primer token (firstName), capitaliza inicial, capea a 40 chars.
+  const first = s.split(" ")[0].slice(0, 40);
+  if (first.length < 2) return "";
+  return first.charAt(0).toUpperCase() + first.slice(1);
+}
+
+// Escribe SOLO el firstName nativo del contacto GHL (mode=save_name). Best-effort.
+// Lo usa el bot cuando el cliente da su nombre y el firstName actual es el alias basura de WhatsApp.
+async function saveFirstName(contactId: string, rawName: string): Promise<{ ok: boolean; error?: string; first_name?: string }> {
+  const name = sanitizeFirstName(rawName);
+  if (!name) return { ok: false, error: "invalid_name" };
+  if (!GHL_TOKEN || !contactId) return { ok: false, error: "no_token_or_contact" };
+  try {
+    const r = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}`, {
+      method: "PUT",
+      headers: { Authorization: `Bearer ${GHL_TOKEN}`, Version: "2021-07-28", "Content-Type": "application/json" },
+      body: JSON.stringify({ firstName: name }),
+    });
+    return r.ok ? { ok: true, first_name: name } : { ok: false, error: "ghl_write_failed" };
+  } catch (_e) {
+    return { ok: false, error: "ghl_exception" };
+  }
 }
 
 // Escribe el contexto de la orden de vuelta al contacto en GHL (numero, productos, valor,
@@ -303,7 +341,7 @@ async function createDraftOrder(body: any) {
 
 Deno.serve(async (req: Request) => {
   if (req.method === "GET") {
-    return json({ ok: true, service: "f24-process-order", version: 3, modes: ["create_draft_order", "save_cp"] });
+    return json({ ok: true, service: "f24-process-order", version: 4, modes: ["create_draft_order", "save_cp", "save_name"] });
   }
   if (req.method !== "POST") return json({ ok: false, error: "method_not_allowed" }, 405);
   const t0 = Date.now();
@@ -312,6 +350,10 @@ Deno.serve(async (req: Request) => {
     const mode = String(body.mode ?? "create_draft_order");
     if (mode === "save_cp") {
       const result = await saveCpOnly(String(body.contact_id ?? ""), String(body.codigo_postal ?? "").trim());
+      return json({ ...result, mode, elapsed_ms: Date.now() - t0 }, 200);
+    }
+    if (mode === "save_name") {
+      const result = await saveFirstName(String(body.contact_id ?? ""), String(body.customer_name ?? ""));
       return json({ ...result, mode, elapsed_ms: Date.now() - t0 }, 200);
     }
     if (mode !== "create_draft_order") return json({ ok: false, error: `unknown_mode_${mode}` }, 400);
