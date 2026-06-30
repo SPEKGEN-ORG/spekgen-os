@@ -650,6 +650,35 @@ def f24_save_cp_module(module_id, x, y, parse_module_id):
     }
 
 
+def f24_save_name_module(module_id, x, y, parse_module_id):
+    """POST best-effort a la Edge Function (mode=save_name) para guardar el firstName REAL del cliente
+    en su contacto GHL cuando el bot lo captura ("¿con quién tengo el gusto?"). Reemplaza el alias
+    basura del perfil de WhatsApp para que los follow-ups ({{contact.first_name}}) dejen de mandar
+    "Hola Modelorma". Va en su PROPIA ruta del router (NO encadenado tras save_cp, porque el nombre se
+    captura seguido SIN CP) y se gatea con un filtro a customer_name no vacío. onerror = nunca rompe."""
+    pm = str(parse_module_id)
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": F24_PROCESS_ORDER_URL, "method": "post",
+            "headers": [{"name": "Content-Type", "value": "application/json"}],
+            "contentType": "json", "inputMethod": "dataStructure",
+            # Reusa la DS del process-order mapeando solo mode + contact_id + customer_name.
+            "bodyDataStructure": F24_PROCESS_ORDER_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": {
+                "mode": "save_name",
+                "contact_id": "{{1.contact_id}}",
+                "customer_name": "{{" + pm + ".customer_name}}",
+            },
+            "timeout": 60, "shareCookies": False, "parseResponse": True,
+            "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
+        "onerror": [resume_handler(94, {"ok": False}, x, y + 300)],
+    }
+
+
 def ghl_send_payment_link_module(module_id, x, y, order_http_module_id, parse_module_id=8):
     """Manda el pago según método: transferencia → CLABE + total real; tarjeta/OXXO → link online.
     El total real viene del Edge Function (42.total); la CLABE de Ferre24 va literal aquí."""
@@ -1046,6 +1075,12 @@ sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8, is_order=T
 sub_handoff_email = team_email_module(45, 2900, 600)   # lleva el ESCALATE_FILTER (gate de la sub-route)
 sub_handoff_tag = ghl_tag_handoff_module(46, 3150, 600)
 
+# Sub-route de NOMBRE: guarda el firstName real en GHL cuando el bot capturó customer_name.
+# Ruta propia (independiente de action/CP) — corre en cualquier acción si hay customer_name.
+sub_name_save = f24_save_name_module(51, 2900, 850, parse_module_id=8)
+sub_name_save["filter"] = {"name": "customer_name presente",
+                           "conditions": [[{"a": "{{8.customer_name}}", "o": "text:notequal", "b": ""}]]}
+
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
     "metadata": {"designer": {"x": 2650, "y": 150}},
@@ -1053,6 +1088,7 @@ post_parse_router = {
         {"flow": [sub_normal_send, sub_normal_ds, sub_cp_save]},
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
         {"flow": [sub_handoff_email, sub_handoff_tag]},
+        {"flow": [sub_name_save]},
     ],
 }
 
