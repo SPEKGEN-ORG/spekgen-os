@@ -5,6 +5,8 @@ _BLUEPRINTS/*.json
 #   LAST_GOOD_prod.sha          → commit que reproduce el último bot bueno (target de rollback)
 #   .last_deployed_*.sha256     → hashes anti-thrash del guard de idempotencia
 logs/
+# Reportes generados por el monitor de follow-ups (JSON/HTML por fecha) — efímeros, no a git.
+metrics/out/
 token.json
 *.env
 .env

@@ -1,0 +1,59 @@
+name: F24 Follow-up Metrics
+
+# Monitor de desempeño de los follow-ups de re-engagement de Ferre24.
+# Cada 3 días pulla las conversaciones de F24 (GHL), clasifica los mensajes de seguimiento
+# por etapa y variante, calcula seen rate / reply rate / reactivados, y manda el reporte HTML
+# por correo. Base del A/B test de plantillas (viejo vs nuevo copy).
+#
+# Sólo lee (GHL conversations). No escribe nada. Japan-proof: stdlib, corre solo en la nube.
+
+on:
+  schedule:
+    - cron: '0 15 */3 * *'   # cada 3 días a las 15:00 UTC = 9:00 AM CDMX
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Ventana de análisis en días'
+        required: false
+        default: '30'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: f24-followup-metrics
+  cancel-in-progress: true
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: clients/f24/bot
+    env:
+      F24_GHL_API_KEY: ${{ secrets.F24_GHL_API_KEY }}
+      SPEKGEN_GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      GMAIL_USER: spekgen.ai@gmail.com
+      F24_METRICS_RECIPIENTS: gibran.alonzo0506@gmail.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Calcular métricas de follow-ups + enviar reporte
+        run: |
+          python3 metrics/f24_followup_metrics.py \
+            --days "${{ github.event.inputs.days || '30' }}" \
+            --out metrics/out \
+            --email
+
+      - name: Subir reporte como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: f24-followup-metrics
+          path: clients/f24/bot/metrics/out/
+          if-no-files-found: ignore
+          retention-days: 30
