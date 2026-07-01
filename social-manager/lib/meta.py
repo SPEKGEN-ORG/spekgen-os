@@ -198,6 +198,31 @@ def reply_to_comment(channel, comment_id, message, page_token):
                     data={"message": message, "access_token": page_token})
 
 
+def send_private_reply(channel, page_id, ig_id, comment_id, message, page_token):
+    """Envía UNA respuesta privada (DM) al autor de un comentario (ventana de 7 días).
+    FB/ad: POST /{page_id}/messages ; IG: POST /{ig_id}/messages. recipient={comment_id}.
+    Requiere pages_messaging (FB) / instagram_manage_messages (IG). Devuelve la respuesta cruda."""
+    # FB usa 'me/messages' (me = la página, según el page token); IG usa {ig_id}/messages.
+    # OJO: NADA de messaging_type — con él Meta rechaza el comment_id (subcode 1893060).
+    actor = ig_id if channel == "ig_comment" else "me"
+    body = {
+        "recipient": json.dumps({"comment_id": comment_id}),
+        "message": json.dumps({"text": message}),
+        "access_token": page_token,
+    }
+    return _request(f"{BASE}/{actor}/messages", method="POST", data=body)
+
+
+def send_message_to_user(recipient_id, message, page_token):
+    """Mensaje de seguimiento a un usuario ya en conversación (ventana 24h)."""
+    body = {
+        "recipient": json.dumps({"id": recipient_id}),
+        "message": json.dumps({"text": message}),
+        "access_token": page_token,
+    }
+    return _request(f"{BASE}/me/messages", method="POST", data=body)
+
+
 def _iso(ts):
     if not ts:
         return None

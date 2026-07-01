@@ -19,6 +19,7 @@ jobs:
       F24_META_TOKEN: ${{ secrets.F24_META_TOKEN }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,3 +27,5 @@ jobs:
           python-version: "3.11"
       - name: Publicar aprobados
         run: python3 social_publish.py
+      - name: Enviar DMs prometidos (comment->DM, enruta a WhatsApp)
+        run: python3 social_dm.py
