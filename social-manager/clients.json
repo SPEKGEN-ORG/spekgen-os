@@ -25,6 +25,8 @@
       "comment_mode": "auto",
       "dm_mode": "auto",
       "knowledge": "HC - HEALTHY CHUCHOS/HC - 08. WHATSAPP/HC_BOT_KNOWLEDGE",
+      "dm_enabled": true,
+      "whatsapp": "https://wa.me/523326402219",
       "active": true
     },
     "LF": {
@@ -37,6 +39,8 @@
       "comment_mode": "auto",
       "dm_mode": "auto",
       "knowledge": "LF - LO FITNESS/LF - 08. WHATSAPP/bot_multimodal/LF_BOT_KNOWLEDGE/CATALOG_INDEX.md",
+      "dm_enabled": true,
+      "whatsapp": "https://wa.me/523329246629",
       "active": true
     },
     "F24": {
@@ -49,7 +53,9 @@
       "comment_mode": "auto",
       "dm_mode": "draft",
       "knowledge": "~/dev/spekgen-os/clients/f24/bot/F24_BOT_KNOWLEDGE/CATALOG_INDEX.md",
-      "_nota": "F24 comentarios = AUTO autorizado por Gibran 29-jun (respuestas son redirect-a-DM, otra superficie que el ban de WhatsApp). DMs siguen en draft. Guardarraíles aplican: nada de precios/promos en auto.",
+      "dm_enabled": false,
+      "whatsapp": null,
+      "_nota": "F24 comentarios = AUTO autorizado 29-jun. dm_enabled=false: WABA baneada, no hay bot de WhatsApp para el handoff; solo comentario público hasta tener bot nativo de Messenger (Fase 3 parte 2).",
       "active": true
     }
   }
