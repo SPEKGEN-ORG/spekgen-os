@@ -351,7 +351,30 @@ blueprint = {
     "interface": {"input": [], "output": []},
 }
 
+# ====================================================================================
+# ⚠️  STALE vs PROD — DO NOT DEPLOY WHAT THIS BUILDER EMITS WITHOUT RECONCILING FIRST.
+# Live scenario 5278490 diverged from this file:
+#   • Gibran (2026-06-29) hand-added `next_due_at` scheduling, a "due o sin agendar"
+#     filter on module 2, a reschedule route (module 50), and a janitor route
+#     (modules 100-103); interval changed 600 → 28800 (8h).
+#   • Pedro (2026-07-05) cost-optimized: removed the janitor route (redundant with the
+#     standalone janitor scenario 5528009) and guarded module 2's empty-branch with
+#     followup_stage < 6 (stop reprocessing completed ladders).
+# This builder still emits the OLD 3-route / 10-min version → running + deploying it
+# would REVERT both. Canonical live blueprint is archived at:
+#   _BLUEPRINTS/f24_followup_5278490_optimized_2026-07-05.json
+# Re-apply the cost edits with: scratchpad f24_cron_optimize.py (idempotent).
+# TODO: reconcile this builder to emit the optimized v3.4 structure, then remove guard.
+# ====================================================================================
+STALE_GUARD = True  # set False (or pass --force) only after reconciling with prod
+
 if __name__ == "__main__":
+    import sys as _sys
+    if STALE_GUARD and "--force" not in _sys.argv:
+        raise SystemExit(
+            "REFUSED: this builder is STALE vs live scenario 5278490 and would REVERT "
+            "the deployed optimizations. See the banner above. Use the archived blueprint "
+            "in _BLUEPRINTS/ or f24_cron_optimize.py. Pass --force only if you know why.")
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(blueprint, f, ensure_ascii=False, separators=(",", ":"))
     print(f"Output: {OUTPUT_PATH} ({os.path.getsize(OUTPUT_PATH)} bytes)")
