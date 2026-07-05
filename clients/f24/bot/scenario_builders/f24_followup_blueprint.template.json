@@ -1,0 +1,703 @@
+{
+ "flow": [
+  {
+   "id": 1,
+   "mapper": {
+    "filter": [
+     [
+      {
+       "a": "contactId",
+       "b": "__none__",
+       "o": "text:notequal"
+      }
+     ]
+    ]
+   },
+   "module": "datastore:SearchRecord",
+   "version": 1,
+   "metadata": {
+    "designer": {
+     "x": 0,
+     "y": 0
+    }
+   },
+   "parameters": {
+    "datastore": 104408
+   }
+  },
+  {
+   "id": 2,
+   "filter": {
+    "name": "due o sin agendar",
+    "conditions": [
+     [
+      {
+       "a": "{{ifempty(1.data.next_due_at; \"\")}}",
+       "b": "",
+       "o": "text:equal"
+      },
+      {
+       "a": "{{ifempty(1.data.followup_stage; 0)}}",
+       "o": "number:less",
+       "b": "6"
+      }
+     ],
+     [
+      {
+       "a": "{{ifempty(1.data.next_due_at; \"\")}}",
+       "b": "",
+       "o": "text:notequal"
+      },
+      {
+       "a": "{{1.data.next_due_at}}",
+       "b": "{{now}}",
+       "o": "date:lessorequal"
+      }
+     ]
+    ]
+   },
+   "mapper": {
+    "scope": "roundtrip",
+    "variables": [
+     {
+      "name": "anchor",
+      "value": "{{if(ifempty(1.data.followup_last_at; \"\") = \"\"; 1.data.lastMessageAt; if(parseDate(1.data.followup_last_at) > parseDate(1.data.lastMessageAt); 1.data.followup_last_at; 1.data.lastMessageAt))}}"
+     },
+     {
+      "name": "muted_ok",
+      "value": "{{if((ifempty(1.data.bot_muted_until; \"\") = \"\") || (parseDate(1.data.bot_muted_until) <= now); \"true\"; \"false\")}}"
+     },
+     {
+      "name": "pause_expired",
+      "value": "{{if((ifempty(1.data.bot_muted_until; \"\") != \"\") && (parseDate(1.data.bot_muted_until) <= now); \"true\"; \"false\")}}"
+     },
+     {
+      "name": "nudge_roll",
+      "value": "{{if(parseNumber(substring(formatDate(now; \"x\"); 12; 13)) <= 3; 0; if(parseNumber(substring(formatDate(now; \"x\"); 12; 13)) <= 6; 1; 2))}}"
+     }
+    ]
+   },
+   "module": "util:SetVariables",
+   "version": 1,
+   "metadata": {
+    "restore": {},
+    "designer": {
+     "x": 300,
+     "y": 0
+    }
+   },
+   "parameters": {}
+  },
+  {
+   "id": 10,
+   "mapper": {
+    "scope": "roundtrip",
+    "variables": [
+     {
+      "name": "next_stage",
+      "value": "{{if(ifempty(1.data.followup_stage; 0) >= 4; ifempty(1.data.followup_stage; 0) + 1; if(parseDate(2.anchor) <= addMinutes(now; -1440); 4; if(ifempty(1.data.followup_stage; 0) < 2; 2; ifempty(1.data.followup_stage; 0) + 1)))}}"
+     }
+    ]
+   },
+   "module": "util:SetVariables",
+   "version": 1,
+   "metadata": {
+    "restore": {},
+    "designer": {
+     "x": 450,
+     "y": -150
+    }
+   },
+   "parameters": {}
+  },
+  {
+   "id": 11,
+   "mapper": {
+    "scope": "roundtrip",
+    "variables": [
+     {
+      "name": "due_ok",
+      "value": "{{if(10.next_stage = 2; if(parseDate(2.anchor) <= addMinutes(now; -120); \"true\"; \"false\"); if(10.next_stage = 3; if(parseDate(2.anchor) <= addMinutes(now; -1230); \"true\"; \"false\"); if(10.next_stage = 4; if(parseDate(2.anchor) <= addMinutes(now; -1440); \"true\"; \"false\"); if(10.next_stage = 5; if(parseDate(2.anchor) <= addMinutes(now; -7200); \"true\"; \"false\"); if(10.next_stage = 6; if(parseDate(2.anchor) <= addMinutes(now; -14400); \"true\"; \"false\"); \"false\")))))}}"
+     }
+    ]
+   },
+   "module": "util:SetVariables",
+   "version": 1,
+   "metadata": {
+    "restore": {},
+    "designer": {
+     "x": 600,
+     "y": -150
+    }
+   },
+   "parameters": {}
+  },
+  {
+   "id": 6,
+   "mapper": null,
+   "module": "builtin:BasicRouter",
+   "routes": [
+    {
+     "flow": [
+      {
+       "id": 3,
+       "filter": {
+        "name": "elegible",
+        "conditions": [
+         [
+          {
+           "a": "{{10.next_stage}}",
+           "b": "{{ifempty(1.data.followup_stage; 0)}}",
+           "o": "number:greater"
+          },
+          {
+           "a": "{{10.next_stage}}",
+           "b": "6",
+           "o": "number:lessorequal"
+          },
+          {
+           "a": "{{11.due_ok}}",
+           "b": "true",
+           "o": "text:equal"
+          },
+          {
+           "a": "{{2.muted_ok}}",
+           "b": "true",
+           "o": "text:equal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+5213351199004",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+5213511463770",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+5213541013640",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+16465894168",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+447710173736",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{10.next_stage}}",
+           "b": "3",
+           "o": "number:lessorequal"
+          }
+         ]
+        ]
+       },
+       "mapper": {
+        "url": "https://services.leadconnectorhq.com/contacts/{{1.data.contactId}}",
+        "method": "get",
+        "headers": [
+         {
+          "name": "Authorization",
+          "value": "Bearer __GHL_TOKEN__"
+         },
+         {
+          "name": "Version",
+          "value": "2021-07-28"
+         },
+         {
+          "name": "Accept",
+          "value": "application/json"
+         }
+        ],
+        "timeout": 30,
+        "shareCookies": false,
+        "parseResponse": true,
+        "allowRedirects": true,
+        "stopOnHttpError": false,
+        "requestCompressedContent": true
+       },
+       "module": "http:MakeRequest",
+       "version": 4,
+       "metadata": {
+        "designer": {
+         "x": 700,
+         "y": 0
+        }
+       },
+       "parameters": {
+        "authenticationType": "noAuth"
+       }
+      },
+      {
+       "id": 4,
+       "filter": {
+        "name": "no pausado",
+        "conditions": [
+         [
+          {
+           "a": "{{join(3.data.contact.tags; \"|\")}}",
+           "b": "bot-pausado",
+           "o": "text:notcontain"
+          }
+         ]
+        ]
+       },
+       "mapper": {
+        "url": "https://services.leadconnectorhq.com/conversations/messages",
+        "method": "post",
+        "headers": [
+         {
+          "name": "Authorization",
+          "value": "Bearer __GHL_TOKEN__"
+         },
+         {
+          "name": "Version",
+          "value": "2021-07-28"
+         },
+         {
+          "name": "Content-Type",
+          "value": "application/json"
+         },
+         {
+          "name": "Accept",
+          "value": "application/json"
+         }
+        ],
+        "timeout": 60,
+        "contentType": "json",
+        "inputMethod": "dataStructure",
+        "shareCookies": false,
+        "parseResponse": true,
+        "allowRedirects": true,
+        "stopOnHttpError": false,
+        "bodyDataStructure": 342904,
+        "dataStructureBodyContent": {
+         "type": "WhatsApp",
+         "message": "{{if(10.next_stage = 2; if(2.nudge_roll = 0; \"¿Te quedó alguna duda sobre specs, meses sin intereses o tiempos de entrega? Puedo asesorarte sin compromiso — solo pregunta.\"; if(2.nudge_roll = 1; \"¿Sigues por ahí? A veces la decisión no es fácil cuando hay varias opciones. Si quieres te ayudo a comparar o te paso el precio exacto del equipo que viste.\"; \"Por si te lo preguntas: tenemos meses sin intereses en varios equipos. Si el precio es lo que te frena, puedo mostrarte cómo queda con el plan que más te convenga. ¿Le buscamos?\")); if(10.next_stage = 3; if(2.nudge_roll = 0; \"Hola, vi que quedamos a media conversación. ¿Sigues buscando equipo? Dime qué necesitas y le seguimos. 🔧\"; if(2.nudge_roll = 1; \"¿Sigues por ahí? Quedamos a medias con tu cotización — si tienes dudas o quieres retomar, aquí ando.\"; \"Hola, veo que nos quedamos sin cerrar tu consulta. ¿Aún necesitas equipo o maquinaria? Con gusto te ayudo a cotizar. 🛠️\")); \"\"))}}",
+         "contactId": "{{1.data.contactId}}"
+        },
+        "requestCompressedContent": true
+       },
+       "module": "http:MakeRequest",
+       "version": 4,
+       "metadata": {
+        "designer": {
+         "x": 1000,
+         "y": 0
+        }
+       },
+       "parameters": {
+        "authenticationType": "noAuth"
+       }
+      },
+      {
+       "id": 5,
+       "mapper": {
+        "key": "{{1.key}}",
+        "data": {
+         "next_due_at": "{{if(10.next_stage >= 6; \"\"; formatDate(addMinutes(now; if(10.next_stage = 2; 1230; if(10.next_stage = 3; 1440; if(10.next_stage = 4; 7200; if(10.next_stage = 5; 14400; 0))))); \"YYYY-MM-DDTHH:mm:ss[Z]\"))}}",
+         "followup_stage": "{{10.next_stage}}",
+         "followup_last_at": "{{now}}"
+        },
+        "upsert": false,
+        "overwriteArrays": false
+       },
+       "module": "datastore:UpdateRecord",
+       "version": 1,
+       "metadata": {
+        "designer": {
+         "x": 1300,
+         "y": 0
+        }
+       },
+       "parameters": {
+        "datastore": 104408
+       }
+      }
+     ]
+    },
+    {
+     "flow": [
+      {
+       "id": 12,
+       "filter": {
+        "name": "elegible",
+        "conditions": [
+         [
+          {
+           "a": "{{10.next_stage}}",
+           "b": "{{ifempty(1.data.followup_stage; 0)}}",
+           "o": "number:greater"
+          },
+          {
+           "a": "{{10.next_stage}}",
+           "b": "6",
+           "o": "number:lessorequal"
+          },
+          {
+           "a": "{{11.due_ok}}",
+           "b": "true",
+           "o": "text:equal"
+          },
+          {
+           "a": "{{2.muted_ok}}",
+           "b": "true",
+           "o": "text:equal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+5213351199004",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+5213511463770",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+5213541013640",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+16465894168",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{1.data.phone}}",
+           "b": "+447710173736",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{10.next_stage}}",
+           "b": "4",
+           "o": "number:greaterorequal"
+          },
+          {
+           "a": "{{1.data.lastMessageAt}}",
+           "b": "{{addMinutes(now; -30240)}}",
+           "o": "date:greaterorequal"
+          },
+          {
+           "a": "true",
+           "b": "true",
+           "o": "text:equal"
+          }
+         ]
+        ]
+       },
+       "mapper": {
+        "url": "https://services.leadconnectorhq.com/contacts/{{1.data.contactId}}",
+        "method": "get",
+        "headers": [
+         {
+          "name": "Authorization",
+          "value": "Bearer __GHL_TOKEN__"
+         },
+         {
+          "name": "Version",
+          "value": "2021-07-28"
+         },
+         {
+          "name": "Accept",
+          "value": "application/json"
+         }
+        ],
+        "timeout": 30,
+        "shareCookies": false,
+        "parseResponse": true,
+        "allowRedirects": true,
+        "stopOnHttpError": false,
+        "requestCompressedContent": true
+       },
+       "module": "http:MakeRequest",
+       "version": 4,
+       "metadata": {
+        "designer": {
+         "x": 700,
+         "y": 0
+        }
+       },
+       "parameters": {
+        "authenticationType": "noAuth"
+       }
+      },
+      {
+       "id": 13,
+       "filter": {
+        "name": "no pausado",
+        "conditions": [
+         [
+          {
+           "a": "{{join(12.data.contact.tags; \"|\")}}",
+           "b": "bot-pausado",
+           "o": "text:notcontain"
+          },
+          {
+           "a": "{{join(12.data.contact.tags; \"|\")}}",
+           "b": "f24-optout",
+           "o": "text:notcontain"
+          }
+         ]
+        ]
+       },
+       "mapper": {
+        "url": "https://services.leadconnectorhq.com/contacts/{{1.data.contactId}}/tags",
+        "method": "post",
+        "headers": [
+         {
+          "name": "Authorization",
+          "value": "Bearer __GHL_TOKEN__"
+         },
+         {
+          "name": "Version",
+          "value": "2021-07-28"
+         },
+         {
+          "name": "Content-Type",
+          "value": "application/json"
+         },
+         {
+          "name": "Accept",
+          "value": "application/json"
+         }
+        ],
+        "timeout": 30,
+        "contentType": "json",
+        "inputMethod": "dataStructure",
+        "shareCookies": false,
+        "parseResponse": true,
+        "allowRedirects": true,
+        "stopOnHttpError": false,
+        "bodyDataStructure": 395040,
+        "dataStructureBodyContent": {
+         "tags": [
+          "{{if(10.next_stage = 4; \"f24-send-d3\"; if(10.next_stage = 5; \"f24-send-d8\"; \"f24-send-d18\"))}}"
+         ]
+        },
+        "requestCompressedContent": true
+       },
+       "module": "http:MakeRequest",
+       "version": 4,
+       "metadata": {
+        "designer": {
+         "x": 1000,
+         "y": 150
+        }
+       },
+       "parameters": {
+        "authenticationType": "noAuth"
+       }
+      },
+      {
+       "id": 14,
+       "mapper": {
+        "key": "{{1.key}}",
+        "data": {
+         "next_due_at": "{{if(10.next_stage >= 6; \"\"; formatDate(addMinutes(now; if(10.next_stage = 2; 1230; if(10.next_stage = 3; 1440; if(10.next_stage = 4; 7200; if(10.next_stage = 5; 14400; 0))))); \"YYYY-MM-DDTHH:mm:ss[Z]\"))}}",
+         "followup_stage": "{{10.next_stage}}",
+         "followup_last_at": "{{now}}"
+        },
+        "upsert": false,
+        "overwriteArrays": false
+       },
+       "module": "datastore:UpdateRecord",
+       "version": 1,
+       "metadata": {
+        "designer": {
+         "x": 1300,
+         "y": 150
+        }
+       },
+       "parameters": {
+        "datastore": 104408
+       }
+      }
+     ]
+    },
+    {
+     "flow": [
+      {
+       "id": 7,
+       "filter": {
+        "name": "pausa expirada (cualquier mute)",
+        "conditions": [
+         [
+          {
+           "a": "{{2.pause_expired}}",
+           "b": "true",
+           "o": "text:equal"
+          }
+         ]
+        ]
+       },
+       "mapper": {
+        "url": "https://services.leadconnectorhq.com/contacts/{{1.data.contactId}}/tags",
+        "method": "delete",
+        "headers": [
+         {
+          "name": "Authorization",
+          "value": "Bearer __GHL_TOKEN__"
+         },
+         {
+          "name": "Version",
+          "value": "2021-07-28"
+         },
+         {
+          "name": "Content-Type",
+          "value": "application/json"
+         },
+         {
+          "name": "Accept",
+          "value": "application/json"
+         }
+        ],
+        "timeout": 30,
+        "contentType": "json",
+        "inputMethod": "dataStructure",
+        "shareCookies": false,
+        "parseResponse": true,
+        "allowRedirects": true,
+        "stopOnHttpError": false,
+        "bodyDataStructure": 395040,
+        "dataStructureBodyContent": {
+         "tags": [
+          "bot-pausado"
+         ]
+        },
+        "requestCompressedContent": true
+       },
+       "module": "http:MakeRequest",
+       "onerror": [
+        {
+         "id": 9,
+         "mapper": {
+          "ok": true
+         },
+         "module": "builtin:Resume",
+         "version": 1,
+         "metadata": {
+          "designer": {
+           "x": 700,
+           "y": 500
+          }
+         }
+        }
+       ],
+       "version": 4,
+       "metadata": {
+        "designer": {
+         "x": 700,
+         "y": 300
+        }
+       },
+       "parameters": {
+        "authenticationType": "noAuth"
+       }
+      },
+      {
+       "id": 8,
+       "mapper": {
+        "key": "{{1.key}}",
+        "data": {
+         "muted_by": "",
+         "next_due_at": "{{formatDate(addMinutes(now; 120); \"YYYY-MM-DDTHH:mm:ss[Z]\")}}",
+         "bot_muted_until": ""
+        },
+        "upsert": false,
+        "overwriteArrays": false
+       },
+       "module": "datastore:UpdateRecord",
+       "version": 1,
+       "metadata": {
+        "designer": {
+         "x": 1000,
+         "y": 300
+        }
+       },
+       "parameters": {
+        "datastore": 104408
+       }
+      }
+     ]
+    },
+    {
+     "flow": [
+      {
+       "id": 50,
+       "filter": {
+        "name": "no due -> reagendar",
+        "conditions": [
+         [
+          {
+           "a": "{{11.due_ok}}",
+           "b": "true",
+           "o": "text:notequal"
+          },
+          {
+           "a": "{{2.pause_expired}}",
+           "b": "true",
+           "o": "text:notequal"
+          }
+         ]
+        ]
+       },
+       "mapper": {
+        "key": "{{1.key}}",
+        "data": {
+         "next_due_at": "{{if(10.next_stage >= 7; \"\"; formatDate(addMinutes(parseDate(2.anchor); if(10.next_stage = 2; 120; if(10.next_stage = 3; 1230; if(10.next_stage = 4; 1440; if(10.next_stage = 5; 7200; if(10.next_stage = 6; 14400; 0)))))); \"YYYY-MM-DDTHH:mm:ss[Z]\"))}}"
+        },
+        "upsert": false,
+        "overwriteArrays": false
+       },
+       "module": "datastore:UpdateRecord",
+       "version": 1,
+       "metadata": {
+        "designer": {
+         "x": 750,
+         "y": 450
+        }
+       },
+       "parameters": {
+        "datastore": 104408
+       }
+      }
+     ]
+    }
+   ],
+   "version": 1,
+   "metadata": {
+    "designer": {
+     "x": 750,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "name": "Ferre24 Bot — Follow-ups (cron) v3.4 [janitor bot-pausado any-mute-expiry]",
+ "metadata": {
+  "instant": false,
+  "version": 1,
+  "designer": {
+   "orphans": []
+  },
+  "scenario": {
+   "dlq": false,
+   "dataloss": false,
+   "maxErrors": 100,
+   "autoCommit": true,
+   "roundtrips": 1,
+   "sequential": false,
+   "confidential": false,
+   "freshVariables": false,
+   "autoCommitTriggerLast": true
+  }
+ }
+}
