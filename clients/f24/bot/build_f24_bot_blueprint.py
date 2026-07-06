@@ -63,6 +63,12 @@ F24_PROCESS_ORDER_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f
 F24_PROCESS_ORDER_DATASTRUCTURE_ID = 389552  # body del POST (serializa line_items/customer como JSON real)
 F24_OPP_TRACK_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f24-opp-track"
 F24_OPP_TRACK_DATASTRUCTURE_ID = 420195  # body {contact_id, action, intent, products} para crear/avanzar la opp
+# === Edge Function de cotización de envío (Skydropx quote — feature 2026-07) ===
+# El bot emite action="quote_shipping" con CP + SKUs; este EF cotiza la tarifa REAL por CP y regresa
+# {ok, cheapest, mensaje}. La sub-route quote manda `mensaje` al cliente. Reemplaza el escalate por
+# costo de envío. NO genera guía (eso es f24-generate-guide/Envíoclick). Ver edge/f24-quote-shipping.
+F24_QUOTE_SHIPPING_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f24-quote-shipping"
+F24_QUOTE_DATASTRUCTURE_ID = 420242  # body {cp_destino, skus[], contact_id} — serializa skus como array real
 
 # Cuenta de transferencia de Ferre24 (MXN — la que se manda a clientes). Datos de Sergio 2026-06-02.
 F24_TRANSFER_CLABE = "706180276752083666"  # Banco Arcus
@@ -649,7 +655,7 @@ def f24_opp_track_module(module_id, x, y, parse_module_id):
             "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
         },
         "metadata": {"designer": {"x": x, "y": y}},
-        "onerror": [resume_handler(93, {"ok": False}, x, y + 300)],
+        "onerror": [resume_handler(92, {"ok": False}, x, y + 300)],
     }
 
 
@@ -678,6 +684,59 @@ def f24_save_cp_module(module_id, x, y, parse_module_id):
         },
         "metadata": {"designer": {"x": x, "y": y}},
         "onerror": [resume_handler(95, {"ok": False}, x, y + 300)],
+    }
+
+
+def f24_quote_shipping_module(module_id, x, y, parse_module_id):
+    """POST a la Edge Function f24-quote-shipping cuando action=quote_shipping. Manda el CP + los SKUs
+    mencionados; el EF cotiza la tarifa REAL por CP con Skydropx y regresa {ok, cheapest, mensaje}.
+    El `mensaje` lo envía el módulo siguiente al cliente. onerror = nunca rompe el bot (fallback)."""
+    pm = str(parse_module_id)
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": F24_QUOTE_SHIPPING_URL, "method": "post",
+            "headers": [{"name": "Content-Type", "value": "application/json"}],
+            "contentType": "json", "inputMethod": "dataStructure",
+            "bodyDataStructure": F24_QUOTE_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": {
+                "cp_destino": "{{" + pm + ".codigo_postal}}",
+                "skus": "{{" + pm + ".products_mentioned}}",
+                "contact_id": "{{1.contact_id}}",
+            },
+            "timeout": 60, "shareCookies": False, "parseResponse": True,
+            "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
+        # onerror: si el EF cae, manda un mensaje-fallback para que el cliente no quede colgado.
+        "onerror": [resume_handler(93, {"mensaje": "Déjame confirmar el costo del envío a tu CP con el equipo y te lo paso en un momento 📦"}, x, y + 300)],
+    }
+
+
+def ghl_send_quote_message_module(module_id, x, y, quote_http_module_id):
+    """Manda al cliente el `mensaje` que regresó f24-quote-shipping (la tarifa real, o el fallback).
+    La respuesta HTTP parseada de Make vive bajo `.data`; fallback al top-level por robustez."""
+    qm = str(quote_http_module_id)
+    message_expr = "{{ifempty(" + qm + ".data.mensaje; " + qm + ".mensaje)}}"
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": "https://services.leadconnectorhq.com/conversations/messages", "method": "post",
+            "headers": [
+                {"name": "Authorization", "value": f"Bearer {GHL_TOKEN}"},
+                {"name": "Version", "value": "2021-07-28"},
+                {"name": "Content-Type", "value": "application/json"},
+                {"name": "Accept", "value": "application/json"},
+            ],
+            "timeout": 60, "contentType": "json", "inputMethod": "dataStructure",
+            "bodyDataStructure": GHL_SEND_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": {"type": "WhatsApp", "contactId": "{{1.contact_id}}", "message": message_expr},
+            "shareCookies": False, "parseResponse": True, "allowRedirects": True,
+            "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
     }
 
 
@@ -1005,7 +1064,7 @@ def ghl_tag_call_module(module_id, x, y):
     m["filter"] = {"name": "solo si pidió llamada",
                    "conditions": [[{"a": "{{8.lead_summary}}", "o": "text:contain",
                                     "b": "LLAMADA SOLICITADA"}]]}
-    m["onerror"] = [resume_handler(50, {"ok": True}, x, y + 200)]
+    m["onerror"] = [resume_handler(100, {"ok": True}, x, y + 200)]
     return m
 
 
@@ -1034,7 +1093,7 @@ def ghl_tag_pause_module(module_id, x, y):
         },
         "metadata": {"designer": {"x": x, "y": y}},
         # Best-effort: si el tag falla, el mute en datastore ya quedó escrito (módulo 25).
-        "onerror": [resume_handler(49, {"ok": True}, x, y + 200)],
+        "onerror": [resume_handler(99, {"ok": True}, x, y + 200)],
     }
 
 
@@ -1126,9 +1185,18 @@ sub_name_save = f24_save_name_module(51, 2900, 850, parse_module_id=8)
 sub_name_save["filter"] = {"name": "customer_name presente",
                            "conditions": [[{"a": "{{8.customer_name}}", "o": "text:notequal", "b": ""}]]}
 
+# Sub-route de COTIZACIÓN DE ENVÍO: cuando action=quote_shipping, cotiza la tarifa real (Skydropx)
+# por CP + SKUs y manda el `mensaje` con el monto al cliente. Reemplaza el escalate por costo de
+# envío. El puente corto SIN monto ("Déjame checar el envío...") ya lo mandó la ruta normal (que
+# corre para toda action != create_order), así el cliente ve "checando..." y luego la tarifa real.
+sub_quote_http = f24_quote_shipping_module(52, 2900, 1100, parse_module_id=8)
+sub_quote_http["filter"] = {"name": "action == quote_shipping",
+                            "conditions": [[{"a": "{{8.action}}", "o": "text:equal", "b": "quote_shipping"}]]}
+sub_quote_send = ghl_send_quote_message_module(53, 3150, 1100, quote_http_module_id=52)
+
 # Sub-route OPP-TRACK: crea/avanza la oportunidad del contacto en "Ventas Whatsapp" en CADA turno
 # atendido (ruta SIN filtro → siempre corre). Reconstruye la creación de opps que murió ~19-jun.
-sub_opp_track = f24_opp_track_module(52, 2900, 1100, parse_module_id=8)
+sub_opp_track = f24_opp_track_module(54, 2900, 1350, parse_module_id=8)
 
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
@@ -1138,6 +1206,7 @@ post_parse_router = {
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
         {"flow": [sub_handoff_email, sub_handoff_tag, sub_handoff_call_tag]},
         {"flow": [sub_name_save]},
+        {"flow": [sub_quote_http, sub_quote_send]},
         {"flow": [sub_opp_track]},
     ],
 }
