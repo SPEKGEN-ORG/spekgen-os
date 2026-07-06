@@ -61,6 +61,8 @@ GHL_SEND_DATASTRUCTURE_ID = 342904         # reusado de HC (GHL Send Message Bod
 # === Edge Function de órdenes (Fase 3) ===
 F24_PROCESS_ORDER_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f24-process-order"
 F24_PROCESS_ORDER_DATASTRUCTURE_ID = 389552  # body del POST (serializa line_items/customer como JSON real)
+F24_OPP_TRACK_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f24-opp-track"
+F24_OPP_TRACK_DATASTRUCTURE_ID = 420195  # body {contact_id, action, intent, products} para crear/avanzar la opp
 # === Edge Function de cotización de envío (Skydropx quote — feature 2026-07) ===
 # El bot emite action="quote_shipping" con CP + SKUs; este EF cotiza la tarifa REAL por CP y regresa
 # {ok, cheapest, mensaje}. La sub-route quote manda `mensaje` al cliente. Reemplaza el escalate por
@@ -628,6 +630,35 @@ def f24_process_order_module(module_id, x, y, parse_module_id):
     }
 
 
+def f24_opp_track_module(module_id, x, y, parse_module_id):
+    """POST best-effort a la Edge Function f24-opp-track: crea/AVANZA la oportunidad del contacto en
+    el pipeline "Ventas Whatsapp" (Nuevo→Calificado→Cotizado→Link según action/intent/products de
+    Claude) y, al CREAR, hereda el dueño del contacto (round-robin 50/50 de GHL a nivel contacto).
+    Va en su PROPIA ruta del post-router SIN filtro → corre en cada turno atendido. onerror = nunca
+    rompe el bot. RECONSTRUYE el módulo que un rebuild borró (~19-jun-2026) y que dejó de crear opps."""
+    pm = str(parse_module_id)
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": F24_OPP_TRACK_URL, "method": "post",
+            "headers": [{"name": "Content-Type", "value": "application/json"}],
+            "contentType": "json", "inputMethod": "dataStructure",
+            "bodyDataStructure": F24_OPP_TRACK_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": {
+                "contact_id": "{{1.contact_id}}",
+                "action": "{{" + pm + ".action}}",
+                "intent": "{{" + pm + ".intent}}",
+                "products": "{{join(" + pm + ".products_mentioned; \",\")}}",
+            },
+            "timeout": 30, "shareCookies": False, "parseResponse": True,
+            "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
+        "onerror": [resume_handler(92, {"ok": False}, x, y + 300)],
+    }
+
+
 def f24_save_cp_module(module_id, x, y, parse_module_id):
     """POST best-effort a la Edge Function (mode=save_cp) para guardar el codigo_postal del cliente
     en su contacto GHL cuando lo da SIN crear orden (ej. al preguntar por el envío). En el cierre
@@ -921,6 +952,7 @@ F24_TEAM_EMAILS = [
 ]
 GMAIL_CONN_ID = 8183100        # conexión Gmail de Make (team 354061, reusada de HC)
 HANDOFF_TAG = "requiere-humano"
+CALL_TAG = "pidio-llamada"            # R32: el cliente pidió que le llamen → alerta en el panel del rep
 GHL_TAGS_DATASTRUCTURE_ID = 395040   # body {tags:[...]} para POST /contacts/{id}/tags
 
 # Filtro: dispara solo cuando Claude devuelve action escalate o human_handoff (OR).
@@ -1024,6 +1056,18 @@ def ghl_tag_handoff_module(module_id, x, y):
     }
 
 
+def ghl_tag_call_module(module_id, x, y):
+    """Agrega el tag 'pidio-llamada' SOLO cuando el lead_summary marca 'LLAMADA SOLICITADA'
+    (R32 callback). El panel del rep lo fija arriba con alerta '📞 PIDIÓ LLAMADA'."""
+    m = ghl_tag_handoff_module(module_id, x, y)          # reusa el patrón probado
+    m["mapper"]["dataStructureBodyContent"] = {"tags": [CALL_TAG]}
+    m["filter"] = {"name": "solo si pidió llamada",
+                   "conditions": [[{"a": "{{8.lead_summary}}", "o": "text:contain",
+                                    "b": "LLAMADA SOLICITADA"}]]}
+    m["onerror"] = [resume_handler(100, {"ok": True}, x, y + 200)]
+    return m
+
+
 def ghl_tag_pause_module(module_id, x, y):
     """Agrega el tag 'bot-pausado' al contacto cuando un humano staff toma la conversación
     (Route C / polling). Hace el mute VISIBLE en el inbox de GHL. Mismo patrón probado que
@@ -1049,7 +1093,7 @@ def ghl_tag_pause_module(module_id, x, y):
         },
         "metadata": {"designer": {"x": x, "y": y}},
         # Best-effort: si el tag falla, el mute en datastore ya quedó escrito (módulo 25).
-        "onerror": [resume_handler(49, {"ok": True}, x, y + 200)],
+        "onerror": [resume_handler(99, {"ok": True}, x, y + 200)],
     }
 
 
@@ -1133,6 +1177,7 @@ sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8, is_order=T
 # Email validado en prod. Tag con body via data structure (NO raw) + onerror (best-effort).
 sub_handoff_email = team_email_module(45, 2900, 600)   # lleva el ESCALATE_FILTER (gate de la sub-route)
 sub_handoff_tag = ghl_tag_handoff_module(46, 3150, 600)
+sub_handoff_call_tag = ghl_tag_call_module(49, 3400, 600)  # tag 'pidio-llamada' solo si fue callback R32
 
 # Sub-route de NOMBRE: guarda el firstName real en GHL cuando el bot capturó customer_name.
 # Ruta propia (independiente de action/CP) — corre en cualquier acción si hay customer_name.
@@ -1149,15 +1194,20 @@ sub_quote_http["filter"] = {"name": "action == quote_shipping",
                             "conditions": [[{"a": "{{8.action}}", "o": "text:equal", "b": "quote_shipping"}]]}
 sub_quote_send = ghl_send_quote_message_module(53, 3150, 1100, quote_http_module_id=52)
 
+# Sub-route OPP-TRACK: crea/avanza la oportunidad del contacto en "Ventas Whatsapp" en CADA turno
+# atendido (ruta SIN filtro → siempre corre). Reconstruye la creación de opps que murió ~19-jun.
+sub_opp_track = f24_opp_track_module(54, 2900, 1350, parse_module_id=8)
+
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
     "metadata": {"designer": {"x": 2650, "y": 150}},
     "routes": [
         {"flow": [sub_normal_send, sub_normal_ds, sub_cp_save]},
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
-        {"flow": [sub_handoff_email, sub_handoff_tag]},
+        {"flow": [sub_handoff_email, sub_handoff_tag, sub_handoff_call_tag]},
         {"flow": [sub_name_save]},
         {"flow": [sub_quote_http, sub_quote_send]},
+        {"flow": [sub_opp_track]},
     ],
 }
 
