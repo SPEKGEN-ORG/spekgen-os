@@ -61,6 +61,8 @@ GHL_SEND_DATASTRUCTURE_ID = 342904         # reusado de HC (GHL Send Message Bod
 # === Edge Function de órdenes (Fase 3) ===
 F24_PROCESS_ORDER_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f24-process-order"
 F24_PROCESS_ORDER_DATASTRUCTURE_ID = 389552  # body del POST (serializa line_items/customer como JSON real)
+F24_OPP_TRACK_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f24-opp-track"
+F24_OPP_TRACK_DATASTRUCTURE_ID = 420195  # body {contact_id, action, intent, products} para crear/avanzar la opp
 
 # Cuenta de transferencia de Ferre24 (MXN — la que se manda a clientes). Datos de Sergio 2026-06-02.
 F24_TRANSFER_CLABE = "706180276752083666"  # Banco Arcus
@@ -622,6 +624,35 @@ def f24_process_order_module(module_id, x, y, parse_module_id):
     }
 
 
+def f24_opp_track_module(module_id, x, y, parse_module_id):
+    """POST best-effort a la Edge Function f24-opp-track: crea/AVANZA la oportunidad del contacto en
+    el pipeline "Ventas Whatsapp" (Nuevo→Calificado→Cotizado→Link según action/intent/products de
+    Claude) y, al CREAR, hereda el dueño del contacto (round-robin 50/50 de GHL a nivel contacto).
+    Va en su PROPIA ruta del post-router SIN filtro → corre en cada turno atendido. onerror = nunca
+    rompe el bot. RECONSTRUYE el módulo que un rebuild borró (~19-jun-2026) y que dejó de crear opps."""
+    pm = str(parse_module_id)
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": F24_OPP_TRACK_URL, "method": "post",
+            "headers": [{"name": "Content-Type", "value": "application/json"}],
+            "contentType": "json", "inputMethod": "dataStructure",
+            "bodyDataStructure": F24_OPP_TRACK_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": {
+                "contact_id": "{{1.contact_id}}",
+                "action": "{{" + pm + ".action}}",
+                "intent": "{{" + pm + ".intent}}",
+                "products": "{{join(" + pm + ".products_mentioned; \",\")}}",
+            },
+            "timeout": 30, "shareCookies": False, "parseResponse": True,
+            "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
+        "onerror": [resume_handler(93, {"ok": False}, x, y + 300)],
+    }
+
+
 def f24_save_cp_module(module_id, x, y, parse_module_id):
     """POST best-effort a la Edge Function (mode=save_cp) para guardar el codigo_postal del cliente
     en su contacto GHL cuando lo da SIN crear orden (ej. al preguntar por el envío). En el cierre
@@ -1095,6 +1126,10 @@ sub_name_save = f24_save_name_module(51, 2900, 850, parse_module_id=8)
 sub_name_save["filter"] = {"name": "customer_name presente",
                            "conditions": [[{"a": "{{8.customer_name}}", "o": "text:notequal", "b": ""}]]}
 
+# Sub-route OPP-TRACK: crea/avanza la oportunidad del contacto en "Ventas Whatsapp" en CADA turno
+# atendido (ruta SIN filtro → siempre corre). Reconstruye la creación de opps que murió ~19-jun.
+sub_opp_track = f24_opp_track_module(52, 2900, 1100, parse_module_id=8)
+
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
     "metadata": {"designer": {"x": 2650, "y": 150}},
@@ -1103,6 +1138,7 @@ post_parse_router = {
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
         {"flow": [sub_handoff_email, sub_handoff_tag, sub_handoff_call_tag]},
         {"flow": [sub_name_save]},
+        {"flow": [sub_opp_track]},
     ],
 }
 

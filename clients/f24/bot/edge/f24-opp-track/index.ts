@@ -44,10 +44,24 @@ Deno.serve(async (req: Request) => {
     const computed = targetPos(String(b.action ?? ""), String(b.intent ?? ""), String(b.products ?? ""));
     const cur = await currentPos(contactId);
     const target = Math.max(cur, computed, 0);
-    const name = (String(b.name ?? "").trim() || "Lead WhatsApp").slice(0, 100);
+    // Al CREAR (cur === -1, aún no existe opp) trae el contacto para: (a) heredar su DUEÑO —el
+    // round-robin 50/50 de GHL asigna al CONTACTO en el inbound pero la opp no lo hereda sola— y
+    // (b) usar su NOMBRE real en la opp. Solo en creación → nunca pisa reasignación/nombre existente.
+    let assignedTo: string | undefined, contactName = "";
+    if (cur === -1) {
+      try {
+        const cr = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}`, { headers: H });
+        if (cr.ok) {
+          const c = (await cr.json())?.contact ?? {};
+          assignedTo = c.assignedTo || undefined;
+          contactName = (c.contactName || [c.firstName, c.lastName].filter(Boolean).join(" ") || "").trim();
+        }
+      } catch (_e) { /* best-effort */ }
+    }
+    const name = (String(b.name ?? "").trim() || contactName || "Lead WhatsApp").slice(0, 100);
     const up = await fetch("https://services.leadconnectorhq.com/opportunities/upsert", {
       method: "POST", headers: H,
-      body: JSON.stringify({ pipelineId: PIPELINE, locationId: LOC, contactId, name, status: "open", pipelineStageId: STAGES[target].id }),
+      body: JSON.stringify({ pipelineId: PIPELINE, locationId: LOC, contactId, name, status: "open", pipelineStageId: STAGES[target].id, ...(assignedTo ? { assignedTo } : {}) }),
     });
     let resp: any = null; try { resp = await up.json(); } catch { /* */ }
     console.log(`[opp-track] contact=${contactId} cur=${cur} computed=${computed} target=${STAGES[target].key} ok=${up.ok}`);
