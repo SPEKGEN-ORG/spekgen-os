@@ -862,6 +862,7 @@ F24_TEAM_EMAILS = [
 ]
 GMAIL_CONN_ID = 8183100        # conexión Gmail de Make (team 354061, reusada de HC)
 HANDOFF_TAG = "requiere-humano"
+CALL_TAG = "pidio-llamada"            # R32: el cliente pidió que le llamen → alerta en el panel del rep
 GHL_TAGS_DATASTRUCTURE_ID = 395040   # body {tags:[...]} para POST /contacts/{id}/tags
 
 # Filtro: dispara solo cuando Claude devuelve action escalate o human_handoff (OR).
@@ -963,6 +964,18 @@ def ghl_tag_handoff_module(module_id, x, y):
         # Best-effort: si el tag falla, NO debe tumbar el bot.
         "onerror": [resume_handler(48, {"ok": True}, x, y + 200)],
     }
+
+
+def ghl_tag_call_module(module_id, x, y):
+    """Agrega el tag 'pidio-llamada' SOLO cuando el lead_summary marca 'LLAMADA SOLICITADA'
+    (R32 callback). El panel del rep lo fija arriba con alerta '📞 PIDIÓ LLAMADA'."""
+    m = ghl_tag_handoff_module(module_id, x, y)          # reusa el patrón probado
+    m["mapper"]["dataStructureBodyContent"] = {"tags": [CALL_TAG]}
+    m["filter"] = {"name": "solo si pidió llamada",
+                   "conditions": [[{"a": "{{8.lead_summary}}", "o": "text:contain",
+                                    "b": "LLAMADA SOLICITADA"}]]}
+    m["onerror"] = [resume_handler(50, {"ok": True}, x, y + 200)]
+    return m
 
 
 def ghl_tag_pause_module(module_id, x, y):
@@ -1074,6 +1087,7 @@ sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8, is_order=T
 # Email validado en prod. Tag con body via data structure (NO raw) + onerror (best-effort).
 sub_handoff_email = team_email_module(45, 2900, 600)   # lleva el ESCALATE_FILTER (gate de la sub-route)
 sub_handoff_tag = ghl_tag_handoff_module(46, 3150, 600)
+sub_handoff_call_tag = ghl_tag_call_module(49, 3400, 600)  # tag 'pidio-llamada' solo si fue callback R32
 
 # Sub-route de NOMBRE: guarda el firstName real en GHL cuando el bot capturó customer_name.
 # Ruta propia (independiente de action/CP) — corre en cualquier acción si hay customer_name.
@@ -1087,7 +1101,7 @@ post_parse_router = {
     "routes": [
         {"flow": [sub_normal_send, sub_normal_ds, sub_cp_save]},
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
-        {"flow": [sub_handoff_email, sub_handoff_tag]},
+        {"flow": [sub_handoff_email, sub_handoff_tag, sub_handoff_call_tag]},
         {"flow": [sub_name_save]},
     ],
 }
