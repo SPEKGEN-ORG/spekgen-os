@@ -4,11 +4,17 @@
 const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
 const LOC = "HNuSoIl2aCXP2DXEdMVZ";
 const PIPELINE = "d8xeJjhr4wkmPv8xr5bA";  // Ventas Whatsapp (creado por Pedro 2026-06-17)
-// Vendedores para el split 50/50 A NIVEL OPORTUNIDAD (2026-07-07). El dueño del CONTACTO ya NO
-// es un humano (pasa a ser el usuario "Ferre24 Bot" vía el workflow "Atribucion"), para que los
-// mensajes del bot no aparezcan en el inbox como si Edgar/Alfredo los hubieran mandado. Las
-// comisiones leen opp.assignedTo, así que el split se hace aquí, no en el contacto.
+// Vendedores para el split 50/50 A NIVEL OPORTUNIDAD (2026-07-07). El dueño del CONTACTO pasa a
+// ser el usuario "Ferre24 Bot" (abajo), NO un vendedor, para que los mensajes del bot no aparezcan
+// en el inbox como si Edgar/Alfredo los hubieran mandado. Las comisiones leen opp.assignedTo, así
+// que el reparto de vendedor se hace aquí sobre la OPP. (El workflow GHL "Atribucion", que asignaba
+// el contacto a un vendedor, quedó DESPUBLICADO — su función se movió aquí. NO re-publicar.)
 const SELLERS = ["6G3VFN9NMm2J2zBGJkGC", "1Yee3JNNWlFSk6SWFzeT"]; // Edgar, Alfredo Torres
+// Usuario "Ferre24 Bot" (RgGX1Uid50v4mHf6ekVq). Se pone como DUEÑO DEL CONTACTO al crear la opp,
+// para que los mensajes del bot (outbound sin userId) se pinten en el inbox de GHL como "Ferre24 Bot"
+// en vez de heredar la cara de un vendedor. GHL no permite firmar mensajes de API con un userId, así
+// que la única palanca de display es el dueño del contacto. Los vendedores trackean por el pipeline.
+const BOT_USER = "RgGX1Uid50v4mHf6ekVq";
 const STAGES = [
   { key: "nuevo", id: "27df7384-6789-40ae-a165-5a1a42c2a3bf" },      // 0 Nuevo lead
   { key: "calificado", id: "24098db0-7f73-4037-9cb2-86081a1f3953" }, // 1 Calificado
@@ -47,7 +53,7 @@ async function currentPos(contactId: string): Promise<number> {
 }
 
 Deno.serve(async (req: Request) => {
-  if (req.method === "GET") return json({ ok: true, service: "f24-opp-track", version: 3, pipeline: PIPELINE, stages: STAGES.map((s) => s.key), split: "opp-level 50/50 (Edgar/Alfredo)" });
+  if (req.method === "GET") return json({ ok: true, service: "f24-opp-track", version: 4, pipeline: PIPELINE, stages: STAGES.map((s) => s.key), split: "opp-level 50/50 (Edgar/Alfredo)", contact_owner: "Ferre24 Bot" });
   if (req.method !== "POST") return json({ ok: false, error: "method_not_allowed" }, 405);
   const t0 = Date.now();
   try {
@@ -74,6 +80,14 @@ Deno.serve(async (req: Request) => {
         }
       } catch (_e) { /* best-effort */ }
       assignedTo = SELLERS.includes(existingOwner) ? existingOwner : pickSeller(contactId);
+      // Dueño del CONTACTO = Ferre24 Bot (salvo que un vendedor humano ya lo tenga tomado). Best-effort.
+      if (!SELLERS.includes(existingOwner)) {
+        try {
+          await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}`, {
+            method: "PUT", headers: H, body: JSON.stringify({ assignedTo: BOT_USER }),
+          });
+        } catch (_e) { /* best-effort */ }
+      }
     }
     const name = (String(b.name ?? "").trim() || contactName || "Lead WhatsApp").slice(0, 100);
     const up = await fetch("https://services.leadconnectorhq.com/opportunities/upsert", {
