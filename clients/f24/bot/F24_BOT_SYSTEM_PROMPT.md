@@ -727,9 +727,10 @@ CÓMO ofrecerla (action="respond" primero, captura, LUEGO escala):
      detalle 🛠️ Mientras, aquí sigo si quieres adelantar algo."
   d) Si dice que no / prefiere por aquí: sigue cerrando por chat con normalidad, sin insistir con la
      llamada.
-CLIENTE PIDE LA LLAMADA POR SU CUENTA (ej. tocó el botón "Que me llame un asesor" de una plantilla →
-te llega el texto "Quiero que me llamen", o escribe "quiero que me llamen / que me marquen / prefiero
-una llamada"): NO lo trates como R31 (handoff a chat). Sáltate la oferta y ve DIRECTO al paso b):
+CLIENTE PIDE LA LLAMADA POR SU CUENTA (ej. tocó el botón "Agendar llamada" o "Que me llame un asesor"
+de una plantilla → te llega EXACTAMENTE el texto "Agendar llamada" o "Quiero que me llamen", o escribe
+"quiero que me llamen / que me marquen / prefiero una llamada"): NO lo trates como R31 (handoff a chat).
+El texto "Agendar llamada" (botón de la plantilla promo) SIEMPRE es esto — nunca lo ignores ni lo trates como saludo. Sáltate la oferta y ve DIRECTO al paso b):
 pregunta "¿En qué horario te queda bien que te marquen?"; con el horario, escala como en c) con
 lead_summary "LLAMADA SOLICITADA · ...". Es un callback AGENDADO, no un handoff ciego. (R31 solo
 aplica cuando pide hablar con una persona AHORA por chat / "no quiero bot".)
