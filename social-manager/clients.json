@@ -7,7 +7,8 @@
     "gibran.alonzo", "gibran.alonzo.ecom", "monsealonz0", "monse.alonzo",
     "ttt.uca",
     "healthychuchos", "lofitness_club", "ferre24.com.mx",
-    "greenray.nutraceutics", "metagreenlab", "spekgen"
+    "greenray.nutraceutics", "metagreenlab", "spekgen",
+    "ssicma.consultoria", "farmaciasvibra"
   ],
   "token_refs": {
     "agency": { "env": "AGENCY_META_TOKEN", "drive_env": "SPK - SPEKGEN AGENCY/.env", "key": "META_TOKEN" },
@@ -56,6 +57,36 @@
       "dm_enabled": false,
       "whatsapp": null,
       "_nota": "F24 comentarios = AUTO autorizado 29-jun. dm_enabled=false: WABA baneada, no hay bot de WhatsApp para el handoff; solo comentario público hasta tener bot nativo de Messenger (Fase 3 parte 2).",
+      "active": true
+    },
+    "SSI": {
+      "name": "SSICMA",
+      "token_ref": "agency",
+      "page_id": "116870547943686",
+      "ig_id": "17841457219108728",
+      "ig_username": "ssicma.consultoria",
+      "ad_account": "act_1431097605461576",
+      "comment_mode": "auto",
+      "dm_mode": "draft",
+      "knowledge": "SSI - SSICMA/BROCHURE Y CATALOGOS/SSICMA_SOCIAL_KB.md",
+      "dm_enabled": true,
+      "whatsapp": "https://wa.me/5216121569913",
+      "extra_rules": "SSICMA es consultoría B2B de cumplimiento (Protección Civil, STPS, Salud, Medio Ambiente) en La Paz BCS. NUNCA des precios ni montos de multas en público (varían por caso). NUNCA prometas resultados absolutos ('no te multan', 'cero riesgo', 'garantizado'). NUNCA nombres ni muestres logos de competencia ni de dependencias de gobierno, ni temas políticos. Para control de plagas en hogares con mascotas: personal técnico certificado + protocolo (mascotas fuera durante la aplicación y unas horas hasta ventilar); nunca nombres un producto específico ni prometas 'cero riesgo'. El gancho SIEMPRE es la visita de diagnóstico SIN COSTO por WhatsApp. Todo lo delicado (legal, multas, quejas) -> needs_human=true.",
+      "active": true
+    },
+    "FV": {
+      "name": "Farmacias Vibra",
+      "token_ref": "agency",
+      "page_id": "1188855560978484",
+      "ig_id": "17841420996007981",
+      "ig_username": "farmaciasvibra",
+      "ad_account": "act_2576612132773415",
+      "comment_mode": "auto",
+      "dm_mode": "draft",
+      "knowledge": "FV - FARMACIAS VIBRA/FV_SOCIAL_KB.md",
+      "dm_enabled": false,
+      "whatsapp": null,
+      "extra_rules": "Farmacias Vibra es una FARMACIA con CUMPLIMIENTO COFEPRIS DURO. PROHIBIDO ABSOLUTO en comentarios públicos: (1) dar consejo médico, diagnóstico, dosis o afirmar que algo 'cura'/'sirve para'/'trata' una enfermedad; (2) recomendar, sugerir o nombrar medicamentos de prescripción o controlados (Fracción IV+ NUNCA se mencionan); (3) confirmar precios, stock, promociones o descuentos; (4) dar direcciones, horarios o teléfonos sin verificar. Cualquier comentario sobre síntomas, tratamientos, enfermedades, embarazo o niños -> respuesta cálida y genérica que deriva a consulta médica o DM, y needs_human=true SIEMPRE. Tono cálido y cercano. Ante la mínima duda clínica o de disponibilidad, deriva a DM.",
       "active": true
     }
   }
