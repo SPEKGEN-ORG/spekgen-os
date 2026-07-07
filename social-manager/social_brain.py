@@ -174,6 +174,8 @@ def main():
         if code not in know_cache:
             know_cache[code] = load_knowledge(cfg.get("knowledge", "")) if cfg.get("knowledge") else ""
         system = SYSTEM_TMPL.format(name=cfg["name"], knowledge=know_cache[code] or "(sin catálogo)")
+        if cfg.get("extra_rules"):
+            system += "\n\n=== REGLAS ADICIONALES OBLIGATORIAS DE ESTE CLIENTE ===\n" + cfg["extra_rules"]
         print(f"\n=== {code} ({cfg['name']}) — {len(rows)} pendientes ===")
 
         for r in rows[:args.limit]:
