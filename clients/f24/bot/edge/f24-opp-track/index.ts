@@ -4,6 +4,11 @@
 const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
 const LOC = "HNuSoIl2aCXP2DXEdMVZ";
 const PIPELINE = "d8xeJjhr4wkmPv8xr5bA";  // Ventas Whatsapp (creado por Pedro 2026-06-17)
+// Vendedores para el split 50/50 A NIVEL OPORTUNIDAD (2026-07-07). El dueño del CONTACTO ya NO
+// es un humano (pasa a ser el usuario "Ferre24 Bot" vía el workflow "Atribucion"), para que los
+// mensajes del bot no aparezcan en el inbox como si Edgar/Alfredo los hubieran mandado. Las
+// comisiones leen opp.assignedTo, así que el split se hace aquí, no en el contacto.
+const SELLERS = ["6G3VFN9NMm2J2zBGJkGC", "1Yee3JNNWlFSk6SWFzeT"]; // Edgar, Alfredo Torres
 const STAGES = [
   { key: "nuevo", id: "27df7384-6789-40ae-a165-5a1a42c2a3bf" },      // 0 Nuevo lead
   { key: "calificado", id: "24098db0-7f73-4037-9cb2-86081a1f3953" }, // 1 Calificado
@@ -13,6 +18,14 @@ const STAGES = [
 const H = { Authorization: `Bearer ${GHL_TOKEN}`, Version: "2021-07-28", "Content-Type": "application/json", Accept: "application/json" };
 
 function json(body: unknown, status = 200): Response { return new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } }); }
+
+// Round-robin 50/50 DETERMINÍSTICO por contactId: sin estado, pegajoso (un mismo contacto
+// siempre cae con el mismo vendedor → re-cotizaciones no cambian de dueño), ~50/50 sobre volumen.
+function pickSeller(contactId: string): string {
+  let h = 0;
+  for (let i = 0; i < contactId.length; i++) h = (h * 31 + contactId.charCodeAt(i)) >>> 0;
+  return SELLERS[h % SELLERS.length];
+}
 
 // Etapa objetivo según la salida de Claude.
 function targetPos(action: string, intent: string, products: string): number {
@@ -34,7 +47,7 @@ async function currentPos(contactId: string): Promise<number> {
 }
 
 Deno.serve(async (req: Request) => {
-  if (req.method === "GET") return json({ ok: true, service: "f24-opp-track", version: 1, pipeline: PIPELINE, stages: STAGES.map((s) => s.key) });
+  if (req.method === "GET") return json({ ok: true, service: "f24-opp-track", version: 3, pipeline: PIPELINE, stages: STAGES.map((s) => s.key), split: "opp-level 50/50 (Edgar/Alfredo)" });
   if (req.method !== "POST") return json({ ok: false, error: "method_not_allowed" }, 405);
   const t0 = Date.now();
   try {
@@ -44,19 +57,23 @@ Deno.serve(async (req: Request) => {
     const computed = targetPos(String(b.action ?? ""), String(b.intent ?? ""), String(b.products ?? ""));
     const cur = await currentPos(contactId);
     const target = Math.max(cur, computed, 0);
-    // Al CREAR (cur === -1, aún no existe opp) trae el contacto para: (a) heredar su DUEÑO —el
-    // round-robin 50/50 de GHL asigna al CONTACTO en el inbound pero la opp no lo hereda sola— y
-    // (b) usar su NOMBRE real en la opp. Solo en creación → nunca pisa reasignación/nombre existente.
+    // Al CREAR (cur === -1, aún no existe opp) trae el contacto para: (a) DECIDIR EL DUEÑO de la opp
+    // y (b) usar su NOMBRE real. Regla de dueño: si el contacto YA lo tiene un vendedor conocido
+    // (Edgar/Alfredo — p.ej. lo tomó a mano, o transición antes de mover el workflow), la opp lo
+    // hereda. Si no (dueño = "Ferre24 Bot", vacío, u otro), se hace el split 50/50 determinístico.
+    // Solo en creación → nunca pisa reasignación/nombre de una opp existente.
     let assignedTo: string | undefined, contactName = "";
     if (cur === -1) {
+      let existingOwner = "";
       try {
         const cr = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}`, { headers: H });
         if (cr.ok) {
           const c = (await cr.json())?.contact ?? {};
-          assignedTo = c.assignedTo || undefined;
+          existingOwner = c.assignedTo || "";
           contactName = (c.contactName || [c.firstName, c.lastName].filter(Boolean).join(" ") || "").trim();
         }
       } catch (_e) { /* best-effort */ }
+      assignedTo = SELLERS.includes(existingOwner) ? existingOwner : pickSeller(contactId);
     }
     const name = (String(b.name ?? "").trim() || contactName || "Lead WhatsApp").slice(0, 100);
     const up = await fetch("https://services.leadconnectorhq.com/opportunities/upsert", {
@@ -64,7 +81,7 @@ Deno.serve(async (req: Request) => {
       body: JSON.stringify({ pipelineId: PIPELINE, locationId: LOC, contactId, name, status: "open", pipelineStageId: STAGES[target].id, ...(assignedTo ? { assignedTo } : {}) }),
     });
     let resp: any = null; try { resp = await up.json(); } catch { /* */ }
-    console.log(`[opp-track] contact=${contactId} cur=${cur} computed=${computed} target=${STAGES[target].key} ok=${up.ok}`);
-    return json({ ok: up.ok, stage: STAGES[target].key, curPos: cur, computed, target, err: up.ok ? undefined : JSON.stringify(resp).slice(0, 250), elapsed_ms: Date.now() - t0 }, 200);
+    console.log(`[opp-track] contact=${contactId} cur=${cur} computed=${computed} target=${STAGES[target].key} owner=${assignedTo ?? "-"} ok=${up.ok}`);
+    return json({ ok: up.ok, stage: STAGES[target].key, curPos: cur, computed, target, owner: assignedTo, err: up.ok ? undefined : JSON.stringify(resp).slice(0, 250), elapsed_ms: Date.now() - t0 }, 200);
   } catch (e) { return json({ ok: false, error: String(e).slice(0, 300), elapsed_ms: Date.now() - t0 }, 200); }
 });
