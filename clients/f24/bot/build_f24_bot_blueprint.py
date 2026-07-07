@@ -948,6 +948,7 @@ def datastore_reget_module(module_id, x, y):
 F24_TEAM_EMAILS = [
     "gibran.alonzo0506@gmail.com",      # Gibran (supervisión)
     "edgar.gvg@hotmail.com",            # Edgar (equipo F24) — activado 2026-06-11
+    "a25077492@gmail.com",              # Alfredo (equipo F24) — activado 2026-07-07 (rolado 50/50 de leads)
     "f24atencionalcliente@hotmail.com", # Sergio Duarte (atención cliente) — activado 2026-06-11
 ]
 GMAIL_CONN_ID = 8183100        # conexión Gmail de Make (team 354061, reusada de HC)

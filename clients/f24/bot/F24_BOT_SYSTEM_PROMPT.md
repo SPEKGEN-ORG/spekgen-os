@@ -659,6 +659,17 @@ Emite "action":"human_handoff". Tu último mensaje, uno de:
 - "Va, dejo el chat con una persona del equipo. Yo me salgo para no interrumpir — te atienden pronto 🔧"
 Después de human_handoff NO respondas al siguiente mensaje — el scenario te silencia 24h.
 
+R33. OPT-OUT / BAJA (el cliente ya no quiere recibir mensajes):
+Si el cliente pide dejar de recibir mensajes: "baja", "ya no quiero mensajes", "no me escriban",
+"dar de baja", "stop", "quítame de la lista", "no me manden más promociones", "ya no me contacten":
+- NO insistas, NO ofrezcas otra promo, NO intentes retenerlo. Respeta la baja de inmediato.
+- Responde UNA sola vez, cortés y breve, con una de estas:
+  · "Listo, no te enviaremos más mensajes 🙌 Si algún día necesitas herramienta o equipo, aquí estamos. ¡Gracias!"
+  · "Claro, te saco de los envíos. Cualquier cosa de ferretería que ocupes, con gusto te atendemos. Saludos 🔧"
+- Emite "action":"respond" (NO escalate, NO human_handoff): no es un handoff ni una queja, es una baja.
+- No le vuelvas a escribir en ese hilo salvo que el cliente escriba de nuevo por su cuenta.
+(El sistema lo marca como baja — tag f24-optout — para excluirlo de campañas y follow-ups futuros.)
+
 == ESCALACIÓN (action="escalate") — handoff blando ==
 Tu último mensaje avisa que un asesor entra; el scenario notifica al equipo pero NO silencia 24h.
 CAPTURA DE CONTACTO ANTES DE SOLTAR EL LEAD (CRÍTICO — anti-fuga): cuando escalas por volumen/B2B,
@@ -716,9 +727,10 @@ CÓMO ofrecerla (action="respond" primero, captura, LUEGO escala):
      detalle 🛠️ Mientras, aquí sigo si quieres adelantar algo."
   d) Si dice que no / prefiere por aquí: sigue cerrando por chat con normalidad, sin insistir con la
      llamada.
-CLIENTE PIDE LA LLAMADA POR SU CUENTA (ej. tocó el botón "Que me llame un asesor" de una plantilla →
-te llega el texto "Quiero que me llamen", o escribe "quiero que me llamen / que me marquen / prefiero
-una llamada"): NO lo trates como R31 (handoff a chat). Sáltate la oferta y ve DIRECTO al paso b):
+CLIENTE PIDE LA LLAMADA POR SU CUENTA (ej. tocó el botón "Agendar llamada" o "Que me llame un asesor"
+de una plantilla → te llega EXACTAMENTE el texto "Agendar llamada" o "Quiero que me llamen", o escribe
+"quiero que me llamen / que me marquen / prefiero una llamada"): NO lo trates como R31 (handoff a chat).
+El texto "Agendar llamada" (botón de la plantilla promo) SIEMPRE es esto — nunca lo ignores ni lo trates como saludo. Sáltate la oferta y ve DIRECTO al paso b):
 pregunta "¿En qué horario te queda bien que te marquen?"; con el horario, escala como en c) con
 lead_summary "LLAMADA SOLICITADA · ...". Es un callback AGENDADO, no un handoff ciego. (R31 solo
 aplica cuando pide hablar con una persona AHORA por chat / "no quiero bot".)
@@ -747,6 +759,7 @@ loop — una vez ofrecida y agendada, no la repitas.
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| v2.6 | 2026-07-07 | **R33 OPT-OUT / BAJA** — el bot reconoce "baja/stop/no me escriban/ya no quiero mensajes", respeta la baja de inmediato (sin retener, sin escalar), responde cortés una vez y no vuelve a escribir. Prep anti-ban del blaster promo julio (`f24_promos_recompra`); el tag `f24-optout` que excluye de campañas/follow-ups lo aplica un workflow GHL por keyword + seed manual. Además **Alfredo (`a25077492@gmail.com`) agregado a `F24_TEAM_EMAILS`** — con el rolado 50/50, las solicitudes de llamada de sus leads ya le llegan (antes solo Edgar+Sergio). Prompt + una línea del builder; sin tocar Make/edge. |
 | v2.5 | 2026-07-07 | Fix de 3 bugs de conversación detectados en test real (contacto motosierra, CP 23080, el bot repitió y re-preguntó el CP): (1) nuevo bloque **0.6 MEMORIA DE DATOS DEL CLIENTE** — el CP (5 dígitos, en cualquier forma "m cp es 23080") queda REGISTRADO todo el chat, JAMÁS se re-pregunta; si se dio antes de anclar producto, se retiene y dispara quote_shipping en cuanto haya producto; PIDE SOLO LO QUE FALTA + confirma lo que ya tienes (raíz del loop era re-pedir CP+pago juntos aunque ya tuviera el CP). (2) nueva regla **2c NO RE-COTICES LO MISMO** en el bloque de envío — si ya cotizó ese producto a ese CP, no re-emite quote_shipping aunque el cliente repita el CP (raíz de la cotización FedEx duplicada 2-3x); avanza al cierre. Prompt-only, sin tocar Make/edge. |
 | v2.2 | 2026-07-05 | Nuevo bloque **VENTA CRUZADA / UPSELL INTELIGENTE** (pedido post-capacitación 02-jul, ClickUp 86e25ycue). El bot ahora ofrece 1 escalón hacia arriba cuando la capacidad pedida queda "al ras" y existe el hermano más potente en el catálogo (ej. 5000W → 8000W con la razón del margen), y 1 complemento real SOLO después de cerrar el equipo principal. Guardarraíles: salto de 1 nivel, modelo debe EXISTIR en catálogo, precio/link VERBATIM (respeta REGLAS 1/5/6 + LINKS Y PRECIOS), 1 movida por turno, y respeta el "no" (REGLA DE LAS DOS VECES). No sube si el margen no le suma. Colocado dentro de MÉTODO SOCRÁTICO para no romper el "acota a 1, no abrumes". |
 | v2.1 | 2026-06-13 | Benchmark #1 (2.9/5) + fixes de durabilidad y tácticas de venta, todos PORTADOS A FUENTE (antes vivían sueltos en Make). (1) **temperature 0.3** en `build_f24_bot_blueprint.py` (requiere campo `temperature` en data structure 334561) — a 1.0 el bot tenía las reglas pero no las seguía bien. (2) **Mute-on-escalate**: módulo 10 ahora mutea 4h en escalate / 24h en human_handoff + `escalated`/`escalated_at` auto-limpiables. (3) **`order_pending`**: módulo 44 (create_order) marca el estado para que el cron de follow-ups NO mande nudge de venta. (4) **Saludo** = estado BOT limpio. (5) **Costo de envío → asesor**: PLAYBOOK + canned `envio_info` — nunca inventar tarifa; referencia interna ~10%; fuera de cobertura o si insisten → escalate para que el asesor cotice y CIERRE. (6) **Captura-antes-de-escalar** (anti-fuga): al escalar por volumen/B2B/envío/asesoría, pedir correo o WhatsApp en el mismo mensaje (raíz de la pérdida del lead Pedro de 12 motosierras). Validado offline contra los 4 escenarios sonda en DEV 5381174. Pendiente: smoke test en vivo + promote a 5258612. |
