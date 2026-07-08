@@ -2,8 +2,15 @@
 
 Cada bloque es una "canned knowledge" que el bot usa cuando el cliente pide ESA info específica.
 El bot NO debe inventar datos (bancarios, garantías, tiempos). Manda el texto tal cual.
-Las URLs (PDF/imagen) van como elemento SEPARADO al final del array "messages". "attachments"
-SIEMPRE va como [] vacío en el JSON final.
+Las URLs de PDF/ficha de producto van como elemento SEPARADO al final del array "messages".
+
+**EXCEPCIÓN — GUÍAS DE PAGO BRANDED (formalidad):** cuando el cliente pregunta por un MÉTODO de
+pago ESPECÍFICO (transferencia/SPEI, OXXO, tarjeta/MSI), adjunta su guía visual branded en
+"attachments" (es una imagen PNG en el CDN de Shopify → WhatsApp la muestra como tarjeta, no como
+link). UNA guía, la del método que preguntó — nunca varias. Esto da la formalidad de una empresa
+seria (tarjeta con CLABE, banco, pasos) sin que el bot dicte datos sueltos. Para la pregunta
+GENÉRICA "¿cómo pago / formas de pago?" NO adjuntes imagen (son varios métodos → satura): manda el
+texto + el link de la página. En todo lo demás, "attachments" va como [] vacío.
 
 > PENDIENTES DE DATOS REALES (de Sergio, antes de go-live):
 > - Datos bancarios de Ferre24 para transferencia (CLABE + banco + titular). Mientras no existan,
@@ -15,7 +22,12 @@ SIEMPRE va como [] vacío en el JSON final.
 
 ## pago_metodos
 
-**Disparadores:** cómo pagar, formas de pago, métodos de pago, aceptan tarjeta, meses sin intereses, MSI
+**Disparadores:** cómo pagar, formas de pago, métodos de pago (pregunta GENÉRICA, sin nombrar un método)
+
+**Cuándo usar:** el cliente pregunta en general "¿cómo pago?" sin nombrar un método. Aquí NO
+adjuntas imagen (son varios métodos → satura): mandas el texto + el link de la página. Si el cliente
+aterriza en un método específico (OXXO / transferencia / tarjeta-MSI) → usa el bloque de ese método,
+que SÍ adjunta su guía branded (`pago_oxxo`, `pago_transferencia`, `pago_tarjeta_msi`).
 
 **Respuesta (texto):**
 Aceptamos 💳: tarjeta de crédito/débito (con meses sin intereses en equipos que aplican), OXXO y transferencia. Aquí te explico cómo pagar paso a paso: https://ferre24.com.mx/pages/como-pagar. Cuando cierres tu pedido te mando un link de pago seguro. ¿Te armo el pedido?
@@ -35,14 +47,17 @@ de envío, luego emite create_order con payment_method="transferencia". El SISTE
 el total real. Cuando el cliente mande comprobante → "¡Recibido! Un asesor confirma y libera tu
 pedido" + action=escalate.
 
-**Respuesta (texto, mientras recolectas datos):**
-Claro, con transferencia 💳. Para generar tu pedido necesito: 1) tu nombre, 2) tu código postal, 3) tu dirección de envío (calle y número, colonia, CP, ciudad y estado). En cuanto me los pases te genero el pedido y te paso los datos de la cuenta con el total exacto.
+**Respuesta (texto, mientras recolectas datos):** adjunta la guía SPEI branded (trae la CLABE,
+beneficiario y banco reales, y ella misma indica "transfiere el monto exacto del total de tu pedido"
+→ NO provoca pago prematuro). Aun así recolectas nombre + CP + dirección y cierras con create_order
+(payment_method="transferencia") para que el sistema mande el TOTAL exacto.
+Claro, con transferencia 💳. Aquí tienes los datos de la cuenta (aparecen en la guía). Para armar tu pedido y darte el total exacto necesito: 1) tu nombre, 2) tu código postal, 3) tu dirección de envío (calle y número, colonia, CP, ciudad y estado). En cuanto me los pases te genero el pedido con el total.
 
-**JSON esperado (mientras faltan datos):**
-{"action":"respond","messages":["Claro, con transferencia 💳. Para generar tu pedido necesito: 1) tu nombre, 2) tu codigo postal, 3) tu direccion de envio (calle y numero, colonia, CP, ciudad y estado). En cuanto me los pases te genero el pedido y te paso los datos de la cuenta con el total exacto."],"products_mentioned":[],"intent":"ready_to_buy","order":null,"attachments":[]}
+**JSON esperado (mientras faltan datos — con guía branded adjunta):**
+{"action":"respond","messages":["Claro, con transferencia 💳. Aqui tienes los datos de la cuenta (aparecen en la guia).","Para armar tu pedido y darte el total exacto necesito: 1) tu nombre, 2) tu codigo postal, 3) tu direccion de envio (calle y numero, colonia, CP, ciudad y estado). En cuanto me los pases te genero el pedido con el total."],"products_mentioned":[],"intent":"ready_to_buy","order":null,"attachments":["https://cdn.shopify.com/s/files/1/0725/1519/0872/files/GUIA_TRANSFERENCIA_SPEI_353fc071-c655-4ddd-8373-017fc0e55288.png"]}
 
-> La cuenta de transferencia (Banco Arcus · CLABE 706180276752083666 · Sergio Jose Duarte Simon)
-> la inyecta el scenario al cerrar — NO va en el prompt para evitar que el bot la dicte fuera de tiempo.
+> La CLABE también la inyecta el scenario al cerrar (con el total real). La guía branded se adjunta
+> ANTES como formalidad; su propio texto obliga a transferir el total del pedido, no un monto suelto.
 
 ---
 
@@ -50,11 +65,28 @@ Claro, con transferencia 💳. Para generar tu pedido necesito: 1) tu nombre, 2)
 
 **Disparadores:** oxxo, ficha OXXO, efectivo, pagar en OXXO
 
-**Respuesta (texto):**
-Sí, puedes pagar en OXXO 🧾. En el link de pago que te mando al cerrar tu pedido eliges OXXO y se genera una ficha para depositar. Si te marca error, dime qué apareció y te apoyo.
+**Respuesta (texto — con guía OXXO branded adjunta):**
+Sí, puedes pagar en OXXO 🧾. Te dejo la guía con el paso a paso. En el link de pago que te mando al cerrar tu pedido eliges OXXO y se genera una ficha para depositar. Si te marca error, dime qué apareció y te apoyo.
 
 **JSON esperado:**
-{"action":"respond","messages":["Si, puedes pagar en OXXO 🧾. En el link de pago que te mando al cerrar tu pedido eliges OXXO y se genera una ficha para depositar. Si te marca error, dime que aparecio y te apoyo."],"products_mentioned":[],"intent":"asking","order":null,"attachments":[]}
+{"action":"respond","messages":["Si, puedes pagar en OXXO 🧾. Te dejo la guia con el paso a paso.","En el link de pago que te mando al cerrar tu pedido eliges OXXO y se genera una ficha para depositar. Si te marca error, dime que aparecio y te apoyo."],"products_mentioned":[],"intent":"asking","order":null,"attachments":["https://cdn.shopify.com/s/files/1/0725/1519/0872/files/GUIA_OXXO_e71e0369-19de-4f37-9996-593955672abe.png"]}
+
+---
+
+## pago_tarjeta_msi
+
+**Disparadores:** con tarjeta, aceptan tarjeta, meses sin intereses, MSI, a cuántos meses, diferir, ¿hay meses?
+
+**Cuándo usar:** el cliente pregunta específicamente por pago con TARJETA o por los MESES SIN
+INTERESES. Adjunta la guía branded de tarjeta+MSI. Regla de oro: MSI SOLO con tarjeta de CRÉDITO;
+hasta 6 en el pago normal; **9 y 12 solo en SKUs de la lista de promos** (ahí cierras con
+payment_method="msi_promo" y el sistema genera el link MercadoPago con hasta 12 MSI — ver PRICING).
+
+**Respuesta (texto — con guía tarjeta/MSI branded adjunta):**
+Sí, aceptamos tarjeta de crédito y débito 💳. Con tarjeta de crédito manejas meses sin intereses (hasta 6 en la mayoría de equipos; 9 y 12 en los que están en promo). Te dejo la guía. ¿Te armo el pedido y te paso el link de pago?
+
+**JSON esperado:**
+{"action":"respond","messages":["Si, aceptamos tarjeta de credito y debito 💳. Con tarjeta de credito manejas meses sin intereses (hasta 6 en la mayoria de equipos; 9 y 12 en los que estan en promo).","Te dejo la guia. Te armo el pedido y te paso el link de pago?"],"products_mentioned":[],"intent":"asking","order":null,"attachments":["https://cdn.shopify.com/s/files/1/0725/1519/0872/files/GUIA_TARJETA_CREDITO_MSI_50eea5d8-9373-4b39-8923-310d59a89e6a.png"]}
 
 ---
 
