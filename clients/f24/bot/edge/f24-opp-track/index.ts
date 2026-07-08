@@ -22,15 +22,24 @@ function targetPos(action: string, intent: string, products: string): number {
   return 0;                                                 // nuevo lead
 }
 
-async function currentPos(contactId: string): Promise<number> {
+async function currentOpp(contactId: string): Promise<{ pos: number; owner: string }> {
   try {
     const r = await fetch(`https://services.leadconnectorhq.com/opportunities/search?location_id=${LOC}&contact_id=${contactId}&pipeline_id=${PIPELINE}&limit=1`, { headers: H });
-    if (!r.ok) return -1;
+    if (!r.ok) return { pos: -1, owner: "" };
     const d = await r.json();
     const opp = d?.opportunities?.[0];
-    if (!opp) return -1;
-    return STAGES.findIndex((s) => s.id === opp.pipelineStageId);
-  } catch (_e) { return -1; }
+    if (!opp) return { pos: -1, owner: "" };
+    return { pos: STAGES.findIndex((s) => s.id === opp.pipelineStageId), owner: opp.assignedTo || "" };
+  } catch (_e) { return { pos: -1, owner: "" }; }
+}
+
+async function contactInfo(contactId: string): Promise<{ owner?: string; name: string }> {
+  try {
+    const cr = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}`, { headers: H });
+    if (!cr.ok) return { name: "" };
+    const c = (await cr.json())?.contact ?? {};
+    return { owner: c.assignedTo || undefined, name: (c.contactName || [c.firstName, c.lastName].filter(Boolean).join(" ") || "").trim() };
+  } catch (_e) { return { name: "" }; }
 }
 
 Deno.serve(async (req: Request) => {
@@ -42,23 +51,26 @@ Deno.serve(async (req: Request) => {
     const contactId = String(b.contact_id ?? "").trim();
     if (!contactId || !GHL_TOKEN) return json({ ok: false, error: "no_contact", elapsed_ms: Date.now() - t0 }, 200);
     const computed = targetPos(String(b.action ?? ""), String(b.intent ?? ""), String(b.products ?? ""));
-    const cur = await currentPos(contactId);
+    const { pos: cur, owner: oppOwner } = await currentOpp(contactId);
     const target = Math.max(cur, computed, 0);
-    // Al CREAR (cur === -1, aún no existe opp) trae el contacto para: (a) heredar su DUEÑO —el
-    // round-robin 50/50 de GHL asigna al CONTACTO en el inbound pero la opp no lo hereda sola— y
-    // (b) usar su NOMBRE real en la opp. Solo en creación → nunca pisa reasignación/nombre existente.
-    let assignedTo: string | undefined, contactName = "";
-    if (cur === -1) {
-      try {
-        const cr = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}`, { headers: H });
-        if (cr.ok) {
-          const c = (await cr.json())?.contact ?? {};
-          assignedTo = c.assignedTo || undefined;
-          contactName = (c.contactName || [c.firstName, c.lastName].filter(Boolean).join(" ") || "").trim();
-        }
-      } catch (_e) { /* best-effort */ }
+    // Trae el contacto SIEMPRE: (a) su NOMBRE real para la opp EN CADA TURNO —si solo se leyera al
+    // crear, el upsert de un turno posterior renombraría la opp a "Lead WhatsApp"— y (b) su DUEÑO.
+    let ci = await contactInfo(contactId);
+    // Set/auto-cura el dueño SOLO al crear o si la opp existe pero está SIN dueño (arregla la carrera
+    // con el round-robin, que asigna el CONTACTO en el inbound y la opp no hereda sola). NUNCA si la
+    // opp ya tiene dueño → respeta una reasignación manual del rep.
+    let assignedTo: string | undefined;
+    if (cur === -1 || !oppOwner) {
+      assignedTo = ci.owner;
+      // El round-robin puede tardar 1-2s en asignar el contacto en el inbound → 1 reintento al crear.
+      if (!assignedTo && cur === -1) {
+        await new Promise((r) => setTimeout(r, 1500));
+        const ci2 = await contactInfo(contactId);
+        assignedTo = ci2.owner;
+        if (ci2.name) ci = ci2;
+      }
     }
-    const name = (String(b.name ?? "").trim() || contactName || "Lead WhatsApp").slice(0, 100);
+    const name = (String(b.name ?? "").trim() || ci.name || "Lead WhatsApp").slice(0, 100);
     const up = await fetch("https://services.leadconnectorhq.com/opportunities/upsert", {
       method: "POST", headers: H,
       body: JSON.stringify({ pipelineId: PIPELINE, locationId: LOC, contactId, name, status: "open", pipelineStageId: STAGES[target].id, ...(assignedTo ? { assignedTo } : {}) }),
