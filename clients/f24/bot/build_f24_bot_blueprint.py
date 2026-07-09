@@ -70,6 +70,14 @@ F24_OPP_TRACK_DATASTRUCTURE_ID = 420195  # body {contact_id, action, intent, pro
 F24_QUOTE_SHIPPING_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f24-quote-shipping"
 F24_QUOTE_DATASTRUCTURE_ID = 420242  # body {cp_destino, skus[], contact_id} — serializa skus como array real
 
+# === Edge Function de agenda de llamadas (GHL calendars — feature 2026-07) ===
+# El bot emite action="get_call_slots" (ofrece horarios reales) y luego "book_call" (agenda la cita).
+# El EF consulta free-slots del calendario del asesor (round-robin Alfredo/Edgar por hash del contacto)
+# y crea la cita real. Reemplaza el viejo R32 "prometo la llamada por texto + escalo por correo".
+# El `mensaje` que regresa (horarios o confirmación) lo manda la sub-route al cliente. Ver edge/f24-book-appointment.
+F24_BOOK_APPT_URL = "https://wjlwpfaogjpeqgyxxnwa.supabase.co/functions/v1/f24-book-appointment"
+F24_BOOK_APPT_DATASTRUCTURE_ID = 423734  # body {mode, contact_id, call_choice}
+
 # Cuenta de transferencia de Ferre24 (MXN — la que se manda a clientes). Datos de Sergio 2026-06-02.
 F24_TRANSFER_CLABE = "706180276752083666"  # Banco Arcus
 F24_TRANSFER_HOLDER = "Sergio Jose Duarte Simon"
@@ -740,6 +748,36 @@ def ghl_send_quote_message_module(module_id, x, y, quote_http_module_id):
     }
 
 
+def f24_book_appointment_module(module_id, x, y, mode, err_module_id):
+    """POST a la Edge Function f24-book-appointment (agenda de llamadas con calendarios GHL).
+    mode="slots": consulta la agenda REAL del asesor (round-robin Alfredo/Edgar) y regresa los horarios
+      libres → el bot los ofrece (action=get_call_slots).
+    mode="book": agenda la cita al horario que eligió el cliente (action=book_call). `call_choice` = el
+      mensaje del cliente ({{28.user_msg}}); el EF lo mapea al slot real (no dependemos de que Claude
+      arme una fecha ISO). El `mensaje` que regresa (horarios o confirmación) lo manda el módulo
+      siguiente al cliente. onerror = nunca rompe el bot (fallback)."""
+    body = {"mode": mode, "contact_id": "{{1.contact_id}}"}
+    fb = "Con gusto te agendo la llamada con un asesor. ¿Qué día y horario te acomoda? Yo lo coordino."
+    if mode == "book":
+        body["call_choice"] = "{{28.user_msg}}"
+        fb = "¡Va! Dejo agendada tu llamada con un asesor. Te marca a este mismo número. Si prefieres otro horario, dime."
+    return {
+        "id": module_id, "module": "http:MakeRequest", "version": 4,
+        "parameters": {"authenticationType": "noAuth"},
+        "mapper": {
+            "url": F24_BOOK_APPT_URL, "method": "post",
+            "headers": [{"name": "Content-Type", "value": "application/json"}],
+            "contentType": "json", "inputMethod": "dataStructure",
+            "bodyDataStructure": F24_BOOK_APPT_DATASTRUCTURE_ID,
+            "dataStructureBodyContent": body,
+            "timeout": 60, "shareCookies": False, "parseResponse": True,
+            "allowRedirects": True, "stopOnHttpError": False, "requestCompressedContent": True,
+        },
+        "metadata": {"designer": {"x": x, "y": y}},
+        "onerror": [resume_handler(err_module_id, {"mensaje": fb}, x, y + 300)],
+    }
+
+
 def f24_save_name_module(module_id, x, y, parse_module_id):
     """POST best-effort a la Edge Function (mode=save_name) para guardar el firstName REAL del cliente
     en su contacto GHL cuando el bot lo captura ("¿con quién tengo el gusto?"). Reemplaza el alias
@@ -1199,6 +1237,21 @@ sub_quote_send = ghl_send_quote_message_module(53, 3150, 1100, quote_http_module
 # atendido (ruta SIN filtro → siempre corre). Reconstruye la creación de opps que murió ~19-jun.
 sub_opp_track = f24_opp_track_module(54, 2900, 1350, parse_module_id=8)
 
+# Sub-route AGENDA DE LLAMADA (2 acciones):
+#  - get_call_slots → consulta la agenda REAL del asesor (round-robin) y ofrece los horarios libres.
+#  - book_call      → agenda la cita al horario que eligió el cliente (call_choice = su mensaje).
+# El `mensaje` del EF (horarios o confirmación) lo manda el módulo _send al cliente. El puente corto
+# ("Déjame ver los horarios..." / "Va, te la agendo") ya lo mandó la ruta normal (action != create_order).
+sub_book_slots = f24_book_appointment_module(60, 2900, 1500, mode="slots", err_module_id=96)
+sub_book_slots["filter"] = {"name": "action == get_call_slots",
+                            "conditions": [[{"a": "{{8.action}}", "o": "text:equal", "b": "get_call_slots"}]]}
+sub_book_slots_send = ghl_send_quote_message_module(61, 3150, 1500, quote_http_module_id=60)
+
+sub_book_call = f24_book_appointment_module(62, 2900, 1650, mode="book", err_module_id=97)
+sub_book_call["filter"] = {"name": "action == book_call",
+                           "conditions": [[{"a": "{{8.action}}", "o": "text:equal", "b": "book_call"}]]}
+sub_book_call_send = ghl_send_quote_message_module(63, 3150, 1650, quote_http_module_id=62)
+
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
     "metadata": {"designer": {"x": 2650, "y": 150}},
@@ -1208,6 +1261,8 @@ post_parse_router = {
         {"flow": [sub_handoff_email, sub_handoff_tag, sub_handoff_call_tag]},
         {"flow": [sub_name_save]},
         {"flow": [sub_quote_http, sub_quote_send]},
+        {"flow": [sub_book_slots, sub_book_slots_send]},
+        {"flow": [sub_book_call, sub_book_call_send]},
         {"flow": [sub_opp_track]},
     ],
 }
