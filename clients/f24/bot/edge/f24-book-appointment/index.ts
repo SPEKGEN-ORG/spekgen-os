@@ -197,7 +197,8 @@ async function doBook(input: any) {
     const appt = await createAppointment(startISO, contactId, titulo);
     const label = slotLabel(startISO);
     return {
-      ok: true, mode: "book", appointment_id: appt.id, assigned_user: appt.assignedUserId, start_time: startISO,
+      ok: true, mode: "book", appointment_id: appt.id, assigned_user: appt.assignedUserId,
+      start_time: startISO, start_label: label,
       mensaje: `¡Listo! Quedó agendada tu llamada con un asesor ${label} 📞 Te marca a este mismo número. Cualquier cosa, aquí ando.`,
     };
   } catch (e) {
