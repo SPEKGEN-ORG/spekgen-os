@@ -117,11 +117,18 @@ r = json.load(sys.stdin); s = r.get('scenario', r)
 print('  name:', s.get('name')); print('  isinvalid:', s.get('isinvalid')); print('  isActive:', s.get('isActive'))
 "
 
-# Guarda el hash SOLO si el PATCH fue válido → la próxima corrida con el mismo blueprint salta el PATCH.
-if echo "$RESP" | python3 -c "import json,sys; s=json.load(sys.stdin).get('scenario',{}); sys.exit(0 if s.get('isinvalid') is False else 1)" 2>/dev/null; then
-  echo "$NEWHASH" > "$HASHFILE"
-  echo "Hash de idempotencia guardado: $HASHFILE"
+# FAIL LOUD: si Make NO aceptó el blueprint (isinvalid != False, o respondió un error tipo
+# {"detail","message","code"} en vez de un scenario), abortar con exit 1. Sin esto, un PATCH
+# rechazado (ej. IM007 'Duplicate instance id', HTTP 400) se tragaba en silencio → el step marcaba
+# ✓ en falso y el bot quedaba en la versión vieja (bug real 2026-07-09).
+if ! echo "$RESP" | python3 -c "import json,sys; s=json.load(sys.stdin).get('scenario',{}); sys.exit(0 if s.get('isinvalid') is False else 1)" 2>/dev/null; then
+  echo "❌ PATCH RECHAZADO por Make — el blueprint NO se aplicó. Respuesta cruda:"
+  echo "$RESP"
+  exit 1
 fi
+# PATCH válido → guarda el hash para que la próxima corrida con el mismo blueprint salte el PATCH.
+echo "$NEWHASH" > "$HASHFILE"
+echo "Hash de idempotencia guardado: $HASHFILE"
 
 ARCHIVE="$BLUEPRINTS_DIR/f24_bot_${VERSION}_${TARGET}_$(date +%Y-%m-%d).json"
 cp "$BP" "$ARCHIVE"
