@@ -1069,6 +1069,61 @@ def team_email_module(module_id, x, y):
     }
 
 
+def book_call_asesor_email_module(module_id, x, y, book_http_module_id):
+    """Email branded (NO GHL native, mismo estilo que el handoff) SOLO al asesor al que el Round Robin
+    le asignó la llamada. Se dispara tras un book_call exitoso; el asesor se elige por el `assigned_user`
+    que regresa el EF f24-book-appointment. google-email conn 8183100."""
+    bm = str(book_http_module_id)
+    ALFREDO_UID = "1Yee3JNNWlFSk6SWFzeT"; ALFREDO_EMAIL = "a25077492@gmail.com"; EDGAR_EMAIL = "edgar.gvg@hotmail.com"
+    to_expr = '{{if(' + bm + '.data.assigned_user = "' + ALFREDO_UID + '"; "' + ALFREDO_EMAIL + '"; "' + EDGAR_EMAIL + '")}}'
+    asesor = '{{if(' + bm + '.data.assigned_user = "' + ALFREDO_UID + '"; "Alfredo"; "Edgar")}}'
+    subject = "[Ferre24] 📅 Nueva llamada agendada — {{ifempty(1.full_name; \"cliente\")}}"
+    html = (
+        "<table role='presentation' width='100%' cellpadding='0' cellspacing='0' "
+        "style='background:#f4f4f5;padding:24px 0;font-family:Arial,Helvetica,sans-serif'><tr><td align='center'>"
+        "<table role='presentation' width='600' cellpadding='0' cellspacing='0' "
+        "style='max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e7e7e9'>"
+        "<tr><td style='background:#F8F3E9;padding:18px 28px' align='left'>"
+        "<img src='" + LOGO_F24 + "' alt='Ferre24' height='40' style='height:40px;display:block;border:0'></td></tr>"
+        "<tr><td style='background:#1a7f37;padding:15px 28px' align='left'>"
+        "<p style='margin:0;color:#ffffff;font-size:17px;font-weight:bold'>📅 Nueva llamada agendada</p>"
+        "<p style='margin:3px 0 0;color:#d6f0dc;font-size:12px'>Es para ti, " + asesor + " — márcale a la hora acordada</p></td></tr>"
+        "<tr><td style='padding:24px 28px'>"
+        "<table role='presentation' width='100%' cellpadding='0' cellspacing='0' style='font-size:14px;color:#333333'>"
+        "<tr><td style='padding:6px 0;color:#999999;width:120px'>Asesor</td>"
+        "<td style='padding:6px 0;font-weight:bold'>" + asesor + "</td></tr>"
+        "<tr><td style='padding:6px 0;color:#999999'>Cliente</td>"
+        "<td style='padding:6px 0;font-weight:bold'>{{ifempty(1.full_name; \"(sin nombre)\")}}</td></tr>"
+        "<tr><td style='padding:6px 0;color:#999999'>Teléfono</td>"
+        "<td style='padding:6px 0;font-weight:bold'>{{ifempty(1.phone; \"(sin tel)\")}}</td></tr>"
+        "<tr><td style='padding:6px 0;color:#999999'>Horario</td>"
+        "<td style='padding:6px 0;font-weight:bold;color:#1a7f37'>{{ifempty(" + bm + ".data.start_label; \"(ver calendario)\")}}</td></tr>"
+        "<tr><td style='padding:6px 0;color:#999999'>Producto(s)</td>"
+        "<td style='padding:6px 0;font-weight:bold'>{{ifempty(join(8.products_mentioned; \", \"); \"-\")}}</td></tr></table>"
+        "<div style='margin-top:14px;background:#f7f7f8;border-left:3px solid #1a7f37;padding:12px 14px;border-radius:4px'>"
+        "<p style='margin:0 0 4px;font-size:11px;color:#999999;text-transform:uppercase;letter-spacing:.5px'>Último mensaje del cliente</p>"
+        "<p style='margin:0;font-size:14px;color:#333333'>{{ifempty(28.user_msg; \"-\")}}</p></div>"
+        "<table role='presentation' cellpadding='0' cellspacing='0' style='margin:22px 0 2px'><tr>"
+        "<td style='border-radius:8px;background:#1a7f37' align='center'>"
+        "<a href='" + SPEKGEN_CRM_URL + "' style='display:inline-block;padding:13px 28px;color:#ffffff;"
+        "font-size:15px;font-weight:bold;text-decoration:none'>Abrir conversación en SPEKGEN &rarr;</a>"
+        "</td></tr></table></td></tr>"
+        "<tr><td style='background:#fafafa;padding:18px 28px;border-top:1px solid #eeeeee' align='center'>"
+        "<img src='" + LOGO_SPEKGEN + "' alt='SPEKGEN' height='20' style='height:20px;display:block;margin:0 auto 7px;border:0'>"
+        "<p style='margin:0;font-size:11px;color:#aaaaaa'>Notificación automática del bot de WhatsApp &middot; CRM SPEKGEN</p>"
+        "</td></tr></table></td></tr></table>"
+    )
+    return {
+        "id": module_id, "module": "google-email:sendAnEmail", "version": 4,
+        "parameters": {"__IMTCONN__": GMAIL_CONN_ID},
+        "mapper": {"to": [to_expr], "subject": subject, "content": html, "bodyType": "rawHtml"},
+        # Solo cuando el booking asignó un asesor (assigned_user no vacío).
+        "filter": {"name": "solo si se agendó y asignó asesor",
+                   "conditions": [[{"a": "{{" + bm + ".data.assigned_user}}", "o": "text:notequal", "b": ""}]]},
+        "metadata": {"designer": {"x": x, "y": y}},
+    }
+
+
 def ghl_tag_handoff_module(module_id, x, y):
     """Agrega el tag 'requiere-humano' al contacto en GHL. Body via data structure (patrón probado)."""
     return {
@@ -1251,6 +1306,8 @@ sub_book_call = f24_book_appointment_module(62, 2900, 1650, mode="book", err_mod
 sub_book_call["filter"] = {"name": "action == book_call",
                            "conditions": [[{"a": "{{8.action}}", "o": "text:equal", "b": "book_call"}]]}
 sub_book_call_send = ghl_send_quote_message_module(63, 3150, 1650, quote_http_module_id=62)
+# Email branded SOLO al asesor asignado (round-robin) tras agendar. NO GHL native — google-email conn.
+sub_book_call_email = book_call_asesor_email_module(64, 3400, 1650, book_http_module_id=62)
 
 post_parse_router = {
     "id": 40, "module": "builtin:BasicRouter", "version": 1, "mapper": None,
@@ -1262,7 +1319,7 @@ post_parse_router = {
         {"flow": [sub_name_save]},
         {"flow": [sub_quote_http, sub_quote_send]},
         {"flow": [sub_book_slots, sub_book_slots_send]},
-        {"flow": [sub_book_call, sub_book_call_send]},
+        {"flow": [sub_book_call, sub_book_call_send, sub_book_call_email]},
         {"flow": [sub_opp_track]},
     ],
 }
