@@ -39,10 +39,12 @@ const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
 // ── Asesores + sus calendarios GHL (fuente de verdad de disponibilidad) ────────────────────────
 // Override por env sin redeploy. Orden fijo → índice 0/1 estable para el round-robin.
-interface Asesor { key: string; name: string; calendar_id: string; }
+// user_id = usuario GHL del asesor → la cita se ASIGNA a él (aparece en SU calendario personal,
+// no solo en el calendario de eventos compartido).
+interface Asesor { key: string; name: string; calendar_id: string; user_id: string; }
 const ASESORES: Asesor[] = [
-  { key: "alfredo", name: "Alfredo", calendar_id: Deno.env.get("F24_CAL_ALFREDO") ?? "hnsAK3JB7w3loc8AV45v" },
-  { key: "edgar", name: "Edgar", calendar_id: Deno.env.get("F24_CAL_EDGAR") ?? "dnd4Ry9KJtt5Kd3NxafS" },
+  { key: "alfredo", name: "Alfredo", calendar_id: Deno.env.get("F24_CAL_ALFREDO") ?? "hnsAK3JB7w3loc8AV45v", user_id: Deno.env.get("F24_USER_ALFREDO") ?? "1Yee3JNNWlFSk6SWFzeT" },
+  { key: "edgar", name: "Edgar", calendar_id: Deno.env.get("F24_CAL_EDGAR") ?? "dnd4Ry9KJtt5Kd3NxafS", user_id: Deno.env.get("F24_USER_EDGAR") ?? "6G3VFN9NMm2J2zBGJkGC" },
 ];
 
 // Hash de string estable (djb2) → índice de asesor. Determinístico por contactId.
@@ -113,10 +115,10 @@ async function getFreeSlots(calendarId: string, days = 7, maxSlots = 3): Promise
 }
 
 // ── GHL create appointment ─────────────────────────────────────────────────────────────────────
-async function createAppointment(calendarId: string, contactId: string, startISO: string, titulo: string) {
+async function createAppointment(calendarId: string, contactId: string, startISO: string, titulo: string, userId: string) {
   const start = new Date(startISO);
   const endISO = new Date(start.getTime() + SLOT_MINUTES * 60000).toISOString();
-  const payload = {
+  const payload: Record<string, unknown> = {
     calendarId,
     locationId: LOCATION_ID,
     contactId,
@@ -127,6 +129,8 @@ async function createAppointment(calendarId: string, contactId: string, startISO
     ignoreDateRange: false,
     toNotify: true,
   };
+  // Asigna la cita al usuario GHL del asesor → le aparece en SU calendario personal.
+  if (userId) payload.assignedUserId = userId;
   const r = await fetch(`${GHL_BASE}/calendars/events/appointments`, {
     method: "POST", headers: ghlHeaders(), body: JSON.stringify(payload),
   });
@@ -235,7 +239,7 @@ async function doBook(input: any) {
   }
 
   try {
-    const apptId = await createAppointment(asesor.calendar_id, contactId, startISO, titulo);
+    const apptId = await createAppointment(asesor.calendar_id, contactId, startISO, titulo, asesor.user_id);
     const label = slotLabel(startISO);
     return {
       ok: true, mode: "book", asesor: asesor.key, appointment_id: apptId, start_time: startISO,
