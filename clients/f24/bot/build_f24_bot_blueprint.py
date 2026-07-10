@@ -1242,12 +1242,12 @@ sub_opp_track = f24_opp_track_module(54, 2900, 1350, parse_module_id=8)
 #  - book_call      → agenda la cita al horario que eligió el cliente (call_choice = su mensaje).
 # El `mensaje` del EF (horarios o confirmación) lo manda el módulo _send al cliente. El puente corto
 # ("Déjame ver los horarios..." / "Va, te la agendo") ya lo mandó la ruta normal (action != create_order).
-sub_book_slots = f24_book_appointment_module(60, 2900, 1500, mode="slots", err_module_id=96)
+sub_book_slots = f24_book_appointment_module(60, 2900, 1500, mode="slots", err_module_id=101)
 sub_book_slots["filter"] = {"name": "action == get_call_slots",
                             "conditions": [[{"a": "{{8.action}}", "o": "text:equal", "b": "get_call_slots"}]]}
 sub_book_slots_send = ghl_send_quote_message_module(61, 3150, 1500, quote_http_module_id=60)
 
-sub_book_call = f24_book_appointment_module(62, 2900, 1650, mode="book", err_module_id=97)
+sub_book_call = f24_book_appointment_module(62, 2900, 1650, mode="book", err_module_id=102)
 sub_book_call["filter"] = {"name": "action == book_call",
                            "conditions": [[{"a": "{{8.action}}", "o": "text:equal", "b": "book_call"}]]}
 sub_book_call_send = ghl_send_quote_message_module(63, 3150, 1650, quote_http_module_id=62)
