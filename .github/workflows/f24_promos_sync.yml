@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write   # main es protegido (solo PRs): los artefactos se suben vía rama + PR auto-mergeado
 
 # Anti-thrash: si llegan varios dispatches seguidos (storm del onEdit), colapsan a UNO —
 # el nuevo cancela al anterior en curso, así NO se PATCHea el scenario live N veces seguidas.
@@ -127,8 +128,10 @@ jobs:
           python3 ci/alert_email.py --subject "🚨 Promo-sync F24 rompió el bot — se ejecutó AUTO-ROLLBACK" --body "$BODY"
           exit 1
 
-      - name: Commit regenerated artifacts
+      - name: Commit regenerated artifacts (vía PR — main es protegido)
         if: ${{ github.event.inputs.dry_run != 'true' && steps.smoke_prod.outcome == 'success' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           cd "$GITHUB_WORKSPACE"
           git config user.name "spekgen-bot"
@@ -139,5 +142,19 @@ jobs:
                   clients/f24/bot/F24_BOT_KNOWLEDGE/inventory.json \
                   clients/f24/bot/_promo_state.json \
                   clients/f24/bot/_BLUEPRINTS/.last_deployed_prod.sha256 || true
-          git commit -m "chore(f24): promo sync $(date -u +%Y-%m-%d)" || echo "nothing to commit"
-          git push || echo "push failed"
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          # main rechaza pushes directos ("changes must be made through a pull request") desde jun-2026:
+          # los artefactos van por rama efímera + PR auto-mergeado. El push del GITHUB_TOKEN no
+          # dispara otros workflows, así que esto NO causa deploys dobles. Si algo falla aquí,
+          # el step truena (bash -e) y el run queda ROJO — nada de tragarse el error.
+          BR="bot/promo-sync-$(date -u +%Y%m%d-%H%M%S)"
+          git checkout -b "$BR"
+          git commit -m "chore(f24): promo sync $(date -u +%Y-%m-%d)"
+          git push -u origin "$BR"
+          gh pr create --base main --head "$BR" \
+            --title "chore(f24): promo sync $(date -u +%Y-%m-%d)" \
+            --body "Artefactos regenerados por el cron promo-sync (run ${{ github.run_id }}). Auto-merge."
+          gh pr merge "$BR" --squash --delete-branch
