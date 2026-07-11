@@ -192,6 +192,9 @@ def write_catalog_index(products: list[dict], domain: str, promos: dict | None =
     by_cat: dict[str, list[dict]] = {}
     for p in products:
         by_cat.setdefault(p["category"], []).append(p)
+    # disponibilidad por SKU: la tabla de promos debe marcar los agotados para no
+    # contradecir la regla de disponibilidad del prompt (caso BK2.515, 10-jul-2026)
+    avail = {(p["sku"] or "").upper(): p.get("available", True) for p in products}
 
     md = [
         "# Ferre24 — Catálogo (Knowledge Base del bot)",
@@ -215,6 +218,8 @@ def write_catalog_index(products: list[dict], domain: str, promos: dict | None =
                   "`order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.")
         md.append("- SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).")
         md.append("- NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.")
+        md.append("- Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: "
+                  "NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).")
         md.append("")
         md.append("| SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |")
         md.append("|---|---|---|---|---|---|---|")
@@ -222,8 +227,11 @@ def write_catalog_index(products: list[dict], domain: str, promos: dict | None =
             ladder = ", ".join(str(m) for m in info.get("ladder", [])) or "—"
             cbf = "**Sí**" if info.get("eligible_912") else "no"
             promo_cell = fmt_price(info["promo_price"]) if info.get("promo_price") is not None else "solo MSI"
+            vence = str(info.get("hasta", ""))
+            if not avail.get(sku.upper(), True):
+                vence += " · 🔴 AGOTADO — NO vender"
             md.append(f"| `{sku}` | {promo_cell} | {fmt_price(info.get('regular_price'))} "
-                      f"| {info.get('pct','')} | {ladder} | {cbf} | {info.get('hasta','')} |")
+                      f"| {info.get('pct','')} | {ladder} | {cbf} | {vence} |")
     else:
         md.append("Ahorita NO hay promos vigentes. Todos los SKUs: solo hasta 6 MSI (link normal).")
     md.append("")
