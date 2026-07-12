@@ -994,12 +994,18 @@ HANDOFF_TAG = "requiere-humano"
 CALL_TAG = "pidio-llamada"            # R32: el cliente pidió que le llamen → alerta en el panel del rep
 GHL_TAGS_DATASTRUCTURE_ID = 395040   # body {tags:[...]} para POST /contacts/{id}/tags
 
-# Filtro: dispara solo cuando Claude devuelve action escalate o human_handoff (OR).
+# Filtro: dispara solo cuando Claude devuelve action escalate o human_handoff (OR),
+# EXCLUYENDO los contactos de prueba del smoke test CI (full_name "ZZ Smoke CI").
+# Sin esta exclusión, el healthcheck (cada 20 min contra PROD) escapaba handoffs falsos
+# a los correos reales del equipo (Edgar/Alfredo/Sergio). El nodo email solo ve módulo 1
+# (webhook) y 8 (Claude), no los tags del contacto → se filtra por full_name, que el smoke
+# manda siempre como "ZZ Smoke CI".
+_NOT_SMOKE = {"a": "{{1.full_name}}", "o": "text:notcontain", "b": "ZZ Smoke"}
 ESCALATE_FILTER = {
-    "name": "action es escalate o human_handoff",
+    "name": "action es escalate o human_handoff (excluye smoke test)",
     "conditions": [
-        [{"a": "{{8.action}}", "o": "text:equal", "b": "escalate"}],
-        [{"a": "{{8.action}}", "o": "text:equal", "b": "human_handoff"}],
+        [{"a": "{{8.action}}", "o": "text:equal", "b": "escalate"}, _NOT_SMOKE],
+        [{"a": "{{8.action}}", "o": "text:equal", "b": "human_handoff"}, _NOT_SMOKE],
     ],
 }
 
