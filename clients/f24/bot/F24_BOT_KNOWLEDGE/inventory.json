@@ -2,7 +2,7 @@
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/📦 STOCK Y PROMOS",
   "inventory": {
     "13AN77BS309": {
-      "qty": 29,
+      "qty": 10,
       "available": true
     },
     "AK26": {
@@ -90,7 +90,7 @@
       "available": true
     },
     "GH26000E-AM": {
-      "qty": 10,
+      "qty": 9,
       "available": true
     },
     "GP10000GAS": {
@@ -102,7 +102,7 @@
       "available": true
     },
     "GP20KWT": {
-      "qty": 14,
+      "qty": 12,
       "available": true
     },
     "GP31200": {
@@ -122,7 +122,7 @@
       "available": true
     },
     "GPDS8.5M": {
-      "qty": 53,
+      "qty": 37,
       "available": true
     },
     "GPDS8.5T": {
@@ -130,8 +130,8 @@
       "available": true
     },
     "HI10-19": {
-      "qty": 0,
-      "available": false
+      "qty": 50,
+      "available": true
     },
     "HPPE10": {
       "qty": 66,
@@ -150,7 +150,7 @@
       "available": true
     },
     "KF35X": {
-      "qty": 80,
+      "qty": 180,
       "available": true
     },
     "KTR26": {
@@ -286,7 +286,7 @@
       "available": true
     },
     "PPSB6.5AK": {
-      "qty": 19,
+      "qty": 8,
       "available": true
     },
     "PPSB6.5B": {
@@ -294,7 +294,7 @@
       "available": true
     },
     "PPSB6.5BK": {
-      "qty": 17,
+      "qty": 11,
       "available": true
     },
     "PRES-TM-P50X-P10": {
@@ -378,7 +378,7 @@
       "available": true
     },
     "PBL": {
-      "qty": 41,
+      "qty": 63,
       "available": true
     },
     "PBR": {
@@ -394,7 +394,7 @@
       "available": true
     },
     "COMPH100L": {
-      "qty": 195,
+      "qty": 192,
       "available": true
     },
     "COMPHKIT25L": {
@@ -402,11 +402,11 @@
       "available": true
     },
     "CA-50PH": {
-      "qty": 0,
-      "available": false
+      "qty": 9,
+      "available": true
     },
     "COMPHKIT50L": {
-      "qty": 370,
+      "qty": 400,
       "available": true
     },
     "LMH-1000W": {
@@ -434,7 +434,7 @@
       "available": true
     },
     "DKY52K": {
-      "qty": 2,
+      "qty": 196,
       "available": true
     },
     "ENERWELL-G1000": {
@@ -510,11 +510,11 @@
       "available": true
     },
     "BAKARAC300-G": {
-      "qty": 33,
+      "qty": 15,
       "available": true
     },
     "GPIDJI9500": {
-      "qty": 27,
+      "qty": 15,
       "available": true
     },
     "GPIS5.5KW": {
@@ -522,7 +522,7 @@
       "available": true
     },
     "GP12000": {
-      "qty": 30,
+      "qty": 26,
       "available": true
     },
     "GP3000M": {
@@ -542,7 +542,7 @@
       "available": false
     },
     "HP5.5N": {
-      "qty": 98,
+      "qty": 2,
       "available": true
     },
     "HPPE4M": {
@@ -574,7 +574,7 @@
       "available": true
     },
     "HUNT521": {
-      "qty": 3,
+      "qty": 100,
       "available": true
     },
     "BK2.510": {
@@ -594,12 +594,12 @@
       "available": true
     },
     "CSK5218": {
-      "qty": 0,
-      "available": false
+      "qty": 100,
+      "available": true
     },
     "CSK6222": {
-      "qty": 0,
-      "available": false
+      "qty": 100,
+      "available": true
     },
     "3.0226.M3N": {
       "qty": 1,
@@ -726,8 +726,8 @@
       "available": true
     },
     "502E": {
-      "qty": 0,
-      "available": false
+      "qty": 75,
+      "available": true
     },
     "MTK26": {
       "qty": 1,
@@ -746,8 +746,8 @@
       "available": true
     },
     "AKE100P": {
-      "qty": 0,
-      "available": false
+      "qty": 30,
+      "available": true
     },
     "BK2.515": {
       "qty": 0,
@@ -794,7 +794,7 @@
       "available": true
     },
     "BAKARAC200": {
-      "qty": 78,
+      "qty": 11,
       "available": true
     },
     "BAKARAC250": {
@@ -870,12 +870,52 @@
       "available": true
     },
     "MHP11": {
-      "qty": 1,
+      "qty": 90,
       "available": true
     },
     "BK1440": {
       "qty": 1,
       "available": true
+    },
+    "17AFFACS066": {
+      "qty": 6,
+      "available": true
+    },
+    "17ARFACTA66": {
+      "qty": 0,
+      "available": false
+    },
+    "17BRFACQA66": {
+      "qty": 6,
+      "available": true
+    },
+    "PKPEM-56D": {
+      "qty": 0,
+      "available": false
+    },
+    "PKPAP-56D": {
+      "qty": 0,
+      "available": false
+    },
+    "TLP-9800-4": {
+      "qty": 0,
+      "available": false
+    },
+    "TFQS9": {
+      "qty": 0,
+      "available": false
+    },
+    "TFQS8": {
+      "qty": 0,
+      "available": false
+    },
+    "TFQS5": {
+      "qty": 0,
+      "available": false
+    },
+    "AKE100A": {
+      "qty": 0,
+      "available": false
     }
   }
 }
