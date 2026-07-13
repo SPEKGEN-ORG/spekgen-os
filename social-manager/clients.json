@@ -53,10 +53,10 @@
       "ad_account": "act_1515948230126551",
       "comment_mode": "auto",
       "dm_mode": "draft",
-      "knowledge": "~/dev/spekgen-os/clients/f24/bot/F24_BOT_KNOWLEDGE/CATALOG_INDEX.md",
+      "knowledge": "F24- FERRE24/F24_SOCIAL_KB.md",
       "dm_enabled": false,
       "whatsapp": null,
-      "_nota": "F24 comentarios = AUTO autorizado 29-jun. dm_enabled=false: WABA baneada, no hay bot de WhatsApp para el handoff; solo comentario público hasta tener bot nativo de Messenger (Fase 3 parte 2).",
+      "_nota": "F24 comentarios = AUTO autorizado 29-jun. dm_enabled=false: WABA baneada, no hay bot de WhatsApp para el handoff; el KB dirige al cierre a la web ferre24.com.mx (NO a WhatsApp/DM). KB social propio en Drive (F24_SOCIAL_KB.md) — la ruta anterior a ~/dev/.../CATALOG_INDEX.md no existía y F24 respondía sin catálogo.",
       "active": true
     },
     "SSI": {
