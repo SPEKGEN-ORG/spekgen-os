@@ -96,10 +96,13 @@ NUNCA uses voseo ("vos", "escribís", "tenés", "querés").
 
 Devuelve SOLO un JSON válido, sin texto extra:
 {{"action":"reply|skip|escalate","draft":"<respuesta lista para publicar>","confidence":0.0,\
-"needs_human":false,"reason":"<motivo corto>"}}
+"grounded":false,"needs_human":false,"reason":"<motivo corto>"}}
 - action="skip" si el comentario no amerita respuesta (spam, solo emoji que se te coló).
 - action="escalate" si necesita un humano sí o sí (queja seria, caso legal).
 - confidence = qué tan seguro estás de que el borrador es correcto y publicable (0 a 1).
+- grounded=true SOLO si la respuesta se apoya en la INFO/CATÁLOGO de arriba (dato que sí \
+aparece ahí). Si respondes de conocimiento general o no encuentras el dato en la info provista, \
+grounded=false (irá a revisión humana, NO se auto-publica).
 
 === CATÁLOGO / INFO DE {name} ===
 {knowledge}
@@ -129,8 +132,18 @@ def call_claude(system, user, api_key):
             "content-type": "application/json",
         },
     )
-    with urllib.request.urlopen(req, timeout=60) as r:
-        resp = json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            resp = json.load(r)
+    except urllib.error.HTTPError as e:
+        # Exponer el mensaje REAL de la API (ej. "credit balance too low") en vez de
+        # un opaco "HTTP Error 400" — así el error queda visible y clasificable.
+        try:
+            err = json.loads(e.read().decode("utf-8", "replace"))
+            msg = err.get("error", {}).get("message") or err.get("message") or str(e)
+        except Exception:
+            msg = str(e)
+        raise RuntimeError(f"anthropic_{e.code}: {msg}")
     text = "".join(b.get("text", "") for b in resp.get("content", []))
     return _parse_json(text)
 
@@ -162,8 +175,11 @@ def main():
     targets = list(conf["clients"]) if args.client == "all" else [args.client.upper()]
     know_cache = {}
     done = 0
+    infra_error = None   # fallo de infra (saldo/rate-limit/auth): aborta ruidoso, no verde falso
 
     for code in targets:
+        if infra_error:
+            break
         cfg = conf["clients"].get(code)
         if not cfg:
             continue
@@ -185,20 +201,39 @@ def main():
             try:
                 out = call_claude(system, user, api_key)
             except Exception as e:
-                print(f"  ERR {r['external_id']}: {e}")
+                msg = str(e)
+                low = msg.lower()
+                # Fallo de INFRA (no del comentario): saldo, rate-limit, auth, sobrecarga.
+                is_infra = any(s in low for s in (
+                    "credit balance", "rate_limit", "429", "anthropic_401",
+                    "authentication", "overloaded", "anthropic_529", "anthropic_500"))
+                print(f"  ERR {r['external_id']}: {msg}")
+                # Deja el error VISIBLE en la fila (el HQ lo lee) — no lo tragues en silencio.
+                if not args.dry_run:
+                    try:
+                        store.update(r["external_id"], {"meta": {**(r.get("meta") or {}),
+                            "brain_reason": f"api_error: {msg[:180]}"}})
+                    except Exception as ue:
+                        print(f"     (no se pudo anotar brain_reason: {ue})")
+                if is_infra:
+                    infra_error = msg   # aborta el run entero: sin IA no hay borradores
+                    break
                 continue
 
             action = out.get("action", "reply")
             draft = (out.get("draft") or "").strip()
             conf_score = out.get("confidence")
             needs_human = out.get("needs_human", False)
+            grounded = bool(out.get("grounded", False))
             category = (r.get("meta") or {}).get("category")
             age = r.get("age_days") or 0
 
             # ¿califica para auto-publicar? (delegación con guardarraíles)
+            # grounded==True es OBLIGATORIO: solo auto-publicamos respuestas apoyadas en el KB.
             auto = (
                 cfg.get("comment_mode") == "auto"
                 and action == "reply" and draft
+                and grounded
                 and (conf_score or 0) >= AUTO_MIN_CONFIDENCE
                 and not needs_human
                 and category in AUTO_CATEGORIES
@@ -224,11 +259,15 @@ def main():
                 "acted_by": "auto" if auto else None,
                 "meta": {**(r.get("meta") or {}),
                          "needs_human": needs_human,
+                         "grounded": grounded,
                          "brain_reason": out.get("reason")},
             })
             done += 1
 
     print(f"\nBorradores escritos: {done}" + ("  [DRY-RUN]" if args.dry_run else ""))
+    # Fallo de infra = salida NO-cero: el workflow queda en ROJO (nada de verde falso).
+    if infra_error:
+        sys.exit(f"IA no disponible (infra) — abortado sin verde falso: {infra_error[:200]}")
 
 
 if __name__ == "__main__":
