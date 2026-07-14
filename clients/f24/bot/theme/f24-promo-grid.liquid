@@ -69,6 +69,13 @@
   .f24p-grid__empty{grid-column:1/-1;text-align:center;color:rgba(255,255,255,.55);padding:48px 16px;border:1px dashed rgba(255,255,255,.12);border-radius:14px}
   .f24p-grid__foot{text-align:center;margin-top:clamp(32px,3.4vw,48px);display:flex;flex-direction:column;align-items:center;gap:14px}
   .f24p-grid__foot small{color:rgba(255,255,255,.45);font-size:.84rem}
+  .f24p-chips{display:flex;gap:9px;overflow-x:auto;padding:4px 2px 10px;margin:0 auto 8px;max-width:1040px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .f24p-chips::-webkit-scrollbar{display:none}
+  @media (min-width:760px){.f24p-chips{flex-wrap:wrap;justify-content:center;overflow:visible}}
+  .f24p-chip{flex:0 0 auto;cursor:pointer;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:rgba(255,255,255,.82);font-weight:700;font-size:.86rem;padding:9px 15px;border-radius:999px;white-space:nowrap;transition:background .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease;font-family:inherit}
+  .f24p-chip:hover{border-color:rgba(255,184,0,.5);color:#fff}
+  .f24p-chip.is-active{background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;border-color:transparent;box-shadow:0 6px 16px rgba(255,138,0,.3)}
+  .f24p-count{text-align:center;color:rgba(255,255,255,.5);font-size:.82rem;margin:0 0 clamp(20px,2.4vw,30px)}
 </style>
 
 <section class="f24p-grid-sec" id="promo-grid">
@@ -85,6 +92,59 @@
       {%- endif -%}
     </div>
 
+    {%- comment -%}
+      Filtro por tipo. Pre-pass: deriva la categoría de cada producto por keywords del título
+      (espejo de CATEGORY_RULES de build_f24_knowledge.py) → arma cat_arr (paralelo a
+      promo_products) para reusarla en las tarjetas SIN duplicar la lógica, y cats_present
+      para pintar solo los chips de categorías realmente vigentes.
+    {%- endcomment -%}
+    {%- assign cat_join = '' -%}
+    {%- for product in promo_products -%}
+      {%- assign t = product.title | downcase -%}
+      {%- assign cat = 'Otros' -%}
+      {%- if t contains 'generador' or t contains 'planta de luz' or t contains 'inverter' or t contains 'soldador' or t contains 'bakarac' -%}
+        {%- assign cat = 'Generadores' -%}
+      {%- elsif t contains 'tractor' or t contains 'giro cero' -%}
+        {%- assign cat = 'Tractores y Podadoras' -%}
+      {%- elsif t contains 'motosierra' or t contains 'serrucho' or t contains 'podador' or t contains 'podadora' -%}
+        {%- assign cat = 'Motosierras y Poda' -%}
+      {%- elsif t contains 'motobomba' or t contains 'bomba' or t contains 'presurizador' or t contains 'autocebante' -%}
+        {%- assign cat = 'Motobombas y Bombeo' -%}
+      {%- elsif t contains 'hidrolavadora' -%}
+        {%- assign cat = 'Hidrolavadoras' -%}
+      {%- elsif t contains 'compresor' -%}
+        {%- assign cat = 'Compresores' -%}
+      {%- elsif t contains 'desbrozador' or t contains 'desmalezadora' or t contains 'motocultor' or t contains 'fumigador' or t contains 'aspersor' or t contains 'soplador' or t contains 'ahoyadora' or t contains 'cortaseto' or t contains 'pasto' or t contains 'césped' or t contains 'cesped' or t contains 'peinadora' or t contains 'escarificador' or t contains 'aireador' -%}
+        {%- assign cat = 'Jardín y Desbroce' -%}
+      {%- elsif t contains 'ósmosis' or t contains 'osmosis' or t contains 'purificador' or t contains 'purific' -%}
+        {%- assign cat = 'Purificación de Agua' -%}
+      {%- elsif t contains 'calentador' or t contains 'boiler' -%}
+        {%- assign cat = 'Calentadores' -%}
+      {%- elsif t contains 'compactadora' or t contains 'bailarina' or t contains 'apisonadora' or t contains 'vibrador' or t contains 'revolvedora' -%}
+        {%- assign cat = 'Compactación y Obra' -%}
+      {%- elsif t contains 'motor' -%}
+        {%- assign cat = 'Motores' -%}
+      {%- elsif t contains 'torre' or t contains 'iluminaci' -%}
+        {%- assign cat = 'Torres de Iluminación' -%}
+      {%- endif -%}
+      {%- assign cat_join = cat_join | append: cat | append: '~' -%}
+    {%- endfor -%}
+    {%- assign cat_arr = cat_join | split: '~' -%}
+    {%- assign cats_present = cat_arr | uniq -%}
+    {%- assign canon = 'Generadores,Tractores y Podadoras,Motosierras y Poda,Motobombas y Bombeo,Hidrolavadoras,Compresores,Jardín y Desbroce,Purificación de Agua,Calentadores,Compactación y Obra,Motores,Torres de Iluminación,Otros' | split: ',' -%}
+
+    {%- if promo_products.size > 0 -%}
+      <div class="f24p-chips" role="tablist" aria-label="Filtrar promociones por tipo de producto">
+        <button type="button" class="f24p-chip is-active" data-filter="__all" aria-pressed="true">Todos</button>
+        {%- for c in canon -%}
+          {%- if cats_present contains c -%}
+            <button type="button" class="f24p-chip" data-filter="{{ c | escape }}" aria-pressed="false">{{ c }}</button>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <p class="f24p-count" data-count aria-live="polite">{{ promo_count }} equipos</p>
+    {%- endif -%}
+
     <div class="f24p-grid">
       {%- for product in promo_products -%}
         {%- assign off = 0 -%}
@@ -98,8 +158,9 @@
         {%- assign wa_msg_enc = wa_msg | url_encode -%}
         {%- assign wa_href = wa_url | append: '?text=' | append: wa_msg_enc -%}
         {%- assign d = forloop.index0 | modulo: 4 -%}
+        {%- assign card_cat = cat_arr[forloop.index0] | default: 'Otros' -%}
 
-        <article class="f24p-card f24p-rev" data-d="{{ d }}">
+        <article class="f24p-card f24p-rev" data-d="{{ d }}" data-cat="{{ card_cat | escape }}">
           <a href="{{ product.url }}" class="f24p-card__media" aria-label="Ver {{ product.title | escape }}">
             <span class="f24p-card__msi">3·6·9 MSI</span>
             {%- if off > 0 -%}<span class="f24p-card__off">-{{ off }}%</span>{%- endif -%}
@@ -139,6 +200,34 @@
       <small>{{ section.settings.foot_note }}</small>
     </div>
   </div>
+
+  <script>
+  (function(){
+    var sec = document.getElementById('promo-grid');
+    if(!sec) return;
+    var chips = sec.querySelectorAll('.f24p-chip');
+    var cards = sec.querySelectorAll('.f24p-card');
+    var countEl = sec.querySelector('[data-count]');
+    if(!chips.length) return;
+    function apply(f){
+      var n = 0;
+      cards.forEach(function(c){
+        var show = (f === '__all') || (c.getAttribute('data-cat') === f);
+        c.style.display = show ? '' : 'none';
+        if(show){ n++; }
+      });
+      if(countEl){ countEl.textContent = n + ' ' + (n === 1 ? 'equipo' : 'equipos'); }
+    }
+    chips.forEach(function(ch){
+      ch.addEventListener('click', function(){
+        chips.forEach(function(x){ x.classList.remove('is-active'); x.setAttribute('aria-pressed','false'); });
+        ch.classList.add('is-active');
+        ch.setAttribute('aria-pressed','true');
+        apply(ch.getAttribute('data-filter'));
+      });
+    });
+  })();
+  </script>
 </section>
 
 {% schema %}

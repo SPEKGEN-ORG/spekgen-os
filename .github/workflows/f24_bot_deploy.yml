@@ -24,6 +24,10 @@ on:
       - '!clients/f24/bot/_BLUEPRINTS/**'
       - '!clients/f24/bot/_promo_state.json'
       - '!clients/f24/bot/__pycache__/**'
+      # El tema de Shopify (landing de promos) NO es parte del cerebro del bot: se
+      # deploya aparte con shopify_client.upload_asset. Un cambio de landing no debe
+      # redeployar el bot de WhatsApp.
+      - '!clients/f24/bot/theme/**'
   workflow_dispatch:
 
 permissions:
