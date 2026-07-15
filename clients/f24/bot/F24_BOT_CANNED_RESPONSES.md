@@ -213,3 +213,41 @@ Claro, te paso con un asesor del equipo. Te responde en cuanto pueda — gracias
 
 **JSON esperado:**
 {"action":"human_handoff","messages":["Claro, te paso con un asesor del equipo. Te responde en cuanto pueda — gracias por tu paciencia 🛠️"],"products_mentioned":[],"intent":"other","order":null,"attachments":[]}
+
+---
+
+## pago_contraentrega_tyc
+
+> ⚠️ **BORRADOR — PENDIENTE DE APROBACIÓN DE SERGIO.** Estos Términos y Condiciones NO están
+> validados por Ferre24. El umbral exacto de monto, la política de verificación de INE, quién
+> entrega/cobra y la cobertura fina por zona los define Sergio antes de ponerlo LIVE. Mientras no
+> apruebe, este canned NO debe usarse en producción — el bot solo lo plantea como opción sujeta a
+> confirmación de un asesor y SIEMPRE termina en handoff humano (nunca cierra el COD solo).
+
+**Disparadores:** pago contraentrega, pagar al recibir, pagar cuando llegue, contra entrega, COD,
+pagar en efectivo al recibir, ¿me cobran al entregar?
+
+**Cuándo usar:** SOLO después de calificar al cliente (ver bloque PAGO CONTRAENTREGA (COD) del system
+prompt): CP en Guanajuato (36-38) / Jalisco (44-49) / Michoacán (58-61), pedido grande (~$10k+) de
+productos EN PROMO, pago de CONTADO (no MSI), y el cliente pidió las condiciones. Si NO califica, NO
+mandes este bloque. El cliente debe ACEPTAR estos términos explícitamente antes de que captures sus
+datos y escales.
+
+**Respuesta (texto — BORRADOR de T&C, sujeto a confirmación de asesor):**
+Con gusto. Pago contraentrega significa que pagas en EFECTIVO al recibir tu equipo 🚚. Aplica bajo estas
+condiciones (te las confirma un asesor al cerrar): 1) Solo entregamos contraentrega en Guanajuato, Jalisco
+y Michoacán. 2) Solo para pedidos de contado de $10,000 o más en productos que están en promoción. 3) No
+aplica a meses sin intereses (el COD es de contado). 4) Al entregar te pedimos una identificación oficial
+(INE) y un comprobante de domicilio para validar la entrega. 5) La mercancía se entrega y se cobra en el
+momento; un asesor confirma la fecha y coordina el envío. ¿Estás de acuerdo con estas condiciones? Si sí,
+te pido tu nombre y dirección completa para pasarlo con el asesor que lo agenda.
+
+**Acción adicional:** action=respond mientras el cliente decide/acepta. Una vez que ACEPTA y ya diste
+nombre + dirección + CP → action=escalate con el lead_summary de COD (ver system prompt). El COD NUNCA
+cierra con create_order — siempre termina en handoff a Sergio/Edgar.
+
+**JSON esperado (presentando los T&C, cliente aún no acepta):**
+{"action":"respond","messages":["Con gusto. Pago contraentrega significa que pagas en EFECTIVO al recibir tu equipo 🚚. Aplica bajo estas condiciones (te las confirma un asesor al cerrar):","1) Solo entregamos contraentrega en Guanajuato, Jalisco y Michoacan. 2) Solo para pedidos de contado de $10,000 o mas en productos en promocion. 3) No aplica a meses sin intereses (el COD es de contado).","4) Al entregar te pedimos identificacion oficial (INE) y comprobante de domicilio para validar la entrega. 5) La mercancia se entrega y se cobra en el momento; un asesor confirma la fecha y coordina el envio.","Estas de acuerdo con estas condiciones? Si si, te pido tu nombre y direccion completa para pasarlo con el asesor que lo agenda."],"products_mentioned":["GP9500TB"],"intent":"ready_to_buy","codigo_postal":"45100","order":null,"attachments":[]}
+
+**JSON esperado (cliente ACEPTÓ + ya dio nombre y dirección → escalate con lead_summary COD):**
+{"action":"escalate","messages":["¡Listo! Ya con eso te paso con un asesor para que valide tu identificacion, confirme el total y agende la entrega contraentrega 🛠️. Te contacta en breve por aqui."],"products_mentioned":["GP9500TB"],"intent":"b2b_lead","codigo_postal":"45100","lead_summary":"PAGO CONTRAENTREGA · Estado: Jalisco · Producto(s) promo: GP9500TB · Cantidad: 1 · CP: 45100 · Cliente: Juan Perez · Direccion: Av. Vallarta 100, Col. Centro, Guadalajara, Jalisco · Contado · FALTA VERIFICAR: INE + comprobante de domicilio (el asesor recolecta y confirma umbral $ y entrega)","order":null,"attachments":[]}
