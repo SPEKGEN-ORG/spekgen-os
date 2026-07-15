@@ -1,19 +1,17 @@
 {{ 'f24-promo.js' | asset_url | script_tag }}
 
 {%- comment -%}
-  F24 Promo · Grid (PLANO) — refactor 2026-06-13.
-  Renderiza TODOS los productos de la colección `promociones-vigentes` directo, sin
-  grupos hardcodeados ni tags `promo-grupo-*`. El orden lo controla `sort_order`
-  (price-asc por defecto). La colección la reconcilia sync_f24_landing.py contra la
-  pestaña "🔥 PROMO ACTIVA" del Sheet: al expirar una promo, el producto sale de la
-  colección y su tarjeta desaparece sola. El diseño de cada tarjeta es idéntico al
-  grid agrupado anterior.
+  F24 Promo · Grid + Filtros (v2, 2026-07-14).
+  Grid PLANO de la colección `promociones-vigentes` (server-side) + panel de filtros
+  estilo Lowe's: sidebar en desktop, drawer con botón "Filtrar" visible en móvil.
+  Filtra client-side por Tipo (categoría derivada por keywords, espejo de CATEGORY_RULES),
+  Marca (metafield f24.marca) y Precio (buckets). Multi-selección: OR dentro de un grupo,
+  AND entre grupos. La colección la reconcilia sync_f24_landing.py contra "🔥 PROMO ACTIVA".
 {%- endcomment -%}
 
 {%- assign col_handle = section.settings.collection | default: 'promociones-vigentes' -%}
 {%- assign promo = collections[col_handle] -%}
 {%- assign wa_url = section.settings.wa_url -%}
-{%- comment -%} Datos vivos: contador + fecha desde la colección/metafield (sync_f24_landing.py). {%- endcomment -%}
 {%- assign promo_count = promo.products_count -%}
 {%- assign promo_end_iso = promo.metafields.custom.promo_end.value | default: section.settings.end_iso -%}
 {%- assign promo_fecha = promo.metafields.custom.promo_fecha.value | default: 'la fecha límite' -%}
@@ -39,9 +37,54 @@
   .f24p-grid-head__sub{color:rgba(255,255,255,.65);font-size:1rem;line-height:1.55;max-width:60ch;margin:0 auto}
   .f24p-grid-head__cd{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,184,0,.3);color:#ffb800;font-weight:700;font-size:.86rem}
   .f24p-grid-head__cd svg{width:14px;height:14px;animation:f24p-pulse 1.6s ease-in-out infinite}
+
+  /* ---- Layout con sidebar ---- */
+  .f24p-layout{display:block}
+  @media (min-width:900px){.f24p-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:clamp(20px,2.4vw,32px);align-items:start}}
+
+  /* ---- Barra móvil (botón Filtrar visible) ---- */
+  .f24p-mbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+  @media (min-width:900px){.f24p-mbar{display:none}}
+  .f24p-openf{display:inline-flex;align-items:center;gap:9px;cursor:pointer;background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;font-weight:800;font-size:.98rem;padding:13px 22px;border:none;border-radius:12px;font-family:inherit;box-shadow:0 8px 20px rgba(255,138,0,.32)}
+  .f24p-openf svg{width:18px;height:18px}
+  .f24p-openf__n{background:#0a0a0a;color:#ffb800;border-radius:999px;min-width:21px;height:21px;display:none;align-items:center;justify-content:center;font-size:.76rem;font-weight:800;padding:0 6px}
+  .f24p-openf__n.on{display:inline-flex}
+
+  /* ---- Sidebar / Drawer ---- */
+  .f24p-side{background:#0e1014;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden}
+  @media (min-width:900px){.f24p-side{position:sticky;top:16px;max-height:calc(100vh - 32px);display:flex;flex-direction:column}}
+  @media (max-width:899px){
+    .f24p-side{position:fixed;top:0;right:0;bottom:0;width:min(88vw,360px);z-index:1000;border-radius:0;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.7,.3,1);display:flex;flex-direction:column}
+    .f24p-side.is-open{transform:none}
+  }
+  .f24p-side__head{display:flex;align-items:center;justify-content:space-between;padding:16px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .f24p-side__head b{font-weight:900;font-size:1.02rem;color:#fff}
+  .f24p-closef{display:none;background:none;border:none;color:rgba(255,255,255,.7);cursor:pointer;padding:4px;font-size:1.3rem;line-height:1}
+  @media (max-width:899px){.f24p-closef{display:block}}
+  .f24p-side__body{padding:2px 0;overflow-y:auto;flex:1}
+  .f24p-fgroup{border-top:1px solid rgba(255,255,255,.07);padding:14px 16px}
+  .f24p-fgroup:first-child{border-top:none}
+  .f24p-fgroup__t{font-weight:800;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:#ffb800;margin:0 0 8px}
+  .f24p-opt{display:flex;align-items:center;gap:11px;padding:7px 0;cursor:pointer;color:rgba(255,255,255,.86);font-size:.93rem;line-height:1.25}
+  .f24p-opt:hover{color:#fff}
+  .f24p-opt input{width:18px;height:18px;accent-color:#ffb800;cursor:pointer;flex:0 0 auto;margin:0}
+  .f24p-side__foot{display:flex;gap:10px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08);position:sticky;bottom:0;background:#0e1014}
+  .f24p-clear{flex:0 0 auto;cursor:pointer;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.85);font-weight:700;font-size:.9rem;padding:11px 16px;border-radius:10px;font-family:inherit}
+  .f24p-clear:hover{color:#fff;border-color:rgba(255,184,0,.5)}
+  .f24p-apply{flex:1;display:none;cursor:pointer;background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;font-weight:800;font-size:.95rem;padding:11px;border:none;border-radius:10px;font-family:inherit}
+  @media (max-width:899px){.f24p-apply{display:block}}
+  .f24p-scrim{position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:999;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
+  .f24p-scrim.is-open{opacity:1;visibility:visible}
+  @media (min-width:900px){.f24p-scrim{display:none}}
+
+  .f24p-count{color:rgba(255,255,255,.55);font-size:.86rem;font-weight:600;margin:0 0 14px}
+  .f24p-count--d{display:none}
+  @media (min-width:900px){.f24p-count--d{display:block}}
+  .f24p-empty2{display:none;text-align:center;color:rgba(255,255,255,.55);padding:48px 16px;border:1px dashed rgba(255,255,255,.12);border-radius:14px}
+  .f24p-empty2.on{display:block}
+
   .f24p-grid{display:grid;gap:clamp(14px,1.6vw,22px);grid-template-columns:repeat(2,minmax(0,1fr))}
-  @media (min-width:760px){.f24p-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-  @media (min-width:1080px){.f24p-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  @media (min-width:1080px){.f24p-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
   .f24p-card{background:linear-gradient(180deg,#0e1014,#0a0b0e);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.3,1),border-color .25s ease,box-shadow .25s ease;position:relative}
   .f24p-card:hover{transform:translateY(-6px);border-color:rgba(255,184,0,.4);box-shadow:0 24px 56px rgba(0,0,0,.55),0 0 0 1px rgba(255,184,0,.15)}
   .f24p-card__media{position:relative;aspect-ratio:1/1;background:#13151a;overflow:hidden}
@@ -49,8 +92,6 @@
   .f24p-card:hover .f24p-card__media img{transform:scale(1.06)}
   .f24p-card__msi{position:absolute;top:10px;left:10px;background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;font-weight:800;font-size:.72rem;letter-spacing:.04em;padding:6px 10px;border-radius:999px;text-transform:uppercase;box-shadow:0 6px 16px rgba(255,138,0,.35)}
   .f24p-card__off{position:absolute;top:10px;right:10px;background:#e63946;color:#fff;font-weight:800;font-size:.78rem;padding:6px 9px;border-radius:8px}
-  .f24p-card__hot{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);color:#ff6a00;font-weight:800;font-size:.7rem;padding:5px 9px;border-radius:8px;display:inline-flex;align-items:center;gap:5px;text-transform:uppercase;letter-spacing:.04em;border:1px solid rgba(255,106,0,.4)}
-  .f24p-card__hot svg{width:11px;height:11px;animation:f24p-pulse 1.4s ease-in-out infinite}
   .f24p-card__body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
   .f24p-card__title{font-weight:700;color:#fff;font-size:.98rem;line-height:1.3;min-height:2.6em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-decoration:none}
   .f24p-card__prices{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
@@ -85,60 +126,226 @@
       {%- endif -%}
     </div>
 
-    <div class="f24p-grid">
-      {%- for product in promo_products -%}
-        {%- assign off = 0 -%}
-        {%- if product.compare_at_price > product.price and product.compare_at_price > 0 -%}
-          {%- assign off = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -%}
-        {%- endif -%}
-        {%- assign sku = product.selected_or_first_available_variant.sku | default: product.variants.first.sku -%}
-        {%- comment -%} product.price is in cents; keep msi9 in cents so money_without_currency formats it correctly {%- endcomment -%}
-        {%- assign msi9 = product.price | divided_by: 9 -%}
-        {%- assign wa_msg = 'Hola Ferre24, me interesa ' | append: product.title | append: ' (' | append: sku | append: ') a 9 MSI sin intereses. ¿Me cotizan antes que termine la promo?' -%}
-        {%- assign wa_msg_enc = wa_msg | url_encode -%}
-        {%- assign wa_href = wa_url | append: '?text=' | append: wa_msg_enc -%}
-        {%- assign d = forloop.index0 | modulo: 4 -%}
+    {%- comment -%} Pre-pass: deriva Tipo (keywords), Marca (metafield f24.marca) y bucket de Precio por producto. Arrays paralelos a promo_products para reusar en las tarjetas. {%- endcomment -%}
+    {%- assign cat_join = '' -%}
+    {%- assign brand_join = '' -%}
+    {%- assign price_join = '' -%}
+    {%- for product in promo_products -%}
+      {%- assign t = product.title | downcase -%}
+      {%- assign cat = 'Otros' -%}
+      {%- if t contains 'generador' or t contains 'planta de luz' or t contains 'inverter' or t contains 'soldador' or t contains 'bakarac' -%}
+        {%- assign cat = 'Generadores' -%}
+      {%- elsif t contains 'tractor' or t contains 'giro cero' -%}
+        {%- assign cat = 'Tractores y Podadoras' -%}
+      {%- elsif t contains 'motosierra' or t contains 'serrucho' or t contains 'podador' or t contains 'podadora' -%}
+        {%- assign cat = 'Motosierras y Poda' -%}
+      {%- elsif t contains 'motobomba' or t contains 'bomba' or t contains 'presurizador' or t contains 'autocebante' -%}
+        {%- assign cat = 'Motobombas y Bombeo' -%}
+      {%- elsif t contains 'hidrolavadora' -%}
+        {%- assign cat = 'Hidrolavadoras' -%}
+      {%- elsif t contains 'compresor' -%}
+        {%- assign cat = 'Compresores' -%}
+      {%- elsif t contains 'desbrozador' or t contains 'desmalezadora' or t contains 'motocultor' or t contains 'fumigador' or t contains 'aspersor' or t contains 'soplador' or t contains 'ahoyadora' or t contains 'cortaseto' or t contains 'pasto' or t contains 'césped' or t contains 'cesped' or t contains 'peinadora' or t contains 'escarificador' or t contains 'aireador' -%}
+        {%- assign cat = 'Jardín y Desbroce' -%}
+      {%- elsif t contains 'ósmosis' or t contains 'osmosis' or t contains 'purificador' or t contains 'purific' -%}
+        {%- assign cat = 'Purificación de Agua' -%}
+      {%- elsif t contains 'calentador' or t contains 'boiler' -%}
+        {%- assign cat = 'Calentadores' -%}
+      {%- elsif t contains 'compactadora' or t contains 'bailarina' or t contains 'apisonadora' or t contains 'vibrador' or t contains 'revolvedora' -%}
+        {%- assign cat = 'Compactación y Obra' -%}
+      {%- elsif t contains 'motor' -%}
+        {%- assign cat = 'Motores' -%}
+      {%- elsif t contains 'torre' or t contains 'iluminaci' -%}
+        {%- assign cat = 'Torres de Iluminación' -%}
+      {%- endif -%}
+      {%- assign cat_join = cat_join | append: cat | append: '~' -%}
 
-        <article class="f24p-card f24p-rev" data-d="{{ d }}">
-          <a href="{{ product.url }}" class="f24p-card__media" aria-label="Ver {{ product.title | escape }}">
-            <span class="f24p-card__msi">3·6·9 MSI</span>
-            {%- if off > 0 -%}<span class="f24p-card__off">-{{ off }}%</span>{%- endif -%}
-            {%- if product.featured_image -%}
-              <img src="{{ product.featured_image | image_url: width: 640 }}" alt="{{ product.title | escape }}" width="640" height="640" loading="lazy">
-            {%- else -%}
-              {{ 'product-1' | placeholder_svg_tag }}
-            {%- endif -%}
-          </a>
-          <div class="f24p-card__body">
-            <a href="{{ product.url }}" class="f24p-card__title">{{ product.title }}</a>
-            <div class="f24p-card__prices">
-              <span class="f24p-card__price">{{ product.price | money }}</span>
-              {%- if off > 0 -%}<span class="f24p-card__was">{{ product.compare_at_price | money }}</span>{%- endif -%}
-            </div>
-            <div class="f24p-card__msi-bd">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20M6 15h4"/></svg>
-              Desde <b>${{ msi9 | money_without_currency }}</b>/mes a 9 MSI
-            </div>
-            <div class="f24p-card__ctas">
-              <a href="{{ product.url }}" class="f24p-card__buy">
-                Ver y comprar
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-              </a>
-              <a href="{{ wa_href }}" class="f24p-card__wa" target="_blank" rel="noopener" data-wa data-wa-group="promo-card" aria-label="Cotizar {{ product.title | escape }} por WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.789-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
+      {%- assign br = product.metafields.f24.marca.value | default: '' -%}
+      {%- assign brand_join = brand_join | append: br | append: '~' -%}
+
+      {%- assign cents = product.price -%}
+      {%- if cents < 500000 -%}
+        {%- assign pb = 'p1' -%}
+      {%- elsif cents < 1500000 -%}
+        {%- assign pb = 'p2' -%}
+      {%- elsif cents < 5000000 -%}
+        {%- assign pb = 'p3' -%}
       {%- else -%}
-        <div class="f24p-grid__empty">No hay productos en la colección <code>{{ col_handle }}</code> todavía. Corre <code>sync_f24_landing.py --apply</code>.</div>
-      {%- endfor -%}
+        {%- assign pb = 'p4' -%}
+      {%- endif -%}
+      {%- assign price_join = price_join | append: pb | append: '~' -%}
+    {%- endfor -%}
+    {%- assign cat_arr = cat_join | split: '~' -%}
+    {%- assign brand_arr = brand_join | split: '~' -%}
+    {%- assign price_arr = price_join | split: '~' -%}
+    {%- assign cats_present = cat_arr | uniq -%}
+    {%- assign brands_present = brand_arr | uniq | sort_natural -%}
+    {%- assign prices_present = price_arr | uniq -%}
+    {%- assign canon = 'Generadores,Tractores y Podadoras,Motosierras y Poda,Motobombas y Bombeo,Hidrolavadoras,Compresores,Jardín y Desbroce,Purificación de Agua,Calentadores,Compactación y Obra,Motores,Torres de Iluminación,Otros' | split: ',' -%}
+    {%- assign price_keys = 'p1,p2,p3,p4' | split: ',' -%}
+    {%- assign price_labels = 'Menos de $5,000|$5,000 a $15,000|$15,000 a $50,000|Más de $50,000' | split: '|' -%}
+
+    <div class="f24p-layout">
+      {%- comment -%} Barra móvil con botón Filtrar (bien visible) {%- endcomment -%}
+      <div class="f24p-mbar">
+        <button type="button" class="f24p-openf" data-open-filters aria-label="Abrir filtros">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+          Filtrar<span class="f24p-openf__n" data-filter-badge></span>
+        </button>
+        <span class="f24p-count" data-count>{{ promo_count }} equipos</span>
+      </div>
+
+      {%- comment -%} Panel de filtros (sidebar en desktop, drawer en móvil) {%- endcomment -%}
+      <aside class="f24p-side" data-drawer aria-label="Filtros de promociones">
+        <div class="f24p-side__head">
+          <b>Filtros</b>
+          <button type="button" class="f24p-closef" data-close-filters aria-label="Cerrar filtros">&times;</button>
+        </div>
+        <div class="f24p-side__body">
+          {%- comment -%} Grupo: Tipo {%- endcomment -%}
+          <div class="f24p-fgroup">
+            <p class="f24p-fgroup__t">Tipo de producto</p>
+            {%- for c in canon -%}
+              {%- if cats_present contains c -%}
+                <label class="f24p-opt"><input type="checkbox" name="cat" value="{{ c | escape }}">{{ c }}</label>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+          {%- comment -%} Marca: omitida por ahora — los metafields f24.marca traen ruido
+             (duplicados por mayúsculas + modelos metidos como marca). Reactivar cuando se
+             normalicen. La lógica JS tolera su ausencia (s.marca queda vacío). {%- endcomment -%}
+          {%- comment -%} Grupo: Precio {%- endcomment -%}
+          <div class="f24p-fgroup">
+            <p class="f24p-fgroup__t">Precio</p>
+            {%- for i in (0..3) -%}
+              {%- assign pk = price_keys[i] -%}
+              {%- if prices_present contains pk -%}
+                <label class="f24p-opt"><input type="checkbox" name="precio" value="{{ pk }}">{{ price_labels[i] }}</label>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+        <div class="f24p-side__foot">
+          <button type="button" class="f24p-clear" data-clear-filters>Limpiar</button>
+          <button type="button" class="f24p-apply" data-apply-filters>Ver <span data-count-btn>{{ promo_count }}</span> resultados</button>
+        </div>
+      </aside>
+      <div class="f24p-scrim" data-scrim></div>
+
+      {%- comment -%} Columna de resultados {%- endcomment -%}
+      <div class="f24p-main">
+        <p class="f24p-count f24p-count--d" data-count>{{ promo_count }} equipos</p>
+        <p class="f24p-empty2" data-empty>Ningún equipo coincide con esos filtros. <button type="button" class="f24p-clear" data-clear-filters style="margin-left:6px">Limpiar filtros</button></p>
+        <div class="f24p-grid">
+          {%- for product in promo_products -%}
+            {%- assign off = 0 -%}
+            {%- if product.compare_at_price > product.price and product.compare_at_price > 0 -%}
+              {%- assign off = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -%}
+            {%- endif -%}
+            {%- assign sku = product.selected_or_first_available_variant.sku | default: product.variants.first.sku -%}
+            {%- assign msi9 = product.price | divided_by: 9 -%}
+            {%- assign wa_msg = 'Hola Ferre24, me interesa ' | append: product.title | append: ' (' | append: sku | append: ') a 9 MSI sin intereses. ¿Me cotizan antes que termine la promo?' -%}
+            {%- assign wa_msg_enc = wa_msg | url_encode -%}
+            {%- assign wa_href = wa_url | append: '?text=' | append: wa_msg_enc -%}
+            {%- assign d = forloop.index0 | modulo: 4 -%}
+            {%- assign card_cat = cat_arr[forloop.index0] | default: 'Otros' -%}
+            {%- assign card_brand = brand_arr[forloop.index0] | default: '' | handleize -%}
+            {%- assign card_price = price_arr[forloop.index0] | default: 'p1' -%}
+
+            <article class="f24p-card f24p-rev" data-d="{{ d }}" data-cat="{{ card_cat | escape }}" data-brand="{{ card_brand }}" data-price="{{ card_price }}">
+              <a href="{{ product.url }}" class="f24p-card__media" aria-label="Ver {{ product.title | escape }}">
+                <span class="f24p-card__msi">3·6·9 MSI</span>
+                {%- if off > 0 -%}<span class="f24p-card__off">-{{ off }}%</span>{%- endif -%}
+                {%- if product.featured_image -%}
+                  <img src="{{ product.featured_image | image_url: width: 640 }}" alt="{{ product.title | escape }}" width="640" height="640" loading="lazy">
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag }}
+                {%- endif -%}
+              </a>
+              <div class="f24p-card__body">
+                <a href="{{ product.url }}" class="f24p-card__title">{{ product.title }}</a>
+                <div class="f24p-card__prices">
+                  <span class="f24p-card__price">{{ product.price | money }}</span>
+                  {%- if off > 0 -%}<span class="f24p-card__was">{{ product.compare_at_price | money }}</span>{%- endif -%}
+                </div>
+                <div class="f24p-card__msi-bd">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20M6 15h4"/></svg>
+                  Desde <b>${{ msi9 | money_without_currency }}</b>/mes a 9 MSI
+                </div>
+                <div class="f24p-card__ctas">
+                  <a href="{{ product.url }}" class="f24p-card__buy">
+                    Ver y comprar
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="{{ wa_href }}" class="f24p-card__wa" target="_blank" rel="noopener" data-wa data-wa-group="promo-card" aria-label="Cotizar {{ product.title | escape }} por WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.789-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          {%- else -%}
+            <div class="f24p-grid__empty">No hay productos en la colección <code>{{ col_handle }}</code> todavía. Corre <code>sync_f24_landing.py --apply</code>.</div>
+          {%- endfor -%}
+        </div>
+      </div>
     </div>
 
     <div class="f24p-grid__foot f24p-rev">
       <small>{{ section.settings.foot_note }}</small>
     </div>
   </div>
+
+  <script>
+  (function(){
+    var sec = document.getElementById('promo-grid');
+    if(!sec) return;
+    var cards = [].slice.call(sec.querySelectorAll('.f24p-card'));
+    var inputs = [].slice.call(sec.querySelectorAll('.f24p-side input[type=checkbox]'));
+    var countEls = [].slice.call(sec.querySelectorAll('[data-count]'));
+    var countBtn = sec.querySelector('[data-count-btn]');
+    var badge = sec.querySelector('[data-filter-badge]');
+    var emptyEl = sec.querySelector('[data-empty]');
+    var drawer = sec.querySelector('[data-drawer]');
+    var scrim = sec.querySelector('[data-scrim]');
+    if(!cards.length) return;
+
+    function selected(){
+      var s = {cat:[], marca:[], precio:[]};
+      inputs.forEach(function(i){ if(i.checked){ s[i.name].push(i.value); } });
+      return s;
+    }
+    function apply(){
+      var s = selected(), n = 0;
+      cards.forEach(function(c){
+        var ok = true;
+        if(s.cat.length && s.cat.indexOf(c.getAttribute('data-cat')) < 0) ok = false;
+        if(ok && s.marca.length && s.marca.indexOf(c.getAttribute('data-brand')) < 0) ok = false;
+        if(ok && s.precio.length && s.precio.indexOf(c.getAttribute('data-price')) < 0) ok = false;
+        c.style.display = ok ? '' : 'none';
+        if(ok){ n++; }
+      });
+      var active = s.cat.length + s.marca.length + s.precio.length;
+      var label = n + ' ' + (n === 1 ? 'equipo' : 'equipos');
+      countEls.forEach(function(el){ el.textContent = label; });
+      if(countBtn){ countBtn.textContent = n; }
+      if(badge){ badge.textContent = active || ''; badge.classList.toggle('on', active > 0); }
+      if(emptyEl){ emptyEl.classList.toggle('on', n === 0); }
+    }
+    inputs.forEach(function(i){ i.addEventListener('change', apply); });
+
+    // Drawer móvil
+    function openD(){ if(drawer){drawer.classList.add('is-open');} if(scrim){scrim.classList.add('is-open');} document.body.style.overflow='hidden'; }
+    function closeD(){ if(drawer){drawer.classList.remove('is-open');} if(scrim){scrim.classList.remove('is-open');} document.body.style.overflow=''; }
+    sec.querySelectorAll('[data-open-filters]').forEach(function(b){ b.addEventListener('click', openD); });
+    sec.querySelectorAll('[data-close-filters],[data-apply-filters]').forEach(function(b){ b.addEventListener('click', closeD); });
+    if(scrim){ scrim.addEventListener('click', closeD); }
+
+    // Limpiar
+    sec.querySelectorAll('[data-clear-filters]').forEach(function(b){
+      b.addEventListener('click', function(){ inputs.forEach(function(i){ i.checked = false; }); apply(); });
+    });
+  })();
+  </script>
 </section>
 
 {% schema %}
