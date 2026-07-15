@@ -1,0 +1,44 @@
+{%- comment -%}
+  F24 · MSI en pesos INLINE para el buy box (bajo el precio). Patrón Agro Coyote.
+  Render: {% render 'f24-msi-inline', product: product %}
+  Los plazos salen del metafield f24.msi_meses (ej. "3,6" o "3,6,9,12"), que escribe
+  sync_f24_promos.py desde la col "Meses MSI" del Sheet INVENTARIO F24 (source of truth).
+  Sin metafield → default "3,6" (siempre disponibles en checkout con TDC; 9/12 = solo promo).
+  Se calcula de product.price. Se oculta bajo el umbral min_msi_cents.
+{%- endcomment -%}
+{%- assign v = product.selected_or_first_available_variant -%}
+{%- assign unit_cents = v.price -%}
+{%- assign min_msi = 100000 -%}
+{%- if unit_cents >= min_msi -%}
+{%- assign msi_raw = product.metafields.f24.msi_meses.value | default: '3,6' -%}
+{%- assign msi_list = msi_raw | remove: ' ' | split: ',' -%}
+{%- capture msi_title -%}{% for m in msi_list %}{% if forloop.first %}{{ m }}{% elsif forloop.last %} y {{ m }}{% else %}, {{ m }}{% endif %}{% endfor %}{%- endcapture -%}
+<div class="f24msi">
+  <div class="f24msi__title"><span class="f24msi__badge">MSI</span> Disponible a <b>{{ msi_title | strip }}</b> meses sin intereses</div>
+  <div class="f24msi__grid" style="grid-template-columns:repeat({{ msi_list.size }},1fr)">
+    {%- for m in msi_list -%}
+      {%- assign mi = m | plus: 0 -%}
+      {%- if mi > 0 -%}
+        {%- assign msi_amt = unit_cents | divided_by: mi -%}
+        <div class="f24msi__chip{% if mi > 6 %} f24msi__chip--promo{% endif %}"><span class="f24msi__mo">{{ mi }} meses</span><b>{{ msi_amt | money }}</b><span class="f24msi__per">/mes</span></div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+  <p class="f24msi__note">3 y 6 MSI en el checkout con tarjeta de crédito · <b>9 y 12 MSI</b> en productos en promoción (pídelos por WhatsApp).</p>
+</div>
+<style>
+  .f24msi{margin:8px 0 4px;font-family:'Inter',-apple-system,Arial,sans-serif}
+  .f24msi__title{font-size:13.5px;font-weight:700;color:#0A0A0A;display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:9px}
+  .f24msi__title b{color:#B45309}
+  .f24msi__badge{background:#FFD500;color:#0A0A0A;font-weight:900;font-size:11px;letter-spacing:.05em;padding:2px 7px;border-radius:5px}
+  .f24msi__grid{display:grid;gap:7px}
+  @media (max-width:520px){.f24msi__grid{grid-template-columns:repeat(2,1fr)!important}}
+  .f24msi__chip{border:1.5px solid #e6ddc4;background:#fffdf5;border-radius:10px;padding:9px 6px;text-align:center;display:flex;flex-direction:column;gap:1px}
+  .f24msi__chip--promo{opacity:.9;border-style:dashed}
+  .f24msi__mo{font-size:11px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:.03em}
+  .f24msi__chip b{font-size:14.5px;font-weight:900;color:#0A0A0A;font-variant-numeric:tabular-nums;line-height:1.15}
+  .f24msi__per{font-size:10.5px;color:#999;font-weight:600}
+  .f24msi__note{font-size:11.5px;color:#666;line-height:1.45;margin:9px 0 0}
+  .f24msi__note b{color:#0A0A0A}
+</style>
+{%- endif -%}
