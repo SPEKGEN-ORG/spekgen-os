@@ -992,6 +992,7 @@ F24_TEAM_EMAILS = [
 GMAIL_CONN_ID = 8183100        # conexión Gmail de Make (team 354061, reusada de HC)
 HANDOFF_TAG = "requiere-humano"
 CALL_TAG = "pidio-llamada"            # R32: el cliente pidió que le llamen → alerta en el panel del rep
+COD_TAG = "cod-candidato"            # COD: pedido-promo que califica a pago contraentrega → verificación humana
 GHL_TAGS_DATASTRUCTURE_ID = 395040   # body {tags:[...]} para POST /contacts/{id}/tags
 
 # Filtro: dispara solo cuando Claude devuelve action escalate o human_handoff (OR),
@@ -1168,6 +1169,21 @@ def ghl_tag_call_module(module_id, x, y):
     return m
 
 
+def ghl_tag_cod_module(module_id, x, y):
+    """Agrega el tag 'cod-candidato' SOLO cuando el lead_summary del escalate empieza/contiene
+    'PAGO CONTRAENTREGA' (el bot marcó un pedido-promo que califica a pago contraentrega). El equipo
+    lo ve etiquetado para recolectar INE + comprobante, confirmar el umbral $ y coordinar la entrega.
+    El email de handoff (team_email_module → F24_TEAM_EMAILS: Sergio/Edgar/Alfredo/Gibran) ya notifica
+    en el mismo route con el lead_summary completo. Mismo patrón probado que ghl_tag_call_module."""
+    m = ghl_tag_handoff_module(module_id, x, y)          # reusa el patrón probado
+    m["mapper"]["dataStructureBodyContent"] = {"tags": [COD_TAG]}
+    m["filter"] = {"name": "solo si es candidato COD",
+                   "conditions": [[{"a": "{{8.lead_summary}}", "o": "text:contain",
+                                    "b": "PAGO CONTRAENTREGA"}]]}
+    m["onerror"] = [resume_handler(103, {"ok": True}, x, y + 200)]
+    return m
+
+
 def ghl_tag_pause_module(module_id, x, y):
     """Agrega el tag 'bot-pausado' al contacto cuando un humano staff toma la conversación
     (Route C / polling). Hace el mute VISIBLE en el inbox de GHL. Mismo patrón probado que
@@ -1278,6 +1294,7 @@ sub_order_ds = datastore_add_claude(44, 3500, 300, parse_module_id=8, is_order=T
 sub_handoff_email = team_email_module(45, 2900, 600)   # lleva el ESCALATE_FILTER (gate de la sub-route)
 sub_handoff_tag = ghl_tag_handoff_module(46, 3150, 600)
 sub_handoff_call_tag = ghl_tag_call_module(49, 3400, 600)  # tag 'pidio-llamada' solo si fue callback R32
+sub_handoff_cod_tag = ghl_tag_cod_module(55, 3650, 600)    # tag 'cod-candidato' solo si lead_summary es COD
 
 # Sub-route de NOMBRE: guarda el firstName real en GHL cuando el bot capturó customer_name.
 # Ruta propia (independiente de action/CP) — corre en cualquier acción si hay customer_name.
@@ -1321,7 +1338,7 @@ post_parse_router = {
     "routes": [
         {"flow": [sub_normal_send, sub_normal_ds, sub_cp_save]},
         {"flow": [sub_order_send, sub_order_create, sub_order_link, sub_order_ds]},
-        {"flow": [sub_handoff_email, sub_handoff_tag, sub_handoff_call_tag]},
+        {"flow": [sub_handoff_email, sub_handoff_tag, sub_handoff_call_tag, sub_handoff_cod_tag]},
         {"flow": [sub_name_save]},
         {"flow": [sub_quote_http, sub_quote_send]},
         {"flow": [sub_book_slots, sub_book_slots_send]},
