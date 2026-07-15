@@ -15,6 +15,8 @@ const SHOPIFY_CLIENT_SECRET = Deno.env.get("SHOPIFY_CLIENT_SECRET") ?? "";
 const SHOPIFY_API_VERSION = Deno.env.get("SHOPIFY_API_VERSION") ?? "2024-10";
 const MP_TOKEN = Deno.env.get("MP_CUENTAB_TOKEN") ?? "";
 const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
+const GHL_LOC = "HNuSoIl2aCXP2DXEdMVZ";
+const GHL_PIPELINE = "d8xeJjhr4wkmPv8xr5bA"; // Ventas Whatsapp
 
 function ok(body: unknown = { ok: true }) {
   return new Response(JSON.stringify(body), { status: 200, headers: { "Content-Type": "application/json" } });
@@ -58,6 +60,22 @@ async function tagGhl(contactId: string, tag: string, note: string) {
   try {
     await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/tags`, { method: "POST", headers: h, body: JSON.stringify({ tags: [tag] }) });
     await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/notes`, { method: "POST", headers: h, body: JSON.stringify({ body: note }) });
+  } catch (_e) { /* best-effort */ }
+}
+
+// Cierra la oportunidad del contacto en el pipeline "Ventas Whatsapp": la marca status:won y le
+// pone el valor NETO de producto (sin envío/impuestos). Best-effort — nunca rompe el flujo del pago.
+async function markOppWon(contactId: string, netValue: number) {
+  if (!GHL_TOKEN || !contactId) return;
+  const h = { Authorization: `Bearer ${GHL_TOKEN}`, Version: "2021-07-28", "Content-Type": "application/json", Accept: "application/json" };
+  try {
+    const sr = await fetch(`https://services.leadconnectorhq.com/opportunities/search?location_id=${GHL_LOC}&contact_id=${contactId}&pipeline_id=${GHL_PIPELINE}&limit=1`, { headers: h });
+    if (!sr.ok) return;
+    const opp = (await sr.json())?.opportunities?.[0];
+    if (!opp?.id) return; // sin opp que cerrar (el opp-track debió crearla; no la inventamos aquí)
+    const body: Record<string, unknown> = { status: "won" };
+    if (Number.isFinite(netValue) && netValue > 0) body.monetaryValue = netValue;
+    await fetch(`https://services.leadconnectorhq.com/opportunities/${opp.id}`, { method: "PUT", headers: h, body: JSON.stringify(body) });
   } catch (_e) { /* best-effort */ }
 }
 
@@ -119,8 +137,10 @@ Deno.serve(async (req: Request) => {
     if (!or.ok) return ok({ ok: false, error: `shopify_${or.status}`, body: otext.slice(0, 400) });
     const order = JSON.parse(otext).order;
 
-    // 4. Cerrar el círculo en GHL
+    // 4. Cerrar el círculo en GHL: tag en el contacto + opp a Ganado (status:won, valor neto).
+    // El Link de Pago MP se arma solo con producto (sin envío/impuestos) → transaction_amount ES el neto.
     await tagGhl(contactId, "pago-confirmado", `✅ Pago confirmado MercadoPago (9/12 MSI) · orden ${order.name} · $${pay.transaction_amount}`);
+    await markOppWon(contactId, Number(pay.transaction_amount));
 
     return ok({ ok: true, order: order.name, order_id: order.id, payment: paymentId });
   } catch (e) {
