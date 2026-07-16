@@ -6,6 +6,7 @@
   assign promo_count = _pcol.products_count
   assign promo_end_iso = _pcol.metafields.custom.promo_end.value | default: section.settings.end_iso
   assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+  assign promo_msi = _pcol.metafields.custom.promo_msi_max.value | default: '12'
 -%}
 
 <style>
@@ -26,7 +27,7 @@
   <div class="f24p-bar__wrap">
     <span class="f24p-bar__text">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-      {{ section.settings.message | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}
+      {{ section.settings.message | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}
     </span>
     <span class="f24p-bar__cd">
       <b data-cd-d>00</b>d <b data-cd-h>00</b>h <b data-cd-m>00</b>m <b data-cd-s>00</b>s

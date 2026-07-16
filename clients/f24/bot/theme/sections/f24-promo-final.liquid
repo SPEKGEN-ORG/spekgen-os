@@ -6,9 +6,10 @@
   assign promo_count = _pcol.products_count
   assign promo_end_iso = _pcol.metafields.custom.promo_end.value | default: section.settings.end_iso
   assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+  assign promo_msi = _pcol.metafields.custom.promo_msi_max.value | default: '12'
 -%}
 
-{%- assign wa_msg = section.settings.wa_msg | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | url_encode -%}
+{%- assign wa_msg = section.settings.wa_msg | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi | url_encode -%}
 {%- assign wa_href = section.settings.wa_url | append: '?text=' | append: wa_msg -%}
 
 <style>
@@ -36,8 +37,8 @@
       <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
       {{ section.settings.kicker }}
     </div>
-    <h2 class="f24p-final__h f24p-rev" data-d="1">{{ section.settings.title_pre }} <em>{{ section.settings.title_hl }}</em></h2>
-    <p class="f24p-final__lead f24p-rev" data-d="2">{{ section.settings.subtitle }}</p>
+    <h2 class="f24p-final__h f24p-rev" data-d="1">{{ section.settings.title_pre }} <em>{{ section.settings.title_hl | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</em></h2>
+    <p class="f24p-final__lead f24p-rev" data-d="2">{{ section.settings.subtitle | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</p>
 
     <div class="f24p-final__cd f24p-rev" data-d="2" data-countdown-end="{{ promo_end_iso }}">
       <small>Quedan</small>

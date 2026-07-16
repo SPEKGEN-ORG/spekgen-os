@@ -10,9 +10,11 @@ marca promos en "📦 STOCK Y PROMOS" y esa pestaña se auto-llena. Este script 
        - AGREGA los SKUs vigentes que existan en Shopify (resuelven a un producto).
        - QUITA los productos que ya NO estén vigentes (esto da de baja la tarjeta en la
          landing cuando una promo expira). Idempotente: no toca lo que ya está bien.
-  3. Escribe los DATOS VIVOS del contador/fecha en metafields de la colección:
-       - custom.promo_end   = vigencia máx en ISO (lo consume el countdown JS).
-       - custom.promo_fecha = vigencia máx en texto español ("30 de junio").
+  3. Escribe los DATOS VIVOS del contador/fecha/MSI en metafields de la colección:
+       - custom.promo_end     = vigencia máx en ISO (lo consume el countdown JS).
+       - custom.promo_fecha   = vigencia máx en texto español ("30 de junio").
+       - custom.promo_msi_max = plazo MSI máximo entre las promos que SÍ salen en la
+         landing (token [[msi]] del copy: "hasta N MSI" nunca queda stale).
      El Liquid del tema (ya subido una vez) lee estos metafields + collection.products_count
      EN VIVO, así que el contador, la fecha y el countdown se mantienen solos en cada sync
      SIN redeploy del tema. Además bustea el full-page cache de /pages/promociones cuando
@@ -282,17 +284,28 @@ def max_vigencia_end_iso(vigentes: list[dict]) -> str:
 # ---------------- Metafields de la colección (count/fecha viven en datos vivos) ----------------
 
 def set_collection_promo_metafields(sc, cid: int, end_iso: str, fecha_txt: str,
-                                     apply: bool) -> list[str]:
-    """Escribe custom.promo_end (ISO countdown) y custom.promo_fecha (texto español)
-    en la colección vía GraphQL metafieldsSet (upsert real). El Liquid los lee vivos,
-    así el contador y la fecha de la landing NO requieren redeploy del tema.
+                                     msi_max: int, apply: bool) -> list[str]:
+    """Escribe custom.promo_end (ISO countdown), custom.promo_fecha (texto español) y
+    custom.promo_msi_max (plazo MSI máximo vigente) en la colección vía GraphQL
+    metafieldsSet (upsert real). El Liquid los lee vivos, así el contador, la fecha y el
+    claim "hasta N MSI" de la landing NO requieren redeploy del tema.
 
     Devuelve la lista de keys escritas (vacía en dry-run o si no hay fecha)."""
     if not end_iso or not fecha_txt:
         return []
+    keys = ["promo_end", "promo_fecha"] + (["promo_msi_max"] if msi_max else [])
     if not apply:
-        return ["promo_end", "promo_fecha"]
+        return keys
     owner = f"gid://shopify/Collection/{cid}"
+    mfs = [
+        {"ownerId": owner, "namespace": "custom", "key": "promo_end",
+         "type": "single_line_text_field", "value": end_iso},
+        {"ownerId": owner, "namespace": "custom", "key": "promo_fecha",
+         "type": "single_line_text_field", "value": fecha_txt},
+    ]
+    if msi_max:
+        mfs.append({"ownerId": owner, "namespace": "custom", "key": "promo_msi_max",
+                    "type": "single_line_text_field", "value": str(msi_max)})
     sc.graphql(
         """mutation setMF($mf:[MetafieldsSetInput!]!){
              metafieldsSet(metafields:$mf){
@@ -300,13 +313,8 @@ def set_collection_promo_metafields(sc, cid: int, end_iso: str, fecha_txt: str,
                userErrors{ field message }
              }
            }""",
-        variables={"mf": [
-            {"ownerId": owner, "namespace": "custom", "key": "promo_end",
-             "type": "single_line_text_field", "value": end_iso},
-            {"ownerId": owner, "namespace": "custom", "key": "promo_fecha",
-             "type": "single_line_text_field", "value": fecha_txt},
-        ]})
-    return ["promo_end", "promo_fecha"]
+        variables={"mf": mfs})
+    return keys
 
 
 def bust_page_cache(sc, handle: str, marker: str, apply: bool) -> bool:
@@ -362,9 +370,14 @@ def main():
             missing.append(r)
             continue
         pid, title, handle = item
-        resolved[pid] = {"sku": r["sku"], "title": title, "handle": handle}
+        resolved[pid] = {"sku": r["sku"], "title": title, "handle": handle,
+                         "msi_ladder": r["msi_ladder"]}
 
     want_pids = set(resolved.keys())
+    # Plazo MSI máximo REAL de la landing: solo cuenta lo que sí se muestra (resuelto en
+    # Shopify). Alimenta el token [[msi]] del copy — así "hasta N MSI" nunca queda stale.
+    msi_max = max((max(v["msi_ladder"]) for v in resolved.values() if v["msi_ladder"]),
+                  default=0)
 
     # Estado actual de la colección.
     cid = ensure_collection(sc, apply=args.apply)
@@ -408,9 +421,10 @@ def main():
         print("  sin vigencias fechadas en las promos activas — no se toca el contador.")
 
     print(f"\nDATOS VIVOS (metafields de la colección — los lee el Liquid sin redeploy):")
-    print(f"  custom.promo_end   -> {end_iso or '—'}")
-    print(f"  custom.promo_fecha -> {fecha_txt or '—'}")
-    print(f"  contador equipos   -> {len(want_pids)} (collection.products_count, vivo)")
+    print(f"  custom.promo_end     -> {end_iso or '—'}")
+    print(f"  custom.promo_fecha   -> {fecha_txt or '—'}")
+    print(f"  custom.promo_msi_max -> {msi_max or '—'} (token [[msi]] del copy)")
+    print(f"  contador equipos     -> {len(want_pids)} (collection.products_count, vivo)")
 
     print(f"\nResumen: +{len(to_add)} agregar | -{len(to_remove)} quitar | "
           f"{len(keep)} sin cambio | {len(missing)} omitidos | contador -> {end_iso or 'sin cambio'}")
@@ -439,12 +453,13 @@ def main():
             print(f"  = contador (fallback) ya estaba en {end_iso}")
 
     # APPLY — metafields de la colección (fuente viva del contador/fecha en el Liquid).
-    written = set_collection_promo_metafields(sc, cid, end_iso, fecha_txt, apply=True)
+    written = set_collection_promo_metafields(sc, cid, end_iso, fecha_txt, msi_max, apply=True)
     if written:
-        print(f"  ✓ metafields colección: custom.promo_end={end_iso} · custom.promo_fecha='{fecha_txt}'")
+        print(f"  ✓ metafields colección: custom.promo_end={end_iso} · "
+              f"custom.promo_fecha='{fecha_txt}' · custom.promo_msi_max={msi_max or '—'}")
 
-    # APPLY — bustear el full-page cache de la landing si cambió count/fecha.
-    marker = f"{len(want_pids)} {end_iso}"
+    # APPLY — bustear el full-page cache de la landing si cambió count/fecha/msi_max.
+    marker = f"{len(want_pids)} {end_iso} msi{msi_max}"
     if bust_page_cache(sc, PAGE_HANDLE, marker, apply=True):
         print(f"  ✓ FPC-bust /pages/{PAGE_HANDLE} (marker: {marker})")
     else:

@@ -6,9 +6,10 @@
   assign promo_count = _pcol.products_count
   assign promo_end_iso = _pcol.metafields.custom.promo_end.value | default: section.settings.end_iso
   assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+  assign promo_msi = _pcol.metafields.custom.promo_msi_max.value | default: '12'
 -%}
 
-{%- assign wa_msg = section.settings.wa_msg | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | url_encode -%}
+{%- assign wa_msg = section.settings.wa_msg | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi | url_encode -%}
 {%- assign wa_href = section.settings.wa_url | append: '?text=' | append: wa_msg -%}
 
 <style>
@@ -55,10 +56,10 @@
   <div class="f24p-hero__wrap">
     <div class="f24p-hero__eyebrow f24p-rev">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      {{ section.settings.eyebrow | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}
+      {{ section.settings.eyebrow | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}
     </div>
-    <h1 class="f24p-hero__title f24p-rev" data-d="1">{{ section.settings.title_pre }} <em>{{ section.settings.title_hl }}</em> {{ section.settings.title_post }}</h1>
-    <p class="f24p-hero__lead f24p-rev" data-d="2">{{ section.settings.subtitle | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</p>
+    <h1 class="f24p-hero__title f24p-rev" data-d="1">{{ section.settings.title_pre }} <em>{{ section.settings.title_hl | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</em> {{ section.settings.title_post }}</h1>
+    <p class="f24p-hero__lead f24p-rev" data-d="2">{{ section.settings.subtitle | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</p>
 
     <div class="f24p-cd f24p-rev" data-d="3" data-countdown-end="{{ promo_end_iso }}">
       <div class="f24p-cd__cell"><div class="f24p-cd__num" data-cd-d>00</div><div class="f24p-cd__lbl">Días</div></div>
@@ -72,7 +73,7 @@
 
     <div class="f24p-hero__ctas f24p-rev" data-d="3">
       <a href="#promo-grid" class="f24p-btn f24p-btn--gold">
-        {{ section.settings.cta_primary | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}
+        {{ section.settings.cta_primary | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
       <a href="{{ wa_href }}" target="_blank" rel="noopener" class="f24p-btn f24p-btn--ghost" data-wa data-wa-group="promo-hero">
@@ -82,7 +83,7 @@
     </div>
 
     <div class="f24p-hero__trust f24p-rev" data-d="4">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust1 }}</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust1 | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust2 }}</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust3 }}</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{{ section.settings.trust4 }}</span>
@@ -91,7 +92,7 @@
 
   <div class="f24p-marquee" aria-hidden="true">
     <div class="f24p-marquee__track">
-      {%- assign items = section.settings.marquee | split: "," -%}
+      {%- assign items = section.settings.marquee | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi | split: "," -%}
       {%- for i in items -%}<span class="f24p-marquee__item">{{ i | strip }}</span>{%- endfor -%}
       {%- for i in items -%}<span class="f24p-marquee__item">{{ i | strip }}</span>{%- endfor -%}
     </div>
