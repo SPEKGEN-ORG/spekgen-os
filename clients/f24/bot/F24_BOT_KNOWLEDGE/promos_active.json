@@ -536,38 +536,6 @@
       "shopify_price": "85706.88"
     },
     {
-      "sku": "141E",
-      "sku_upper": "141E",
-      "producto": "Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E",
-      "regular_price": 4578.0,
-      "promo_price": 4578.0,
-      "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
-      "eligible_912": false,
-      "vigencia": "2026-07-19",
-      "vigente": true,
-      "estado_landing": "En landing",
-      "in_shopify": true,
-      "shopify_price": "4578.00"
-    },
-    {
-      "sku": "302E",
-      "sku_upper": "302E",
-      "producto": "Peinadora Eléctrica para Césped Artificial — Garland Roll & Comb 302 E, 1400 W",
-      "regular_price": 5430.76,
-      "promo_price": 5430.76,
-      "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
-      "eligible_912": false,
-      "vigencia": "2026-07-19",
-      "vigente": true,
-      "estado_landing": "En landing",
-      "in_shopify": true,
-      "shopify_price": "5430.76"
-    },
-    {
       "sku": "502E",
       "sku_upper": "502E",
       "producto": "Garland Roll & Comb 502 E — Peinadora Eléctrica 1600 W para Césped Artificial",

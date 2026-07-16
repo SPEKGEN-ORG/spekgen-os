@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-48 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+46 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (29 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -17,10 +17,8 @@ Reglas de meses sin intereses (MSI) por promo:
 
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
-| `141E` | $4,578 | $4,578 |  | — | no | 2026-07-19 · 🔴 AGOTADO — NO vender |
 | `17AFFACS066` | $112,783 | $122,590 | 8% | 3, 6, 9 | **Sí** | 2026-07-19 |
 | `17BRFACQA66` | $120,140 | $132,022 | 9% | 3, 6, 9 | **Sí** | 2026-07-19 |
-| `302E` | $5,431 | $5,431 |  | — | no | 2026-07-19 · 🔴 AGOTADO — NO vender |
 | `502E` | $4,076 | $5,095 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `AKE100P` | $4,560 | $5,365 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `BAKARAC300-G` | $25,100 | $29,186 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
@@ -734,7 +732,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Escarificadores y Aireadores (1)
 
-- **Peinadora Eléctrica para Césped Artificial** · `302E` · $5,431 (antes $5,431) · Garland · Roll & Comb 302 E · ⚡PROMO · 🔴 AGOTADO
+- **Peinadora Eléctrica para Césped Artificial** · `302E` · $5,431 (antes $5,431) · Garland · Roll & Comb 302 E · 🔴 AGOTADO
   El césped artificial de alta calidad merece mantenimiento de alta calidad. Con el tiempo, el tráfico constante aplana las fibras sintéticas y permite que hojas, musgo, agujas de pino y polvo se acumulen entre los…
   PDP: https://ferre24.com.mx/products/peinadora-electrica-cesped-artificial-garland-302e
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b62cd78f-b760-43b9-b584-e675af1b8520.png
@@ -748,7 +746,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Herramientas para Pasto Sintético (1)
 
-- **Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E** · `141E` · $4,578 (antes $4,578) · Roll & Comb · 141E · ⚡PROMO · 🔴 AGOTADO
+- **Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E** · `141E` · $4,578 (antes $4,578) · Roll & Comb · 141E · 🔴 AGOTADO
   El césped artificial que no recibe mantenimiento se nota. Las fibras se aplastan en las zonas de más pisadas, las hojas y el polvo se acumulan entre las hebras, y la arena de sílice se desplaza dejando parches sin…
   PDP: https://ferre24.com.mx/products/peinadora-electrica-300-w-pasto-sintetico-roll-comb-141e
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7bd6adde-3874-4146-8c40-e9fbf2196aa6.png
