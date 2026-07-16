@@ -3,8 +3,8 @@
     "promobar": {
       "type": "f24-promo-bar",
       "settings": {
-        "message": "Hasta 12 MSI sin intereses · termina el [[fecha]]",
-        "end_iso": "2026-06-30T23:59:59-06:00"
+        "message": "Hasta [[msi]] MSI sin intereses · termina el [[fecha]]",
+        "end_iso": "2026-07-31T23:59:59-06:00"
       }
     },
     "hero": {
@@ -12,15 +12,15 @@
       "settings": {
         "eyebrow": "Promoción vigente · termina [[fecha]] 11:59 PM",
         "title_pre": "Llévatelo a",
-        "title_hl": "12 MSI",
+        "title_hl": "[[msi]] MSI",
         "title_post": "sin intereses",
         "subtitle": "[[count]] equipos profesionales seleccionados, precio directo marcado y financiamiento extendido hasta 12 meses sin intereses según el equipo. La promoción cierra el [[fecha]] — después vuelve a precio normal.",
-        "end_iso": "2026-06-30T23:59:59-06:00",
+        "end_iso": "2026-07-31T23:59:59-06:00",
         "cta_primary": "Ver los [[count]] productos en promoción",
         "cta_secondary": "Cotizar por WhatsApp",
         "wa_url": "https://wa.me/523317903630",
         "wa_msg": "Hola Ferre24, vi sus promociones con meses sin intereses. Quiero cotizar antes de que termine.",
-        "trust1": "Hasta 12 MSI sin intereses",
+        "trust1": "Hasta [[msi]] MSI sin intereses",
         "trust2": "Entrega 24 h en Jal. y Mich.",
         "trust3": "Factura disponible",
         "trust4": "Stock real",
@@ -43,8 +43,8 @@
           "type": "card",
           "settings": {
             "icon": "wallet",
-            "stat": "12 MSI",
-            "title": "Hasta 12 meses sin intereses",
+            "stat": "[[msi]] MSI",
+            "title": "Hasta [[msi]] meses sin intereses",
             "desc": "El doble de plazo que el MSI estándar del catálogo. Compra el equipo pesado sin descapitalizarte ni pagar comisión."
           }
         },
@@ -87,8 +87,8 @@
         "eyebrow": "Equipo en promoción",
         "heading_pre": "Estos son los",
         "heading_hl": "[[count]] equipos seleccionados",
-        "subheading": "Cada uno con sus meses sin intereses marcados en la tarjeta (hasta 12 MSI), vigentes al [[fecha]]. Compra directo en línea o pide asesoría por WhatsApp si dudas cuál te conviene.",
-        "end_iso": "2026-06-30T23:59:59-06:00",
+        "subheading": "Cada uno con sus meses sin intereses marcados en la tarjeta (hasta [[msi]] MSI), vigentes al [[fecha]]. Compra directo en línea o pide asesoría por WhatsApp si dudas cuál te conviene.",
+        "end_iso": "2026-07-31T23:59:59-06:00",
         "wa_url": "https://wa.me/523317903630",
         "foot_note": "Stock real confirmado al cotizar. Envío a todo México (costo según destino). Factura disponible. MSI sujetos a tarjeta participante."
       }
@@ -255,9 +255,9 @@
       "settings": {
         "kicker": "Última oportunidad",
         "title_pre": "El reloj corre.",
-        "title_hl": "No dejes pasar los 12 MSI.",
+        "title_hl": "No dejes pasar los [[msi]] MSI.",
         "subtitle": "Un asesor te confirma stock, te dice si tu tarjeta aplica a los MSI y te arma la cotización en minutos. Sin venta dura, sin compromiso.",
-        "end_iso": "2026-06-30T23:59:59-06:00",
+        "end_iso": "2026-07-31T23:59:59-06:00",
         "cta_primary": "Cotizar antes que termine",
         "cta_secondary": "Volver a ver productos",
         "wa_url": "https://wa.me/523317903630",

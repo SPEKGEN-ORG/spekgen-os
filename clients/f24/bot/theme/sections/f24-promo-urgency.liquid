@@ -6,6 +6,7 @@
   assign promo_count = _pcol.products_count
   assign promo_end_iso = _pcol.metafields.custom.promo_end.value | default: section.settings.end_iso
   assign promo_fecha = _pcol.metafields.custom.promo_fecha.value | default: 'la fecha límite'
+  assign promo_msi = _pcol.metafields.custom.promo_msi_max.value | default: '12'
 -%}
 
 <style>
@@ -33,8 +34,8 @@
   <div class="f24p-urg__wrap">
     <div class="f24p-urg__head f24p-rev">
       <span class="f24p-urg__kicker">{{ section.settings.eyebrow }}</span>
-      <h2 class="f24p-urg__h">{{ section.settings.heading_pre }} <em>{{ section.settings.heading_hl | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</em></h2>
-      <p class="f24p-urg__sub">{{ section.settings.subheading | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</p>
+      <h2 class="f24p-urg__h">{{ section.settings.heading_pre }} <em>{{ section.settings.heading_hl | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</em></h2>
+      <p class="f24p-urg__sub">{{ section.settings.subheading | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</p>
     </div>
     <div class="f24p-urg__grid">
       {%- assign idx = 0 -%}
@@ -51,9 +52,9 @@
               {%- else -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             {%- endcase -%}
           </div>
-          {%- if block.settings.stat != blank -%}<div class="f24p-urg__num">{{ block.settings.stat | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</div>{%- endif -%}
-          <div class="f24p-urg__title">{{ block.settings.title | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</div>
-          <p class="f24p-urg__desc">{{ block.settings.desc | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha }}</p>
+          {%- if block.settings.stat != blank -%}<div class="f24p-urg__num">{{ block.settings.stat | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</div>{%- endif -%}
+          <div class="f24p-urg__title">{{ block.settings.title | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</div>
+          <p class="f24p-urg__desc">{{ block.settings.desc | replace: '[[count]]', promo_count | replace: '[[fecha]]', promo_fecha | replace: '[[msi]]', promo_msi }}</p>
         </div>
       {%- endfor -%}
     </div>
