@@ -19,6 +19,13 @@ Además (sin cambios respecto a la versión previa):
   - Pone/quita el tag `msi-912` (gate Cuenta B 9/12 MSI del edge function f24-process-order).
   - Escribe F24_BOT_KNOWLEDGE/promos_active.json (lo consume build_f24_knowledge.py).
 
+Y desde 2026-07-15:
+  - Escribe el metafield de producto `f24.msi_meses` (ej. "3,6" o "3,6,9,12") desde la col
+    "Meses MSI" del sheet. Lo consume snippets/f24-msi-inline.liquid del tema (chips MSI de
+    la PDP). Diff-based contra el valor actual en Shopify (sin state): promo activa con MSI
+    → su ladder; producto que sale de promo → reset a "3,6" (baseline: 3 y 6 MSI siempre
+    disponibles en checkout con TDC; 9/12 solo en promo).
+
 Por defecto DRY-RUN (no escribe nada). --apply para aplicar.
 
     python3 sync_f24_promos.py            # preview (muestra el diff completo de precios)
@@ -52,6 +59,8 @@ SHEET_ID = "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U"
 PROMO_TAB = "🔥 PROMO ACTIVA"
 STOCK_TAB = "📦 STOCK Y PROMOS"
 MSI912_TAG = "msi-912"
+MSI_NS, MSI_KEY = "f24", "msi_meses"   # metafield de producto que leen las chips MSI de la PDP
+MSI_DEFAULT = "3,6"                     # baseline sin promo: 3 y 6 MSI en checkout con TDC
 # PROMO ACTIVA: SKU | Producto | Precio | Meses MSI | % Desc | Precio Promo | Vigencia | Estado Landing
 COL = {"sku": 0, "producto": 1, "precio": 2, "msi": 3, "pct": 4, "promo": 5, "vig": 6, "landing": 7}
 # STOCK Y PROMOS: precio base col E (4), descuento directo col Q (16), tachado marketing col T (19)
@@ -177,10 +186,11 @@ def fetch_all_variants(sc) -> dict:
     """Jala TODAS las variantes de Shopify (paginado). {sku_upper: {vid,pid,price,compare_at,title}}."""
     q = """query($cursor:String){
       productVariants(first:250, after:$cursor){
-        edges{ node{ id sku price compareAtPrice product{ id title } } }
+        edges{ node{ id sku price compareAtPrice
+                     product{ id title metafield(namespace:"%s", key:"%s"){ value } } } }
         pageInfo{ hasNextPage endCursor }
       }
-    }"""
+    }""" % (MSI_NS, MSI_KEY)
     out, cursor = {}, None
     while True:
         d = sc.graphql(q, {"cursor": cursor})
@@ -190,10 +200,12 @@ def fetch_all_variants(sc) -> dict:
             sku = (n.get("sku") or "").strip()
             if not sku:
                 continue
+            mf = n["product"].get("metafield") or {}
             out[sku.upper()] = {
                 "vid": n["id"], "pid": n["product"]["id"],
                 "title": n["product"].get("title", ""),
                 "price": n.get("price"), "compare_at": n.get("compareAtPrice"),
+                "msi_mf": mf.get("value"),
             }
         if conn["pageInfo"]["hasNextPage"]:
             cursor = conn["pageInfo"]["endCursor"]
@@ -221,6 +233,21 @@ def set_variant_price(sc, product_gid, variant_gid, price, compare_at):
     if errs:
         raise RuntimeError(f"Shopify userErrors {variant_gid}: {errs}")
     return d["productVariantsBulkUpdate"]["productVariants"][0]
+
+
+def set_msi_metafields(sc, updates):
+    """updates: list[(product_gid, value)] → metafieldsSet en lotes de 25 (cap de la mutación)."""
+    mut = """mutation($mfs:[MetafieldsSetInput!]!){
+      metafieldsSet(metafields:$mfs){ userErrors{ field message } }
+    }"""
+    for i in range(0, len(updates), 25):
+        batch = [{"ownerId": pid, "namespace": MSI_NS, "key": MSI_KEY,
+                  "type": "single_line_text_field", "value": val}
+                 for pid, val in updates[i:i + 25]]
+        d = sc.graphql(mut, {"mfs": batch})
+        errs = (d.get("metafieldsSet", {}) or {}).get("userErrors", [])
+        if errs:
+            raise RuntimeError(f"metafieldsSet: {errs}")
 
 
 def set_product_tag(sc, product_gid, tag, add=True):
@@ -378,11 +405,35 @@ def main():
     sellable = [r for r in vigentes if r["in_shopify"]]
     promo_missing = [r for r in vigentes if not r["in_shopify"]]
 
+    # === 4) MSI chips (metafield f24.msi_meses) — diff vs valor actual en Shopify, sin state ===
+    #   Promo vigente con "Meses MSI" → su ladder ("3,6" / "3,6,9,12"). Producto que tenía
+    #   metafield y ya no está en promo → reset a MSI_DEFAULT. Sin metafield = default en el tema.
+    pid_sku = {}
+    msi_current = {}
+    for sku_u, v in variants.items():
+        pid_sku.setdefault(v["pid"], sku_u)
+        msi_current.setdefault(v["pid"], v.get("msi_mf"))
+    msi_desired = {}
+    for r in sellable:
+        if r["msi_ladder"]:
+            msi_desired[r["product_gid"]] = ",".join(str(m) for m in r["msi_ladder"])
+    msi_updates = []
+    for pid, want in msi_desired.items():
+        if msi_current.get(pid) != want:
+            msi_updates.append((pid, want))
+    for pid, cur in msi_current.items():
+        if pid not in msi_desired and cur is not None and cur != MSI_DEFAULT:
+            msi_updates.append((pid, MSI_DEFAULT))
+    if msi_updates:
+        print(f"\n=== MSI CHIPS PDP — metafield {MSI_NS}.{MSI_KEY} a escribir ({len(msi_updates)}) ===")
+        for pid, val in sorted(msi_updates, key=lambda x: pid_sku.get(x[0], "")):
+            print(f"  {pid_sku.get(pid, pid):<18} {str(msi_current.get(pid)):>12} → {val}")
+
     base_verb = "a aplicar" if args.apply_base else "por revisar"
     print(f"\nResumen: {len(promo_changes)} promo + {len(desc_changes)} descuento directo + "
           f"{len(expiries)} expiradas a aplicar | "
           f"{len(base_review)} base {base_verb} ({len(base_suspect)} con cambio grande, en log) | "
-          f"{len(sellable)} promos vendibles")
+          f"{len(msi_updates)} msi_meses | {len(sellable)} promos vendibles")
 
     if dry:
         print("\n(DRY-RUN: no se escribió nada.)")
@@ -405,6 +456,10 @@ def main():
             if sku_u not in active_eligible and sku_u in variants:
                 set_product_tag(sc, variants[sku_u]["pid"], MSI912_TAG, add=False)
         print(f"  🏷  msi-912 activos: {len(active_eligible)}")
+
+        if msi_updates:
+            set_msi_metafields(sc, msi_updates)
+        print(f"  💳 msi_meses escritos: {len(msi_updates)}")
 
     def clean(r):
         return {k: v for k, v in r.items() if k not in ("product_gid", "variant_gid")}

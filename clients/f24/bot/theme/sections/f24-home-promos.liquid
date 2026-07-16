@@ -1,0 +1,108 @@
+{%- comment -%} F24 — Home · Promociones (mención + carrusel infinito) {%- endcomment -%}
+{%- assign promo = collections[section.settings.collection] -%}
+{%- assign pcount = promo.products_count -%}
+
+<section class="f24hp" id="home-promos">
+  <div class="f24hp__bg"></div>
+  <div class="f24hp__wrap">
+    <div class="f24hp__head">
+      {%- comment -%} Fecha viva desde el metafield de la colección (lo escribe sync_f24_landing.py) — nada hardcodeado. {%- endcomment -%}
+      {%- assign pfecha = promo.metafields.custom.promo_fecha | default: '' -%}
+      <span class="f24hp__eyebrow">{{ section.settings.eyebrow }}{% if pfecha != blank %} · termina el {{ pfecha }}{% endif %}</span>
+      <h2 class="f24hp__title">{{ section.settings.heading_pre }} <em>{{ section.settings.heading_hl }}</em></h2>
+      <p class="f24hp__sub">{{ section.settings.subheading }}</p>
+      <a href="{{ section.settings.cta_url }}" class="f24hp__cta">
+        {{ section.settings.cta | replace: '[n]', pcount }}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  {%- if promo.products.size > 0 -%}
+  <div class="f24hp-marquee" aria-label="Productos en promoción">
+    <div class="f24hp-track">
+      {%- for x in (1..2) -%}
+        {%- for product in promo.products limit: 50 -%}
+          {%- assign off = 0 -%}
+          {%- if product.compare_at_price > product.price and product.compare_at_price > 0 -%}
+            {%- assign off = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -%}
+          {%- endif -%}
+          {%- comment -%} Meses MSI reales del producto (metafield f24.msi_meses ← sync_f24_promos.py ← sheet). Default baseline: 3,6. {%- endcomment -%}
+          {%- assign msi_raw = product.metafields.f24.msi_meses.value | default: '3,6' | remove: ' ' -%}
+          {%- assign msi_arr = msi_raw | split: ',' -%}
+          {%- assign msi_max = msi_arr.last | plus: 0 -%}
+          {%- assign msi_chip = msi_raw | replace: ',', '·' -%}
+          {%- assign msi_from = product.price | divided_by: msi_max -%}
+          <a href="{{ product.url }}" class="f24hp-card" aria-label="Ver {{ product.title | escape }}">
+            <span class="f24hp-card__msi">{{ msi_chip }} MSI</span>
+            {%- if off > 0 -%}<span class="f24hp-card__off">-{{ off }}%</span>{%- endif -%}
+            <span class="f24hp-card__media">
+              {%- if product.featured_image -%}
+                <img src="{{ product.featured_image | image_url: width: 420 }}" alt="{{ product.title | escape }}" width="420" height="420" loading="lazy">
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag }}
+              {%- endif -%}
+            </span>
+            <span class="f24hp-card__body">
+              <span class="f24hp-card__title">{{ product.title }}</span>
+              <span class="f24hp-card__prices">
+                <span class="f24hp-card__price">{{ product.price | money }}</span>
+                {%- if off > 0 -%}<span class="f24hp-card__was">{{ product.compare_at_price | money }}</span>{%- endif -%}
+              </span>
+              <span class="f24hp-card__msi-bd">Desde <b>${{ msi_from | money_without_currency }}</b>/mes a {{ msi_max }} MSI</span>
+            </span>
+          </a>
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- endif -%}
+</section>
+
+<style>
+  .f24hp{position:relative;background:#0a0b0e;color:#fff;padding-block:clamp(56px,7vw,96px);overflow:hidden}
+  .f24hp__bg{position:absolute;inset:0;background:radial-gradient(900px 380px at 50% -10%,rgba(255,184,0,.10),transparent 70%);pointer-events:none}
+  .f24hp__wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,3vw,28px);position:relative}
+  .f24hp__head{text-align:center;max-width:760px;margin:0 auto clamp(34px,4vw,52px)}
+  .f24hp__eyebrow{display:inline-flex;align-items:center;gap:8px;color:#ffb800;font-weight:800;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;padding:7px 14px;background:rgba(255,184,0,.1);border:1px solid rgba(255,184,0,.25);border-radius:999px}
+  .f24hp__title{font-weight:900;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.05;letter-spacing:-.02em;margin:16px 0 12px}
+  .f24hp__title em{font-style:normal;background:linear-gradient(135deg,#ffb800,#ff6a00);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .f24hp__sub{color:rgba(255,255,255,.66);font-size:1.05rem;line-height:1.55;max-width:56ch;margin:0 auto}
+  .f24hp__cta{display:inline-flex;align-items:center;gap:9px;margin-top:24px;background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;font-weight:800;text-decoration:none;padding:14px 26px;border-radius:12px;font-size:1rem;transition:transform .2s ease,box-shadow .2s ease}
+  .f24hp__cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,138,0,.38)}
+  .f24hp__cta svg{width:17px;height:17px}
+  .f24hp-marquee{position:relative;margin-top:6px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .f24hp-track{display:flex;gap:18px;width:max-content;animation:f24hp-scroll 80s linear infinite}
+  .f24hp-marquee:hover .f24hp-track{animation-play-state:paused}
+  @keyframes f24hp-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.f24hp-track{animation:none;overflow-x:auto}}
+  .f24hp-card{position:relative;flex:0 0 auto;width:230px;background:linear-gradient(180deg,#0e1014,#0a0b0e);border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform .3s ease,border-color .25s ease,box-shadow .25s ease}
+  .f24hp-card:hover{transform:translateY(-5px);border-color:rgba(255,184,0,.4);box-shadow:0 22px 48px rgba(0,0,0,.5)}
+  .f24hp-card__media{position:relative;display:block;aspect-ratio:1/1;background:#13151a;overflow:hidden}
+  .f24hp-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+  .f24hp-card__msi{position:absolute;top:9px;left:9px;z-index:2;background:linear-gradient(135deg,#ffb800,#ff8a00);color:#0a0a0a;font-weight:800;font-size:.66rem;letter-spacing:.03em;padding:5px 9px;border-radius:999px;text-transform:uppercase}
+  .f24hp-card__off{position:absolute;top:9px;right:9px;z-index:2;background:#e63946;color:#fff;font-weight:800;font-size:.72rem;padding:5px 8px;border-radius:7px}
+  .f24hp-card__body{padding:13px 13px 15px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .f24hp-card__title{color:#fff;font-weight:700;font-size:.9rem;line-height:1.3;min-height:2.4em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .f24hp-card__prices{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+  .f24hp-card__price{font-weight:900;color:#fff;font-size:1.12rem}
+  .f24hp-card__was{color:rgba(255,255,255,.4);text-decoration:line-through;font-size:.8rem}
+  .f24hp-card__msi-bd{color:#ffb800;font-weight:700;font-size:.78rem}
+  .f24hp-card__msi-bd b{color:#fff;font-weight:800;font-variant-numeric:tabular-nums}
+</style>
+
+{% schema %}
+{
+  "name": "F24 Home · Promociones",
+  "settings": [
+    { "type": "text", "id": "collection", "label": "Handle de colección", "default": "promociones-vigentes" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow (la fecha se agrega sola del metafield)", "default": "Promoción vigente" },
+    { "type": "text", "id": "heading_pre", "label": "Heading antes", "default": "Equipo profesional a" },
+    { "type": "text", "id": "heading_hl", "label": "Heading destacado", "default": "meses sin intereses" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Generadores, motosierras, motobombas, aspersores y más — seleccionados a meses sin intereses por tiempo limitado. Precio directo y stock real." },
+    { "type": "text", "id": "cta", "label": "Texto del botón ([n] = número de productos)", "default": "Ver las [n] promociones" },
+    { "type": "text", "id": "cta_url", "label": "URL del botón", "default": "/pages/promociones" }
+  ],
+  "presets": [{ "name": "F24 Home · Promociones" }]
+}
+{% endschema %}

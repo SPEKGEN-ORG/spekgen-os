@@ -3,7 +3,7 @@
     "promobar": {
       "type": "f24-promo-bar",
       "settings": {
-        "message": "3·6·9 MSI sin intereses · termina el [[fecha]]",
+        "message": "Hasta 12 MSI sin intereses · termina el [[fecha]]",
         "end_iso": "2026-06-30T23:59:59-06:00"
       }
     },
@@ -12,19 +12,19 @@
       "settings": {
         "eyebrow": "Promoción vigente · termina [[fecha]] 11:59 PM",
         "title_pre": "Llévatelo a",
-        "title_hl": "9 MSI",
+        "title_hl": "12 MSI",
         "title_post": "sin intereses",
-        "subtitle": "[[count]] equipos profesionales seleccionados, precio directo marcado y financiamiento extendido a 3, 6 o 9 meses sin intereses. La promoción cierra el [[fecha]] — después vuelve a precio normal.",
+        "subtitle": "[[count]] equipos profesionales seleccionados, precio directo marcado y financiamiento extendido hasta 12 meses sin intereses según el equipo. La promoción cierra el [[fecha]] — después vuelve a precio normal.",
         "end_iso": "2026-06-30T23:59:59-06:00",
         "cta_primary": "Ver los [[count]] productos en promoción",
         "cta_secondary": "Cotizar por WhatsApp",
         "wa_url": "https://wa.me/523317903630",
-        "wa_msg": "Hola Ferre24, vi sus promociones a 3, 6 y 9 MSI. Quiero cotizar antes de que termine.",
-        "trust1": "3·6·9 MSI sin comisión",
+        "wa_msg": "Hola Ferre24, vi sus promociones con meses sin intereses. Quiero cotizar antes de que termine.",
+        "trust1": "Hasta 12 MSI sin intereses",
         "trust2": "Entrega 24 h en Jal. y Mich.",
         "trust3": "Factura disponible",
         "trust4": "Stock real",
-        "marquee": "3 MSI sin comisión, 6 MSI sin comisión, 9 MSI selecto, Entrega 24 h Jal./Mich., Factura, Stock real, Asesoría 1-a-1, Precio directo"
+        "marquee": "3 MSI sin comisión, 6 MSI sin comisión, 9 y 12 MSI selecto, Entrega 24 h Jal./Mich., Factura, Stock real, Asesoría 1-a-1, Precio directo"
       }
     },
     "urgency": {
@@ -43,8 +43,8 @@
           "type": "card",
           "settings": {
             "icon": "wallet",
-            "stat": "9 MSI",
-            "title": "Hasta 9 meses sin intereses",
+            "stat": "12 MSI",
+            "title": "Hasta 12 meses sin intereses",
             "desc": "El doble de plazo que el MSI estándar del catálogo. Compra el equipo pesado sin descapitalizarte ni pagar comisión."
           }
         },
@@ -84,12 +84,10 @@
       "type": "f24-promo-grid",
       "settings": {
         "collection": "promociones-vigentes",
-        "count": 8,
-        "hot_first": 2,
         "eyebrow": "Equipo en promoción",
         "heading_pre": "Estos son los",
         "heading_hl": "[[count]] equipos seleccionados",
-        "subheading": "Cada uno disponible a 3, 6 y 9 MSI hasta el [[fecha]]. Compra directo en línea o pide asesoría por WhatsApp si dudas cuál te conviene.",
+        "subheading": "Cada uno con sus meses sin intereses marcados en la tarjeta (hasta 12 MSI), vigentes al [[fecha]]. Compra directo en línea o pide asesoría por WhatsApp si dudas cuál te conviene.",
         "end_iso": "2026-06-30T23:59:59-06:00",
         "wa_url": "https://wa.me/523317903630",
         "foot_note": "Stock real confirmado al cotizar. Envío a todo México (costo según destino). Factura disponible. MSI sujetos a tarjeta participante."
@@ -102,8 +100,8 @@
         "eyebrow": "Calculadora MSI",
         "heading_pre": "Mira cuánto pagarías",
         "heading_hl": "al mes",
-        "subheading": "Elige uno de los [[count]] equipos en promoción y mira el desglose mensual a 3, 6 y 9 MSI sin intereses. Listo para cotizar por WhatsApp en un clic.",
-        "note": "Cálculo orientativo. El monto exacto depende de tu banco emisor. 9 MSI aplica solo en bancos participantes — confírmalo con tu tarjeta por WhatsApp antes de comprar.",
+        "subheading": "Elige uno de los [[count]] equipos en promoción y mira el desglose mensual a los meses sin intereses que le aplican. Listo para cotizar por WhatsApp en un clic.",
+        "note": "Cálculo orientativo. El monto exacto depende de tu banco emisor. 9 y 12 MSI aplican solo en productos en promoción — confírmalo con tu tarjeta por WhatsApp antes de comprar.",
         "wa_url": "https://wa.me/523317903630"
       }
     },
@@ -199,7 +197,7 @@
           "type": "faq",
           "settings": {
             "q": "¿Qué tarjetas aplican para los MSI?",
-            "a": "La mayoría de tarjetas de crédito mexicanas participan en 3 y 6 MSI sin comisión (BBVA, Banamex, Banorte, Santander, HSBC, Scotiabank, Inbursa). 9 MSI aplica en bancos seleccionados. Confirma con tu tarjeta por WhatsApp antes de comprar y te decimos al instante."
+            "a": "La mayoría de tarjetas de crédito mexicanas participan en 3 y 6 MSI sin comisión (BBVA, Banamex, Banorte, Santander, HSBC, Scotiabank, Inbursa). 9 y 12 MSI aplican en bancos seleccionados. Confirma con tu tarjeta por WhatsApp antes de comprar y te decimos al instante."
           }
         },
         "q3": {
@@ -257,13 +255,13 @@
       "settings": {
         "kicker": "Última oportunidad",
         "title_pre": "El reloj corre.",
-        "title_hl": "No dejes pasar los 9 MSI.",
-        "subtitle": "Un asesor te confirma stock, te dice si tu tarjeta aplica al 9 MSI y te arma la cotización en minutos. Sin venta dura, sin compromiso.",
+        "title_hl": "No dejes pasar los 12 MSI.",
+        "subtitle": "Un asesor te confirma stock, te dice si tu tarjeta aplica a los MSI y te arma la cotización en minutos. Sin venta dura, sin compromiso.",
         "end_iso": "2026-06-30T23:59:59-06:00",
         "cta_primary": "Cotizar antes que termine",
         "cta_secondary": "Volver a ver productos",
         "wa_url": "https://wa.me/523317903630",
-        "wa_msg": "Hola Ferre24, quiero aprovechar la promoción a 9 MSI antes del [[fecha]]. ¿Me cotizan?"
+        "wa_msg": "Hola Ferre24, quiero aprovechar la promoción con MSI antes del [[fecha]]. ¿Me cotizan?"
       }
     },
     "widgets": {
@@ -272,12 +270,12 @@
         "wa_url": "https://wa.me/523317903630",
         "show_fab": true,
         "fab_label": "Cotiza tus MSI",
-        "fab_msg": "Hola Ferre24, vi sus promociones a 3, 6 y 9 MSI. Quiero cotizar.",
+        "fab_msg": "Hola Ferre24, vi sus promociones con meses sin intereses. Quiero cotizar.",
         "show_popup": true,
         "pop_delay": 18,
         "pop_kick": "Antes de irte",
         "pop_title": "¿Te ayudo a elegir el equipo?",
-        "pop_sub": "La promo termina el [[fecha]]. Un asesor te dice qué productos tienen 9 MSI, te confirma si tu tarjeta aplica y arma la cotización en minutos.",
+        "pop_sub": "La promo termina el [[fecha]]. Un asesor te dice qué productos tienen 9 o 12 MSI, te confirma si tu tarjeta aplica y arma la cotización en minutos.",
         "pop_cta": "Cotizar por WhatsApp",
         "pop_msg": "Hola Ferre24, vi sus promociones MSI y quiero cotizar antes de que termine. ¿Me asesoran a elegir el equipo correcto?",
         "pop_micro": "Respuesta rápida en horario laboral · GDL y Michoacán 24-48h",
