@@ -10,7 +10,7 @@
 55 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (30 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (37 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 - Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
@@ -20,8 +20,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `17AFFACS066` | $112,783 | $122,590 | 8% | 3, 6, 9 | **Sí** | 2026-07-19 |
 | `17BRFACQA66` | $120,140 | $132,022 | 9% | 3, 6, 9 | **Sí** | 2026-07-19 |
 | `502E` | $4,076 | $5,095 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
-| `AK26` | $2,872 | $2,872 |  | — | no | 2026-07-26 |
-| `AKE100A` | $10,658 | $12,111 | 12% | — | no | 2026-07-26 |
+| `AK26` | $2,298 | $2,872 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
+| `AKE100A` | $10,658 | $12,111 | 12% | 3 | no | 2026-07-26 |
 | `AKE100P` | $4,560 | $5,365 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `BAKARAC300-G` | $25,100 | $29,186 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `BK2.515` | $2,809 | $3,511 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 · 🔴 AGOTADO — NO vender |
@@ -37,21 +37,21 @@ Reglas de meses sin intereses (MSI) por promo:
 | `ENERWELL-G2500` | $5,449 | $6,055 | 10% | 3, 6 | no | 2026-07-31 |
 | `GP3000M` | $4,545 | $5,050 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `GP5500` | $10,751 | $11,945 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `GP9500TB` | $36,949 | $36,949 |  | — | no | 2026-07-26 |
+| `GP9500TB` | $31,776 | $36,949 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPD8.5M` | $24,989 | $29,399 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `GPDS8.5M` | $29,264 | $30,804 | 30/12/1899 | 3, 6, 9, 12 | **Sí** |  |
 | `GPH1000W` | $2,127 | $2,127 | 0% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `GPH8000W` | $13,831 | $13,831 |  | — | no | 2026-07-26 |
-| `GPH9000W` | $15,400 | $15,400 |  | — | no | 2026-07-26 |
+| `GPH8000W` | $13,139 | $13,831 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
+| `GPH9000W` | $13,244 | $15,400 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-07-31 |
 | `KAS-12P-TF` | $5,590 | $6,211 | 10% | 3 | no | 2026-07-31 |
 | `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-07-31 |
 | `MAKO25` | $2,386 | $2,566 | 7% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `MAKO52` | $2,968 | $2,968 |  | — | no | 2026-07-26 |
-| `MAKO58` | $3,766 | $3,766 |  | — | no | 2026-07-26 |
+| `MAKO52` | $2,612 | $2,968 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
+| `MAKO58` | $3,314 | $3,766 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MAKO65` | $3,504 | $3,613 | 3% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `MAKO72` | $10,169 | $10,169 |  | — | no | 2026-07-26 |
+| `MAKO72` | $8,949 | $10,169 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MHP11` | $5,870 | $6,179 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `MINI60-12/1127` | $1,201 | $1,334 | 10% | — | no | 2026-07-31 |
 | `MP2.8` | $2,598 | $3,248 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
@@ -131,7 +131,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, no hay tiempo para improvisar. El Parazzini GP3000M te da respaldo inmediato con 3,000W de potencia máxima y 2,800W nominales — suficiente para mantener el refrigerador, la iluminación y la…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp3000m-3-000w-motor-4-tiempos-voltaje-dual-110-220v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_marvelsa.png
-- **Generador Parazzini GP9500TB** · `GP9500TB` · $36,949 (antes $67,179) · Parazzini · GP9500TB · ⚡PROMO
+- **Generador Parazzini GP9500TB** · `GP9500TB` · $31,776 (antes $67,179) · Parazzini · GP9500TB · ⚡PROMO 12MSI
   Cuando se va la luz, tu casa o tu obra no tienen por qué detenerse. Un apagón de CFE significa refrigerador apagado, herramienta parada y operación interrumpida. El generador Parazzini GP9500TB existe para que eso deje…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp9500tb-17-hp-9500-w-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b6e0a72-de26-414a-9d65-823bf3925548.png
@@ -179,7 +179,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Te quedaste sin poder soldar porque no hay toma de corriente cerca? En obra nueva, en herrería a domicilio o en una reparación en el campo, la electricidad casi nunca está donde la necesitas. El Parazzini BAKARAC200…
   PDP: https://ferre24.com.mx/products/generador-soldador-parazzini-bakarac200-inverter-200-a-a-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_83f0adba-4a0d-4f24-b9c0-67201bc70f95.png
-- **Generador a Gasolina 8000 W con Motor de 16 HP** · `GPH8000W` · $13,831 (antes $25,147) · Power Hunt · GPH8000W · ⚡PROMO
+- **Generador a Gasolina 8000 W con Motor de 16 HP** · `GPH8000W` · $13,139 (antes $25,147) · Power Hunt · GPH8000W · ⚡PROMO 12MSI
   Cuando se va la luz se detiene todo: el refrigerador, la bomba de agua, las herramientas en la obra. El generador Power Hunt GPH8000W te devuelve el control de tu energía con una salida potente y un arranque que no te…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-8000-w-motor-16-hp-power-hunt-gph8000w
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e8222ad0-3248-4d3c-8577-f0275e7f295e.png
@@ -187,7 +187,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Un apagón a media jornada no avisa: se va la luz de CFE y se detiene el refrigerador, la bomba de agua o la herramienta de la obra. El Generador Parazzini GP5500 es la fuente de energía de respaldo que mantiene todo…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-parazzini-gp5500-5500w-9hp-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d44f51e5-e5ad-4ef5-a0ca-91a4a3cd78a1.png
-- **Generador a Gasolina Power Hunt GPH9000W** · `GPH9000W` · $15,400 (antes $15,400) · Power Hunt · GPH9000W · ⚡PROMO
+- **Generador a Gasolina Power Hunt GPH9000W** · `GPH9000W` · $13,244 (antes $15,400) · Power Hunt · GPH9000W · ⚡PROMO 12MSI
   Cuando se va la luz, el problema no es solo la oscuridad: es el refrigerador que se descompone, la bomba de agua que se detiene y el negocio que deja de producir. El generador a gasolina Power Hunt GPH9000W existe para…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-power-hunt-gph9000w-18-hp-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8ccbaff6-c651-4f71-bcb4-daa43a4b7846.png
@@ -242,7 +242,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Motobombas (44)
 
-- **Aspersor Kawashima AK26** · `AK26` · $2,872 (antes $5,222) · Kawashima · AK26 · ⚡PROMO
+- **Aspersor Kawashima AK26** · `AK26` · $2,298 (antes $5,222) · Kawashima · AK26 · ⚡PROMO 12MSI
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
   PDP: https://ferre24.com.mx/products/aspersor-kawashima-ak26-motor-2-tiempos-25-litros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png
@@ -507,7 +507,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ### El terreno no espera. Tu herramienta tampoco debería fallar. · Si trabajas en campo, ejido o jardín de gran superficie, sabes lo que cuesta llegar a media jornada con una herramienta que ya no responde. Las…
   PDP: https://ferre24.com.mx/products/desbrozador-pro-45cc-2-tiempos-kawashima-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_86762dc7-e9bf-47e1-9633-d10e5e11de1f.png
-- **Kit 2 Motosierras Kawashima Pro MAKO72** · `MAKO72` · $10,169 (antes $10,169) · Kawashima Pro · MAKO72 · ⚡PROMO
+- **Kit 2 Motosierras Kawashima Pro MAKO72** · `MAKO72` · $8,949 (antes $10,169) · Kawashima Pro · MAKO72 · ⚡PROMO 12MSI
   Cuando el trabajo forestal no para, no puedes perder tiempo esperando que llegue el segundo equipo. Las brigadas, ejidos y arboricultores que trabajan en campo real necesitan dos motosierras funcionando al mismo tiempo…
   PDP: https://ferre24.com.mx/products/kit-2-motosierras-kawashima-pro-mako72-72cc-barra-24
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_feafba01-4c69-40f0-ae36-f441b2b9d964.png
@@ -535,11 +535,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Que se te quede una motosierra a media poda es perder la mañana. Y casi siempre es lo mismo: bujía sucia, combustible viejo o una mezcla de gasolina mal hecha que ya castigó el motor. La Motosierra Kawashima Pro 25 cc…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-25-cc-barra-12-incluye-2-barras-2-cadenas-oregon
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b0b020d-92c7-4309-a5d8-a2361ee579cd.png
-- **Motosierra Kawashima Pro 52cc** · `MAKO52` · $2,968 (antes $2,968) · Kawashima Pro · Motosierra 52cc 2 barras 16 pulg · ⚡PROMO
+- **Motosierra Kawashima Pro 52cc** · `MAKO52` · $2,612 (antes $2,968) · Kawashima Pro · Motosierra 52cc 2 barras 16 pulg · ⚡PROMO 12MSI
   ¿Tu barra se desgasta a media jornada y tienes que detener el trabajo? ¿Tu motosierra no arranca a la primera cuando más la necesitas? · La Kawashima Pro MAKO52 es una motosierra profesional de 52cc diseñada para…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-52cc-2-barras-2-cadenas-oregon-incluidas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_003_2aa3b91f-28e2-43d5-be91-c6ca433e4a1d.png
-- **Motosierra Kawashima Pro 58 cc** · `MAKO58` · $3,766 (antes $3,766) · Kawashima Pro · MAKO58 · ⚡PROMO
+- **Motosierra Kawashima Pro 58 cc** · `MAKO58` · $3,314 (antes $3,766) · Kawashima Pro · MAKO58 · ⚡PROMO 12MSI
   La motosierra que no te deja tirado a la mitad del trabajo · Si ya quemaste una motosierra genérica en la segunda semana — o tardaste veinte minutos en arrancarla bajo el sol de agosto — sabes lo que cuesta comprar…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-58-cc-kit-completo-lista-para-trabajar
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_98dca70b-2ba0-49f3-aaef-66a625974100.png
