@@ -44,6 +44,22 @@
       "shopify_price": "120140.02"
     },
     {
+      "sku": "AKE100A",
+      "sku_upper": "AKE100A",
+      "producto": "Aspersor Remolque Eléctrico Kawashima 100L 80 PSI",
+      "regular_price": 12111.0,
+      "promo_price": 10657.68,
+      "pct_desc": "12%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "12111.00"
+    },
+    {
       "sku": "BK621-1.5C",
       "sku_upper": "BK621-1.5C",
       "producto": "Kawashima BK621-1.5C",
@@ -105,6 +121,27 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "2606.75"
+    },
+    {
+      "sku": "BP720",
+      "sku_upper": "BP720",
+      "producto": "Motobomba Autocebante a Gasolina 7 HP 2\" — Parazzini BP720",
+      "regular_price": 4482.72,
+      "promo_price": 4258.58,
+      "pct_desc": "5%",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "4482.72"
     },
     {
       "sku": "BT6.530",
@@ -206,6 +243,22 @@
       "shopify_price": "4545.20"
     },
     {
+      "sku": "GP9500TB",
+      "sku_upper": "GP9500TB",
+      "producto": "Generador Parazzini GP9500TB — 17 HP, 9500 W, encendido eléctrico",
+      "regular_price": 36949.0,
+      "promo_price": 36949.0,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "36949.00"
+    },
+    {
       "sku": "GPH1000W",
       "sku_upper": "GPH1000W",
       "producto": "Generador Portátil Power Hunt 1000W — 6 Horas de Autonomía",
@@ -225,6 +278,38 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "2127.00"
+    },
+    {
+      "sku": "GPH8000W",
+      "sku_upper": "GPH8000W",
+      "producto": "Generador a Gasolina 8000 W con Motor de 16 HP — Power Hunt GPH8000W",
+      "regular_price": 13830.85,
+      "promo_price": 13830.85,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "13830.85"
+    },
+    {
+      "sku": "GPH9000W",
+      "sku_upper": "GPH9000W",
+      "producto": "Generador a Gasolina Power Hunt GPH9000W — 18 HP, Encendido Eléctrico",
+      "regular_price": 15400.0,
+      "promo_price": 15400.0,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "15400.00"
     },
     {
       "sku": "HP5.5N",
@@ -321,6 +406,38 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "2386.38"
+    },
+    {
+      "sku": "MAKO52",
+      "sku_upper": "MAKO52",
+      "producto": "Motosierra profesional 52 cc con 2 barras y cadenas de 16 pulg",
+      "regular_price": 2968.0,
+      "promo_price": 2968.0,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "2968.00"
+    },
+    {
+      "sku": "MAKO58",
+      "sku_upper": "MAKO58",
+      "producto": "Motosierra profesional 58 cc con 2 barras y cadenas de 18 pulg",
+      "regular_price": 3766.0,
+      "promo_price": 3766.0,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "3766.00"
     },
     {
       "sku": "MTK26",
@@ -557,6 +674,22 @@
       "shopify_price": "4076.00"
     },
     {
+      "sku": "AK26",
+      "sku_upper": "AK26",
+      "producto": "AK26 - Aspersor 2 Tiempos",
+      "regular_price": 2872.1,
+      "promo_price": 2872.1,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "2872.10"
+    },
+    {
       "sku": "AKE100P",
       "sku_upper": "AKE100P",
       "producto": "Kawashima AKE100P — Aspersor Eléctrico de Remolque 100 L",
@@ -725,6 +858,22 @@
       "shopify_price": "3504.50"
     },
     {
+      "sku": "MAKO72",
+      "sku_upper": "MAKO72",
+      "producto": "Kit 2 Motosierras Kawashima Pro MAKO72 — 72cc, Barra 24\"",
+      "regular_price": 10169.0,
+      "promo_price": 10169.0,
+      "pct_desc": "",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-07-26",
+      "vigente": true,
+      "estado_landing": "En landing",
+      "in_shopify": true,
+      "shopify_price": "10169.00"
+    },
+    {
       "sku": "MHP11",
       "sku_upper": "MHP11",
       "producto": "Motor 11 hp 4 tiempos Parazzini",
@@ -889,14 +1038,14 @@
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 5428.65,
       "promo_price": 4777.21,
-      "pct_desc": "12%",
+      "pct_desc": "30/12/1899",
       "msi_ladder": [
         3,
         6
       ],
       "msi_max": 6,
       "eligible_912": false,
-      "vigencia": "2026-07-31",
+      "vigencia": "",
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
@@ -908,7 +1057,7 @@
       "producto": "Generador Parazzini Silencioso 8.5 Kw Monofasico Diesel",
       "regular_price": 30804.0,
       "promo_price": 29263.8,
-      "pct_desc": "5%",
+      "pct_desc": "30/12/1899",
       "msi_ladder": [
         3,
         6,
@@ -917,7 +1066,7 @@
       ],
       "msi_max": 12,
       "eligible_912": true,
-      "vigencia": "2026-07-19",
+      "vigencia": "",
       "vigente": true,
       "estado_landing": "Pendiente subir",
       "in_shopify": true,
@@ -925,6 +1074,26 @@
     }
   ],
   "excluidos_sin_pdp": [
+    {
+      "sku": "BLACKMAMBA52",
+      "producto": "Desbrozador recto de 52 cc con cuernos y eje partido",
+      "estado_landing": ""
+    },
+    {
+      "sku": "BLACKWIRO",
+      "producto": "Desbrozador recto 52 cc con cuernos",
+      "estado_landing": ""
+    },
+    {
+      "sku": "BPC720D",
+      "producto": "Motobomba 7 hp diesel centrifuga 2 pulg con arranque eléctrico y manual",
+      "estado_landing": ""
+    },
+    {
+      "sku": "DELTA52",
+      "producto": "Desbrozador recto de 52 cc con cuernos y eje partido",
+      "estado_landing": ""
+    },
     {
       "sku": "DT52K",
       "producto": "Desbrozador 52 cc Recto con cuernos",
