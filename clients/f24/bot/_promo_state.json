@@ -61,7 +61,7 @@
   },
   "GP9500TB": {
     "base": 36949.0,
-    "promo": 36949.0,
+    "promo": 31776.14,
     "orig_compare_at": 67180.0
   },
   "GPH1000W": {
@@ -71,12 +71,12 @@
   },
   "GPH8000W": {
     "base": 13830.85,
-    "promo": 13830.85,
+    "promo": 13139.31,
     "orig_compare_at": 13830.85
   },
   "GPH9000W": {
     "base": 15400.0,
-    "promo": 15400.0,
+    "promo": 13244.0,
     "orig_compare_at": 28000.0
   },
   "HP5.5N": {
@@ -106,12 +106,12 @@
   },
   "MAKO52": {
     "base": 2968.0,
-    "promo": 2968.0,
+    "promo": 2611.84,
     "orig_compare_at": 5396.06
   },
   "MAKO58": {
     "base": 3766.0,
-    "promo": 3766.0,
+    "promo": 3314.08,
     "orig_compare_at": 6846.95
   },
   "MTK26": {
@@ -176,7 +176,7 @@
   },
   "AK26": {
     "base": 2872.1,
-    "promo": 2872.1,
+    "promo": 2297.68,
     "orig_compare_at": 5222.0
   },
   "AKE100P": {
@@ -221,7 +221,7 @@
   },
   "MAKO72": {
     "base": 10169.0,
-    "promo": 10169.0,
+    "promo": 8948.72,
     "orig_compare_at": 19187.12
   },
   "MHP11": {
