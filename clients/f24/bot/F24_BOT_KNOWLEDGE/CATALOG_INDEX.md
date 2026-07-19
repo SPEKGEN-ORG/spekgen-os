@@ -44,7 +44,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH8000W` | $13,139 | $13,831 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPH9000W` | $13,244 | $15,400 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `KAS-10P` | $4,499 | $4,499 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
+| `KAS-10P` | $4,409 | $4,899 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-12P-TF` | $5,999 | $6,666 | 10% | 3, 6 | no | 2026-07-31 |
 | `MAKO25` | $2,386 | $2,566 | 7% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO52` | $2,612 | $2,968 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
@@ -987,7 +987,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Calentador de Paso Instantáneo Modulante
   PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
-- **KASSAI KAS-10P** · `KAS-10P` · $4,499 (antes $4,499) · KASSAI · KAS-10P · ⚡PROMO 12MSI
+- **KASSAI KAS-10P** · `KAS-10P` · $4,409 (antes $4,899) · KASSAI · KAS-10P · ⚡PROMO 12MSI
   Potencia: 9500W (eficiente para 220V monofásico) · Flujo: 2-6 litros por minuto · Elevación térmica: +20°C a +45°C (según flujo y temperatura entrada) · Regulación: Dial manual, fácil ajuste · Seguridad: Protección…
   PDP: https://ferre24.com.mx/products/kassai-kas-10p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1429a6b9-02ea-4764-afa7-3535dcd75d1b.png
