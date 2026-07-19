@@ -53,7 +53,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `MAKO65` | $3,504 | $3,613 | 3% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO72` | $8,949 | $10,169 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MHP11` | $5,870 | $6,179 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
-| `MINI60-12/1127` | $1,201 | $1,334 | 10% | — | no | 2026-07-31 |
+| `MINI60-12/1127` | $1,979 | $2,199 | 10% | — | no | 2026-07-31 |
 | `MP2.8` | $2,598 | $3,248 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `MP7FF` | $3,053 | $3,816 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `MTK26` | $4,894 | $5,437 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
@@ -972,7 +972,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Presurizadores (1)
 
-- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $1,201 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
+- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $1,979 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
   ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
   PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40fbe287-0d55-46cd-b9e8-020654c8c477.png
