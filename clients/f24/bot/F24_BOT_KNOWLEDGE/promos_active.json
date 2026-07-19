@@ -202,7 +202,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3962.03"
+      "shopify_price": "4182.15"
     },
     {
       "sku": "ENERWELL-G2500",
@@ -221,7 +221,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "5449.16"
+      "shopify_price": "5751.89"
     },
     {
       "sku": "GP3000M",
@@ -353,8 +353,8 @@
       "sku": "KAS-10P",
       "sku_upper": "KAS-10P",
       "producto": "Calentador de Paso Instantáneo KASSAI",
-      "regular_price": 4004.25,
-      "promo_price": 3603.83,
+      "regular_price": 4299.0,
+      "promo_price": 3869.1,
       "pct_desc": "10%",
       "msi_ladder": [
         3,
@@ -389,7 +389,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6407.04"
+      "shopify_price": "5999.40"
     },
     {
       "sku": "MAKO25",
@@ -1017,7 +1017,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "1979.10"
+      "shopify_price": "2199.00"
     },
     {
       "sku": "PK-EASY-400US",
