@@ -371,8 +371,8 @@
       "sku": "KAS-12P-TF",
       "sku_upper": "KAS-12P-TF",
       "producto": "Calentador de Paso Instantáneo Modulante 12L KASSAI",
-      "regular_price": 6211.42,
-      "promo_price": 5962.96,
+      "regular_price": 6674.0,
+      "promo_price": 6407.04,
       "pct_desc": "4%",
       "msi_ladder": [
         3
@@ -1029,7 +1029,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "1200.56"
+      "shopify_price": "1979.10"
     },
     {
       "sku": "PK-EASY-400US",

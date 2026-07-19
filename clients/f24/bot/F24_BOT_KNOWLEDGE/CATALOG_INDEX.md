@@ -45,8 +45,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH9000W` | $13,244 | $15,400 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-07-31 |
-| `KAS-12P-TF` | $5,963 | $6,211 | 4% | 3 | no | 2026-07-31 |
-| `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-07-31 |
+| `KAS-12P-TF` | $6,407 | $6,674 | 4% | 3 | no | 2026-07-31 |
+| `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-07-31 · 🔴 AGOTADO — NO vender |
 | `MAKO25` | $2,386 | $2,566 | 7% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO52` | $2,612 | $2,968 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MAKO58` | $3,314 | $3,766 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
@@ -730,7 +730,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Calentadores de Agua (2)
 
-- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $10,779 (antes $11,977) · KASSAI · KASPRO-16P · ⚡PROMO
+- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $10,779 (antes $11,977) · KASSAI · KASPRO-16P · ⚡PROMO · 🔴 AGOTADO
   El KASSAI KASPRO-16P es un calentador de paso instantáneo modulante de la Serie Profesional con capacidad de 16 litros por minuto, diseñado para abastecer hasta dos servicios simultáneos sin tanque y sin piloto de llama…
   PDP: https://ferre24.com.mx/products/calentador-paso-instantaneo-modulante-kassai-kaspro-16p-16-l-agua-caliente-sin-p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f13c1e7-b888-425c-a86e-02416b48e0b9.png
@@ -983,7 +983,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
   PDP: https://ferre24.com.mx/products/aquapak-ccqa-5230
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_01bd0201-942f-403b-90f8-b04cf5869189.png
-- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $5,963 (antes $6,211) · KASSAI · KAS-12P-TF · ⚡PROMO
+- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $6,407 (antes $6,674) · KASSAI · KAS-12P-TF · ⚡PROMO
   Calentador de Paso Instantáneo Modulante
   PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
