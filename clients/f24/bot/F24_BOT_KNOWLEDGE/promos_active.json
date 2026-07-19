@@ -383,7 +383,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "5590.28"
+      "shopify_price": "5962.96"
     },
     {
       "sku": "KASPRO-16P",
@@ -1019,8 +1019,8 @@
       "sku": "MINI60-12/1127",
       "sku_upper": "MINI60-12/1127",
       "producto": "Presurizador individual automático 1/6hp",
-      "regular_price": 1333.95,
-      "promo_price": 1200.56,
+      "regular_price": 2199.0,
+      "promo_price": 1979.1,
       "pct_desc": "10%",
       "msi_ladder": [],
       "msi_max": 0,
