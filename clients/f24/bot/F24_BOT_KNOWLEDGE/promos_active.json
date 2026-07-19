@@ -353,9 +353,9 @@
       "sku": "KAS-10P",
       "sku_upper": "KAS-10P",
       "producto": "Calentador de Paso Instantáneo KASSAI",
-      "regular_price": 4299.0,
-      "promo_price": 3869.1,
-      "pct_desc": "10%",
+      "regular_price": 4499.0,
+      "promo_price": 4499.0,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6,
@@ -368,7 +368,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3603.83"
+      "shopify_price": "3869.10"
     },
     {
       "sku": "KAS-12P-TF",
