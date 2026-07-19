@@ -191,8 +191,8 @@
       "sku_upper": "ENERWELL-G1000",
       "producto": "Generador portátil a gasolina 1000w ENERWELL",
       "regular_price": 4402.26,
-      "promo_price": 3962.03,
-      "pct_desc": "10%",
+      "promo_price": 4182.15,
+      "pct_desc": "5%",
       "msi_ladder": [
         3
       ],
@@ -209,8 +209,8 @@
       "sku_upper": "ENERWELL-G2500",
       "producto": "Generador portátil a gasolina 2500w ENERWELL",
       "regular_price": 6054.62,
-      "promo_price": 5449.16,
-      "pct_desc": "10%",
+      "promo_price": 5751.89,
+      "pct_desc": "5%",
       "msi_ladder": [
         3,
         6
@@ -357,10 +357,13 @@
       "promo_price": 3603.83,
       "pct_desc": "10%",
       "msi_ladder": [
-        3
+        3,
+        6,
+        9,
+        12
       ],
-      "msi_max": 3,
-      "eligible_912": false,
+      "msi_max": 12,
+      "eligible_912": true,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -371,37 +374,22 @@
       "sku": "KAS-12P-TF",
       "sku_upper": "KAS-12P-TF",
       "producto": "Calentador de Paso Instantáneo Modulante 12L KASSAI",
-      "regular_price": 6674.0,
-      "promo_price": 6407.04,
-      "pct_desc": "4%",
+      "regular_price": 6666.0,
+      "promo_price": 5999.4,
+      "pct_desc": "10%",
       "msi_ladder": [
-        3
+        3,
+        6,
+        9,
+        12
       ],
-      "msi_max": 3,
-      "eligible_912": false,
+      "msi_max": 12,
+      "eligible_912": true,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "6407.04"
-    },
-    {
-      "sku": "KASPRO-16P",
-      "sku_upper": "KASPRO-16P",
-      "producto": "Calentador de Paso Instantáneo Modulante 16L KASSAI",
-      "regular_price": 11976.57,
-      "promo_price": 10778.91,
-      "pct_desc": "10%",
-      "msi_ladder": [
-        3
-      ],
-      "msi_max": 3,
-      "eligible_912": false,
-      "vigencia": "2026-07-31",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "10778.91"
     },
     {
       "sku": "MAKO25",
@@ -1020,8 +1008,8 @@
       "sku_upper": "MINI60-12/1127",
       "producto": "Presurizador individual automático 1/6hp",
       "regular_price": 2199.0,
-      "promo_price": 1979.1,
-      "pct_desc": "10%",
+      "promo_price": 2199.0,
+      "pct_desc": "",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -1075,14 +1063,14 @@
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 5428.65,
       "promo_price": 4777.21,
-      "pct_desc": "30/12/1899",
+      "pct_desc": "12%",
       "msi_ladder": [
         3,
         6
       ],
       "msi_max": 6,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,

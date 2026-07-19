@@ -7,10 +7,10 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-55 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+54 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (37 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (39 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 - Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
@@ -33,8 +33,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `CP50SA` | $3,358 | $3,358 |  | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `CSK5218` | $2,150 | $2,687 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `CSK6222` | $2,394 | $2,816 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
-| `ENERWELL-G1000` | $3,962 | $4,402 | 10% | 3 | no | 2026-07-31 |
-| `ENERWELL-G2500` | $5,449 | $6,055 | 10% | 3, 6 | no | 2026-07-31 |
+| `ENERWELL-G1000` | $4,182 | $4,402 | 5% | 3 | no | 2026-07-31 |
+| `ENERWELL-G2500` | $5,752 | $6,055 | 5% | 3, 6 | no | 2026-07-31 |
 | `GP3000M` | $4,545 | $5,050 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `GP5500` | $10,751 | $11,945 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `GP9500TB` | $31,776 | $36,949 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
@@ -44,16 +44,15 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH8000W` | $13,139 | $13,831 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPH9000W` | $13,244 | $15,400 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `KAS-10P` | $3,604 | $4,004 | 10% | 3 | no | 2026-07-31 |
-| `KAS-12P-TF` | $6,407 | $6,674 | 4% | 3 | no | 2026-07-31 |
-| `KASPRO-16P` | $10,779 | $11,977 | 10% | 3 | no | 2026-07-31 · 🔴 AGOTADO — NO vender |
+| `KAS-10P` | $3,604 | $4,004 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
+| `KAS-12P-TF` | $5,999 | $6,666 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO25` | $2,386 | $2,566 | 7% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO52` | $2,612 | $2,968 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MAKO58` | $3,314 | $3,766 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MAKO65` | $3,504 | $3,613 | 3% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO72` | $8,949 | $10,169 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MHP11` | $5,870 | $6,179 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
-| `MINI60-12/1127` | $1,979 | $2,199 | 10% | — | no | 2026-07-31 |
+| `MINI60-12/1127` | $2,199 | $2,199 |  | — | no | 2026-07-31 |
 | `MP2.8` | $2,598 | $3,248 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `MP7FF` | $3,053 | $3,816 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `MTK26` | $4,894 | $5,437 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
@@ -62,7 +61,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-400US` | $3,938 | $4,475 | 12% | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-600N-US` | $5,141 | $5,842 | 12% | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-600US` | $6,209 | $7,056 | 12% | 3 | no | 2026-07-31 |
-| `PK-EASY-800US` | $4,777 | $5,429 | 30/12/1899 | 3, 6 | no |  |
+| `PK-EASY-800US` | $4,777 | $5,429 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO100-5P` | $3,025 | $3,437 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO100-6UVPM` | $4,267 | $4,849 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | 3, 6 | no | 2026-07-31 |
@@ -135,7 +134,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, tu casa o tu obra no tienen por qué detenerse. Un apagón de CFE significa refrigerador apagado, herramienta parada y operación interrumpida. El generador Parazzini GP9500TB existe para que eso deje…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp9500tb-17-hp-9500-w-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b6e0a72-de26-414a-9d65-823bf3925548.png
-- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $5,449 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
+- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $5,752 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
   El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc [VERIFICAR: datos inferidos de estándar de mercado — confirmar con Marvelsa],…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-2500w-enerwell-4t-6-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_45e8886a-e494-4400-8a07-e8ea7a107f01.png
@@ -151,7 +150,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando la obra no se detiene y cada herramienta cuenta, necesitas un generador a la altura. El Generador Portátil ENERWELL-G8000 entrega 7,000W nominales y picos de 8,000W con motor de gasolina 4 tiempos de 420cc,…
   PDP: https://ferre24.com.mx/products/generador-portatil-8000w-gasolina-enerwell-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_77ea6781-7541-4bbe-9fba-5a74c1aac826.png
-- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $3,962 (antes $4,402) · ENERWELL · ENERWELL-G1000 · ⚡PROMO
+- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $4,182 (antes $4,402) · ENERWELL · ENERWELL-G1000 · ⚡PROMO
   El Generador Portátil ENERWELL G1000 es la solución compacta y confiable para quienes necesitan energía eléctrica en cualquier lugar. Con tecnología inverter , entrega corriente limpia y estable que protege tus…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-1000w-enerwell-inverter
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a49dbcb0-94a0-4d4f-a9d8-e6c0efc46f2a.png
@@ -730,7 +729,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Calentadores de Agua (2)
 
-- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $10,779 (antes $11,977) · KASSAI · KASPRO-16P · ⚡PROMO · 🔴 AGOTADO
+- **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $11,977 · KASSAI · KASPRO-16P · 🔴 AGOTADO
   El KASSAI KASPRO-16P es un calentador de paso instantáneo modulante de la Serie Profesional con capacidad de 16 litros por minuto, diseñado para abastecer hasta dos servicios simultáneos sin tanque y sin piloto de llama…
   PDP: https://ferre24.com.mx/products/calentador-paso-instantaneo-modulante-kassai-kaspro-16p-16-l-agua-caliente-sin-p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f13c1e7-b888-425c-a86e-02416b48e0b9.png
@@ -972,7 +971,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Presurizadores (1)
 
-- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $1,979 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
+- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $2,199 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO
   ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
   PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40fbe287-0d55-46cd-b9e8-020654c8c477.png
@@ -983,11 +982,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
   PDP: https://ferre24.com.mx/products/aquapak-ccqa-5230
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_01bd0201-942f-403b-90f8-b04cf5869189.png
-- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $6,407 (antes $6,674) · KASSAI · KAS-12P-TF · ⚡PROMO
+- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $5,999 (antes $6,666) · KASSAI · KAS-12P-TF · ⚡PROMO 12MSI
   Calentador de Paso Instantáneo Modulante
   PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
-- **KASSAI KAS-10P** · `KAS-10P` · $3,604 (antes $4,004) · KASSAI · KAS-10P · ⚡PROMO
+- **KASSAI KAS-10P** · `KAS-10P` · $3,604 (antes $4,004) · KASSAI · KAS-10P · ⚡PROMO 12MSI
   Potencia: 9500W (eficiente para 220V monofásico) · Flujo: 2-6 litros por minuto · Elevación térmica: +20°C a +45°C (según flujo y temperatura entrada) · Regulación: Dial manual, fácil ajuste · Seguridad: Protección…
   PDP: https://ferre24.com.mx/products/kassai-kas-10p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1429a6b9-02ea-4764-afa7-3535dcd75d1b.png
