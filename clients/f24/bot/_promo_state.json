@@ -46,12 +46,12 @@
   },
   "ENERWELL-G1000": {
     "base": 4402.26,
-    "promo": 3962.03,
+    "promo": 4182.15,
     "orig_compare_at": null
   },
   "ENERWELL-G2500": {
     "base": 6054.62,
-    "promo": 5449.16,
+    "promo": 5751.89,
     "orig_compare_at": null
   },
   "GP3000M": {
@@ -90,13 +90,8 @@
     "orig_compare_at": null
   },
   "KAS-12P-TF": {
-    "base": 6674.0,
-    "promo": 6407.04,
-    "orig_compare_at": null
-  },
-  "KASPRO-16P": {
-    "base": 11976.57,
-    "promo": 10778.91,
+    "base": 6666.0,
+    "promo": 5999.4,
     "orig_compare_at": null
   },
   "MAKO25": {
@@ -251,7 +246,7 @@
   },
   "MINI60-12/1127": {
     "base": 2199.0,
-    "promo": 1979.1,
+    "promo": 2199.0,
     "orig_compare_at": 1905.64
   },
   "PK-EASY-400US": {
