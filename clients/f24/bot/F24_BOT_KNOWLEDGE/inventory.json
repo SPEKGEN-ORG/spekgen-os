@@ -442,16 +442,16 @@
       "available": true
     },
     "ENERWELL-G2500": {
-      "qty": 1,
+      "qty": 116,
       "available": true
     },
     "ENERWELL-G5000": {
-      "qty": 0,
-      "available": false
+      "qty": 8,
+      "available": true
     },
     "ENERWELL-G8000": {
-      "qty": 0,
-      "available": false
+      "qty": 6,
+      "available": true
     },
     "EWBG2-500F": {
       "qty": 2,

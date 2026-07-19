@@ -143,11 +143,11 @@ Reglas de meses sin intereses (MSI) por promo:
   El apagón llega sin avisar y siempre en el peor momento: la comida del refrigerador se echa a perder, te quedas sin luz y la casa entera se detiene. El Generador Ultra Fox BRAMA3000 es tu respaldo de energía para que…
   PDP: https://ferre24.com.mx/products/generador-portatil-3000w-ultra-fox-brama3000-motor-6-5hp-a-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e87e1597-8a53-48ed-8f2c-5e2f3238255f.png
-- **Generador Portátil 5000W Gasolina ENERWELL** · `ENERWELL-G5000` · $15,004 (antes $21,434) · F24 · 🔴 AGOTADO
+- **Generador Portátil 5000W Gasolina ENERWELL** · `ENERWELL-G5000` · $15,004 (antes $21,434) · F24
   El Generador Portátil ENERWELL-G5000 es la solución de energía que necesitas cuando la red eléctrica no está disponible o no es suficiente. Con 5,000W nominales y picos de hasta 5,500W , este generador de motor 4…
   PDP: https://ferre24.com.mx/products/generador-portatil-5000w-gasolina-enerwell-110v-220v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d17133b5-26bf-4ca4-8884-d82feeece7c4.png
-- **Generador Portátil 8000W Gasolina ENERWELL** · `ENERWELL-G8000` · $22,807 (antes $32,582) · F24 · 🔴 AGOTADO
+- **Generador Portátil 8000W Gasolina ENERWELL** · `ENERWELL-G8000` · $22,807 (antes $32,582) · F24
   Cuando la obra no se detiene y cada herramienta cuenta, necesitas un generador a la altura. El Generador Portátil ENERWELL-G8000 entrega 7,000W nominales y picos de 8,000W con motor de gasolina 4 tiempos de 420cc,…
   PDP: https://ferre24.com.mx/products/generador-portatil-8000w-gasolina-enerwell-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_77ea6781-7541-4bbe-9fba-5a74c1aac826.png
