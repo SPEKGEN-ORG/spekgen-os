@@ -7,10 +7,10 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-54 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+55 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (40 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (41 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 - Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
@@ -61,7 +61,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-400US` | $3,938 | $4,475 | 12% | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-600N-US` | $5,141 | $5,842 | 12% | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-600US` | $6,209 | $7,056 | 12% | 3 | no | 2026-07-31 |
-| `PK-EASY-800US` | $4,777 | $5,429 | 12% | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-800US` | $4,777 | $5,429 | 30/12/1899 | 3, 6 | no |  |
 | `PKRO100-5P` | $3,025 | $3,437 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO100-6UVPM` | $4,267 | $4,849 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | 3, 6 | no | 2026-07-31 |
@@ -70,6 +70,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PMR24` | $29,977 | $32,584 | 8% | 3, 6, 9 | **Sí** | 2026-07-19 |
 | `PPSB6.5AK` | $5,536 | $6,920 | 20% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 | `PPSB6.5BK` | $6,273 | $7,294 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
+| `TKGHE-38-IP` | $40,810 | $40,810 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `TLP-9800-4` | $85,707 | $89,278 | 4% | 3, 6, 9, 12 | **Sí** | 2026-07-19 |
 
 ## Generadores (41)
@@ -733,7 +734,7 @@ Reglas de meses sin intereses (MSI) por promo:
   El KASSAI KASPRO-16P es un calentador de paso instantáneo modulante de la Serie Profesional con capacidad de 16 litros por minuto, diseñado para abastecer hasta dos servicios simultáneos sin tanque y sin piloto de llama…
   PDP: https://ferre24.com.mx/products/calentador-paso-instantaneo-modulante-kassai-kaspro-16p-16-l-agua-caliente-sin-p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f13c1e7-b888-425c-a86e-02416b48e0b9.png
-- **Calentador de Paso TAKAGI TKGHE-38-IP** · `TKGHE-38-IP` · $37,980 (antes $54,257) · TAKAGI · TKGHE-38-IP
+- **Calentador de Paso TAKAGI TKGHE-38-IP** · `TKGHE-38-IP` · $40,810 (antes $40,810) · TAKAGI · TKGHE-38-IP · ⚡PROMO 12MSI
   El TAKAGI TKGHE-38-IP es un calentador de agua instantáneo de alto rendimiento diseñado para aplicaciones residenciales y comerciales que demandan agua caliente de forma continua y eficiente. Con una capacidad de flujo…
   PDP: https://ferre24.com.mx/products/calentador-paso-a-gas-lp-takagi-tkghe-38-ip-38-l-min-ultra-alta-eficiencia-uso-r
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b3210ed6-be90-4df5-95e3-ce8a24306454.png
