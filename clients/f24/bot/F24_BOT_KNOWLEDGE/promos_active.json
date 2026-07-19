@@ -368,7 +368,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "3869.10"
+      "shopify_price": "4499.00"
     },
     {
       "sku": "KAS-12P-TF",
@@ -1007,12 +1007,17 @@
       "sku": "MINI60-12/1127",
       "sku_upper": "MINI60-12/1127",
       "producto": "Presurizador individual automático 1/6hp",
-      "regular_price": 2199.0,
-      "promo_price": 2199.0,
+      "regular_price": 2399.0,
+      "promo_price": 2399.0,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
-      "eligible_912": false,
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "Live",
