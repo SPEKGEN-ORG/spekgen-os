@@ -647,6 +647,27 @@
       "shopify_price": "29977.28"
     },
     {
+      "sku": "TKGHE-38-IP",
+      "sku_upper": "TKGHE-38-IP",
+      "producto": "Calentador de agua de paso TAKAGI",
+      "regular_price": 40810.0,
+      "promo_price": 40810.0,
+      "pct_desc": "",
+      "msi_ladder": [
+        3,
+        6,
+        9,
+        12
+      ],
+      "msi_max": 12,
+      "eligible_912": true,
+      "vigencia": "2026-07-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "37980.00"
+    },
+    {
       "sku": "TLP-9800-4",
       "sku_upper": "TLP-9800-4",
       "producto": "Torre de Iluminación Parazzini TLP-9800-4 4x1000W",
@@ -1068,14 +1089,14 @@
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 5428.65,
       "promo_price": 4777.21,
-      "pct_desc": "12%",
+      "pct_desc": "30/12/1899",
       "msi_ladder": [
         3,
         6
       ],
       "msi_max": 6,
       "eligible_912": false,
-      "vigencia": "2026-07-31",
+      "vigencia": "",
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
