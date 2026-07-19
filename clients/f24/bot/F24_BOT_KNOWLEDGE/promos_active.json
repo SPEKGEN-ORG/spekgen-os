@@ -379,12 +379,10 @@
       "pct_desc": "10%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -665,7 +663,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "37980.00"
+      "shopify_price": "40810.00"
     },
     {
       "sku": "TLP-9800-4",
