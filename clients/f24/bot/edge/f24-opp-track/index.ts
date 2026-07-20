@@ -137,7 +137,12 @@ Deno.serve(async (req: Request) => {
             last_inbound_at: nowIso,
             last_message_at: nowIso,
             last_message_dir: "inbound",
-            opp_open: true,
+            // opp_open SOLO si el upsert de la oportunidad de verdad funcionó.
+            // Ponerlo en true a ciegas metía contactos sin oportunidad a la cola
+            // de QA: el rep veía "tienes 3 pendientes" de leads que no existen y
+            // que ni siquiera tenían tarjeta en el panel. El sync diario corrige
+            // este campo con los datos reales de GHL.
+            opp_open: up.ok,
             updated_at: nowIso,
             ...(contactName ? { contact_name: contactName } : {}),
             ...(assignedTo
