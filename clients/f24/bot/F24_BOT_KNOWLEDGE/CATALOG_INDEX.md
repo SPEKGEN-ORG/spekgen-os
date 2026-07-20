@@ -36,7 +36,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `MAKO25` | $2,386 | $2,566 | 7% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO52` | $2,612 | $2,968 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MAKO58` | $3,314 | $3,766 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
-| `MAKO65` | $3,504 | $3,613 | 3% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
+| `MAKO65` | $4,205 | $4,335 | 3% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO72` | $8,949 | $10,169 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MINI60-12/1127` | $2,399 | $2,399 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MTK26` | $4,894 | $5,437 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
@@ -523,7 +523,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La motosierra que no te deja tirado a la mitad del trabajo · Si ya quemaste una motosierra genérica en la segunda semana — o tardaste veinte minutos en arrancarla bajo el sol de agosto — sabes lo que cuesta comprar…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-58-cc-kit-completo-lista-para-trabajar
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_98dca70b-2ba0-49f3-aaef-66a625974100.png
-- **Motosierra Kawashima Pro MAKO65** · `MAKO65` · $3,504 (antes $3,613) · Kawashima Pro · MAKO65 · ⚡PROMO 12MSI
+- **Motosierra Kawashima Pro MAKO65** · `MAKO65` · $4,205 (antes $4,335) · Kawashima Pro · MAKO65 · ⚡PROMO 12MSI
   Talar un tronco grueso con una motosierra que se queda corta es perder el día. Una máquina de 50 o 52 cc pierde fuerza en madera dura, se atora y te obliga a forzar el corte. Para trabajo forestal real necesitas torque…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-mako65-65-cc-barra-20-kit-2-barras-2-cadenas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5659413a-7fe4-4f3f-a1e5-45c8a97cbf14.png
