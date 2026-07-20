@@ -916,6 +916,18 @@
     "AKE100A": {
       "qty": 36,
       "available": true
+    },
+    "MT13": {
+      "qty": 0,
+      "available": false
+    },
+    "GP4500I": {
+      "qty": 0,
+      "available": false
+    },
+    "GP5000I": {
+      "qty": 0,
+      "available": false
     }
   }
 }
