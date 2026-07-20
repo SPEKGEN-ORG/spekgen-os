@@ -15,6 +15,20 @@ const SELLERS = ["6G3VFN9NMm2J2zBGJkGC", "1Yee3JNNWlFSk6SWFzeT"]; // Edgar, Alfr
 // en vez de heredar la cara de un vendedor. GHL no permite firmar mensajes de API con un userId, así
 // que la única palanca de display es el dueño del contacto. Los vendedores trackean por el pipeline.
 const BOT_USER = "RgGX1Uid50v4mHf6ekVq";
+// Supabase: se anota CUÁNDO respondió el cliente por última vez, para el reloj de
+// 24h del QA obligatorio (tabla f24_conversation_state, ver _sql/001_qa_calls.sql).
+// Esta función ya recibe el contact_id en cada turno atendido, así que sale gratis:
+// cero infraestructura nueva y cero operaciones de Make.
+// OJO — PUNTO CIEGO CONOCIDO: el router principal del bot filtra por el tag
+// 'bot-pausado', o sea que cuando un vendedor toma la conversación el bot deja de
+// correr y esto NUNCA se dispara. Justo esas conversaciones son las que más
+// necesitan QA. Lo tapa el reconciliador diario (conv_state_sync.py).
+const SB_URL = Deno.env.get("SUPABASE_URL") ?? "";
+const SB_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+const REP_BY_ID: Record<string, string> = {
+  "6G3VFN9NMm2J2zBGJkGC": "Edgar",
+  "1Yee3JNNWlFSk6SWFzeT": "Alfredo",
+};
 const STAGES = [
   { key: "nuevo", id: "27df7384-6789-40ae-a165-5a1a42c2a3bf" },      // 0 Nuevo lead
   { key: "calificado", id: "24098db0-7f73-4037-9cb2-86081a1f3953" }, // 1 Calificado
@@ -53,7 +67,7 @@ async function currentPos(contactId: string): Promise<number> {
 }
 
 Deno.serve(async (req: Request) => {
-  if (req.method === "GET") return json({ ok: true, service: "f24-opp-track", version: 4, pipeline: PIPELINE, stages: STAGES.map((s) => s.key), split: "opp-level 50/50 (Edgar/Alfredo)", contact_owner: "Ferre24 Bot" });
+  if (req.method === "GET") return json({ ok: true, service: "f24-opp-track", version: 5, pipeline: PIPELINE, stages: STAGES.map((s) => s.key), split: "opp-level 50/50 (Edgar/Alfredo)", contact_owner: "Ferre24 Bot" });
   if (req.method !== "POST") return json({ ok: false, error: "method_not_allowed" }, 405);
   const t0 = Date.now();
   try {
@@ -95,6 +109,44 @@ Deno.serve(async (req: Request) => {
       body: JSON.stringify({ pipelineId: PIPELINE, locationId: LOC, contactId, name, status: "open", pipelineStageId: STAGES[target].id, ...(assignedTo ? { assignedTo } : {}) }),
     });
     let resp: any = null; try { resp = await up.json(); } catch { /* */ }
+
+    // Marca del reloj de QA. Best-effort ABSOLUTO: si Supabase no responde, el
+    // seguimiento de oportunidades NO se puede romper por eso. Nunca lanza.
+    // Si el cliente vuelve a escribir, se sobrescribe y el reloj de 24h arranca
+    // de nuevo — la vista f24_qa_due compara last_qa_at < last_inbound_at, así
+    // que un mensaje nuevo vuelve a marcar la conversación como pendiente aunque
+    // el vendedor ya la hubiera revisado ayer.
+    if (SB_URL && SB_KEY) {
+      try {
+        const nowIso = new Date().toISOString();
+        await fetch(`${SB_URL}/rest/v1/f24_conversation_state?on_conflict=contact_id`, {
+          method: "POST",
+          headers: {
+            apikey: SB_KEY,
+            Authorization: `Bearer ${SB_KEY}`,
+            "Content-Type": "application/json",
+            Prefer: "resolution=merge-duplicates,return=minimal",
+          },
+          // Solo se mandan los campos que REALMENTE conocemos en este turno.
+          // assignedTo únicamente existe al CREAR la opp (cur === -1); en los
+          // turnos siguientes es undefined, así que mandarlo pisaría el vendedor
+          // con null. Igual el nombre: no vale sobrescribir uno bueno con el
+          // genérico "Lead WhatsApp".
+          body: JSON.stringify({
+            contact_id: contactId,
+            last_inbound_at: nowIso,
+            last_message_at: nowIso,
+            last_message_dir: "inbound",
+            opp_open: true,
+            updated_at: nowIso,
+            ...(contactName ? { contact_name: contactName } : {}),
+            ...(assignedTo
+              ? { rep_user_id: assignedTo, rep_name: REP_BY_ID[assignedTo] ?? null }
+              : {}),
+          }),
+        });
+      } catch (_e) { /* best-effort: el QA puede esperar, la opp no */ }
+    }
     console.log(`[opp-track] contact=${contactId} cur=${cur} computed=${computed} target=${STAGES[target].key} owner=${assignedTo ?? "-"} ok=${up.ok}`);
     return json({ ok: up.ok, stage: STAGES[target].key, curPos: cur, computed, target, owner: assignedTo, err: up.ok ? undefined : JSON.stringify(resp).slice(0, 250), elapsed_ms: Date.now() - t0 }, 200);
   } catch (e) { return json({ ok: false, error: String(e).slice(0, 300), elapsed_ms: Date.now() - t0 }, 200); }
