@@ -918,16 +918,48 @@
       "available": true
     },
     "MT13": {
-      "qty": 0,
-      "available": false
+      "qty": 8,
+      "available": true
     },
     "GP4500I": {
-      "qty": 0,
-      "available": false
+      "qty": 8,
+      "available": true
     },
     "GP5000I": {
-      "qty": 0,
-      "available": false
+      "qty": 8,
+      "available": true
+    },
+    "HACPP4000-J": {
+      "qty": 8,
+      "available": true
+    },
+    "HACPP3200-N": {
+      "qty": 8,
+      "available": true
+    },
+    "TRENCH15": {
+      "qty": 8,
+      "available": true
+    },
+    "BP2680D": {
+      "qty": 8,
+      "available": true
+    },
+    "BPC2660D": {
+      "qty": 8,
+      "available": true
+    },
+    "13A878BTA66": {
+      "qty": 8,
+      "available": true
+    },
+    "13AQA1BLA66": {
+      "qty": 8,
+      "available": true
+    },
+    "17AREACM342": {
+      "qty": 8,
+      "available": true
     }
   }
 }
