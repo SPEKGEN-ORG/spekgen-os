@@ -183,11 +183,16 @@ def read_base_prices(svc) -> dict:
 # ---------------- Shopify ----------------
 
 def fetch_all_variants(sc) -> dict:
-    """Jala TODAS las variantes de Shopify (paginado). {sku_upper: {vid,pid,price,compare_at,title}}."""
+    """Jala TODAS las variantes de Shopify (paginado). {sku_upper: {vid,pid,price,compare_at,title}}.
+
+    SKUs DUPLICADOS (gemelo viejo en DRAFT de una carga repetida): gana SIEMPRE el
+    ACTIVE — es el que se vende y el que ve el cliente. Antes ganaba "el último de la
+    paginación", que le atinaba por casualidad; si el orden cambiaba, el precio de la
+    promo se le aplicaba al DRAFT invisible y la tienda quedaba a precio de lista."""
     q = """query($cursor:String){
       productVariants(first:250, after:$cursor){
         edges{ node{ id sku price compareAtPrice
-                     product{ id title metafield(namespace:"%s", key:"%s"){ value } } } }
+                     product{ id title status metafield(namespace:"%s", key:"%s"){ value } } } }
         pageInfo{ hasNextPage endCursor }
       }
     }""" % (MSI_NS, MSI_KEY)
@@ -201,11 +206,16 @@ def fetch_all_variants(sc) -> dict:
             if not sku:
                 continue
             mf = n["product"].get("metafield") or {}
+            status = n["product"].get("status")
+            prev = out.get(sku.upper())
+            # duplicado: solo lo reemplazo si el nuevo es ACTIVE y el guardado no lo era
+            if prev is not None and not (status == "ACTIVE" and prev.get("status") != "ACTIVE"):
+                continue
             out[sku.upper()] = {
                 "vid": n["id"], "pid": n["product"]["id"],
                 "title": n["product"].get("title", ""),
                 "price": n.get("price"), "compare_at": n.get("compareAtPrice"),
-                "msi_mf": mf.get("value"),
+                "msi_mf": mf.get("value"), "status": status,
             }
         if conn["pageInfo"]["hasNextPage"]:
             cursor = conn["pageInfo"]["endCursor"]

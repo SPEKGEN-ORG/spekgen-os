@@ -177,22 +177,33 @@ def read_promo_active() -> list[dict]:
 # ---------------- Shopify: colección promociones-vigentes ----------------
 
 def resolve_product_id_by_sku(sc, sku: str):
-    """Devuelve (product_id:int, title, handle) para un SKU, o None si no existe."""
+    """Devuelve (product_id:int, title, handle) para un SKU, o None si no existe.
+
+    Con SKUs DUPLICADOS en Shopify (pasa: cargas repetidas dejan un gemelo viejo en
+    DRAFT), SIEMPRE gana el ACTIVE: el DRAFT no es visible en la tienda, así que
+    meterlo a la colección deja un hueco (tarjeta fantasma) y saca de la promo al
+    producto bueno. Si hay duplicados se avisa por stdout para que alguien los limpie."""
     q = sku.replace('"', '\\"')
     data = sc.graphql(
         """query findBySku($q:String!){
-             productVariants(first:5, query:$q){
+             productVariants(first:10, query:$q){
                edges{ node{ sku product{ id title handle status } } }
              }
            }""",
         variables={"q": f"sku:{q}"})
     edges = (data.get("productVariants", {}) or {}).get("edges", [])
-    for e in edges:
-        node = e["node"]
-        if (node.get("sku") or "").strip().upper() == sku.strip().upper():
-            gid = node["product"]["id"]
-            return int(gid.rsplit("/", 1)[-1]), node["product"]["title"], node["product"]["handle"]
-    return None
+    matches = [e["node"]["product"] for e in edges
+               if (e["node"].get("sku") or "").strip().upper() == sku.strip().upper()]
+    if not matches:
+        return None
+    actives = [p for p in matches if p.get("status") == "ACTIVE"]
+    if len(matches) > 1:
+        detalle = ", ".join(f"{p['id'].rsplit('/', 1)[-1]}({p.get('status')})" for p in matches)
+        print(f"  ⚠ SKU DUPLICADO {sku}: {detalle} → uso "
+              f"{'el ACTIVE' if actives else 'el primero (NINGUNO activo)'}")
+    chosen = actives[0] if actives else matches[0]
+    gid = chosen["id"]
+    return int(gid.rsplit("/", 1)[-1]), chosen["title"], chosen["handle"]
 
 
 def find_collection_by_handle(sc, handle: str):
