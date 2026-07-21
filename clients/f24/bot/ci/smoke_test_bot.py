@@ -35,6 +35,11 @@ HOOKS = {
     "dev": "https://hook.us2.make.com/wcmd3b9697q5t4kkv2e5v1fj8oztpp6x",   # scenario 5381174 (aislado)
 }
 
+# Datastore del bot F24 en Make. El bot escribe aqui un registro por contacto;
+# el smoke tiene que borrar el suyo o se acumula (ver delete_datastore_record).
+MAKE_BASE = "https://us2.make.com/api/v2"
+MAKE_DATASTORE_ID = 104408
+
 TEST_MESSAGE = "hola, tienen generadores?"
 POLL_TOTAL_SECONDS = 75   # ventana total de espera por la respuesta del bot
 POLL_INTERVAL = 5         # cada cuánto se sondea GHL
@@ -157,6 +162,40 @@ def delete_contact(token: str, contact_id: str) -> None:
     log(f"Contacto de prueba borrado (HTTP {status}).")
 
 
+def delete_datastore_record(contact_id: str, env_file: str | None = None) -> None:
+    """Borra el registro que el bot dejo en el datastore de Make.
+
+    Sin esto el smoke filtra un huerfano por corrida: borra el contacto en GHL
+    pero la fila del datastore se queda para siempre. A 2026-07-20 eso habia
+    dejado 329 huerfanos "ZZ Smoke CI" de 449 registros (73%), y el cron de
+    follow-ups paga 1 operacion POR REGISTRO ESCANEADO en cada corrida — o sea
+    que la basura de CI se recobra 3 veces al dia, todos los dias.
+
+    Best-effort: si no hay MAKE_API_TOKEN solo avisa y sigue. Este script valida
+    que el bot responda; nunca debe fallar por la limpieza.
+    """
+    tok = os.environ.get("MAKE_API_TOKEN")
+    if not tok and env_file:
+        tok = _read_env_file(env_file, "MAKE_API_TOKEN")
+    if not tok:
+        log("AVISO: sin MAKE_API_TOKEN el registro del datastore queda huerfano. "
+            "Agrega el secret MAKE_API_TOKEN para que CI limpie solo.")
+        return
+    url = f"{MAKE_BASE}/data-stores/{MAKE_DATASTORE_ID}/data"
+    req = urllib.request.Request(
+        url, data=json.dumps({"keys": [contact_id]}).encode(), method="DELETE"
+    )
+    req.add_header("Authorization", f"Token {tok}")
+    req.add_header("Content-Type", "application/json")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            log(f"Registro del datastore borrado (HTTP {resp.status}).")
+    except urllib.error.HTTPError as e:
+        log(f"AVISO: no se pudo borrar el registro del datastore (HTTP {e.code}).")
+    except Exception as e:  # noqa: BLE001 — nunca tumbar el smoke por la limpieza
+        log(f"AVISO: no se pudo borrar el registro del datastore ({e}).")
+
+
 def main() -> int:
     if len(sys.argv) < 2 or sys.argv[1] not in HOOKS:
         log("Uso: smoke_test_bot.py <dev|prod> [--env-file PATH]")
@@ -199,6 +238,7 @@ def main() -> int:
         return 1
     finally:
         delete_contact(token, contact_id)
+        delete_datastore_record(contact_id, env_file)
 
 
 if __name__ == "__main__":
