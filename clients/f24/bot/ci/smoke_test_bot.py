@@ -43,6 +43,9 @@ MAKE_DATASTORE_ID = 104408
 TEST_MESSAGE = "hola, tienen generadores?"
 POLL_TOTAL_SECONDS = 75   # ventana total de espera por la respuesta del bot
 POLL_INTERVAL = 5         # cada cuánto se sondea GHL
+# Margen tras ver la respuesta del bot: el modulo 10 (write al datastore)
+# corre DESPUES del modulo 9 (envio del mensaje). Ver purge_datastore_record.
+POST_REPLY_GRACE_SECONDS = 8
 
 
 def log(msg: str) -> None:
@@ -196,6 +199,24 @@ def delete_datastore_record(contact_id: str, env_file: str | None = None) -> Non
         log(f"AVISO: no se pudo borrar el registro del datastore ({e}).")
 
 
+def purge_datastore_record(contact_id: str, env_file: str | None = None) -> None:
+    """Borra el registro del datastore ESPERANDO a que el bot termine de escribirlo.
+
+    CARRERA (detectada 2026-07-21, 3 huerfanos tras el primer deploy del fix):
+    el bot manda la respuesta en el modulo 9 y ESCRIBE el datastore en el modulo 10.
+    El smoke deja de esperar en cuanto ve la respuesta — o sea ANTES de que el modulo
+    10 corra. Si borramos en ese instante, el bot re-crea el registro despues y el
+    huerfano vuelve igual.
+
+    Por eso: esperar a que el scenario cierre, borrar, y volver a barrer por si el
+    write cayo en medio. Barato (el smoke ya de por si tarda ~10-75s) y determinista.
+    """
+    time.sleep(POST_REPLY_GRACE_SECONDS)
+    delete_datastore_record(contact_id, env_file)
+    time.sleep(POST_REPLY_GRACE_SECONDS)
+    delete_datastore_record(contact_id, env_file)
+
+
 def main() -> int:
     if len(sys.argv) < 2 or sys.argv[1] not in HOOKS:
         log("Uso: smoke_test_bot.py <dev|prod> [--env-file PATH]")
@@ -238,7 +259,7 @@ def main() -> int:
         return 1
     finally:
         delete_contact(token, contact_id)
-        delete_datastore_record(contact_id, env_file)
+        purge_datastore_record(contact_id, env_file)
 
 
 if __name__ == "__main__":
