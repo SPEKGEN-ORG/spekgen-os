@@ -1,6 +1,6 @@
 # Ferre24 — Catálogo (Knowledge Base del bot)
 
-*233 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
+*246 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
 
 > El bot cotiza ÚNICAMENTE productos de esta lista. El **precio** es el de venta;
 > el precio **tachado** (si existe) es referencia. Para cerrar, el bot pasa el/los
@@ -53,7 +53,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PKRO600-6UVPM` | $7,122 | $8,093 | 12% | 3, 6 | no | 2026-07-31 |
 | `TKGHE-38-IP` | $40,810 | $40,810 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 
-## Generadores (41)
+## Generadores (43)
 
 - **GH26000E-A** · `GH26000E-A` · $143,920 (antes $143,920) · Parazzini Pro · GH26000E-AM
   Especificaciones completas · SKU GH26000E-AM Motor · Tipo de motor Gas LP (Propano) · Combustible gas_lp · Encendido electrico · Identificación · Marca Parazzini Pro · Modelo GH26000E-AM · SKU GH26000E-AM
@@ -95,6 +95,10 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, tu casa o tu negocio no tienen por qué detenerse. Los apagones dejan sin energía al refrigerador, las luces y el equipo de cómputo justo cuando más los necesitas. El generador inverter Parazzini…
   PDP: https://ferre24.com.mx/products/generador-inverter-dual-fuel-5-5-kw-parazzini-gasolina-gas-lp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94e48c28-b912-4edc-8597-81c84a697b43.png
+- **Generador Inverter Parazzini GP4500I** · `GP4500I` · $10,283 (antes $17,729) · Parazzini · GP4500I
+  ¿Ya te tocó un apagón que te tiró el trabajo de la computadora, o peor, que te dañó el refrigerador o el aire acondicionado? Ese es el problema real de los generadores convencionales: entregan una corriente irregular,…
+  PDP: https://ferre24.com.mx/products/generador-inverter-parazzini-gp4500i-4-5-kw-onda-pura
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4ac89a6a-835f-417d-bd2c-598d1ae13945.png
 - **Generador Inverter Parazzini GPIDJI9500** · `GPIDJI9500` · $42,557 (antes $42,557) · Parazzini · GPIDJI9500
   ¿Conectaste tu refrigerador, tu computadora o tus herramientas a un generador convencional y temiste dañarlos? Es un miedo justificado: los generadores comunes entregan energía "sucia", con picos que arruinan tarjetas…
   PDP: https://ferre24.com.mx/products/generador-inverter-parazzini-gpidji9500-9500-w-19-hp-a-gasolina
@@ -115,6 +119,10 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz, tu casa o tu obra no tienen por qué detenerse. Un apagón de CFE significa refrigerador apagado, herramienta parada y operación interrumpida. El generador Parazzini GP9500TB existe para que eso deje…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp9500tb-17-hp-9500-w-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b6e0a72-de26-414a-9d65-823bf3925548.png
+- **Generador Parazzini Inverter 5 KW** · `GP5000I` · $11,762 (antes $20,280) · Parazzini · GP5000I
+  Un corte de luz a media faena —o a media cena— siempre llega en el peor momento. Y si además tienes electrónica sensible conectada (computadora, refrigerador, aire acondicionado), un generador convencional puede meterle…
+  PDP: https://ferre24.com.mx/products/generador-parazzini-inverter-5-kw-respaldo-confiable-casa-negocio-obra
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5cb6e673-a346-41be-ad37-4fee1af32c87.png
 - **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $5,752 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
   El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc [VERIFICAR: datos inferidos de estándar de mercado — confirmar con Marvelsa],…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-2500w-enerwell-4t-6-5hp
@@ -220,7 +228,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/soldadora-inverter-compacta-power-hunt-centella130-conecta-en-127v-toma-de-pared-casera-o-220v-taller-industrial-hasta-120a-de-potencia-ciclo-de-trabajo-85-tecnologia-inverter-peso-ligero-y-menor-consumo-respaldada-por-marvelsa-y-500-centros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_64ef2bd4-0aa5-4573-bf51-ff77b3a894c8.png
 
-## Motobombas (44)
+## Motobombas (46)
 
 - **Aspersor Kawashima AK26** · `AK26` · $2,671 (antes $5,222) · Kawashima · AK26 · ⚡PROMO 12MSI
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
@@ -338,10 +346,18 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba 2.5HP AUTOCEBANTE 1.5" — Riego Residencial y Agrícola sin Complicaciones
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-515-2-5hp-autocebante-1-5-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6eb530a-e06d-4eb6-9320-9b8dbc7be40d.png
+- **Motobomba Parazzini BP2680D** · `BP2680D` · $73,722 (antes $127,107) · Parazzini · BP2680D
+  Cuando el terreno es grande, la bomba chica se queda corta. Regar una parcela extensa, desazolvar una obra inundada o achicar un dren de gran volumen con un equipo de 3" o 4" significa horas de más — y combustible que…
+  PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2680d-diesel-26-hp-8
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_916adb0d-7f30-4919-9d83-82c3ce9b4638.png
 - **Motobomba Parazzini BP720A** · `BP720A` · $8,277 (antes $8,277) · Parazzini · BP720A
   La motobomba BP720A combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
   PDP: https://ferre24.com.mx/products/parazzini-bp720a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_80e4ec45-8c92-4307-a3cf-03632ce8cfec.png
+- **Motobomba Parazzini Centrífuga 26 HP 6" Diésel** · `BPC2660D` · $61,675 (antes $106,336) · Parazzini · BPC2660D
+  Cuando el terreno es grande o el pozo está lejos, una motobomba de baja potencia se queda corta: tarda horas en regar lo que debería tomar minutos, o simplemente no jala el volumen de agua que necesitas. La Motobomba…
+  PDP: https://ferre24.com.mx/products/motobomba-parazzini-centrifuga-26-hp-6-diesel
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94fdb2bf-da83-4aaa-871e-926a80913eb2.png
 - **Motobomba Portátil Kawashima BK2.510** · `BK2.510` · $3,577 (antes $6,168) · Kawashima · BK2.510 · 🔴 AGOTADO
   La BK2.510 es la motobomba agrícola portátil pensada para el productor que necesita llevar agua lejos y alto, sin cargar con el peso de una 3HP. Con motor de 2.5HP a gasolina de 4 tiempos y cuerpo de aluminio fundido,…
   PDP: https://ferre24.com.mx/products/motobomba-portatil-kawashima-bk2-510-2-5hp-aluminio-autocebante-boca-1-26m
@@ -399,7 +415,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-altamira-pro-119-galones-garantia-6-anos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4b3ea870-3ff5-4c97-bb42-d6bcebfb3bd9.png
 
-## Hidrolavadoras (9)
+## Hidrolavadoras (11)
 
 - **Hidrolavadora Eléctrica Industrial Parazzini Pro 10 HP** · `HPPE10` · $31,317 (antes $60,225) · Parazzini Pro · HPPE10
   ¿Tu operación exige resultados en el menor tiempo posible y no puedes perder horas en recargas de combustible o mantenimientos correctivos? La Parazzini Pro HPPE10 es la respuesta para servicios de limpieza profesional,…
@@ -429,6 +445,14 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Necesitas limpiar superficies grandes, maquinaria pesada o áreas remotas pero siempre te detiene la falta de conexiones eléctricas cercanas? La hidrolavadora a gasolina Parazzini HP7N está diseñada exactamente para…
   PDP: https://ferre24.com.mx/products/hidrolavadora-a-gasolina-parazzini-hp7n-7-hp-2-700-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4322125b-beab-4ce8-a934-dc7770766dc0.png
+- **Hidrolavadora de Agua Caliente Parazzini Pro 3200 PSI** · `HACPP3200-N` · $75,222 (antes $129,693) · Parazzini Pro · HACPP3200-N
+  Si en tu taller la grasa quemada de motores y transmisiones no sale ni tallando, el problema no es tu técnica: es el agua fría. La grasa carbonizada se disuelve con calor, y por eso una hidrolavadora que solo trabaja…
+  PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-3200-psi
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_20ce9652-b8a6-42bd-a9a2-da43fda4dd20.png
+- **Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI** · `HACPP4000-J` · $86,179 (antes $148,584) · Parazzini Pro · HACPP4000-J
+  Hay grasa y aceite pegado que el agua fría simplemente no quita. Tallas, echas químico tras químico, y la mancha sigue ahí — porque el agua fría no rompe la grasa endurecida en maquinaria, motores, pisos de taller o…
+  PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-4000-psi
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94751b66-6c67-41de-ac9e-e0769dff08ee.png
 - **Parazzini HP13N** · `HP13N` · $17,605 (antes $30,354) · Parazzini · HP13N
   ¿Tu hidrolavadora eléctrica ya no alcanza para limpiar maquinaria pesada, carrocerías o el rancho? Cuando la suciedad es de verdad, necesitas potencia de verdad. · La Parazzini HP13N entrega 3,600 PSI de presión y 17…
   PDP: https://ferre24.com.mx/products/parazzini-hp13n-hidrolavadora-gasolina-13-hp-3-600-psi
@@ -473,7 +497,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/compresor-aire-libre-aceite-25l-power-hunt-comphkit25l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7ae13047-134c-4fb8-a2b8-7d8d2a654f74.png
 
-## Motosierras y Poda (26)
+## Motosierras y Poda (29)
 
 - **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,204 (antes $3,204) · Kawashima · DKY52K
   Para quien necesita acabar la jornada, no empezarla. Si lo tuyo es maleza alta, predios grandes, brechas de rancho o mantenimiento agrícola y forestal, una orilladora doméstica no te alcanza. El Desbrozador Kawashima…
@@ -571,10 +595,22 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuántos días completos pierdes podando un terreno grande con una cortadora de empuje? Si tienes un rancho, una nave industrial con áreas verdes o un terreno de varias hectáreas, sabes que la respuesta correcta nunca es…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-50-kohler-24hp-troy-bilt-mustang-z50
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_02761bd0-a525-4776-9690-c3401ea0c70e.png
+- **Tractor Podador Giro Cero 54" Cub Cadet Ultima ZT2** · `17AREACM342` · $170,865 (antes $294,595) · Cub Cadet · Ultima ZT2 54
+  Cortar pasto en una extensión grande con un tractor tradicional significa horas de trabajo, vueltas amplias que dejan pasto sin cortar cerca de bardas y árboles, y un motor que se queda corto cuando el pasto está alto o…
+  PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-54-cub-cadet-ultima-zt2-kohler-24hp
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c35b5dda-a7ea-4208-8ac7-00529cd516c2.png
 - **Tractor Podador Parazzini PMR24** · `PMR24` · $32,584 (antes $65,169) · Parazzini · PMR24
   Cortar terrenos medianos y grandes con una podadora pequeña es perder horas que no tienes. El PMR24 de Parazzini resuelve eso: motor RV225-x de 223cc, 4 tiempos OHV, encendido eléctrico y un ancho de corte de 24…
   PDP: https://ferre24.com.mx/products/tractor-podador-parazzini-pmr24-motor-223cc-4t-24-pulgadas-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5d3676cb-554b-4a88-9259-49bf8aff4d42.png
+- **Tractor Podador Troy-Bilt Bronco 46** · `13A878BTA66` · $94,155 (antes $162,336) · Troy-Bilt · Bronco 46
+  Cortar un jardín grande a pie, empujando una podadora convencional, es una tarde entera de esfuerzo que se repite cada semana. El Tractor Podador Troy-Bilt Bronco 46 está pensado exactamente para eso: terrenos amplios…
+  PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-bronco-46-motor-547-cc-corte-46
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_acf13f4a-65ab-4d93-9f35-884cb7d8072a.png
+- **Tractor Podador Troy-Bilt Super Bronco 50"** · `13AQA1BLA66` · $111,373 (antes $192,022) · Troy-Bilt · Super Bronco 50K FAB XP
+  Si tu terreno se te va de las manos con una podadora de empuje, este tractor está hecho para eso: para no pasarte todo el sábado caminando atrás de una máquina cuando podrías estar sentado, controlando todo con un…
+  PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-super-bronco-50-motor-kohler-725cc
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_db8eab4a-4d28-4e05-9b65-90aef7d8b649.png
 - **Tractor podador Troy-Bilt 42"** · `13AN77BS309` · $67,127 (antes $67,127) · Troy-Bilt · 13AN77BS309
   ¿Cuántas horas pierdes cada mes cortando pasto a mano en un terreno grande? · Si tu propiedad supera los 2,000 m² — o si mantienes jardines de clientes — cada sesión de corte es tiempo, esfuerzo y desgaste físico que se…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
@@ -701,6 +737,13 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/tubmam-tm-p50x-p10
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f94ac465-47eb-4dbb-9753-ed8780a9ce20.jpg
 
+## 4-Tiempos OHV (1)
+
+- **Motor a Gasolina 13 HP 4 Tiempos Takashi MT13** · `MT13` · $4,013 (antes $6,919) · Takashi MT13
+  ¿Se te descompuso el motor de tu motobomba, generadora o revolvedora y la máquina completa quedó parada? No siempre hay que comprar el equipo entero de nuevo. El motor Takashi MT13 es un motor a gasolina de 13 HP, 4…
+  PDP: https://ferre24.com.mx/products/motor-a-gasolina-13-hp-4-tiempos-takashi-mt13
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d05a8e63-595e-4c3f-8c12-6eeccc0338a0.png
+
 ## Ahoyadoras a Gasolina (1)
 
 - **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,691 (antes $10,348) · Kawashima · MTT52M
@@ -718,6 +761,17 @@ Reglas de meses sin intereses (MSI) por promo:
   El TAKAGI TKGHE-38-IP es un calentador de agua instantáneo de alto rendimiento diseñado para aplicaciones residenciales y comerciales que demandan agua caliente de forma continua y eficiente. Con una capacidad de flujo…
   PDP: https://ferre24.com.mx/products/calentador-paso-a-gas-lp-takagi-tkghe-38-ip-38-l-min-ultra-alta-eficiencia-uso-r
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b3210ed6-be90-4df5-95e3-ce8a24306454.png
+
+## Combo (2)
+
+- **Combo Calentador 10L KASSAI + Presurizador MINI 1/6 HP GRATIS** · `COMBO-KAS10P-MINI25` · $4,899 (antes $6,266)
+  Llévate el presurizador GRATIS. Compra el Calentador de Paso Instantáneo KASSAI de 10 litros y recibe el Presurizador Individual Automático AQUA PAK MINI (1/6 HP) sin costo . · · Calentador de Paso Instantáneo KASSAI 10…
+  PDP: https://ferre24.com.mx/products/combo-calentador-10l-kassai-presurizador-mini-16hp-gratis
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/combo-10l-kassai-hero.jpg
+- **Combo Calentador 12L KASSAI + Presurizador MINI 1/3 HP** · `COMBO-KAS12P-MINI60` · $7,199 (antes $8,398)
+  Paga menos comprando el combo. Llévate el Calentador de Paso Instantáneo Modulante KASSAI de 12 litros con el Presurizador Individual Automático AQUA PAK MINI (1/3 HP) al 50% de descuento . · · Calentador de Paso…
+  PDP: https://ferre24.com.mx/products/combo-calentador-12l-kassai-presurizador-mini-13hp
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f28f9109-235c-4423-bca5-1917ea964b4e.png
 
 ## Escarificadores y Aireadores (1)
 
@@ -970,7 +1024,7 @@ Reglas de meses sin intereses (MSI) por promo:
 - **KASSAI KAS-10P** · `KAS-10P` · $4,899 (antes $4,899) · KASSAI · KAS-10P · ⚡PROMO 12MSI
   Potencia: 9500W (eficiente para 220V monofásico) · Flujo: 2-6 litros por minuto · Elevación térmica: +20°C a +45°C (según flujo y temperatura entrada) · Regulación: Dial manual, fácil ajuste · Seguridad: Protección…
   PDP: https://ferre24.com.mx/products/kassai-kas-10p
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1429a6b9-02ea-4764-afa7-3535dcd75d1b.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c5bb77c-313d-4829-b17f-4f45cc587029.png
 - **PRES-AP5XB-24LM Presurizador individual de velocidad constante** · `PRES-AP5XB-24LM` · $2,979 (antes $4,256) · AQUA PAK · PRES-AP5XB-24LM
   Equipo totalmente ensamblado
   PDP: https://ferre24.com.mx/products/pres-ap5xb-24lm-presurizador-individual-velocidad-constante
@@ -1080,3 +1134,10 @@ Reglas de meses sin intereses (MSI) por promo:
   Si en tu huerto o viñedo las boquillas se tapan a media jornada, o la turbina vibra porque las paletas ya no giran parejo, sabes lo que cuesta perder una tarde de aspersión: menos cobertura, más químico desperdiciado y…
   PDP: https://ferre24.com.mx/products/turbina-aspersion-parazzini-tfqs5-20-500-mm-6-paletas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b708d602-913a-420b-aa4e-f64f11a88d4e.png
+
+## Zanjadoras (1)
+
+- **Zanjadora Parazzini TRENCH15** · `TRENCH15` · $54,038 (antes $93,169) · Parazzini · TRENCH15
+  Abrir una zanja a pico y pala se come el día completo, cansa al equipo y encarece cualquier obra que dependa de instalar tubería, cableado o drenaje bajo tierra. La Zanjadora Parazzini TRENCH15 existe para resolver…
+  PDP: https://ferre24.com.mx/products/zanjadora-parazzini-trench15-motor-15-hp-doble-filtro-aire
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66561963-f2dd-4bbb-ba7f-762735af586e.png
