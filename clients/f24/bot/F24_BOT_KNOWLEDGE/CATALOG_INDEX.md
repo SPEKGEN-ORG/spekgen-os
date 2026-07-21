@@ -7,16 +7,17 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-35 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+36 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (20 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (21 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 - Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
 
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
+| `17AREACM342` | $145,235 | $170,865 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `AK26` | $2,671 | $2,872 | 7% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `AKE100A` | $10,658 | $12,111 | 12% | 3 | no | 2026-07-26 |
 | `BK621-1.5C` | $3,298 | $3,880 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
@@ -595,7 +596,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuántos días completos pierdes podando un terreno grande con una cortadora de empuje? Si tienes un rancho, una nave industrial con áreas verdes o un terreno de varias hectáreas, sabes que la respuesta correcta nunca es…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-50-kohler-24hp-troy-bilt-mustang-z50
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_02761bd0-a525-4776-9690-c3401ea0c70e.png
-- **Tractor Podador Giro Cero 54" Cub Cadet Ultima ZT2** · `17AREACM342` · $170,865 (antes $294,595) · Cub Cadet · Ultima ZT2 54
+- **Tractor Podador Giro Cero 54" Cub Cadet Ultima ZT2** · `17AREACM342` · $145,235 (antes $170,865) · Cub Cadet · Ultima ZT2 54 · ⚡PROMO 12MSI
   Cortar pasto en una extensión grande con un tractor tradicional significa horas de trabajo, vueltas amplias que dejan pasto sin cortar cerca de bardas y árboles, y un motor que se queda corto cuando el pasto está alto o…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-54-cub-cadet-ultima-zt2-kohler-24hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c35b5dda-a7ea-4208-8ac7-00529cd516c2.png
