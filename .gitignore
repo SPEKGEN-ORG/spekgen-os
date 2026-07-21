@@ -104,3 +104,6 @@ playwright-report/
 screenshots/
 *.har
 clients/f24/logs/
+
+# llaves de panel F24 (se hornean en HTML publico, pero no van al repo)
+clients/f24/bot/edge/_panel_keys.json
