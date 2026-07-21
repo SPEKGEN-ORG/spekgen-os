@@ -4175,14 +4175,14 @@
       "sku": "17AREACM342",
       "variant_id": "44406204006488",
       "variant_gid": "gid://shopify/ProductVariant/44406204006488",
-      "price": "170865.00",
-      "compare_at_price": "294594.61",
+      "price": "145235.25",
+      "compare_at_price": "170865.00",
       "available": true,
       "marca": "Cub Cadet",
       "modelo": "Ultima ZT2 54",
       "specs": "Cortar pasto en una extensión grande con un tractor tradicional significa horas de trabajo, vueltas amplias que dejan pasto sin cortar cerca de bardas y árboles, y un motor que se queda corto cuando el pasto está alto o…",
       "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c35b5dda-a7ea-4208-8ac7-00529cd516c2.png",
-      "msi_promo": ""
+      "msi_promo": "12"
     }
   ]
 }
