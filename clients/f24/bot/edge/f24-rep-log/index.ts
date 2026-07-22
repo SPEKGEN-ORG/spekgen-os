@@ -18,7 +18,7 @@ const SB_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
 const PANEL_KEYS = Deno.env.get("F24_PANEL_KEYS") ?? "{}"; // {"Edgar":"...","Alfredo":"..."}
 
 const ALLOWED_ORIGIN = "https://ferre24.com.mx";
-const VERSION = 1;
+const VERSION = 2; // v2: agrega kind won/lost (cierre de oportunidad)
 
 // Cloudflare responde 1010 a peticiones a GHL sin User-Agent de navegador.
 // Verificado en producción (ver f24-book-appointment). No lo quites.
@@ -50,9 +50,24 @@ function json(body: unknown, status = 200): Response {
   });
 }
 
-// ── enums (deben coincidir con los CHECK de _sql/001_qa_calls.sql) ──────────
+// Pipeline Ventas Whatsapp + location. Mismos que usan los webhooks
+// f24-order-paid / f24-mp-webhook, para caer en la MISMA opp del contacto.
+const GHL_LOC = "HNuSoIl2aCXP2DXEdMVZ";
+const GHL_PIPELINE = "d8xeJjhr4wkmPv8xr5bA";
+
+// ── enums (deben coincidir con los CHECK de _sql/001 y 004) ─────────────────
 const RATINGS = ["up", "down"];
 const CALL_TYPES = ["proactiva", "solicitada"];
+const CLOSE_METHODS = ["shopify", "cash"];
+const LOST_REASONS: Record<string, string> = {
+  precio: "Precio",
+  ya_compro_otro: "Ya compró en otro lado",
+  no_le_interesa: "No le interesa",
+  sin_respuesta: "Sin respuesta tras seguimiento",
+  numero_equivocado: "Número equivocado",
+  otro: "Otro",
+};
+const DIAS_MIN_PERDIDA = 18; // D18: se agotó el re-engagement del bot
 const OUTCOMES: Record<string, string> = {
   no_contesto: "No contestó",
   buzon: "Buzón / apagado",
@@ -78,11 +93,36 @@ function noteBody(p: Record<string, string>): string {
     lines.push(lead);
     return lines.join("\n");
   }
+  if (p.kind === "won") {
+    const how = p.close_method === "cash" ? "Efectivo / Transferencia" : "Shopify";
+    const val = p.sale_value ? ` — $${Number(p.sale_value).toLocaleString("en-US")}` : "";
+    const lines = [`[Ganada · ${p.rep}] 💰 ${how}${val}`];
+    if (p.comment) lines.push(`"${p.comment}"`);
+    lines.push(lead);
+    return lines.join("\n");
+  }
+  if (p.kind === "lost") {
+    const lines = [`[Perdida · ${p.rep}] ${LOST_REASONS[p.lost_reason] ?? p.lost_reason}`];
+    if (p.comment) lines.push(`"${p.comment}"`);
+    lines.push(lead);
+    return lines.join("\n");
+  }
   const tipo = p.call_type === "solicitada" ? "Solicitada" : "Proactiva";
   const lines = [`[Llamada · ${p.rep}] 📞 ${tipo} — ${OUTCOMES[p.outcome] ?? p.outcome}`];
   if (p.comment) lines.push(`"${p.comment}"`);
   lines.push(lead);
   return lines.join("\n");
+}
+
+// Resuelve la opp del contacto en el pipeline Ventas. Misma búsqueda que los
+// webhooks → manual y webhook caen en la MISMA opp y comisiones no la duplica.
+async function resolveOpp(contactId: string): Promise<any | null> {
+  const r = await fetch(
+    `https://services.leadconnectorhq.com/opportunities/search?location_id=${GHL_LOC}&contact_id=${contactId}&pipeline_id=${GHL_PIPELINE}&limit=1`,
+    { headers: GHL_H },
+  );
+  if (!r.ok) throw new Error(`opp_search_${r.status}`);
+  return (await r.json())?.opportunities?.[0] ?? null;
 }
 
 async function sbGet(path: string): Promise<any[]> {
@@ -94,7 +134,7 @@ async function sbGet(path: string): Promise<any[]> {
 Deno.serve(async (req: Request) => {
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
   if (req.method === "GET") {
-    return json({ ok: true, service: "f24-rep-log", version: VERSION, kinds: ["qa", "call"] });
+    return json({ ok: true, service: "f24-rep-log", version: VERSION, kinds: ["qa", "call", "won", "lost"] });
   }
   if (req.method !== "POST") return json({ ok: false, error: "method_not_allowed" }, 405);
 
@@ -110,7 +150,7 @@ Deno.serve(async (req: Request) => {
 
     const b = await req.json().catch(() => ({}));
     const kind = String(b.kind ?? "");
-    if (kind !== "qa" && kind !== "call") return json({ ok: false, error: "bad_kind" }, 200);
+    if (!["qa", "call", "won", "lost"].includes(kind)) return json({ ok: false, error: "bad_kind" }, 200);
 
     const rep = String(b.rep ?? "").trim();
     // panel_key: OFUSCACIÓN, NO AUTENTICACIÓN. Cualquiera que vea el código
@@ -147,6 +187,103 @@ Deno.serve(async (req: Request) => {
       `f24_rep_activity?select=id&rep_name=eq.${encodeURIComponent(rep)}&created_at=gte.${since}&limit=61`,
     );
     if (recent.length >= 60) return json({ ok: false, error: "rate_limited" }, 200);
+
+    // ── WON / LOST: cierre de oportunidad ─────────────────────────────────
+    // Cambia el status de la opp en GHL. Para 'lost' los candados se re-verifican
+    // AQUÍ (el cliente valida solo para UX; este endpoint es público). El PUT usa
+    // la misma búsqueda que los webhooks → misma opp, sin doble conteo.
+    if (kind === "won" || kind === "lost") {
+      let opp;
+      try { opp = await resolveOpp(contactId); }
+      catch (e) { return json({ ok: false, error: "opp_search_failed", detail: String(e).slice(0, 120) }, 200); }
+      if (!opp?.id) return json({ ok: false, error: "no_opp" }, 200);
+
+      const putBody: Record<string, unknown> = {};
+      let closeMethod: string | null = null;
+      let saleValue: number | null = null;
+      let lostReason: string | null = null;
+
+      if (kind === "won") {
+        closeMethod = CLOSE_METHODS.includes(String(b.close_method)) ? String(b.close_method) : null;
+        if (!closeMethod) return json({ ok: false, error: "bad_close_method" }, 200);
+        putBody.status = "won";
+        if (closeMethod === "cash") {
+          saleValue = Number(b.sale_value);
+          if (!Number.isFinite(saleValue) || saleValue <= 0) return json({ ok: false, error: "bad_sale_value" }, 200);
+          putBody.monetaryValue = saleValue; // valor de venta (base comisiones)
+        }
+        // shopify: NO tocar monetaryValue — lo pone el webhook orders/paid.
+      } else {
+        lostReason = b.lost_reason ? String(b.lost_reason) : null;
+        if (!lostReason || !(lostReason in LOST_REASONS)) return json({ ok: false, error: "bad_lost_reason" }, 200);
+
+        // ── CANDADOS (autoridad server-side) ──
+        // (a) ¿existe alguna llamada registrada? SIN ventana de tiempo — un lead
+        // perdible está 18+ días frío, así que su llamada casi siempre es vieja.
+        const calls = await sbGet(
+          `f24_rep_activity?select=id&kind=eq.call&contact_id=eq.${encodeURIComponent(contactId)}&limit=1`,
+        );
+        if (!calls.length) return json({ ok: false, error: "guardrail_no_call" }, 200);
+
+        // (b) ¿≥18 días fríos? Desde last_inbound_at; si el cliente nunca escribió,
+        // desde la creación de la opp. Si no hay ninguna referencia → bloquear.
+        let coldSince: number | null = null;
+        try {
+          const st = await sbGet(
+            `f24_conversation_state?select=last_inbound_at&contact_id=eq.${encodeURIComponent(contactId)}&limit=1`,
+          );
+          if (st.length && st[0].last_inbound_at) coldSince = new Date(st[0].last_inbound_at).getTime();
+        } catch (_) { /* seguimos al fallback */ }
+        if (coldSince === null && opp.createdAt) coldSince = new Date(opp.createdAt).getTime();
+        if (coldSince === null) return json({ ok: false, error: "guardrail_days_unknown" }, 200);
+        const dias = (Date.now() - coldSince) / 86_400_000;
+        if (dias < DIAS_MIN_PERDIDA) return json({ ok: false, error: "guardrail_days", dias: Math.floor(dias) }, 200);
+
+        putBody.status = "lost";
+      }
+
+      const up = await fetch(`https://services.leadconnectorhq.com/opportunities/${opp.id}`, {
+        method: "PUT", headers: GHL_H, body: JSON.stringify(putBody),
+      });
+      if (!up.ok) {
+        return json({ ok: false, error: `opp_update_${up.status}`, detail: (await up.text()).slice(0, 150) }, 200);
+      }
+
+      const row: Record<string, unknown> = {
+        kind, rep_name: rep, rep_user_id: b.rep_user_id ? String(b.rep_user_id) : null,
+        contact_id: contactId, opp_id: opp.id,
+        contact_name: b.contact_name ? String(b.contact_name).slice(0, 200) : null,
+        phone: b.phone ? String(b.phone).slice(0, 40) : null,
+        close_method: closeMethod, sale_value: saleValue, lost_reason: lostReason,
+        comment: comment || null, source: "panel",
+      };
+      const ins = await fetch(`${SB_URL}/rest/v1/f24_rep_activity`, {
+        method: "POST", headers: { ...SB_H, Prefer: "return=representation" }, body: JSON.stringify(row),
+      });
+      if (!ins.ok) {
+        // La opp YA cambió en GHL pero la fila falló. Avisar (Sergio la ve por el
+        // status de la opp de todos modos; solo perdemos el detalle contable).
+        const detail = (await ins.text()).slice(0, 200);
+        console.log(`[f24-rep-log] ${kind} opp OK, fila FALLÓ: ${detail}`);
+        return json({ ok: true, opp_updated: true, db_row: false, warn: "row_failed", elapsed_ms: Date.now() - t0 }, 200);
+      }
+      const saved = (await ins.json())[0];
+
+      let noteOk = false, noteErr: string | null = null;
+      try {
+        const nr = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/notes`, {
+          method: "POST", headers: GHL_H,
+          body: JSON.stringify({ body: noteBody({ ...b, kind, rep, comment, close_method: closeMethod, sale_value: saleValue, lost_reason: lostReason } as any) }),
+        });
+        noteOk = nr.ok; if (!nr.ok) noteErr = `ghl ${nr.status}`;
+      } catch (e) { noteErr = String(e).slice(0, 120); }
+      await fetch(`${SB_URL}/rest/v1/f24_rep_activity?id=eq.${saved.id}`, {
+        method: "PATCH", headers: SB_H, body: JSON.stringify({ ghl_note_ok: noteOk, ghl_note_error: noteErr }),
+      }).catch(() => {});
+
+      console.log(`[f24-rep-log] ${kind} rep=${rep} contact=${contactId} opp=${opp.id} det=${closeMethod ?? lostReason} note=${noteOk}`);
+      return json({ ok: true, id: saved.id, kind, ghl_note_ok: noteOk, elapsed_ms: Date.now() - t0 }, 200);
+    }
 
     // ── SLA congelado al momento de escribir ──────────────────────────────
     let lastInbound: string | null = null;

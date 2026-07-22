@@ -132,6 +132,14 @@ Deno.serve(async (req: Request) => {
     const acts = await sb(
       `f24_rep_activity?select=contact_id,kind,outcome,created_at&rep_name=eq.${encodeURIComponent(rep)}&created_at=gte.${since7}`,
     );
+    // "¿alguna vez llamó?" SIN ventana de tiempo — para el candado de "perdida".
+    // El de 7 días (acts) es para el conteo del día; un lead perdible está 18+
+    // días frío, así que su llamada casi siempre cae fuera de esa ventana.
+    const everCalledRows = await sb(
+      `f24_rep_activity?select=contact_id&kind=eq.call&rep_name=eq.${encodeURIComponent(rep)}`,
+    );
+    const everCalled: Record<string, boolean> = {};
+    for (const r of everCalledRows) everCalled[r.contact_id] = true;
 
     // Mapa contacto → estado, para que el panel pinte el badge en cada tarjeta.
     const byContact: Record<string, unknown> = {};
@@ -160,6 +168,7 @@ Deno.serve(async (req: Request) => {
       },
       contacts: byContact,
       calls: callByContact,
+      ever_called: everCalled,
       state_fresh_min: fresh, elapsed_ms: Date.now() - t0,
     });
   } catch (e) {
