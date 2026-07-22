@@ -765,11 +765,11 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Combo (2)
 
-- **Combo Calentador 10L KASSAI + Presurizador MINI 1/6 HP GRATIS** · `COMBO-KAS10P-MINI25` · $4,899 (antes $6,266)
+- **Combo Calentador 10L KASSAI + Presurizador MINI 1/6 HP GRATIS** · `COMBO-KAS10P-MINI25` · $4,899 (antes $6,266) · KASSAI + AQUA PAK · COMBO-KAS10P-MINI25
   Llévate el presurizador GRATIS. Compra el Calentador de Paso Instantáneo KASSAI de 10 litros y recibe el Presurizador Individual Automático AQUA PAK MINI (1/6 HP) sin costo . · · Calentador de Paso Instantáneo KASSAI 10…
   PDP: https://ferre24.com.mx/products/combo-calentador-10l-kassai-presurizador-mini-16hp-gratis
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/combo-10l-kassai-hero.jpg
-- **Combo Calentador 12L KASSAI + Presurizador MINI 1/3 HP** · `COMBO-KAS12P-MINI60` · $7,199 (antes $8,398)
+- **Combo Calentador 12L KASSAI + Presurizador MINI 1/3 HP** · `COMBO-KAS12P-MINI60` · $7,199 (antes $8,398) · KASSAI + AQUA PAK · COMBO-KAS12P-MINI60
   Paga menos comprando el combo. Llévate el Calentador de Paso Instantáneo Modulante KASSAI de 12 litros con el Presurizador Individual Automático AQUA PAK MINI (1/3 HP) al 50% de descuento . · · Calentador de Paso…
   PDP: https://ferre24.com.mx/products/combo-calentador-12l-kassai-presurizador-mini-13hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f28f9109-235c-4423-bca5-1917ea964b4e.png
