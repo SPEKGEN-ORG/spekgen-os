@@ -1023,7 +1023,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
 - **KASSAI KAS-10P** · `KAS-10P` · $4,899 (antes $4,899) · KASSAI · KAS-10P · ⚡PROMO 12MSI
-  Potencia: 9500W (eficiente para 220V monofásico) · Flujo: 2-6 litros por minuto · Elevación térmica: +20°C a +45°C (según flujo y temperatura entrada) · Regulación: Dial manual, fácil ajuste · Seguridad: Protección…
+  El Calentador de Paso Instantáneo KASSAI KAS-10P calienta el agua en el momento en que abres la llave: no hay tanque que esperar ni agua tibia al final del baño. · Entrega una capacidad de 10 litros por minuto y está…
   PDP: https://ferre24.com.mx/products/kassai-kas-10p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c5bb77c-313d-4829-b17f-4f45cc587029.png
 - **PRES-AP5XB-24LM Presurizador individual de velocidad constante** · `PRES-AP5XB-24LM` · $2,979 (antes $4,256) · AQUA PAK · PRES-AP5XB-24LM
