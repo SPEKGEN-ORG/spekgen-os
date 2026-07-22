@@ -229,16 +229,8 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/soldadora-inverter-compacta-power-hunt-centella130-conecta-en-127v-toma-de-pared-casera-o-220v-taller-industrial-hasta-120a-de-potencia-ciclo-de-trabajo-85-tecnologia-inverter-peso-ligero-y-menor-consumo-respaldada-por-marvelsa-y-500-centros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_64ef2bd4-0aa5-4573-bf51-ff77b3a894c8.png
 
-## Motobombas (46)
+## Motobombas (44)
 
-- **Aspersor Kawashima AK26** · `AK26` · $2,671 (antes $5,222) · Kawashima · AK26 · ⚡PROMO 12MSI
-  Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
-  PDP: https://ferre24.com.mx/products/aspersor-kawashima-ak26-motor-2-tiempos-25-litros
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png
-- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $4,888 · Kawashima · KF35X
-  Fumigar una hectárea a mano tarda horas y agota antes de terminar. Con una fumigadora manual de 16 litros tienes que detenerte a recargar constantemente, y si tu parcela no tiene toma de corriente, los equipos…
-  PDP: https://ferre24.com.mx/products/aspersor-motorizado-kawashima-kf35x-35cc
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b1b2d0f-443a-445f-96b0-f220d5a53842.png
 - **Aspersora Motorizada Parazzini 6.5 HP** · `PPSB6.5B` · $4,914 (antes $8,934) · Parazzini · PPSB6.5B
   Si fumiga herbicidas o fungicidas de contacto, su bomba de pistón está en cuenta regresiva. · Los agroquímicos agresivos — glifosato, paraquat, cobre, azufre, fungicidas de síntesis moderna — corroen las válvulas y…
   PDP: https://ferre24.com.mx/products/aspersora-motorizada-parazzini-6-5-hp-bomba-membrana-para-herbicidas-y-fungicidas
@@ -498,8 +490,16 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/compresor-aire-libre-aceite-25l-power-hunt-comphkit25l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7ae13047-134c-4fb8-a2b8-7d8d2a654f74.png
 
-## Motosierras y Poda (29)
+## Motosierras y Poda (39)
 
+- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,691 (antes $10,348) · Kawashima · MTT52M
+  La Ahoyadora Kawashima MTT52M es la herramienta que acelera el trabajo más lento del rancho: abrir hoyos. Con un motor a gasolina de 52cc y 2 tiempos, perfora tierra blanda de forma rápida y uniforme — el trabajo que…
+  PDP: https://ferre24.com.mx/products/ahoyadora-kawashima-mtt52m-52cc-3-brocas
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d43ca7eb-da4a-41a8-a79e-ab6bb7316b3a.png
+- **Cortasetos 22 cc Kawashima Pro** · `CK22CC` · $3,342 (antes $6,077) · Kawashima Pro · CK22CC
+  ### El cortasetos que llega listo — y te respalda después · El Kawashima Pro CK22CC es un cortasetos a gasolina de 22 cc diseñado para quien necesita resultados, no sorpresas. Motor 2 tiempos con encendido retráctil…
+  PDP: https://ferre24.com.mx/products/cortasetos-22-cc-kawashima-pro-kit-listo-refacciones-locales
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66a7a0a9-36ca-41e2-a499-4d2270471469.png
 - **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,204 (antes $3,204) · Kawashima · DKY52K
   Para quien necesita acabar la jornada, no empezarla. Si lo tuyo es maleza alta, predios grandes, brechas de rancho o mantenimiento agrícola y forestal, una orilladora doméstica no te alcanza. El Desbrozador Kawashima…
   PDP: https://ferre24.com.mx/products/desbrozador-kawashima-dky52k-recto-52-cc-kit-completo
@@ -512,6 +512,10 @@ Reglas de meses sin intereses (MSI) por promo:
   ### El terreno no espera. Tu herramienta tampoco debería fallar. · Si trabajas en campo, ejido o jardín de gran superficie, sabes lo que cuesta llegar a media jornada con una herramienta que ya no responde. Las…
   PDP: https://ferre24.com.mx/products/desbrozador-pro-45cc-2-tiempos-kawashima-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_86762dc7-e9bf-47e1-9633-d10e5e11de1f.png
+- **Garland Roll & Comb 502 E** · `502E` · $5,095 (antes $5,095) · Garland · Roll & Comb 502 E
+  Mantener el césped artificial en óptimas condiciones requiere más que un rastrillo. Con el paso del tiempo, las fibras sintéticas se aplastan, el musgo y las algas se acumulan, y hojas o agujas de pino quedan atrapadas…
+  PDP: https://ferre24.com.mx/products/garland-roll-comb-502e-peinadora-cesped-artificial-1600w
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a7fd24bd-479c-405b-ad72-36e19394b6ab.png
 - **Kit 2 Motosierras Kawashima Pro MAKO72** · `MAKO72` · $8,949 (antes $10,169) · Kawashima Pro · MAKO72 · ⚡PROMO 12MSI
   Cuando el trabajo forestal no para, no puedes perder tiempo esperando que llegue el segundo equipo. Las brigadas, ejidos y arboricultores que trabajan en campo real necesitan dos motosierras funcionando al mismo tiempo…
   PDP: https://ferre24.com.mx/products/kit-2-motosierras-kawashima-pro-mako72-72cc-barra-24
@@ -560,6 +564,14 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cansado de cargar gasolina, limpiar carburador y aguantar el humo para podar cuatro ramas en el patio? Hay una forma más limpia de hacerlo. · La motosierra eléctrica Power Hunt 20V resuelve exactamente ese problema:…
   PDP: https://ferre24.com.mx/products/motosierra-electrica-power-hunt-20v-barra-10-lubricacion-automatica-sin-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_35133dab-2528-42b7-9392-8414bc53b4cd.png
+- **Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E** · `141E` · $4,578 (antes $4,578) · Roll & Comb · 141E · 🔴 AGOTADO
+  El césped artificial que no recibe mantenimiento se nota. Las fibras se aplastan en las zonas de más pisadas, las hojas y el polvo se acumulan entre las hebras, y la arena de sílice se desplaza dejando parches sin…
+  PDP: https://ferre24.com.mx/products/peinadora-electrica-300-w-pasto-sintetico-roll-comb-141e
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7bd6adde-3874-4146-8c40-e9fbf2196aa6.png
+- **Peinadora Eléctrica para Césped Artificial** · `302E` · $5,431 (antes $5,431) · Garland · Roll & Comb 302 E · 🔴 AGOTADO
+  El césped artificial de alta calidad merece mantenimiento de alta calidad. Con el tiempo, el tráfico constante aplana las fibras sintéticas y permite que hojas, musgo, agujas de pino y polvo se acumulen entre los…
+  PDP: https://ferre24.com.mx/products/peinadora-electrica-cesped-artificial-garland-302e
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b62cd78f-b760-43b9-b584-e675af1b8520.png
 - **Podadora Autopropulsada 190cc** · `PP190TT` · $8,889 (antes $16,162) · Parazzini Pro · PP190TT
   ¿Ya te cansaste de empujar la podadora? · Podar un jardín de 400 m² empujando una máquina de 29 kg no es ejercicio — es castigo. Y si el cesped lleva semanas sin corte o hay maleza mezclada, el problema se duplica:…
   PDP: https://ferre24.com.mx/products/podadora-autopropulsada-parazzini-pro-190cc-21-bolsa-65l
@@ -584,6 +596,26 @@ Reglas de meses sin intereses (MSI) por promo:
   Las ramas altas siempre terminan en lo mismo: una escalera tambaleándose en el pasto y un susto que pudo salir caro. El serrucho de poda Kawashima PG500 elimina ese riesgo por completo. Cortas ramas a hasta 5 metros de…
   PDP: https://ferre24.com.mx/products/serrucho-poda-telescopico-kawashima-pg500-alcance-5-m
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7e0319b3-e61c-43bf-949c-3699eec59094.png
+- **Soplador Kawashima 26 cc** · `WIND26` · $2,124 (antes $2,124) · Kawashima · WIND26
+  Limpiar el jardín con rastrillo toma horas. Con el soplador Kawashima WIND26, el mismo trabajo se hace en minutos. · Potencia real donde más importa. Su motor 2 tiempos de 26 cc alcanza hasta 7,500 RPM y mueve 650 m³ de…
+  PDP: https://ferre24.com.mx/products/soplador-kawashima-26-cc-motor-2t-650-m-h-encendido-manual
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_5ec7fcc5-79bd-48fa-8282-e6753d13698b.png
+- **Soplador de Mochila Kawashima 43cc** · `WIND43` · $1,138 (antes $1,911) · Kawashima · WIND43
+  Limpiar jardines grandes, canchas, patios empresariales o áreas verdes urbanas con un soplador que se queda sin fuerza o que falla al arrancar no es opción cuando hay trabajo real por delante. El Kawashima WIND43 está…
+  PDP: https://ferre24.com.mx/products/soplador-mochila-kawashima-43cc-wind43
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_689bf71e-770b-48ac-940c-506ca018f09e.png
+- **Soplador de Mochila Profesional 77cc** · `SK772TPRO` · $8,961 (antes $16,292) · Kawashima Pro · SK772TPRO
+  Cada hora que pierdes con una herramienta sin potencia es dinero que no cobras. El jardinero o landscaper profesional sabe que el tiempo entre trabajo y trabajo es lo que separa un día rentable de uno mediocre. Con una…
+  PDP: https://ferre24.com.mx/products/soplador-de-mochila-profesional-77cc-kawashima-pro-sk772tpro
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_28b16a1d-b758-478b-a2fa-da0d18c08d4a.png
+- **Soplador de mochila Kawashima WIND76** · `WIND76` · $5,622 (antes $5,622) · Kawashima · WIND76
+  Cuando el jardín mide media manzana y el tiempo es dinero, un soplador de juguete no alcanza. El Kawashima WIND76 es la herramienta que usan los contratistas serios: motor 2T de 76 cc que arranca y no para, diseño de…
+  PDP: https://ferre24.com.mx/products/soplador-de-mochila-kawashima-wind76-76-cc-1-440-m-h
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8fd502fc-a009-44ad-b083-c1a07ad26a2f.png
+- **Soplador-aspirador Kawashima 26 cc con bolsa recolectora** · `WINDBAG26` · $2,624 (antes $4,770) · Kawashima · WINDBAG26
+  Limpiar el jardín a mano lleva horas. Un soplador sin bolsa solo mueve el problema de lugar. Y contratar servicio de jardinería cada semana sale caro. El WINDBAG26 de Kawashima resuelve los tres problemas con una sola…
+  PDP: https://ferre24.com.mx/products/soplador-aspirador-kawashima-26-cc-bolsa-recolectora
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/secundaria_001.png
 - **Tractor Podador Giro Cero 42" 547cc Troy-Bilt Mustang Z42** · `17AFFACS066` · $122,590 (antes $122,590) · Troy-Bilt Mustang Z42 · Mustang Z42 (RZT 42 family)
   ¿Cuántas horas pierdes dando vueltas alrededor de árboles, jardineras y bardas con un tractor convencional que no gira sobre su propio eje? En un rancho o terreno de varias hectáreas, cada pasada vacía es tiempo (y…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-42-547cc-troy-bilt-mustang-z42
@@ -617,8 +649,16 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3584d25a-4649-4a63-b021-0b64a2cca8c2.png
 
-## Desbrozadoras y Jardín (17)
+## Desbrozadoras y Jardín (22)
 
+- **Aspersor Kawashima AK26** · `AK26` · $2,671 (antes $5,222) · Kawashima · AK26 · ⚡PROMO 12MSI
+  Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
+  PDP: https://ferre24.com.mx/products/aspersor-kawashima-ak26-motor-2-tiempos-25-litros
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png
+- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $4,888 · Kawashima · KF35X
+  Fumigar una hectárea a mano tarda horas y agota antes de terminar. Con una fumigadora manual de 16 litros tienes que detenerte a recargar constantemente, y si tu parcela no tiene toma de corriente, los equipos…
+  PDP: https://ferre24.com.mx/products/aspersor-motorizado-kawashima-kf35x-35cc
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b1b2d0f-443a-445f-96b0-f220d5a53842.png
 - **Aspersor Parazzini 200 L Aguilón 28"** · `XGT12-200` · $39,372 (antes $75,715) · Parazzini · XGT12-200
   Fumiga más hectáreas sin pagar un litro extra de gasolina · Si ya tienes tractor, el Parazzini XGT12-200 te da una estación de aplicación completa sin el costo ni el mantenimiento de un motor adicional. Se acopla…
   PDP: https://ferre24.com.mx/products/aspersor-parazzini-200-l-aguilon-28-pto-sin-motor-adicional
@@ -687,6 +727,18 @@ Reglas de meses sin intereses (MSI) por promo:
   Si fumas grandes extensiones y la presión cae a mitad del campo, el problema no es el motor — es el calibre de la manguera. · Las parihuelas estándar trabajan con manguera de 8 a 8.5 mm. A distancia, eso significa…
   PDP: https://ferre24.com.mx/products/parihuela-alta-presion-manguera-13-mm-pro-fumigacion-profesional-en-grandes-extensiones
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_19e67d04-d3f4-4a4f-baf8-8d09ec4c588d.png
+- **Turbina de Aspersión 36" Parazzini** · `TFQS9` · $60,700 (antes $121,421) · Parazzini · FQS9A2-2000K
+  Si tu turbina de aspersión ya se oxidó por la humedad del invernadero o de la granja, sabes que no es solo un problema estético: el óxido tapa boquillas, afloja piezas y termina en una aspersión despareja que deja zonas…
+  PDP: https://ferre24.com.mx/products/turbina-aspersion-36-parazzini-acero-inoxidable
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cf0653ee-bf98-469e-899f-1f4572029406.png
+- **Turbina de Aspersión Parazzini TFQS5** · `TFQS5` · $23,988 (antes $47,976) · Parazzini · TFQS5
+  Si en tu huerto o viñedo las boquillas se tapan a media jornada, o la turbina vibra porque las paletas ya no giran parejo, sabes lo que cuesta perder una tarde de aspersión: menos cobertura, más químico desperdiciado y…
+  PDP: https://ferre24.com.mx/products/turbina-aspersion-parazzini-tfqs5-20-500-mm-6-paletas
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b708d602-913a-420b-aa4e-f64f11a88d4e.png
+- **Turbina de Aspersión Parazzini TFQS8** · `TFQS8` · $40,448 (antes $80,898) · Parazzini · TFQS8
+  Si tu sistema de aspersión se atasca cada temporada porque el agua trae sedimentos, o si ya te tocó desmontar una turbina completa porque el rotor "hermético" no se puede reparar en campo, sabes que el problema casi…
+  PDP: https://ferre24.com.mx/products/turbina-aspersion-parazzini-tfqs8-32-800-mm-acero-inoxidable
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4dd5a02e-fdde-499d-be5b-9687dd920daa.png
 
 ## Compactación y Obra (7)
 
@@ -719,12 +771,8 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/vibrador-de-concreto-parazzini-7-hp-a-gasolina-vcp5-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_ff5f7947-3517-4ba5-8875-a80a3eca3365.png
 
-## Mangueras y Accesorios (4)
+## Mangueras y Accesorios (3)
 
-- **Cortasetos 22 cc Kawashima Pro** · `CK22CC` · $3,342 (antes $6,077) · Kawashima Pro · CK22CC
-  ### El cortasetos que llega listo — y te respalda después · El Kawashima Pro CK22CC es un cortasetos a gasolina de 22 cc diseñado para quien necesita resultados, no sorpresas. Motor 2 tiempos con encendido retráctil…
-  PDP: https://ferre24.com.mx/products/cortasetos-22-cc-kawashima-pro-kit-listo-refacciones-locales
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66a7a0a9-36ca-41e2-a499-4d2270471469.png
 - **PRES-PET13-P10 Presurizador individual con kit de presión** · `PRES-PET13-P10` · $3,449 (antes $4,928) · AQUA PAK · PRES-PET13-P10
   Equipo totalmente ensamblado
   PDP: https://ferre24.com.mx/products/pres-pet13-p10-presurizador-individual-kit-presion
@@ -738,21 +786,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/tubmam-tm-p50x-p10
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f94ac465-47eb-4dbb-9753-ed8780a9ce20.jpg
 
-## 4-Tiempos OHV (1)
-
-- **Motor a Gasolina 13 HP 4 Tiempos Takashi MT13** · `MT13` · $4,013 (antes $6,919) · Takashi MT13
-  ¿Se te descompuso el motor de tu motobomba, generadora o revolvedora y la máquina completa quedó parada? No siempre hay que comprar el equipo entero de nuevo. El motor Takashi MT13 es un motor a gasolina de 13 HP, 4…
-  PDP: https://ferre24.com.mx/products/motor-a-gasolina-13-hp-4-tiempos-takashi-mt13
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d05a8e63-595e-4c3f-8c12-6eeccc0338a0.png
-
-## Ahoyadoras a Gasolina (1)
-
-- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,691 (antes $10,348) · Kawashima · MTT52M
-  La Ahoyadora Kawashima MTT52M es la herramienta que acelera el trabajo más lento del rancho: abrir hoyos. Con un motor a gasolina de 52cc y 2 tiempos, perfora tierra blanda de forma rápida y uniforme — el trabajo que…
-  PDP: https://ferre24.com.mx/products/ahoyadora-kawashima-mtt52m-52cc-3-brocas
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d43ca7eb-da4a-41a8-a79e-ab6bb7316b3a.png
-
-## Calentadores de Agua (2)
+## Calentadores de Agua (6)
 
 - **Calentador de Paso Instantáneo Modulante KASSAI KASPRO-16P** · `KASPRO-16P` · $11,977 · KASSAI · KASPRO-16P · 🔴 AGOTADO
   El KASSAI KASPRO-16P es un calentador de paso instantáneo modulante de la Serie Profesional con capacidad de 16 litros por minuto, diseñado para abastecer hasta dos servicios simultáneos sin tanque y sin piloto de llama…
@@ -762,9 +796,6 @@ Reglas de meses sin intereses (MSI) por promo:
   El TAKAGI TKGHE-38-IP es un calentador de agua instantáneo de alto rendimiento diseñado para aplicaciones residenciales y comerciales que demandan agua caliente de forma continua y eficiente. Con una capacidad de flujo…
   PDP: https://ferre24.com.mx/products/calentador-paso-a-gas-lp-takagi-tkghe-38-ip-38-l-min-ultra-alta-eficiencia-uso-r
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b3210ed6-be90-4df5-95e3-ce8a24306454.png
-
-## Combo (2)
-
 - **Combo Calentador 10L KASSAI + Presurizador MINI 1/6 HP GRATIS** · `COMBO-KAS10P-MINI25` · $4,899 (antes $6,266) · KASSAI + AQUA PAK · COMBO-KAS10P-MINI25
   Llévate el presurizador GRATIS. Compra el Calentador de Paso Instantáneo KASSAI de 10 litros y recibe el Presurizador Individual Automático AQUA PAK MINI (1/6 HP) sin costo . · · Calentador de Paso Instantáneo KASSAI 10…
   PDP: https://ferre24.com.mx/products/combo-calentador-10l-kassai-presurizador-mini-16hp-gratis
@@ -773,58 +804,64 @@ Reglas de meses sin intereses (MSI) por promo:
   Paga menos comprando el combo. Llévate el Calentador de Paso Instantáneo Modulante KASSAI de 12 litros con el Presurizador Individual Automático AQUA PAK MINI (1/3 HP) al 50% de descuento . · · Calentador de Paso…
   PDP: https://ferre24.com.mx/products/combo-calentador-12l-kassai-presurizador-mini-13hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f28f9109-235c-4423-bca5-1917ea964b4e.png
+- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $5,999 (antes $6,666) · KASSAI · KAS-12P-TF · ⚡PROMO
+  Calentador de Paso Instantáneo Modulante
+  PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
+- **KASSAI KAS-10P** · `KAS-10P` · $4,899 (antes $4,899) · KASSAI · KAS-10P · ⚡PROMO 12MSI
+  El Calentador de Paso Instantáneo KASSAI KAS-10P calienta el agua en el momento en que abres la llave: no hay tanque que esperar ni agua tibia al final del baño. · Entrega una capacidad de 10 litros por minuto y está…
+  PDP: https://ferre24.com.mx/products/kassai-kas-10p
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c5bb77c-313d-4829-b17f-4f45cc587029.png
 
-## Escarificadores y Aireadores (1)
+## Construcción y Obra (1)
 
-- **Peinadora Eléctrica para Césped Artificial** · `302E` · $5,431 (antes $5,431) · Garland · Roll & Comb 302 E · 🔴 AGOTADO
-  El césped artificial de alta calidad merece mantenimiento de alta calidad. Con el tiempo, el tráfico constante aplana las fibras sintéticas y permite que hojas, musgo, agujas de pino y polvo se acumulen entre los…
-  PDP: https://ferre24.com.mx/products/peinadora-electrica-cesped-artificial-garland-302e
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b62cd78f-b760-43b9-b584-e675af1b8520.png
+- **Zanjadora Parazzini TRENCH15** · `TRENCH15` · $54,038 (antes $93,169) · Parazzini · TRENCH15
+  Abrir una zanja a pico y pala se come el día completo, cansa al equipo y encarece cualquier obra que dependa de instalar tubería, cableado o drenaje bajo tierra. La Zanjadora Parazzini TRENCH15 existe para resolver…
+  PDP: https://ferre24.com.mx/products/zanjadora-parazzini-trench15-motor-15-hp-doble-filtro-aire
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66561963-f2dd-4bbb-ba7f-762735af586e.png
 
-## Focos y Lámparas de Descarga (1)
+## Iluminación (2)
 
 - **Foco de Haluro Metálico 1000W Parazzini** · `LMH-1000W` · $18,227 (antes $20,253) · Parazzini · 🔴 AGOTADO
   Cuando un foco fundido detiene tu obra, cada hora de oscuridad cuesta dinero. El Foco de Haluro Metálico 1000W Parazzini es la refacción diseñada para mantener operativas tus torres de iluminación TLP-9800-4 y…
   PDP: https://ferre24.com.mx/products/foco-haluro-metalico-1000w-parazzini-repuesto-torres-tlp-9800-4-lait-halo6kw
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8b9a2529-b7d5-4ee1-a823-ebb27921f1d6.png
+- **Torre de Iluminación Parazzini TLP-9800-4** · `TLP-9800-4` · $89,278 (antes $89,278) · Parazzini · TLP-9800-4
+  Cuando se mete el sol, la obra no se detiene — pero sin luz suficiente, el trabajo se vuelve lento, inseguro y propenso a errores. La Torre de Iluminación Parazzini TLP-9800-4 está construida para resolver justo eso:…
+  PDP: https://ferre24.com.mx/products/torre-iluminacion-parazzini-tlp-9800-4-4-x-1000w-haluro-metalico
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c3da1fc9-8276-406a-a436-86f54947ba05.png
 
-## Herramientas para Pasto Sintético (1)
+## Impermeabilizantes (3)
 
-- **Peinadora Eléctrica 300 W para Pasto Sintético Roll & Comb 141E** · `141E` · $4,578 (antes $4,578) · Roll & Comb · 141E · 🔴 AGOTADO
-  El césped artificial que no recibe mantenimiento se nota. Las fibras se aplastan en las zonas de más pisadas, las hojas y el polvo se acumulan entre las hebras, y la arena de sílice se desplaza dejando parches sin…
-  PDP: https://ferre24.com.mx/products/peinadora-electrica-300-w-pasto-sintetico-roll-comb-141e
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7bd6adde-3874-4146-8c40-e9fbf2196aa6.png
+- **Shellcoat 19L Aislante de Calor (Pintura Térmica Reflectante)** · `SHELL-19` · $1,595 (antes $1,994) · Shellcoat · SHELL-19 · 🔴 AGOTADO
+  Aislante de Calor Shellcoat – Pintura Térmica Ultra Reflectante Aislante de Calor Shellcoat es una pintura térmica formulada para bloquear hasta el 90% de la radiación solar en superficies expuestas al sol. Su…
+  PDP: https://ferre24.com.mx/products/shellcoat-19l-aislante-calor-pintura-termica-reflectante
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_119ce3fe-3fcf-4e73-94ea-7a084ab981cb.png
+- **Shellcoat HI10 19L Impermeabilizante Híbrido Acrílico-Poliuretano (...** · `HI10-19` · $2,400 (antes $3,000) · Shellcoat · HI10-19
+  Impermeabilizante Hibrido Acrílico Poliuretano Shellcoat HI10 – Protección y Durabilidad Impermeabilizante Hibrido Acrílico Poliuretano HI10 es un impermeabilizante fibratado de tecnología híbrida color blanco, diseñado…
+  PDP: https://ferre24.com.mx/products/shellcoat-hi10-19l-impermeabilizante-hibrido-acrilico-poliuretano-10-anos-lamina
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_5c31d409-b7e1-4d44-8e95-074810bc4329.png
+- **Shellcoat Liga Seal 19L Sellador (Promotor de Adherencia + Sellador)** · `SHELIGA-19` · $1,399 (antes $1,749) · Shellcoat · SHELIGA-19 · 🔴 AGOTADO
+  Sellador Liga Shellcoat – Sellador y Primer de Alta Adherencia Sellador Liga Shellcoat SEAL es un recubrimiento diseñado para mejorar el anclaje, adherencia y rendimiento de otros productos como el aislante térmico…
+  PDP: https://ferre24.com.mx/products/shellcoat-liga-seal-19l-sellador-promotor-adherencia-sellador
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_dad0cdbb-08ba-4079-9ebd-8b8b41eeafdc.png
 
-## Motores Sumergibles (2)
-
-- **Motor Sumergible AQUA PAK MSQA4-51230** · `MSQA4-51230` · $15,547 (antes $22,209) · AQUA PAK · MSQA4-51230 · 🔴 AGOTADO
-  El Motor Sumergible AQUA PAK MSQA4-51230 es la solución de bombeo de alto rendimiento para pozos profundos de 4 pulgadas o mayores. Con una potencia nominal de 5 HP (3.7 kW) y operación monofásica a 230 V / 60 Hz, este…
-  PDP: https://ferre24.com.mx/products/motor-sumergible-5-hp-aqua-pak-msqa4-51230-serie-4-monofasico-230-v-ip68-acero-i
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_454374e5-70de-464f-9841-21ac8ec6d764.png
-- **Motor Sumergible Altamira TRUST MSAT4-53230** · `MSAT4-53230` · $16,765 (antes $23,950) · Altamira · MSAT4-53230 · 🔴 AGOTADO
-  El motor sumergible encapsulado Altamira serie TRUST MSAT4-53230 entrega 5 HP de potencia en servicio continuo para bombeo en pozo profundo. Diseñado para columnas de agua exigentes, soporta una profundidad máxima de…
-  PDP: https://ferre24.com.mx/products/msat4-53230-motor-sumergible
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_137fa2f9-1e60-4683-aee5-1f642c4941f4.png
-
-## Motores a Gasolina 4 Tiempos (1)
+## Motores Estacionarios (3)
 
 - **Motor Parazzini 11 HP 4 Tiempos OHV** · `MHP11` · $6,179 (antes $6,179) · Parazzini · MHP11
   Tu motor se dañó y la bomba lleva días parada. El costo de un motor de reemplazo puede parecer alto, pero el costo de no tener agua — para el rancho, el riego, el negocio — es mucho mayor. El Parazzini MHP11 está…
   PDP: https://ferre24.com.mx/products/motor-parazzini-11-hp-4-tiempos-ohv-multiproposito
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ca405cd0-8ce2-4f7d-8743-1deae60119d8.png
+- **Motor Parazzini MP13C** · `MP13C` · $9,432 (antes $17,149) · Parazzini · MP13C
+  Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
+  PDP: https://ferre24.com.mx/products/motor-parazzini-mp13c-13-hp-4t-con-caja-reductora-integrada
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f0786bf-a462-4d4b-abba-f2ea3fe39f00.png
+- **Motor a Gasolina 13 HP 4 Tiempos Takashi MT13** · `MT13` · $4,013 (antes $6,919) · Takashi MT13
+  ¿Se te descompuso el motor de tu motobomba, generadora o revolvedora y la máquina completa quedó parada? No siempre hay que comprar el equipo entero de nuevo. El motor Takashi MT13 es un motor a gasolina de 13 HP, 4…
+  PDP: https://ferre24.com.mx/products/motor-a-gasolina-13-hp-4-tiempos-takashi-mt13
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d05a8e63-595e-4c3f-8c12-6eeccc0338a0.png
 
-## Multitools Victorinox (2)
-
-- **Victorinox Swiss Tool Spirit MXBS** · `3.0226.M3N` · $5,252 (antes $5,835) · Victorinox · 3.0226.M3N
-  La Navaja Victorinox Swiss Tool Spirit MXBS es una herramienta multiusos profesional diseñada para quienes exigen lo mejor en versatilidad y durabilidad. Con 24 funciones integradas de acero inoxidable de alta calidad,…
-  PDP: https://ferre24.com.mx/products/victorinox-swiss-tool-spirit-mxbs-multitool-24-funciones
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_596f77c3-87f5-4589-8ccc-dc147daf4b8d.png
-- **Victorinox Swiss Tool X** · `3.0327.H` · $4,247 (antes $4,719) · Victorinox · 3.0327.H
-  La Navaja Victorinox Swiss Tool X es la solución perfecta para profesionales que buscan máxima versatilidad en un tamaño compacto. Con 26 funciones integradas de acero inoxidable, esta navaja suiza combina potencia y…
-  PDP: https://ferre24.com.mx/products/victorinox-swiss-tool-x-multitool-26-funciones
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_38dcc596-26af-4c56-898f-aa2ffb7aac22.png
-
-## Navajas Multiusos Victorinox (30)
+## Navajas y Multiusos (32)
 
 - **Victorinox Climber 91mm Rojo Transparente** · `1.3703.T` · $985 (antes $1,059) · Victorinox · 1.3703.T
   El Climber transparente rojo combina ultraligero rendimiento con estética moderna. Con solo 80 gramos, 14 herramientas perfectamente integradas y escalas transparentes que revelan mecanismos suizos. Para escaladores,…
@@ -918,6 +955,14 @@ Reglas de meses sin intereses (MSI) por promo:
   La Navaja Victorinox Swiss Champ es la herramienta multiusos definitiva para quienes demandan máxima versatilidad. Con 33 funciones integradas de acero inoxidable, no hay tarea que no pueda manejar. Es la navaja suiza…
   PDP: https://ferre24.com.mx/products/victorinox-swiss-champ-91mm-33-funciones-rojo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cefafe25-f5aa-4c1d-86be-976747273637.png
+- **Victorinox Swiss Tool Spirit MXBS** · `3.0226.M3N` · $5,252 (antes $5,835) · Victorinox · 3.0226.M3N
+  La Navaja Victorinox Swiss Tool Spirit MXBS es una herramienta multiusos profesional diseñada para quienes exigen lo mejor en versatilidad y durabilidad. Con 24 funciones integradas de acero inoxidable de alta calidad,…
+  PDP: https://ferre24.com.mx/products/victorinox-swiss-tool-spirit-mxbs-multitool-24-funciones
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_596f77c3-87f5-4589-8ccc-dc147daf4b8d.png
+- **Victorinox Swiss Tool X** · `3.0327.H` · $4,247 (antes $4,719) · Victorinox · 3.0327.H
+  La Navaja Victorinox Swiss Tool X es la solución perfecta para profesionales que buscan máxima versatilidad en un tamaño compacto. Con 26 funciones integradas de acero inoxidable, esta navaja suiza combina potencia y…
+  PDP: https://ferre24.com.mx/products/victorinox-swiss-tool-x-multitool-26-funciones
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_38dcc596-26af-4c56-898f-aa2ffb7aac22.png
 - **Victorinox Victorinox Climber 91mm Azul Transparente** · `1.3703.T2` · $985 (antes $1,059) · Victorinox · 1.3703.T2
   El Climber azul transparente — 18 funciones con alicates en escalas que muestran la ingeniería suiza desde dentro.
   PDP: https://ferre24.com.mx/products/victorinox-climber-91mm-18-funciones-azul-transparente
@@ -947,40 +992,28 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/victorinox-work-champ-111mm-21-funciones
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c2dd1fe-d070-4124-9958-df1181db1de1.png
 
-## Otros (12)
+## Presurizadores y Tanques (10)
 
-- **Motor Parazzini MP13C** · `MP13C` · $9,432 (antes $17,149) · Parazzini · MP13C
-  Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
-  PDP: https://ferre24.com.mx/products/motor-parazzini-mp13c-13-hp-4t-con-caja-reductora-integrada
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f0786bf-a462-4d4b-abba-f2ea3fe39f00.png
-- **Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS** · `PKUF-6UV` · $2,099 (antes $2,998) · PURIKOR · PKUF-6UV
-  ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
-  PDP: https://ferre24.com.mx/products/sistema-de-ultrafiltracion-purikor-6-etapas-uv-philips
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_59fd80f8-3d12-4cce-8c97-3d5c131046e0.png
-- **Sistema de Ósmosis Inversa 6 Etapas + UV** · `PKRO200-6UVPM` · $4,585 (antes $5,210) · PURIKOR · PKRO200-6UVPM · ⚡PROMO
-  ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4-6 personas gasta entre $250 y $300 mensuales en agua embotellada — dinero que se va sin dejar nada. El Sistema de Ósmosis Inversa PURIKOR PKRO200-6UVPM te…
-  PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-6-etapas-uv-200-gpd-purikor
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_35fcd33b-639d-49c1-a3e3-0ab8412f007b.png
-- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $6,209 (antes $7,056) · PURIKOR · PK-EASY-600US · ⚡PROMO
-  ¿Cuánto gastas al mes en garrafones? ¿Cuánto espacio te quita el tinaco o el filtro de debajo de la tarja? El PURIKOR PK-EASY-600US resuelve los dos problemas al mismo tiempo: agua purificada directamente del grifo, en…
-  PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-sin-tanque-600-gpd-purikor-pk-easy-600us
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ac57830b-0e5d-4063-a881-ca162db66e71.png
-- **Sistema de ósmosis inversa Purikor 5 etapas 100gpd** · `PKRO100-5P` · $3,025 (antes $3,437) · Purikor · PKRO100-5P · ⚡PROMO
-  ¿Gastas cientos de pesos al mes en garrafones y no confías en el agua de tu llave? El agua de red puede contener cloro, metales pesados, bacterias y sólidos disueltos que ni hervir elimina. Hay una solución permanente…
-  PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-purikor-5-etapas-100gpd
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a6e66f92-056c-4275-9ae6-d965a57936dd.png
-- **Soplador Kawashima 26 cc** · `WIND26` · $2,124 (antes $2,124) · Kawashima · WIND26
-  Limpiar el jardín con rastrillo toma horas. Con el soplador Kawashima WIND26, el mismo trabajo se hace en minutos. · Potencia real donde más importa. Su motor 2 tiempos de 26 cc alcanza hasta 7,500 RPM y mueve 650 m³ de…
-  PDP: https://ferre24.com.mx/products/soplador-kawashima-26-cc-motor-2t-650-m-h-encendido-manual
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_5ec7fcc5-79bd-48fa-8282-e6753d13698b.png
-- **Soplador de Mochila Profesional 77cc** · `SK772TPRO` · $8,961 (antes $16,292) · Kawashima Pro · SK772TPRO
-  Cada hora que pierdes con una herramienta sin potencia es dinero que no cobras. El jardinero o landscaper profesional sabe que el tiempo entre trabajo y trabajo es lo que separa un día rentable de uno mediocre. Con una…
-  PDP: https://ferre24.com.mx/products/soplador-de-mochila-profesional-77cc-kawashima-pro-sk772tpro
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_28b16a1d-b758-478b-a2fa-da0d18c08d4a.png
-- **Soplador de mochila Kawashima WIND76** · `WIND76` · $5,622 (antes $5,622) · Kawashima · WIND76
-  Cuando el jardín mide media manzana y el tiempo es dinero, un soplador de juguete no alcanza. El Kawashima WIND76 es la herramienta que usan los contratistas serios: motor 2T de 76 cc que arranca y no para, diseño de…
-  PDP: https://ferre24.com.mx/products/soplador-de-mochila-kawashima-wind76-76-cc-1-440-m-h
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8fd502fc-a009-44ad-b083-c1a07ad26a2f.png
+- **AQUAPAK CCQA-5230** · `CCQA 5230` · $2,786 (antes $3,980) · AQUAPAK · CCQA-5230 · 🔴 AGOTADO
+  Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
+  PDP: https://ferre24.com.mx/products/aquapak-ccqa-5230
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_01bd0201-942f-403b-90f8-b04cf5869189.png
+- **Motor Sumergible AQUA PAK MSQA4-51230** · `MSQA4-51230` · $15,547 (antes $22,209) · AQUA PAK · MSQA4-51230 · 🔴 AGOTADO
+  El Motor Sumergible AQUA PAK MSQA4-51230 es la solución de bombeo de alto rendimiento para pozos profundos de 4 pulgadas o mayores. Con una potencia nominal de 5 HP (3.7 kW) y operación monofásica a 230 V / 60 Hz, este…
+  PDP: https://ferre24.com.mx/products/motor-sumergible-5-hp-aqua-pak-msqa4-51230-serie-4-monofasico-230-v-ip68-acero-i
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_454374e5-70de-464f-9841-21ac8ec6d764.png
+- **Motor Sumergible Altamira TRUST MSAT4-53230** · `MSAT4-53230` · $16,765 (antes $23,950) · Altamira · MSAT4-53230 · 🔴 AGOTADO
+  El motor sumergible encapsulado Altamira serie TRUST MSAT4-53230 entrega 5 HP de potencia en servicio continuo para bombeo en pozo profundo. Diseñado para columnas de agua exigentes, soporta una profundidad máxima de…
+  PDP: https://ferre24.com.mx/products/msat4-53230-motor-sumergible
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_137fa2f9-1e60-4683-aee5-1f642c4941f4.png
+- **PRES-AP5XB-24LM Presurizador individual de velocidad constante** · `PRES-AP5XB-24LM` · $2,979 (antes $4,256) · AQUA PAK · PRES-AP5XB-24LM
+  Equipo totalmente ensamblado
+  PDP: https://ferre24.com.mx/products/pres-ap5xb-24lm-presurizador-individual-velocidad-constante
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_87d132d4-8b98-4930-b108-b449defcf652.png
+- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $2,399 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO 12MSI
+  ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
+  PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40fbe287-0d55-46cd-b9e8-020654c8c477.png
 - **Tanque Precargado ALTAMIRA 86 Gal** · `ALTAPRO XLB86` · $11,386 (antes $16,265) · ALTAMIRA · ALTAPRO XLB86 — Tanque Precargado Vertical
   El ALTAPRO XLB86 es un tanque precargado de diafragma de la Serie PRO XLB de ALTAMIRA, diseñado para sistemas hidroneumáticos residenciales, comerciales, agrícolas e industriales que exigen presión de agua estable y…
   PDP: https://ferre24.com.mx/products/tanque-precargado-altamira-86-gal-garantia-6-anos-codo-inox-304-incluido
@@ -993,66 +1026,45 @@ Reglas de meses sin intereses (MSI) por promo:
   Agua con presión constante, sin sorpresas · Si tu bomba arranca cada vez que alguien abre una llave, o si la presión cae en cuanto hay más de un punto de uso abierto, el problema no es la bomba: es la falta de un tanque…
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-65-gal-altamira-nsf-ansi-garantia-6-anos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fb34a38c-b05f-4c7e-a304-f91fdc76c8a0.png
+- **Tanque Precargado Vertical ALTAMIRA PRO XLB45** · `ALTAPRO-XLB45` · $8,093 (antes $11,561) · ALTAMIRA · ALTAPRO-XLB45 · 🔴 AGOTADO
+  El tanque hidroneumático precargado vertical ALTAMIRA PRO XLB45 es la solución de presión constante diseñada para sistemas de agua residenciales, comerciales e industriales que demandan rendimiento sostenido y cero…
+  PDP: https://ferre24.com.mx/products/tanque-hidroneumatico-precargado-vertical-altamira-45-galones-serie-pro-xlb
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1358c180-6c77-4509-887a-d6df5a30dee1.png
 - **Tanque precargado vertical AQUA PAK XLB20** · `AQUAPAK XLB20` · $2,545 (antes $3,636) · AQUA PAK · XLB20
   ¿El agua te llega a chorros a veces y casi nada en otras? La presión inconsistente en casa no es un problema del vecindario — es que tu sistema de agua no tiene regulación. El tanque precargado AQUA PAK XLB20 resuelve…
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-aqua-pak-xlb20-20-galones-130-psi-garantia-4-anos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fa8cb9c3-ac87-44f1-861e-b17f2d8e2ce3.png
 
-## Peinadoras y Barredoras (1)
-
-- **Garland Roll & Comb 502 E** · `502E` · $5,095 (antes $5,095) · Garland · Roll & Comb 502 E
-  Mantener el césped artificial en óptimas condiciones requiere más que un rastrillo. Con el paso del tiempo, las fibras sintéticas se aplastan, el musgo y las algas se acumulan, y hojas o agujas de pino quedan atrapadas…
-  PDP: https://ferre24.com.mx/products/garland-roll-comb-502e-peinadora-cesped-artificial-1600w
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a7fd24bd-479c-405b-ad72-36e19394b6ab.png
-
-## Presurizadores (1)
-
-- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $2,399 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO 12MSI
-  ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
-  PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40fbe287-0d55-46cd-b9e8-020654c8c477.png
-
-## Producto (7)
-
-- **AQUAPAK CCQA-5230** · `CCQA 5230` · $2,786 (antes $3,980) · AQUAPAK · CCQA-5230 · 🔴 AGOTADO
-  Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
-  PDP: https://ferre24.com.mx/products/aquapak-ccqa-5230
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_01bd0201-942f-403b-90f8-b04cf5869189.png
-- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $5,999 (antes $6,666) · KASSAI · KAS-12P-TF · ⚡PROMO
-  Calentador de Paso Instantáneo Modulante
-  PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
-- **KASSAI KAS-10P** · `KAS-10P` · $4,899 (antes $4,899) · KASSAI · KAS-10P · ⚡PROMO 12MSI
-  El Calentador de Paso Instantáneo KASSAI KAS-10P calienta el agua en el momento en que abres la llave: no hay tanque que esperar ni agua tibia al final del baño. · Entrega una capacidad de 10 litros por minuto y está…
-  PDP: https://ferre24.com.mx/products/kassai-kas-10p
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c5bb77c-313d-4829-b17f-4f45cc587029.png
-- **PRES-AP5XB-24LM Presurizador individual de velocidad constante** · `PRES-AP5XB-24LM` · $2,979 (antes $4,256) · AQUA PAK · PRES-AP5XB-24LM
-  Equipo totalmente ensamblado
-  PDP: https://ferre24.com.mx/products/pres-ap5xb-24lm-presurizador-individual-velocidad-constante
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_87d132d4-8b98-4930-b108-b449defcf652.png
-- **Shellcoat 19L Aislante de Calor (Pintura Térmica Reflectante)** · `SHELL-19` · $1,595 (antes $1,994) · Shellcoat · SHELL-19 · 🔴 AGOTADO
-  Aislante de Calor Shellcoat – Pintura Térmica Ultra Reflectante Aislante de Calor Shellcoat es una pintura térmica formulada para bloquear hasta el 90% de la radiación solar en superficies expuestas al sol. Su…
-  PDP: https://ferre24.com.mx/products/shellcoat-19l-aislante-calor-pintura-termica-reflectante
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_119ce3fe-3fcf-4e73-94ea-7a084ab981cb.png
-- **Shellcoat HI10 19L Impermeabilizante Híbrido Acrílico-Poliuretano (...** · `HI10-19` · $2,400 (antes $3,000) · Shellcoat · HI10-19
-  Impermeabilizante Hibrido Acrílico Poliuretano Shellcoat HI10 – Protección y Durabilidad Impermeabilizante Hibrido Acrílico Poliuretano HI10 es un impermeabilizante fibratado de tecnología híbrida color blanco, diseñado…
-  PDP: https://ferre24.com.mx/products/shellcoat-hi10-19l-impermeabilizante-hibrido-acrilico-poliuretano-10-anos-lamina
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_5c31d409-b7e1-4d44-8e95-074810bc4329.png
-- **Shellcoat Liga Seal 19L Sellador (Promotor de Adherencia + Sellador)** · `SHELIGA-19` · $1,399 (antes $1,749) · Shellcoat · SHELIGA-19 · 🔴 AGOTADO
-  Sellador Liga Shellcoat – Sellador y Primer de Alta Adherencia Sellador Liga Shellcoat SEAL es un recubrimiento diseñado para mejorar el anclaje, adherencia y rendimiento de otros productos como el aislante térmico…
-  PDP: https://ferre24.com.mx/products/shellcoat-liga-seal-19l-sellador-promotor-adherencia-sellador
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_dad0cdbb-08ba-4079-9ebd-8b8b41eeafdc.png
-
-## Purificación de Agua (5)
+## Purificación de Agua (12)
 
 - **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $4,777 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
   ¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-800us-osmosis-inversa-800-gpd-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aab62185-b15f-4f46-aaec-cd327bfb7f10.png
+- **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $6,838 (antes $7,598) · PK-EASY · 100CT · ⚡PROMO
+  ¿Cuánto llevas gastando en garrafones este mes? Una familia de 4 personas gasta entre $1,560 y $2,080 MXN al mes en agua embotellada — más de $18,000 al año — y aun así no tiene certeza de lo que está tomando. · El…
+  PDP: https://ferre24.com.mx/products/purificador-osmosis-inversa-100gpd-dispensador-pk-easy-100ct
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a1b8095f-75d4-4e63-8671-e1b090fbd688.png
+- **Purikor PKRO50-6UVPM** · `PKRO50-6UVPM` · $3,598 (antes $4,089) · Purikor · PKRO50-6UVPM · ⚡PROMO
+  ¿Cuánto gastas al mes en garrafones? Una familia de 4-5 personas en México gasta entre $150 y $250 pesos cada mes en agua embotellada, sin contar el tiempo de espera al repartidor, el plástico desechado y el espacio que…
+  PDP: https://ferre24.com.mx/products/purikor-pkro50-6uvpm-osmosis-inversa-50-gpd-6-etapas-uv
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fafdb8f0-d037-46e4-9655-9343d62dbcd4.png
+- **Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS** · `PKUF-6UV` · $2,099 (antes $2,998) · PURIKOR · PKUF-6UV
+  ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
+  PDP: https://ferre24.com.mx/products/sistema-de-ultrafiltracion-purikor-6-etapas-uv-philips
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_59fd80f8-3d12-4cce-8c97-3d5c131046e0.png
+- **Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS** · `PKUF-6UV` · $2,099 (antes $2,998) · PURIKOR · PKUF-6UV
+  ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
+  PDP: https://ferre24.com.mx/products/sistema-ultrafiltracion-purikor-6-etapas-uv-philips
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_995f3cbe-a4b4-4a6d-aa94-a44d15e21e9e.png
 - **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $3,938 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
   ¿Tu agua sabe rara, huele a cloro o simplemente no confías en lo que tomas del grifo? El agua de la red municipal trae sedimentos, cloro residual y microcontaminantes que ningún filtro de jarra elimina completamente. La…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-400-gpd-purikor-compacto-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d6ae10e6-1a6c-42eb-abc0-e2e8ff260bdc.png
+- **Sistema de Ósmosis Inversa 6 Etapas + UV** · `PKRO200-6UVPM` · $4,585 (antes $5,210) · PURIKOR · PKRO200-6UVPM · ⚡PROMO
+  ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4-6 personas gasta entre $250 y $300 mensuales en agua embotellada — dinero que se va sin dejar nada. El Sistema de Ósmosis Inversa PURIKOR PKRO200-6UVPM te…
+  PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-6-etapas-uv-200-gpd-purikor
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_35fcd33b-639d-49c1-a3e3-0ab8412f007b.png
 - **Sistema de Ósmosis Inversa PURIKOR 600 GPD 6 Etapas con UV** · `PKRO600-6UVPM` · $7,122 (antes $8,093) · PURIKOR · PKRO600-6UVPM · ⚡PROMO
   El Sistema de Ósmosis Inversa PURIKOR PKRO600-6UVPM es la solución definitiva para quienes necesitan agua purificada de alto rendimiento en aplicaciones comerciales o industriales de punto de uso (POU). Con un flujo…
   PDP: https://ferre24.com.mx/products/osmosis-inversa-purikor-600gpd-6-etapas-uv-pkro600-6uvpm
@@ -1061,84 +1073,15 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cansado del agua turbia, con sabor extraño o preocupaciones sobre contaminantes? El sistema PURIKOR elimina sedimento, cloro, minerales disueltos, bacterias y virus — llevando agua potable pura directamente a tu grifo.…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_772afc7e-f9dd-4383-b2d4-edb0909acc8c.jpg
+- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $6,209 (antes $7,056) · PURIKOR · PK-EASY-600US · ⚡PROMO
+  ¿Cuánto gastas al mes en garrafones? ¿Cuánto espacio te quita el tinaco o el filtro de debajo de la tarja? El PURIKOR PK-EASY-600US resuelve los dos problemas al mismo tiempo: agua purificada directamente del grifo, en…
+  PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-sin-tanque-600-gpd-purikor-pk-easy-600us
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ac57830b-0e5d-4063-a881-ca162db66e71.png
+- **Sistema de ósmosis inversa Purikor 5 etapas 100gpd** · `PKRO100-5P` · $3,025 (antes $3,437) · Purikor · PKRO100-5P · ⚡PROMO
+  ¿Gastas cientos de pesos al mes en garrafones y no confías en el agua de tu llave? El agua de red puede contener cloro, metales pesados, bacterias y sólidos disueltos que ni hervir elimina. Hay una solución permanente…
+  PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-purikor-5-etapas-100gpd
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a6e66f92-056c-4275-9ae6-d965a57936dd.png
 - **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $5,141 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
   ¿Tu familia espera minutos para llenar una jarra o la presión baja en cuanto abres la llave? Un purificador de flujo insuficiente no es ahorro — es frustración diaria. · El PURIKOR PK-EASY-600N-US resuelve eso de raíz:…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-purikor-537-gpd-4-etapas-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_08c046db-d6f0-4810-b7a3-e7b607f54c52.png
-
-## Purificadores por Ósmosis Inversa (1)
-
-- **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $6,838 (antes $7,598) · PK-EASY · 100CT · ⚡PROMO
-  ¿Cuánto llevas gastando en garrafones este mes? Una familia de 4 personas gasta entre $1,560 y $2,080 MXN al mes en agua embotellada — más de $18,000 al año — y aun así no tiene certeza de lo que está tomando. · El…
-  PDP: https://ferre24.com.mx/products/purificador-osmosis-inversa-100gpd-dispensador-pk-easy-100ct
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a1b8095f-75d4-4e63-8671-e1b090fbd688.png
-
-## Sistemas de ultrafiltración (1)
-
-- **Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS** · `PKUF-6UV` · $2,099 (antes $2,998) · PURIKOR · PKUF-6UV
-  ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
-  PDP: https://ferre24.com.mx/products/sistema-ultrafiltracion-purikor-6-etapas-uv-philips
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_995f3cbe-a4b4-4a6d-aa94-a44d15e21e9e.png
-
-## Sistemas de Ósmosis Inversa (1)
-
-- **Purikor PKRO50-6UVPM** · `PKRO50-6UVPM` · $3,598 (antes $4,089) · Purikor · PKRO50-6UVPM · ⚡PROMO
-  ¿Cuánto gastas al mes en garrafones? Una familia de 4-5 personas en México gasta entre $150 y $250 pesos cada mes en agua embotellada, sin contar el tiempo de espera al repartidor, el plástico desechado y el espacio que…
-  PDP: https://ferre24.com.mx/products/purikor-pkro50-6uvpm-osmosis-inversa-50-gpd-6-etapas-uv
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fafdb8f0-d037-46e4-9655-9343d62dbcd4.png
-
-## Sopladores a Gasolina (1)
-
-- **Soplador de Mochila Kawashima 43cc** · `WIND43` · $1,138 (antes $1,911) · Kawashima · WIND43
-  Limpiar jardines grandes, canchas, patios empresariales o áreas verdes urbanas con un soplador que se queda sin fuerza o que falla al arrancar no es opción cuando hay trabajo real por delante. El Kawashima WIND43 está…
-  PDP: https://ferre24.com.mx/products/soplador-mochila-kawashima-43cc-wind43
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_689bf71e-770b-48ac-940c-506ca018f09e.png
-
-## Sopladores a gasolina (1)
-
-- **Soplador-aspirador Kawashima 26 cc con bolsa recolectora** · `WINDBAG26` · $2,624 (antes $4,770) · Kawashima · WINDBAG26
-  Limpiar el jardín a mano lleva horas. Un soplador sin bolsa solo mueve el problema de lugar. Y contratar servicio de jardinería cada semana sale caro. El WINDBAG26 de Kawashima resuelve los tres problemas con una sola…
-  PDP: https://ferre24.com.mx/products/soplador-aspirador-kawashima-26-cc-bolsa-recolectora
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/secundaria_001.png
-
-## Tanques Hidroneumaticos (1)
-
-- **Tanque Precargado Vertical ALTAMIRA PRO XLB45** · `ALTAPRO-XLB45` · $8,093 (antes $11,561) · ALTAMIRA · ALTAPRO-XLB45 · 🔴 AGOTADO
-  El tanque hidroneumático precargado vertical ALTAMIRA PRO XLB45 es la solución de presión constante diseñada para sistemas de agua residenciales, comerciales e industriales que demandan rendimiento sostenido y cero…
-  PDP: https://ferre24.com.mx/products/tanque-hidroneumatico-precargado-vertical-altamira-45-galones-serie-pro-xlb
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1358c180-6c77-4509-887a-d6df5a30dee1.png
-
-## Torres de Iluminación Portátiles (1)
-
-- **Torre de Iluminación Parazzini TLP-9800-4** · `TLP-9800-4` · $89,278 (antes $89,278) · Parazzini · TLP-9800-4
-  Cuando se mete el sol, la obra no se detiene — pero sin luz suficiente, el trabajo se vuelve lento, inseguro y propenso a errores. La Torre de Iluminación Parazzini TLP-9800-4 está construida para resolver justo eso:…
-  PDP: https://ferre24.com.mx/products/torre-iluminacion-parazzini-tlp-9800-4-4-x-1000w-haluro-metalico
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c3da1fc9-8276-406a-a436-86f54947ba05.png
-
-## Turbinas de Aspersión (1)
-
-- **Turbina de Aspersión 36" Parazzini** · `TFQS9` · $60,700 (antes $121,421) · Parazzini · FQS9A2-2000K
-  Si tu turbina de aspersión ya se oxidó por la humedad del invernadero o de la granja, sabes que no es solo un problema estético: el óxido tapa boquillas, afloja piezas y termina en una aspersión despareja que deja zonas…
-  PDP: https://ferre24.com.mx/products/turbina-aspersion-36-parazzini-acero-inoxidable
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cf0653ee-bf98-469e-899f-1f4572029406.png
-
-## Turbinas de Aspersión Tractorizadas (1)
-
-- **Turbina de Aspersión Parazzini TFQS8** · `TFQS8` · $40,448 (antes $80,898) · Parazzini · TFQS8
-  Si tu sistema de aspersión se atasca cada temporada porque el agua trae sedimentos, o si ya te tocó desmontar una turbina completa porque el rotor "hermético" no se puede reparar en campo, sabes que el problema casi…
-  PDP: https://ferre24.com.mx/products/turbina-aspersion-parazzini-tfqs8-32-800-mm-acero-inoxidable
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4dd5a02e-fdde-499d-be5b-9687dd920daa.png
-
-## Turbinas de aspersión PTO (1)
-
-- **Turbina de Aspersión Parazzini TFQS5** · `TFQS5` · $23,988 (antes $47,976) · Parazzini · TFQS5
-  Si en tu huerto o viñedo las boquillas se tapan a media jornada, o la turbina vibra porque las paletas ya no giran parejo, sabes lo que cuesta perder una tarde de aspersión: menos cobertura, más químico desperdiciado y…
-  PDP: https://ferre24.com.mx/products/turbina-aspersion-parazzini-tfqs5-20-500-mm-6-paletas
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b708d602-913a-420b-aa4e-f64f11a88d4e.png
-
-## Zanjadoras (1)
-
-- **Zanjadora Parazzini TRENCH15** · `TRENCH15` · $54,038 (antes $93,169) · Parazzini · TRENCH15
-  Abrir una zanja a pico y pala se come el día completo, cansa al equipo y encarece cualquier obra que dependa de instalar tubería, cableado o drenaje bajo tierra. La Zanjadora Parazzini TRENCH15 existe para resolver…
-  PDP: https://ferre24.com.mx/products/zanjadora-parazzini-trench15-motor-15-hp-doble-filtro-aire
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66561963-f2dd-4bbb-ba7f-762735af586e.png
