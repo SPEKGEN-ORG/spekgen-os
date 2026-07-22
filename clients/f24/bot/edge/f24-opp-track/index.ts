@@ -67,7 +67,7 @@ async function currentPos(contactId: string): Promise<number> {
 }
 
 Deno.serve(async (req: Request) => {
-  if (req.method === "GET") return json({ ok: true, service: "f24-opp-track", version: 5, pipeline: PIPELINE, stages: STAGES.map((s) => s.key), split: "opp-level 50/50 (Edgar/Alfredo)", contact_owner: "Ferre24 Bot" });
+  if (req.method === "GET") return json({ ok: true, service: "f24-opp-track", version: 6, pipeline: PIPELINE, stages: STAGES.map((s) => s.key), split: "opp-level 50/50 (Edgar/Alfredo)", contact_owner: "Ferre24 Bot" });
   if (req.method !== "POST") return json({ ok: false, error: "method_not_allowed" }, 405);
   const t0 = Date.now();
   try {
@@ -150,7 +150,26 @@ Deno.serve(async (req: Request) => {
               : {}),
           }),
         });
-      } catch (_e) { /* best-effort: el QA puede esperar, la opp no */ }
+
+        // PRODUCTO DE INTERÉS: el bot ya manda los SKUs de este turno en `b.products`
+        // (join de products_mentioned). Antes se usaban solo para la etapa y se
+        // tiraban; ahora se acumulan por contacto para poder reactivar leads fríos
+        // cuando su producto entra en promoción. Unión atómica vía RPC (no pisa lo
+        // previo). Best-effort. El upsert de arriba ya garantiza que la fila existe.
+        const skus = String(b.products ?? "")
+          .split(",").map((s: string) => s.trim()).filter((s: string) => s.length > 0);
+        if (skus.length) {
+          await fetch(`${SB_URL}/rest/v1/rpc/f24_add_products`, {
+            method: "POST",
+            headers: {
+              apikey: SB_KEY,
+              Authorization: `Bearer ${SB_KEY}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ p_contact: contactId, p_skus: skus }),
+          });
+        }
+      } catch (_e) { /* best-effort: el QA/producto pueden esperar, la opp no */ }
     }
     console.log(`[opp-track] contact=${contactId} cur=${cur} computed=${computed} target=${STAGES[target].key} owner=${assignedTo ?? "-"} ok=${up.ok}`);
     return json({ ok: up.ok, stage: STAGES[target].key, curPos: cur, computed, target, owner: assignedTo, err: up.ok ? undefined : JSON.stringify(resp).slice(0, 250), elapsed_ms: Date.now() - t0 }, 200);
