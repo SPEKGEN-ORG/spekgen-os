@@ -201,10 +201,13 @@
       "sku_upper": "BP2680D",
       "producto": "Motobomba Parazzini BP2680D — Diésel 26 HP, 8",
       "regular_price": 73722.0,
-      "promo_price": 73722.0,
-      "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "promo_price": 55291.5,
+      "pct_desc": "25%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-07-24",
       "vigente": true,
@@ -266,7 +269,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "61675.00"
+      "shopify_price": "46256.25"
     },
     {
       "sku": "BPK31",
@@ -587,7 +590,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "75222.00"
+      "shopify_price": "66195.36"
     },
     {
       "sku": "HACPP4000-J",
