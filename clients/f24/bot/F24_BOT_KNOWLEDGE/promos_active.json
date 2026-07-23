@@ -8,8 +8,8 @@
       "sku_upper": "13A878BTA66",
       "producto": "Tractor Podador Troy-Bilt Bronco 46 — Motor 547 cc, Corte 46",
       "regular_price": 94155.0,
-      "promo_price": 94155.0,
-      "pct_desc": "",
+      "promo_price": 70616.25,
+      "pct_desc": "25%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -24,24 +24,26 @@
       "sku_upper": "13AN77BS309",
       "producto": "Tractor podador motor B&S 500 cc 42 pulg",
       "regular_price": 67127.0,
-      "promo_price": 67127.0,
-      "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "promo_price": 60414.3,
+      "pct_desc": "10%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
       "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "67127.00"
+      "shopify_price": "60414.30"
     },
     {
       "sku": "13AQA1BLA66",
       "sku_upper": "13AQA1BLA66",
       "producto": "Tractor Podador Troy-Bilt Super Bronco 50\" — Motor Kohler 725cc",
       "regular_price": 111373.0,
-      "promo_price": 111373.0,
-      "pct_desc": "",
+      "promo_price": 83529.75,
+      "pct_desc": "25%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -49,7 +51,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "111373.00"
+      "shopify_price": "83529.75"
     },
     {
       "sku": "17AREACM342",
@@ -77,8 +79,8 @@
       "sku_upper": "17ARFACTA66",
       "producto": "Tractor Podador Giro Cero 46\" Kohler 22HP Troy-Bilt Mustang Z46",
       "regular_price": 127307.0,
-      "promo_price": 127307.0,
-      "pct_desc": "",
+      "promo_price": 117122.44,
+      "pct_desc": "8%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -798,7 +800,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4013.00"
+      "shopify_price": "3210.40"
     },
     {
       "sku": "MTK26",
