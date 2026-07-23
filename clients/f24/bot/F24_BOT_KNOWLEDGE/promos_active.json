@@ -574,8 +574,11 @@
       "regular_price": 75222.0,
       "promo_price": 75222.0,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-07-24",
       "vigente": true,
@@ -588,16 +591,14 @@
       "sku_upper": "HACPP4000-J",
       "producto": "Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI",
       "regular_price": 86179.0,
-      "promo_price": 86179.0,
-      "pct_desc": "",
+      "promo_price": 75837.52,
+      "pct_desc": "12%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-24",
       "vigente": true,
       "estado_landing": "",
@@ -1079,7 +1080,7 @@
       "vigente": true,
       "estado_landing": "En landing",
       "in_shopify": true,
-      "shopify_price": "2671.05"
+      "shopify_price": "2872.10"
     },
     {
       "sku": "GP5500",
