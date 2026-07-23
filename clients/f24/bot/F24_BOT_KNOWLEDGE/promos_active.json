@@ -72,7 +72,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "145235.25"
+      "shopify_price": "141817.95"
     },
     {
       "sku": "17ARFACTA66",
@@ -345,8 +345,11 @@
       "regular_price": 3204.0,
       "promo_price": 3204.0,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
@@ -745,8 +748,11 @@
       "regular_price": 2448.0,
       "promo_price": 2448.0,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
@@ -761,8 +767,11 @@
       "regular_price": 2761.0,
       "promo_price": 2761.0,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
@@ -777,8 +786,11 @@
       "regular_price": 2813.0,
       "promo_price": 2813.0,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
@@ -830,8 +842,11 @@
       "regular_price": 5691.35,
       "promo_price": 5691.35,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
@@ -846,8 +861,11 @@
       "regular_price": 26859.0,
       "promo_price": 26859.0,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
@@ -1085,8 +1103,11 @@
       "regular_price": 2872.1,
       "promo_price": 2872.1,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "",
       "vigente": true,
@@ -1170,8 +1191,11 @@
       "regular_price": 4888.21,
       "promo_price": 4888.21,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "",
       "vigente": true,
@@ -1202,8 +1226,11 @@
       "regular_price": 4256.62,
       "promo_price": 4256.62,
       "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "",
       "vigente": true,
