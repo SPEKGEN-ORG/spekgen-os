@@ -71,7 +71,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `MKD3816` | $2,448 | $2,448 |  | — | no | 2026-07-31 |
 | `MKD4518` | $2,761 | $2,761 |  | — | no | 2026-07-31 |
 | `MKD5220` | $2,813 | $2,813 |  | — | no | 2026-07-31 |
-| `MT13` | $4,013 | $4,013 |  | — | no | 2026-07-26 |
+| `MT13` | $3,210 | $4,013 | 20% | — | no | 2026-07-26 |
 | `MTK26` | $4,894 | $5,437 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MTT52M` | $5,691 | $5,691 |  | — | no | 2026-07-31 |
 | `PBL` | $26,859 | $26,859 |  | — | no | 2026-07-31 |
@@ -91,7 +91,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PPSB6.5AK` | $6,920 | $6,920 |  | — | no |  |
 | `PPSB6.5BK` | $7,294 | $7,294 |  | — | no |  |
 | `TKGHE-38-IP` | $40,810 | $40,810 |  | 3, 6, 9, 12 | **Sí** |  |
-| `TRENCH15` | $54,038 | $54,038 |  | — | no |  |
+| `TRENCH15` | $45,932 | $54,038 | 30/12/1899 | 3, 6 | no |  |
 
 ## Generadores (43)
 
@@ -854,7 +854,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Construcción y Obra (1)
 
-- **Zanjadora Parazzini TRENCH15** · `TRENCH15` · $54,038 (antes $54,038) · Parazzini · TRENCH15 · ⚡PROMO
+- **Zanjadora Parazzini TRENCH15** · `TRENCH15` · $45,932 (antes $54,038) · Parazzini · TRENCH15 · ⚡PROMO
   Abrir una zanja a pico y pala se come el día completo, cansa al equipo y encarece cualquier obra que dependa de instalar tubería, cableado o drenaje bajo tierra. La Zanjadora Parazzini TRENCH15 existe para resolver…
   PDP: https://ferre24.com.mx/products/zanjadora-parazzini-trench15-motor-15-hp-doble-filtro-aire
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66561963-f2dd-4bbb-ba7f-762735af586e.png
@@ -895,7 +895,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando una bomba de riego, un trompo de concreto o un molino de forraje exigen potencia constante y baja velocidad en el eje, el motor sin reductor se queda corto — o requiere un acoplamiento adicional que encarece y…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mp13c-13-hp-4t-con-caja-reductora-integrada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f0786bf-a462-4d4b-abba-f2ea3fe39f00.png
-- **Motor a Gasolina 13 HP 4 Tiempos Takashi MT13** · `MT13` · $4,013 (antes $4,013) · Takashi MT13 · ⚡PROMO
+- **Motor a Gasolina 13 HP 4 Tiempos Takashi MT13** · `MT13` · $3,210 (antes $4,013) · Takashi MT13 · ⚡PROMO
   ¿Se te descompuso el motor de tu motobomba, generadora o revolvedora y la máquina completa quedó parada? No siempre hay que comprar el equipo entero de nuevo. El motor Takashi MT13 es un motor a gasolina de 13 HP, 4…
   PDP: https://ferre24.com.mx/products/motor-a-gasolina-13-hp-4-tiempos-takashi-mt13
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d05a8e63-595e-4c3f-8c12-6eeccc0338a0.png
