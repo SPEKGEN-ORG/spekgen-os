@@ -10,7 +10,7 @@
 75 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (20 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (21 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 - Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
@@ -29,7 +29,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BP2.510` | $3,399 | $3,616 | 6% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `BP2.515` | $4,094 | $4,094 |  | — | no | 2026-07-26 |
 | `BP2510V2` | $2,490 | $2,490 |  | — | no | 2026-07-26 |
-| `BP2680D` | $55,292 | $73,722 | 25% | 3, 6 | no | 2026-07-24 |
+| `BP2680D` | $55,292 | $73,722 | 25% | 3, 6, 9 | **Sí** | 2026-07-24 |
 | `BP720` | $4,259 | $4,483 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `BP730` | $6,776 | $6,776 |  | — | no | 2026-07-26 |
 | `BPC2660D` | $46,256 | $61,675 | 25% | 3, 6 | no | 2026-07-24 |
@@ -378,7 +378,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba 2.5HP AUTOCEBANTE 1.5" — Riego Residencial y Agrícola sin Complicaciones
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-515-2-5hp-autocebante-1-5-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6eb530a-e06d-4eb6-9320-9b8dbc7be40d.png
-- **Motobomba Parazzini BP2680D** · `BP2680D` · $55,292 (antes $73,722) · Parazzini · BP2680D · ⚡PROMO
+- **Motobomba Parazzini BP2680D** · `BP2680D` · $55,292 (antes $73,722) · Parazzini · BP2680D · ⚡PROMO 9MSI
   Cuando el terreno es grande, la bomba chica se queda corta. Regar una parcela extensa, desazolvar una obra inundada o achicar un dren de gran volumen con un equipo de 3" o 4" significa horas de más — y combustible que…
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2680d-diesel-26-hp-8
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_916adb0d-7f30-4919-9d83-82c3ce9b4638.png
