@@ -32,7 +32,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BP2680D` | $73,722 | $73,722 |  | — | no | 2026-07-24 |
 | `BP720` | $4,259 | $4,483 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `BP730` | $6,776 | $6,776 |  | — | no | 2026-07-26 |
-| `BPC2660D` | $61,675 | $61,675 |  | — | no | 2026-07-24 |
+| `BPC2660D` | $46,256 | $61,675 | 25% | 3, 6 | no | 2026-07-24 |
 | `BPK31` | $3,557 | $3,557 |  | — | no | 2026-07-26 |
 | `BT6.530` | $2,337 | $2,337 |  | — | no | 2026-07-26 |
 | `COMPHKIT25L` | $2,490 | $2,490 |  | — | no | 2026-07-26 |
@@ -54,7 +54,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH8000W` | $13,139 | $13,831 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPH9000W` | $13,244 | $15,400 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPIS5.5KW` | $25,428 | $25,428 |  | — | no | 2026-07-26 |
-| `HACPP3200-N` | $75,222 | $75,222 |  | 3, 6 | no | 2026-07-24 |
+| `HACPP3200-N` | $66,195 | $75,222 | 12% | 3, 6 | no | 2026-07-24 |
 | `HACPP4000-J` | $75,838 | $86,179 | 12% | 3, 6 | no | 2026-07-24 |
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-10P` | $4,899 | $4,899 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
@@ -386,7 +386,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La motobomba BP720A combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
   PDP: https://ferre24.com.mx/products/parazzini-bp720a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_80e4ec45-8c92-4307-a3cf-03632ce8cfec.png
-- **Motobomba Parazzini Centrífuga 26 HP 6" Diésel** · `BPC2660D` · $61,675 (antes $61,675) · Parazzini · BPC2660D · ⚡PROMO
+- **Motobomba Parazzini Centrífuga 26 HP 6" Diésel** · `BPC2660D` · $46,256 (antes $61,675) · Parazzini · BPC2660D · ⚡PROMO
   Cuando el terreno es grande o el pozo está lejos, una motobomba de baja potencia se queda corta: tarda horas en regar lo que debería tomar minutos, o simplemente no jala el volumen de agua que necesitas. La Motobomba…
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-centrifuga-26-hp-6-diesel
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94fdb2bf-da83-4aaa-871e-926a80913eb2.png
@@ -477,7 +477,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Necesitas limpiar superficies grandes, maquinaria pesada o áreas remotas pero siempre te detiene la falta de conexiones eléctricas cercanas? La hidrolavadora a gasolina Parazzini HP7N está diseñada exactamente para…
   PDP: https://ferre24.com.mx/products/hidrolavadora-a-gasolina-parazzini-hp7n-7-hp-2-700-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4322125b-beab-4ce8-a934-dc7770766dc0.png
-- **Hidrolavadora de Agua Caliente Parazzini Pro 3200 PSI** · `HACPP3200-N` · $75,222 (antes $75,222) · Parazzini Pro · HACPP3200-N · ⚡PROMO
+- **Hidrolavadora de Agua Caliente Parazzini Pro 3200 PSI** · `HACPP3200-N` · $66,195 (antes $75,222) · Parazzini Pro · HACPP3200-N · ⚡PROMO
   Si en tu taller la grasa quemada de motores y transmisiones no sale ni tallando, el problema no es tu técnica: es el agua fría. La grasa carbonizada se disuelve con calor, y por eso una hidrolavadora que solo trabaja…
   PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-3200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_20ce9652-b8a6-42bd-a9a2-da43fda4dd20.png
