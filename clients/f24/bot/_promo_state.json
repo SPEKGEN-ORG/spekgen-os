@@ -1,8 +1,28 @@
 {
+  "13A878BTA66": {
+    "base": 94155.0,
+    "promo": 94155.0,
+    "orig_compare_at": 94155.0
+  },
+  "13AN77BS309": {
+    "base": 67127.0,
+    "promo": 67127.0,
+    "orig_compare_at": 67127.0
+  },
+  "13AQA1BLA66": {
+    "base": 111373.0,
+    "promo": 111373.0,
+    "orig_compare_at": 111373.0
+  },
   "17AREACM342": {
     "base": 170865.0,
     "promo": 145235.25,
     "orig_compare_at": 294594.61
+  },
+  "17ARFACTA66": {
+    "base": 127307.0,
+    "promo": 127307.0,
+    "orig_compare_at": 265223.55
   },
   "AKE100A": {
     "base": 12111.0,
@@ -19,10 +39,20 @@
     "promo": 3398.96,
     "orig_compare_at": 3615.92
   },
+  "BP2680D": {
+    "base": 73722.0,
+    "promo": 73722.0,
+    "orig_compare_at": 73722.0
+  },
   "BP720": {
     "base": 4482.72,
     "promo": 4258.58,
     "orig_compare_at": 4482.72
+  },
+  "BPC2660D": {
+    "base": 61675.0,
+    "promo": 61675.0,
+    "orig_compare_at": 61675.0
   },
   "ENERWELL-G1000": {
     "base": 4402.26,
@@ -38,6 +68,16 @@
     "base": 5050.22,
     "promo": 4545.2,
     "orig_compare_at": 5050.22
+  },
+  "GP4500I": {
+    "base": 10283.0,
+    "promo": 10283.0,
+    "orig_compare_at": 10283.0
+  },
+  "GP5000I": {
+    "base": 11762.0,
+    "promo": 11762.0,
+    "orig_compare_at": 11762.0
   },
   "GP9500TB": {
     "base": 36949.0,
@@ -58,6 +98,16 @@
     "base": 15400.0,
     "promo": 13244.0,
     "orig_compare_at": 28000.0
+  },
+  "HACPP3200-N": {
+    "base": 75222.0,
+    "promo": 75222.0,
+    "orig_compare_at": 75222.0
+  },
+  "HACPP4000-J": {
+    "base": 86179.0,
+    "promo": 86179.0,
+    "orig_compare_at": 86179.0
   },
   "HP5.5N": {
     "base": 5691.31,
@@ -88,6 +138,11 @@
     "base": 3766.0,
     "promo": 3314.08,
     "orig_compare_at": 6846.95
+  },
+  "MT13": {
+    "base": 4013.0,
+    "promo": 4013.0,
+    "orig_compare_at": 4013.0
   },
   "MTK26": {
     "base": 5437.3,
@@ -138,6 +193,11 @@
     "base": 40810.0,
     "promo": 40810.0,
     "orig_compare_at": 54257.27
+  },
+  "TRENCH15": {
+    "base": 54038.0,
+    "promo": 54038.0,
+    "orig_compare_at": 54038.0
   },
   "AK26": {
     "base": 2872.1,
