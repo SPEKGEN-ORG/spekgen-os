@@ -789,8 +789,8 @@
       "sku_upper": "MT13",
       "producto": "Motor a Gasolina 13 HP 4 Tiempos Takashi MT13",
       "regular_price": 4013.0,
-      "promo_price": 4013.0,
-      "pct_desc": "",
+      "promo_price": 3210.4,
+      "pct_desc": "20%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -1062,16 +1062,19 @@
       "sku_upper": "TRENCH15",
       "producto": "Zanjadora Parazzini TRENCH15 — Motor 15 HP con doble filtro de aire",
       "regular_price": 54038.0,
-      "promo_price": 54038.0,
-      "pct_desc": "",
-      "msi_ladder": [],
-      "msi_max": 0,
+      "promo_price": 45932.3,
+      "pct_desc": "30/12/1899",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
       "eligible_912": false,
       "vigencia": "",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "54038.00"
+      "shopify_price": "45932.30"
     },
     {
       "sku": "AK26",
