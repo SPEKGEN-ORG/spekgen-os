@@ -17,11 +17,11 @@ Reglas de meses sin intereses (MSI) por promo:
 
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
-| `13A878BTA66` | $94,155 | $94,155 |  | — | no | 2026-07-26 |
-| `13AN77BS309` | $67,127 | $67,127 |  | — | no | 2026-07-31 |
-| `13AQA1BLA66` | $111,373 | $111,373 |  | — | no | 2026-07-26 |
+| `13A878BTA66` | $70,616 | $94,155 | 25% | — | no | 2026-07-26 |
+| `13AN77BS309` | $60,414 | $67,127 | 10% | 3 | no | 2026-07-31 |
+| `13AQA1BLA66` | $83,530 | $111,373 | 25% | — | no | 2026-07-26 |
 | `17AREACM342` | $145,235 | $170,865 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `17ARFACTA66` | $127,307 | $127,307 |  | — | no | 2026-07-31 |
+| `17ARFACTA66` | $117,122 | $127,307 | 8% | — | no | 2026-07-31 |
 | `AK26` | $2,872 | $2,872 |  | — | no |  |
 | `AKE100A` | $10,658 | $12,111 | 12% | 3 | no | 2026-07-26 |
 | `BAKARAC300` | $43,912 | $43,912 |  | — | no | 2026-07-26 |
@@ -659,7 +659,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuántas horas pierdes dando vueltas alrededor de árboles, jardineras y bardas con un tractor convencional que no gira sobre su propio eje? En un rancho o terreno de varias hectáreas, cada pasada vacía es tiempo (y…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-42-547cc-troy-bilt-mustang-z42
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d45534ef-7a91-4272-bd83-ff3874f2becd.png
-- **Tractor Podador Giro Cero 46" Kohler 22HP** · `17ARFACTA66` · $127,307 (antes $127,307) · Troy-Bilt · Mustang Z46 · ⚡PROMO
+- **Tractor Podador Giro Cero 46" Kohler 22HP** · `17ARFACTA66` · $117,122 (antes $127,307) · Troy-Bilt · Mustang Z46 · ⚡PROMO
   ¿Terminas cada corte con franjas sin parejo, esquinas que tienes que repasar a mano y horas perdidas bordeando árboles y macetas? En propiedades grandes, un tractor podador convencional te hace trabajar el doble por el…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-46-kohler-22hp-troy-bilt-mustang-z46
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c6bf40b-2f90-41bc-b736-5fe169b766e0.png
@@ -675,15 +675,15 @@ Reglas de meses sin intereses (MSI) por promo:
   Cortar terrenos medianos y grandes con una podadora pequeña es perder horas que no tienes. El PMR24 de Parazzini resuelve eso: motor RV225-x de 223cc, 4 tiempos OHV, encendido eléctrico y un ancho de corte de 24…
   PDP: https://ferre24.com.mx/products/tractor-podador-parazzini-pmr24-motor-223cc-4t-24-pulgadas-encendido-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5d3676cb-554b-4a88-9259-49bf8aff4d42.png
-- **Tractor Podador Troy-Bilt Bronco 46** · `13A878BTA66` · $94,155 (antes $94,155) · Troy-Bilt · Bronco 46 · ⚡PROMO
+- **Tractor Podador Troy-Bilt Bronco 46** · `13A878BTA66` · $70,616 (antes $94,155) · Troy-Bilt · Bronco 46 · ⚡PROMO
   Cortar un jardín grande a pie, empujando una podadora convencional, es una tarde entera de esfuerzo que se repite cada semana. El Tractor Podador Troy-Bilt Bronco 46 está pensado exactamente para eso: terrenos amplios…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-bronco-46-motor-547-cc-corte-46
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_acf13f4a-65ab-4d93-9f35-884cb7d8072a.png
-- **Tractor Podador Troy-Bilt Super Bronco 50"** · `13AQA1BLA66` · $111,373 (antes $111,373) · Troy-Bilt · Super Bronco 50K FAB XP · ⚡PROMO
+- **Tractor Podador Troy-Bilt Super Bronco 50"** · `13AQA1BLA66` · $83,530 (antes $111,373) · Troy-Bilt · Super Bronco 50K FAB XP · ⚡PROMO
   Si tu terreno se te va de las manos con una podadora de empuje, este tractor está hecho para eso: para no pasarte todo el sábado caminando atrás de una máquina cuando podrías estar sentado, controlando todo con un…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-super-bronco-50-motor-kohler-725cc
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_db8eab4a-4d28-4e05-9b65-90aef7d8b649.png
-- **Tractor podador Troy-Bilt 42"** · `13AN77BS309` · $67,127 (antes $67,127) · Troy-Bilt · 13AN77BS309 · ⚡PROMO
+- **Tractor podador Troy-Bilt 42"** · `13AN77BS309` · $60,414 (antes $67,127) · Troy-Bilt · 13AN77BS309 · ⚡PROMO
   ¿Cuántas horas pierdes cada mes cortando pasto a mano en un terreno grande? · Si tu propiedad supera los 2,000 m² — o si mantienes jardines de clientes — cada sesión de corte es tiempo, esfuerzo y desgaste físico que se…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3584d25a-4649-4a63-b021-0b64a2cca8c2.png
