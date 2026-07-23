@@ -205,15 +205,16 @@
       "pct_desc": "25%",
       "msi_ladder": [
         3,
-        6
+        6,
+        9
       ],
-      "msi_max": 6,
-      "eligible_912": false,
+      "msi_max": 9,
+      "eligible_912": true,
       "vigencia": "2026-07-24",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "73722.00"
+      "shopify_price": "55291.50"
     },
     {
       "sku": "BP720",
