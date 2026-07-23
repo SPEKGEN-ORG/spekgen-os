@@ -29,6 +29,11 @@
     "promo": 10657.68,
     "orig_compare_at": 24222.75
   },
+  "BAKARAC300": {
+    "base": 43912.0,
+    "promo": 43912.0,
+    "orig_compare_at": 43912.0
+  },
   "BK621-1.5C": {
     "base": 3880.25,
     "promo": 3298.21,
@@ -38,6 +43,16 @@
     "base": 3615.92,
     "promo": 3398.96,
     "orig_compare_at": 3615.92
+  },
+  "BP2.515": {
+    "base": 4093.64,
+    "promo": 4093.64,
+    "orig_compare_at": 7058.0
+  },
+  "BP2510V2": {
+    "base": 2489.94,
+    "promo": 2489.94,
+    "orig_compare_at": 4293.0
   },
   "BP2680D": {
     "base": 73722.0,
@@ -49,10 +64,40 @@
     "promo": 4258.58,
     "orig_compare_at": 4482.72
   },
+  "BP730": {
+    "base": 6775.56,
+    "promo": 6775.56,
+    "orig_compare_at": 11682.0
+  },
   "BPC2660D": {
     "base": 61675.0,
     "promo": 61675.0,
     "orig_compare_at": 61675.0
+  },
+  "BPK31": {
+    "base": 3557.14,
+    "promo": 3557.14,
+    "orig_compare_at": 6133.0
+  },
+  "BT6.530": {
+    "base": 2336.82,
+    "promo": 2336.82,
+    "orig_compare_at": 2336.82
+  },
+  "COMPHKIT25L": {
+    "base": 2490.0,
+    "promo": 2490.0,
+    "orig_compare_at": 4150.0
+  },
+  "CP80SA": {
+    "base": 7085.0,
+    "promo": 7085.0,
+    "orig_compare_at": 14170.13
+  },
+  "DKY52K": {
+    "base": 3204.0,
+    "promo": 3204.0,
+    "orig_compare_at": 3204.0
   },
   "ENERWELL-G1000": {
     "base": 4402.26,
@@ -63,6 +108,16 @@
     "base": 6054.62,
     "promo": 5751.89,
     "orig_compare_at": null
+  },
+  "GP12000": {
+    "base": 83773.0,
+    "promo": 83773.0,
+    "orig_compare_at": 83773.0
+  },
+  "GP20KWT": {
+    "base": 119250.0,
+    "promo": 119250.0,
+    "orig_compare_at": 117086.0
   },
   "GP3000M": {
     "base": 5050.22,
@@ -98,6 +153,11 @@
     "base": 15400.0,
     "promo": 13244.0,
     "orig_compare_at": 28000.0
+  },
+  "GPIS5.5KW": {
+    "base": 25427.6,
+    "promo": 25427.6,
+    "orig_compare_at": 46232.0
   },
   "HACPP3200-N": {
     "base": 75222.0,
@@ -139,6 +199,21 @@
     "promo": 3314.08,
     "orig_compare_at": 6846.95
   },
+  "MKD3816": {
+    "base": 2448.0,
+    "promo": 2448.0,
+    "orig_compare_at": 4451.05
+  },
+  "MKD4518": {
+    "base": 2761.0,
+    "promo": 2761.0,
+    "orig_compare_at": 2761.0
+  },
+  "MKD5220": {
+    "base": 2813.0,
+    "promo": 2813.0,
+    "orig_compare_at": 5113.96
+  },
   "MT13": {
     "base": 4013.0,
     "promo": 4013.0,
@@ -148,6 +223,16 @@
     "base": 5437.3,
     "promo": 4893.57,
     "orig_compare_at": 5437.3
+  },
+  "MTT52M": {
+    "base": 5691.35,
+    "promo": 5691.35,
+    "orig_compare_at": 10347.9
+  },
+  "PBL": {
+    "base": 26859.0,
+    "promo": 26859.0,
+    "orig_compare_at": 26859.0
   },
   "PK-EASY-100CT": {
     "base": 7598.0,
@@ -163,6 +248,11 @@
     "base": 7056.0,
     "promo": 6209.28,
     "orig_compare_at": null
+  },
+  "PK26CC": {
+    "base": 2628.0,
+    "promo": 2628.0,
+    "orig_compare_at": 4779.04
   },
   "PKRO100-5P": {
     "base": 3437.0,
@@ -189,6 +279,11 @@
     "promo": 7121.78,
     "orig_compare_at": 8092.93
   },
+  "PP7BK": {
+    "base": 9675.0,
+    "promo": 9675.0,
+    "orig_compare_at": 17590.89
+  },
   "TKGHE-38-IP": {
     "base": 40810.0,
     "promo": 40810.0,
@@ -201,12 +296,42 @@
   },
   "AK26": {
     "base": 2872.1,
-    "promo": 2671.05,
+    "promo": 2872.1,
     "orig_compare_at": 5222.0
   },
   "GP5500": {
     "base": 11945.33,
     "promo": 10750.8,
+    "orig_compare_at": null
+  },
+  "GPDS14M": {
+    "base": 87110.0,
+    "promo": 87110.0,
+    "orig_compare_at": null
+  },
+  "GPDS14T": {
+    "base": 87110.0,
+    "promo": 87110.0,
+    "orig_compare_at": null
+  },
+  "GPDS8.5T": {
+    "base": 31698.0,
+    "promo": 31698.0,
+    "orig_compare_at": null
+  },
+  "KF35X": {
+    "base": 4888.21,
+    "promo": 4888.21,
+    "orig_compare_at": null
+  },
+  "KPD45TOP": {
+    "base": 5032.0,
+    "promo": 5032.0,
+    "orig_compare_at": 5032.0
+  },
+  "KTR26": {
+    "base": 4256.62,
+    "promo": 4256.62,
     "orig_compare_at": null
   },
   "MAKO65": {
@@ -218,6 +343,16 @@
     "base": 10169.0,
     "promo": 8948.72,
     "orig_compare_at": 19187.12
+  },
+  "PPSB6.5AK": {
+    "base": 6920.0,
+    "promo": 6920.0,
+    "orig_compare_at": 6920.0
+  },
+  "PPSB6.5BK": {
+    "base": 7294.0,
+    "promo": 7294.0,
+    "orig_compare_at": 7294.0
   },
   "MINI60-12/1127": {
     "base": 2399.0,
