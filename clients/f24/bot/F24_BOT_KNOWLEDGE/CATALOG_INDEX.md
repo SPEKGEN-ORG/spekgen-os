@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-48 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+75 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (21 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -22,49 +22,76 @@ Reglas de meses sin intereses (MSI) por promo:
 | `13AQA1BLA66` | $111,373 | $111,373 |  | — | no | 2026-07-26 |
 | `17AREACM342` | $145,235 | $170,865 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `17ARFACTA66` | $127,307 | $127,307 |  | — | no | 2026-07-31 |
-| `AK26` | $2,671 | $2,872 | 7% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
+| `AK26` | $2,872 | $2,872 |  | — | no |  |
 | `AKE100A` | $10,658 | $12,111 | 12% | 3 | no | 2026-07-26 |
+| `BAKARAC300` | $43,912 | $43,912 |  | — | no | 2026-07-26 |
 | `BK621-1.5C` | $3,298 | $3,880 | 15% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `BP2.510` | $3,399 | $3,616 | 6% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
+| `BP2.515` | $4,094 | $4,094 |  | — | no | 2026-07-26 |
+| `BP2510V2` | $2,490 | $2,490 |  | — | no | 2026-07-26 |
 | `BP2680D` | $73,722 | $73,722 |  | — | no | 2026-07-24 |
 | `BP720` | $4,259 | $4,483 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
+| `BP730` | $6,776 | $6,776 |  | — | no | 2026-07-26 |
 | `BPC2660D` | $61,675 | $61,675 |  | — | no | 2026-07-24 |
+| `BPK31` | $3,557 | $3,557 |  | — | no | 2026-07-26 |
+| `BT6.530` | $2,337 | $2,337 |  | — | no | 2026-07-26 |
+| `COMPHKIT25L` | $2,490 | $2,490 |  | — | no | 2026-07-26 |
+| `CP80SA` | $7,085 | $7,085 |  | — | no | 2026-07-26 |
+| `DKY52K` | $3,204 | $3,204 |  | — | no | 2026-07-31 |
 | `ENERWELL-G1000` | $4,182 | $4,402 | 5% | 3 | no | 2026-07-31 |
 | `ENERWELL-G2500` | $5,752 | $6,055 | 5% | 3, 6 | no | 2026-07-31 |
+| `GP12000` | $83,773 | $83,773 |  | — | no | 2026-07-26 |
+| `GP20KWT` | $119,250 | $119,250 |  | — | no | 2026-07-26 |
 | `GP3000M` | $4,545 | $5,050 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `GP4500I` | $10,283 | $10,283 |  | — | no | 2026-07-26 |
 | `GP5000I` | $11,762 | $11,762 |  | — | no | 2026-07-26 |
-| `GP5500` | $10,751 | $11,945 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
+| `GP5500` | $10,751 | $11,945 | 30/12/1899 | 3, 6, 9, 12 | **Sí** |  |
 | `GP9500TB` | $31,776 | $36,949 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
+| `GPDS14M` | $87,110 | $87,110 |  | — | no |  |
+| `GPDS14T` | $87,110 | $87,110 |  | — | no |  |
+| `GPDS8.5T` | $31,698 | $31,698 |  | — | no |  |
 | `GPH1000W` | $2,127 | $2,127 | 0% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `GPH8000W` | $13,139 | $13,831 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPH9000W` | $13,244 | $15,400 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
+| `GPIS5.5KW` | $25,428 | $25,428 |  | — | no | 2026-07-26 |
 | `HACPP3200-N` | $75,222 | $75,222 |  | — | no | 2026-07-24 |
-| `HACPP4000-J` | $86,179 | $86,179 |  | — | no | 2026-07-24 |
+| `HACPP4000-J` | $86,179 | $86,179 |  | 3, 6, 9, 12 | **Sí** | 2026-07-24 |
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-10P` | $4,899 | $4,899 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-12P-TF` | $5,999 | $6,666 | 10% | 3, 6 | no | 2026-07-31 |
+| `KF35X` | $4,888 | $4,888 |  | — | no |  |
+| `KPD45TOP` | $5,032 | $5,032 |  | — | no |  |
+| `KTR26` | $4,257 | $4,257 |  | — | no |  |
 | `MAKO25` | $2,386 | $2,566 | 7% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MAKO52` | $2,612 | $2,968 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `MAKO58` | $3,314 | $3,766 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
-| `MAKO65` | $4,205 | $4,335 | 3% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `MAKO72` | $8,949 | $10,169 | 12% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
-| `MINI60-12/1127` | $2,399 | $2,399 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
+| `MAKO65` | $4,205 | $4,335 | 30/12/1899 | 3, 6, 9, 12 | **Sí** |  |
+| `MAKO72` | $8,949 | $10,169 | 30/12/1899 | 3, 6, 9, 12 | **Sí** |  |
+| `MINI60-12/1127` | $2,399 | $2,399 |  | 3, 6, 9, 12 | **Sí** |  |
+| `MKD3816` | $2,448 | $2,448 |  | — | no | 2026-07-31 |
+| `MKD4518` | $2,761 | $2,761 |  | — | no | 2026-07-31 |
+| `MKD5220` | $2,813 | $2,813 |  | — | no | 2026-07-31 |
 | `MT13` | $4,013 | $4,013 |  | — | no | 2026-07-26 |
 | `MTK26` | $4,894 | $5,437 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-200US` | $4,235 | $4,812 | 12% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-400US` | $3,938 | $4,475 | 12% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-600N-US` | $5,141 | $5,842 | 12% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-600US` | $6,209 | $7,056 | 12% | 3 | no | 2026-07-31 |
-| `PK-EASY-800US` | $4,777 | $5,429 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO100-5P` | $3,025 | $3,437 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO100-6UVPM` | $4,267 | $4,849 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO50-6UVPM` | $3,598 | $4,089 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO600-6UVPM` | $7,122 | $8,093 | 12% | 3, 6 | no | 2026-07-31 |
-| `TKGHE-38-IP` | $40,810 | $40,810 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `TRENCH15` | $54,038 | $54,038 |  | — | no | 2026-07-26 |
+| `MTT52M` | $5,691 | $5,691 |  | — | no | 2026-07-31 |
+| `PBL` | $26,859 | $26,859 |  | — | no | 2026-07-31 |
+| `PK-EASY-100CT` | $6,838 | $7,598 | 30/12/1899 | 3, 6 | no |  |
+| `PK-EASY-200US` | $4,235 | $4,812 | 30/12/1899 | 3, 6 | no |  |
+| `PK-EASY-400US` | $3,938 | $4,475 | 30/12/1899 | 3, 6 | no |  |
+| `PK-EASY-600N-US` | $5,141 | $5,842 | 30/12/1899 | 3, 6 | no |  |
+| `PK-EASY-600US` | $6,209 | $7,056 | 30/12/1899 | 3 | no |  |
+| `PK-EASY-800US` | $4,777 | $5,429 | 30/12/1899 | 3, 6 | no |  |
+| `PK26CC` | $2,628 | $2,628 |  | — | no |  |
+| `PKRO100-5P` | $3,025 | $3,437 | 30/12/1899 | 3, 6 | no |  |
+| `PKRO100-6UVPM` | $4,267 | $4,849 | 30/12/1899 | 3, 6 | no |  |
+| `PKRO200-6UVPM` | $4,585 | $5,210 | 30/12/1899 | 3, 6 | no |  |
+| `PKRO50-6UVPM` | $3,598 | $4,089 | 30/12/1899 | 3, 6 | no |  |
+| `PKRO600-6UVPM` | $7,122 | $8,093 | 30/12/1899 | 3, 6 | no |  |
+| `PP7BK` | $9,675 | $9,675 |  | — | no |  |
+| `PPSB6.5AK` | $6,920 | $6,920 |  | — | no |  |
+| `PPSB6.5BK` | $7,294 | $7,294 |  | — | no |  |
+| `TKGHE-38-IP` | $40,810 | $40,810 |  | 3, 6, 9, 12 | **Sí** |  |
+| `TRENCH15` | $54,038 | $54,038 |  | — | no |  |
 
 ## Generadores (43)
 
@@ -80,11 +107,11 @@ Reglas de meses sin intereses (MSI) por promo:
   El problema que resuelve · Cada corte de luz le cuesta dinero a tu negocio: cuartos fríos que suben de temperatura, máquinas que se detienen a la mitad, servicios interrumpidos, clientes insatisfechos. Y cada vez que…
   PDP: https://ferre24.com.mx/products/gpd8-5t
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6e1ecc85-6e04-4ce0-bb96-32fe8ce8dd2a.png
-- **Generador Diesel Silencioso 14 kW con ATS Automático** · `GPDS14M` · $87,110 · Parazzini · GPDS14M
+- **Generador Diesel Silencioso 14 kW con ATS Automático** · `GPDS14M` · $87,110 (antes $87,110) · Parazzini · GPDS14M · ⚡PROMO
   Sin luz no se para, pero el ruido sí molesta · Cuando el CFE falla, cada segundo cuenta — en una clínica, en un taller, en tu casa. El problema de la mayoría de los generadores no es solo el apagón: es el rugido que…
   PDP: https://ferre24.com.mx/products/generador-diesel-silencioso-14-kw-con-ats-automatico-parazzini-gpds14m
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_1885dfae-963d-40b0-9726-921c199d6c06.png
-- **Generador Diesel Silencioso Trifásico 8.5 kW Parazzini GPDS8.5T** · `GPDS8.5T` · $31,698 · Parazzini Pro · GPDS8.5T
+- **Generador Diesel Silencioso Trifásico 8.5 kW Parazzini GPDS8.5T** · `GPDS8.5T` · $31,698 (antes $31,698) · Parazzini Pro · GPDS8.5T · ⚡PROMO
   Especificaciones completas · SKU GPDS8.5T Motor · Potencia 15 HP · Tipo de motor Diesel · Combustible diesel · Cilindrada 531 cc · Encendido electrico · Tanque 24 L · Físicas · Peso 170 kg · Dimensiones (L × An × Al) 91…
   PDP: https://ferre24.com.mx/products/el-parazzini-gpds8-5t-rompe-el-paradigma-generador-diesel-trifasico-profesional-que-opera-a-solo-72-db-a-7-metros-mas-silencioso-que-una-conversacion-normal-disenado-para-instalaciones-que-exigen-lo-que-el-mercado-consideraba-imposible-potenci
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_e8a7b220-aec9-4052-936f-6fd29320145f.png
@@ -104,7 +131,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Se va la luz y empieza el calor en el refri, la oscuridad en la casa y el celular sin batería. O estás en la obra, en el taller o en el campamento y no hay un solo contacto cerca. Para esos momentos existe el Generador…
   PDP: https://ferre24.com.mx/products/generador-inverter-dual-fuel-3-5-kw-silencioso-portatil
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_82c5c19d-f957-477e-917d-e16f6a8adb1d.png
-- **Generador Inverter Dual Fuel 5.5 kW Parazzini** · `GPIS5.5KW` · $25,428 (antes $46,232) · Parazzini · GPIS5.5KW
+- **Generador Inverter Dual Fuel 5.5 kW Parazzini** · `GPIS5.5KW` · $25,428 (antes $25,428) · Parazzini · GPIS5.5KW · ⚡PROMO
   Cuando se va la luz, tu casa o tu negocio no tienen por qué detenerse. Los apagones dejan sin energía al refrigerador, las luces y el equipo de cómputo justo cuando más los necesitas. El generador inverter Parazzini…
   PDP: https://ferre24.com.mx/products/generador-inverter-dual-fuel-5-5-kw-parazzini-gasolina-gas-lp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94e48c28-b912-4edc-8597-81c84a697b43.png
@@ -116,11 +143,11 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Conectaste tu refrigerador, tu computadora o tus herramientas a un generador convencional y temiste dañarlos? Es un miedo justificado: los generadores comunes entregan energía "sucia", con picos que arruinan tarjetas…
   PDP: https://ferre24.com.mx/products/generador-inverter-parazzini-gpidji9500-9500-w-19-hp-a-gasolina
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c28318a-fedb-471c-9536-06e643d6867f.png
-- **Generador Parazzini 20 kW Gasolina V-Twin 36 HP** · `GP20KWT` · $119,250 (antes $117,086) · Parazzini · GP20KWT
+- **Generador Parazzini 20 kW Gasolina V-Twin 36 HP** · `GP20KWT` · $119,250 (antes $119,250) · Parazzini · GP20KWT · ⚡PROMO
   ¿Tu taller, obra o evento depende de la red eléctrica y no puedes permitirte un corte? · Con el Generador Parazzini GP20KWT llevas 20 kW de potencia continua donde la red no llega — o donde no puedes arriesgarte a que…
   PDP: https://ferre24.com.mx/products/generador-parazzini-20-kw-gasolina-v-twin-36-hp-gp20kwt
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aec6a174-aecc-4d14-8979-26755af07f2d.png
-- **Generador Parazzini GP12000** · `GP12000` · $83,773 (antes $83,773) · Parazzini · GP12000
+- **Generador Parazzini GP12000** · `GP12000` · $83,773 (antes $83,773) · Parazzini · GP12000 · ⚡PROMO
   ### Sin luz en el rancho, todo se detiene. · Las bombas de agua paran, el ordeño se atrasa y la cosecha en cámara fría corre riesgo. Con acceso inestable a la red de CFE, no puedes depender de que "hoy sí haya…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp12000-12-000-w-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6053fdff-844d-427e-91ee-781153149e9f.png
@@ -224,7 +251,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Si tu motor falló en plena jornada y el repuesto OEM te cuesta el doble de lo que vale el equipo, el Parazzini MP7FF es la respuesta. Potencia de 7 HP real, motor 4 tiempos OHV de gasolina, arranque manual confiable —…
   PDP: https://ferre24.com.mx/products/motor-parazzini-7-hp-4-tiempos-doble-filtro-de-aire-para-obra-y-campo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a88a5405-9e76-46eb-b020-58166c2a3de8.png
-- **Parazzini BAKARAC300** · `BAKARAC300` · $43,912 (antes $43,912) · Parazzini · BAKARAC300
+- **Parazzini BAKARAC300** · `BAKARAC300` · $43,912 (antes $43,912) · Parazzini · BAKARAC300 · ⚡PROMO
   ### Suelda donde otros no pueden · Hay obras donde la luz eléctrica no llega. Ranchos, construcciones en desarrollo, sitios remotos, emergencias en campo. Para esos trabajos existe el Parazzini BAKARAC300 : un…
   PDP: https://ferre24.com.mx/products/parazzini-bakarac300
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8e1dc002-18c5-4671-8b2e-c4933c1792ce.png
@@ -232,7 +259,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu motor tronó en plena temporada y el de repuesto no llega en días? El Parazzini MP10D está en stock y sale al día siguiente. · Motor diesel estacionario de 10HP diseñado para trabajo continuo en campo, obra y taller.…
   PDP: https://ferre24.com.mx/products/parazzini-mp10d-motor-diesel-10hp-con-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b1537fbd-a360-420b-9b9e-80009aa13f7f.png
-- **Parazzini Pro GPDS14T** · `GPDS14T` · $87,110 · Parazzini Pro · GPDS14T
+- **Parazzini Pro GPDS14T** · `GPDS14T` · $87,110 (antes $87,110) · Parazzini Pro · GPDS14T · ⚡PROMO
   Un apagón no avisa — y en un negocio, cada minuto sin luz es dinero perdido. · Si tu taller, local comercial o rancho depende de corriente trifásica para operar, ya sabes lo que cuesta un corte inesperado: producción…
   PDP: https://ferre24.com.mx/products/parazzini-pro-gpds14t-generador-silencioso-14-kw-trifasico-diesel
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/marvelsa_hero_01.png
@@ -271,11 +298,11 @@ Reglas de meses sin intereses (MSI) por promo:
   ### Potencia de campo donde no llega la electricidad · La Kawashima BK621-1.5C es una motobomba centrífuga de 62cc y motor 2 tiempos diseñada para riego agrícola, trasvase de agua y drenaje en zonas sin acceso a red…
   PDP: https://ferre24.com.mx/products/kawashima-bk621-1-5c
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_62635.png
-- **Kawashima KTR26** · `KTR26` · $4,257 · Kawashima · KTR26
+- **Kawashima KTR26** · `KTR26` · $4,257 (antes $4,257) · Kawashima · KTR26 · ⚡PROMO
   Motor eficiente para jornadas completas en campo · El Kawashima KTR26 es un aspersor motorizado de mochila con motor 2 tiempos de 26 cc que trabaja hasta 7,500 RPM. Con 1.4 HP, está calibrado para su clase: no es un…
   PDP: https://ferre24.com.mx/products/kawashima-ktr26-aspersor-motorizado-26-cc-con-bomba-rompeolas-y-tanque-22-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_c80ae284-a140-4f20-8587-efbede155ee5.png
-- **Kit Parihuela Parazzini 7 HP** · `PP7BK` · $9,675 (antes $17,591) · Parazzini · PP7BK
+- **Kit Parihuela Parazzini 7 HP** · `PP7BK` · $9,675 (antes $17,590) · Parazzini · PP7BK · ⚡PROMO
   El arranque de temporada no puede esperar. · Cuando llega el momento de fumigar, cada día cuenta. La parcela no espera a que consigas manguera, a que el motor agarre ritmo o a que la bomba se cale por uso brusco. El kit…
   PDP: https://ferre24.com.mx/products/kit-parihuela-parazzini-7-hp-bomba-bronce-100-m-de-manguera
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_de667a14-4b69-4d26-a7c4-73ecc9223bf7.png
@@ -295,7 +322,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La [VERIFICAR marca] BK2.515 es una motobomba agrícola autocebante diseñada para trabajo de campo real: riego de parcelas, llenado de tinacos y traslados entre pozos sin depender de la corriente eléctrica. · Cuerpo de…
   PDP: https://ferre24.com.mx/products/motobomba-agricola-3hp-aluminio-autocebante-200-l-min-altura-15m-boca-1-5
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3dae3490-5c0a-4202-abc0-64bd7b65c0d5.png
-- **Motobomba Autocebante 6.5 HP 4 Tiempos** · `BT6.530` · $2,337 (antes $2,337) · Parazzini · BT6.530
+- **Motobomba Autocebante 6.5 HP 4 Tiempos** · `BT6.530` · $2,337 (antes $2,337) · Parazzini · BT6.530 · ⚡PROMO
   La BT6.530 es una motobomba autocebante de 6.5 HP [VERIFICAR] con motor a gasolina 4 tiempos OHV, diseñada para trabajos de riego agrícola, achique y trasvase en campo, rancho e instalaciones industriales ligeras. ·…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-6-5-hp-4-tiempos-descarga-3-pulgadas-verificar-riego-achiq
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_884366ef-2413-4a66-9c7e-611915fd2ee7.png
@@ -303,7 +330,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Si riegas parcelas o mueves agua entre puntos de bombeo, sabes lo que cuesta una bomba que no succiona. La mayoría de las fallas no son del equipo: vienen de cebar la bomba sin agua en la carcasa o de una manguera de…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-a-gasolina-7-hp-2-parazzini-bp720
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0bd74b2a-6fc3-4814-b409-c41680e5ed9e.png
-- **Motobomba Autocebante a Gasolina 7 HP 3" Parazzini BP730** · `BP730` · $6,776 (antes $11,682) · Parazzini · BP730
+- **Motobomba Autocebante a Gasolina 7 HP 3" Parazzini BP730** · `BP730` · $6,776 (antes $6,776) · Parazzini · BP730 · ⚡PROMO
   La motobomba BP730 combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-gasolina-7-hp-3-parazzini-bp730
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_deee0f9d-d5c0-473c-9d04-7aac87f01ccc.png
@@ -327,7 +354,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La motobomba ENERWELL EWBG3-1000F es la herramienta de alto rendimiento para quienes necesitan mover grandes volúmenes de agua de forma confiable y sin dependencia eléctrica. Con conexiones de entrada y salida de 3…
   PDP: https://ferre24.com.mx/products/motobomba-enerwell-7hp-gasolina-autocebante-3x3-1000-gpm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5e649f49-379b-489c-910c-6cc0fca3ad5d.png
-- **Motobomba Kawashima 26cc 2 Tiempos Autocebante 1 Pulgada** · `BP2510V2` · $2,490 (antes $4,293) · Kawashima · BP2510V2
+- **Motobomba Kawashima 26cc 2 Tiempos Autocebante 1 Pulgada** · `BP2510V2` · $2,490 (antes $2,490) · Kawashima · BP2510V2 · ⚡PROMO
   Lleva el agua donde la necesitas, sin enchufes y sin complicaciones. · La Kawashima BP2510V2 es la motobomba a gasolina más ligera y accesible de la línea — diseñada para el agricultor, ranchero o propietario que…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-26cc-2-tiempos-autocebante-1-pulgada-bp2510v2
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5e1b09fa-465e-40bc-beab-313c0f56dcfc.png
@@ -339,7 +366,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4310
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_657096e2-99cc-42ce-a377-4edb126adb6b.png
-- **Motobomba Kawashima BPK31** · `BPK31` · $3,557 (antes $6,133) · F24
+- **Motobomba Kawashima BPK31** · `BPK31` · $3,557 (antes $3,557) · F24 · ⚡PROMO
   Motobomba Compacta 31cc AUTOCEBANTE 1" — Riego Portátil para Huertos y Transferencia Rápida
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-bpk31-31cc-4t-autocebante-1-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_78cdc349-4039-413e-8088-198fe06d560c.png
@@ -347,7 +374,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando tienes un rancho, huerta o jardín sin toma eléctrica cerca, el agua no puede esperar. La Motobomba Parazzini BP2.510 fue diseñada exactamente para eso: llevar agua a donde la necesitas, sin cables, sin…
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-510-2-5-hp-4t-autocebante-1-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ff852b2b-86c6-401e-9282-ef30eb15ac3d.png
-- **Motobomba Parazzini BP2.515** · `BP2.515` · $4,094 (antes $7,058) · F24
+- **Motobomba Parazzini BP2.515** · `BP2.515` · $4,094 (antes $4,094) · F24 · ⚡PROMO
   Motobomba 2.5HP AUTOCEBANTE 1.5" — Riego Residencial y Agrícola sin Complicaciones
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-515-2-5hp-autocebante-1-5-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6eb530a-e06d-4eb6-9320-9b8dbc7be40d.png
@@ -383,7 +410,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu bomba de pistones falla cada temporada con herbicidas? El diafragma cambia las reglas. · La Parihuela Diafragma 6.5 HP Parazzini PP6.5D está diseñada para agricultores y fumigadores profesionales que aplican…
   PDP: https://ferre24.com.mx/products/parihuela-diafragma-6-5-hp-parazzini-bomba-resistente-a-quimicos-agresivos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_1397bfba-1d2f-495a-acf0-4dd3ef8edadf.png
-- **Parihuela Kawashima PK26CC** · `PK26CC` · $2,628 (antes $4,779) · Kawashima · PK26CC
+- **Parihuela Kawashima PK26CC** · `PK26CC` · $2,628 (antes $2,628) · Kawashima · PK26CC · ⚡PROMO
   ¿Cuántas veces has tenido que interrumpir una jornada de trabajo porque el aceite estaba mal mezclado o el filtro se atascó antes de terminar? Eso no debería pasar con una máquina que llevas en la espalda todo el día. ·…
   PDP: https://ferre24.com.mx/products/parihuela-kawashima-pk26cc-motobomba-mochila-26-cc-bomba-bronce
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_800eb3e8-5fa8-4ac1-8bde-29c66aa76c34.png
@@ -403,11 +430,11 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu bomba no arranca cuando más la necesitas o pierdes presión a media jornada? · El riego no espera. Tampoco la obra con agua estancada. Lo que necesitas es una motobomba que arranque al primer jalón, mueva el agua con…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-motobomba-a-gasolina-sobre-carrito
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_5116d0fe-68b0-4582-9b9a-ed3fb643a4f1.png
-- **Parihuela Parazzini 6.5 hp** · `PPSB6.5AK` · $6,920 (antes $6,920) · Parazzini · PPSB6.5AK
+- **Parihuela Parazzini 6.5 hp** · `PPSB6.5AK` · $6,920 (antes $6,920) · Parazzini · PPSB6.5AK · ⚡PROMO
   Comprar la parihuela y después buscar los accesorios es una pérdida de tiempo y dinero · La historia se repite: el operador tiene prisa porque la temporada de fumigación ya empezó, se compra el equipo base, y entonces…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5-hp-kit-completo-con-accesorios
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/marvelsa_img_01_hero.png
-- **Parihuela Parazzini 6.5HP Transmisión Directa** · `PPSB6.5BK` · $7,294 (antes $7,294) · Parazzini · PPSB6.5B
+- **Parihuela Parazzini 6.5HP Transmisión Directa** · `PPSB6.5BK` · $7,294 (antes $7,294) · Parazzini · PPSB6.5B · ⚡PROMO
   La temporada no espera: cuando el brote de plaga aparece, necesitas una fumigadora que arranque, mantenga presión y no te deje a medias en el campo. · Lo que ningún catálogo te dice · La transmisión directa simplifica…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5hp-transmision-directa-kit-manguera-y-carrete
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_marvelsa_8dcca9af-ddee-48f9-8e94-b81b3285f2c5.png
@@ -454,7 +481,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Si en tu taller la grasa quemada de motores y transmisiones no sale ni tallando, el problema no es tu técnica: es el agua fría. La grasa carbonizada se disuelve con calor, y por eso una hidrolavadora que solo trabaja…
   PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-3200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_20ce9652-b8a6-42bd-a9a2-da43fda4dd20.png
-- **Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI** · `HACPP4000-J` · $86,179 (antes $86,179) · Parazzini Pro · HACPP4000-J · ⚡PROMO
+- **Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI** · `HACPP4000-J` · $86,179 (antes $86,179) · Parazzini Pro · HACPP4000-J · ⚡PROMO 12MSI
   Hay grasa y aceite pegado que el agua fría simplemente no quita. Tallas, echas químico tras químico, y la mancha sigue ahí — porque el agua fría no rompe la grasa endurecida en maquinaria, motores, pisos de taller o…
   PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-4000-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94751b66-6c67-41de-ac9e-e0769dff08ee.png
@@ -469,7 +496,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Compresores (8)
 
-- **Compresor 80 L libre de aceite, doble conexión rápida.** · `CP80SA` · $7,085 (antes $14,170) · Power Hunt · CP80SA
+- **Compresor 80 L libre de aceite, doble conexión rápida.** · `CP80SA` · $7,085 (antes $7,085) · Power Hunt · CP80SA · ⚡PROMO
   Si ya tienes tu pistola de pintura, tu manguera y tus acoples, no necesitas pagar por accesorios que no vas a usar. El Power Hunt CP80SA es exactamente eso: el corazón de tu sistema de aire comprimido, sin nada de más.…
   PDP: https://ferre24.com.mx/products/compresor-80-l-libre-de-aceite-doble-conexion-rapida-aire-limpio-para-pintura-y-neumatica-sin-kit-tu-usas-tus-accesorios
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_70937529-8c39-4e05-b41e-5ce12bfd7c5e.png
@@ -497,14 +524,14 @@ Reglas de meses sin intereses (MSI) por promo:
   El Power Hunt COMPHKIT25L es un compresor eléctrico monofásico de 2.5 HP diseñado para quienes pintan, barnizan o usan herramientas neumáticas en taller o en casa. Su tecnología libre de aceite elimina uno de los…
   PDP: https://ferre24.com.mx/products/compresor-aire-power-hunt-25l-libre-aceite
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_bac7de44-8090-43c0-937d-c96d64009eef.jpg
-- **Compresor de aire libre de aceite 25L** · `COMPHKIT25L` · $2,490 (antes $4,150) · Power Hunt · COMPHKIT25L
+- **Compresor de aire libre de aceite 25L** · `COMPHKIT25L` · $2,490 (antes $2,490) · Power Hunt · COMPHKIT25L · ⚡PROMO
   El Power Hunt COMPHKIT25L es un compresor eléctrico monofásico de 2.5 HP diseñado para quienes pintan, barnizan o usan herramientas neumáticas en taller o en casa. Su tecnología libre de aceite elimina uno de los…
   PDP: https://ferre24.com.mx/products/compresor-aire-libre-aceite-25l-power-hunt-comphkit25l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7ae13047-134c-4fb8-a2b8-7d8d2a654f74.png
 
 ## Motosierras y Poda (39)
 
-- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,691 (antes $10,348) · Kawashima · MTT52M
+- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,691 (antes $5,691) · Kawashima · MTT52M · ⚡PROMO
   La Ahoyadora Kawashima MTT52M es la herramienta que acelera el trabajo más lento del rancho: abrir hoyos. Con un motor a gasolina de 52cc y 2 tiempos, perfora tierra blanda de forma rápida y uniforme — el trabajo que…
   PDP: https://ferre24.com.mx/products/ahoyadora-kawashima-mtt52m-52cc-3-brocas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d43ca7eb-da4a-41a8-a79e-ab6bb7316b3a.png
@@ -512,7 +539,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ### El cortasetos que llega listo — y te respalda después · El Kawashima Pro CK22CC es un cortasetos a gasolina de 22 cc diseñado para quien necesita resultados, no sorpresas. Motor 2 tiempos con encendido retráctil…
   PDP: https://ferre24.com.mx/products/cortasetos-22-cc-kawashima-pro-kit-listo-refacciones-locales
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66a7a0a9-36ca-41e2-a499-4d2270471469.png
-- **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,204 (antes $3,204) · Kawashima · DKY52K
+- **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,204 (antes $3,204) · Kawashima · DKY52K · ⚡PROMO
   Para quien necesita acabar la jornada, no empezarla. Si lo tuyo es maleza alta, predios grandes, brechas de rancho o mantenimiento agrícola y forestal, una orilladora doméstica no te alcanza. El Desbrozador Kawashima…
   PDP: https://ferre24.com.mx/products/desbrozador-kawashima-dky52k-recto-52-cc-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e59e6cb0-42b2-47a7-8f17-d8d9621f1c4e.png
@@ -520,7 +547,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ### Maleza gruesa, terrenos grandes, trabajo de verdad. · Si ya sabrás que una desbrozadora eléctrica o de batería se rinde antes que tú, el KPD52TOP es lo que sigue. Motor de gasolina 2 tiempos, 52cc, 1.4 kW a 7,000…
   PDP: https://ferre24.com.mx/products/desbrozador-kawashima-pro-52cc-potencia-2t-terrenos-exigentes
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_10393b1a-11b7-4236-a5cf-ef9bb45ba73c.png
-- **Desbrozador PRO 45cc 2 Tiempos Kawashima** · `KPD45TOP` · $5,032 (antes $5,032) · Kawashima Pro · KPD45TOP
+- **Desbrozador PRO 45cc 2 Tiempos Kawashima** · `KPD45TOP` · $5,032 (antes $5,032) · Kawashima Pro · KPD45TOP · ⚡PROMO
   ### El terreno no espera. Tu herramienta tampoco debería fallar. · Si trabajas en campo, ejido o jardín de gran superficie, sabes lo que cuesta llegar a media jornada con una herramienta que ya no responde. Las…
   PDP: https://ferre24.com.mx/products/desbrozador-pro-45cc-2-tiempos-kawashima-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_86762dc7-e9bf-47e1-9633-d10e5e11de1f.png
@@ -540,15 +567,15 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando el trabajo es tala real — árboles de gran diámetro, maderas de alta densidad, jornadas de 8 horas en campo — necesitas una herramienta que no te abandone a media mañana. La Motosierra Kawashima 62cc con barra de…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-62cc-barra-22-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0b9d3dcf-6a4a-4b4a-b381-8105b75f26f1.png
-- **Motosierra Kawashima Dakota 38cc** · `MKD3816` · $2,448 (antes $4,451) · Kawashima Dakota · MKD3816
+- **Motosierra Kawashima Dakota 38cc** · `MKD3816` · $2,448 (antes $2,448) · Kawashima Dakota · MKD3816 · ⚡PROMO
   Motosierra Kawashima Dakota 38cc — Lista para trabajar desde el primer día · ¿Tienes árboles que podar, leña que cortar o un jardín que ordenar? La Kawashima Dakota MKD3816 es la motosierra que necesitas: potencia real…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-38cc-barra-16-con-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1ee88704-4d4f-4441-a9ff-3f0afdac29a1.png
-- **Motosierra Kawashima Dakota 45cc** · `MKD4518` · $2,761 (antes $2,761) · Kawashima Dakota · MKD4518
+- **Motosierra Kawashima Dakota 45cc** · `MKD4518` · $2,761 (antes $2,761) · Kawashima Dakota · MKD4518 · ⚡PROMO
   ¿Tu motosierra no arranca o tarda diez intentos antes de encender? En la mayoría de los casos el problema no es la herramienta — es la mezcla de combustible. La Kawashima Dakota MKD4518 llega lista para trabajar: motor…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-45cc-barra-18-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_37f988bc-21c0-4e3a-b050-8cd8f30fe256.png
-- **Motosierra Kawashima Dakota 52cc** · `MKD5220` · $2,813 (antes $5,114) · Kawashima Dakota · MKD5220
+- **Motosierra Kawashima Dakota 52cc** · `MKD5220` · $2,813 (antes $2,813) · Kawashima Dakota · MKD5220 · ⚡PROMO
   ¿Tu motosierra no arranca o el carburador se obstruye a cada rato? · El problema más común con motosierras de gasolina no es la herramienta — es la mezcla incorrecta de combustible. Un error en la proporción…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-52cc-barra-20-pulg-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_656b333f-7cb7-47a9-af7a-c272ad7bbe31.png
@@ -663,11 +690,11 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Desbrozadoras y Jardín (22)
 
-- **Aspersor Kawashima AK26** · `AK26` · $2,671 (antes $5,222) · Kawashima · AK26 · ⚡PROMO 12MSI
+- **Aspersor Kawashima AK26** · `AK26` · $2,872 (antes $5,222) · Kawashima · AK26 · ⚡PROMO
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
   PDP: https://ferre24.com.mx/products/aspersor-kawashima-ak26-motor-2-tiempos-25-litros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png
-- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $4,888 · Kawashima · KF35X
+- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $4,888 (antes $4,888) · Kawashima · KF35X · ⚡PROMO
   Fumigar una hectárea a mano tarda horas y agota antes de terminar. Con una fumigadora manual de 16 litros tienes que detenerte a recargar constantemente, y si tu parcela no tiene toma de corriente, los equipos…
   PDP: https://ferre24.com.mx/products/aspersor-motorizado-kawashima-kf35x-35cc
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b1b2d0f-443a-445f-96b0-f220d5a53842.png
@@ -762,7 +789,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Compactar terrenos difíciles de manera eficiente y sin fallas a mitad de jornada es el mayor reto en la construcción ligera y obras de pavimentación. La bailarina compactadora Parazzini PBH100 es el estándar de oro en…
   PDP: https://ferre24.com.mx/products/bailarina-compactadora-parazzini-pbh100-honda-3-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_dd70b606-4414-450d-ad00-59fb2077d72f.png
-- **Bailarina Compactadora Parazzini PBL 4 HP Motor Loncin** · `PBL` · $26,859 (antes $26,859) · Parazzini · PBL
+- **Bailarina Compactadora Parazzini PBL 4 HP Motor Loncin** · `PBL` · $26,859 (antes $26,859) · Parazzini · PBL · ⚡PROMO
   ¿Cansado de perder horas valiosas en la obra por apisonadores que no arrancan por las mañanas o que requieren reparaciones costosas a medio camino? La Bailarina Compactadora Parazzini PBL de 4 HP es la solución…
   PDP: https://ferre24.com.mx/products/bailarina-compactadora-parazzini-pbl-4-hp-motor-loncin
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ef492d04-e442-4368-8a46-63def999f15f.png
