@@ -10,7 +10,7 @@
 75 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (21 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (20 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 - Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
@@ -54,8 +54,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH8000W` | $13,139 | $13,831 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPH9000W` | $13,244 | $15,400 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPIS5.5KW` | $25,428 | $25,428 |  | — | no | 2026-07-26 |
-| `HACPP3200-N` | $75,222 | $75,222 |  | — | no | 2026-07-24 |
-| `HACPP4000-J` | $86,179 | $86,179 |  | 3, 6, 9, 12 | **Sí** | 2026-07-24 |
+| `HACPP3200-N` | $75,222 | $75,222 |  | 3, 6 | no | 2026-07-24 |
+| `HACPP4000-J` | $75,838 | $86,179 | 12% | 3, 6 | no | 2026-07-24 |
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-10P` | $4,899 | $4,899 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-12P-TF` | $5,999 | $6,666 | 10% | 3, 6 | no | 2026-07-31 |
@@ -481,7 +481,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Si en tu taller la grasa quemada de motores y transmisiones no sale ni tallando, el problema no es tu técnica: es el agua fría. La grasa carbonizada se disuelve con calor, y por eso una hidrolavadora que solo trabaja…
   PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-3200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_20ce9652-b8a6-42bd-a9a2-da43fda4dd20.png
-- **Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI** · `HACPP4000-J` · $86,179 (antes $86,179) · Parazzini Pro · HACPP4000-J · ⚡PROMO 12MSI
+- **Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI** · `HACPP4000-J` · $75,838 (antes $86,179) · Parazzini Pro · HACPP4000-J · ⚡PROMO
   Hay grasa y aceite pegado que el agua fría simplemente no quita. Tallas, echas químico tras químico, y la mancha sigue ahí — porque el agua fría no rompe la grasa endurecida en maquinaria, motores, pisos de taller o…
   PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-4000-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94751b66-6c67-41de-ac9e-e0769dff08ee.png
