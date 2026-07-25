@@ -20,7 +20,10 @@ from difflib import SequenceMatcher
 HERE = os.path.dirname(os.path.abspath(__file__))
 F24_ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))  # edge -> bot -> clients/f24
 PROJECT_REF = "wjlwpfaogjpeqgyxxnwa"
-FUNCTIONS = ["f24-mp-webhook", "f24-order-paid"]  # las 2 que toca este cambio
+# GHL-migration repoint (2026-07-25): las 7 edge functions que quedaron con la
+# location/pipeline/stage/field IDs viejos y deben re-deployarse a la nueva sub-cuenta.
+FUNCTIONS = ["f24-opp-track", "f24-process-order", "f24-order-paid", "f24-mp-webhook",
+             "f24-rep-log", "f24-book-appointment", "f24-generate-guide"]
 API = "https://api.supabase.com"
 
 
