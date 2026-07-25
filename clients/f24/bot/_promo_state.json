@@ -54,11 +54,6 @@
     "promo": 2489.94,
     "orig_compare_at": 4293.0
   },
-  "BP2680D": {
-    "base": 73722.0,
-    "promo": 55291.5,
-    "orig_compare_at": 73722.0
-  },
   "BP720": {
     "base": 4482.72,
     "promo": 4258.58,
@@ -68,11 +63,6 @@
     "base": 6775.56,
     "promo": 6775.56,
     "orig_compare_at": 11682.0
-  },
-  "BPC2660D": {
-    "base": 61675.0,
-    "promo": 46256.25,
-    "orig_compare_at": 61675.0
   },
   "BPK31": {
     "base": 3557.14,
@@ -159,16 +149,6 @@
     "promo": 25427.6,
     "orig_compare_at": 46232.0
   },
-  "HACPP3200-N": {
-    "base": 75222.0,
-    "promo": 66195.36,
-    "orig_compare_at": 75222.0
-  },
-  "HACPP4000-J": {
-    "base": 86179.0,
-    "promo": 75837.52,
-    "orig_compare_at": 86179.0
-  },
   "HP5.5N": {
     "base": 5691.31,
     "promo": 5236.01,
@@ -231,7 +211,7 @@
   },
   "PBL": {
     "base": 26859.0,
-    "promo": 26859.0,
+    "promo": 22830.15,
     "orig_compare_at": 26859.0
   },
   "PK-EASY-100CT": {

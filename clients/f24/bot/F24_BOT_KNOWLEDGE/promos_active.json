@@ -1,6 +1,6 @@
 {
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/🔥 PROMO ACTIVA",
-  "generated": "2026-07-24",
+  "generated": "2026-07-25",
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
     {
@@ -199,26 +199,6 @@
       "shopify_price": "2489.94"
     },
     {
-      "sku": "BP2680D",
-      "sku_upper": "BP2680D",
-      "producto": "Motobomba Parazzini BP2680D — Diésel 26 HP, 8",
-      "regular_price": 73722.0,
-      "promo_price": 55291.5,
-      "pct_desc": "25%",
-      "msi_ladder": [
-        3,
-        6,
-        9
-      ],
-      "msi_max": 9,
-      "eligible_912": true,
-      "vigencia": "2026-07-24",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "55291.50"
-    },
-    {
       "sku": "BP720",
       "sku_upper": "BP720",
       "producto": "Motobomba Autocebante a Gasolina 7 HP 2\" — Parazzini BP720",
@@ -254,25 +234,6 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "6775.56"
-    },
-    {
-      "sku": "BPC2660D",
-      "sku_upper": "BPC2660D",
-      "producto": "Motobomba Parazzini Centrífuga 26 HP 6\" Diésel",
-      "regular_price": 61675.0,
-      "promo_price": 46256.25,
-      "pct_desc": "25%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-07-24",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "46256.25"
     },
     {
       "sku": "BPK31",
@@ -580,44 +541,6 @@
       "shopify_price": "25427.60"
     },
     {
-      "sku": "HACPP3200-N",
-      "sku_upper": "HACPP3200-N",
-      "producto": "Hidrolavadora de Agua Caliente Parazzini Pro 3200 PSI",
-      "regular_price": 75222.0,
-      "promo_price": 66195.36,
-      "pct_desc": "12%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-07-24",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "66195.36"
-    },
-    {
-      "sku": "HACPP4000-J",
-      "sku_upper": "HACPP4000-J",
-      "producto": "Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI",
-      "regular_price": 86179.0,
-      "promo_price": 75837.52,
-      "pct_desc": "12%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
-      "eligible_912": false,
-      "vigencia": "2026-07-24",
-      "vigente": true,
-      "estado_landing": "",
-      "in_shopify": true,
-      "shopify_price": "75837.52"
-    },
-    {
       "sku": "HP5.5N",
       "sku_upper": "HP5.5N",
       "producto": "Hidrolavadora a Gasolina Parazzini HP5.5 — 2,200 PSI / 5.5 HP / 4 Tiempos",
@@ -859,8 +782,8 @@
       "sku_upper": "PBL",
       "producto": "Bailarina Compactadora Parazzini PBL 4 HP Motor Loncin",
       "regular_price": 26859.0,
-      "promo_price": 26859.0,
-      "pct_desc": "",
+      "promo_price": 22830.15,
+      "pct_desc": "15%",
       "msi_ladder": [
         3,
         6
@@ -871,7 +794,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "26859.00"
+      "shopify_price": "22830.15"
     },
     {
       "sku": "PK-EASY-100CT",
@@ -879,14 +802,14 @@
       "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
       "regular_price": 7598.0,
       "promo_price": 6838.2,
-      "pct_desc": "30/12/1899",
+      "pct_desc": "10%",
       "msi_ladder": [
         3,
         6
       ],
       "msi_max": 6,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
@@ -898,14 +821,14 @@
       "producto": "Sistema de ósmosis inversa de alto flujo PURIKOR",
       "regular_price": 4812.34,
       "promo_price": 4234.86,
-      "pct_desc": "30/12/1899",
+      "pct_desc": "12%",
       "msi_ladder": [
         3,
         6
       ],
       "msi_max": 6,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
@@ -917,13 +840,13 @@
       "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
       "regular_price": 7056.0,
       "promo_price": 6209.28,
-      "pct_desc": "30/12/1899",
+      "pct_desc": "12%",
       "msi_ladder": [
         3
       ],
       "msi_max": 3,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
@@ -939,7 +862,7 @@
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
-      "vigencia": "",
+      "vigencia": "2026-07-26",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,

@@ -7,10 +7,10 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-75 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+71 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (21 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs con **9 o 12 MSI** (20 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
 - SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
 - NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
 - Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
@@ -29,10 +29,8 @@ Reglas de meses sin intereses (MSI) por promo:
 | `BP2.510` | $3,399 | $3,616 | 6% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `BP2.515` | $4,094 | $4,094 |  | — | no | 2026-07-26 |
 | `BP2510V2` | $2,490 | $2,490 |  | — | no | 2026-07-26 |
-| `BP2680D` | $55,292 | $73,722 | 25% | 3, 6, 9 | **Sí** | 2026-07-24 |
 | `BP720` | $4,259 | $4,483 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `BP730` | $6,776 | $6,776 |  | — | no | 2026-07-26 |
-| `BPC2660D` | $46,256 | $61,675 | 25% | 3, 6 | no | 2026-07-24 |
 | `BPK31` | $3,557 | $3,557 |  | — | no | 2026-07-26 |
 | `BT6.530` | $2,337 | $2,337 |  | — | no | 2026-07-26 |
 | `COMPHKIT25L` | $2,490 | $2,490 |  | — | no | 2026-07-26 |
@@ -54,8 +52,6 @@ Reglas de meses sin intereses (MSI) por promo:
 | `GPH8000W` | $13,139 | $13,831 | 5% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPH9000W` | $13,244 | $15,400 | 14% | 3, 6, 9, 12 | **Sí** | 2026-07-26 |
 | `GPIS5.5KW` | $25,428 | $25,428 |  | — | no | 2026-07-26 |
-| `HACPP3200-N` | $66,195 | $75,222 | 12% | 3, 6 | no | 2026-07-24 |
-| `HACPP4000-J` | $75,838 | $86,179 | 12% | 3, 6 | no | 2026-07-24 |
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-10P` | $4,899 | $4,899 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-12P-TF` | $5,999 | $6,666 | 10% | 3, 6 | no | 2026-07-31 |
@@ -74,14 +70,14 @@ Reglas de meses sin intereses (MSI) por promo:
 | `MT13` | $3,210 | $4,013 | 20% | — | no | 2026-07-26 |
 | `MTK26` | $4,894 | $5,437 | 10% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `MTT52M` | $5,691 | $5,691 |  | 3, 6 | no | 2026-07-31 |
-| `PBL` | $26,859 | $26,859 |  | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-100CT` | $6,838 | $7,598 | 30/12/1899 | 3, 6 | no |  |
-| `PK-EASY-200US` | $4,235 | $4,812 | 30/12/1899 | 3, 6 | no |  |
+| `PBL` | $22,830 | $26,859 | 15% | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-200US` | $4,235 | $4,812 | 12% | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-400US` | $3,938 | $4,475 | 30/12/1899 | 3, 6 | no |  |
 | `PK-EASY-600N-US` | $5,141 | $5,842 | 30/12/1899 | 3, 6 | no |  |
-| `PK-EASY-600US` | $6,209 | $7,056 | 30/12/1899 | 3 | no |  |
+| `PK-EASY-600US` | $6,209 | $7,056 | 12% | 3 | no | 2026-07-31 |
 | `PK-EASY-800US` | $4,777 | $5,429 | 30/12/1899 | 3, 6 | no |  |
-| `PK26CC` | $2,628 | $2,628 |  | — | no |  |
+| `PK26CC` | $2,628 | $2,628 |  | — | no | 2026-07-26 |
 | `PKRO100-5P` | $3,025 | $3,437 | 30/12/1899 | 3, 6 | no |  |
 | `PKRO100-6UVPM` | $4,267 | $4,849 | 30/12/1899 | 3, 6 | no |  |
 | `PKRO200-6UVPM` | $4,585 | $5,210 | 30/12/1899 | 3, 6 | no |  |
@@ -378,7 +374,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba 2.5HP AUTOCEBANTE 1.5" — Riego Residencial y Agrícola sin Complicaciones
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-515-2-5hp-autocebante-1-5-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f6eb530a-e06d-4eb6-9320-9b8dbc7be40d.png
-- **Motobomba Parazzini BP2680D** · `BP2680D` · $55,292 (antes $73,722) · Parazzini · BP2680D · ⚡PROMO 9MSI
+- **Motobomba Parazzini BP2680D** · `BP2680D` · $73,722 (antes $73,722) · Parazzini · BP2680D
   Cuando el terreno es grande, la bomba chica se queda corta. Regar una parcela extensa, desazolvar una obra inundada o achicar un dren de gran volumen con un equipo de 3" o 4" significa horas de más — y combustible que…
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2680d-diesel-26-hp-8
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_916adb0d-7f30-4919-9d83-82c3ce9b4638.png
@@ -386,7 +382,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La motobomba BP720A combina potencia y eficiencia para aplicaciones agrícolas e industriales exigentes. Su motor de 7 caballos de fuerza, tipo 4 tiempos OHV con tecnología moderna, entrega desempeño confiable en…
   PDP: https://ferre24.com.mx/products/parazzini-bp720a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_80e4ec45-8c92-4307-a3cf-03632ce8cfec.png
-- **Motobomba Parazzini Centrífuga 26 HP 6" Diésel** · `BPC2660D` · $46,256 (antes $61,675) · Parazzini · BPC2660D · ⚡PROMO
+- **Motobomba Parazzini Centrífuga 26 HP 6" Diésel** · `BPC2660D` · $61,675 (antes $61,675) · Parazzini · BPC2660D
   Cuando el terreno es grande o el pozo está lejos, una motobomba de baja potencia se queda corta: tarda horas en regar lo que debería tomar minutos, o simplemente no jala el volumen de agua que necesitas. La Motobomba…
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-centrifuga-26-hp-6-diesel
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94fdb2bf-da83-4aaa-871e-926a80913eb2.png
@@ -477,11 +473,11 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Necesitas limpiar superficies grandes, maquinaria pesada o áreas remotas pero siempre te detiene la falta de conexiones eléctricas cercanas? La hidrolavadora a gasolina Parazzini HP7N está diseñada exactamente para…
   PDP: https://ferre24.com.mx/products/hidrolavadora-a-gasolina-parazzini-hp7n-7-hp-2-700-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_4322125b-beab-4ce8-a934-dc7770766dc0.png
-- **Hidrolavadora de Agua Caliente Parazzini Pro 3200 PSI** · `HACPP3200-N` · $66,195 (antes $75,222) · Parazzini Pro · HACPP3200-N · ⚡PROMO
+- **Hidrolavadora de Agua Caliente Parazzini Pro 3200 PSI** · `HACPP3200-N` · $75,222 (antes $75,222) · Parazzini Pro · HACPP3200-N
   Si en tu taller la grasa quemada de motores y transmisiones no sale ni tallando, el problema no es tu técnica: es el agua fría. La grasa carbonizada se disuelve con calor, y por eso una hidrolavadora que solo trabaja…
   PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-3200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_20ce9652-b8a6-42bd-a9a2-da43fda4dd20.png
-- **Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI** · `HACPP4000-J` · $75,838 (antes $86,179) · Parazzini Pro · HACPP4000-J · ⚡PROMO
+- **Hidrolavadora de Agua Caliente Parazzini Pro 4000 PSI** · `HACPP4000-J` · $86,179 (antes $86,179) · Parazzini Pro · HACPP4000-J
   Hay grasa y aceite pegado que el agua fría simplemente no quita. Tallas, echas químico tras químico, y la mancha sigue ahí — porque el agua fría no rompe la grasa endurecida en maquinaria, motores, pisos de taller o…
   PDP: https://ferre24.com.mx/products/hidrolavadora-agua-caliente-parazzini-pro-4000-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94751b66-6c67-41de-ac9e-e0769dff08ee.png
@@ -789,7 +785,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Compactar terrenos difíciles de manera eficiente y sin fallas a mitad de jornada es el mayor reto en la construcción ligera y obras de pavimentación. La bailarina compactadora Parazzini PBH100 es el estándar de oro en…
   PDP: https://ferre24.com.mx/products/bailarina-compactadora-parazzini-pbh100-honda-3-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_dd70b606-4414-450d-ad00-59fb2077d72f.png
-- **Bailarina Compactadora Parazzini PBL 4 HP Motor Loncin** · `PBL` · $26,859 (antes $26,859) · Parazzini · PBL · ⚡PROMO
+- **Bailarina Compactadora Parazzini PBL 4 HP Motor Loncin** · `PBL` · $22,830 (antes $26,859) · Parazzini · PBL · ⚡PROMO
   ¿Cansado de perder horas valiosas en la obra por apisonadores que no arrancan por las mañanas o que requieren reparaciones costosas a medio camino? La Bailarina Compactadora Parazzini PBL de 4 HP es la solución…
   PDP: https://ferre24.com.mx/products/bailarina-compactadora-parazzini-pbl-4-hp-motor-loncin
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ef492d04-e442-4368-8a46-63def999f15f.png
