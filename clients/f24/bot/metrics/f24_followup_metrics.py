@@ -33,7 +33,7 @@ from email.mime.text import MIMEText
 
 GHL_BASE = "https://services.leadconnectorhq.com"
 GHL_VERSION = "2021-07-28"
-LOCATION_ID = "HNuSoIl2aCXP2DXEdMVZ"  # Ferre24
+LOCATION_ID = "oZDPJWRUvtFLiC64bB1o"  # Ferre24
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")  # anti Cloudflare 1010
 

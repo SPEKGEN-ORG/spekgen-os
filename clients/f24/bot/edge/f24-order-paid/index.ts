@@ -16,8 +16,8 @@
 // Secret: GHL_TOKEN (ya seteado a nivel proyecto, igual que las demás edge functions F24).
 
 const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
-const GHL_LOC = "HNuSoIl2aCXP2DXEdMVZ";
-const GHL_PIPELINE = "d8xeJjhr4wkmPv8xr5bA"; // Ventas Whatsapp
+const GHL_LOC = "oZDPJWRUvtFLiC64bB1o";
+const GHL_PIPELINE = "ItwKoN7r1eNFyzbNfhFp"; // Ventas Whatsapp
 
 function ok(body: unknown = { ok: true }) {
   return new Response(JSON.stringify(body), { status: 200, headers: { "Content-Type": "application/json" } });

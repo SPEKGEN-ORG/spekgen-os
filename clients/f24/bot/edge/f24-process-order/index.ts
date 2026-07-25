@@ -89,13 +89,13 @@ async function resolveVariantFull(token: string, id: string): Promise<{ title: s
   return node ? { title: node.product?.title ?? "Producto Ferre24", price: node.price, tags: node.product?.tags ?? [] } : null;
 }
 const GHL_CF = {
-  numero_pedido: "ePF4Tr2ejgRp9z6WpJbq",
-  tracking_url: "PitQVTnJJ0JreENWIBtz",
-  purchase_count: "9d8uBdAau2ziDBDhGQF6",
-  last_products: "KNHoFK29lQ94AN9vDIU2",
-  last_purchase_value: "RiQ6mqWUd2c3cuGHokNL",
+  numero_pedido: "1XVw0yQOXf4c2fVIHnT7",
+  tracking_url: "Yvxjx8EVTfUYWFyNb5l2",
+  purchase_count: "ifJKXpZ29TQgcngwTVQ9",
+  last_products: "QzIGizdhSWgaI10XmLXS",
+  last_purchase_value: "5ZFgUR3taN1xqyvPEHNC",
   // CP del cliente (campo GHL Contact, TEXT, creado 2026-06-24).
-  codigo_postal: "Jj7yQO00RSf83wvrRqAv",
+  codigo_postal: "MG6PhruKNTyw9cd3eJeT",
 };
 
 function cpFieldReady(): boolean {

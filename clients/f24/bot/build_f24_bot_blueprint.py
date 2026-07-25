@@ -11,7 +11,7 @@ datastore memoria, polling auto-handoff 4h, router) es idéntico. Diferencias F2
   3. IDs propios de F24 (location, webhook, datastore, data structures).
 
 Estado de IDs (rellenar conforme se crean):
-  - F24_LOCATION_ID: LISTO (HNuSoIl2aCXP2DXEdMVZ).
+  - F24_LOCATION_ID: LISTO (oZDPJWRUvtFLiC64bB1o).
   - GHL_API_KEY (PIT): PENDIENTE de Pedro → F24/.env.
   - ANTHROPIC_API_KEY: → F24/.env (NO hardcodear).
   - Webhook / Datastore / Data structures: se crean en Make (Fase 2) y se pegan abajo.
@@ -49,7 +49,7 @@ LINK_INJECTION_MAX_PRODUCTS = 3
 CATALOG_LINKS_PATH = os.path.join(KB_DIR, "catalog_links.json") if "KB_DIR" in dir() else None
 
 # ---------- F24-specific IDs ----------
-F24_LOCATION_ID = "HNuSoIl2aCXP2DXEdMVZ"  # LISTO — location GHL de Ferre24
+F24_LOCATION_ID = "oZDPJWRUvtFLiC64bB1o"  # LISTO — location GHL de Ferre24
 
 # === Objetos Make creados 2026-06-01 (team 354061) ===
 F24_WEBHOOK_ID = 2394767            # gateway:CustomWebHook — URL https://hook.us2.make.com/kuyq4cksp5cy6pg9ka4mh0uriorti9o6
@@ -95,11 +95,11 @@ F24_TRANSFER_HOLDER = "Sergio Jose Duarte Simon"
 HANDOFF_HOURS = 24
 
 # ---------- GHL custom field IDs (location F24, creados por API 2026-06-02) ----------
-F24_CF_NUMERO_PEDIDO = "ePF4Tr2ejgRp9z6WpJbq"
-F24_CF_TRACKING_URL = "PitQVTnJJ0JreENWIBtz"
-F24_CF_PURCHASE_COUNT = "9d8uBdAau2ziDBDhGQF6"
-F24_CF_LAST_PRODUCTS = "KNHoFK29lQ94AN9vDIU2"
-F24_CF_LAST_PURCHASE_VALUE = "RiQ6mqWUd2c3cuGHokNL"
+F24_CF_NUMERO_PEDIDO = "1XVw0yQOXf4c2fVIHnT7"
+F24_CF_TRACKING_URL = "Yvxjx8EVTfUYWFyNb5l2"
+F24_CF_PURCHASE_COUNT = "ifJKXpZ29TQgcngwTVQ9"
+F24_CF_LAST_PRODUCTS = "QzIGizdhSWgaI10XmLXS"
+F24_CF_LAST_PURCHASE_VALUE = "5ZFgUR3taN1xqyvPEHNC"
 
 
 # ---------- Credentials ----------

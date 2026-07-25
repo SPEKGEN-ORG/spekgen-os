@@ -27,7 +27,7 @@
 const GHL_BASE = "https://services.leadconnectorhq.com";
 const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
 const GHL_VERSION = "2021-04-15";
-const LOCATION_ID = Deno.env.get("F24_LOCATION_ID") ?? "HNuSoIl2aCXP2DXEdMVZ";
+const LOCATION_ID = Deno.env.get("F24_LOCATION_ID") ?? "oZDPJWRUvtFLiC64bB1o";
 const TIMEZONE = "America/Mexico_City";
 const SLOT_MINUTES = 30;
 // Calendario Round Robin de asesoría (Alfredo + Edgar). GHL asigna la cita a un asesor solo.
