@@ -34,9 +34,9 @@ OUTPUT_PATH = "/tmp/f24_cart_bp.json"
 # ---- Parámetros (rellenar los PENDING antes de deploy) ----
 SHOP = "0mtky1-q6.myshopify.com"
 API_VERSION = "2024-10"
-GHL_LOCATION_ID = "HNuSoIl2aCXP2DXEdMVZ"
+GHL_LOCATION_ID = "oZDPJWRUvtFLiC64bB1o"
 CART_TAG = "f24-send-cart"
-CUSTOM_FIELD_ID = "wjZ1NZwuUowHwgz29P8F"   # custom field carrito_abandonado_url (TEXT, F24)
+CUSTOM_FIELD_ID = "W4iiRLH3wRvoQe2MfZ4B"   # custom field carrito_abandonado_url (TEXT, F24)
 DATASTORE_ID = 109291                       # datastore dedup (Make) "F24 Carrito Abandonado — Dedup"
 
 AGE_MIN_MINUTES = 60      # mandar a partir de 1h tras abandonar

@@ -15,8 +15,8 @@ const SHOPIFY_CLIENT_SECRET = Deno.env.get("SHOPIFY_CLIENT_SECRET") ?? "";
 const SHOPIFY_API_VERSION = Deno.env.get("SHOPIFY_API_VERSION") ?? "2024-10";
 const MP_TOKEN = Deno.env.get("MP_CUENTAB_TOKEN") ?? "";
 const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
-const GHL_LOC = "HNuSoIl2aCXP2DXEdMVZ";
-const GHL_PIPELINE = "d8xeJjhr4wkmPv8xr5bA"; // Ventas Whatsapp
+const GHL_LOC = "oZDPJWRUvtFLiC64bB1o";
+const GHL_PIPELINE = "ItwKoN7r1eNFyzbNfhFp"; // Ventas Whatsapp
 
 function ok(body: unknown = { ok: true }) {
   return new Response(JSON.stringify(body), { status: 200, headers: { "Content-Type": "application/json" } });

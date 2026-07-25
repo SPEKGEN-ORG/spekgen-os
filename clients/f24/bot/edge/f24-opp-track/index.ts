@@ -2,8 +2,8 @@
 // "Ventas Whatsapp" de GHL según avanza la conversación. Solo AVANZA etapas (idempotente, no regresa).
 // Lo llama el bot (Make) best-effort tras parsear la respuesta de Claude. Secret: GHL_TOKEN.
 const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
-const LOC = "HNuSoIl2aCXP2DXEdMVZ";
-const PIPELINE = "d8xeJjhr4wkmPv8xr5bA";  // Ventas Whatsapp (creado por Pedro 2026-06-17)
+const LOC = "oZDPJWRUvtFLiC64bB1o";
+const PIPELINE = "ItwKoN7r1eNFyzbNfhFp";  // Ventas Whatsapp (creado por Pedro 2026-06-17)
 // Vendedores para el split 50/50 A NIVEL OPORTUNIDAD (2026-07-07). El dueño del CONTACTO pasa a
 // ser el usuario "Ferre24 Bot" (abajo), NO un vendedor, para que los mensajes del bot no aparezcan
 // en el inbox como si Edgar/Alfredo los hubieran mandado. Las comisiones leen opp.assignedTo, así
@@ -30,10 +30,10 @@ const REP_BY_ID: Record<string, string> = {
   "1Yee3JNNWlFSk6SWFzeT": "Alfredo",
 };
 const STAGES = [
-  { key: "nuevo", id: "27df7384-6789-40ae-a165-5a1a42c2a3bf" },      // 0 Nuevo lead
-  { key: "calificado", id: "24098db0-7f73-4037-9cb2-86081a1f3953" }, // 1 Calificado
-  { key: "cotizado", id: "19ba1a33-d13c-436e-9e02-6bfdd060d6d4" },   // 2 Cotizado
-  { key: "link", id: "e327d976-ceb0-42a1-8155-2b44f3fecb05" },       // 3 Link de pago enviado
+  { key: "nuevo", id: "e7e9b1ae-a122-4162-84e4-f0758f9288f3" },      // 0 Nuevo lead
+  { key: "calificado", id: "07b14327-9c21-4fa5-b87f-fa215c007901" }, // 1 Calificado
+  { key: "cotizado", id: "5d3a17e3-da01-4a5b-b05d-8c0a2819d201" },   // 2 Cotizado
+  { key: "link", id: "65e883d9-a8cd-41c8-a971-fd855a528d9c" },       // 3 Link de pago enviado
 ];
 const H = { Authorization: `Bearer ${GHL_TOKEN}`, Version: "2021-07-28", "Content-Type": "application/json", Accept: "application/json" };
 

@@ -52,8 +52,8 @@ function json(body: unknown, status = 200): Response {
 
 // Pipeline Ventas Whatsapp + location. Mismos que usan los webhooks
 // f24-order-paid / f24-mp-webhook, para caer en la MISMA opp del contacto.
-const GHL_LOC = "HNuSoIl2aCXP2DXEdMVZ";
-const GHL_PIPELINE = "d8xeJjhr4wkmPv8xr5bA";
+const GHL_LOC = "oZDPJWRUvtFLiC64bB1o";
+const GHL_PIPELINE = "ItwKoN7r1eNFyzbNfhFp";
 
 // ── enums (deben coincidir con los CHECK de _sql/001 y 004) ─────────────────
 const RATINGS = ["up", "down"];

@@ -28,7 +28,7 @@ import urllib.request
 
 GHL_BASE = "https://services.leadconnectorhq.com"
 GHL_VERSION = "2021-07-28"
-LOCATION_ID = "HNuSoIl2aCXP2DXEdMVZ"  # Ferre24
+LOCATION_ID = "oZDPJWRUvtFLiC64bB1o"  # Ferre24
 
 HOOKS = {
     "prod": "https://hook.us2.make.com/kuyq4cksp5cy6pg9ka4mh0uriorti9o6",  # scenario 5258612 (LIVE)
