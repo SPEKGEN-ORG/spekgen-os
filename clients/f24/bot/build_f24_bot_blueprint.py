@@ -366,7 +366,7 @@ def aggregator_human_messages_module(module_id, x, y, iterator_module_id):
     recent = "{{addHours(now; -" + str(HANDOFF_HOURS) + ")}}"
     # DISCRIMINADOR F24 (verificado con data real 2026-06-14): el bot manda vía API/PIT con
     # `userId` VACÍO; un humano staff desde el inbox GHL manda con su `userId` POBLADO (~20 chars).
-    # Ambos salen como source="app" y con el MISMO `from` (+52 1 33 1790 3630), así que lo único
+    # Ambos salen como source="app" y con el MISMO `from` (+52 1 33 1712 6340), así que lo único
     # que los separa es el userId. La lógica vieja de HC (userId>30 chars  O  userId<30 + from
     # sin espacios) NUNCA hacía match aquí: el userId es ~20 chars y el from SIEMPRE trae espacios
     # → el bot no detectaba la intervención humana. Regla correcta: outbound + userId no vacío.

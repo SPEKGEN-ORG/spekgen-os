@@ -18,7 +18,7 @@
         "end_iso": "2026-07-31T23:59:59-06:00",
         "cta_primary": "Ver los [[count]] productos en promoción",
         "cta_secondary": "Cotizar por WhatsApp",
-        "wa_url": "https://wa.me/523317903630",
+        "wa_url": "https://wa.me/523317126340",
         "wa_msg": "Hola Ferre24, vi sus promociones con meses sin intereses. Quiero cotizar antes de que termine.",
         "trust1": "Hasta [[msi]] MSI sin intereses",
         "trust2": "Entrega 24 h en Jal. y Mich.",
@@ -89,7 +89,7 @@
         "heading_hl": "[[count]] equipos seleccionados",
         "subheading": "Cada uno con sus meses sin intereses marcados en la tarjeta (hasta [[msi]] MSI), vigentes al [[fecha]]. Compra directo en línea o pide asesoría por WhatsApp si dudas cuál te conviene.",
         "end_iso": "2026-07-31T23:59:59-06:00",
-        "wa_url": "https://wa.me/523317903630",
+        "wa_url": "https://wa.me/523317126340",
         "foot_note": "Stock real confirmado al cotizar. Envío a todo México (costo según destino). Factura disponible. MSI sujetos a tarjeta participante."
       }
     },
@@ -102,7 +102,7 @@
         "heading_hl": "al mes",
         "subheading": "Elige uno de los [[count]] equipos en promoción y mira el desglose mensual a los meses sin intereses que le aplican. Listo para cotizar por WhatsApp en un clic.",
         "note": "Cálculo orientativo. El monto exacto depende de tu banco emisor. 9 y 12 MSI aplican solo en productos en promoción — confírmalo con tu tarjeta por WhatsApp antes de comprar.",
-        "wa_url": "https://wa.me/523317903630"
+        "wa_url": "https://wa.me/523317126340"
       }
     },
     "proveedor": {
@@ -157,7 +157,7 @@
         "title_accent": "de confianza",
         "lead": "Operamos directo de bodega en Guadalajara. Sin intermediarios, sin sorpresas. Hablas con un asesor real que conoce el equipo y te respalda antes y después de la compra.",
         "cta_wa": "Hablar con un asesor",
-        "wa_url": "https://wa.me/523317903630",
+        "wa_url": "https://wa.me/523317126340",
         "wa_msg": "Hola Ferre24, quiero conocer más sobre sus promociones y servicio."
       }
     },
@@ -246,7 +246,7 @@
         "response": "Te respondemos rápido en horario laboral",
         "trust_list": "Hablas con un asesor real, no un bot, MSI sin comisión confirmados al instante, Entrega 24-48h en GDL y Michoacán, Stock real, factura disponible",
         "cta": "Hablar con un asesor",
-        "wa_url": "https://wa.me/523317903630",
+        "wa_url": "https://wa.me/523317126340",
         "wa_msg": "Hola Ferre24, tengo una duda sobre las promociones MSI y quiero cotizar antes que termine."
       }
     },
@@ -260,14 +260,14 @@
         "end_iso": "2026-07-31T23:59:59-06:00",
         "cta_primary": "Cotizar antes que termine",
         "cta_secondary": "Volver a ver productos",
-        "wa_url": "https://wa.me/523317903630",
+        "wa_url": "https://wa.me/523317126340",
         "wa_msg": "Hola Ferre24, quiero aprovechar la promoción con MSI antes del [[fecha]]. ¿Me cotizan?"
       }
     },
     "widgets": {
       "type": "f24-maq-widgets",
       "settings": {
-        "wa_url": "https://wa.me/523317903630",
+        "wa_url": "https://wa.me/523317126340",
         "show_fab": true,
         "fab_label": "Cotiza tus MSI",
         "fab_msg": "Hola Ferre24, vi sus promociones con meses sin intereses. Quiero cotizar.",

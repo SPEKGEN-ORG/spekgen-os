@@ -87,7 +87,7 @@ function _f24PromoBoot() {
     var img = root.querySelector('[data-msi-img]');
     var name = root.querySelector('[data-msi-name]');
     var wa = root.querySelector('[data-msi-wa]');
-    var waBase = root.getAttribute('data-msi-wa-base') || 'https://wa.me/523317903630';
+    var waBase = root.getAttribute('data-msi-wa-base') || 'https://wa.me/523317126340';
     function fmt(n) {
       return '$' + Math.round(n).toLocaleString('es-MX');
     }

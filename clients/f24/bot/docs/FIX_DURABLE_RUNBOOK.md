@@ -43,7 +43,7 @@ F24_LINK_INJECTION=1 /usr/bin/python3 build_f24_bot_blueprint.py   # build con f
 
 ## Smoke test (OBLIGATORIO tras deploy)
 
-Desde un WhatsApp de prueba (NO el de Gibran), al número del bot **523317903630**:
+Desde un WhatsApp de prueba (NO el de Gibran), al número del bot **523317126340**:
 
 1. "Hola, quiero una planta de luz para mi casa" → el bot debe pedir potencia/uso (proving question).
 2. "El ENERWELL 2500" → el bot debe cotizar y **el link adjunto debe ser**

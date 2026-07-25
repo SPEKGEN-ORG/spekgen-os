@@ -11,7 +11,7 @@ mientras la campana gastaba). Este monitor convierte "ciego varios dias" en
 Que valida (en cada URL de PAGES_TO_CHECK):
   - GA4 gtag           -> G-VZB6X2YWT0
   - Google Ads tag     -> AW-18195593805
-  - Numero WhatsApp     -> 523317903630   (el evento GA4 Whatsapp_click filtra
+  - Numero WhatsApp     -> 523317126340   (el evento GA4 Whatsapp_click filtra
                                             por este numero; si cambia, el
                                             tracking muere en silencio)
 
@@ -44,7 +44,7 @@ PAGES_TO_CHECK = [
 REQUIRED_TOKENS = {
     "GA4 gtag (G-VZB6X2YWT0)": "G-VZB6X2YWT0",
     "Google Ads tag (AW-18195593805)": "AW-18195593805",
-    "WhatsApp num (523317903630)": "523317903630",
+    "WhatsApp num (523317126340)": "523317126340",
 }
 
 ALERT_TO = os.environ.get("ALERT_TO", "gibran.alonzo0506@gmail.com")
