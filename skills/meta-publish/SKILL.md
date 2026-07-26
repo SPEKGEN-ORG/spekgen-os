@@ -29,7 +29,7 @@ Publica contenido de cualquier cliente SPEKGEN directamente a Instagram y Facebo
 ## Base Path
 
 ```
-CLIENTS_ROOT="/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL"
+CLIENTS_ROOT="/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL"
 ```
 
 ## Flujo de Publicacion

@@ -388,7 +388,7 @@ wb.save(path)
 ### B5. Ejecutar upload al Content Hub
 
 ```bash
-cd "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/SPK - SPEKGEN AGENCY/_CONTENT_HUB_SHOPIFY"
+cd "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL/SPK - SPEKGEN AGENCY/_CONTENT_HUB_SHOPIFY"
 python3 upload_post_to_hub.py HC-XXX review
 ```
 

@@ -8,7 +8,7 @@ Handle/slug del producto (ej. "bellsan-ultra", "detox-fx") o nombre del producto
 ## Rutas base
 
 ```
-GR_ROOT    = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/GR - GREENRAY
+GR_ROOT    = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL/GR - GREENRAY
 THEME_DIR  = {GR_ROOT}/04. WEBSITE/greenray-theme
 LOG_FILE   = {GR_ROOT}/02. PRODUCTOS/00. PRODUCT LOG GLOBAL/GR_PRODUCTS_LOG_GLOBAL_v1.0.xlsx
 ENV_FILE   = {GR_ROOT}/.env

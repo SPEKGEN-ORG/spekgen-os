@@ -16,7 +16,7 @@ Si no se proporciona fecha, buscar en `_CLIENT_CONTEXT.md` la fecha del blast co
 ## Rutas base
 
 ```
-GR_ROOT      = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/GR - GREENRAY
+GR_ROOT      = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL/GR - GREENRAY
 ENV_FILE     = {GR_ROOT}/.env
 CONTEXT_FILE = {GR_ROOT}/_CLIENT_CONTEXT.md
 KB_FILE      = {GR_ROOT}/_KNOWLEDGE_BASE.md
