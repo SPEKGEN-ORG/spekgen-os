@@ -9,7 +9,7 @@ const PIPELINE = "ItwKoN7r1eNFyzbNfhFp";  // Ventas Whatsapp (creado por Pedro 2
 // en el inbox como si Edgar/Alfredo los hubieran mandado. Las comisiones leen opp.assignedTo, así
 // que el reparto de vendedor se hace aquí sobre la OPP. (El workflow GHL "Atribucion", que asignaba
 // el contacto a un vendedor, quedó DESPUBLICADO — su función se movió aquí. NO re-publicar.)
-const SELLERS = ["6G3VFN9NMm2J2zBGJkGC", "1Yee3JNNWlFSk6SWFzeT"]; // Edgar, Alfredo Torres
+const SELLERS = ["g3bQAxHWQpkb9qBE7SuZ", "lYmdu6oMjjuTDyWRmr9w"]; // Edgar, Alfredo Torres
 // Usuario "Ferre24 Bot" (RgGX1Uid50v4mHf6ekVq). Se pone como DUEÑO DEL CONTACTO al crear la opp,
 // para que los mensajes del bot (outbound sin userId) se pinten en el inbox de GHL como "Ferre24 Bot"
 // en vez de heredar la cara de un vendedor. GHL no permite firmar mensajes de API con un userId, así
@@ -26,8 +26,8 @@ const BOT_USER = "RgGX1Uid50v4mHf6ekVq";
 const SB_URL = Deno.env.get("SUPABASE_URL") ?? "";
 const SB_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
 const REP_BY_ID: Record<string, string> = {
-  "6G3VFN9NMm2J2zBGJkGC": "Edgar",
-  "1Yee3JNNWlFSk6SWFzeT": "Alfredo",
+  "g3bQAxHWQpkb9qBE7SuZ": "Edgar",
+  "lYmdu6oMjjuTDyWRmr9w": "Alfredo",
 };
 const STAGES = [
   { key: "nuevo", id: "e7e9b1ae-a122-4162-84e4-f0758f9288f3" },      // 0 Nuevo lead
