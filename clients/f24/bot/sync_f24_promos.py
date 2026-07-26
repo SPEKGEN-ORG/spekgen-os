@@ -59,6 +59,14 @@ SHEET_ID = "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U"
 PROMO_TAB = "🔥 PROMO ACTIVA"
 STOCK_TAB = "📦 STOCK Y PROMOS"
 MSI912_TAG = "msi-912"
+
+# Gate de PAGO CONTRAENTREGA para la PDP. Un producto lo lleva cuando cumple las 2 condiciones
+# que se pueden evaluar del lado del producto: promo vigente y vendible, y precio >= $10,000.
+# Las otras 2 condiciones del COD (CP del cliente en GTO/JAL/MICH, y que pague de contado) no se
+# pueden saber en la PDP — las verifica el bot en la conversación. Por eso el aviso de la PDP dice
+# "consulta si calificas" y no "tienes pago contraentrega".
+COD_TAG = "cod-elegible"
+COD_MIN_MXN = 10000.0
 MSI_NS, MSI_KEY = "f24", "msi_meses"   # metafield de producto que leen las chips MSI de la PDP
 MSI_DEFAULT = "3,6"                     # baseline sin promo: 3 y 6 MSI en checkout con TDC
 # PROMO ACTIVA: SKU | Producto | Precio | Meses MSI | % Desc | Precio Promo | Vigencia | Estado Landing
@@ -466,6 +474,22 @@ def main():
             if sku_u not in active_eligible and sku_u in variants:
                 set_product_tag(sc, variants[sku_u]["pid"], MSI912_TAG, add=False)
         print(f"  🏷  msi-912 activos: {len(active_eligible)}")
+
+        # --- cod-elegible: promo vigente + precio >= $10,000 (ver COD_TAG arriba) ---
+        def _califica_cod(r):
+            try:
+                return float(r.get("shopify_price") or 0) >= COD_MIN_MXN
+            except (TypeError, ValueError):
+                return False
+
+        active_cod = {r["sku_upper"] for r in sellable if _califica_cod(r)}
+        for r in sellable:
+            set_product_tag(sc, r["product_gid"], COD_TAG, add=_califica_cod(r))
+        # Al expirar la promo o bajar de $10,000, el producto deja de calificar → se retira el tag.
+        for sku_u in prev:
+            if sku_u not in active_cod and sku_u in variants:
+                set_product_tag(sc, variants[sku_u]["pid"], COD_TAG, add=False)
+        print(f"  🏷  cod-elegible activos: {len(active_cod)}")
 
         if msi_updates:
             set_msi_metafields(sc, msi_updates)
