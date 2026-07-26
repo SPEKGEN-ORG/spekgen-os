@@ -106,7 +106,11 @@ def deploy(slug, force=False):
         parts.append(head.encode() + (value if isinstance(value, bytes) else value.encode()) + b"\r\n")
 
     add("metadata", json.dumps({"name": slug, "entrypoint_path": "index.ts", "verify_jwt": False}), ctype="application/json")
-    add("file", local.encode(), filename="index.ts", ctype="application/typescript")
+    # Upload ALL sibling .ts files so local imports (e.g. f24-media's ./catalog_compact.ts) resolve.
+    # Single-file functions just upload index.ts; entrypoint stays index.ts.
+    for fn in sorted(f for f in os.listdir(fdir) if f.endswith(".ts")):
+        fbytes = open(os.path.join(fdir, fn), encoding="utf-8").read().encode()
+        add("file", fbytes, filename=fn, ctype="application/typescript")
     body = b"".join(parts) + f"--{boundary}--\r\n".encode()
 
     url = f"{API}/v1/projects/{PROJECT_REF}/functions/deploy?slug={slug}"
