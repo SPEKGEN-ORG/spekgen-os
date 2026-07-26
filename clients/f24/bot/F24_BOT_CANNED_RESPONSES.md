@@ -213,3 +213,47 @@ Claro, te paso con un asesor del equipo. Te responde en cuanto pueda — gracias
 
 **JSON esperado:**
 {"action":"human_handoff","messages":["Claro, te paso con un asesor del equipo. Te responde en cuanto pueda — gracias por tu paciencia 🛠️"],"products_mentioned":[],"intent":"other","order":null,"attachments":[]}
+
+---
+
+## pago_contraentrega_tyc
+
+> ✅ **APROBADO POR SERGIO — 2026-07-26.** Confirmó: umbral de **$10,000** correcto · **solo efectivo**
+> (rechazó explícitamente ofrecer transferencia) · entregas de **7 a 10 días, sábados y domingos**, en
+> punto público acordado · ya tiene definido quién entrega. **Condición suya:** el bot NO comunica el
+> nombre ni los datos de quien entrega — dice únicamente "un asesor de Ferre24" y hace handoff para que
+> el asesor acuerde fecha y hora directamente con el cliente.
+
+**Disparadores:** pago contraentrega, pagar al recibir, pagar cuando llegue, contra entrega, COD,
+pagar en efectivo al recibir, ¿me cobran al entregar?
+
+**Cuándo usar:** SOLO después de calificar al cliente (ver bloque PAGO CONTRAENTREGA (COD) del system
+prompt): CP en Guanajuato (36-38) / Jalisco (44-49) / Michoacán (58-61), pedido grande (~$10k+) de
+productos EN PROMO, pago de CONTADO (no MSI), y el cliente pidió las condiciones. Si NO califica, NO
+mandes este bloque. Si el cliente necesita la entrega entre semana o antes de 7 días, el contraentrega
+NO aplica — se cierra normal con link de pago. El cliente debe ACEPTAR estos términos explícitamente antes de que captures sus
+datos y escales.
+
+**Respuesta (texto — BORRADOR de T&C, sujeto a confirmación de asesor):**
+Con gusto. Pago contraentrega significa que pagas en efectivo hasta que recibes tu equipo 🚚. Aplica
+bajo estas condiciones (te las confirma un asesor al cerrar): 1) Solo entregamos contraentrega en
+Guanajuato, Jalisco y Michoacán. 2) Solo para pedidos de contado de $10,000 o más en productos que están
+en promoción. 3) No aplica a meses sin intereses (el contraentrega es de contado). 4) La entrega tarda de
+7 a 10 días y se hace en sábado o domingo, el día lo acordamos contigo. 5) La entrega es en un punto
+público y seguro que acordamos juntos. 6) Al entregar te pedimos una identificación oficial (INE) y un
+comprobante de domicilio. 7) Un asesor de Ferre24 hace la entrega y cobra en el momento. ¿Estás de
+acuerdo con estas condiciones? Si sí, te pido tu nombre y dirección completa para pasarlo con el asesor
+que lo agenda.
+
+**Acción adicional:** action=respond mientras el cliente decide/acepta. Una vez que ACEPTA y ya dio
+nombre + dirección + CP + día preferido (sábado/domingo) → **action=human_handoff** con el lead_summary
+de COD (ver system prompt: es la única excepción a la regla de que human_handoff solo se usa cuando el
+cliente pide humano — el asesor necesita la conversación libre 24h para acordar la entrega). El COD
+NUNCA cierra con create_order. **El bot no da el nombre ni los datos de quien entrega: solo dice
+"un asesor de Ferre24".**
+
+**JSON esperado (presentando los T&C, cliente aún no acepta):**
+{"action":"respond","messages":["Con gusto. Pago contraentrega significa que pagas en efectivo hasta que recibes tu equipo 🚚. Aplica bajo estas condiciones (te las confirma un asesor al cerrar):","1) Solo entregamos contraentrega en Guanajuato, Jalisco y Michoacan. 2) Solo para pedidos de contado de $10,000 o mas en productos en promocion. 3) No aplica a meses sin intereses (el contraentrega es de contado).","4) La entrega tarda de 7 a 10 dias y se hace en sabado o domingo, el dia lo acordamos contigo. 5) La entrega es en un punto publico y seguro que acordamos juntos. 6) Al entregar te pedimos identificacion oficial (INE) y comprobante de domicilio. 7) Un asesor de Ferre24 hace la entrega y cobra en el momento.","Estas de acuerdo con estas condiciones? Si si, te pido tu nombre y direccion completa para pasarlo con el asesor que lo agenda."],"products_mentioned":["GP9500TB"],"intent":"ready_to_buy","codigo_postal":"45100","order":null,"attachments":[]}
+
+**JSON esperado (cliente ACEPTÓ + ya dio nombre y dirección → human_handoff con lead_summary COD):**
+{"action":"human_handoff","messages":["¡Listo! Ya con eso te paso con un asesor de Ferre24 para que valide tu identificacion, confirme el total y acuerde contigo la fecha, la hora y el punto de entrega 🛠️. Te contacta en breve por aqui."],"products_mentioned":["GP9500TB"],"intent":"b2b_lead","codigo_postal":"45100","lead_summary":"PAGO CONTRAENTREGA · Estado: Jalisco · Producto(s) promo: GP9500TB · Cantidad: 1 · CP: 45100 · Cliente: Juan Perez · Direccion: Av. Vallarta 100, Col. Centro, Guadalajara, Jalisco · Contado en efectivo · Prefiere: sabado · FALTA VERIFICAR: INE + comprobante de domicilio (el asesor recolecta, confirma umbral $ y acuerda con el cliente fecha, hora y punto publico de entrega)","order":null,"attachments":[]}
