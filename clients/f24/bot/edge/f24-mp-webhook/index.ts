@@ -14,7 +14,7 @@ const SHOPIFY_CLIENT_ID = Deno.env.get("SHOPIFY_CLIENT_ID") ?? "";
 const SHOPIFY_CLIENT_SECRET = Deno.env.get("SHOPIFY_CLIENT_SECRET") ?? "";
 const SHOPIFY_API_VERSION = Deno.env.get("SHOPIFY_API_VERSION") ?? "2024-10";
 const MP_TOKEN = Deno.env.get("MP_CUENTAB_TOKEN") ?? "";
-const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
+const GHL_TOKEN = Deno.env.get("F24_GHL_TOKEN") ?? "";
 const GHL_LOC = "oZDPJWRUvtFLiC64bB1o";
 const GHL_PIPELINE = "ItwKoN7r1eNFyzbNfhFp"; // Ventas Whatsapp
 

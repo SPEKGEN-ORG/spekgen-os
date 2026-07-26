@@ -29,7 +29,7 @@ const CATALOG: CatItem[] = CATALOG_TSV.trim().split("\n").map((line) => {
 });
 
 const GEMINI_KEY = Deno.env.get("GEMINI_API_KEY") ?? "";
-const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
+const GHL_TOKEN = Deno.env.get("F24_GHL_TOKEN") ?? "";
 const GEMINI_MODEL = Deno.env.get("GEMINI_MODEL") ?? "gemini-2.5-flash";
 
 const AUDIO_EXT = /\.(ogg|oga|opus|mp3|m4a|amr|aac|wav|flac)(\?|$)/i;

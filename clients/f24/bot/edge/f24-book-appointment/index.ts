@@ -25,7 +25,7 @@
 // Secrets (env): GHL_TOKEN (PIT F24). Override del calendario: F24_CAL_ROUNDROBIN.
 
 const GHL_BASE = "https://services.leadconnectorhq.com";
-const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
+const GHL_TOKEN = Deno.env.get("F24_GHL_TOKEN") ?? "";
 const GHL_VERSION = "2021-04-15";
 const LOCATION_ID = Deno.env.get("F24_LOCATION_ID") ?? "oZDPJWRUvtFLiC64bB1o";
 const TIMEZONE = "America/Mexico_City";

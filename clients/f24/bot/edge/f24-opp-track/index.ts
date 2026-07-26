@@ -1,7 +1,7 @@
 // f24-opp-track — Edge Function (Deno). Crea/mueve la oportunidad del bot F24 en el pipeline
 // "Ventas Whatsapp" de GHL según avanza la conversación. Solo AVANZA etapas (idempotente, no regresa).
 // Lo llama el bot (Make) best-effort tras parsear la respuesta de Claude. Secret: GHL_TOKEN.
-const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
+const GHL_TOKEN = Deno.env.get("F24_GHL_TOKEN") ?? "";
 const LOC = "oZDPJWRUvtFLiC64bB1o";
 const PIPELINE = "ItwKoN7r1eNFyzbNfhFp";  // Ventas Whatsapp (creado por Pedro 2026-06-17)
 // Vendedores para el split 50/50 A NIVEL OPORTUNIDAD (2026-07-07). El dueño del CONTACTO pasa a

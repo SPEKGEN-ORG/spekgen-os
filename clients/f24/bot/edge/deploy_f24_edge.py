@@ -20,10 +20,13 @@ from difflib import SequenceMatcher
 HERE = os.path.dirname(os.path.abspath(__file__))
 F24_ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))  # edge -> bot -> clients/f24
 PROJECT_REF = "wjlwpfaogjpeqgyxxnwa"
-# GHL-migration repoint (2026-07-25): las 7 edge functions que quedaron con la
-# location/pipeline/stage/field IDs viejos y deben re-deployarse a la nueva sub-cuenta.
+# GHL-migration repoint (2026-07-25): las 9 edge functions F24 que tocan GHL.
+# 7 con location/pipeline/stage/field IDs viejos + f24-media/f24-pay que leían el
+# secret compartido GHL_TOKEN. Todas migradas a leer F24_GHL_TOKEN (secret propio de
+# F24, aislado del GHL_TOKEN compartido que usa SSI como fallback) y re-deployadas.
 FUNCTIONS = ["f24-opp-track", "f24-process-order", "f24-order-paid", "f24-mp-webhook",
-             "f24-rep-log", "f24-book-appointment", "f24-generate-guide"]
+             "f24-rep-log", "f24-book-appointment", "f24-generate-guide",
+             "f24-media", "f24-pay"]
 API = "https://api.supabase.com"
 
 
