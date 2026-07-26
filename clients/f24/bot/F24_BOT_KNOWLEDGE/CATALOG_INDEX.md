@@ -55,7 +55,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6 | no | 2026-07-31 |
 | `KAS-10P` | $4,899 | $4,899 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `KAS-12P-TF` | $5,999 | $6,666 | 10% | 3, 6 | no | 2026-07-31 |
-| `KF35X` | $4,888 | $4,888 |  | 3, 6 | no |  |
+| `KF35X` | $3,911 | $4,888 | 30/12/1899 | 3, 6 | no |  |
 | `KPD45TOP` | $5,032 | $5,032 |  | — | no |  |
 | `KTR26` | $4,257 | $4,257 |  | 3, 6 | no |  |
 | `MAKO25` | $2,386 | $2,566 | 7% | 3, 6 | no | 2026-07-31 |
@@ -69,7 +69,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `MKD5220` | $2,813 | $2,813 |  | 3, 6 | no | 2026-07-31 |
 | `MT13` | $3,210 | $4,013 | 20% | — | no | 2026-07-26 |
 | `MTK26` | $4,894 | $5,437 | 10% | 3, 6 | no | 2026-07-31 |
-| `MTT52M` | $5,691 | $5,691 |  | 3, 6 | no | 2026-07-31 |
+| `MTT52M` | $5,122 | $5,691 | 10% | 3, 6 | no | 2026-07-31 |
 | `PBL` | $22,830 | $26,859 | 15% | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-200US` | $4,235 | $4,812 | 12% | 3, 6 | no | 2026-07-31 |
@@ -527,7 +527,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Motosierras y Poda (39)
 
-- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,691 (antes $5,691) · Kawashima · MTT52M · ⚡PROMO
+- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,122 (antes $5,691) · Kawashima · MTT52M · ⚡PROMO
   La Ahoyadora Kawashima MTT52M es la herramienta que acelera el trabajo más lento del rancho: abrir hoyos. Con un motor a gasolina de 52cc y 2 tiempos, perfora tierra blanda de forma rápida y uniforme — el trabajo que…
   PDP: https://ferre24.com.mx/products/ahoyadora-kawashima-mtt52m-52cc-3-brocas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d43ca7eb-da4a-41a8-a79e-ab6bb7316b3a.png
@@ -690,7 +690,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
   PDP: https://ferre24.com.mx/products/aspersor-kawashima-ak26-motor-2-tiempos-25-litros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png
-- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $4,888 (antes $4,888) · Kawashima · KF35X · ⚡PROMO
+- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $3,911 (antes $4,888) · Kawashima · KF35X · ⚡PROMO
   Fumigar una hectárea a mano tarda horas y agota antes de terminar. Con una fumigadora manual de 16 litros tienes que detenerte a recargar constantemente, y si tu parcela no tiene toma de corriente, los equipos…
   PDP: https://ferre24.com.mx/products/aspersor-motorizado-kawashima-kf35x-35cc
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b1b2d0f-443a-445f-96b0-f220d5a53842.png
