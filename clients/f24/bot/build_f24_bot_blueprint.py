@@ -1080,7 +1080,7 @@ def book_call_asesor_email_module(module_id, x, y, book_http_module_id):
     le asignó la llamada. Se dispara tras un book_call exitoso; el asesor se elige por el `assigned_user`
     que regresa el EF f24-book-appointment. google-email conn 8183100."""
     bm = str(book_http_module_id)
-    ALFREDO_UID = "1Yee3JNNWlFSk6SWFzeT"; ALFREDO_EMAIL = "a25077492@gmail.com"; EDGAR_EMAIL = "edgar.gvg@hotmail.com"
+    ALFREDO_UID = "lYmdu6oMjjuTDyWRmr9w"; ALFREDO_EMAIL = "a25077492@gmail.com"; EDGAR_EMAIL = "edgar.gvg@hotmail.com"
     to_expr = '{{if(' + bm + '.data.assigned_user = "' + ALFREDO_UID + '"; "' + ALFREDO_EMAIL + '"; "' + EDGAR_EMAIL + '")}}'
     asesor = '{{if(' + bm + '.data.assigned_user = "' + ALFREDO_UID + '"; "Alfredo"; "Edgar")}}'
     subject = "[Ferre24] 📅 Nueva llamada agendada — {{ifempty(1.full_name; \"cliente\")}}"
