@@ -12,7 +12,7 @@
 //
 // Secrets: GHL_TOKEN, F24_PANEL_KEYS. SUPABASE_URL y SUPABASE_SERVICE_ROLE_KEY
 // los inyecta Supabase solo.
-const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
+const GHL_TOKEN = Deno.env.get("F24_GHL_TOKEN") ?? "";
 const SB_URL = Deno.env.get("SUPABASE_URL") ?? "";
 const SB_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
 const PANEL_KEYS = Deno.env.get("F24_PANEL_KEYS") ?? "{}"; // {"Edgar":"...","Alfredo":"..."}

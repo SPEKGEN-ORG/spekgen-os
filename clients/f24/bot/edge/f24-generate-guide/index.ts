@@ -29,7 +29,7 @@ const SHOPIFY_CLIENT_ID = Deno.env.get("SHOPIFY_CLIENT_ID") ?? "";
 const SHOPIFY_CLIENT_SECRET = Deno.env.get("SHOPIFY_CLIENT_SECRET") ?? "";
 const SHOPIFY_API_VERSION = Deno.env.get("SHOPIFY_API_VERSION") ?? "2024-10";
 
-const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
+const GHL_TOKEN = Deno.env.get("F24_GHL_TOKEN") ?? "";
 const GHL_CF_TRACKING_URL = "Yvxjx8EVTfUYWFyNb5l2"; // custom field "tracking_url" (mismo que f24-process-order)
 
 // Fallback hardcodeado (patrón agencia, igual que hc-process-order con Skydropx). Idealmente

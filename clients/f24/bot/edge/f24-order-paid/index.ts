@@ -15,7 +15,7 @@
 // Idempotente: marcar won repetidas veces es inocuo. Shopify puede reintentar el webhook.
 // Secret: GHL_TOKEN (ya seteado a nivel proyecto, igual que las demás edge functions F24).
 
-const GHL_TOKEN = Deno.env.get("GHL_TOKEN") ?? "";
+const GHL_TOKEN = Deno.env.get("F24_GHL_TOKEN") ?? "";
 const GHL_LOC = "oZDPJWRUvtFLiC64bB1o";
 const GHL_PIPELINE = "ItwKoN7r1eNFyzbNfhFp"; // Ventas Whatsapp
 
