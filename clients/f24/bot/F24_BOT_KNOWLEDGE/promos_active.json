@@ -136,12 +136,10 @@
       "pct_desc": "15%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -157,12 +155,10 @@
       "pct_desc": "6%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -399,12 +395,10 @@
       "pct_desc": "10%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -473,12 +467,10 @@
       "pct_desc": "0%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -552,12 +544,10 @@
       "pct_desc": "8%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -613,12 +603,10 @@
       "pct_desc": "7%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -749,12 +737,10 @@
       "pct_desc": "10%",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "2026-07-31",
       "vigente": true,
       "estado_landing": "",
@@ -1050,12 +1036,10 @@
       "pct_desc": "30/12/1899",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "",
       "vigente": true,
       "estado_landing": "En landing",
@@ -1173,12 +1157,10 @@
       "pct_desc": "30/12/1899",
       "msi_ladder": [
         3,
-        6,
-        9,
-        12
+        6
       ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_max": 6,
+      "eligible_912": false,
       "vigencia": "",
       "vigente": true,
       "estado_landing": "En landing",
