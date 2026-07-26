@@ -26,7 +26,7 @@ from datetime import datetime, timedelta
 from email.header import decode_header
 from pathlib import Path
 
-ROOT = Path("/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL")
+ROOT = Path("/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL")
 ENV_PATH = ROOT / "SPK - SPEKGEN AGENCY/.env"
 INTEL_DIR = ROOT / "SPK - SPEKGEN AGENCY/SPK - 15. FACTORY/_intel"
 

@@ -5,7 +5,7 @@ import functools
 
 DRIVE = os.environ.get(
     "SPEKGEN_DRIVE",
-    "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL",
+    "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL",
 )
 
 
