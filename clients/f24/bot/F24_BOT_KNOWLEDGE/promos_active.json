@@ -62,6 +62,25 @@
       "shopify_price": "117122.44"
     },
     {
+      "sku": "ATV-25",
+      "sku_upper": "ATV-25",
+      "producto": "Aspersor electrico 100 litros",
+      "regular_price": 5986.0,
+      "promo_price": 5986.0,
+      "pct_desc": "",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-07-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "5986.00"
+    },
+    {
       "sku": "BK621-1.5C",
       "sku_upper": "BK621-1.5C",
       "producto": "Kawashima BK621-1.5C",
@@ -732,6 +751,11 @@
     }
   ],
   "excluidos_sin_pdp": [
+    {
+      "sku": "BP721.5F",
+      "producto": "Motobomba 7 hp 4 tiempos ohv autocebante alta presión 1-2 y 1.5 pulg",
+      "estado_landing": ""
+    },
     {
       "sku": "PKRO400-6UVP",
       "producto": "Sistema de ósmosis inversa 400gpd",

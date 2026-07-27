@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-38 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+39 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (4 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -21,6 +21,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `17AREACM342` | $138,401 | $170,865 | 19% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
 | `17ARFACTA66` | $117,122 | $127,307 | 8% | 3, 6 | no | 2026-07-31 |
 | `AK26` | $2,872 | $2,872 |  | 3, 6 | no | 2026-07-31 |
+| `ATV-25` | $5,986 | $5,986 |  | 3, 6 | no | 2026-07-31 |
 | `BK621-1.5C` | $3,298 | $3,880 | 15% | 3, 6 | no | 2026-07-31 |
 | `BP2.510` | $3,399 | $3,616 | 6% | 3, 6 | no | 2026-07-31 |
 | `DKY52K` | $3,204 | $3,204 |  | 3, 6 | no | 2026-07-31 |
@@ -717,7 +718,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Fumigar manualmente hectáreas enteras agota al operador, desperdicia agroquímicos y deja coberturas irregulares. El Kawashima AKE100P resuelve eso de raíz: es un remolque aspersor eléctrico de 100 litros que se acopla…
   PDP: https://ferre24.com.mx/products/kawashima-ake100p-aspersor-electrico-remolque-100-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_23b1c88a-6e8e-472e-a5fd-9a349d6ffef7.png
-- **Kawashima ATV-25** · `ATV-25` · $5,986 (antes $10,883) · Kawashima · ATV-25
+- **Kawashima ATV-25** · `ATV-25` · $5,986 (antes $10,883) · Kawashima · ATV-25 · ⚡PROMO
   Si ya sabes lo que es fumigar con gasolina — el jalón del cordón a las 7 de la mañana, el humo adentro del invernadero, el ruido que no para — el ATV-25 de Kawashima fue hecho para ti. · Es un aspersor eléctrico de 100…
   PDP: https://ferre24.com.mx/products/kawashima-atv-25-aspersor-electrico-100-litros-sin-ruido-sin-humo-sin-esfuerzo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cfb6b08d-00c7-4276-9b4c-d0043a7c4551.png
