@@ -1,18 +1,8 @@
 {
-  "13A878BTA66": {
-    "base": 94155.0,
-    "promo": 70616.25,
-    "orig_compare_at": 94155.0
-  },
   "13AN77BS309": {
     "base": 67127.0,
     "promo": 60414.3,
     "orig_compare_at": 67127.0
-  },
-  "13AQA1BLA66": {
-    "base": 111373.0,
-    "promo": 83529.75,
-    "orig_compare_at": 111373.0
   },
   "17AREACM342": {
     "base": 170865.0,
@@ -24,15 +14,10 @@
     "promo": 117122.44,
     "orig_compare_at": 265223.55
   },
-  "AKE100A": {
-    "base": 12111.0,
-    "promo": 10657.68,
-    "orig_compare_at": 24222.75
-  },
-  "BAKARAC300": {
-    "base": 43912.0,
-    "promo": 43912.0,
-    "orig_compare_at": 43912.0
+  "ATV-25": {
+    "base": 5986.0,
+    "promo": 5986.0,
+    "orig_compare_at": 10883.41
   },
   "BK621-1.5C": {
     "base": 3880.25,
@@ -43,46 +28,6 @@
     "base": 3615.92,
     "promo": 3398.96,
     "orig_compare_at": 3615.92
-  },
-  "BP2.515": {
-    "base": 4093.64,
-    "promo": 4093.64,
-    "orig_compare_at": 7058.0
-  },
-  "BP2510V2": {
-    "base": 2489.94,
-    "promo": 2489.94,
-    "orig_compare_at": 4293.0
-  },
-  "BP720": {
-    "base": 4482.72,
-    "promo": 4258.58,
-    "orig_compare_at": 4482.72
-  },
-  "BP730": {
-    "base": 6775.56,
-    "promo": 6775.56,
-    "orig_compare_at": 11682.0
-  },
-  "BPK31": {
-    "base": 3557.14,
-    "promo": 3557.14,
-    "orig_compare_at": 6133.0
-  },
-  "BT6.530": {
-    "base": 2336.82,
-    "promo": 2336.82,
-    "orig_compare_at": 2336.82
-  },
-  "COMPHKIT25L": {
-    "base": 2490.0,
-    "promo": 2490.0,
-    "orig_compare_at": 4150.0
-  },
-  "CP80SA": {
-    "base": 7085.0,
-    "promo": 7085.0,
-    "orig_compare_at": 14170.13
   },
   "DKY52K": {
     "base": 3204.0,
@@ -99,55 +44,15 @@
     "promo": 5751.89,
     "orig_compare_at": null
   },
-  "GP12000": {
-    "base": 83773.0,
-    "promo": 83773.0,
-    "orig_compare_at": 83773.0
-  },
-  "GP20KWT": {
-    "base": 119250.0,
-    "promo": 119250.0,
-    "orig_compare_at": 117086.0
-  },
   "GP3000M": {
     "base": 5050.22,
     "promo": 4545.2,
     "orig_compare_at": 5050.22
   },
-  "GP4500I": {
-    "base": 10283.0,
-    "promo": 10283.0,
-    "orig_compare_at": 10283.0
-  },
-  "GP5000I": {
-    "base": 11762.0,
-    "promo": 11762.0,
-    "orig_compare_at": 11762.0
-  },
-  "GP9500TB": {
-    "base": 36949.0,
-    "promo": 31776.14,
-    "orig_compare_at": 67180.0
-  },
   "GPH1000W": {
     "base": 2127.0,
     "promo": 2127.0,
     "orig_compare_at": 2127.0
-  },
-  "GPH8000W": {
-    "base": 13830.85,
-    "promo": 13139.31,
-    "orig_compare_at": 13830.85
-  },
-  "GPH9000W": {
-    "base": 15400.0,
-    "promo": 13244.0,
-    "orig_compare_at": 28000.0
-  },
-  "GPIS5.5KW": {
-    "base": 25427.6,
-    "promo": 25427.6,
-    "orig_compare_at": 46232.0
   },
   "HP5.5N": {
     "base": 5691.31,
@@ -169,16 +74,6 @@
     "promo": 2386.38,
     "orig_compare_at": 2566.0
   },
-  "MAKO52": {
-    "base": 2968.0,
-    "promo": 2611.84,
-    "orig_compare_at": 5396.06
-  },
-  "MAKO58": {
-    "base": 3766.0,
-    "promo": 3314.08,
-    "orig_compare_at": 6846.95
-  },
   "MKD3816": {
     "base": 2448.0,
     "promo": 2448.0,
@@ -194,11 +89,6 @@
     "promo": 2813.0,
     "orig_compare_at": 5113.96
   },
-  "MT13": {
-    "base": 4013.0,
-    "promo": 3210.4,
-    "orig_compare_at": 4013.0
-  },
   "MTK26": {
     "base": 5437.3,
     "promo": 4893.57,
@@ -206,7 +96,7 @@
   },
   "MTT52M": {
     "base": 5691.35,
-    "promo": 5691.35,
+    "promo": 5122.22,
     "orig_compare_at": 10347.9
   },
   "PBL": {
@@ -228,11 +118,6 @@
     "base": 7056.0,
     "promo": 6209.28,
     "orig_compare_at": null
-  },
-  "PK26CC": {
-    "base": 2628.0,
-    "promo": 2628.0,
-    "orig_compare_at": 4779.04
   },
   "PKRO100-5P": {
     "base": 3437.0,
@@ -259,20 +144,10 @@
     "promo": 7121.78,
     "orig_compare_at": 8092.93
   },
-  "PP7BK": {
-    "base": 9675.0,
-    "promo": 9675.0,
-    "orig_compare_at": 17590.89
-  },
   "TKGHE-38-IP": {
     "base": 40810.0,
     "promo": 40810.0,
     "orig_compare_at": 54257.27
-  },
-  "TRENCH15": {
-    "base": 54038.0,
-    "promo": 45932.3,
-    "orig_compare_at": 54038.0
   },
   "AK26": {
     "base": 2872.1,
@@ -284,30 +159,10 @@
     "promo": 10750.8,
     "orig_compare_at": null
   },
-  "GPDS14M": {
-    "base": 87110.0,
-    "promo": 87110.0,
-    "orig_compare_at": null
-  },
-  "GPDS14T": {
-    "base": 87110.0,
-    "promo": 87110.0,
-    "orig_compare_at": null
-  },
-  "GPDS8.5T": {
-    "base": 31698.0,
-    "promo": 31698.0,
-    "orig_compare_at": null
-  },
   "KF35X": {
     "base": 4888.21,
-    "promo": 4888.21,
+    "promo": 3910.57,
     "orig_compare_at": null
-  },
-  "KPD45TOP": {
-    "base": 5032.0,
-    "promo": 5032.0,
-    "orig_compare_at": 5032.0
   },
   "KTR26": {
     "base": 4256.62,
@@ -318,21 +173,6 @@
     "base": 4335.0,
     "promo": 4204.95,
     "orig_compare_at": 3612.89
-  },
-  "MAKO72": {
-    "base": 10169.0,
-    "promo": 8948.72,
-    "orig_compare_at": 19187.12
-  },
-  "PPSB6.5AK": {
-    "base": 6920.0,
-    "promo": 6920.0,
-    "orig_compare_at": 6920.0
-  },
-  "PPSB6.5BK": {
-    "base": 7294.0,
-    "promo": 7294.0,
-    "orig_compare_at": 7294.0
   },
   "MINI60-12/1127": {
     "base": 2399.0,
