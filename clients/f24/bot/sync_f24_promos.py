@@ -72,7 +72,12 @@ MSI_DEFAULT = "3,6"                     # baseline sin promo: 3 y 6 MSI en check
 # PROMO ACTIVA: SKU | Producto | Precio | Meses MSI | % Desc | Precio Promo | Vigencia | Estado Landing
 COL = {"sku": 0, "producto": 1, "precio": 2, "msi": 3, "pct": 4, "promo": 5, "vig": 6, "landing": 7}
 # STOCK Y PROMOS: precio base col E (4), descuento directo col Q (16), tachado marketing col T (19)
-STOCK_COL = {"sku": 0, "producto": 1, "precio_base": 4, "direct_disc": 16, "tachado": 19}
+STOCK_COL = {"sku": 0, "producto": 1, "precio_base": 4, "direct_disc": 16, "tachado": 19,
+             "envio_gratis": 20}   # col U — la llena una fórmula desde '✍️ CAPTURA PROMOS'!N
+
+# Metafield que enciende la chip "Envío gratis" en la web (PDP, colecciones, página de COD).
+# Fuente de verdad: columna "¿Envío gratis?" del sheet INVENTARIO F24, que Sergio marca por promo.
+ENVIO_NS, ENVIO_KEY = "f24", "envio_gratis"
 
 SA_REL = "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json"
 
@@ -169,13 +174,14 @@ def read_promo_active(svc) -> list[dict]:
 
 
 def read_base_prices(svc) -> dict:
-    """{sku_upper: {'base','producto','direct_disc','tachado'}} desde 📦 STOCK Y PROMOS.
-    base = col E (precio venta real) · direct_disc = col Q · tachado = col T (ancla marketing)."""
+    """{sku_upper: {'base','producto','direct_disc','tachado','envio_gratis'}} desde 📦 STOCK Y PROMOS.
+    base = col E (precio venta real) · direct_disc = col Q · tachado = col T (ancla marketing)
+    envio_gratis = col U ("Sí"/"No"), fórmula que jala de '✍️ CAPTURA PROMOS'!N la promo vigente."""
     vals = svc.spreadsheets().values().get(
-        spreadsheetId=SHEET_ID, range=f"{STOCK_TAB}!A2:T").execute().get("values", [])
+        spreadsheetId=SHEET_ID, range=f"{STOCK_TAB}!A2:U").execute().get("values", [])
     out = {}
     for r in vals:
-        r = (list(r) + [""] * 20)[:20]
+        r = (list(r) + [""] * 21)[:21]
         sku = str(r[STOCK_COL["sku"]]).strip()
         if not sku:
             continue
@@ -184,8 +190,15 @@ def read_base_prices(svc) -> dict:
             "producto": str(r[STOCK_COL["producto"]]).strip(),
             "direct_disc": parse_frac(r[STOCK_COL["direct_disc"]]),
             "tachado": parse_money(r[STOCK_COL["tachado"]]),
+            "envio_gratis": _es_si(r[STOCK_COL["envio_gratis"]]),
         }
     return out
+
+
+def _es_si(v) -> bool:
+    """La col U puede venir 'Sí', 'SI', 'sí', 'x', 'TRUE'… o vacía. Todo lo demás es No."""
+    s = str(v or "").strip().lower()
+    return s in ("sí", "si", "s", "x", "true", "verdadero", "1")
 
 
 # ---------------- Shopify ----------------
@@ -266,6 +279,25 @@ def set_msi_metafields(sc, updates):
         errs = (d.get("metafieldsSet", {}) or {}).get("userErrors", [])
         if errs:
             raise RuntimeError(f"metafieldsSet: {errs}")
+
+
+def set_envio_metafields(sc, updates):
+    """updates: list[(product_gid, bool)] → metafield booleano f24.envio_gratis, en lotes de 25.
+
+    Se escribe SIEMPRE (True y False), no solo cuando es True: si una promo con envío gratis
+    expira, el producto tiene que quedar en 'false' o la chip se quedaría prendida para siempre.
+    """
+    mut = """mutation($mfs:[MetafieldsSetInput!]!){
+      metafieldsSet(metafields:$mfs){ userErrors{ field message } }
+    }"""
+    for i in range(0, len(updates), 25):
+        batch = [{"ownerId": pid, "namespace": ENVIO_NS, "key": ENVIO_KEY,
+                  "type": "boolean", "value": "true" if val else "false"}
+                 for pid, val in updates[i:i + 25]]
+        d = sc.graphql(mut, {"mfs": batch})
+        errs = (d.get("metafieldsSet", {}) or {}).get("userErrors", [])
+        if errs:
+            raise RuntimeError(f"metafieldsSet envio_gratis: {errs}")
 
 
 def set_product_tag(sc, product_gid, tag, add=True):
@@ -490,6 +522,17 @@ def main():
             if sku_u not in active_cod and sku_u in variants:
                 set_product_tag(sc, variants[sku_u]["pid"], COD_TAG, add=False)
         print(f"  🏷  cod-elegible activos: {len(active_cod)}")
+
+        # --- envío gratis: metafield f24.envio_gratis desde la col U del sheet ---
+        envio_updates = []
+        for sku_u, info in base.items():
+            v = variants.get(sku_u)
+            if v:
+                envio_updates.append((v["pid"], bool(info.get("envio_gratis"))))
+        if envio_updates:
+            set_envio_metafields(sc, envio_updates)
+        con_envio = sum(1 for _, val in envio_updates if val)
+        print(f"  🚚 envío gratis: {con_envio} con Sí · {len(envio_updates) - con_envio} en No")
 
         if msi_updates:
             set_msi_metafields(sc, msi_updates)
