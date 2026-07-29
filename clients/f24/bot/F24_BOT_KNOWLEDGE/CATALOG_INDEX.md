@@ -44,12 +44,12 @@ Reglas de meses sin intereses (MSI) por promo:
 | `MTK26` | $4,894 | $5,437 | 10% | 3, 6 | no | 2026-07-31 |
 | `MTT52M` | $5,122 | $5,691 | 10% | 3, 6 | no | 2026-07-31 |
 | `PBL` | $22,830 | $26,859 | 15% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-100CT` | $6,838 | $7,598 | 10% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-200US` | $4,235 | $4,812 | 12% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-400US` | $3,938 | $4,475 | 12% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-600N-US` | $5,141 | $5,842 | 12% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-600US` | $6,209 | $7,056 | 12% | 3 | no | 2026-07-31 |
-| `PK-EASY-800US` | $4,777 | $5,429 | 12% | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-100CT` | $7,598 | $7,598 |  | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-200US` | $4,812 | $4,812 |  | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-400US` | $4,475 | $4,475 |  | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-600N-US` | $5,842 | $5,842 |  | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-600US` | $7,056 | $7,056 |  | 3 | no | 2026-07-31 |
+| `PK-EASY-800US` | $5,429 | $5,429 |  | 3, 6 | no | 2026-07-31 |
 | `PKRO100-5P` | $3,025 | $3,437 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO100-6UVPM` | $4,267 | $4,849 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | 3, 6 | no | 2026-07-31 |
@@ -433,7 +433,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Las hidrolavadoras baratas se ven bien en el catálogo — hasta que la bomba fuga sellos a los seis meses y no consigues ni un empaque de repuesto. Con mangueras de 30 m la presión cae a menos de 2,000 PSI y terminas…
   PDP: https://ferre24.com.mx/products/hidrolavadora-industrial-trifasica-5-5-kw-3-191-psi-parazzini-pro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_786f4559-9603-4b0f-b1e6-b97b97fd4943.png
-- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $5,236 (antes $5,691) · Parazzini · HP5.5N · ⚡PROMO
+- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $5,236 (antes $10,427) · Parazzini · HP5.5N · ⚡PROMO
   ¿Cansado de pagar $80 a $150 cada vez que llevas tu coche al autolavado? ¿O de arrastrar extensiones eléctricas hasta el patio para que la hidrolavadora se quede corta de presión? · La Hidrolavadora a Gasolina Parazzini…
   PDP: https://ferre24.com.mx/products/hidrolavadora-gasolina-parazzini-hp5-5-2200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_96126fff-ef0f-42da-a91f-9915e00d6757.png
@@ -1040,11 +1040,11 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Purificación de Agua (12)
 
-- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $4,777 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
+- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $5,429 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
   ¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-800us-osmosis-inversa-800-gpd-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aab62185-b15f-4f46-aaec-cd327bfb7f10.png
-- **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $6,838 (antes $7,598) · PK-EASY · 100CT · ⚡PROMO
+- **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $7,598 (antes $7,598) · PK-EASY · 100CT · ⚡PROMO
   ¿Cuánto llevas gastando en garrafones este mes? Una familia de 4 personas gasta entre $1,560 y $2,080 MXN al mes en agua embotellada — más de $18,000 al año — y aun así no tiene certeza de lo que está tomando. · El…
   PDP: https://ferre24.com.mx/products/purificador-osmosis-inversa-100gpd-dispensador-pk-easy-100ct
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a1b8095f-75d4-4e63-8671-e1b090fbd688.png
@@ -1060,7 +1060,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
   PDP: https://ferre24.com.mx/products/sistema-ultrafiltracion-purikor-6-etapas-uv-philips
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_995f3cbe-a4b4-4a6d-aa94-a44d15e21e9e.png
-- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $3,938 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
+- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $4,475 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
   ¿Tu agua sabe rara, huele a cloro o simplemente no confías en lo que tomas del grifo? El agua de la red municipal trae sedimentos, cloro residual y microcontaminantes que ningún filtro de jarra elimina completamente. La…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-400-gpd-purikor-compacto-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d6ae10e6-1a6c-42eb-abc0-e2e8ff260bdc.png
@@ -1072,11 +1072,11 @@ Reglas de meses sin intereses (MSI) por promo:
   El Sistema de Ósmosis Inversa PURIKOR PKRO600-6UVPM es la solución definitiva para quienes necesitan agua purificada de alto rendimiento en aplicaciones comerciales o industriales de punto de uso (POU). Con un flujo…
   PDP: https://ferre24.com.mx/products/osmosis-inversa-purikor-600gpd-6-etapas-uv-pkro600-6uvpm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94ac0d04-72ea-4d68-b6bb-03b22feb3ea0.png
-- **Sistema de Ósmosis Inversa PURIKOR PK-EASY-200** · `PK-EASY-200US` · $4,235 (antes $4,812) · PURIKOR · PK-EASY-200 · ⚡PROMO
+- **Sistema de Ósmosis Inversa PURIKOR PK-EASY-200** · `PK-EASY-200US` · $4,812 (antes $4,812) · PURIKOR · PK-EASY-200 · ⚡PROMO
   ¿Cansado del agua turbia, con sabor extraño o preocupaciones sobre contaminantes? El sistema PURIKOR elimina sedimento, cloro, minerales disueltos, bacterias y virus — llevando agua potable pura directamente a tu grifo.…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_772afc7e-f9dd-4383-b2d4-edb0909acc8c.jpg
-- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $6,209 (antes $7,056) · PURIKOR · PK-EASY-600US · ⚡PROMO
+- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $7,056 (antes $7,056) · PURIKOR · PK-EASY-600US · ⚡PROMO
   ¿Cuánto gastas al mes en garrafones? ¿Cuánto espacio te quita el tinaco o el filtro de debajo de la tarja? El PURIKOR PK-EASY-600US resuelve los dos problemas al mismo tiempo: agua purificada directamente del grifo, en…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-sin-tanque-600-gpd-purikor-pk-easy-600us
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ac57830b-0e5d-4063-a881-ca162db66e71.png
@@ -1084,7 +1084,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Gastas cientos de pesos al mes en garrafones y no confías en el agua de tu llave? El agua de red puede contener cloro, metales pesados, bacterias y sólidos disueltos que ni hervir elimina. Hay una solución permanente…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-purikor-5-etapas-100gpd
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a6e66f92-056c-4275-9ae6-d965a57936dd.png
-- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $5,141 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
+- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $5,842 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
   ¿Tu familia espera minutos para llenar una jarra o la presión baja en cuanto abres la llave? Un purificador de flujo insuficiente no es ahorro — es frustración diaria. · El PURIKOR PK-EASY-600N-US resuelve eso de raíz:…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-purikor-537-gpd-4-etapas-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_08c046db-d6f0-4810-b7a3-e7b607f54c52.png
