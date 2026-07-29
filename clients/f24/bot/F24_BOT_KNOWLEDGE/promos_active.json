@@ -421,7 +421,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6838.20"
+      "shopify_price": "7598.00"
     },
     {
       "sku": "PK-EASY-200US",
@@ -440,7 +440,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4234.86"
+      "shopify_price": "4812.34"
     },
     {
       "sku": "PK-EASY-600US",
@@ -458,7 +458,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "6209.28"
+      "shopify_price": "7056.00"
     },
     {
       "sku": "PKRO100-5P",
@@ -709,7 +709,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "3937.67"
+      "shopify_price": "4474.63"
     },
     {
       "sku": "PK-EASY-600N-US",
@@ -728,7 +728,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "5141.27"
+      "shopify_price": "5842.35"
     },
     {
       "sku": "PK-EASY-800US",
@@ -747,7 +747,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "4777.21"
+      "shopify_price": "5428.65"
     }
   ],
   "excluidos_sin_pdp": [
