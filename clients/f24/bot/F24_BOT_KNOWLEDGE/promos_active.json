@@ -409,8 +409,8 @@
       "sku_upper": "PK-EASY-100CT",
       "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
       "regular_price": 7598.0,
-      "promo_price": 6838.2,
-      "pct_desc": "10%",
+      "promo_price": 7598.0,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -428,8 +428,8 @@
       "sku_upper": "PK-EASY-200US",
       "producto": "Sistema de ósmosis inversa de alto flujo PURIKOR",
       "regular_price": 4812.34,
-      "promo_price": 4234.86,
-      "pct_desc": "12%",
+      "promo_price": 4812.34,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -447,8 +447,8 @@
       "sku_upper": "PK-EASY-600US",
       "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
       "regular_price": 7056.0,
-      "promo_price": 6209.28,
-      "pct_desc": "12%",
+      "promo_price": 7056.0,
+      "pct_desc": "",
       "msi_ladder": [
         3
       ],
@@ -697,8 +697,8 @@
       "sku_upper": "PK-EASY-400US",
       "producto": "Sistema de ósmosis inversa de alto flujo 400gpd",
       "regular_price": 4474.63,
-      "promo_price": 3937.67,
-      "pct_desc": "12%",
+      "promo_price": 4474.63,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -716,8 +716,8 @@
       "sku_upper": "PK-EASY-600N-US",
       "producto": "Sistema de ósmosis inversa de alto flujo 537gpd",
       "regular_price": 5842.35,
-      "promo_price": 5141.27,
-      "pct_desc": "12%",
+      "promo_price": 5842.35,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
@@ -735,8 +735,8 @@
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
       "regular_price": 5428.65,
-      "promo_price": 4777.21,
-      "pct_desc": "12%",
+      "promo_price": 5428.65,
+      "pct_desc": "",
       "msi_ladder": [
         3,
         6
