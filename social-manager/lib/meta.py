@@ -82,29 +82,50 @@ def fb_feed_comments(page_id, page_token, limit=25):
     return out
 
 
-def ad_comments(ad_account, page_id, ads_token, page_token, max_ads=100):
-    """Comentarios sin atender en dark posts (la fuente real para clientes ad-heavy)."""
+def ad_comments(ad_account, page_id, ads_token, page_token, ig_username=None, max_ads=100):
+    """Comentarios sin atender en dark posts (la fuente real para clientes ad-heavy).
+    Cubre AMBOS lados del anuncio: la historia de FB (effective_object_story_id) y el
+    media de IG (effective_instagram_media_id). Sin el lado IG, los comentarios de
+    anuncios en Instagram quedaban invisibles (caso Oceane LF, 2026-07-13)."""
     out = []
     seen_stories = set()
+    seen_ig = set()
     ads = _get(f"{ad_account}/ads", {
-        "fields": "id,name,effective_status,creative{effective_object_story_id}",
+        "fields": "id,name,effective_status,"
+                  "creative{effective_object_story_id,effective_instagram_media_id}",
         "limit": max_ads, "access_token": ads_token,
     }).get("data", [])
     for a in ads:
-        sid = (a.get("creative") or {}).get("effective_object_story_id")
-        if not sid or sid in seen_stories:
-            continue
-        seen_stories.add(sid)
-        try:
-            cs = _get(f"{sid}/comments", {
-                "fields": "id,message,from,created_time,comment_count,permalink_url",
-                "limit": 50, "access_token": page_token,
-            }).get("data", [])
-        except RuntimeError:
-            continue
-        for c in cs:
-            if _comment_unanswered_fb(c, page_id):
-                out.append(_norm_fb_comment(c, sid, source="ad", ad_name=a.get("name")))
+        cr = a.get("creative") or {}
+        # --- lado FB (dark post) ---
+        sid = cr.get("effective_object_story_id")
+        if sid and sid not in seen_stories:
+            seen_stories.add(sid)
+            try:
+                cs = _get(f"{sid}/comments", {
+                    "fields": "id,message,from,created_time,comment_count,permalink_url",
+                    "limit": 50, "access_token": page_token,
+                }).get("data", [])
+                for c in cs:
+                    if _comment_unanswered_fb(c, page_id):
+                        out.append(_norm_fb_comment(c, sid, source="ad", ad_name=a.get("name")))
+            except RuntimeError:
+                pass
+        # --- lado IG (dark post) ---
+        mid = cr.get("effective_instagram_media_id")
+        if mid and mid not in seen_ig:
+            seen_ig.add(mid)
+            try:
+                cs = _get(f"{mid}/comments", {
+                    "fields": "id,text,username,timestamp,replies.limit(10){username}",
+                    "limit": 50, "access_token": page_token,
+                }).get("data", [])
+                for c in cs:
+                    if _ig_unanswered(c, ig_username):
+                        out.append(_norm_ig_comment(c, {"id": mid, "permalink": None},
+                                                    ig_username, source="ad", ad_name=a.get("name")))
+            except RuntimeError:
+                pass
     return out
 
 
@@ -117,11 +138,7 @@ def ig_media_comments(ig_id, page_token, ig_username, limit=25):
     }).get("data", [])
     for m in data:
         for c in (m.get("comments", {}) or {}).get("data", []):
-            if c.get("username") == ig_username:
-                continue
-            replied = any(r.get("username") == ig_username
-                          for r in (c.get("replies", {}) or {}).get("data", []))
-            if not replied:
+            if _ig_unanswered(c, ig_username):
                 out.append(_norm_ig_comment(c, m, ig_username))
     return out
 
@@ -140,16 +157,24 @@ def _norm_fb_comment(c, parent_id, source, ad_name):
     }
 
 
-def _norm_ig_comment(c, media, ig_username):
+def _norm_ig_comment(c, media, ig_username, source="organic", ad_name=None):
     return {
-        "channel": "ig_comment", "type": "comment", "source": "organic",
-        "external_id": c["id"], "parent_id": media.get("id"), "ad_name": None,
+        "channel": "ig_comment", "type": "comment", "source": source,
+        "external_id": c["id"], "parent_id": media.get("id"), "ad_name": ad_name,
         "author": c.get("username"), "author_id": None,
         "body": c.get("text"),
         "permalink": media.get("permalink"),
         "item_created_at": _iso(c.get("timestamp")),
         "age_days": days_ago(c.get("timestamp")),
     }
+
+
+def _ig_unanswered(c, ig_username):
+    """Comentario de IG que no es de la propia cuenta y sin reply de la cuenta."""
+    if c.get("username") == ig_username:
+        return False
+    return not any(r.get("username") == ig_username
+                   for r in (c.get("replies", {}) or {}).get("data", []))
 
 
 # ----------------------- DMs (IG) -----------------------

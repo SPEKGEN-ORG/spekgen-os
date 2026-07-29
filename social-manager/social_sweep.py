@@ -39,10 +39,11 @@ def sweep_client(code, cfg, conf, include_dms=True):
     except Exception as e:
         errors.append(f"fb_feed: {e}")
 
-    # 2) Comentarios en ADS (dark posts) — la fuente real
+    # 2) Comentarios en ADS (dark posts) — la fuente real. Cubre FB + IG del anuncio.
     if cfg.get("ad_account"):
         try:
-            items += meta.ad_comments(cfg["ad_account"], page_id, user_token, page_token)
+            items += meta.ad_comments(cfg["ad_account"], page_id, user_token, page_token,
+                                      ig_username=cfg.get("ig_username"))
         except Exception as e:
             errors.append(f"ads: {e}")
 
