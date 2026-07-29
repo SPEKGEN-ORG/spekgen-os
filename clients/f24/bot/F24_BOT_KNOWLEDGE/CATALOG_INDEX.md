@@ -433,7 +433,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Las hidrolavadoras baratas se ven bien en el catálogo — hasta que la bomba fuga sellos a los seis meses y no consigues ni un empaque de repuesto. Con mangueras de 30 m la presión cae a menos de 2,000 PSI y terminas…
   PDP: https://ferre24.com.mx/products/hidrolavadora-industrial-trifasica-5-5-kw-3-191-psi-parazzini-pro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_786f4559-9603-4b0f-b1e6-b97b97fd4943.png
-- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $5,236 (antes $10,427) · Parazzini · HP5.5N · ⚡PROMO
+- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $5,236 (antes $5,691) · Parazzini · HP5.5N · ⚡PROMO
   ¿Cansado de pagar $80 a $150 cada vez que llevas tu coche al autolavado? ¿O de arrastrar extensiones eléctricas hasta el patio para que la hidrolavadora se quede corta de presión? · La Hidrolavadora a Gasolina Parazzini…
   PDP: https://ferre24.com.mx/products/hidrolavadora-gasolina-parazzini-hp5-5-2200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_96126fff-ef0f-42da-a91f-9915e00d6757.png
