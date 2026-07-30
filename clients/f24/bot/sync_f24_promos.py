@@ -78,6 +78,10 @@ STOCK_COL = {"sku": 0, "producto": 1, "precio_base": 4, "direct_disc": 16, "tach
 # Metafield que enciende la chip "Envío gratis" en la web (PDP, colecciones, página de COD).
 # Fuente de verdad: columna "¿Envío gratis?" del sheet INVENTARIO F24, que Sergio marca por promo.
 ENVIO_NS, ENVIO_KEY = "f24", "envio_gratis"
+# Perfil de entrega con tarifa $0 (creado 30-jul-2026). El metafield de arriba
+# solo pinta la chip; ESTE es el que hace que el checkout no cobre envío.
+PERFIL_ENVIO_GRATIS = os.environ.get(
+    "F24_PERFIL_ENVIO_GRATIS", "gid://shopify/DeliveryProfile/101392187480")
 
 SA_REL = "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json"
 
@@ -298,6 +302,64 @@ def set_envio_metafields(sc, updates):
         errs = (d.get("metafieldsSet", {}) or {}).get("userErrors", [])
         if errs:
             raise RuntimeError(f"metafieldsSet envio_gratis: {errs}")
+
+
+def sync_perfil_envio_gratis(sc, updates):
+    """updates: list[(variant_gid, bool)] → membresía del perfil de envío gratis.
+
+    El metafield de arriba solo pinta la chip en la ficha. Quien decide si el
+    CHECKOUT cobra envío es el perfil de entrega: Shopify no tiene ninguna
+    condición "el carrito contiene el producto X" (el campo no existe en la API
+    de descuentos, no es tema de plan), así que la única vía es un perfil aparte
+    con tarifa $0 al que se le asocian las variantes.
+
+    Esto es un RECONCILE, no un evento: se compara quién debe estar contra quién
+    está, y se corrige la diferencia. Por eso una promo que expira se limpia
+    sola — la col U se vuelve "No" y la variante sale en la siguiente corrida.
+    Sin esto la ficha diría "envío gratis" y el cliente pagaría envío igual.
+    """
+    if not PERFIL_ENVIO_GRATIS:
+        print("  🚚 perfil de envío gratis no configurado (F24_PERFIL_ENVIO_GRATIS) — solo metafields")
+        return
+
+    q = """query($id:ID!,$cursor:String){
+      deliveryProfile(id:$id){
+        profileItems(first:250, after:$cursor){
+          edges{ node{ variants(first:25){ nodes{ id } } } }
+          pageInfo{ hasNextPage endCursor } } } }"""
+    dentro, cursor = set(), None
+    while True:
+        d = sc.graphql(q, {"id": PERFIL_ENVIO_GRATIS, "cursor": cursor})
+        conn = ((d.get("deliveryProfile") or {}).get("profileItems") or {})
+        for e in conn.get("edges", []):
+            for v in e["node"]["variants"]["nodes"]:
+                dentro.add(v["id"])
+        pi = conn.get("pageInfo") or {}
+        if pi.get("hasNextPage"):
+            cursor = pi["endCursor"]
+        else:
+            break
+
+    deben = {vid for vid, val in updates if val}
+    entran = sorted(deben - dentro)
+    salen = sorted(dentro - {vid for vid, _ in updates if vid in deben})
+
+    mut = """mutation($id:ID!,$add:[ID!],$rm:[ID!]){
+      deliveryProfileUpdate(id:$id, profile:{
+        variantsToAssociate:$add, variantsToDissociate:$rm }){
+        profile{ id } userErrors{ field message } } }"""
+    # En lotes: asociar cientos de variantes de un jalón revienta el límite de costo.
+    for i in range(0, max(len(entran), len(salen)), 50):
+        add, rm = entran[i:i + 50], salen[i:i + 50]
+        if not add and not rm:
+            continue
+        d = sc.graphql(mut, {"id": PERFIL_ENVIO_GRATIS, "add": add, "rm": rm})
+        errs = (d.get("deliveryProfileUpdate", {}) or {}).get("userErrors", [])
+        if errs:
+            raise RuntimeError(f"deliveryProfileUpdate: {errs}")
+
+    print(f"  🚚 perfil de envío: {len(deben)} con envío gratis real "
+          f"(+{len(entran)} entraron · -{len(salen)} salieron)")
 
 
 def set_product_tag(sc, product_gid, tag, add=True):
@@ -523,16 +585,22 @@ def main():
                 set_product_tag(sc, variants[sku_u]["pid"], COD_TAG, add=False)
         print(f"  🏷  cod-elegible activos: {len(active_cod)}")
 
-        # --- envío gratis: metafield f24.envio_gratis desde la col U del sheet ---
-        envio_updates = []
+        # --- envío gratis: la chip de la ficha Y el envío real del checkout ---
+        # Van juntos a propósito: si solo se escribiera el metafield, la ficha
+        # prometería envío gratis y el checkout lo cobraría igual.
+        envio_updates, envio_variantes = [], []
         for sku_u, info in base.items():
             v = variants.get(sku_u)
             if v:
-                envio_updates.append((v["pid"], bool(info.get("envio_gratis"))))
+                gratis = bool(info.get("envio_gratis"))
+                envio_updates.append((v["pid"], gratis))
+                envio_variantes.append((v["vid"], gratis))
         if envio_updates:
             set_envio_metafields(sc, envio_updates)
         con_envio = sum(1 for _, val in envio_updates if val)
         print(f"  🚚 envío gratis: {con_envio} con Sí · {len(envio_updates) - con_envio} en No")
+        if envio_variantes:
+            sync_perfil_envio_gratis(sc, envio_variantes)
 
         if msi_updates:
             set_msi_metafields(sc, msi_updates)
