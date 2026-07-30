@@ -83,6 +83,24 @@ ENVIO_NS, ENVIO_KEY = "f24", "envio_gratis"
 PERFIL_ENVIO_GRATIS = os.environ.get(
     "F24_PERFIL_ENVIO_GRATIS", "gid://shopify/DeliveryProfile/101392187480")
 
+# SKUs cuyo envío gratis es ESTRUCTURAL, no promocional: viene incluido en la
+# oferta y no vence. No están en '📦 STOCK Y PROMOS', así que sin esta lista el
+# reconcile los sacaría del perfil en la primera corrida.
+#
+# ⚠️ LOS COMBOS NO PUEDEN ENTRAR AQUÍ. Se intentó el 30-jul-2026 y NO se puede:
+# COMBO-KAS12P-MINI60 y COMBO-KAS10P-MINI25 son BUNDLES (`requiresComponents:
+# true`), y Shopify deriva el envío de un bundle desde sus componentes. El
+# `deliveryProfileUpdate` devuelve `userErrors: []` y **ignora la variante en
+# silencio** — no falla, simplemente no la asocia. Verificado comparando contra
+# AK26, que sí se mueve con la misma llamada.
+# Por eso siguen con sus 2 tarifas de $0 condicionadas a un total EXACTO
+# ($7,199 / $4,899) en el perfil default, con la fragilidad conocida: un
+# accesorio de $200 o un código de descuento rompen el envío gratis del combo, y
+# cualquier carrito que dé esa cifra se lo lleva sin comprar el combo.
+# Asociar los COMPONENTES tampoco sirve: se venden por separado y les daría
+# envío gratis vendidos solos.
+ENVIO_GRATIS_SIEMPRE: set[str] = set()
+
 SA_REL = "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json"
 
 
@@ -342,7 +360,7 @@ def sync_perfil_envio_gratis(sc, updates):
 
     deben = {vid for vid, val in updates if val}
     entran = sorted(deben - dentro)
-    salen = sorted(dentro - {vid for vid, _ in updates if vid in deben})
+    salen = sorted(dentro - deben)
 
     mut = """mutation($id:ID!,$add:[ID!],$rm:[ID!]){
       deliveryProfileUpdate(id:$id, profile:{
@@ -595,6 +613,14 @@ def main():
                 gratis = bool(info.get("envio_gratis"))
                 envio_updates.append((v["pid"], gratis))
                 envio_variantes.append((v["vid"], gratis))
+        # Los combos no viven en el sheet: entran por la lista de estructurales.
+        for sku_u in ENVIO_GRATIS_SIEMPRE:
+            v = variants.get(sku_u.upper())
+            if v:
+                envio_updates.append((v["pid"], True))
+                envio_variantes.append((v["vid"], True))
+            else:
+                print(f"  ⚠️  {sku_u} está en ENVIO_GRATIS_SIEMPRE pero no existe en la tienda")
         if envio_updates:
             set_envio_metafields(sc, envio_updates)
         con_envio = sum(1 for _, val in envio_updates if val)
