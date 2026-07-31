@@ -734,8 +734,8 @@
       "sku": "PK-EASY-800US",
       "sku_upper": "PK-EASY-800US",
       "producto": "Sistema de ósmosis inversa de alto flujo 800gpd",
-      "regular_price": 7752.0,
-      "promo_price": 7752.0,
+      "regular_price": 8833.0,
+      "promo_price": 8833.0,
       "pct_desc": "",
       "msi_ladder": [
         3,
@@ -747,7 +747,7 @@
       "vigente": true,
       "estado_landing": "Live",
       "in_shopify": true,
-      "shopify_price": "7752.00"
+      "shopify_price": "8833.00"
     }
   ],
   "excluidos_sin_pdp": [
