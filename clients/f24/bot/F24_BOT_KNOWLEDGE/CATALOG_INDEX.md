@@ -49,7 +49,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-400US` | $4,475 | $4,475 |  | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-600N-US` | $5,842 | $5,842 |  | 3, 6 | no | 2026-07-31 |
 | `PK-EASY-600US` | $7,056 | $7,056 |  | 3 | no | 2026-07-31 |
-| `PK-EASY-800US` | $5,429 | $5,429 |  | 3, 6 | no | 2026-07-31 |
+| `PK-EASY-800US` | $7,752 | $7,752 |  | 3, 6 | no | 2026-07-31 |
 | `PKRO100-5P` | $3,025 | $3,437 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO100-6UVPM` | $4,267 | $4,849 | 12% | 3, 6 | no | 2026-07-31 |
 | `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | 3, 6 | no | 2026-07-31 |
@@ -1040,7 +1040,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Purificación de Agua (12)
 
-- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $5,429 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
+- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $7,752 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
   ¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-800us-osmosis-inversa-800-gpd-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aab62185-b15f-4f46-aaec-cd327bfb7f10.png
