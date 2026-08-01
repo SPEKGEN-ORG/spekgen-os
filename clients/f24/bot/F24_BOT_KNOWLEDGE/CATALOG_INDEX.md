@@ -616,7 +616,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Desbrozadoras y Jardín (22)
 
-- **Aspersor Kawashima AK26** · `AK26` · $2,872 (antes $5,222) · Kawashima · AK26
+- **Aspersor Kawashima AK26** · `AK26` · $2,499 (antes $5,222) · Kawashima · AK26
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
   PDP: https://ferre24.com.mx/products/aspersor-kawashima-ak26-motor-2-tiempos-25-litros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png
