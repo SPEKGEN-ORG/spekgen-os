@@ -7,55 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-39 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
-
-Reglas de meses sin intereses (MSI) por promo:
-- SKUs con **9 o 12 MSI** (4 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
-- SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
-- NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
-- Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
-
-| SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
-|---|---|---|---|---|---|---|
-| `13AN77BS309` | $60,414 | $67,127 | 10% | 3 | no | 2026-07-31 |
-| `17AREACM342` | $138,401 | $170,865 | 19% | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `17ARFACTA66` | $117,122 | $127,307 | 8% | 3, 6 | no | 2026-07-31 |
-| `AK26` | $2,872 | $2,872 |  | 3, 6 | no | 2026-07-31 |
-| `ATV-25` | $5,986 | $5,986 |  | 3, 6 | no | 2026-07-31 |
-| `BK621-1.5C` | $3,298 | $3,880 | 15% | 3, 6 | no | 2026-07-31 |
-| `BP2.510` | $3,399 | $3,616 | 6% | 3, 6 | no | 2026-07-31 |
-| `DKY52K` | $3,204 | $3,204 |  | 3, 6 | no | 2026-07-31 |
-| `ENERWELL-G1000` | $4,182 | $4,402 | 5% | 3 | no | 2026-07-31 |
-| `ENERWELL-G2500` | $5,752 | $6,055 | 5% | 3, 6 | no | 2026-07-31 |
-| `GP3000M` | $4,545 | $5,050 | 10% | 3, 6 | no | 2026-07-31 |
-| `GP5500` | $10,751 | $11,945 | 10% | 3, 6 | no | 2026-07-31 |
-| `GPH1000W` | $2,127 | $2,127 | 0% | 3, 6 | no | 2026-07-31 |
-| `HP5.5N` | $5,236 | $5,691 | 8% | 3, 6 | no | 2026-07-31 |
-| `KAS-10P` | $4,899 | $4,899 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `KAS-12P-TF` | $5,999 | $6,666 | 10% | 3, 6 | no | 2026-07-31 |
-| `KF35X` | $3,911 | $4,888 | 20% | 3, 6 | no | 2026-07-31 |
-| `KTR26` | $4,257 | $4,257 |  | 3, 6 | no | 2026-07-31 |
-| `MAKO25` | $2,386 | $2,566 | 7% | 3, 6 | no | 2026-07-31 |
-| `MAKO65` | $4,205 | $4,335 | 3% | 3, 6 | no | 2026-07-31 |
-| `MINI60-12/1127` | $2,399 | $2,399 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
-| `MKD3816` | $2,448 | $2,448 |  | 3, 6 | no | 2026-07-31 |
-| `MKD4518` | $2,761 | $2,761 |  | 3, 6 | no | 2026-07-31 |
-| `MKD5220` | $2,813 | $2,813 |  | 3, 6 | no | 2026-07-31 |
-| `MTK26` | $4,894 | $5,437 | 10% | 3, 6 | no | 2026-07-31 |
-| `MTT52M` | $5,122 | $5,691 | 10% | 3, 6 | no | 2026-07-31 |
-| `PBL` | $22,830 | $26,859 | 15% | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-100CT` | $7,598 | $7,598 |  | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-200US` | $4,812 | $4,812 |  | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-400US` | $4,475 | $4,475 |  | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-600N-US` | $5,842 | $5,842 |  | 3, 6 | no | 2026-07-31 |
-| `PK-EASY-600US` | $7,056 | $7,056 |  | 3 | no | 2026-07-31 |
-| `PK-EASY-800US` | $8,833 | $8,833 |  | 3, 6 | no | 2026-07-31 |
-| `PKRO100-5P` | $3,025 | $3,437 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO100-6UVPM` | $4,267 | $4,849 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO50-6UVPM` | $3,598 | $4,089 | 12% | 3, 6 | no | 2026-07-31 |
-| `PKRO600-6UVPM` | $7,122 | $8,093 | 12% | 3, 6 | no | 2026-07-31 |
-| `TKGHE-38-IP` | $40,810 | $40,810 |  | 3, 6, 9, 12 | **Sí** | 2026-07-31 |
+Ahorita NO hay promos vigentes. Todos los SKUs: solo hasta 6 MSI (link normal).
 
 ## Generadores (43)
 
@@ -115,7 +67,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ### Sin luz en el rancho, todo se detiene. · Las bombas de agua paran, el ordeño se atrasa y la cosecha en cámara fría corre riesgo. Con acceso inestable a la red de CFE, no puedes depender de que "hoy sí haya…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp12000-12-000-w-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6053fdff-844d-427e-91ee-781153149e9f.png
-- **Generador Parazzini GP3000M 3,000W** · `GP3000M` · $4,545 (antes $5,050) · Parazzini · GP3000M · ⚡PROMO
+- **Generador Parazzini GP3000M 3,000W** · `GP3000M` · $5,050 (antes $5,050) · Parazzini · GP3000M
   Cuando se va la luz, no hay tiempo para improvisar. El Parazzini GP3000M te da respaldo inmediato con 3,000W de potencia máxima y 2,800W nominales — suficiente para mantener el refrigerador, la iluminación y la…
   PDP: https://ferre24.com.mx/products/generador-parazzini-gp3000m-3-000w-motor-4-tiempos-voltaje-dual-110-220v
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_marvelsa.png
@@ -127,7 +79,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Un corte de luz a media faena —o a media cena— siempre llega en el peor momento. Y si además tienes electrónica sensible conectada (computadora, refrigerador, aire acondicionado), un generador convencional puede meterle…
   PDP: https://ferre24.com.mx/products/generador-parazzini-inverter-5-kw-respaldo-confiable-casa-negocio-obra
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5cb6e673-a346-41be-ad37-4fee1af32c87.png
-- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $5,752 (antes $8,649) · ENERWELL · G2500 · ⚡PROMO
+- **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $6,055 · ENERWELL · G2500
   El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc [VERIFICAR: datos inferidos de estándar de mercado — confirmar con Marvelsa],…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-2500w-enerwell-4t-6-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_45e8886a-e494-4400-8a07-e8ea7a107f01.png
@@ -143,11 +95,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando la obra no se detiene y cada herramienta cuenta, necesitas un generador a la altura. El Generador Portátil ENERWELL-G8000 entrega 7,000W nominales y picos de 8,000W con motor de gasolina 4 tiempos de 420cc,…
   PDP: https://ferre24.com.mx/products/generador-portatil-8000w-gasolina-enerwell-arranque-electrico
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_77ea6781-7541-4bbe-9fba-5a74c1aac826.png
-- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $4,182 (antes $4,402) · ENERWELL · ENERWELL-G1000 · ⚡PROMO
+- **Generador Portátil Inverter 1000W ENERWELL** · `ENERWELL-G1000` · $4,402 · ENERWELL · ENERWELL-G1000
   El Generador Portátil ENERWELL G1000 es la solución compacta y confiable para quienes necesitan energía eléctrica en cualquier lugar. Con tecnología inverter , entrega corriente limpia y estable que protege tus…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-1000w-enerwell-inverter
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a49dbcb0-94a0-4d4f-a9d8-e6c0efc46f2a.png
-- **Generador Portátil Power Hunt 1000W** · `GPH1000W` · $2,127 (antes $4,254) · Power Hunt · GPH1000W · ⚡PROMO
+- **Generador Portátil Power Hunt 1000W** · `GPH1000W` · $2,127 (antes $2,127) · Power Hunt · GPH1000W
   ¿Se fue la luz y no tienes con qué cargar el teléfono, encender la lámpara o seguir trabajando? El generador portátil Power Hunt GPH1000W te da 1,000 W de potencia donde la red eléctrica no llega. · Con su motor de 2…
   PDP: https://ferre24.com.mx/products/generador-portatil-power-hunt-1000w-6-horas-autonomia
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d5e7e2f4-b266-45a2-a7e0-7f56b317604a.png
@@ -175,7 +127,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando se va la luz se detiene todo: el refrigerador, la bomba de agua, las herramientas en la obra. El generador Power Hunt GPH8000W te devuelve el control de tu energía con una salida potente y un arranque que no te…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-8000-w-motor-16-hp-power-hunt-gph8000w
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e8222ad0-3248-4d3c-8577-f0275e7f295e.png
-- **Generador a Gasolina Parazzini GP5500** · `GP5500` · $10,751 (antes $21,718) · Parazzini · GP5500 · ⚡PROMO
+- **Generador a Gasolina Parazzini GP5500** · `GP5500` · $11,945 · Parazzini · GP5500
   Un apagón a media jornada no avisa: se va la luz de CFE y se detiene el refrigerador, la bomba de agua o la herramienta de la obra. El Generador Parazzini GP5500 es la fuente de energía de respaldo que mantiene todo…
   PDP: https://ferre24.com.mx/products/generador-a-gasolina-parazzini-gp5500-5500w-9hp-encendido-manual
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d44f51e5-e5ad-4ef5-a0ca-91a4a3cd78a1.png
@@ -258,11 +210,11 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿La regadera te llega sin fuerza y las llaves apenas escurren? En casas de 1 o 2 pisos la red de agua potable casi nunca tiene la presión suficiente, y subir el agua hasta el tinaco se vuelve un problema diario. · La…
   PDP: https://ferre24.com.mx/products/bomba-agua-periferica-electrica-1-hp-parazzini-bpp165
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c67eac35-91f0-4159-b24c-bd1a91d0a944.png
-- **Kawashima BK621-1.5C** · `BK621-1.5C` · $3,298 (antes $3,880) · Kawashima · BK621-1.5C · ⚡PROMO
+- **Kawashima BK621-1.5C** · `BK621-1.5C` · $3,880 (antes $3,880) · Kawashima · BK621-1.5C
   ### Potencia de campo donde no llega la electricidad · La Kawashima BK621-1.5C es una motobomba centrífuga de 62cc y motor 2 tiempos diseñada para riego agrícola, trasvase de agua y drenaje en zonas sin acceso a red…
   PDP: https://ferre24.com.mx/products/kawashima-bk621-1-5c
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_62635.png
-- **Kawashima KTR26** · `KTR26` · $4,257 (antes $4,257) · Kawashima · KTR26 · ⚡PROMO
+- **Kawashima KTR26** · `KTR26` · $4,257 · Kawashima · KTR26
   Motor eficiente para jornadas completas en campo · El Kawashima KTR26 es un aspersor motorizado de mochila con motor 2 tiempos de 26 cc que trabaja hasta 7,500 RPM. Con 1.4 HP, está calibrado para su clase: no es un…
   PDP: https://ferre24.com.mx/products/kawashima-ktr26-aspersor-motorizado-26-cc-con-bomba-rompeolas-y-tanque-22-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_c80ae284-a140-4f20-8587-efbede155ee5.png
@@ -334,7 +286,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba Compacta 31cc AUTOCEBANTE 1" — Riego Portátil para Huertos y Transferencia Rápida
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-bpk31-31cc-4t-autocebante-1-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_78cdc349-4039-413e-8088-198fe06d560c.png
-- **Motobomba Parazzini BP2.510** · `BP2.510` · $3,399 (antes $3,616) · Parazzini · BP2.510 · ⚡PROMO
+- **Motobomba Parazzini BP2.510** · `BP2.510` · $3,616 (antes $3,616) · Parazzini · BP2.510
   Cuando tienes un rancho, huerta o jardín sin toma eléctrica cerca, el agua no puede esperar. La Motobomba Parazzini BP2.510 fue diseñada exactamente para eso: llevar agua a donde la necesitas, sin cables, sin…
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp2-510-2-5-hp-4t-autocebante-1-pulgada
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ff852b2b-86c6-401e-9282-ef30eb15ac3d.png
@@ -402,7 +354,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La temporada no espera: cuando el brote de plaga aparece, necesitas una fumigadora que arranque, mantenga presión y no te deje a medias en el campo. · Lo que ningún catálogo te dice · La transmisión directa simplifica…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5hp-transmision-directa-kit-manguera-y-carrete
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_marvelsa_8dcca9af-ddee-48f9-8e94-b81b3285f2c5.png
-- **Sistema de Ósmosis Inversa 6 Etapas con UV y Bomba PURIKOR 100 GPD** · `PKRO100-6UVPM` · $4,267 (antes $4,849) · PURIKOR · PKRO100-6UVPM · ⚡PROMO
+- **Sistema de Ósmosis Inversa 6 Etapas con UV y Bomba PURIKOR 100 GPD** · `PKRO100-6UVPM` · $4,849 (antes $4,849) · PURIKOR · PKRO100-6UVPM
   ¿Cuánto gastas al mes en agua embotellada? Una familia típica en México gasta entre $400 y $600 pesos cada mes — solo en botellas de plástico que terminan en el basurero. Con el PURIKOR PKRO100-6UVPM, ese gasto…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-6-etapas-uv-bomba-purikor-100-gpd
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f58cb0b-c89d-4f5d-a2b3-1718d4eb66a5.png
@@ -433,7 +385,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Las hidrolavadoras baratas se ven bien en el catálogo — hasta que la bomba fuga sellos a los seis meses y no consigues ni un empaque de repuesto. Con mangueras de 30 m la presión cae a menos de 2,000 PSI y terminas…
   PDP: https://ferre24.com.mx/products/hidrolavadora-industrial-trifasica-5-5-kw-3-191-psi-parazzini-pro
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_786f4559-9603-4b0f-b1e6-b97b97fd4943.png
-- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $5,236 (antes $10,427) · Parazzini · HP5.5N · ⚡PROMO
+- **Hidrolavadora a Gasolina Parazzini HP5.5** · `HP5.5N` · $5,691 (antes $10,348) · Parazzini · HP5.5N
   ¿Cansado de pagar $80 a $150 cada vez que llevas tu coche al autolavado? ¿O de arrastrar extensiones eléctricas hasta el patio para que la hidrolavadora se quede corta de presión? · La Hidrolavadora a Gasolina Parazzini…
   PDP: https://ferre24.com.mx/products/hidrolavadora-gasolina-parazzini-hp5-5-2200-psi
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_96126fff-ef0f-42da-a91f-9915e00d6757.png
@@ -495,7 +447,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Motosierras y Poda (39)
 
-- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,122 (antes $5,691) · Kawashima · MTT52M · ⚡PROMO
+- **Ahoyadora Kawashima MTT52M 52cc** · `MTT52M` · $5,691 (antes $10,348) · Kawashima · MTT52M
   La Ahoyadora Kawashima MTT52M es la herramienta que acelera el trabajo más lento del rancho: abrir hoyos. Con un motor a gasolina de 52cc y 2 tiempos, perfora tierra blanda de forma rápida y uniforme — el trabajo que…
   PDP: https://ferre24.com.mx/products/ahoyadora-kawashima-mtt52m-52cc-3-brocas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d43ca7eb-da4a-41a8-a79e-ab6bb7316b3a.png
@@ -503,7 +455,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ### El cortasetos que llega listo — y te respalda después · El Kawashima Pro CK22CC es un cortasetos a gasolina de 22 cc diseñado para quien necesita resultados, no sorpresas. Motor 2 tiempos con encendido retráctil…
   PDP: https://ferre24.com.mx/products/cortasetos-22-cc-kawashima-pro-kit-listo-refacciones-locales
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_66a7a0a9-36ca-41e2-a499-4d2270471469.png
-- **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,204 (antes $3,204) · Kawashima · DKY52K · ⚡PROMO
+- **Desbrozador Kawashima DKY52K** · `DKY52K` · $3,204 (antes $3,204) · Kawashima · DKY52K
   Para quien necesita acabar la jornada, no empezarla. Si lo tuyo es maleza alta, predios grandes, brechas de rancho o mantenimiento agrícola y forestal, una orilladora doméstica no te alcanza. El Desbrozador Kawashima…
   PDP: https://ferre24.com.mx/products/desbrozador-kawashima-dky52k-recto-52-cc-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e59e6cb0-42b2-47a7-8f17-d8d9621f1c4e.png
@@ -531,19 +483,19 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando el trabajo es tala real — árboles de gran diámetro, maderas de alta densidad, jornadas de 8 horas en campo — necesitas una herramienta que no te abandone a media mañana. La Motosierra Kawashima 62cc con barra de…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-62cc-barra-22-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0b9d3dcf-6a4a-4b4a-b381-8105b75f26f1.png
-- **Motosierra Kawashima Dakota 38cc** · `MKD3816` · $2,448 (antes $2,448) · Kawashima Dakota · MKD3816 · ⚡PROMO
+- **Motosierra Kawashima Dakota 38cc** · `MKD3816` · $2,448 (antes $4,451) · Kawashima Dakota · MKD3816
   Motosierra Kawashima Dakota 38cc — Lista para trabajar desde el primer día · ¿Tienes árboles que podar, leña que cortar o un jardín que ordenar? La Kawashima Dakota MKD3816 es la motosierra que necesitas: potencia real…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-38cc-barra-16-con-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1ee88704-4d4f-4441-a9ff-3f0afdac29a1.png
-- **Motosierra Kawashima Dakota 45cc** · `MKD4518` · $2,761 (antes $2,761) · Kawashima Dakota · MKD4518 · ⚡PROMO
+- **Motosierra Kawashima Dakota 45cc** · `MKD4518` · $2,761 (antes $2,761) · Kawashima Dakota · MKD4518
   ¿Tu motosierra no arranca o tarda diez intentos antes de encender? En la mayoría de los casos el problema no es la herramienta — es la mezcla de combustible. La Kawashima Dakota MKD4518 llega lista para trabajar: motor…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-45cc-barra-18-pulgadas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_37f988bc-21c0-4e3a-b050-8cd8f30fe256.png
-- **Motosierra Kawashima Dakota 52cc** · `MKD5220` · $2,813 (antes $2,813) · Kawashima Dakota · MKD5220 · ⚡PROMO
+- **Motosierra Kawashima Dakota 52cc** · `MKD5220` · $2,813 (antes $5,114) · Kawashima Dakota · MKD5220
   ¿Tu motosierra no arranca o el carburador se obstruye a cada rato? · El problema más común con motosierras de gasolina no es la herramienta — es la mezcla incorrecta de combustible. Un error en la proporción…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-dakota-52cc-barra-20-pulg-kit-completo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_656b333f-7cb7-47a9-af7a-c272ad7bbe31.png
-- **Motosierra Kawashima Pro 25 cc con barra de 12"** · `MAKO25` · $2,386 (antes $2,566) · Kawashima Pro · MAKO25 · ⚡PROMO
+- **Motosierra Kawashima Pro 25 cc con barra de 12"** · `MAKO25` · $2,566 (antes $2,566) · Kawashima Pro · MAKO25
   Que se te quede una motosierra a media poda es perder la mañana. Y casi siempre es lo mismo: bujía sucia, combustible viejo o una mezcla de gasolina mal hecha que ya castigó el motor. La Motosierra Kawashima Pro 25 cc…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-25-cc-barra-12-incluye-2-barras-2-cadenas-oregon
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9b0b020d-92c7-4309-a5d8-a2361ee579cd.png
@@ -555,11 +507,11 @@ Reglas de meses sin intereses (MSI) por promo:
   La motosierra que no te deja tirado a la mitad del trabajo · Si ya quemaste una motosierra genérica en la segunda semana — o tardaste veinte minutos en arrancarla bajo el sol de agosto — sabes lo que cuesta comprar…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-58-cc-kit-completo-lista-para-trabajar
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_98dca70b-2ba0-49f3-aaef-66a625974100.png
-- **Motosierra Kawashima Pro MAKO65** · `MAKO65` · $4,205 (antes $4,335) · Kawashima Pro · MAKO65 · ⚡PROMO
+- **Motosierra Kawashima Pro MAKO65** · `MAKO65` · $4,335 (antes $3,613) · Kawashima Pro · MAKO65
   Talar un tronco grueso con una motosierra que se queda corta es perder el día. Una máquina de 50 o 52 cc pierde fuerza en madera dura, se atora y te obliga a forzar el corte. Para trabajo forestal real necesitas torque…
   PDP: https://ferre24.com.mx/products/motosierra-kawashima-pro-mako65-65-cc-barra-20-kit-2-barras-2-cadenas
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5659413a-7fe4-4f3f-a1e5-45c8a97cbf14.png
-- **Motosierra Telescópica Kawashima 26 cc** · `MTK26` · $4,894 (antes $5,437) · Kawashima · PTK26L4 · ⚡PROMO
+- **Motosierra Telescópica Kawashima 26 cc** · `MTK26` · $5,437 (antes $5,437) · Kawashima · PTK26L4
   ¿Tienes ramas altas que cortar y la única opción es subirte a una escalera tambaleante con una sierra en la mano? Esa es la combinación que termina en caídas y accidentes. La Motosierra Telescópica Kawashima 26 cc…
   PDP: https://ferre24.com.mx/products/motosierra-telescopica-kawashima-26-cc-poda-ramas-altas-sin-escalera
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_81319d8c-7e82-45b9-9675-343ab1a374ca.png
@@ -623,7 +575,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuántas horas pierdes dando vueltas alrededor de árboles, jardineras y bardas con un tractor convencional que no gira sobre su propio eje? En un rancho o terreno de varias hectáreas, cada pasada vacía es tiempo (y…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-42-547cc-troy-bilt-mustang-z42
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d45534ef-7a91-4272-bd83-ff3874f2becd.png
-- **Tractor Podador Giro Cero 46" Kohler 22HP** · `17ARFACTA66` · $117,122 (antes $127,307) · Troy-Bilt · Mustang Z46 · ⚡PROMO
+- **Tractor Podador Giro Cero 46" Kohler 22HP** · `17ARFACTA66` · $127,307 (antes $265,224) · Troy-Bilt · Mustang Z46
   ¿Terminas cada corte con franjas sin parejo, esquinas que tienes que repasar a mano y horas perdidas bordeando árboles y macetas? En propiedades grandes, un tractor podador convencional te hace trabajar el doble por el…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-46-kohler-22hp-troy-bilt-mustang-z46
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c6bf40b-2f90-41bc-b736-5fe169b766e0.png
@@ -631,7 +583,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuántos días completos pierdes podando un terreno grande con una cortadora de empuje? Si tienes un rancho, una nave industrial con áreas verdes o un terreno de varias hectáreas, sabes que la respuesta correcta nunca es…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-50-kohler-24hp-troy-bilt-mustang-z50
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_02761bd0-a525-4776-9690-c3401ea0c70e.png
-- **Tractor Podador Giro Cero 54" Cub Cadet Ultima ZT2** · `17AREACM342` · $138,401 (antes $170,865) · Cub Cadet · Ultima ZT2 54 · ⚡PROMO 12MSI
+- **Tractor Podador Giro Cero 54" Cub Cadet Ultima ZT2** · `17AREACM342` · $170,865 (antes $294,595) · Cub Cadet · Ultima ZT2 54
   Cortar pasto en una extensión grande con un tractor tradicional significa horas de trabajo, vueltas amplias que dejan pasto sin cortar cerca de bardas y árboles, y un motor que se queda corto cuando el pasto está alto o…
   PDP: https://ferre24.com.mx/products/tractor-podador-giro-cero-54-cub-cadet-ultima-zt2-kohler-24hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c35b5dda-a7ea-4208-8ac7-00529cd516c2.png
@@ -647,18 +599,18 @@ Reglas de meses sin intereses (MSI) por promo:
   Si tu terreno se te va de las manos con una podadora de empuje, este tractor está hecho para eso: para no pasarte todo el sábado caminando atrás de una máquina cuando podrías estar sentado, controlando todo con un…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-super-bronco-50-motor-kohler-725cc
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_db8eab4a-4d28-4e05-9b65-90aef7d8b649.png
-- **Tractor podador Troy-Bilt 42"** · `13AN77BS309` · $60,414 (antes $67,127) · Troy-Bilt · 13AN77BS309 · ⚡PROMO
+- **Tractor podador Troy-Bilt 42"** · `13AN77BS309` · $71,990 (antes $67,127) · Troy-Bilt · 13AN77BS309
   ¿Cuántas horas pierdes cada mes cortando pasto a mano en un terreno grande? · Si tu propiedad supera los 2,000 m² — o si mantienes jardines de clientes — cada sesión de corte es tiempo, esfuerzo y desgaste físico que se…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3584d25a-4649-4a63-b021-0b64a2cca8c2.png
 
 ## Desbrozadoras y Jardín (22)
 
-- **Aspersor Kawashima AK26** · `AK26` · $2,872 (antes $5,222) · Kawashima · AK26 · ⚡PROMO
+- **Aspersor Kawashima AK26** · `AK26` · $2,872 (antes $5,222) · Kawashima · AK26
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
   PDP: https://ferre24.com.mx/products/aspersor-kawashima-ak26-motor-2-tiempos-25-litros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7229b8d0-0eee-4afb-8198-1b8535405670.png
-- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $3,911 (antes $4,888) · Kawashima · KF35X · ⚡PROMO
+- **Aspersor Motorizado Kawashima KF35X** · `KF35X` · $4,888 · Kawashima · KF35X
   Fumigar una hectárea a mano tarda horas y agota antes de terminar. Con una fumigadora manual de 16 litros tienes que detenerte a recargar constantemente, y si tu parcela no tiene toma de corriente, los equipos…
   PDP: https://ferre24.com.mx/products/aspersor-motorizado-kawashima-kf35x-35cc
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2b1b2d0f-443a-445f-96b0-f220d5a53842.png
@@ -718,7 +670,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Fumigar manualmente hectáreas enteras agota al operador, desperdicia agroquímicos y deja coberturas irregulares. El Kawashima AKE100P resuelve eso de raíz: es un remolque aspersor eléctrico de 100 litros que se acopla…
   PDP: https://ferre24.com.mx/products/kawashima-ake100p-aspersor-electrico-remolque-100-l
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_23b1c88a-6e8e-472e-a5fd-9a349d6ffef7.png
-- **Kawashima ATV-25** · `ATV-25` · $5,986 (antes $10,883) · Kawashima · ATV-25 · ⚡PROMO
+- **Kawashima ATV-25** · `ATV-25` · $5,986 (antes $10,883) · Kawashima · ATV-25
   Si ya sabes lo que es fumigar con gasolina — el jalón del cordón a las 7 de la mañana, el humo adentro del invernadero, el ruido que no para — el ATV-25 de Kawashima fue hecho para ti. · Es un aspersor eléctrico de 100…
   PDP: https://ferre24.com.mx/products/kawashima-atv-25-aspersor-electrico-100-litros-sin-ruido-sin-humo-sin-esfuerzo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cfb6b08d-00c7-4276-9b4c-d0043a7c4551.png
@@ -753,7 +705,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Compactar terrenos difíciles de manera eficiente y sin fallas a mitad de jornada es el mayor reto en la construcción ligera y obras de pavimentación. La bailarina compactadora Parazzini PBH100 es el estándar de oro en…
   PDP: https://ferre24.com.mx/products/bailarina-compactadora-parazzini-pbh100-honda-3-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_dd70b606-4414-450d-ad00-59fb2077d72f.png
-- **Bailarina Compactadora Parazzini PBL 4 HP Motor Loncin** · `PBL` · $22,830 (antes $26,859) · Parazzini · PBL · ⚡PROMO
+- **Bailarina Compactadora Parazzini PBL 4 HP Motor Loncin** · `PBL` · $26,859 (antes $26,859) · Parazzini · PBL
   ¿Cansado de perder horas valiosas en la obra por apisonadores que no arrancan por las mañanas o que requieren reparaciones costosas a medio camino? La Bailarina Compactadora Parazzini PBL de 4 HP es la solución…
   PDP: https://ferre24.com.mx/products/bailarina-compactadora-parazzini-pbl-4-hp-motor-loncin
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ef492d04-e442-4368-8a46-63def999f15f.png
@@ -795,7 +747,7 @@ Reglas de meses sin intereses (MSI) por promo:
   El KASSAI KASPRO-16P es un calentador de paso instantáneo modulante de la Serie Profesional con capacidad de 16 litros por minuto, diseñado para abastecer hasta dos servicios simultáneos sin tanque y sin piloto de llama…
   PDP: https://ferre24.com.mx/products/calentador-paso-instantaneo-modulante-kassai-kaspro-16p-16-l-agua-caliente-sin-p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f13c1e7-b888-425c-a86e-02416b48e0b9.png
-- **Calentador de Paso TAKAGI TKGHE-38-IP** · `TKGHE-38-IP` · $40,810 (antes $40,810) · TAKAGI · TKGHE-38-IP · ⚡PROMO 12MSI
+- **Calentador de Paso TAKAGI TKGHE-38-IP** · `TKGHE-38-IP` · $40,810 (antes $54,257) · TAKAGI · TKGHE-38-IP
   El TAKAGI TKGHE-38-IP es un calentador de agua instantáneo de alto rendimiento diseñado para aplicaciones residenciales y comerciales que demandan agua caliente de forma continua y eficiente. Con una capacidad de flujo…
   PDP: https://ferre24.com.mx/products/calentador-paso-a-gas-lp-takagi-tkghe-38-ip-38-l-min-ultra-alta-eficiencia-uso-r
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b3210ed6-be90-4df5-95e3-ce8a24306454.png
@@ -807,11 +759,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Paga menos comprando el combo. Llévate el Calentador de Paso Instantáneo Modulante KASSAI de 12 litros con el Presurizador Individual Automático AQUA PAK MINI (1/3 HP) al 50% de descuento . · · Calentador de Paso…
   PDP: https://ferre24.com.mx/products/combo-calentador-12l-kassai-presurizador-mini-13hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f28f9109-235c-4423-bca5-1917ea964b4e.png
-- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $5,999 (antes $6,666) · KASSAI · KAS-12P-TF · ⚡PROMO
+- **KAS-12P-TF Calentador de Paso Instantáneo Modulante** · `KAS-12P-TF` · $6,666 · KASSAI · KAS-12P-TF
   Calentador de Paso Instantáneo Modulante
   PDP: https://ferre24.com.mx/products/kas-12p-tf-calentador-paso-instantaneo-modulante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7fc1f081-19e2-45c6-90cf-a2c02cdefef6.png
-- **KASSAI KAS-10P** · `KAS-10P` · $4,899 (antes $4,899) · KASSAI · KAS-10P · ⚡PROMO 12MSI
+- **KASSAI KAS-10P** · `KAS-10P` · $4,899 · KASSAI · KAS-10P
   El Calentador de Paso Instantáneo KASSAI KAS-10P calienta el agua en el momento en que abres la llave: no hay tanque que esperar ni agua tibia al final del baño. · Entrega una capacidad de 10 litros por minuto y está…
   PDP: https://ferre24.com.mx/products/kassai-kas-10p
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8c5bb77c-313d-4829-b17f-4f45cc587029.png
@@ -1013,7 +965,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Equipo totalmente ensamblado
   PDP: https://ferre24.com.mx/products/pres-ap5xb-24lm-presurizador-individual-velocidad-constante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_87d132d4-8b98-4930-b108-b449defcf652.png
-- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $2,399 (antes $1,906) · AQUA PAK · MINI60-12-1127 · ⚡PROMO 12MSI
+- **Presurizador Individual Automático AQUA PAK MINI60-12** · `MINI60-12/1127` · $2,399 (antes $1,906) · AQUA PAK · MINI60-12-1127
   ¿El agua llega con poca presión a tu regadera o llave? El Presurizador Individual Automático AQUA PAK MINI60-12 de la Serie MINI SMART está diseñado exactamente para ese problema. Compacto, silencioso y listo para…
   PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-mini60-12-flujo-60-lpm-automatico-1-3-hp-ferre24
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40fbe287-0d55-46cd-b9e8-020654c8c477.png
@@ -1040,15 +992,15 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Purificación de Agua (12)
 
-- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $8,833 (antes $7,755) · PURIKOR · PK-EASY-800US · ⚡PROMO
+- **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $8,833 (antes $7,755) · PURIKOR · PK-EASY-800US
   ¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-800us-osmosis-inversa-800-gpd-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_aab62185-b15f-4f46-aaec-cd327bfb7f10.png
-- **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $7,598 (antes $7,598) · PK-EASY · 100CT · ⚡PROMO
+- **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $7,598 · PK-EASY · 100CT
   ¿Cuánto llevas gastando en garrafones este mes? Una familia de 4 personas gasta entre $1,560 y $2,080 MXN al mes en agua embotellada — más de $18,000 al año — y aun así no tiene certeza de lo que está tomando. · El…
   PDP: https://ferre24.com.mx/products/purificador-osmosis-inversa-100gpd-dispensador-pk-easy-100ct
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a1b8095f-75d4-4e63-8671-e1b090fbd688.png
-- **Purikor PKRO50-6UVPM** · `PKRO50-6UVPM` · $3,598 (antes $4,089) · Purikor · PKRO50-6UVPM · ⚡PROMO
+- **Purikor PKRO50-6UVPM** · `PKRO50-6UVPM` · $4,089 (antes $4,089) · Purikor · PKRO50-6UVPM
   ¿Cuánto gastas al mes en garrafones? Una familia de 4-5 personas en México gasta entre $150 y $250 pesos cada mes en agua embotellada, sin contar el tiempo de espera al repartidor, el plástico desechado y el espacio que…
   PDP: https://ferre24.com.mx/products/purikor-pkro50-6uvpm-osmosis-inversa-50-gpd-6-etapas-uv
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fafdb8f0-d037-46e4-9655-9343d62dbcd4.png
@@ -1060,31 +1012,31 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
   PDP: https://ferre24.com.mx/products/sistema-ultrafiltracion-purikor-6-etapas-uv-philips
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_995f3cbe-a4b4-4a6d-aa94-a44d15e21e9e.png
-- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $4,475 (antes $6,392) · PURIKOR · PK-EASY-400US · ⚡PROMO
+- **Sistema de Ósmosis Inversa 400 GPD PURIKOR** · `PK-EASY-400US` · $4,475 (antes $6,392) · PURIKOR · PK-EASY-400US
   ¿Tu agua sabe rara, huele a cloro o simplemente no confías en lo que tomas del grifo? El agua de la red municipal trae sedimentos, cloro residual y microcontaminantes que ningún filtro de jarra elimina completamente. La…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-400-gpd-purikor-compacto-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d6ae10e6-1a6c-42eb-abc0-e2e8ff260bdc.png
-- **Sistema de Ósmosis Inversa 6 Etapas + UV** · `PKRO200-6UVPM` · $4,585 (antes $5,210) · PURIKOR · PKRO200-6UVPM · ⚡PROMO
+- **Sistema de Ósmosis Inversa 6 Etapas + UV** · `PKRO200-6UVPM` · $5,210 (antes $5,210) · PURIKOR · PKRO200-6UVPM
   ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4-6 personas gasta entre $250 y $300 mensuales en agua embotellada — dinero que se va sin dejar nada. El Sistema de Ósmosis Inversa PURIKOR PKRO200-6UVPM te…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-6-etapas-uv-200-gpd-purikor
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_35fcd33b-639d-49c1-a3e3-0ab8412f007b.png
-- **Sistema de Ósmosis Inversa PURIKOR 600 GPD 6 Etapas con UV** · `PKRO600-6UVPM` · $7,122 (antes $8,093) · PURIKOR · PKRO600-6UVPM · ⚡PROMO
+- **Sistema de Ósmosis Inversa PURIKOR 600 GPD 6 Etapas con UV** · `PKRO600-6UVPM` · $8,093 (antes $8,093) · PURIKOR · PKRO600-6UVPM
   El Sistema de Ósmosis Inversa PURIKOR PKRO600-6UVPM es la solución definitiva para quienes necesitan agua purificada de alto rendimiento en aplicaciones comerciales o industriales de punto de uso (POU). Con un flujo…
   PDP: https://ferre24.com.mx/products/osmosis-inversa-purikor-600gpd-6-etapas-uv-pkro600-6uvpm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_94ac0d04-72ea-4d68-b6bb-03b22feb3ea0.png
-- **Sistema de Ósmosis Inversa PURIKOR PK-EASY-200** · `PK-EASY-200US` · $4,812 (antes $4,812) · PURIKOR · PK-EASY-200 · ⚡PROMO
+- **Sistema de Ósmosis Inversa PURIKOR PK-EASY-200** · `PK-EASY-200US` · $4,812 · PURIKOR · PK-EASY-200
   ¿Cansado del agua turbia, con sabor extraño o preocupaciones sobre contaminantes? El sistema PURIKOR elimina sedimento, cloro, minerales disueltos, bacterias y virus — llevando agua potable pura directamente a tu grifo.…
   PDP: https://ferre24.com.mx/products/purikor-pk-easy-200
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_772afc7e-f9dd-4383-b2d4-edb0909acc8c.jpg
-- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $7,056 (antes $7,056) · PURIKOR · PK-EASY-600US · ⚡PROMO
+- **Sistema de Ósmosis Inversa Sin Tanque 600 GPD** · `PK-EASY-600US` · $7,056 · PURIKOR · PK-EASY-600US
   ¿Cuánto gastas al mes en garrafones? ¿Cuánto espacio te quita el tinaco o el filtro de debajo de la tarja? El PURIKOR PK-EASY-600US resuelve los dos problemas al mismo tiempo: agua purificada directamente del grifo, en…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-sin-tanque-600-gpd-purikor-pk-easy-600us
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ac57830b-0e5d-4063-a881-ca162db66e71.png
-- **Sistema de ósmosis inversa Purikor 5 etapas 100gpd** · `PKRO100-5P` · $3,025 (antes $3,437) · Purikor · PKRO100-5P · ⚡PROMO
+- **Sistema de ósmosis inversa Purikor 5 etapas 100gpd** · `PKRO100-5P` · $3,437 (antes $3,437) · Purikor · PKRO100-5P
   ¿Gastas cientos de pesos al mes en garrafones y no confías en el agua de tu llave? El agua de red puede contener cloro, metales pesados, bacterias y sólidos disueltos que ni hervir elimina. Hay una solución permanente…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-purikor-5-etapas-100gpd
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a6e66f92-056c-4275-9ae6-d965a57936dd.png
-- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $5,842 (antes $8,346) · PURIKOR · PK-EASY-600N-US · ⚡PROMO
+- **Sistema Ósmosis Inversa PURIKOR 537 GPD** · `PK-EASY-600N-US` · $5,842 (antes $8,346) · PURIKOR · PK-EASY-600N-US
   ¿Tu familia espera minutos para llenar una jarra o la presión baja en cuanto abres la llave? Un purificador de flujo insuficiente no es ahorro — es frustración diaria. · El PURIKOR PK-EASY-600N-US resuelve eso de raíz:…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-purikor-537-gpd-4-etapas-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_08c046db-d6f0-4810-b7a3-e7b607f54c52.png
