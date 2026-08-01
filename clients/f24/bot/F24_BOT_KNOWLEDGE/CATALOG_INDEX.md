@@ -7,7 +7,17 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-Ahorita NO hay promos vigentes. Todos los SKUs: solo hasta 6 MSI (link normal).
+1 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+
+Reglas de meses sin intereses (MSI) por promo:
+- SKUs con **9 o 12 MSI** (1 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
+- SKUs solo con 3/6 MSI: `order.payment_method='online'` (link normal Shopify, hasta 6 MSI).
+- NUNCA prometas 9/12 a un SKU que no diga 'Sí' en la columna Cuenta B.
+- Un SKU con 🔴 AGOTADO en esta tabla tiene promo registrada pero SIN existencia: NO se cotiza como disponible ni se cierra (aplica la regla de disponibilidad).
+
+| SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
+|---|---|---|---|---|---|---|
+| `13AN77BS309` | $71,990 | $71,990 | 0% | 3, 6, 9, 12 | **Sí** | 2026-08-31 |
 
 ## Generadores (43)
 
@@ -599,7 +609,7 @@ Ahorita NO hay promos vigentes. Todos los SKUs: solo hasta 6 MSI (link normal).
   Si tu terreno se te va de las manos con una podadora de empuje, este tractor está hecho para eso: para no pasarte todo el sábado caminando atrás de una máquina cuando podrías estar sentado, controlando todo con un…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-super-bronco-50-motor-kohler-725cc
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_db8eab4a-4d28-4e05-9b65-90aef7d8b649.png
-- **Tractor podador Troy-Bilt 42"** · `13AN77BS309` · $71,990 (antes $67,127) · Troy-Bilt · 13AN77BS309
+- **Tractor podador Troy-Bilt 42"** · `13AN77BS309` · $71,990 (antes $71,990) · Troy-Bilt · 13AN77BS309 · ⚡PROMO 12MSI
   ¿Cuántas horas pierdes cada mes cortando pasto a mano en un terreno grande? · Si tu propiedad supera los 2,000 m² — o si mantienes jardines de clientes — cada sesión de corte es tiempo, esfuerzo y desgaste físico que se…
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3584d25a-4649-4a63-b021-0b64a2cca8c2.png
