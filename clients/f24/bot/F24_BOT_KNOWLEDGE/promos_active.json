@@ -1,6 +1,6 @@
 {
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/🔥 PROMO ACTIVA",
-  "generated": "2026-08-01",
+  "generated": "2026-08-03",
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
     {
@@ -23,6 +23,77 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "71990.00"
+    },
+    {
+      "sku": "PK-EASY-100CT",
+      "sku_upper": "PK-EASY-100CT",
+      "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
+      "regular_price": 7598.0,
+      "promo_price": 6686.24,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-08-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "6686.24"
+    },
+    {
+      "sku": "PK-EASY-200US",
+      "sku_upper": "PK-EASY-200US",
+      "producto": "Sistema de ósmosis inversa de alto flujo PURIKOR",
+      "regular_price": 4812.34,
+      "promo_price": 4234.86,
+      "pct_desc": "12%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-08-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "4234.86"
+    },
+    {
+      "sku": "PK-EASY-600US",
+      "sku_upper": "PK-EASY-600US",
+      "producto": "Sistema de ósmosis inversa de alto flujo 600gpd",
+      "regular_price": 5899.0,
+      "promo_price": 5604.05,
+      "pct_desc": "5%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-08-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "5604.05"
+    },
+    {
+      "sku": "PKRO100-5P",
+      "sku_upper": "PKRO100-5P",
+      "producto": "Sistema de ósmosis inversa 5 etapas 100gpd",
+      "regular_price": 3437.0,
+      "promo_price": 2990.19,
+      "pct_desc": "13%",
+      "msi_ladder": [
+        3
+      ],
+      "msi_max": 3,
+      "eligible_912": false,
+      "vigencia": "2026-09-02",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "2990.19"
     }
   ],
   "excluidos_sin_pdp": []
