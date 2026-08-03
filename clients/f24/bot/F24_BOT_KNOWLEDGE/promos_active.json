@@ -125,7 +125,26 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4584.80"
+      "shopify_price": "4689.00"
+    },
+    {
+      "sku": "PKRO50-6UVPM",
+      "sku_upper": "PKRO50-6UVPM",
+      "producto": "Sistema de ósmosis inversa 50gpd",
+      "regular_price": 4089.0,
+      "promo_price": 3761.88,
+      "pct_desc": "8%",
+      "msi_ladder": [
+        3,
+        6
+      ],
+      "msi_max": 6,
+      "eligible_912": false,
+      "vigencia": "2026-08-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "4089.00"
     }
   ],
   "excluidos_sin_pdp": []
