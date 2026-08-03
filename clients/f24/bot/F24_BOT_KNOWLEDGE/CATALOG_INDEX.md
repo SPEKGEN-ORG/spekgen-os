@@ -22,7 +22,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-200US` | $4,235 | $4,812 | 12% | 3 | no | 2026-08-31 |
 | `PK-EASY-600US` | $5,604 | $5,899 | 5% | — | no | 2026-08-31 |
 | `PKRO100-5P` | $2,990 | $3,437 | 13% | 3 | no | 2026-09-02 |
-| `PKRO100-6UVPM` | $3,976 | $4,849 | 18% | — | no | 2026-09-02 |
+| `PKRO100-6UVPM` | $3,928 | $4,849 | 19% | — | no | 2026-08-31 |
 | `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | — | no | 2026-08-31 |
 | `PKRO50-6UVPM` | $3,762 | $4,089 | 8% | 3, 6 | no | 2026-08-31 |
 
@@ -371,7 +371,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La temporada no espera: cuando el brote de plaga aparece, necesitas una fumigadora que arranque, mantenga presión y no te deje a medias en el campo. · Lo que ningún catálogo te dice · La transmisión directa simplifica…
   PDP: https://ferre24.com.mx/products/parihuela-parazzini-6-5hp-transmision-directa-kit-manguera-y-carrete
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_marvelsa_8dcca9af-ddee-48f9-8e94-b81b3285f2c5.png
-- **Sistema de Ósmosis Inversa 6 Etapas con UV y Bomba PURIKOR 100 GPD** · `PKRO100-6UVPM` · $3,976 (antes $4,849) · PURIKOR · PKRO100-6UVPM · ⚡PROMO
+- **Sistema de Ósmosis Inversa 6 Etapas con UV y Bomba PURIKOR 100 GPD** · `PKRO100-6UVPM` · $3,928 (antes $4,849) · PURIKOR · PKRO100-6UVPM · ⚡PROMO
   ¿Cuánto gastas al mes en agua embotellada? Una familia típica en México gasta entre $400 y $600 pesos cada mes — solo en botellas de plástico que terminan en el basurero. Con el PURIKOR PKRO100-6UVPM, ese gasto…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-6-etapas-uv-bomba-purikor-100-gpd
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2f58cb0b-c89d-4f5d-a2b3-1718d4eb66a5.png
