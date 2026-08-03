@@ -3,5 +3,30 @@
     "base": 71990.0,
     "promo": 71990.0,
     "orig_compare_at": 67127.0
+  },
+  "PK-EASY-100CT": {
+    "base": 7598.0,
+    "promo": 6686.24,
+    "orig_compare_at": 7598.0
+  },
+  "PK-EASY-200US": {
+    "base": 4812.34,
+    "promo": 4234.86,
+    "orig_compare_at": 4812.34
+  },
+  "PK-EASY-600US": {
+    "base": 5899.0,
+    "promo": 5604.05,
+    "orig_compare_at": 5899.0
+  },
+  "PKRO100-5P": {
+    "base": 3437.0,
+    "promo": 2990.19,
+    "orig_compare_at": 3437.0
+  },
+  "PKRO100-6UVPM": {
+    "base": 4849.0,
+    "promo": 3976.18,
+    "orig_compare_at": 4849.0
   }
 }
