@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-7 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+8 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (1 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -24,6 +24,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PKRO100-5P` | $2,990 | $3,437 | 13% | 3 | no | 2026-09-02 |
 | `PKRO100-6UVPM` | $3,976 | $4,849 | 18% | — | no | 2026-09-02 |
 | `PKRO200-6UVPM` | $4,689 | $5,210 | 10% | — | no | 2026-08-31 |
+| `PKRO50-6UVPM` | $3,762 | $4,089 | 8% | 3, 6 | no | 2026-08-31 |
 
 ## Generadores (43)
 
@@ -1016,7 +1017,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuánto llevas gastando en garrafones este mes? Una familia de 4 personas gasta entre $1,560 y $2,080 MXN al mes en agua embotellada — más de $18,000 al año — y aun así no tiene certeza de lo que está tomando. · El…
   PDP: https://ferre24.com.mx/products/purificador-osmosis-inversa-100gpd-dispensador-pk-easy-100ct
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a1b8095f-75d4-4e63-8671-e1b090fbd688.png
-- **Purikor PKRO50-6UVPM** · `PKRO50-6UVPM` · $4,089 (antes $4,089) · Purikor · PKRO50-6UVPM
+- **Purikor PKRO50-6UVPM** · `PKRO50-6UVPM` · $3,762 (antes $4,089) · Purikor · PKRO50-6UVPM · ⚡PROMO
   ¿Cuánto gastas al mes en garrafones? Una familia de 4-5 personas en México gasta entre $150 y $250 pesos cada mes en agua embotellada, sin contar el tiempo de espera al repartidor, el plástico desechado y el espacio que…
   PDP: https://ferre24.com.mx/products/purikor-pkro50-6uvpm-osmosis-inversa-50-gpd-6-etapas-uv
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fafdb8f0-d037-46e4-9655-9343d62dbcd4.png
