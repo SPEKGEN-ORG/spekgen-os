@@ -23,7 +23,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PK-EASY-600US` | $5,604 | $5,899 | 5% | — | no | 2026-08-31 |
 | `PKRO100-5P` | $2,990 | $3,437 | 13% | 3 | no | 2026-09-02 |
 | `PKRO100-6UVPM` | $3,976 | $4,849 | 18% | — | no | 2026-09-02 |
-| `PKRO200-6UVPM` | $4,689 | $5,210 | 10% | — | no | 2026-08-31 |
+| `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | — | no | 2026-08-31 |
 | `PKRO50-6UVPM` | $3,762 | $4,089 | 8% | 3, 6 | no | 2026-08-31 |
 
 ## Generadores (43)
@@ -1033,7 +1033,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Tu agua sabe rara, huele a cloro o simplemente no confías en lo que tomas del grifo? El agua de la red municipal trae sedimentos, cloro residual y microcontaminantes que ningún filtro de jarra elimina completamente. La…
   PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-400-gpd-purikor-compacto-sin-tanque
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d6ae10e6-1a6c-42eb-abc0-e2e8ff260bdc.png
-- **Sistema de Ósmosis Inversa 6 Etapas + UV** · `PKRO200-6UVPM` · $4,689 (antes $5,210) · PURIKOR · PKRO200-6UVPM · ⚡PROMO
+- **Sistema de Ósmosis Inversa 6 Etapas + UV** · `PKRO200-6UVPM` · $4,585 (antes $5,210) · PURIKOR · PKRO200-6UVPM · ⚡PROMO
   ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4-6 personas gasta entre $250 y $300 mensuales en agua embotellada — dinero que se va sin dejar nada. El Sistema de Ósmosis Inversa PURIKOR PKRO200-6UVPM te…
   PDP: https://ferre24.com.mx/products/sistema-de-osmosis-inversa-6-etapas-uv-200-gpd-purikor
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_35fcd33b-639d-49c1-a3e3-0ab8412f007b.png

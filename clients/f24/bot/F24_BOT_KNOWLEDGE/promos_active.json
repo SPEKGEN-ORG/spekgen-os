@@ -116,8 +116,8 @@
       "sku_upper": "PKRO200-6UVPM",
       "producto": "Sistema de ósmosis inversa 200gpd",
       "regular_price": 5210.0,
-      "promo_price": 4689.0,
-      "pct_desc": "10%",
+      "promo_price": 4584.8,
+      "pct_desc": "12%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -125,7 +125,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "4689.00"
+      "shopify_price": "4584.80"
     },
     {
       "sku": "PKRO50-6UVPM",
