@@ -821,6 +821,14 @@
       "qty": 100,
       "available": true
     },
+    "BK5010": {
+      "qty": 0,
+      "available": false
+    },
+    "BK5015": {
+      "qty": 0,
+      "available": false
+    },
     "BLACKMAMBA52": {
       "qty": 504,
       "available": true
@@ -829,8 +837,80 @@
       "qty": 4000,
       "available": true
     },
+    "BP1040D": {
+      "qty": 0,
+      "available": false
+    },
+    "BP1320A": {
+      "qty": 0,
+      "available": false
+    },
+    "BP1340": {
+      "qty": 0,
+      "available": false
+    },
+    "BP1340E": {
+      "qty": 0,
+      "available": false
+    },
+    "BP1340L": {
+      "qty": 0,
+      "available": false
+    },
+    "BP1560D": {
+      "qty": 0,
+      "available": false
+    },
+    "BP1660": {
+      "qty": 0,
+      "available": false
+    },
+    "BP2.510Q": {
+      "qty": 0,
+      "available": false
+    },
+    "BP720C": {
+      "qty": 79,
+      "available": true
+    },
+    "BP720Q": {
+      "qty": 0,
+      "available": false
+    },
+    "BP721.5F": {
+      "qty": 0,
+      "available": false
+    },
+    "BP801.5": {
+      "qty": 0,
+      "available": false
+    },
+    "BP930L": {
+      "qty": 0,
+      "available": false
+    },
+    "BPC1030D": {
+      "qty": 0,
+      "available": false
+    },
+    "BPC1340D": {
+      "qty": 0,
+      "available": false
+    },
+    "BPC720D": {
+      "qty": 0,
+      "available": false
+    },
+    "BT1340": {
+      "qty": 0,
+      "available": false
+    },
     "DELTA52": {
       "qty": 2700,
+      "available": true
+    },
+    "DKM26KN": {
+      "qty": 33,
       "available": true
     },
     "DT52K": {
@@ -861,6 +941,22 @@
       "qty": 26,
       "available": true
     },
+    "MK354T": {
+      "qty": 47,
+      "available": true
+    },
+    "MK504T": {
+      "qty": 29,
+      "available": true
+    },
+    "MP13FF": {
+      "qty": 0,
+      "available": false
+    },
+    "MP7C": {
+      "qty": 3,
+      "available": true
+    },
     "PK-EASY-400US": {
       "qty": 1095,
       "available": true
@@ -873,8 +969,40 @@
       "qty": 52,
       "available": true
     },
+    "PK-ROI-4M-A-DM": {
+      "qty": 2,
+      "available": true
+    },
+    "PKRO400-6UVP": {
+      "qty": 0,
+      "available": false
+    },
     "PKRO600-6UVPM": {
       "qty": 30,
+      "available": true
+    },
+    "PP6.5BK": {
+      "qty": 5,
+      "available": true
+    },
+    "PP6.5BKPRO": {
+      "qty": 8,
+      "available": true
+    },
+    "PP6.5D13MM": {
+      "qty": 1,
+      "available": true
+    },
+    "PP6.5D8.5MM": {
+      "qty": 1,
+      "available": true
+    },
+    "PP7B10MMK": {
+      "qty": 10,
+      "available": true
+    },
+    "PPAP10MM": {
+      "qty": 1,
       "available": true
     },
     "PRES-AP10XB127-P16": {
@@ -887,6 +1015,14 @@
     },
     "PRES-PET13-P10": {
       "qty": 11,
+      "available": true
+    },
+    "PT6.5A": {
+      "qty": 0,
+      "available": false
+    },
+    "PT6.5AK": {
+      "qty": 6,
       "available": true
     },
     "TKGHE-38-IP": {
