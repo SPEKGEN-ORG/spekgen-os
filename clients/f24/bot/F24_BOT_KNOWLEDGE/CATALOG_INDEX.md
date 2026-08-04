@@ -1,6 +1,6 @@
 # Ferre24 — Catálogo (Knowledge Base del bot)
 
-*263 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
+*296 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
 
 > El bot cotiza ÚNICAMENTE productos de esta lista. El **precio** es el de venta;
 > el precio **tachado** (si existe) es referencia. Para cerrar, el bot pasa el/los
@@ -201,7 +201,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/soldadora-inverter-compacta-power-hunt-centella130-conecta-en-127v-toma-de-pared-casera-o-220v-taller-industrial-hasta-120a-de-potencia-ciclo-de-trabajo-85-tecnologia-inverter-peso-ligero-y-menor-consumo-respaldada-por-marvelsa-y-500-centros
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_64ef2bd4-0aa5-4573-bf51-ff77b3a894c8.png
 
-## Motobombas (52)
+## Motobombas (71)
 
 - **Aspersora Motorizada Parazzini 6.5 HP** · `PPSB6.5B` · $4,914 (antes $8,934) · Parazzini · PPSB6.5B
   Si fumiga herbicidas o fungicidas de contacto, su bomba de pistón está en cuenta regresiva. · Los agroquímicos agresivos — glifosato, paraquat, cobre, azufre, fungicidas de síntesis moderna — corroen las válvulas y…
@@ -255,10 +255,34 @@ Reglas de meses sin intereses (MSI) por promo:
   La [VERIFICAR marca] BK2.515 es una motobomba agrícola autocebante diseñada para trabajo de campo real: riego de parcelas, llenado de tinacos y traslados entre pozos sin depender de la corriente eléctrica. · Cuerpo de…
   PDP: https://ferre24.com.mx/products/motobomba-agricola-3hp-aluminio-autocebante-200-l-min-altura-15m-boca-1-5
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3dae3490-5c0a-4202-abc0-64bd7b65c0d5.png
+- **Motobomba Alta Presión 13 HP** · `BP1320A` · $15,638 (antes $15,638) · F24 · BP1320A · 🔴 AGOTADO
+  85 metros de altura. Es el equipo de mayor alcance vertical del catálogo, y ese es exactamente su trabajo: subir agua a donde una bomba normal ya no llega — una parte alta del rancho, un tanque elevado, una línea larga…
+  PDP: https://ferre24.com.mx/products/motobomba-alta-presion-13-hp-2-85-m-altura
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1f51f41c-4698-4310-aae6-913fb9945c65.png
+- **Motobomba Alta Presión 7 HP** · `BP721.5F` · $10,193 (antes $10,193) · F24 · BP721.5F · 🔴 AGOTADO
+  Esta motobomba resuelve dos cosas que normalmente pides por separado: altura y varias líneas de trabajo . · Llega a 65 metros con un motor de 7 HP — es de alta presión, diseñada para empujar el agua hacia arriba o hacia…
+  PDP: https://ferre24.com.mx/products/motobomba-alta-presion-7-hp-65-m-tres-salidas
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a1b03b75-a7e3-4257-84b0-055dd6bc74e5.png
+- **Motobomba Autocebante 13 HP 4"** · `BP1340E` · $14,434 (antes $14,434) · F24 · BP1340E · 🔴 AGOTADO
+  Es la misma motobomba autocebante de 13 HP y 4 pulgadas — mismo motor, mismo caudal, mismos 28 metros de altura — con una diferencia que se agradece todos los días: arranca con llave , no jalando cuerda. · En un equipo…
+  PDP: https://ferre24.com.mx/products/motobomba-autocebante-13-hp-4-arranque-electrico
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d0597230-1bc9-47d8-a944-691cf022517f.png
+- **Motobomba Autocebante 13 HP** · `BP1340` · $12,717 (antes $12,717) · F24 · BP1340 · 🔴 AGOTADO
+  Cuatro pulgadas de succión y descarga con 13 HP detrás: esta motobomba está hecha para volumen . Riego por inundación, llenado de bordos y pilas, trasvase entre depósitos, achique de áreas grandes — trabajos donde lo…
+  PDP: https://ferre24.com.mx/products/motobomba-autocebante-13-hp-4-alto-caudal
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9248a67e-2204-4eb7-ae63-ce3738d0087e.png
+- **Motobomba Autocebante 16 HP** · `BP1660` · $29,565 (antes $29,565) · F24 · BP1660 · 🔴 AGOTADO
+  Seis pulgadas. Es el diámetro más grande del catálogo y define para qué es esta bomba: mover la mayor cantidad de agua posible por unidad de tiempo. Llenado de bordos, alimentación de canal, riego por inundación de…
+  PDP: https://ferre24.com.mx/products/motobomba-autocebante-16-hp-6-maximo-caudal
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b778513a-a0a2-41ed-a3c2-f698983fbf14.png
 - **Motobomba Autocebante 6.5 HP 4 Tiempos** · `BT6.530` · $2,337 (antes $2,337) · Parazzini · BT6.530
   La BT6.530 es una motobomba autocebante de 6.5 HP [VERIFICAR] con motor a gasolina 4 tiempos OHV, diseñada para trabajos de riego agrícola, achique y trasvase en campo, rancho e instalaciones industriales ligeras. ·…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-6-5-hp-4-tiempos-descarga-3-pulgadas-verificar-riego-achiq
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_884366ef-2413-4a66-9c7e-611915fd2ee7.png
+- **Motobomba Autocebante 80 cc** · `BP801.5` · $5,697 (antes $5,697) · F24 · BP801.5 · 🔴 AGOTADO
+  No toda obra necesita una bomba de 50 kilos. Para trasvasar de una pila, llenar un tinaco, achicar una zanja o regar un huerto chico, esta motobomba de 80 cc hace el trabajo y pesa 14 kg — la levanta y la mueve una sola…
+  PDP: https://ferre24.com.mx/products/motobomba-autocebante-80-cc-1-5-14-kg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c5f136eb-2003-48e8-b330-a92664aeab22.png
 - **Motobomba Autocebante a Gasolina 7 HP 2"** · `BP720` · $4,483 (antes $4,483) · Parazzini · BP720
   Si riegas parcelas o mueves agua entre puntos de bombeo, sabes lo que cuesta una bomba que no succiona. La mayoría de las fallas no son del equipo: vienen de cebar la bomba sin agua en la carcasa o de una manguera de…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-a-gasolina-7-hp-2-parazzini-bp720
@@ -271,6 +295,10 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Necesitas mover agua donde no llega la luz? Pozos, aljibes, canales y parcelas casi nunca tienen una toma eléctrica cerca. La motobomba autocebante Power Hunt HUNT521 resuelve eso: funciona con gasolina, pesa solo 10…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-a-gasolina-power-hunt-hunt521-2-5-hp-1
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d1fbde35-12a4-4c5e-b632-27b6cd1dee82.png
+- **Motobomba Centrífuga 7 HP** · `BP720C` · $7,939 (antes $7,939) · F24 · BP720C
+  Cuando el agua tiene que subir — a un tinaco alto, a una parte alta del rancho, a un tanque elevado — lo que importa no es cuántos litros mueve la bomba, sino hasta dónde los empuja. Esta motobomba centrífuga de 7 HP…
+  PDP: https://ferre24.com.mx/products/motobomba-centrifuga-7-hp-2-50-m-altura
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_cc5dfd17-d4f4-4fb4-ab4b-debe89fcf39b.png
 - **Motobomba Centrífuga Parazzini BP1330C** · `BP1330C` · $11,076 (antes $19,096) · F24
   Motobomba 13HP CENTRÍFUGA — Bombeo Potente para Obras y Riego de Grandes Áreas
   PDP: https://ferre24.com.mx/products/motobomba-parazzini-bp1330c-13hp-centrifuga-3-pulg
@@ -279,6 +307,26 @@ Reglas de meses sin intereses (MSI) por promo:
   Motobomba Parazzini BP730D de 7 HP con motor Diesel de 4 tiempos OHV, tipo autocebante de 3" — solución robusta y confiable para riego, drenaje y transferencia de agua en campos, granjas e industria.
   PDP: https://ferre24.com.mx/products/motobomba-diesel-parazzini-bp730d-7hp-autocebante-3-pulg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f2942839-b38e-4f36-9e6e-7f6a66412360.png
+- **Motobomba Diésel Autocebante 10 HP** · `BP1040D` · $14,794 (antes $14,794) · F24 · BP1040D · 🔴 AGOTADO
+  Es la diésel que no tiene que quedar ahogada . A diferencia de las centrífugas, esta es autocebante : se instala en seco, arriba del agua, y jala sola. En un jagüey, una presa o una pila donde no hay dónde acomodar el…
+  PDP: https://ferre24.com.mx/products/motobomba-diesel-autocebante-10-hp-4-1-333-l-min
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0595172d-3ac1-48e5-a774-46a1d4cf8779.png
+- **Motobomba Diésel Autocebante 15 HP** · `BP1560D` · $22,581 (antes $22,581) · F24 · BP1560D · 🔴 AGOTADO
+  Seis pulgadas y 15 HP diésel. Es el equipo de mayor caudal del catálogo: 2,250 litros por minuto — 135 metros cúbicos por hora. Para llenado de bordos grandes, alimentación de canal, riego por inundación de superficie…
+  PDP: https://ferre24.com.mx/products/motobomba-diesel-autocebante-15-hp-6-maximo-caudal
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_318768ec-d2d2-4958-8183-b1799a4d171f.png
+- **Motobomba Diésel Centrífuga 10 HP** · `BPC1030D` · $15,573 (antes $15,573) · F24 · BPC1030D · 🔴 AGOTADO
+  Setenta y cinco metros. Es la mayor altura de todo el catálogo diésel, con un motor de 10 HP y salida de 3 pulgadas — más diámetro que la de 7 HP sin perder alcance vertical. · El argumento del diésel no es el consumo —…
+  PDP: https://ferre24.com.mx/products/motobomba-diesel-centrifuga-10-hp-3-75-m-altura
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7b81c008-0159-42e7-8215-78c9f8130c8f.png
+- **Motobomba Diésel Centrífuga 13 HP** · `BPC1340D` · $19,077 (antes $19,077) · F24 · BPC1340D · 🔴 AGOTADO
+  2,010 litros por minuto y 60 metros de altura. Esta es la que no obliga a escoger: con 13 HP y salida de 4 pulgadas , entrega volumen de bomba grande sin renunciar al alcance vertical. · El argumento del diésel no es el…
+  PDP: https://ferre24.com.mx/products/motobomba-diesel-centrifuga-13-hp-4-2-010-l-min
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8302af89-1a52-40ec-b42a-36a429ead9df.png
+- **Motobomba Diésel Centrífuga 7 HP** · `BPC720D` · $13,460 (antes $13,460) · F24 · BPC720D · 🔴 AGOTADO
+  Setenta metros de altura con 7 HP . Es la diésel de mayor alcance vertical por caballo del catálogo, y es centrífuga : toda la energía se va a empujar el agua hacia arriba. · El argumento del diésel no es el consumo — y…
+  PDP: https://ferre24.com.mx/products/motobomba-diesel-centrifuga-7-hp-2-70-m-altura
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_edf21160-0ed8-4a08-8f00-14ad23e7014b.png
 - **Motobomba ENERWELL 7HP Gasolina Autocebante 2x2 Pulgadas** · `EWBG2-500F` · $2,774 (antes $3,963) · ENERWELL
   La motobomba ENERWELL EWBG2-500F es la solución confiable para agricultores y contratistas que necesitan mover grandes volúmenes de agua sin depender de la red eléctrica. Su motor de 7 caballos de fuerza a gasolina de 4…
   PDP: https://ferre24.com.mx/products/motobomba-enerwell-7hp-gasolina-autocebante-2x2-pulgadas
@@ -315,6 +363,14 @@ Reglas de meses sin intereses (MSI) por promo:
   Regar 15 hectáreas en una jornada, vaciar un depósito anegado en horas o trasladar miles de litros entre tanques sin depender de electricidad — eso es lo que hace la Kawashima BK1440 en el campo real. · Motor que no te…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-bk1440-4-14-hp-85-m3-h
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9133fb5f-cde1-4cbd-837e-68ddaf634b6c.png
+- **Motobomba Kawashima BK5010 50 cc** · `BK5010` · $4,747 (antes $4,747) · F24 · BK5010 · 🔴 AGOTADO
+  Once kilos. Es la motobomba más ligera del catálogo y eso define para quién es: para quien la carga solo, la sube a la camioneta sin ayuda y la cambia de lugar tres veces en el día. · Con 50 cc de 4 tiempos girando a…
+  PDP: https://ferre24.com.mx/products/motobomba-kawashima-bk5010-50-cc-1-11-kg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d0219df4-fcbb-4bc6-b460-6449aa420890.png
+- **Motobomba Kawashima BK5015 50 cc** · `BK5015` · $4,966 (antes $4,966) · F24 · BK5015 · 🔴 AGOTADO
+  Mismo motor de 50 cc que la BK5010, pero con dos ventajas que se notan: salidas de 1 y 1.5 pulgadas y 30 metros de altura en lugar de 25. · Las dos medidas de salida sirven para lo mismo que sirve tener dos llaves:…
+  PDP: https://ferre24.com.mx/products/motobomba-kawashima-bk5015-50-cc-1-1-5-30-m
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_be7960b3-9a65-407e-807b-7e93024cf60c.png
 - **Motobomba Kawashima BP4310** · `BP4310` · $3,258 (antes $3,258) · Kawashima · BP4316
   ¿Tu parcela no tiene toma de luz y necesitas mover agua rápido? La Kawashima BP4316 es la respuesta: un motor 2 tiempos de 43cc que arranca con un jalón y bombea hasta 150 litros por minuto sin depender de la red…
   PDP: https://ferre24.com.mx/products/motobomba-kawashima-43cc-2-tiempos-autocebante-1-pulgada-bp4310
@@ -367,6 +423,26 @@ Reglas de meses sin intereses (MSI) por promo:
   Hay pozos donde el problema no es la profundidad: es el diametro. Si el ademe es angosto, una bomba sumergible estandar simplemente no baja, por mas que la potencia alcance. Para ese caso existe esta version de la serie…
   PDP: https://ferre24.com.mx/products/motobomba-sumergible-tornado-slim-1-2-hp-ademes-reducidos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f00e4ba2-4d44-43e8-9494-2234771b1a91.png
+- **Motobomba Takashi 13 HP** · `BT1340` · $5,898 (antes $5,898) · F24 · BT1340 · 🔴 AGOTADO
+  Es la alternativa Takashi dentro de las motobombas de 13 HP y 4 pulgadas. Mismo desplazamiento, mismo diámetro de succión y descarga, mismo trabajo — mover volumen de agua limpia — y 44 kg , ocho menos que su…
+  PDP: https://ferre24.com.mx/products/motobomba-takashi-13-hp-4-44-kg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_97f2010e-5c7c-46f2-b48d-fbbb755f33d0.png
+- **Motobomba para Lodos 13 HP** · `BP1340L` · $23,067 (antes $23,067) · F24 · BP1340L · 🔴 AGOTADO
+  Es la más pesada del catálogo de motobombas, y el peso cuenta la historia: 76 kg contra los 52 de la autocebante del mismo motor de 13 HP y el mismo diámetro de 4 pulgadas. Esos 24 kilos de diferencia son cámara e…
+  PDP: https://ferre24.com.mx/products/motobomba-lodos-13-hp-4-grande-obra
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e03d17c3-c47a-47fd-9e87-8074b0dfb4f1.png
+- **Motobomba para Lodos 9 HP** · `BP930L` · $14,859 (antes $14,859) · F24 · BP930L · 🔴 AGOTADO
+  Meterle agua con lodo a una motobomba normal es la forma más rapida de romperla: el impulsor cerrado se tapa, el equipo cavita y se calienta. Una bomba para lodos está construida al revés — impulsor abierto y cámara…
+  PDP: https://ferre24.com.mx/products/motobomba-lodos-9-hp-3-autocebante
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_eded0aa9-6a1e-4a3f-91f5-9f8866a9e87d.png
+- **Motobomba para Químicos 2.5 HP** · `BP2.510Q` · $6,025 (antes $6,025) · F24 · BP2.510Q · 🔴 AGOTADO
+  Bombear agroquímico con una motobomba de agua común es un error caro, y no se nota el primer día: se nota tres semanas después, cuando el sello mecánico se hincha y empieza a gotear concentrado por la flecha. Ninguna…
+  PDP: https://ferre24.com.mx/products/motobomba-quimicos-2-5-hp-1-autocebante
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2d320416-5c51-464a-9674-30bc17f2d186.png
+- **Motobomba para Químicos 7 HP** · `BP720Q` · $6,828 (antes $6,828) · F24 · BP720Q · 🔴 AGOTADO
+  Es la hermana grande de la línea de químicos: 7 HP y 2 pulgadas de succión y descarga, contra la de 2.5 HP y 1 pulgada. Cuando hay que mover producto en volumen — llenar tanques de aspersión, alimentar varias líneas,…
+  PDP: https://ferre24.com.mx/products/motobomba-quimicos-7-hp-2-autocebante
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_9ff90c23-62e8-4148-b2cb-944875d641d6.png
 - **Motor Parazzini MHP8 8HP 4 Tiempos** · `MHP8` · $3,637 (antes $6,613) · Parazzini · MHP8
   Tu motor se trabó, el carburador está sucio o las refacciones ya no llegan a tiempo — y el equipo parado te cuesta más que el motor mismo. El MHP8 de Parazzini es la solución directa: motor desnudo de 8 HP y 212 cc OHV…
   PDP: https://ferre24.com.mx/products/motor-parazzini-mhp8-8hp-4-tiempos-alto-rendimiento
@@ -653,7 +729,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3584d25a-4649-4a63-b021-0b64a2cca8c2.png
 
-## Desbrozadoras y Jardín (28)
+## Desbrozadoras y Jardín (29)
 
 - **Aspersor Kawashima AK26** · `AK26` · $2,499 (antes $5,222) · Kawashima · AK26
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
@@ -711,6 +787,10 @@ Reglas de meses sin intereses (MSI) por promo:
   Si ya conoces la fatiga de cargar una parihuela varias horas y aun así no terminas la jornada, el problema no es el operario: es el equipo. · Las aspersoras con transmisión por correa o reductor pierden entre un 15 y…
   PDP: https://ferre24.com.mx/products/aspersora-motorizada-6-5-hp-transmision-directa-parazzini-ppsb6-5a
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_e7edf52a-3fb4-4851-9a72-e93efa9547b6.png
+- **Desbrozadora Kawashima Montana 26 cc** · `DKM26KN` · $1,406 (antes $1,406) · F24 · DKM26KN
+  Desbrozadora Kawashima Montana de 26 cc , dos tiempos, con eje curvo y maneral tipo D. Pesa 7 kg , que es la mitad que una de 52 cc, y ahí está su razón de ser: es para trabajo de jardín y mantenimiento ligero, donde…
+  PDP: https://ferre24.com.mx/products/desbrozadora-kawashima-montana-26-cc-eje-curvo-7-kg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b2d63336-9959-41c5-9718-f9052439c3d1.png
 - **Desbrozadora Kawashima PRO 45cc** · `KPD45TOP-RA` · $2,191 (antes $2,578) · Kawashima Pro · KPD45TOP · 🔴 AGOTADO
   ¿Cansado de que tu desbrozadora barata falle a mitad de la jornada o no tenga la fuerza para terrenos difíciles? · El Desbrozador Kawashima PRO KPD45TOP es la herramienta que usan los profesionales del campo para…
   PDP: https://ferre24.com.mx/products/desbrozadora-kawashima-pro-45cc-outlet-nuevo
@@ -799,12 +879,32 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/vibrador-de-concreto-parazzini-7-hp-a-gasolina-vcp5-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/specs_ff5f7947-3517-4ba5-8875-a80a3eca3365.png
 
-## Mangueras y Accesorios (3)
+## Mangueras y Accesorios (8)
 
 - **PRES-PET13-P10 Presurizador individual con kit de presión** · `PRES-PET13-P10` · $3,449 (antes $4,928) · AQUA PAK · PRES-PET13-P10
   Equipo totalmente ensamblado
   PDP: https://ferre24.com.mx/products/pres-pet13-p10-presurizador-individual-kit-presion
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_433f8e34-2b15-4493-9f5d-46b49b1007c2.png
+- **Parihuela 6.5 HP Acero** · `PT6.5AK` · $4,774 (antes $4,774) · F24 · PT6.5AK
+  Una parihuela es el conjunto de motor y bomba montados sobre un bastidor tipo camilla . No trae tanque: succiona directo del tambo, la pila o el depósito que ya tienes, y entrega presión por manguera. Es el escalón…
+  PDP: https://ferre24.com.mx/products/parihuela-6-5-hp-acero-40-bar-kit-completo
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_c0165c33-cfae-4ef0-bb8c-2e9cadcdab99.png
+- **Parihuela 6.5 HP Bronce PRO** · `PP6.5BKPRO` · $9,360 (antes $9,360) · F24 · PP6.5BKPRO
+  Una parihuela es el conjunto de motor y bomba montados sobre un bastidor tipo camilla . No trae tanque: succiona directo del tambo, la pila o el depósito que ya tienes, y entrega presión por manguera. Es el escalón…
+  PDP: https://ferre24.com.mx/products/parihuela-6-5-hp-bronce-pro-manguera-reforzada
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_babbb208-34bd-4709-9777-4a40d0fba9a1.png
+- **Parihuela 6.5 HP Bronce y Cerámica** · `PP6.5BK` · $6,587 (antes $6,587) · F24 · PP6.5BK
+  Una parihuela es el conjunto de motor y bomba montados sobre un bastidor tipo camilla . No trae tanque: succiona directo del tambo, la pila o el depósito que ya tienes, y entrega presión por manguera. Es el escalón…
+  PDP: https://ferre24.com.mx/products/parihuela-6-5-hp-bronce-ceramica-kit-completo
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6261f4d7-6aa9-43c7-9358-9dda8ee2b722.png
+- **Parihuela 7 HP Bronce** · `PP7B10MMK` · $10,167 (antes $10,167) · F24 · PP7B10MMK
+  Una parihuela es el conjunto de motor y bomba montados sobre un bastidor tipo camilla . No trae tanque: succiona directo del tambo, la pila o el depósito que ya tienes, y entrega presión por manguera. Es el escalón…
+  PDP: https://ferre24.com.mx/products/parihuela-7-hp-bronce-45-l-min-manguera-10-mm
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_07864a19-59d7-4947-b03a-cc9f795fc19d.png
+- **Parihuela de Diafragma 6.5 HP** · `PP6.5D13MM` · $18,504 (antes $18,504) · F24 · PP6.5D13MM
+  Una parihuela es el conjunto de motor y bomba montados sobre un bastidor tipo camilla . No trae tanque: succiona directo del tambo, la pila o el depósito que ya tienes, y entrega presión por manguera. Es el escalón…
+  PDP: https://ferre24.com.mx/products/parihuela-diafragma-6-5-hp-manguera-gruesa-carrete-pistola
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_addfc76c-3189-494f-a9e4-432450ff675f.png
 - **Presurizador Individual AQUA PAK con Kit de Presión PRES-AP10XB127-P16** · `PRES-AP10XB127-P16` · $2,991 (antes $4,273) · TUBMAM · PRES-AP10XB127-P16
   ¿El agua no llega con suficiente fuerza a tu regadera, lavadora o sistema de riego? El Presurizador Individual AQUA PAK PRES-AP10XB127-P16 resuelve exactamente ese problema: llega listo para instalar, completamente…
   PDP: https://ferre24.com.mx/products/presurizador-aqua-pak-kit-presion-pres-ap10xb127-p16
@@ -1080,6 +1180,41 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿El agua te llega a chorros a veces y casi nada en otras? La presión inconsistente en casa no es un problema del vecindario — es que tu sistema de agua no tiene regulación. El tanque precargado AQUA PAK XLB20 resuelve…
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-aqua-pak-xlb20-20-galones-130-psi-garantia-4-anos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fa8cb9c3-ac87-44f1-861e-b17f2d8e2ce3.png
+
+## Producto (8)
+
+- **Motor 13 HP 4 Tiempos Doble Filtro** · `MP13FF` · $7,934 (antes $7,934) · F24 · MP13FF · 🔴 AGOTADO
+  Motor estacionario de 13 HP, 4 tiempos OHV con válvulas a la cabeza , para re-motorizar equipo o armar máquina propia: bomba, generador, revolvedora grande, compactadora. · Su rasgo distintivo es el doble filtro de aire…
+  PDP: https://ferre24.com.mx/products/motor-13-hp-4-tiempos-doble-filtro-cunero-1
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_433d2bda-92d6-4370-843c-34311695e34d.png
+- **Motor 7 HP 4 Tiempos con Reductor** · `MP7C` · $5,234 (antes $5,234) · F24 · MP7C
+  Cuando se te muere el motor de la revolvedora o del malacate, no necesitas comprar la máquina completa: necesitas el motor. Este es de 7 HP, 4 tiempos OHV con válvulas a la cabeza , y trae algo que no todos traen:…
+  PDP: https://ferre24.com.mx/products/motor-7-hp-4-tiempos-reductor-cunero-3-4
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_436ebc0c-2ef8-445a-89e2-961d29029cc6.png
+- **Motor Kawashima MK354T 35 cc** · `MK354T` · $2,050 (antes $2,050) · F24 · MK354T
+  Motor Kawashima de 35 cc, 4 tiempos OHV con válvulas a la cabeza , pensado como repuesto para equipo ligero: desbrozadora, aspersora de mochila motorizada, equipo de jardín pequeño. · Su ventaja frente a un 2 tiempos…
+  PDP: https://ferre24.com.mx/products/motor-kawashima-mk354t-35-cc-4-tiempos-3-8-kg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0675f3a7-41c1-48be-9b86-89dcf4df01ff.png
+- **Motor Kawashima MK504T 50 cc** · `MK504T` · $3,003 (antes $3,003) · F24 · MK504T
+  Motor Kawashima de 50 cc, 4 tiempos OHV con válvulas a la cabeza : el escalón arriba del 35 cc de la misma familia, para equipo ligero que pide un poco más de empuje. · Da 1.5 HP a 3,600 rpm , pesa 4.4 kg y trae tanque…
+  PDP: https://ferre24.com.mx/products/motor-kawashima-mk504t-50-cc-4-tiempos-4-4-kg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_855820ac-ab30-4478-9467-93b9c5dbd1d1.png
+- **Parihuela Alta Presión** · `PPAP10MM` · $10,373 (antes $10,373) · F24 · PPAP10MM
+  Una parihuela es el conjunto de motor y bomba montados sobre un bastidor tipo camilla . No trae tanque: succiona directo del tambo, la pila o el depósito que ya tienes, y entrega presión por manguera. Es el escalón…
+  PDP: https://ferre24.com.mx/products/parihuela-alta-presion-6-mpa-15-m-alcance-23-kg
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_55e46c1a-1d41-4a0e-99cf-73dcfd7d9567.png
+- **Parihuela de Diafragma 6.5 HP** · `PP6.5D8.5MM` · $17,257 (antes $17,257) · F24 · PP6.5D8.5MM
+  Una parihuela es el conjunto de motor y bomba montados sobre un bastidor tipo camilla . No trae tanque: succiona directo del tambo, la pila o el depósito que ya tienes, y entrega presión por manguera. Es el escalón…
+  PDP: https://ferre24.com.mx/products/parihuela-diafragma-6-5-hp-40-bar-carrete-pistola
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_2e805254-79b6-41fa-9339-2afd8944bdf7.png
+- **Sistema de Ósmosis Inversa Industrial PURIKOR** · `PK-ROI-4M-A-DM` · $78,252 (antes $78,252) · PURIKOR · PK-ROI-4M-A-DM
+  Esto no es un purificador de mostrador: es una planta de tratamiento . Produce 4.8 galones por minuto — 6,912 galones al día y está pensada para purificadora, planta de hielo, procesadora de alimentos o cualquier…
+  PDP: https://ferre24.com.mx/products/sistema-osmosis-inversa-industrial-purikor-6-912-gpd
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_f2903dda-a581-4086-91b2-d7189f3777d4.png
+- **Ósmosis Inversa PURIKOR 400 GPD** · `PKRO400-6UVP` · $6,875 (antes $6,875) · PURIKOR · PKRO400-6UVP · 🔴 AGOTADO
+  Sistema de ósmosis inversa de 400 galones por día — alrededor de 1,514 litros — con 6 etapas de filtración y lámpara UV Philips . Es equipo de punto de uso: se instala bajo tarja y lo pone un plomero en una tarde. ·…
+  PDP: https://ferre24.com.mx/products/osmosis-inversa-purikor-400-gpd-6-etapas-luz-uv
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_50f503ab-b905-4f5f-bdb4-361d1d53d563.png
 
 ## Purificación de Agua (12)
 
