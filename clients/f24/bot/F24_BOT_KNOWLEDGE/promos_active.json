@@ -1,28 +1,23 @@
 {
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/🔥 PROMO ACTIVA",
-  "generated": "2026-08-03",
+  "generated": "2026-08-04",
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
     {
       "sku": "13AN77BS309",
       "sku_upper": "13AN77BS309",
       "producto": "Tractor podador motor B&S 500 cc 42 pulg",
-      "regular_price": 71990.0,
-      "promo_price": 71990.0,
+      "regular_price": 72199.0,
+      "promo_price": 72199.0,
       "pct_desc": "0%",
-      "msi_ladder": [
-        3,
-        6,
-        9,
-        12
-      ],
-      "msi_max": 12,
-      "eligible_912": true,
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
       "vigencia": "2026-08-31",
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "71990.00"
+      "shopify_price": "72199.00"
     },
     {
       "sku": "PK-EASY-100CT",
