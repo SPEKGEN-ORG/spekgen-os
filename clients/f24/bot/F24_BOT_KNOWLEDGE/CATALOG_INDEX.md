@@ -1,6 +1,6 @@
 # Ferre24 — Catálogo (Knowledge Base del bot)
 
-*257 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
+*263 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
 
 > El bot cotiza ÚNICAMENTE productos de esta lista. El **precio** es el de venta;
 > el precio **tachado** (si existe) es referencia. Para cerrar, el bot pasa el/los
@@ -184,7 +184,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Si tu motor falló en plena jornada y el repuesto OEM te cuesta el doble de lo que vale el equipo, el Parazzini MP7FF es la respuesta. Potencia de 7 HP real, motor 4 tiempos OHV de gasolina, arranque manual confiable —…
   PDP: https://ferre24.com.mx/products/motor-parazzini-7-hp-4-tiempos-doble-filtro-de-aire-para-obra-y-campo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a88a5405-9e76-46eb-b020-58166c2a3de8.png
-- **Parazzini BAKARAC300** · `BAKARAC300` · $43,912 (antes $43,912) · Parazzini · BAKARAC300
+- **Parazzini BAKARAC300** · `BAKARAC300` · $48,999 (antes $43,912) · Parazzini · BAKARAC300
   ### Suelda donde otros no pueden · Hay obras donde la luz eléctrica no llega. Ranchos, construcciones en desarrollo, sitios remotos, emergencias en campo. Para esos trabajos existe el Parazzini BAKARAC300 : un…
   PDP: https://ferre24.com.mx/products/parazzini-bakarac300
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_8e1dc002-18c5-4671-8b2e-c4933c1792ce.png
@@ -653,7 +653,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/tractor-podador-troy-bilt-42-motor-briggs-stratton-500-cc-15-5-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3584d25a-4649-4a63-b021-0b64a2cca8c2.png
 
-## Desbrozadoras y Jardín (22)
+## Desbrozadoras y Jardín (28)
 
 - **Aspersor Kawashima AK26** · `AK26` · $2,499 (antes $5,222) · Kawashima · AK26
   Antes de ver cualquier spec: el motor 2 tiempos del AK26 requiere mezcla 40:1. Eso significa 40 partes de gasolina por 1 parte de aceite 2T Kawashima. Si usas gasolina pura, el motor opera sin lubricación interna y el…
@@ -687,7 +687,7 @@ Reglas de meses sin intereses (MSI) por promo:
   El Parazzini FXD5A-200K es el aspersor turbina de entrada de la línea Parazzini, diseñado para el productor de frutas que necesita cobertura interior de copa sin invertir en equipo sobredimensionado. Con un tanque de…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-parazzini-200-l-kit-completo-para-tractor-25-hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_0953467b-a4cf-4b8c-af55-3bb030ee8c2b.png
-- **Aspersor Turbina Parazzini 200 L** · `FXD5A-200` · $78,876 (antes $146,067) · Parazzini · FXD5A-200K
+- **Aspersor Turbina Parazzini 200 L** · `FXD5A-200` · $81,990 (antes $146,067) · Parazzini · FXD5A-200K
   El Parazzini FXD5A-200K es el aspersor turbina de entrada de la línea Parazzini, diseñado para el productor de frutas que necesita cobertura interior de copa sin invertir en equipo sobredimensionado. Con un tanque de…
   PDP: https://ferre24.com.mx/products/aspersor-turbina-parazzini-200-l-kit-completo-para-tractor-25-hp-1
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fabaa771-4a42-420f-bb2e-8a4db3421940.png
@@ -715,6 +715,30 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cansado de que tu desbrozadora barata falle a mitad de la jornada o no tenga la fuerza para terrenos difíciles? · El Desbrozador Kawashima PRO KPD45TOP es la herramienta que usan los profesionales del campo para…
   PDP: https://ferre24.com.mx/products/desbrozadora-kawashima-pro-45cc-outlet-nuevo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_11a96860-4be9-4766-9e3d-a7a1f228fd2f.png
+- **Desbrozadora Power Hunt BLACKWIRO 52 cc** · `BLACKWIRO` · $1,542 (antes $1,542) · Power Hunt · BLACKWIRO
+  Cuando hay que tumbar maleza alta, zacate cerrado o monte que ya se salió de control, una desbrozadora chica de jardín no da. La Power Hunt BLACKWIRO es de 52 cc , que es el desplazamiento de trabajo de campo, no de…
+  PDP: https://ferre24.com.mx/products/desbrozadora-power-hunt-blackwiro-52-cc-eje-entero
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_60690d09-5e88-484c-90af-7d2aa337b201.png
+- **Desbrozadora Power Hunt DELTA52 52 cc** · `DELTA52` · $1,580 (antes $1,580) · Power Hunt · DELTA52
+  La diferencia entre una desbrozadora que sirve para zacate y una que sirve para monte de verdad casi siempre está en el aditamento. La Power Hunt DELTA52 es la única de su familia que llega con cuchilla de dos puntas de…
+  PDP: https://ferre24.com.mx/products/desbrozadora-power-hunt-delta52-52-cc-cuchilla-fabrica
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7c380ac5-bd86-49db-8972-15754113cf75.png
+- **Desbrozadora Power Hunt ELITE52 52 cc** · `ELITE52` · $1,556 (antes $1,556) · Power Hunt · ELITE52
+  Si tu trabajo cambia de domicilio — cuadrilla de mantenimiento, jardinero que atiende varias casas, quien renta servicio por hectárea — el problema no es cortar: es transportar. Una desbrozadora de eje entero mide casi…
+  PDP: https://ferre24.com.mx/products/desbrozadora-power-hunt-elite52-52-cc-eje-partido
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_43d9ebf2-abf6-48ef-bcf6-75394af6c613.png
+- **Desbrozadora Takashi BLACKMAMBA52 52 cc** · `BLACKMAMBA52` · $1,556 (antes $1,556) · Takashi · BLACKMAMBA52
+  Si la máquina se mueve de un trabajo a otro, el problema no es cortar: es cargarla. La Takashi BLACKMAMBA52 es la de eje partido de su familia — el tubo se desacopla en dos piezas, cabe en cajuela y se guarda en poco…
+  PDP: https://ferre24.com.mx/products/desbrozadora-takashi-blackmamba52-52-cc-eje-partido
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7d84e040-235b-4497-a2b7-ddf03aade599.png
+- **Desbrozadora Takashi DT52K 52 cc** · `DT52K` · $1,528 (antes $1,528) · Takashi · DT52K
+  La Takashi DT52K es de las que llegan completas: cabezal de nylon, cuchilla de dos puntas, guarda protectora y arnés , todo de fábrica. No hay que comprar el aditamento por separado para empezar a trabajar. · El motor…
+  PDP: https://ferre24.com.mx/products/desbrozadora-takashi-dt52k-52-cc-eje-entero-kit-completo
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_a46b6b8e-65fd-4d9c-b6a4-525229ff3ce3.png
+- **Desbrozadora Takashi GRASS52 52 cc** · `GRASS52` · $1,323 (antes $1,323) · Takashi · GRASS52
+  La Takashi GRASS52 es la versión de guarda ancha de la plataforma de 52 cc: su faldón protector es notablemente más amplio que el de la DT52K, tipo domo plano. En zacate alto y húmedo eso se agradece — es lo que se…
+  PDP: https://ferre24.com.mx/products/desbrozadora-takashi-grass52-52-cc-guarda-ancha-kit-completo
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_6aca1b4b-0583-4090-a28b-731624b91a2d.png
 - **Kawashima AKE100P** · `AKE100P` · $5,365 (antes $5,365) · Kawashima · AKE100P
   Fumigar manualmente hectáreas enteras agota al operador, desperdicia agroquímicos y deja coberturas irregulares. El Kawashima AKE100P resuelve eso de raíz: es un remolque aspersor eléctrico de 100 litros que se acopla…
   PDP: https://ferre24.com.mx/products/kawashima-ake100p-aspersor-electrico-remolque-100-l

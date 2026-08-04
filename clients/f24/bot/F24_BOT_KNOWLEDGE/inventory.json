@@ -821,8 +821,32 @@
       "qty": 100,
       "available": true
     },
+    "BLACKMAMBA52": {
+      "qty": 504,
+      "available": true
+    },
+    "BLACKWIRO": {
+      "qty": 4000,
+      "available": true
+    },
+    "DELTA52": {
+      "qty": 2700,
+      "available": true
+    },
+    "DT52K": {
+      "qty": 2698,
+      "available": true
+    },
+    "ELITE52": {
+      "qty": 832,
+      "available": true
+    },
     "GPIS3.5KW": {
       "qty": 100,
+      "available": true
+    },
+    "GRASS52": {
+      "qty": 2400,
       "available": true
     },
     "KAS-12P-TF": {
