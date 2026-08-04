@@ -2,7 +2,7 @@
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/📦 STOCK Y PROMOS",
   "inventory": {
     "13AN77BS309": {
-      "qty": 33,
+      "qty": 28,
       "available": true
     },
     "AK26": {
@@ -960,6 +960,50 @@
     "17AREACM342": {
       "qty": 26,
       "available": true
+    },
+    "WH20XT": {
+      "qty": 0,
+      "available": false
+    },
+    "WX10T": {
+      "qty": 0,
+      "available": false
+    },
+    "WX15T": {
+      "qty": 0,
+      "available": false
+    },
+    "WL20XM-MFX": {
+      "qty": 0,
+      "available": false
+    },
+    "WL30XM-MFX": {
+      "qty": 0,
+      "available": false
+    },
+    "MD1055": {
+      "qty": 0,
+      "available": false
+    },
+    "MD1062": {
+      "qty": 0,
+      "available": false
+    },
+    "AG836": {
+      "qty": 0,
+      "available": false
+    },
+    "TM-P50X-1127": {
+      "qty": 0,
+      "available": false
+    },
+    "SLIM8-9/1127": {
+      "qty": 0,
+      "available": false
+    },
+    "EF0.2-05-27/1127": {
+      "qty": 0,
+      "available": false
     }
   }
 }
