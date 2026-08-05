@@ -5,8 +5,8 @@ SOURCE OF TRUTH: Sheet INVENTARIO F24 (1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2
 pestaña "📦 STOCK Y PROMOS", columnas: SKU (A), Stock disponible (F), ¿Disponible? (G).
 
 Para cada SKU que exista en Shopify (por SKU en la variante):
-  - Asegura inventoryItem.tracked = true  y  inventoryPolicy = DENY
-    (así Shopify marca "agotado" y deja de venderse cuando llega a 0).
+  - Asegura inventoryItem.tracked = true  y  inventoryPolicy = CONTINUE
+    (Shopify sigue llevando la cuenta del stock, pero llegar a 0 NO bloquea la venta).
   - Setea la cantidad on-hand en la única location = Stock del Sheet
     (0 si ¿Disponible? = No, sin importar el número).
 Y escribe F24_BOT_KNOWLEDGE/inventory.json {SKU: {qty, available}} para que el bot
@@ -29,6 +29,20 @@ INV_JSON = OUT_DIR / "inventory.json"
 
 SHEET_ID = "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U"
 STOCK_TAB = "📦 STOCK Y PROMOS"
+
+# 2026-08-04 — Ferre24 es DISTRIBUIDOR: vende y le pide a Marvelsa. El catálogo
+# entero opera en sobreventa. Se conserva `tracked = true` (Sergio sigue viendo su
+# existencia real y el bot conoce las cantidades), pero la política es CONTINUE:
+# quedarse en 0 NO apaga el botón de compra.
+#
+# Antes esto era "DENY" y se reescribía en CADA corrida — cron 2×/día MÁS cada
+# workflow_dispatch, que dispara el onEdit del Sheet. Cualquier sobreventa puesta
+# a mano en el admin o por API se deshacía sola en horas, en silencio. Medido el
+# 4-ago-2026: 302 de 302 variantes en DENY y 47 productos ACTIVE sin poder venderse.
+#
+# Volver a poner "DENY" aquí vuelve a apagar el catálogo completo.
+# Decisión de Gibran (task ClickUp 86e2n4847). No cambiar sin él.
+DESIRED_POLICY = "CONTINUE"
 SA_REL = "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json"
 
 
@@ -107,7 +121,7 @@ def main():
         tracked = n["inventoryItem"]["tracked"]
         policy = n["inventoryPolicy"]
         need_track = not tracked
-        need_policy = policy != "DENY"
+        need_policy = policy != DESIRED_POLICY
         need_qty = cur_qty != want_qty
         if need_track: track_fix += 1
         if need_policy: policy_fix += 1
@@ -122,9 +136,13 @@ def main():
             })
 
     print(f"Matchean en Shopify: {len(inv_knowledge)} | SIN match (omitidos): {len(unmatched)}")
-    print(f"Cambios a aplicar: tracking→on={track_fix} | policy→DENY={policy_fix} | cantidad={qty_fix}")
+    print(f"Cambios a aplicar: tracking→on={track_fix} | policy→{DESIRED_POLICY}={policy_fix} | cantidad={qty_fix}")
     agotados = [s for s, v in inv_knowledge.items() if not v["available"]]
-    print(f"Quedarían AGOTADOS (qty 0): {len(agotados)} → {agotados[:12]}{'...' if len(agotados)>12 else ''}")
+    # Con CONTINUE, quedarse en 0 ya NO apaga la venta: el botón sigue vivo y
+    # Shopify lleva la cuenta en negativo. Se listan para que Sergio sepa qué
+    # tiene que reponer, no porque dejen de venderse.
+    print(f"En existencia 0 (se siguen vendiendo, política {DESIRED_POLICY}): "
+          f"{len(agotados)} → {agotados[:12]}{'...' if len(agotados) > 12 else ''}")
     if unmatched:
         print(f"\nSIN match (primeros 15): {unmatched[:15]}")
 
@@ -139,14 +157,15 @@ def main():
         if c["need_policy"]:
             sc.graphql("""mutation($pid:ID!,$vars:[ProductVariantsBulkInput!]!){
                 productVariantsBulkUpdate(productId:$pid,variants:$vars){userErrors{message}}}""",
-                {"pid": c["pid"], "vars": [{"id": c["vid"], "inventoryPolicy": "DENY"}]})
+                {"pid": c["pid"], "vars": [{"id": c["vid"], "inventoryPolicy": DESIRED_POLICY}]})
         if c["need_qty"] or c["need_track"]:
             sc.graphql("""mutation($in:InventorySetOnHandQuantitiesInput!){
                 inventorySetOnHandQuantities(input:$in){userErrors{message}}}""",
                 {"in": {"reason": "correction",
                         "setQuantities": [{"inventoryItemId": c["inv_item"], "locationId": LOC, "quantity": c["want_qty"]}]}})
         print(f"  ✓ {c['sku']}: qty {c['cur_qty']}→{c['want_qty']}"
-              + (" +track" if c["need_track"] else "") + (" +DENY" if c["need_policy"] else ""))
+              + (" +track" if c["need_track"] else "")
+              + (f" +{DESIRED_POLICY}" if c["need_policy"] else ""))
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     INV_JSON.write_text(json.dumps({"source": f"{SHEET_ID}/{STOCK_TAB}", "inventory": inv_knowledge},
