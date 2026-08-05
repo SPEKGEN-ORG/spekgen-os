@@ -1,6 +1,6 @@
 # Ferre24 — Catálogo (Knowledge Base del bot)
 
-*296 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
+*295 productos ACTIVE. Regenerar con `build_f24_knowledge.py`.*
 
 > El bot cotiza ÚNICAMENTE productos de esta lista. El **precio** es el de venta;
 > el precio **tachado** (si existe) es referencia. Para cerrar, el bot pasa el/los
@@ -791,7 +791,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Desbrozadora Kawashima Montana de 26 cc , dos tiempos, con eje curvo y maneral tipo D. Pesa 7 kg , que es la mitad que una de 52 cc, y ahí está su razón de ser: es para trabajo de jardín y mantenimiento ligero, donde…
   PDP: https://ferre24.com.mx/products/desbrozadora-kawashima-montana-26-cc-eje-curvo-7-kg
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b2d63336-9959-41c5-9718-f9052439c3d1.png
-- **Desbrozadora Kawashima PRO 45cc** · `KPD45TOP-RA` · $2,191 (antes $2,578) · Kawashima Pro · KPD45TOP · 🔴 AGOTADO
+- **Desbrozadora Kawashima PRO 45cc** · `KPD45TOP-RA` · $2,191 (antes $2,578) · Kawashima Pro · KPD45TOP
   ¿Cansado de que tu desbrozadora barata falle a mitad de la jornada o no tenga la fuerza para terrenos difíciles? · El Desbrozador Kawashima PRO KPD45TOP es la herramienta que usan los profesionales del campo para…
   PDP: https://ferre24.com.mx/products/desbrozadora-kawashima-pro-45cc-outlet-nuevo
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_11a96860-4be9-4766-9e3d-a7a1f228fd2f.png
@@ -1144,11 +1144,11 @@ Reglas de meses sin intereses (MSI) por promo:
   Voltaje entrada: 220V monofásico · Potencia máxima: 5 HP (3730W) · Amperaje: Hasta 17.5A · Interruptor: Termomagnético 20A · Presostato: 20 PSI encendido, 60 PSI apagado (automático) · Manómetro: Incluido, lectura…
   PDP: https://ferre24.com.mx/products/aquapak-ccqa-5230
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_01bd0201-942f-403b-90f8-b04cf5869189.png
-- **Motor Sumergible AQUA PAK MSQA4-51230** · `MSQA4-51230` · $15,547 (antes $22,209) · AQUA PAK · MSQA4-51230 · 🔴 AGOTADO
+- **Motor Sumergible AQUA PAK MSQA4-51230** · `MSQA4-51230` · $15,547 (antes $22,209) · AQUA PAK · MSQA4-51230
   El Motor Sumergible AQUA PAK MSQA4-51230 es la solución de bombeo de alto rendimiento para pozos profundos de 4 pulgadas o mayores. Con una potencia nominal de 5 HP (3.7 kW) y operación monofásica a 230 V / 60 Hz, este…
   PDP: https://ferre24.com.mx/products/motor-sumergible-5-hp-aqua-pak-msqa4-51230-serie-4-monofasico-230-v-ip68-acero-i
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_454374e5-70de-464f-9841-21ac8ec6d764.png
-- **Motor Sumergible Altamira TRUST MSAT4-53230** · `MSAT4-53230` · $16,765 (antes $23,950) · Altamira · MSAT4-53230 · 🔴 AGOTADO
+- **Motor Sumergible Altamira TRUST MSAT4-53230** · `MSAT4-53230` · $16,765 (antes $23,950) · Altamira · MSAT4-53230
   El motor sumergible encapsulado Altamira serie TRUST MSAT4-53230 entrega 5 HP de potencia en servicio continuo para bombeo en pozo profundo. Diseñado para columnas de agua exigentes, soporta una profundidad máxima de…
   PDP: https://ferre24.com.mx/products/msat4-53230-motor-sumergible
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_137fa2f9-1e60-4683-aee5-1f642c4941f4.png
@@ -1172,7 +1172,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Agua con presión constante, sin sorpresas · Si tu bomba arranca cada vez que alguien abre una llave, o si la presión cae en cuanto hay más de un punto de uso abierto, el problema no es la bomba: es la falta de un tanque…
   PDP: https://ferre24.com.mx/products/tanque-precargado-vertical-65-gal-altamira-nsf-ansi-garantia-6-anos
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_7a1c4ead-4e1f-44fa-923c-8810c08be01a.png
-- **Tanque Precargado Vertical ALTAMIRA PRO XLB45** · `ALTAPRO-XLB45` · $8,093 (antes $11,561) · ALTAMIRA · ALTAPRO-XLB45 · 🔴 AGOTADO
+- **Tanque Precargado Vertical ALTAMIRA PRO XLB45** · `ALTAPRO-XLB45` · $8,093 (antes $11,561) · ALTAMIRA · ALTAPRO-XLB45
   El tanque hidroneumático precargado vertical ALTAMIRA PRO XLB45 es la solución de presión constante diseñada para sistemas de agua residenciales, comerciales e industriales que demandan rendimiento sostenido y cero…
   PDP: https://ferre24.com.mx/products/tanque-hidroneumatico-precargado-vertical-altamira-45-galones-serie-pro-xlb
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_1358c180-6c77-4509-887a-d6df5a30dee1.png
@@ -1216,7 +1216,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/osmosis-inversa-purikor-400-gpd-6-etapas-luz-uv
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_50f503ab-b905-4f5f-bdb4-361d1d53d563.png
 
-## Purificación de Agua (12)
+## Purificación de Agua (11)
 
 - **PURIKOR PK-EASY-800US** · `PK-EASY-800US` · $8,833 (antes $7,755) · PURIKOR · PK-EASY-800US
   ¿Tu negocio necesita agua purificada todo el día, sin esperas ni tandas? El PURIKOR PK-EASY-800US es el sistema de ósmosis inversa de mayor caudal de la familia PK-EASY: 800 GPD (2.08 litros por minuto) , diseñado para…
@@ -1230,10 +1230,6 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuánto gastas al mes en garrafones? Una familia de 4-5 personas en México gasta entre $150 y $250 pesos cada mes en agua embotellada, sin contar el tiempo de espera al repartidor, el plástico desechado y el espacio que…
   PDP: https://ferre24.com.mx/products/purikor-pkro50-6uvpm-osmosis-inversa-50-gpd-6-etapas-uv
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_fafdb8f0-d037-46e4-9655-9343d62dbcd4.png
-- **Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS** · `PKUF-6UV` · $2,099 (antes $2,998) · PURIKOR · PKUF-6UV
-  ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
-  PDP: https://ferre24.com.mx/products/sistema-de-ultrafiltracion-purikor-6-etapas-uv-philips
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_59fd80f8-3d12-4cce-8c97-3d5c131046e0.png
 - **Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS** · `PKUF-6UV` · $2,099 (antes $2,998) · PURIKOR · PKUF-6UV
   ¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…
   PDP: https://ferre24.com.mx/products/sistema-ultrafiltracion-purikor-6-etapas-uv-philips

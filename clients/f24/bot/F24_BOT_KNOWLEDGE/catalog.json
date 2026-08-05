@@ -1,6 +1,6 @@
 {
   "domain": "ferre24.com.mx",
-  "count": 296,
+  "count": 295,
   "products": [
     {
       "title": "Hidrolavadora a Gasolina Parazzini HP5.5 — 2,200 PSI / 5.5 HP / 4 Tiempos",
@@ -2944,23 +2944,6 @@
       "msi_promo": ""
     },
     {
-      "title": "Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS",
-      "short_title": "Sistema de Ultrafiltración PURIKOR 6 Etapas + UV PHILIPS",
-      "handle": "sistema-de-ultrafiltracion-purikor-6-etapas-uv-philips",
-      "category": "Purificación de Agua",
-      "sku": "PKUF-6UV",
-      "variant_id": "44164149182552",
-      "variant_gid": "gid://shopify/ProductVariant/44164149182552",
-      "price": "2099.00",
-      "compare_at_price": "2998.02",
-      "available": true,
-      "marca": "PURIKOR",
-      "modelo": "PKUF-6UV",
-      "specs": "¿Cuánto llevas gastando en garrafones cada mes? Una familia de 4 personas puede gastar entre $300 y $600 MXN mensual en agua embotellada — dinero que sale de tu bolsillo mes tras mes, sin resolver el problema de fondo.…",
-      "image_url": "https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_59fd80f8-3d12-4cce-8c97-3d5c131046e0.png",
-      "msi_promo": ""
-    },
-    {
       "title": "Generador Diesel Silencioso Trifásico 8.5 kW Parazzini GPDS8.5T — 72dB, Arranque Eléctrico",
       "short_title": "Generador Diesel Silencioso Trifásico 8.5 kW Parazzini GPDS8.5T",
       "handle": "el-parazzini-gpds8-5t-rompe-el-paradigma-generador-diesel-trifasico-profesional-que-opera-a-solo-72-db-a-7-metros-mas-silencioso-que-una-conversacion-normal-disenado-para-instalaciones-que-exigen-lo-que-el-mercado-consideraba-imposible-potenci",
@@ -3548,7 +3531,7 @@
       "variant_gid": "gid://shopify/ProductVariant/44208567746648",
       "price": "2190.88",
       "compare_at_price": "2577.51",
-      "available": false,
+      "available": true,
       "marca": "Kawashima Pro",
       "modelo": "KPD45TOP",
       "specs": "¿Cansado de que tu desbrozadora barata falle a mitad de la jornada o no tenga la fuerza para terrenos difíciles? · El Desbrozador Kawashima PRO KPD45TOP es la herramienta que usan los profesionales del campo para…",
@@ -3582,7 +3565,7 @@
       "variant_gid": "gid://shopify/ProductVariant/44208655007832",
       "price": "16764.79",
       "compare_at_price": "23949.70",
-      "available": false,
+      "available": true,
       "marca": "Altamira",
       "modelo": "MSAT4-53230",
       "specs": "El motor sumergible encapsulado Altamira serie TRUST MSAT4-53230 entrega 5 HP de potencia en servicio continuo para bombeo en pozo profundo. Diseñado para columnas de agua exigentes, soporta una profundidad máxima de…",
@@ -3599,7 +3582,7 @@
       "variant_gid": "gid://shopify/ProductVariant/44208668377176",
       "price": "15546.63",
       "compare_at_price": "22209.47",
-      "available": false,
+      "available": true,
       "marca": "AQUA PAK",
       "modelo": "MSQA4-51230",
       "specs": "El Motor Sumergible AQUA PAK MSQA4-51230 es la solución de bombeo de alto rendimiento para pozos profundos de 4 pulgadas o mayores. Con una potencia nominal de 5 HP (3.7 kW) y operación monofásica a 230 V / 60 Hz, este…",
@@ -3616,7 +3599,7 @@
       "variant_gid": "gid://shopify/ProductVariant/44208668442712",
       "price": "8093.00",
       "compare_at_price": "11561.33",
-      "available": false,
+      "available": true,
       "marca": "ALTAMIRA",
       "modelo": "ALTAPRO-XLB45",
       "specs": "El tanque hidroneumático precargado vertical ALTAMIRA PRO XLB45 es la solución de presión constante diseñada para sistemas de agua residenciales, comerciales e industriales que demandan rendimiento sostenido y cero…",
