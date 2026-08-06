@@ -11,9 +11,20 @@ mientras la campana gastaba). Este monitor convierte "ciego varios dias" en
 Que valida (en cada URL de PAGES_TO_CHECK):
   - GA4 gtag           -> G-VZB6X2YWT0
   - Google Ads tag     -> AW-18195593805
-  - Numero WhatsApp     -> 523317903630   (el evento GA4 Whatsapp_click filtra
+  - Numero WhatsApp     -> 5213511480346  (el evento GA4 Whatsapp_click filtra
                                             por este numero; si cambia, el
                                             tracking muere en silencio)
+
+    Era 523317903630 (Guadalajara). El sitio vivo paso al 5213511480346
+    (Michoacan) y el monitor se quedo con el viejo: alerto todos los dias desde
+    el 1-ago diciendo "FALTA WhatsApp num" cuando el numero si estaba, solo que
+    era otro. Confirmado el 6-ago contra el sitio: home, /pages/promociones y
+    /pages/energia-construccion sirven las tres el 351.
+
+    OJO, esto no cierra el tema: el filtro del evento GA4 `Whatsapp_click`
+    tambien apunta al numero viejo, asi que los clics a WhatsApp llevan dias
+    sin contarse en GA4 ni en Google Ads. Eso se arregla en GA4/GTM, no aqui.
+    Este monitor solo deja de mentir sobre el sitio.
 
 Si falta CUALQUIERA en CUALQUIER pagina, manda un correo de alerta y termina
 con exit code 1 (visible en GitHub Actions). Si todo esta bien, exit 0.
@@ -44,7 +55,7 @@ PAGES_TO_CHECK = [
 REQUIRED_TOKENS = {
     "GA4 gtag (G-VZB6X2YWT0)": "G-VZB6X2YWT0",
     "Google Ads tag (AW-18195593805)": "AW-18195593805",
-    "WhatsApp num (523317903630)": "523317903630",
+    "WhatsApp num (5213511480346)": "5213511480346",
 }
 
 ALERT_TO = os.environ.get("ALERT_TO", "gibran.alonzo0506@gmail.com")
