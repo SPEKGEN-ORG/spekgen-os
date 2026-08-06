@@ -1122,48 +1122,48 @@
       "available": true
     },
     "WH20XT": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "WX10T": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "WX15T": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "WL20XM-MFX": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "WL30XM-MFX": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "MD1055": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "MD1062": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "AG836": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "TM-P50X-1127": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "SLIM8-9/1127": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     },
     "EF0.2-05-27/1127": {
-      "qty": 0,
-      "available": false
+      "qty": 1,
+      "available": true
     }
   }
 }

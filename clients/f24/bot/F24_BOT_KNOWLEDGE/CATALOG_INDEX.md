@@ -97,7 +97,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/generador-parazzini-inverter-5-kw-respaldo-confiable-casa-negocio-obra
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5cb6e673-a346-41be-ad37-4fee1af32c87.png
 - **Generador Portátil 2500W ENERWELL** · `ENERWELL-G2500` · $6,055 · ENERWELL · G2500
-  El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc [VERIFICAR: datos inferidos de estándar de mercado — confirmar con Marvelsa],…
+  El Generador Portátil ENERWELL G2500 lleva electricidad a cualquier lugar donde la necesites. Con un motor de 4 tiempos (4T) de 6.5HP y 196cc , este generador entrega 2,200W nominales y hasta 2,500W de potencia pico…
   PDP: https://ferre24.com.mx/products/generador-portatil-gasolina-2500w-enerwell-4t-6-5hp
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_45e8886a-e494-4400-8a07-e8ea7a107f01.png
 - **Generador Portátil 3000W Ultra Fox BRAMA3000** · `BRAMA3000` · $4,106 (antes $7,465) · Ultra Fox · BRAMA3000
@@ -252,7 +252,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/motobomba-7-hp-4-tiempos-autocebante-2-power-hunt-hunt2
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_d83335d5-583c-4e2c-8511-e68b01bb3b45.png
 - **Motobomba Agrícola 3HP Aluminio Autocebante** · `BK2.515` · $3,511 (antes $3,511) · Kawashima · BK2.515
-  La [VERIFICAR marca] BK2.515 es una motobomba agrícola autocebante diseñada para trabajo de campo real: riego de parcelas, llenado de tinacos y traslados entre pozos sin depender de la corriente eléctrica. · Cuerpo de…
+  La BK2.515 es una motobomba agrícola autocebante diseñada para trabajo de campo real: riego de parcelas, llenado de tinacos y traslados entre pozos sin depender de la corriente eléctrica. · Cuerpo de aluminio — más…
   PDP: https://ferre24.com.mx/products/motobomba-agricola-3hp-aluminio-autocebante-200-l-min-altura-15m-boca-1-5
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3dae3490-5c0a-4202-abc0-64bd7b65c0d5.png
 - **Motobomba Alta Presión 13 HP** · `BP1320A` · $15,638 (antes $15,638) · F24 · BP1320A
@@ -276,7 +276,7 @@ Reglas de meses sin intereses (MSI) por promo:
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-16-hp-6-maximo-caudal
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_b778513a-a0a2-41ed-a3c2-f698983fbf14.png
 - **Motobomba Autocebante 6.5 HP 4 Tiempos** · `BT6.530` · $2,337 (antes $2,337) · Parazzini · BT6.530
-  La BT6.530 es una motobomba autocebante de 6.5 HP [VERIFICAR] con motor a gasolina 4 tiempos OHV, diseñada para trabajos de riego agrícola, achique y trasvase en campo, rancho e instalaciones industriales ligeras. ·…
+  La BT6.530 es una motobomba autocebante de 6.5 HP con motor a gasolina 4 tiempos OHV, diseñada para trabajos de riego agrícola, achique y trasvase en campo, rancho e instalaciones industriales ligeras. · Motor 4…
   PDP: https://ferre24.com.mx/products/motobomba-autocebante-6-5-hp-4-tiempos-descarga-3-pulgadas-verificar-riego-achiq
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_002_884366ef-2413-4a66-9c7e-611915fd2ee7.png
 - **Motobomba Autocebante 80 cc** · `BP801.5` · $5,697 (antes $5,697) · F24 · BP801.5
@@ -1225,7 +1225,7 @@ Reglas de meses sin intereses (MSI) por promo:
 - **Purificador de Ósmosis Inversa 100GPD con Dispensador** · `PK-EASY-100CT` · $6,686 (antes $7,598) · PURIKOR · PK-EASY-100CT · ⚡PROMO
   La mayoría de los equipos de ósmosis inversa te obligan a lo mismo: vaciar el mueble de abajo del fregadero, perforar la tarja para el grifo y contratar a alguien que lo instale. El PURIKOR PK-EASY-100CT se salta todo…
   PDP: https://ferre24.com.mx/products/purificador-osmosis-inversa-100gpd-dispensador-pk-easy-100ct
-  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_40cc1e05-1e39-4c5e-8523-03c6991fb206.png
+  IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_v2.png
 - **Purikor PKRO50-6UVPM** · `PKRO50-6UVPM` · $3,762 (antes $4,089) · Purikor · PKRO50-6UVPM · ⚡PROMO
   ¿Cuánto gastas al mes en garrafones? Una familia de 4-5 personas en México gasta entre $150 y $250 pesos cada mes en agua embotellada, sin contar el tiempo de espera al repartidor, el plástico desechado y el espacio que…
   PDP: https://ferre24.com.mx/products/purikor-pkro50-6uvpm-osmosis-inversa-50-gpd-6-etapas-uv
