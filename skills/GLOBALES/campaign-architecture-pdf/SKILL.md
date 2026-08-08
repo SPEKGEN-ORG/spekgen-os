@@ -34,7 +34,7 @@ estrategia sin el PDF visual acompanandola.
 ## Paths
 
 ```
-CLIENTS_BASE   = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL
+CLIENTS_BASE   = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL
 SKILL_DIR      = SPK - SPEKGEN AGENCY/SPK - 02. SKILLS/GLOBALES/campaign-architecture-pdf
 BUILD_SCRIPT   = {SKILL_DIR}/scripts/build_pdf.py
 SCHEMA_DOC     = {SKILL_DIR}/templates/schema.md

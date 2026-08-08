@@ -20,7 +20,7 @@ Gibran dijo textual: "yo no me voy a ir a japon, solo es algo que te dije para c
 
 ## Archivos que necesitan actualizacion (pendientes)
 
-- `/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/.claude/CLAUDE.md` — ajustar lenguaje de "DEADLINE DURO Japon" a "vision agencia 99.99% AI"
+- `/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL/.claude/CLAUDE.md` — ajustar lenguaje de "DEADLINE DURO Japon" a "vision agencia 99.99% AI"
 - `memory/project_japan_autonomy_deadline.md` — marcar como motivacional
 - `memory/project_japan_autonomy_decisions.md` — mismo
 - `SPK - SPEKGEN AGENCY/SPK - 00. COMMAND CENTER/02. DOCS OPERATIVOS/JAPAN_AUTONOMY_SPRINT.md` — rename o mark motivational

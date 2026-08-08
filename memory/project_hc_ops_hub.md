@@ -53,7 +53,7 @@ A LF/GR/MG cuando crezcan los tools locales. Misma estructura, diferente paleta 
 ## Comando para abrir
 
 ```bash
-open "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/HC - HEALTHY CHUCHOS/HC - 99. OPS HUB/HC Operations.app"
+open "/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL/HC - HEALTHY CHUCHOS/HC - 99. OPS HUB/HC Operations.app"
 ```
 
 O desde Desktop: double-click en `HC Operations.app`.

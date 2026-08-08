@@ -33,15 +33,38 @@ Cada batch tiene skeleton:
 import argparse
 import datetime as dt
 import json
+import os
 import sys
 from pathlib import Path
 
-FACTORY = Path(
-    "/Users/gibranalonzo/Library/CloudStorage/"
-    "GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/"
-    "01. CLIENTS OFFICIAL/SPK - SPEKGEN AGENCY/"
-    "SPK - 15. FACTORY"
-)
+
+def drive_root() -> Path:
+    """Resuelve '01. CLIENTS OFFICIAL' sin hardcodear la cuenta de Drive.
+
+    Orden: SPEKGEN_ROOT env -> ascenso de directorios -> glob del Drive montado.
+    Truena fuerte si no lo encuentra (nada de defaults silenciosos).
+    """
+    env = os.environ.get("SPEKGEN_ROOT")
+    if env:
+        return Path(env)
+    anchor = "01. CLIENTS OFFICIAL"
+    for parent in Path(__file__).resolve().parents:
+        if parent.name == anchor:
+            return parent
+    for gd in sorted((Path.home() / "Library" / "CloudStorage").glob("GoogleDrive-*")):
+        for md in sorted(gd.glob("My Drive*")):
+            cand = md / anchor
+            # Hay mounts viejos de Drive que conservan un "01. CLIENTS OFFICIAL"
+            # husk (uno trae solo F24). Exigimos un marcador de la raiz viva
+            # para no leer/escribir datos rancios en silencio.
+            if (cand / "SPK - SPEKGEN AGENCY").is_dir():
+                return cand
+    raise RuntimeError(
+        f"No encontre '{anchor}'. Set SPEKGEN_ROOT=/ruta/absoluta al directorio."
+    )
+
+
+FACTORY = drive_root() / "SPK - SPEKGEN AGENCY" / "SPK - 15. FACTORY"
 
 VALID_TYPES = {"content", "ads", "pdp", "prospect"}
 VALID_CLIENTS = {"HC", "LF", "GR", "MG", "GIBRAN", "CROSS"}

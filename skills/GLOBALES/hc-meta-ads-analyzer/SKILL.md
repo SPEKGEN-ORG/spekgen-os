@@ -145,7 +145,7 @@ cat "HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/logs/l
 ### "GOOGLE_APPLICATION_CREDENTIALS no set"
 Agregar al `.env` de HC:
 ```
-GOOGLE_APPLICATION_CREDENTIALS=/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json
+GOOGLE_APPLICATION_CREDENTIALS=/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL/HC - HEALTHY CHUCHOS/HC - 05. META ADS/CAMPAÑA MES 1/04. MONITORING/config/spekgen_service_account.json
 ```
 
 ### "HC_META_DASHBOARD_SHEET_ID no set"

@@ -28,7 +28,7 @@ Output is a structured markdown brief that can be:
 
 ```
 SKILL_DIR    = SPK - SPEKGEN AGENCY/SPK - 02. SKILLS/GLOBALES/reel-scripter
-CLIENTS_BASE = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL
+CLIENTS_BASE = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL
 ```
 
 ---

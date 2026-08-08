@@ -49,7 +49,7 @@ Si no hay argumento → preguntar al usuario que cambio quiere hacer. Pedir scre
 ## Rutas Base
 
 ```
-GR_ROOT         = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/GR - GREENRAY
+GR_ROOT         = /Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive/01. CLIENTS OFFICIAL/GR - GREENRAY
 PROMPT_MD       = {GR_ROOT}/08. WHATSAPP/GR_BOT_SYSTEM_PROMPT.md      (single source of truth del bot)
 BUILDER_PATH    = {GR_ROOT}/08. WHATSAPP/build_gr_bot_blueprint.py    (lee del MD, rebuild blueprint)
 BLUEPRINT_OUT   = /tmp/gr_bot_bp_v4.json                              (output generado)

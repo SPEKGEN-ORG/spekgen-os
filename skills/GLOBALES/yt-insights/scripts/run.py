@@ -5,12 +5,39 @@ Usage:
     run.py extract <URL>
     run.py finalize <slug>
 """
+import os
 import sys
 import argparse
 import json
 import subprocess
 from pathlib import Path
 from datetime import date
+
+
+def drive_root() -> Path:
+    """Resuelve '01. CLIENTS OFFICIAL' sin hardcodear la cuenta de Drive.
+
+    Orden: SPEKGEN_ROOT env -> ascenso de directorios -> glob del Drive montado.
+    Truena fuerte si no lo encuentra (nada de defaults silenciosos).
+    """
+    env = os.environ.get("SPEKGEN_ROOT")
+    if env:
+        return Path(env)
+    anchor = "01. CLIENTS OFFICIAL"
+    for parent in Path(__file__).resolve().parents:
+        if parent.name == anchor:
+            return parent
+    for gd in sorted((Path.home() / "Library" / "CloudStorage").glob("GoogleDrive-*")):
+        for md in sorted(gd.glob("My Drive*")):
+            cand = md / anchor
+            # Hay mounts viejos de Drive que conservan un "01. CLIENTS OFFICIAL"
+            # husk (uno trae solo F24). Exigimos un marcador de la raiz viva
+            # para no leer/escribir datos rancios en silencio.
+            if (cand / "SPK - SPEKGEN AGENCY").is_dir():
+                return cand
+    raise RuntimeError(
+        f"No encontre '{anchor}'. Set SPEKGEN_ROOT=/ruta/absoluta al directorio."
+    )
 
 ROOT = Path(__file__).parent
 sys.path.insert(0, str(ROOT))
@@ -20,8 +47,8 @@ from _render_pdf import render_insights_pdf, render_briefs_pdf, render_recap_pdf
 from _master_index import append_to_master_index
 from _obsidian import write_obsidian_note
 
-VAULT = Path("/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/SPK - SPEKGEN AGENCY/SPK - 18. YT VAULT")
-OBSIDIAN = Path("/Users/gibranalonzo/Library/CloudStorage/GoogleDrive-gibran.alonzo0506@gmail.com/My Drive 2/01. CLIENTS OFFICIAL/_OBSIDIAN/04 - YT INSIGHTS")
+VAULT = drive_root() / "SPK - SPEKGEN AGENCY" / "SPK - 18. YT VAULT"
+OBSIDIAN = drive_root() / "_OBSIDIAN" / "04 - YT INSIGHTS"
 
 
 def cmd_extract(url: str, mode: str):
