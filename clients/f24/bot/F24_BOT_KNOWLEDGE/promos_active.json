@@ -36,6 +36,22 @@
       "shopify_price": "14220.05"
     },
     {
+      "sku": "MD1062",
+      "sku_upper": "MD1062",
+      "producto": "Martillo Demoledor Urrea MD1062 — 2,000 W · 62 J · Concreto Armado",
+      "regular_price": 39812.0,
+      "promo_price": 28664.64,
+      "pct_desc": "28%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-08-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "28664.64"
+    },
+    {
       "sku": "PK-EASY-100CT",
       "sku_upper": "PK-EASY-100CT",
       "producto": "Purificador de ósmosis inversa con dispensador 100gpd",
