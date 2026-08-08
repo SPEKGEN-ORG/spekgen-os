@@ -201,6 +201,22 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "6972.30"
+    },
+    {
+      "sku": "WL30XM-MFX",
+      "sku_upper": "WL30XM-MFX",
+      "producto": "Motobomba Honda WL30XM-MFX 3\" — 1,100 l/min Autocebante",
+      "regular_price": 9129.2,
+      "promo_price": 7851.11,
+      "pct_desc": "14%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-08-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "7851.11"
     }
   ],
   "excluidos_sin_pdp": []
