@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-11 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+12 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -28,6 +28,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | — | no | 2026-08-31 |
 | `PKRO50-6UVPM` | $3,762 | $4,089 | 8% | 3, 6 | no | 2026-08-31 |
 | `WH20XT` | $11,949 | $16,147 | 26% | — | no | 2026-08-31 |
+| `WL20XM-MFX` | $6,802 | $8,503 | 20% | — | no | 2026-09-07 |
 
 ## Generadores (43)
 
@@ -342,7 +343,7 @@ Reglas de meses sin intereses (MSI) por promo:
   ¿Cuántas veces has tenido que llenar la bomba de agua a mano antes de poder usarla? Con motobombas convencionales es normal — y es una de las razones más comunes por las que un cliente se decepciona de su compra. La…
   PDP: https://ferre24.com.mx/products/motobomba-honda-wh20xt-2-alta-presion-motor-gx160-autocebante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ce40071d-fb21-4aba-975a-938763a91852.png
-- **Motobomba Honda WL20XM-MFX 2" Autocebante, 670 L/min** · `WL20XM-MFX` · $8,503 (antes $8,503) · Honda · WL20XM-MFX
+- **Motobomba Honda WL20XM-MFX 2" Autocebante, 670 L/min** · `WL20XM-MFX` · $6,802 (antes $8,503) · Honda · WL20XM-MFX · ⚡PROMO
   Cuando el agua sube y hay que sacarla rápido — o cuando toca llenar o vaciar una cisterna completa — lo que importa no es qué tan alto empuja una bomba, sino cuánta agua mueve por minuto. Ahí es donde gana la Honda…
   PDP: https://ferre24.com.mx/products/motobomba-honda-wl20xm-mfx-2-autocebante-670-l-min
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ef726165-0385-4610-88db-ccad0ce586bb.png
