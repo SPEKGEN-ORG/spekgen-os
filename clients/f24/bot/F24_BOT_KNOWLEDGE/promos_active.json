@@ -185,6 +185,22 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "11948.93"
+    },
+    {
+      "sku": "WL20XM-MFX",
+      "sku_upper": "WL20XM-MFX",
+      "producto": "Motobomba Honda WL20XM-MFX 2\" Autocebante, 670 L/min",
+      "regular_price": 8502.8,
+      "promo_price": 6802.24,
+      "pct_desc": "20%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-09-07",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "6802.24"
     }
   ],
   "excluidos_sin_pdp": []
