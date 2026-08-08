@@ -175,8 +175,8 @@
       "sku_upper": "WH20XT",
       "producto": "Motobomba Honda WH20XT 2\" Alta Presión — Motor GX160 Autocebante",
       "regular_price": 16147.2,
-      "promo_price": 12271.87,
-      "pct_desc": "24%",
+      "promo_price": 11948.93,
+      "pct_desc": "26%",
       "msi_ladder": [],
       "msi_max": 0,
       "eligible_912": false,
@@ -184,7 +184,7 @@
       "vigente": true,
       "estado_landing": "",
       "in_shopify": true,
-      "shopify_price": "12271.87"
+      "shopify_price": "11948.93"
     }
   ],
   "excluidos_sin_pdp": []
