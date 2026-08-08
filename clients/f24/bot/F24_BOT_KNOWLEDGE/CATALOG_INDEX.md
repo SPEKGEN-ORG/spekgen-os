@@ -18,7 +18,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | SKU | Promo | Regular | Desc | MSI | Cuenta B (9/12) | Vence |
 |---|---|---|---|---|---|---|
 | `13AN77BS309` | $72,199 | $72,199 | 0% | — | no | 2026-08-31 |
-| `MD1055` | $14,220 | $21,877 | 35% | — | no | 2026-08-31 |
+| `MD1055` | $15,751 | $21,877 | 28% | — | no | 2026-08-31 |
 | `MD1062` | $28,665 | $39,812 | 28% | — | no | 2026-08-31 |
 | `PK-EASY-100CT` | $6,686 | $7,598 | 12% | 3, 6 | no | 2026-08-31 |
 | `PK-EASY-200US` | $4,235 | $4,812 | 12% | 3 | no | 2026-08-31 |
@@ -985,7 +985,7 @@ Reglas de meses sin intereses (MSI) por promo:
 
 ## Martillos Demoledores Eléctricos (2)
 
-- **Martillo Demoledor Urrea MD1055 1600W 55J Anti-Vibración** · `MD1055` · $14,220 (antes $21,877) · Urrea · MD1055 · ⚡PROMO
+- **Martillo Demoledor Urrea MD1055 1600W 55J Anti-Vibración** · `MD1055` · $15,751 (antes $21,877) · Urrea · MD1055 · ⚡PROMO
   En demolición continua, lo que te cansa no es el peso de la herramienta — es la vibración que se acumula en las manos hora tras hora. El Urrea MD1055 nace para resolver justo eso: trae control anti-vibración de fábrica,…
   PDP: https://ferre24.com.mx/products/martillo-demoledor-urrea-md1055-1600w-55j-anti-vibracion
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_3e52ab8b-87aa-4fb7-a262-370895ac2b71.png
