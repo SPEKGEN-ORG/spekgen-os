@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-10 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+11 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -27,6 +27,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PKRO100-6UVPM` | $3,928 | $4,849 | 19% | — | no | 2026-08-31 |
 | `PKRO200-6UVPM` | $4,585 | $5,210 | 12% | — | no | 2026-08-31 |
 | `PKRO50-6UVPM` | $3,762 | $4,089 | 8% | 3, 6 | no | 2026-08-31 |
+| `WH20XT` | $12,272 | $16,147 | 24% | — | no | 2026-09-07 |
 
 ## Generadores (43)
 
@@ -337,7 +338,7 @@ Reglas de meses sin intereses (MSI) por promo:
   La motobomba ENERWELL EWBG3-1000F es la herramienta de alto rendimiento para quienes necesitan mover grandes volúmenes de agua de forma confiable y sin dependencia eléctrica. Con conexiones de entrada y salida de 3…
   PDP: https://ferre24.com.mx/products/motobomba-enerwell-7hp-gasolina-autocebante-3x3-1000-gpm
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_5e649f49-379b-489c-910c-6cc0fca3ad5d.png
-- **Motobomba Honda WH20XT 2" Alta Presión** · `WH20XT` · $16,147 (antes $16,147) · Honda · WH20XT
+- **Motobomba Honda WH20XT 2" Alta Presión** · `WH20XT` · $12,272 (antes $16,147) · Honda · WH20XT · ⚡PROMO
   ¿Cuántas veces has tenido que llenar la bomba de agua a mano antes de poder usarla? Con motobombas convencionales es normal — y es una de las razones más comunes por las que un cliente se decepciona de su compra. La…
   PDP: https://ferre24.com.mx/products/motobomba-honda-wh20xt-2-alta-presion-motor-gx160-autocebante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ce40071d-fb21-4aba-975a-938763a91852.png
