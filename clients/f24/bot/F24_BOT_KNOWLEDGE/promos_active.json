@@ -1,6 +1,6 @@
 {
   "source": "1WCRbnSMwdYMVCwPHjpGpqe4fSdGoQyAt91RDFZT2f3U/🔥 PROMO ACTIVA",
-  "generated": "2026-08-07",
+  "generated": "2026-08-08",
   "note": "Solo promos VENDIBLES (existen en Shopify). El bot cotiza/vende únicamente estas.",
   "promos": [
     {
@@ -18,6 +18,22 @@
       "estado_landing": "",
       "in_shopify": true,
       "shopify_price": "72199.00"
+    },
+    {
+      "sku": "MD1055",
+      "sku_upper": "MD1055",
+      "producto": "Martillo Demoledor Urrea MD1055 1600W 55J Anti-Vibración",
+      "regular_price": 21877.0,
+      "promo_price": 14220.05,
+      "pct_desc": "35%",
+      "msi_ladder": [],
+      "msi_max": 0,
+      "eligible_912": false,
+      "vigencia": "2026-08-31",
+      "vigente": true,
+      "estado_landing": "",
+      "in_shopify": true,
+      "shopify_price": "14220.05"
     },
     {
       "sku": "PK-EASY-100CT",
