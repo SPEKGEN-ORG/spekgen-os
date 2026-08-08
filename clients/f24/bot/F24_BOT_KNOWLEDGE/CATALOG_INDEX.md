@@ -7,7 +7,7 @@
 > **SKU + cantidad** al sistema de órdenes — NO inventa precios ni productos.
 
 ## ⚡ PROMOS ACTIVAS (source of truth: Sheet INVENTARIO F24 / 🔥 PROMO ACTIVA)
-12 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
+13 producto(s) en promoción vigente. El **precio promo YA está en el catálogo** (precio de venta = precio promo; el regular aparece tachado). Cotiza ese precio tal cual.
 
 Reglas de meses sin intereses (MSI) por promo:
 - SKUs con **9 o 12 MSI** (0 de la lista): si el cliente paga a 9/12 meses → cierra con `order.payment_method='msi_promo'` (genera link MercadoPago Cuenta B). Hasta 6 MSI también por link normal.
@@ -29,6 +29,7 @@ Reglas de meses sin intereses (MSI) por promo:
 | `PKRO50-6UVPM` | $3,762 | $4,089 | 8% | 3, 6 | no | 2026-08-31 |
 | `WH20XT` | $11,949 | $16,147 | 26% | — | no | 2026-08-31 |
 | `WL20XM-MFX` | $6,972 | $8,503 | 18% | — | no | 2026-08-31 |
+| `WL30XM-MFX` | $7,851 | $9,129 | 14% | — | no | 2026-08-31 |
 
 ## Generadores (43)
 
@@ -347,7 +348,7 @@ Reglas de meses sin intereses (MSI) por promo:
   Cuando el agua sube y hay que sacarla rápido — o cuando toca llenar o vaciar una cisterna completa — lo que importa no es qué tan alto empuja una bomba, sino cuánta agua mueve por minuto. Ahí es donde gana la Honda…
   PDP: https://ferre24.com.mx/products/motobomba-honda-wl20xm-mfx-2-autocebante-670-l-min
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/hero_001_ef726165-0385-4610-88db-ccad0ce586bb.png
-- **Motobomba Honda WL30XM-MFX 3"** · `WL30XM-MFX` · $9,129 (antes $9,129) · Honda · WL30XM-MFX
+- **Motobomba Honda WL30XM-MFX 3"** · `WL30XM-MFX` · $7,851 (antes $9,129) · Honda · WL30XM-MFX · ⚡PROMO
   Cuando se inunda una excavación, un sótano o una zanja de obra, el reloj corre. Ahí no sirve una bomba chica que trabaje toda la tarde — se necesita mover mucha agua, rápido. · La motobomba Honda WL30XM-MFX 3" es la de…
   PDP: https://ferre24.com.mx/products/motobomba-honda-wl30xm-mfx-3-1-100-l-min-autocebante
   IMG: https://cdn.shopify.com/s/files/1/0725/1519/0872/files/sec_001_a0ee8327-70cf-47c9-a161-975e04bed0a5.png
