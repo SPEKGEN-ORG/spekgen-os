@@ -58,11 +58,8 @@
       "regular_price": 7598.0,
       "promo_price": 6686.24,
       "pct_desc": "12%",
-      "msi_ladder": [
-        3,
-        6
-      ],
-      "msi_max": 6,
+      "msi_ladder": [],
+      "msi_max": 0,
       "eligible_912": false,
       "vigencia": "2026-08-31",
       "vigente": true,
